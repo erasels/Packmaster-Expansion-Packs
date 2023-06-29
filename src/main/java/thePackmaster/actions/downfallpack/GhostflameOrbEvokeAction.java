@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
-import thePackmaster.actions.metapack.WaitMoreAction;
+import thePackmaster.actions.WaitMoreAction;
 
 public class GhostflameOrbEvokeAction extends AbstractGameAction {
     private final DamageInfo info;

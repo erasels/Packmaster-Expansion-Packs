@@ -6,8 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thePackmaster.actions.metapack.WaitMoreAction;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.actions.WaitMoreAction;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

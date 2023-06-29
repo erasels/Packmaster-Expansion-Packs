@@ -4,8 +4,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.orbs.PackmasterOrb;
+import thePackmaster.packs.DownfallPack;
 import thePackmaster.packs.EntropyPack;
-import thePackmaster.packs.OrbPack;
 import thePackmaster.packs.SpheresPack;
 
 import java.util.ArrayList;
@@ -19,6 +19,10 @@ public class OrgSupplierCompatibilityPatch {
         @SpirePostfixPatch
         public static Map<String, List<Supplier<AbstractOrb>>> patch(Map<String, List<Supplier<AbstractOrb>>> __result) {
             List<Supplier<AbstractOrb>> suppliers;
+
+            suppliers = new ArrayList<>();
+            suppliers.add(thePackmaster.orbs.downfallpack.Ghostflame::new);
+            __result.put(DownfallPack.ID, suppliers);
 
             suppliers = new ArrayList<>();
             suppliers.add(thePackmaster.orbs.spherespack.Blaze::new);

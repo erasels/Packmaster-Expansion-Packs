@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.CalmStance;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.specialhats.InstantDeathHat;
+import thePackmaster.packs.CthulhuPack;
 import thePackmaster.packs.FrostPack;
 import thePackmaster.packs.InstantDeathPack;
 import thePackmaster.packs.SpheresPack;
@@ -63,6 +64,7 @@ public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSu
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         MakeRoomPatch.reset();
         EnergyCountPatch.energySpentThisCombat = 0;
+        CthulhuPack.lunacyThisCombat = 0;
     }
 
     @Override
