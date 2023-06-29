@@ -7,6 +7,7 @@ import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.packs.DownfallPack;
 import thePackmaster.packs.EntropyPack;
 import thePackmaster.packs.SpheresPack;
+import thePackmaster.packs.WitchesStrikePack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,11 @@ public class OrgSupplierCompatibilityPatch {
         @SpirePostfixPatch
         public static Map<String, List<Supplier<AbstractOrb>>> patch(Map<String, List<Supplier<AbstractOrb>>> __result) {
             List<Supplier<AbstractOrb>> suppliers;
+
+            suppliers = new ArrayList<>();
+            suppliers.add(thePackmaster.orbs.WitchesStrike.CrescentMoon::new);
+            suppliers.add(thePackmaster.orbs.WitchesStrike.FullMoon::new);
+            __result.put(WitchesStrikePack.ID, suppliers);
 
             suppliers = new ArrayList<>();
             suppliers.add(thePackmaster.orbs.downfallpack.Ghostflame::new);
