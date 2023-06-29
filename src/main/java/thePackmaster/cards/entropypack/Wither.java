@@ -3,11 +3,11 @@ package thePackmaster.cards.entropypack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.entropypack.RuinPower;
+import thePackmaster.powers.RuinPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToEnemy;
+import static thePackmaster.util.Wiz.forAllMonstersLiving;
 
 public class Wither extends AbstractEntropyCard {
     public final static String ID = makeID("Wither");

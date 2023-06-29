@@ -12,12 +12,5 @@
       "unstable"
     ],
     "DESCRIPTION": "When this card is discarded from your hand, apply its effects to you and ALL enemies."
-  },
-  {
-    "PROPER_NAME": "Oblivion",
-    "NAMES": [
-      "oblivion"
-    ],
-    "DESCRIPTION": "Orb: When evoked, applies #yRuin to the enemy with the most HP. Increases #yRuin applied whenever you discard a card."
   }
 ]

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.powers.RuinPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

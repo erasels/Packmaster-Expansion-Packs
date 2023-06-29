@@ -4,10 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.entropypack.ConstructPower;
-import thePackmaster.powers.entropypack.RuinPower;
+import thePackmaster.powers.RuinPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
