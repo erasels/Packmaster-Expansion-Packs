@@ -1,6 +1,7 @@
 package thePackmaster.patches.secretlevelpack;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.ShoutAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,6 +28,16 @@ public class EnoughTalkPatch {
                     spokeLastTurn = true;
                 }
             }
+        }
+    }
+
+    @SpirePatch(
+            clz = GameActionManager.class,
+            method = "callEndOfTurnActions"
+    )
+    public static class AtPlayerTurnEndPatch {
+        public static void Prefix(GameActionManager __instance) {
+            EnoughTalkPatch.spokeLastTurn = false;
         }
     }
 }

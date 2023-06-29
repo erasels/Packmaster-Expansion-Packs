@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.ExpansionPacks;
 import thePackmaster.SpireAnniversary5Mod;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -21,7 +22,7 @@ public class StanceDance extends AbstractSentinelCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        addToBot(new ChangeStanceAction(SpireAnniversary5Mod.getPackmasterStanceInstance(true)));
+        addToBot(new ChangeStanceAction(ExpansionPacks.getPackmasterStanceInstance(true)));
     }
 
     @Override
