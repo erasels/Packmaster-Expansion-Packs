@@ -26,7 +26,9 @@ public class DaggerstormPower extends AbstractPackmasterPower implements onGener
     public void onCreateCard(AbstractCard card) {
         if (!(card instanceof Shiv)){
             for (int i = 0; i < amount; i++) {
-                Wiz.atb(new NewQueueCardAction(new Shiv(), true));
+                Shiv shiv = new Shiv();
+                shiv.purgeOnUse = true;
+                Wiz.atb(new NewQueueCardAction(shiv, true));
             }
         }
     }
