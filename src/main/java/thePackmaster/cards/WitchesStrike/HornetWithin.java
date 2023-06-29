@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cardmodifiers.infestpack.InfestModifier;
-import thePackmaster.cards.infestpack.OnInfestCard;
+import thePackmaster.cardmodifiers.InfestModifier;
+import thePackmaster.cards.OnInfestCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

@@ -3,13 +3,11 @@ package thePackmaster.cards.WitchesStrike;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.green.Bane;
-import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
-import thePackmaster.cardmodifiers.infestpack.InfestModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.cards.infestpack.OnInfestCard;
+import thePackmaster.cardmodifiers.InfestModifier;
+import thePackmaster.cards.OnInfestCard;
 import thePackmaster.orbs.WitchesStrike.FullMoon;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
