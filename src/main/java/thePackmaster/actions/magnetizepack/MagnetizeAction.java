@@ -30,9 +30,10 @@ public class MagnetizeAction extends AbstractGameAction {
 
             if (card instanceof Ferroshield)
                 ((Ferroshield) card).onMagnetized();
+            
+            CardModifierManager.addModifier(card, newMagnetize);
         }
 
-        CardModifierManager.addModifier(card, newMagnetize);
         isDone = true;
     }
 }
