@@ -34,7 +34,8 @@
     "Mwalls",
     "MaybeLater_x",
     "Doodle",
-    "Mixmaw"
+    "Mixmaw",
+    "wavewhyse"
   ],
   "description": "${project.description}",
   "version": "${project.version}",

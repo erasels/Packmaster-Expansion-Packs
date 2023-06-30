@@ -1,0 +1,24 @@
+{
+  "${ModID}:MagnetizePack": {
+    "TEXT": [
+      "Magnetize",
+      "Spread Magnetized to all your cards, and empower Magnetized cards.",
+      "wavewhyse☆"
+    ]
+  },
+  "${ModID}:MagnetizePackHat": {
+    "TEXT": [
+      "Always points north.",
+      "Magnet"
+    ]
+  },
+  "${ModID}:MagnetizedModifier": {
+    "TEXT": [
+      "Magnetized",
+      "When you play, discard, or Exhaust a #yMagnetized card, Magnetize another random card in your hand. Some cards have special effects with #yMagnetized cards."
+    ],
+    "EXTRA_TEXT": [
+      "${ModID}:Magnetized. NL "
+    ]
+  }
+}

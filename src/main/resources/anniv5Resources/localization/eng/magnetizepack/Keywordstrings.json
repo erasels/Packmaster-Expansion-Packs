@@ -1,0 +1,11 @@
+[
+  {
+    "PROPER_NAME": "Magnetized",
+    "NAMES": [
+      "Magnetized",
+      "magnetized",
+      "magnetize"
+    ],
+    "DESCRIPTION": "When you play or discard a #yMagnetized card, #yMagnetize another random card (excluding #yUnplayable cards) in your hand. Some cards have special effects with #yMagnetized cards."
+  }
+]

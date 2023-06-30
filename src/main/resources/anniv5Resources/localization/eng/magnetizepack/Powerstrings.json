@@ -1,0 +1,18 @@
+{
+  "${ModID}:HyperpolarityPower": {
+    "NAME": "Hyperpolarity",
+    "DESCRIPTIONS": ["The next #yMagnetized card you play is played twice.", "The next #b%d #yMagnetized cards you play are played twice."]
+  },
+  "${ModID}:InduceCurrentPower": {
+    "NAME": "Induce Current",
+    "DESCRIPTIONS": ["When you #yMagnetize a card, deal #b%d damage to a random enemy."]
+  },
+  "${ModID}:SuperconductancePower": {
+    "NAME": "Superconductance",
+    "DESCRIPTIONS": ["#yMagnetized cards deal #b%d more Attack damage and gain #b%d more Block."]
+  },
+  "${ModID}:WorldDynamoPower": {
+    "NAME": "World Dynamo",
+    "DESCRIPTIONS": ["The first time each turn your entire hand is #yMagnetized, gain #b%d [E] ."]
+  }
+}
