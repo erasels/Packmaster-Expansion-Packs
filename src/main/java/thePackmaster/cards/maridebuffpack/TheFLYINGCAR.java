@@ -2,11 +2,13 @@ package thePackmaster.cards.maridebuffpack;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.maridebuffpack.DebuffLossManager;
+import thePackmaster.vfx.maridebuffpack.MariTheFlyingCarEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -22,6 +24,7 @@ public class TheFLYINGCAR extends AbstractMariDebuffCard {
    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new VFXAction(new MariTheFlyingCarEffect(m.hb.cX, m.hb.cY),1.5F));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 

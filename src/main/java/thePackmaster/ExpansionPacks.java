@@ -32,7 +32,13 @@ import java.util.*;
 import static thePackmaster.util.Wiz.p;
 
 @SpireInitializer
-public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSubscriber, PostBattleSubscriber, OnPlayerLoseBlockSubscriber, OnPowersModifiedSubscriber {
+public class ExpansionPacks implements
+        PostInitializeSubscriber,
+        OnStartBattleSubscriber,
+        PostBattleSubscriber,
+        OnPlayerLoseBlockSubscriber,
+        OnPowersModifiedSubscriber,
+        AddAudioSubscriber {
 
     private static ExpansionPacks thismod;
     public static final String modID = "expansionPacks";
@@ -48,7 +54,6 @@ public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSu
 
     public static void initialize() {
         thismod = new ExpansionPacks();
-
     }
 
     @Override
@@ -124,5 +129,10 @@ public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSu
         stances.remove(p().stance.ID);
 
         return useCardRng ? stances.get(AbstractDungeon.cardRandomRng.random(stances.size() - 1)) : stances.get(MathUtils.random(stances.size() - 1));
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(SpireAnniversary5Mod.makeID("MariDebuffPack_TheFLYINGCAR"), SpireAnniversary5Mod.makePath("audio/maridebuffpack/MariTheFlyingCar.ogg"));
     }
 }
