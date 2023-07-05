@@ -1,0 +1,33 @@
+{
+  "${ModID}:HalfBlockPower": {
+    "NAME": "Half Block",
+    "DESCRIPTIONS": [
+      "Your next #yBlock card gives #b50% less #yBlock!",
+      "Your next #b",
+      " #yBlock cards give 50% less #yBlock!"
+    ]
+  },
+  "${ModID}:RecurringThemePower": {
+    "NAME": "Recurring Theme",
+    "DESCRIPTIONS": [
+      "The next time you fully lose a debuff, add #b",
+      " #yRecurring #yTheme to your hand.",
+      " #yRecurring #yTheme+ to your hand."
+    ]
+  },
+  "${ModID}:CharacterDevelopmentPower": {
+    "NAME": "Character Development",
+    "DESCRIPTIONS": [
+      "Whenever you fully lose a debuff, gain #b",
+      " #yStrength."
+    ]
+  },
+  "${ModID}:DenouementPower": {
+    "NAME": "Denouement",
+    "DESCRIPTIONS": [
+      "This turn, ALL #yVulnerable increases attack damage taken by #b100% instead.",
+      "For #b",
+      " turns, ALL #yVulnerable increases attack damage taken by #b100% instead."
+    ]
+  }
+}
