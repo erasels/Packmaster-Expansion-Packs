@@ -13,7 +13,6 @@ import static thePackmaster.util.Wiz.*;
 public class PhoenixHeart extends AbstractFueledCard {
     public final static String ID = makeID(PhoenixHeart.class.getSimpleName());
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;

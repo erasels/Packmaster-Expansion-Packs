@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ConservePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.actions.fueledpack.ConsumeToDoAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
