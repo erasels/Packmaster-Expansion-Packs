@@ -22,6 +22,7 @@ public class Conflagration extends AbstractFueledCard {
     public Conflagration() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
+        cardsToPreview = new HotAsh();
     }
 
     @Override

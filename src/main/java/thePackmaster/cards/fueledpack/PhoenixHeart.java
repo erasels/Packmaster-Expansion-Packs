@@ -32,12 +32,14 @@ public class PhoenixHeart extends AbstractFueledCard {
                 atb(new ExhaustSpecificCardAction(c, adp().hand, true));
             }
         }
-        for (int i = 0; i < count; i++)
-            atb(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy(), false));
+        for (int i = 0; i < count; i++) {
+            AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
+            c.upgrade();
+            atb(new MakeTempCardInHandAction(c, false));
+        }
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(UPGRADED_COST);
     }
 }

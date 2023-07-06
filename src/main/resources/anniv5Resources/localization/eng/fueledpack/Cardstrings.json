@@ -6,7 +6,7 @@
   },
   "${ModID}:FireOfLife": {
     "NAME": "Fire of Life",
-    "DESCRIPTION": "Gain !M! Temporary_HP."
+    "DESCRIPTION": "Gain !M! stslib:Temporary_HP."
   },
   "${ModID}:Burninate": {
     "NAME": "Burninate",

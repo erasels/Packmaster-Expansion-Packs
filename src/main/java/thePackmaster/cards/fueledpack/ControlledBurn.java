@@ -16,6 +16,7 @@ public class ControlledBurn extends AbstractFueledCard {
 
     public ControlledBurn() {
         super(ID, COST, TYPE, RARITY, TARGET);
+        cardsToPreview = new HotAsh();
     }
 
     @Override

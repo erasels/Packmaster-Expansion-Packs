@@ -23,6 +23,7 @@ public class Fuel extends AbstractFueledCard {
     public Fuel() {
         super(ID, COST, TYPE, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
+        cardsToPreview = new HotAsh();
     }
 
     @Override
