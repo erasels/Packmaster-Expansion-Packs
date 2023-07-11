@@ -5,7 +5,7 @@
   },
   "${ModID}:Sliiiiither": {
     "NAME": "滑啊啊啊动",
-    "DESCRIPTION": "下回合额外抽 !M! ~ 3张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合额外抽 !M! ~ 3张牌。"
   },
   "${ModID}:TailFlail": {
     "NAME": "尾威",

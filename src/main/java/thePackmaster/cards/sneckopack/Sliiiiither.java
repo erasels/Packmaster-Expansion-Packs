@@ -16,9 +16,11 @@ public class Sliiiiither extends AbstractSneckoCard {
     public Sliiiiither() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
+        baseBlock = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         //Probably being overly careful about magicNumber modification, but you never know
         int amount;
         if (magicNumber < 3) {
@@ -33,6 +35,8 @@ public class Sliiiiither extends AbstractSneckoCard {
     public void upp() {
         if (magicNumber < 3) {
             upgradeMagicNumber(1);
+        } else {
+            upgradeBlock(2);
         }
     }
 }

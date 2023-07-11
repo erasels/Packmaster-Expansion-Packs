@@ -5,7 +5,7 @@
   },
   "${ModID}:Sliiiiither": {
     "NAME": "Sliiiiither",
-    "DESCRIPTION": "Next turn, draw !M! to 3 additional cards."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! to 3 additional cards."
   },
   "${ModID}:TailFlail": {
     "NAME": "Tail Flail",
