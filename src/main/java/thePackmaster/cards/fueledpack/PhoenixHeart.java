@@ -33,7 +33,8 @@ public class PhoenixHeart extends AbstractFueledCard {
         }
         for (int i = 0; i < count; i++) {
             AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
-            c.upgrade();
+            if (upgraded)
+                c.upgrade();
             atb(new MakeTempCardInHandAction(c, false));
         }
     }
