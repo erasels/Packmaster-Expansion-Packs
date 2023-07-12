@@ -39,7 +39,7 @@ public class RandomizeCostAction extends AbstractGameAction {
 
         for (AbstractCard card : cards) {
             if (card.cost >= 0) {// 24
-                int newCost = AbstractDungeon.cardRandomRng.random(3);
+                int newCost = AbstractDungeon.cardRandomRng.random(1, 3);
                 newCost += card.costForTurn;
                 newCost %= 4; //This makes cards that cost more than 3 a number below it. 4 costs can't roll 0, 5 Costs can't roll 1 etc
                 card.setCostForTurn(newCost);
