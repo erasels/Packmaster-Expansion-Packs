@@ -1,0 +1,7 @@
+[
+  {
+    "PROPER_NAME": "Muddle",
+    "NAMES": ["muddle"],
+    "DESCRIPTION": "Randomize a card's cost between 0 and 3."
+  }
+]

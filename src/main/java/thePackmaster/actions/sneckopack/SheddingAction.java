@@ -3,6 +3,7 @@ package thePackmaster.actions.sneckopack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -35,8 +36,7 @@ public class SheddingAction extends AbstractGameAction {
 
             //choose which are randomized, remove them from tempHand
             while (!maxCostCards.isEmpty() && toRandomize.size() < amount) {
-                int r = AbstractDungeon.cardRandomRng.random(maxCostCards.size() -1);
-                AbstractCard card = maxCostCards.get(r);
+                AbstractCard card = Wiz.getRandomItem(maxCostCards);
                 toRandomize.add(card);
                 tempHand.remove(card);
                 maxCostCards.remove(card);
