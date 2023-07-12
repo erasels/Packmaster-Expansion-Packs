@@ -25,6 +25,7 @@ public class BurningStrike extends AbstractFueledCard {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(CardTags.STRIKE);
     }
 
     @Override
