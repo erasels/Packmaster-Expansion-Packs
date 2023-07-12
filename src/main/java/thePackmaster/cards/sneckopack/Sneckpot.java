@@ -12,9 +12,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashPowerEffect;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.EasyXCostAction;
 import thePackmaster.powers.boardgamepack.AdvantagePower;
+import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
+import thePackmaster.vfx.legacypack.ShootAnythingEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -25,7 +28,7 @@ public class Sneckpot extends AbstractSneckoCard {
 
     public Sneckpot() {
         super(ID, -1, AbstractCard.CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 32;
+        baseDamage = 11;
     }
 
     //As it is, it behaves unlike any other attacks, strength and other damage modifiers only change the range.
@@ -33,25 +36,28 @@ public class Sneckpot extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new EasyXCostAction(this,
                 (energy, params) -> {
-                    int maxDamage = 1;
+                    int maxDamage = 1, rolls = energy;
                     AbstractPower pow = Wiz.p().getPower(AdvantagePower.POWER_ID);
                     if (pow != null) {
-                        energy += pow.amount;
+                        rolls += pow.amount;
                         AbstractDungeon.effectList.add(new FlashPowerEffect(pow));
                     }
                     if(damage > 1) {
-                        for (int i = 0; i < energy; i++) {
+                        for (int i = 0; i < rolls; i++) {
                             int r = AbstractDungeon.cardRandomRng.random(1, params[0]);
                             if (r > maxDamage) maxDamage = r;
                         }
                     }
-                    addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.3F));
-                    addToBot(new DamageAction(m, new DamageInfo(p, maxDamage), AbstractGameAction.AttackEffect.NONE));
+
+                    addToBot(new VFXAction(new ShootAnythingEffect(m, TexLoader.getTexture(SpireAnniversary5Mod.makePowerPath("DicePower84.png")), false, energy), 0.3f));
+                    for (int i = 0; i < energy; i++) {
+                        addToBot(new DamageAction(m, new DamageInfo(p, maxDamage), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+                    }
                     return true;
                 }, damage));
     }
 
     public void upp() {
-        upgradeDamage(16);
+        upgradeDamage(4);
     }
 }
