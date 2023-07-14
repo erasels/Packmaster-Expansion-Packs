@@ -28,6 +28,7 @@ public class SanityPower extends AbstractPackmasterPower {
         if (amount < 0) {
             this.fontScale = 8.0F;
             this.amount -= 1;
+            this.checkLunacy();
             updateDescription();
             AbstractDungeon.onModifyPower();
         }
@@ -35,22 +36,14 @@ public class SanityPower extends AbstractPackmasterPower {
 
     @Override
     public void onInitialApplication() {
-        while (amount <= -5) {
-            amount += 5;
-            flash();
-            Wiz.atb(new MakeTempCardInHandAction(new Lunacy()));
-        }
+        this.checkLunacy();
     }
 
     @Override
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        while (amount <= -5) {
-            amount += 5;
-            flash();
-            Wiz.atb(new MakeTempCardInHandAction(new Lunacy()));
-        }
+        this.checkLunacy();
     }
 
     @Override
@@ -59,6 +52,14 @@ public class SanityPower extends AbstractPackmasterPower {
             if (amount == 0){
                 removeThis();
             }
+        }
+    }
+
+    private void checkLunacy() {
+        while (amount <= -5) {
+            amount += 5;
+            flash();
+            Wiz.atb(new MakeTempCardInHandAction(new Lunacy()));
         }
     }
 
