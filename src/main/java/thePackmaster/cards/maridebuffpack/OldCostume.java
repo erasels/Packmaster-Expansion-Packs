@@ -21,7 +21,7 @@ public class OldCostume extends AbstractMariDebuffCard {
 
     public OldCostume() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, SELF_OR_ENEMY);
-        this.baseBlock = this.block = 7;
+        this.baseBlock = this.block = 10;
         this.baseMagicNumber = this.magicNumber = 1;
    }
 
