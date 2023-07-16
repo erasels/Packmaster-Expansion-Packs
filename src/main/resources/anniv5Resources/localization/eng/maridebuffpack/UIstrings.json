@@ -8,8 +8,8 @@
   },
   "${ModID}:MariDebuffPackHat": {
     "TEXT": [
-      "SHINY!",
-      "Shiny Hat"
+      "MORE! MORE FEATHERS!",
+      "Feather Hat"
     ]
   }
 }
