@@ -5,15 +5,15 @@
   },
   "${ModID}:Sliiiiither": {
     "NAME": "Sliiiiither",
-    "DESCRIPTION": "Next turn, draw !M! to 3 additional cards."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! to 3 additional cards."
   },
   "${ModID}:TailFlail": {
     "NAME": "Tail Flail",
-    "DESCRIPTION": "Deal !D! to !${ModID}:sd! damage to ALL enemies. NL Randomize the cost of !M! random cards."
+    "DESCRIPTION": "Deal !D! to !${ModID}:sd! damage to ALL enemies. NL ${ModID}:Muddle the !M! highest cost cards in your hand."
   },
   "${ModID}:Sneckpot": {
     "NAME": "Sneckpot",
-    "DESCRIPTION": "Deal 1 to !D! damage. Roll the damage X times and take the highest result."
+    "DESCRIPTION": "Deal 1 to !D! damage X times. Roll the damage X times and take the highest result."
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "Whip 'n Snapper",
@@ -21,8 +21,8 @@
   },
   "${ModID}:Twitch": {
     "NAME": "Twitch",
-    "DESCRIPTION": "Randomize the cost of !M! cards. NL stslib:Persist !stslib:persist!.",
-    "UPGRADE_DESCRIPTION": "Randomize the cost of up to !M! cards. NL stslib:Persist !stslib:persist!."
+    "DESCRIPTION": "${ModID}:Muddle !M! cards. NL stslib:Persist !stslib:persist!.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Muddle up to !M! cards. NL stslib:Persist !stslib:persist!."
   },
   "${ModID}:Gulp": {
     "NAME": "Meal Prep",
@@ -30,15 +30,15 @@
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "Snazzy Swagger",
-    "DESCRIPTION" : "{@@}Draw !M! card{!M!|>1=s}. NL Randomize the cost of all cards in your hand. NL Discard !M! card{!M!|>1=s}."
+    "DESCRIPTION" : "{@@}Draw !M! card{!M!|>1=s}. NL anniv5:Muddle all cards in your hand. NL Discard !M! card{!M!|>1=s}."
   },
   "${ModID}:SneckoEyes": {
     "NAME": "Snecko Eyes",
-    "DESCRIPTION" : "Become Confused. At the start of your turn, draw 2 cards.",
+    "DESCRIPTION" : "Become Confused. NL At the start of your turn, draw 2 cards.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, draw 2 cards. NL Startup: Become Confused."
   },
   "${ModID}:Shedding": {
     "NAME": "Shedding",
-    "DESCRIPTION" : "{@@}At the start of your turn, randomize the cost of the {!M!|>1=!M! highest cost cards|@=highest cost card} in your hand."
+    "DESCRIPTION" : "{@@}At the start of your turn, anniv5:Muddle the {!M!|>1=!M! highest cost cards|@=highest cost card} in your hand."
   }
 }

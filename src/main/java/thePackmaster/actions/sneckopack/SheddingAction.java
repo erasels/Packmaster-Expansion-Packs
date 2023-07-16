@@ -3,6 +3,7 @@ package thePackmaster.actions.sneckopack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -15,10 +16,8 @@ public class SheddingAction extends AbstractGameAction {
     @Override
     public void update() {
         ArrayList<AbstractCard> toRandomize = new ArrayList<>();
-        ArrayList<AbstractCard> tempHand = new ArrayList<>();
-        tempHand.addAll(AbstractDungeon.player.hand.group);
-        while (toRandomize.size() < amount && tempHand.size() > 0) {
-
+        ArrayList<AbstractCard> tempHand = new ArrayList<>(AbstractDungeon.player.hand.group);
+        while (toRandomize.size() < amount && !tempHand.isEmpty()) {
             //identify highest cost cards
             int maxCost = -1;
             ArrayList<AbstractCard> maxCostCards = new ArrayList<>();
@@ -36,15 +35,14 @@ public class SheddingAction extends AbstractGameAction {
             if (maxCost < 0) break;
 
             //choose which are randomized, remove them from tempHand
-            while (maxCostCards.size() > 0 && toRandomize.size() < amount) {
-                int r = AbstractDungeon.cardRandomRng.random(maxCostCards.size() -1);
-                AbstractCard card = maxCostCards.get(r);
+            while (!maxCostCards.isEmpty() && toRandomize.size() < amount) {
+                AbstractCard card = Wiz.getRandomItem(maxCostCards);
                 toRandomize.add(card);
                 tempHand.remove(card);
                 maxCostCards.remove(card);
             }
         }
-        if (toRandomize.size() > 0) {
+        if (!toRandomize.isEmpty()) {
             addToTop(new RandomizeCostAction(toRandomize.toArray(new AbstractCard[0])));
         }
         isDone = true;
