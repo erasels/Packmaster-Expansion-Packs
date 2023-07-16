@@ -4,7 +4,7 @@
     "DESCRIPTIONS": [
       "Your next #yBlock card gives #b50% less #yBlock!",
       "Your next #b",
-      " #yBlock cards give 50% less #yBlock!"
+      " #yBlock cards give $b50% less #yBlock!"
     ]
   },
   "${ModID}:RecurringThemePower": {
@@ -25,9 +25,9 @@
   "${ModID}:DenouementPower": {
     "NAME": "Denouement",
     "DESCRIPTIONS": [
-      "This turn, ALL #yVulnerable increases attack damage taken by #b100% instead.",
+      "This turn, your #yVulnerable also increases the damage of your attacks.",
       "For #b",
-      " turns, ALL #yVulnerable increases attack damage taken by #b100% instead."
+      " turns, your #yVulnerable also increases the damage of your attacks."
     ]
   }
 }

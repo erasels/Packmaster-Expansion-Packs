@@ -21,6 +21,7 @@ public class RecurringThemePower extends AbstractPackmasterPower implements OnDe
     public RecurringThemePower(AbstractCreature owner, int amount, boolean upgraded) {
         super(POWER_ID,NAME,PowerType.BUFF,false,owner,amount);
         this.upgraded = upgraded;
+        updateDescription();
     }
 
     @Override
@@ -36,9 +37,9 @@ public class RecurringThemePower extends AbstractPackmasterPower implements OnDe
     @Override
     public void updateDescription() {
         if(this.upgraded){
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        }else{
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        }else{
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         }
     }
 

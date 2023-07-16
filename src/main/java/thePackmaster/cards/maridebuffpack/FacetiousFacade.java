@@ -33,45 +33,33 @@ public class FacetiousFacade extends AbstractMariDebuffCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-
-        this.baseMagicNumber = Math.max(0, this.baseDamage) - Math.max(0, this.baseBlock);
-        int diff = this.damage - this.block;
-
-        this.isMagicNumberModified = diff != this.baseMagicNumber; //norm color if = base
-        if(diff > 0){
-            this.magicNumber = diff;
-            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-        }else if(diff < 0){
-            this.magicNumber = -diff;
-            this.baseMagicNumber = this.magicNumber+1; //red number always
-            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
-        }else{
-            this.magicNumber = 0;
-            this.rawDescription = cardStrings.DESCRIPTION;
-        }
+        calculateDifference();
         this.initializeDescription();
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
+        calculateDifference();
+        this.initializeDescription();
+    }
 
+    public void calculateDifference(){
         this.baseMagicNumber = Math.max(0, this.baseDamage) - Math.max(0, this.baseBlock);
-        int diff = this.damage - this.block;
+        int diff = this.damage - this.block; //calc effective damage
 
-        this.isMagicNumberModified = diff != this.baseMagicNumber; //norm color if = base
+        this.isMagicNumberModified = diff != this.baseMagicNumber; //norm color if effective damage = base
         if(diff > 0){
             this.magicNumber = diff;
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-        }else if(diff < 0){
+        }else if(diff < 0){ //effectively gives block: red number always
             this.magicNumber = -diff;
-            this.baseMagicNumber = this.magicNumber+1; //red number always
+            this.baseMagicNumber = this.magicNumber+1;
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
-        }else{
+        }else{ //non
             this.magicNumber = 0;
             this.rawDescription = cardStrings.DESCRIPTION;
         }
-        this.initializeDescription();
     }
 
     @Override
@@ -79,8 +67,6 @@ public class FacetiousFacade extends AbstractMariDebuffCard {
         upgradeBlock(10);
         upgradeDamage(12);
     }
-
-
 }
 
 

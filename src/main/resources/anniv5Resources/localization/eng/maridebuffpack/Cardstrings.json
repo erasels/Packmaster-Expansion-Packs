@@ -39,7 +39,7 @@
   },
   "${ModID}:Denouement": {
     "NAME": "Denouement",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL This turn, ALL Vulnerable increases attack damage taken by 100% instead."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL This turn, your Vulnerable also increases the damage of your attacks."
   },
   "${ModID}:TheMANSION": {
     "NAME": "The MANSION",

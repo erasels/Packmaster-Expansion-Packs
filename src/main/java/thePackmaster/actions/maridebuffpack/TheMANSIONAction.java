@@ -16,6 +16,7 @@ public class TheMANSIONAction extends AbstractGameAction {
         startDuration = duration = Settings.ACTION_DUR_FAST;
     }
 
+    // (set Vuln and Frail to 1)
     //A bit complex for its function, but is hopefully more compatible for any edge cases
     public void update() {
         if (duration == Settings.ACTION_DUR_FAST) {

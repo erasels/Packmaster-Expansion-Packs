@@ -39,7 +39,6 @@ public class PentupAnger extends AbstractMariDebuffCard {
     @Override
     public void upp() {
         upgradeDamage(3);
-//        upgradeMagicNumber(1);
     }
 
 

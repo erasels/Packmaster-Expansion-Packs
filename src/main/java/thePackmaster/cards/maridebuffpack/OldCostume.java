@@ -26,7 +26,7 @@ public class OldCostume extends AbstractMariDebuffCard {
    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCreature target = SelfOrEnemyTargeting.getTarget(this);
+        AbstractCreature target = SelfOrEnemyTargeting.getTarget(this); //thanks alch
         atb(new GainBlockAction(p, p, this.block));
         if (target == null){
             target = AbstractDungeon.player;

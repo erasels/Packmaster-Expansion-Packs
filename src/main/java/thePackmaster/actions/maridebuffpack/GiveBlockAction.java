@@ -10,7 +10,7 @@ public class GiveBlockAction extends AbstractGameAction {
     public int originalBlock;
     public int maxBlockGiven;
 
-    // removes all block gained over the player's starting block from the player, but not more than the intended block applied
+    // removes all block gained [over the player's starting block] from the player, but not more than the block applied
     public GiveBlockAction(int originalBlock, int maxBlockGiven, AbstractCreature target) {
         this.originalBlock = originalBlock;
         this.maxBlockGiven = maxBlockGiven;
@@ -21,7 +21,8 @@ public class GiveBlockAction extends AbstractGameAction {
     public void update() {
         if (duration == Settings.ACTION_DUR_FAST) {
             if(target == AbstractDungeon.player){
-                this.isDone = true;
+                this.isDone = true; //should not trigger in MariDebuffPack pack, is failsafe
+                return;
             }
             int currentBlock = AbstractDungeon.player.currentBlock;
             int giveAmount = Math.min(Math.max(0, currentBlock - this.originalBlock), this.maxBlockGiven);
