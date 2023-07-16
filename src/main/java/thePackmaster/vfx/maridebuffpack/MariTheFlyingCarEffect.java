@@ -14,12 +14,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import thePackmaster.ExpansionPacks;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.TexLoader;
-
-import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
-
 
 public class MariTheFlyingCarEffect extends AbstractGameEffect {
     public static final Logger logger = LogManager.getLogger(MariTheFlyingCarEffect.class.getName());

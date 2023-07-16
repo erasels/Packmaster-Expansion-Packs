@@ -1,18 +1,13 @@
 package thePackmaster.patches.maridebuffpack;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import javassist.*;
 import javassist.bytecode.DuplicateMemberException;
-import thePackmaster.ExpansionPacks;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.maridebuffpack.DenouementPower;
 
-// Denouement power:
+// [Denouement power: your Vulnerable also increases the damage of your attacks.]
 // adds atDamageGive to Vulnerable power if needed
 // adds atDamageReceive to atDamageGive if Denouement power is active on player
 // (format sampled from Kio)
@@ -48,17 +43,3 @@ public class DenouementPowerPatch
         );
     }
 }
-
-// Old version: Set vulnerable damage amp to 100% when the player has Denouement power
-//public class DenouementPowerPatch {
-//    @SpirePatch(clz = VulnerablePower.class, method = "atDamageReceive")
-//    public static class VulnerableDamageIncrease {
-//        @SpirePrefixPatch
-//        public static SpireReturn<Float> PreFix(VulnerablePower __instance, float damage, DamageInfo.DamageType type) {
-//            if(type == DamageInfo.DamageType.NORMAL && AbstractDungeon.player.hasPower(DenouementPower.POWER_ID)){
-//                return SpireReturn.Return(damage*2);
-//            }
-//            return SpireReturn.Continue();
-//        }
-//    }
-//}
