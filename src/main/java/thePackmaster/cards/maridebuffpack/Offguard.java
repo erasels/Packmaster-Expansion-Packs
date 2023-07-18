@@ -28,7 +28,6 @@ public class Offguard extends AbstractMariDebuffCard {
 
     @Override
     public void triggerWhenDrawn() {
-        super.triggerWhenDrawn();
         AbstractPlayer p = AbstractDungeon.player;
         atb(new GainBlockAction(p, p, this.block));
         atb(new ApplyPowerAction(p, p, new VulnerablePower(p, 1, false), 1));

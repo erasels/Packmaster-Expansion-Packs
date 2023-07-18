@@ -16,7 +16,7 @@ public class MariDebuffPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public MariDebuffPack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 5, 3, 4, PackSummary.Tags.Debuffs));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(5,3,1,3,4, PackSummary.Tags.Debuffs));
     }
 
     @Override

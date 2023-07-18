@@ -6,11 +6,11 @@
   "${ModID}:OldCostume": {
     "NAME": "Old Costume",
     "DESCRIPTION": "Gain !B! Block and give it to ANY character, apply 1 Vulnerable to that character.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block and give it to ANY character, apply 1 Vulnerable to the character."
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block and give it to ANY character, apply 1 Vulnerable to that character."
   },
   "${ModID}:ToughFront": {
     "NAME": "Tough Front",
-    "DESCRIPTION": "Gain !B! Block. NL You gain half Block from your next Block card."
+    "DESCRIPTION": "Gain !B! Block. NL Your next Block gain from a card is halved."
   },
   "${ModID}:FacetiousFacade": {
     "NAME": "Facetious Strike",
