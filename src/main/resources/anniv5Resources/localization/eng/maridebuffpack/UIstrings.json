@@ -1,0 +1,15 @@
+{
+  "${ModID}:MariDebuffPack": {
+    "TEXT": [
+      "Mari's Debuffs",
+      "Grow beyond your deepest vulnerabilities.",
+      "iryan0702"
+    ]
+  },
+  "${ModID}:MariDebuffPackHat": {
+    "TEXT": [
+      "MORE! MORE FEATHERS!",
+      "Feather Hat"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "${ModID}:PentupAnger": {
+    "NAME": "Pent-up Anger",
+    "DESCRIPTION": "Whenever you draw this, gain 1 Frail. NL Deal !D! damage and Lose !M! Frail."
+  },
+  "${ModID}:OldCostume": {
+    "NAME": "Old Costume",
+    "DESCRIPTION": "Gain !B! Block and give it to ANY character, apply 1 Vulnerable to that character.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block and give it to ANY character, apply 1 Vulnerable to that character."
+  },
+  "${ModID}:ToughFront": {
+    "NAME": "Tough Front",
+    "DESCRIPTION": "Gain !B! Block. NL Your next Block gain from a card is halved."
+  },
+  "${ModID}:FacetiousFacade": {
+    "NAME": "Facetious Strike",
+    "DESCRIPTION": "Gain !B! Block and give it to an enemy. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !M! damage.)",
+      " NL (Gives !M! Block.)"
+    ]
+  },
+  "${ModID}:RecurringTheme": {
+    "NAME": "Recurring Theme",
+    "DESCRIPTION": "Deal !D! damage. NL The next time you fully lose a debuff, add a *Recurring *Theme to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you fully lose a debuff, add a *Recurring *Theme+ to your hand. NL Exhaust."
+  },
+  "${ModID}:Offguard": {
+    "NAME": "Off-guard",
+    "DESCRIPTION": "Whenever you draw this, gain !B! Block and 1 Vulnerable. NL Lose !M! Vulnerable."
+  },
+  "${ModID}:CharacterDevelopment": {
+    "NAME": "Character Development",
+    "DESCRIPTION": "Gain !${ModID}:m2! Strength. NL Whenever you fully lose a debuff, gain !M! Strength."
+  },
+  "${ModID}:TheFLYINGCAR": {
+    "NAME": "The FLYING CAR",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each time you fully lost a debuff this combat."
+  },
+  "${ModID}:Denouement": {
+    "NAME": "Denouement",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL This turn, your Vulnerable also increases the damage of your attacks."
+  },
+  "${ModID}:TheMANSION": {
+    "NAME": "The MANSION",
+    "DESCRIPTION": "Gain !B! Block. NL Set your Frail and Vulnerable to 1."
+  }
+}

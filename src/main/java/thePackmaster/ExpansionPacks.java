@@ -1,11 +1,10 @@
 package thePackmaster;
 
 import basemod.BaseMod;
-import basemod.interfaces.OnPlayerLoseBlockSubscriber;
-import basemod.interfaces.OnStartBattleSubscriber;
-import basemod.interfaces.PostBattleSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
+import basemod.interfaces.*;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.cards.targeting.SelfOrEnemyTargeting;
+import com.evacipated.cardcrawl.mod.stslib.patches.CustomTargeting;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -26,13 +25,20 @@ import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
+import thePackmaster.util.maridebuffpack.DebuffLossManager;
 
 import java.util.*;
 
 import static thePackmaster.util.Wiz.p;
 
 @SpireInitializer
-public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSubscriber, PostBattleSubscriber, OnPlayerLoseBlockSubscriber {
+public class ExpansionPacks implements
+        PostInitializeSubscriber,
+        OnStartBattleSubscriber,
+        PostBattleSubscriber,
+        OnPlayerLoseBlockSubscriber,
+        OnPowersModifiedSubscriber,
+        AddAudioSubscriber {
 
     private static ExpansionPacks thismod;
     public static final String modID = "expansionPacks";
@@ -48,7 +54,6 @@ public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSu
 
     public static void initialize() {
         thismod = new ExpansionPacks();
-
     }
 
     @Override
@@ -58,6 +63,9 @@ public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSu
         //Please add your pack IDs to the relics from PM here
         HashMap<String, List<String>> relicParentPackMap = RelicParentPackExpansionPatches.pmRelicParentExpansions;
         relicParentPackMap.put(BlueSkull.ID, Arrays.asList(SpheresPack.ID, FrostPack.ID));
+
+        // Custom Targeting Register
+        CustomTargeting.registerCustomTargeting(SelfOrEnemyTargeting.SELF_OR_ENEMY, new SelfOrEnemyTargeting());
     }
 
     @Override
@@ -65,6 +73,7 @@ public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSu
         MakeRoomPatch.reset();
         EnergyCountPatch.energySpentThisCombat = 0;
         CthulhuPack.lunacyThisCombat = 0;
+        DebuffLossManager.resetDebuffTracker(); // MariDebuffPack
     }
 
     @Override
@@ -76,6 +85,13 @@ public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSu
     public int receiveOnPlayerLoseBlock(int i) {
         i = Serene.receiveOnPlayerLoseBlock(i);
         return i;
+    }
+
+    @Override
+    public void receivePowersModified() {
+        // MariDebuffPack: Tracking player power list after each modification
+        // cannot only track when powers are removed due to cases such as negative strength becoming positive
+        DebuffLossManager.onPowersModified();
     }
 
     public static AbstractStance getPackmasterStanceInstance(boolean useCardRng) {
@@ -113,5 +129,10 @@ public class ExpansionPacks implements PostInitializeSubscriber, OnStartBattleSu
         stances.remove(p().stance.ID);
 
         return useCardRng ? stances.get(AbstractDungeon.cardRandomRng.random(stances.size() - 1)) : stances.get(MathUtils.random(stances.size() - 1));
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(SpireAnniversary5Mod.makeID("MariDebuffPack_TheFLYINGCAR"), SpireAnniversary5Mod.makePath("audio/maridebuffpack/MariTheFlyingCar.ogg"));
     }
 }
