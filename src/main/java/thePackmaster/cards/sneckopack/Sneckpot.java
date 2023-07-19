@@ -3,6 +3,7 @@ package thePackmaster.cards.sneckopack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashPowerEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.EasyXCostAction;
+import thePackmaster.actions.sneckopack.RandomizeCostAction;
 import thePackmaster.powers.boardgamepack.AdvantagePower;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
@@ -28,36 +30,53 @@ public class Sneckpot extends AbstractSneckoCard {
 
     public Sneckpot() {
         super(ID, -1, AbstractCard.CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 11;
+        baseDamage = 0;
+        magicNumber = baseMagicNumber = 6;
     }
 
-    //As it is, it behaves unlike any other attacks, strength and other damage modifiers only change the range.
-    //Couldn't figure out a better way
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new EasyXCostAction(this,
                 (energy, params) -> {
-                    int maxDamage = 1, rolls = energy;
+
+                    int rolls = energy;
                     AbstractPower pow = Wiz.p().getPower(AdvantagePower.POWER_ID);
                     if (pow != null) {
                         rolls += pow.amount;
                         AbstractDungeon.effectList.add(new FlashPowerEffect(pow));
                     }
-                    if(damage > 1) {
-                        for (int i = 0; i < rolls; i++) {
-                            int r = AbstractDungeon.cardRandomRng.random(1, params[0]);
-                            if (r > maxDamage) maxDamage = r;
-                        }
-                    }
 
-                    addToBot(new VFXAction(new ShootAnythingEffect(m, TexLoader.getTexture(SpireAnniversary5Mod.makePowerPath("DicePower84.png")), false, energy), 0.3f));
-                    for (int i = 0; i < energy; i++) {
-                        addToBot(new DamageAction(m, new DamageInfo(p, maxDamage), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-                    }
+                    //Happens after, deal damage equal to cost of hand * modifier
+                    Wiz.att(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            int dmg = Wiz.hand().group.stream()
+                                    .mapToInt(Wiz::getLogicalCardCost)
+                                    .sum();
+                            int tmp = Sneckpot.this.baseDamage;
+
+                            Sneckpot.this.baseDamage += dmg;
+                            Sneckpot.this.calculateCardDamage(m);
+                            Sneckpot.this.dmg(m, AttackEffect.BLUNT_HEAVY);
+                            Sneckpot.this.baseDamage = tmp;
+                        }
+                    });
+
+                    //Happens first, draw X cards and muddle their cost
+                    Wiz.att(new DrawCardAction(rolls, new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            if(!DrawCardAction.drawnCards.isEmpty()) {
+                                Wiz.att(new RandomizeCostAction(DrawCardAction.drawnCards.toArray(new AbstractCard[0])));
+                            }
+                        }
+                    }));
                     return true;
                 }, damage));
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeMagicNumber(2);
     }
 }

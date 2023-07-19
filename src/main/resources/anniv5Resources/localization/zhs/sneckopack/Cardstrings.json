@@ -13,7 +13,7 @@
   },
   "${ModID}:Sneckpot": {
     "NAME": "蛇壶",
-    "DESCRIPTION": "Deal 1 to !D! damage X times. Roll the damage X times and take the highest result."
+    "DESCRIPTION": "Draw and Muddle X cards. NL Deal damage equal to !M! times the total cost of your hand."
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "扫尾嗜咬",
