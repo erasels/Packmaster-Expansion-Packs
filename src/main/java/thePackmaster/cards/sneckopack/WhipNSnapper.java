@@ -23,7 +23,7 @@ public class WhipNSnapper extends AbstractSneckoCard {
 
     public WhipNSnapper() {
         super(ID, 2, AbstractCard.CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 10;
         baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 0;
     }
