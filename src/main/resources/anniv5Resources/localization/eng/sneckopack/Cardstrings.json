@@ -27,7 +27,7 @@
   },
   "${ModID}:Gulp": {
     "NAME": "Meal Prep",
-    "DESCRIPTION" : "Deal !D! damage for each [E] this card costs."
+    "DESCRIPTION" : "Gain !M! *Ablation and trigger it for each [E] this card costs. NL Exhaust"
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "Snazzy Swagger",

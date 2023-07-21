@@ -27,7 +27,7 @@
   },
   "${ModID}:Gulp": {
     "NAME": "用餐准备",
-    "DESCRIPTION" : "本牌每点耗能造成 !D! 点伤害。"
+    "DESCRIPTION" : "Gain !M! *Ablation and trigger it for each [E] this card costs. NL Exhaust"
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "捣乱套路",
