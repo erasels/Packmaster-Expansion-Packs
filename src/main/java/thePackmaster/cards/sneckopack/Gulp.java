@@ -61,7 +61,10 @@ public class Gulp extends AbstractSneckoCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_ABL);
+        selfRetain = true;
+        if(timesUpgraded > 1) {
+            upgradeMagicNumber(UPG_ABL);
+        }
     }
 
     public List<TooltipInfo> getCustomTooltips() {

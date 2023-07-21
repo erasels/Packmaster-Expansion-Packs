@@ -27,7 +27,8 @@
   },
   "${ModID}:Gulp": {
     "NAME": "用餐准备",
-    "DESCRIPTION" : "Gain !M! *Ablation and trigger it for each [E] this card costs. NL Exhaust"
+    "DESCRIPTION" : "Gain !M! *Ablation for each [E] this card costs. Then trigger it that many times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! *Ablation for each [E] this card costs. Then trigger it that many times. NL Exhaust."
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "捣乱套路",
