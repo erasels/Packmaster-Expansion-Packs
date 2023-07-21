@@ -1,0 +1,25 @@
+{
+  "${ModID}:FueledPack": {
+    "TEXT": [
+      "燃料已满",
+      "把你的卡牌烧成灰，以换取强大的攻击。",
+      "Bryan K"
+    ]
+  },
+  "${ModID}:ConsumeUiText": {
+    "TEXT": [
+      "烧毁。"
+    ]
+  },
+  "${ModID}:BurnBrightUiText": {
+    "TEXT": [
+      "选择一个能力打出。"
+    ]
+  },
+  "${ModID}:FueledPackHat": {
+    "TEXT": [
+      "坚固又可靠。",
+      "消防员头盔"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "${ModID}:FuelTank": {
+    "NAME": "燃料罐",
+    "FLAVOR": "呼呼!",
+    "DESCRIPTIONS": [
+      "你现在可以 #y${ModID}:烧毁 #y状态 ， #y诅咒 ，和 #y灰烬 牌。 NL 这样做会 #y消耗 他们。"
+    ]
+  }
+}

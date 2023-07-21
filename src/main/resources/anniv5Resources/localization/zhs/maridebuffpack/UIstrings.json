@@ -1,0 +1,15 @@
+{
+  "${ModID}:MariDebuffPack": {
+    "TEXT": [
+      "玛丽的Debuff",
+      "远超你最深的弱点。",
+      "iryan0702"
+    ]
+  },
+  "${ModID}:MariDebuffPackHat": {
+    "TEXT": [
+      "更多! 更多羽毛!",
+      "羽毛帽"
+    ]
+  }
+}

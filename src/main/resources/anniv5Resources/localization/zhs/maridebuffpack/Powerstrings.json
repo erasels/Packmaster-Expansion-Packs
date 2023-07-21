@@ -1,0 +1,33 @@
+{
+  "${ModID}:HalfBlockPower": {
+    "NAME": "减半格挡",
+    "DESCRIPTIONS": [
+      "你的下一张 #y格挡 牌给予 #b50% #y格挡 !",
+      "你的下 #b",
+      " 张 #y格挡 牌给予 #b50% #y格挡 !"
+    ]
+  },
+  "${ModID}:RecurringThemePower": {
+    "NAME": "重复主题",
+    "DESCRIPTIONS": [
+      "下次完全失去一个负面效果时，增加 #b",
+      " 张 #y重复主题 到你的手牌。",
+      " 张 #y重复主题+ 到你的手牌。"
+    ]
+  },
+  "${ModID}:CharacterDevelopmentPower": {
+    "NAME": "角色成长",
+    "DESCRIPTIONS": [
+      "每当你完全失去一个负面效果，获得 #b",
+      " 层 #y力量 。"
+    ]
+  },
+  "${ModID}:DenouementPower": {
+    "NAME": "结局",
+    "DESCRIPTIONS": [
+      "在这个回合内，你的 #y易伤 也会增加你的攻击伤害。",
+      "在 #b",
+      " 回合内，你的 #y易伤 也会增加你的攻击伤害。"
+    ]
+  }
+}

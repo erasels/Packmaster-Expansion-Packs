@@ -1,0 +1,11 @@
+[
+  {
+    "PROPER_NAME": "烧毁",
+    "NAMES": [
+      "consume",
+      "consumed",
+      "烧毁"
+    ],
+    "DESCRIPTION": "烧毁一张卡会将它转化为 #y炽热余烬 。 #y诅咒 ， #y状态 ，和 #y炽热余烬 牌不能被烧毁。"
+  }
+]

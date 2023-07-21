@@ -1,0 +1,48 @@
+{
+  "${ModID}:PentupAnger": {
+    "NAME": "压抑愤怒",
+    "DESCRIPTION": "每当你抽到这张卡，获得1层脆弱。 NL 造成 !D! 点伤害， 失去 !M! 层脆弱。"
+  },
+  "${ModID}:OldCostume": {
+    "NAME": "旧衣服",
+    "DESCRIPTION": "获得 !B! 点格挡并将其转移给任意角色，给予该角色1层易伤。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 获得 !B! 点格挡并将这些格挡转移给任何角色，给予该角色1层易伤。"
+  },
+  "${ModID}:ToughFront": {
+    "NAME": "强硬表面",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 你下一次从卡牌获得的格挡减半。"
+  },
+  "${ModID}:FacetiousFacade": {
+    "NAME": "可笑打击",
+    "DESCRIPTION": "获得 !B! 点格挡并将其转移给一个敌人。 NL 造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (造成 !M! 点伤害。)",
+      " NL (给予 !M! 点格挡。)"
+    ]
+  },
+  "${ModID}:RecurringTheme": {
+    "NAME": "重复主题",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下次完全失去一个负面效果时，增加1张 *重复主题 到你的手牌。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下次完全失去一个负面效果时，增加1张 *重复主题+ 到你的手牌。 NL 消耗。"
+  },
+  "${ModID}:Offguard": {
+    "NAME": "毫无防备",
+    "DESCRIPTION": "每当你抽到这张牌， 获得 !B! 点格挡和1层易伤。 NL 失去 !M! 层易伤。"
+  },
+  "${ModID}:CharacterDevelopment": {
+    "NAME": "角色成长",
+    "DESCRIPTION": "获得 !${ModID}:m2! 层力量。 NL 每当你完全失去一个负面效果，获得 !M! 层力量。"
+  },
+  "${ModID}:TheFLYINGCAR": {
+    "NAME": "飞行汽车",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 在本场战斗中，你每完全失去过一个负面效果，造成 !M! 点额外伤害。"
+  },
+  "${ModID}:Denouement": {
+    "NAME": "结局",
+    "DESCRIPTION": "给予 !M! 层易伤。 NL 在这个回合内，你的易伤也会增加你的攻击伤害。"
+  },
+  "${ModID}:TheMANSION": {
+    "NAME": "豪宅",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 将你的脆弱和易伤层数设为1。"
+  }
+}

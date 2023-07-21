@@ -1,0 +1,50 @@
+{
+  "${ModID}:BurningStrike": {
+    "NAME": "火焰打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。"
+  },
+  "${ModID}:FireOfLife": {
+    "NAME": "火焰之心",
+    "DESCRIPTION": "获得 !M! 点 stslib:临时生命 。"
+  },
+  "${ModID}:Burninate": {
+    "NAME": "献祭",
+    "DESCRIPTION": "${ModID}:烧毁 1张卡牌以造成 !D! 点伤害。"
+  },
+  "${ModID}:Conflagration": {
+    "NAME": "大火",
+    "DESCRIPTION": "${ModID}:烧毁 1张卡牌以给予 !M! 层 ${ModID}:燃烧 。"
+  },
+  "${ModID}:Fuel": {
+    "NAME": "燃料",
+    "DESCRIPTION": "${ModID}:烧毁 1张卡牌以获得 [E] [E] 。 NL 保留能量到下一回合。",
+    "UPGRADE_DESCRIPTION": "${ModID}:烧毁 1张卡牌以获得 [E] [E] [E] 。 NL 保留能量到下一回合。"
+  },
+  "${ModID}:InfernalBlaze": {
+    "NAME": "地狱之火",
+    "DESCRIPTION": "${ModID}:烧毁 1张卡牌以对所有敌人造成 !D! 点伤害并给予 !M! 层 ${ModID}:燃烧 。"
+  },
+  "${ModID}:PlayingWithFire": {
+    "NAME": "玩火",
+    "DESCRIPTION": "掷 !M! 次 ${ModID}:8面骰 。 NL 每掷出1次7或8，获得 1 层 ${ModID}:燃烧 。"
+  },
+  "${ModID}:PhoenixHeart": {
+    "NAME": "凤凰之心",
+    "DESCRIPTION": "消耗手牌中所有的 *炽热余烬 。 NL 每消耗1张牌，向你的手牌中加入1张随机卡牌。",
+    "UPGRADE_DESCRIPTION": "消耗手牌中所有的 *炽热余烬 。 NL 每消耗1张牌，向你的手牌中加入1张升级过的随机卡牌。"
+  },
+  "${ModID}:BurnBright": {
+    "NAME": "烛焰",
+    "DESCRIPTION": "${ModID}:烧毁 1张牌以打出你本场战斗打出过的1张能力牌。 NL 消耗。"
+  },
+  "${ModID}:ControlledBurn": {
+    "NAME": "可控燃烧",
+    "DESCRIPTION": "每个回合第一次你 ${ModID}:烧毁 一张牌时，获得 [E] 并抽一张牌。",
+    "UPGRADE_DESCRIPTION": "固有。每个回合第一次你 ${ModID}:烧毁 一张牌时，获得 [E] 并抽一张牌。"
+  },
+  "${ModID}:HotAsh": {
+    "NAME": "炽热余烬",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点生命。"
+  }
+}
