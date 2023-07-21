@@ -9,7 +9,7 @@
   },
   "${ModID}:TailFlail": {
     "NAME": "尾威",
-    "DESCRIPTION": "造成 !D! ~ !${ModID}:sd! 点群体伤害。 NL Randomize the cost of the !M! highest cost cards in your hand."
+    "DESCRIPTION": "造成 !D! ~ !${ModID}:sd! 点群体伤害。 NL ${ModID}:混淆 你手牌中费用最高的 !M! 张卡。"
   },
   "${ModID}:Sneckpot": {
     "NAME": "蛇壶",
@@ -18,7 +18,7 @@
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "扫尾嗜咬",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak or Vulnerable randomly !M! times."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机给予1层虚弱或易伤 !M! 次。"
   },
   "${ModID}:Twitch": {
     "NAME": "痉挛",
@@ -27,8 +27,8 @@
   },
   "${ModID}:Gulp": {
     "NAME": "用餐准备",
-    "DESCRIPTION" : "Gain !M! *Ablation for each [E] this card costs. Then trigger it that many times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! *Ablation for each [E] this card costs. Then trigger it that many times. NL Exhaust."
+    "DESCRIPTION" : "每消耗1点 [E] ，获得 !M! 层 *消融 。触发对应次数的消融。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 每消耗1点 [E] ，获得 !M! 层 *消融 。触发对应次数的消融。 NL 消耗。"
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "捣乱套路",
