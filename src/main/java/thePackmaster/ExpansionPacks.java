@@ -63,9 +63,6 @@ public class ExpansionPacks implements
         //Please add your pack IDs to the relics from PM here
         HashMap<String, List<String>> relicParentPackMap = RelicParentPackExpansionPatches.pmRelicParentExpansions;
         relicParentPackMap.put(BlueSkull.ID, Arrays.asList(SpheresPack.ID, FrostPack.ID));
-
-        // Custom Targeting Register
-        CustomTargeting.registerCustomTargeting(SelfOrEnemyTargeting.SELF_OR_ENEMY, new SelfOrEnemyTargeting());
     }
 
     @Override

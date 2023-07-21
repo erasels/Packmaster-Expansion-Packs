@@ -13,7 +13,8 @@
   },
   "${ModID}:Sneckpot": {
     "NAME": "蛇壶",
-    "DESCRIPTION": "Draw and Muddle X cards. NL Deal damage equal to !M! times the total cost of your hand."
+    "DESCRIPTION": "Draw and ${ModID}:Muddle X cards. NL Deal damage equal to !M! times the total cost of your hand.",
+    "UPGRADE_DESCRIPTION": "Draw and ${ModID}:Muddle X+1 cards. NL Deal damage equal to !M! times the total cost of your hand."
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "扫尾嗜咬",
