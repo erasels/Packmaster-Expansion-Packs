@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -25,7 +26,6 @@ public class WhipNSnapper extends AbstractSneckoCard {
         super(ID, 2, AbstractCard.CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 10;
         baseMagicNumber = magicNumber = 3;
-        baseSecondMagic = secondMagic = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,22 +33,17 @@ public class WhipNSnapper extends AbstractSneckoCard {
         addToBot(new WaitAction(0.2f));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
-
-        int r = AbstractDungeon.cardRandomRng.random(secondMagic, magicNumber);
-        if (r > 0) {
-            addToBot(new ApplyPowerAction(m,p, new WeakPower(m, r, false)));
-        }
-        r = AbstractDungeon.cardRandomRng.random(secondMagic, magicNumber);
-        if (r > 0) {
-            addToBot(new ApplyPowerAction(m,p, new VulnerablePower(m, r, false)));
+        for (int i = 0; i < magicNumber; i++) {
+            if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+                Wiz.applyToEnemy(m, new WeakPower(m, 1, false));
+            } else {
+                Wiz.applyToEnemy(m, new VulnerablePower(m, 1, false));
+            }
         }
     }
 
     public void upp() {
         upgradeDamage(4);
-        upgradeSecondMagic(1);
-        if(secondMagic >= magicNumber) {
-            upgradeMagicNumber(1);
-        }
+        upgradeMagicNumber(1);
     }
 }

@@ -11,29 +11,25 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SneckoEyes extends AbstractSneckoCard implements StartupCard {
+public class SneckoEyes extends AbstractSneckoCard {
 
 
     public final static String ID = makeID("SneckoEyes");
 
     public SneckoEyes() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(!upgraded)
-            addToBot(new ApplyPowerAction(p,p, new ConfusionPower(p)));
-        addToBot(new ApplyPowerAction(p,p, new DrawPower(p, 2)));
+        addToBot(new ApplyPowerAction(p,p, new ConfusionPower(p)));
+        addToBot(new ApplyPowerAction(p,p, new DrawPower(p, magicNumber)));
     }
 
     public void upp() {
-    }
-
-    @Override
-    public boolean atBattleStartPreDraw() {
-        if(upgraded) {
-            addToBot(new ApplyPowerAction(Wiz.p(),Wiz.p(), new ConfusionPower(Wiz.p())));
+        isInnate = true;
+        if(timesUpgraded > 1) {
+            upgradeMagicNumber(1);
         }
-        return upgraded;
     }
 }

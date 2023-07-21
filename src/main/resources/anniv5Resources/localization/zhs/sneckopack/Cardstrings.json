@@ -18,7 +18,7 @@
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "扫尾嗜咬",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !${ModID}:m2! ~ !M! 层 虚弱 与 易伤 。"
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak or Vulnerable randomly !M! times."
   },
   "${ModID}:Twitch": {
     "NAME": "痉挛",
@@ -36,8 +36,8 @@
   },
   "${ModID}:SneckoEyes": {
     "NAME": "异蛇之眼",
-    "DESCRIPTION" : "获得 混乱 。 NL 回合开始时， NL 额外抽2张牌。",
-    "UPGRADE_DESCRIPTION": "回合开始时， NL 额外抽2张牌。 NL 起动 ：获得 混乱 。"
+    "DESCRIPTION" : "获得 混乱 。 NL 回合开始时， NL 额外抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 混乱 。 NL 回合开始时， NL 额外抽 !M! 张牌。"
   },
   "${ModID}:Shedding": {
     "NAME": "摆脱",
