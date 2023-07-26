@@ -24,7 +24,7 @@ public class Gulp extends AbstractSneckoCard {
     private static TooltipInfo ablation;
 
     public Gulp() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = ABL;
         exhaust = true;
     }
