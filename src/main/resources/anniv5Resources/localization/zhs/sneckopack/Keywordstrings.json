@@ -1,7 +1,7 @@
 [
   {
-    "PROPER_NAME": "Muddle",
-    "NAMES": ["muddle"],
-    "DESCRIPTION": "Randomize a card's cost between 0 and 3."
+    "PROPER_NAME": "混淆",
+    "NAMES": ["muddle", "混淆"],
+    "DESCRIPTION": "将卡牌耗能随机变为0到3。"
   }
 ]
