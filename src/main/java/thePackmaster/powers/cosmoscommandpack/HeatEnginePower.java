@@ -1,6 +1,7 @@
 package thePackmaster.powers.cosmoscommandpack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -22,7 +23,7 @@ public class HeatEnginePower extends AbstractPackmasterPower {
     }
 
     @Override
-    public void onExhaust(AbstractCard card) {
+    public void onUseCard(AbstractCard card, UseCardAction action) {
         if (getLogicalCardCost(card) >= 2 || (card instanceof AmplifyCard && getLogicalCardCost(card) + ((AmplifyCard) card).getAmplifyCost() >= 2)) {
             this.flash();
             atb(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
