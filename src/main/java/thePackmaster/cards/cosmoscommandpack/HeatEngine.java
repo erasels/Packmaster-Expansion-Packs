@@ -11,7 +11,7 @@ public class HeatEngine extends AbstractCosmosCard {
     public final static String ID = makeID("HeatEngine");
 
     public HeatEngine() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
     }
 
@@ -21,6 +21,6 @@ public class HeatEngine extends AbstractCosmosCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(1);
     }
 }
