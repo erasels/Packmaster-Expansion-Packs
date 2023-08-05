@@ -22,7 +22,7 @@
   },
   "${ModID}:InstinctiveThinking": {
     "NAME": "思考直觉",
-    "DESCRIPTION": "若一回合首张打出牌为 固有 ，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "每回合，若打出的第一张牌为 固有 牌，获得 !M! 点 格挡 。"
   },
   "${ModID}:Cross": {
     "NAME": "叉击",

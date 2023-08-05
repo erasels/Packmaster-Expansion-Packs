@@ -2,8 +2,8 @@
   "${ModID}:HeatEnginePower": {
     "NAME": "热力机",
     "DESCRIPTIONS": [
-      "每当 一张牌 with a cost of #b",
-      " or greater, 包括 #y增幅 时， is #y消耗ed, 获得 #b",
+      "每当你打出一张耗能为 #b",
+      " 或更高的牌(计入 #y增幅 )，获得 #b",
       " #y力量 。"
       ]
   },
