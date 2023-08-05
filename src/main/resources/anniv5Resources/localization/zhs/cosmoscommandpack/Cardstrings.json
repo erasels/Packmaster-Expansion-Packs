@@ -21,7 +21,7 @@
   },
   "${ModID}:HeatEngine": {
     "NAME": "热力机",
-    "DESCRIPTION": "2及以上耗能的牌，包括 ${ModID}:增幅 所需的能量，被消耗时， 获得 !M! 点 力量 。"
+    "DESCRIPTION": "每当你打出一张2及以上耗能的牌(计入 ${ModID}:增幅 )，获得 !M! 点 力量 。"
   },
   "${ModID}:RefractEnergy": {
     "NAME": "能量折配",
