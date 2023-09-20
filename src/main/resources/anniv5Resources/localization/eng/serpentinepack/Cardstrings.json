@@ -34,6 +34,7 @@
     "DESCRIPTION": "Deal !D! damage twice. NL Vigor and ${ModID}:Dice affect this card !M! times."
 },"${ModID}:DirtyTrick": {
     "NAME": "Dirty Trick",
-    "DESCRIPTION": "Ethereal NL Enter ${ModID}:Cunning. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Enter ${ModID}:Cunning. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Cunning. NL Exhaust."
 }
 }
