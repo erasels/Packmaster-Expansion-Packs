@@ -6,5 +6,10 @@
   "${ModID}:GoldenPick": {
     "NAME": "Golden Pick",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Pickup: Gain !M! *Gold plus !${ModID}:m2! *Gold for each card in your deck."
+  },
+  "${ModID}:DeckCheck": {
+    "NAME": "Deck Check",
+    "DESCRIPTION": "Deal damage equal to the larger of your draw or discard pile sizes.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain the other reward cards with a ${ModID}:randomized gem.", " NL ${ModID}:Pickup: Gain the other reward cards with a {0}.", " NL (Deals !D! damage.)"]
   }
 }
