@@ -2,5 +2,9 @@
   "${ModID}:BloodWall": {
     "NAME": "BloodWall",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! stslib:Temporary_HP. NL ${ModID}:Pickup: Lose !${ModID}:m2! HP."
+  },
+  "${ModID}:GoldenPick": {
+    "NAME": "Golden Pick",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Pickup: Gain !M! *Gold plus !${ModID}:m2! *Gold for each card in your deck."
   }
 }
