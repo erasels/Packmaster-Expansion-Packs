@@ -12,5 +12,13 @@
       "metallicize"
     ],
     "DESCRIPTION": "At the end of your turn, gain block."
+  },
+  {
+    "PROPER_NAME": "Lowest Rarity",
+    "NAMES": [
+      "lowest rarity",
+      "lowest_rarity"
+    ],
+    "DESCRIPTION": "Prioritizes cards that have been in your deck longest. Starter cards count as common. Special cards count as rare. Curses are ignored."
   }
 ]

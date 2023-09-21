@@ -33,5 +33,10 @@
     "NAME": "Grab and Go",
     "DESCRIPTION": "Unplayable. Innate. NL ${ModID}:Pickup: Gain a *Question\u00a0Card. *Removed: Lose a *Question\u00a0Card. NL Remove this from your deck after defeating a boss.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL ${ModID}:Pickup: Gain a *Question\u00a0Card. *Removed: Lose a *Question\u00a0Card. NL Remove this from your deck after defeating a boss."
+  },
+  "${ModID}:Transmogrifier": {
+    "NAME": "Transmogrifier",
+    "DESCRIPTION": "Unplayable. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck. NL ${ModID}:Pickup: Gain !M! *Strikes.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck. NL ${ModID}:Pickup: Gain !M! *Strikes."
   }
 }
