@@ -29,6 +29,7 @@ public class PickThemAllPack extends AbstractCardPack {
         cards.add(PackGear.ID);
         cards.add(TouchedByFlame.ID);
         cards.add(TreasureChest.ID);
+        cards.add(DarkBargain.ID);
         cards.add(GrabAndGo.ID);
         cards.add(Transmogrifier.ID);
         return cards;

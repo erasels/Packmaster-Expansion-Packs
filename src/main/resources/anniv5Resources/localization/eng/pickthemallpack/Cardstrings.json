@@ -38,5 +38,9 @@
     "NAME": "Transmogrifier",
     "DESCRIPTION": "Unplayable. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck. NL ${ModID}:Pickup: Gain !M! *Strikes.",
     "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck. NL ${ModID}:Pickup: Gain !M! *Strikes."
+  },
+  "${ModID}:DarkBargain": {
+    "NAME": "Dark Bargain",
+    "DESCRIPTION": "Draw !M! cards. Exhaust. NL ${ModID}:Pickup: Gain a random potion, Upgrade a random card, gain a random card, and gain an *Injury."
   }
 }
