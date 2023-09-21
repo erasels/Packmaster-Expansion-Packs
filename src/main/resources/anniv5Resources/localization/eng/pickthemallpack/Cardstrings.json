@@ -24,5 +24,9 @@
   "${ModID}:TouchedByFlame": {
     "NAME": "Touched by Flame",
     "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL Apply !${ModID}:m2! Weak and Vulnerable. NL ${ModID}:Pickup: Lose {0} Max HP."
+  },
+  "${ModID}:TreasureChest": {
+    "NAME": "Treasure Chest",
+    "DESCRIPTION": "Exhaust. NL Remove this from your deck after playing it !M! times. NL ${ModID}:Pickup: Gain a random common relic."
   }
 }
