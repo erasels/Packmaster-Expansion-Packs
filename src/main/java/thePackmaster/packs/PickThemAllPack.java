@@ -3,10 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.pickthemallpack.BigBoots;
-import thePackmaster.cards.pickthemallpack.BloodWall;
-import thePackmaster.cards.pickthemallpack.DeckCheck;
-import thePackmaster.cards.pickthemallpack.GoldenPick;
+import thePackmaster.cards.pickthemallpack.*;
 
 import java.util.ArrayList;
 
@@ -29,6 +26,7 @@ public class PickThemAllPack extends AbstractCardPack {
         cards.add(GoldenPick.ID);
         cards.add(DeckCheck.ID);
         cards.add(BigBoots.ID);
+        cards.add(PackGear.ID);
         return cards;
     }
 }

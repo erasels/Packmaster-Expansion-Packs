@@ -15,5 +15,10 @@
   "${ModID}:BigBoots": {
     "NAME": "Big Boots",
     "DESCRIPTION": "If your draw or discard pile has !${ModID}:m2!+ cards, draw !M! cards. NL Draw 1 card. NL ${ModID}:Pickup: Add a *Stack to your deck."
+  },
+  "${ModID}:PackGear": {
+    "NAME": "Pack Gear",
+    "DESCRIPTION": "Gain 1 ${ModID}:Metallicize for every !M! cards in your draw and discard piles combined.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Add an *Aggregate to your deck.", " NL (Gains !${ModID}:m2! *Metallicize.)"]
   }
 }
