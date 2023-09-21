@@ -28,5 +28,10 @@
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
     "DESCRIPTION": "Exhaust. NL Remove this from your deck after playing it !M! times. NL ${ModID}:Pickup: Gain a random common relic."
+  },
+  "${ModID}:GrabAndGo": {
+    "NAME": "Grab and Go",
+    "DESCRIPTION": "Unplayable. Innate. NL ${ModID}:Pickup: Gain a *Question\u00a0Card. *Removed: Lose a *Question\u00a0Card. NL Remove this from your deck after defeating a boss.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL ${ModID}:Pickup: Gain a *Question\u00a0Card. *Removed: Lose a *Question\u00a0Card. NL Remove this from your deck after defeating a boss."
   }
 }
