@@ -34,6 +34,7 @@
     "DESCRIPTION": "造成 !D! 点伤害两次。 NL 本牌发挥 !M! 倍的 活力 与 ${ModID}:骰子 效果。"
 },"${ModID}:DirtyTrick": {
     "NAME": "阴招",
-    "DESCRIPTION": "虚无 。 NL 进入 ${ModID}:狡诈 。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 进入 ${ModID}:狡诈 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "进入 ${ModID}:狡诈 。 NL 消耗 。"
 }
 }
