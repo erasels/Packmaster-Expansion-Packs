@@ -61,6 +61,7 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
                 : cardStrings.EXTENDED_DESCRIPTION[1].replace("{0}", "*" + this.gem.name.replace(" ", "\u00a0"));
         this.rawDescription = cardStrings.DESCRIPTION + extraDescription;
         this.initializeDescription();
+        this.cardsToPreview = null;
     }
 
     @Override
@@ -72,6 +73,7 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
         this.isDamageModified = this.damage != this.baseDamage;
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[2];
         this.initializeDescription();
+        this.cardsToPreview = null;
     }
 
     @Override
@@ -83,6 +85,7 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
         this.isDamageModified = this.damage != this.baseDamage;
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[2];
         this.initializeDescription();
+        this.cardsToPreview = null;
     }
 
     private int countPiles() {

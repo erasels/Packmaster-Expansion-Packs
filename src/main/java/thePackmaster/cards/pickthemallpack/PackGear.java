@@ -42,6 +42,7 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
         });
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
+        this.cardsToPreview = null;
     }
 
     @Override
@@ -50,6 +51,7 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
         super.applyPowers();
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
         this.initializeDescription();
+        this.cardsToPreview = null;
     }
 
     private int getAmount() {
