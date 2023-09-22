@@ -94,7 +94,7 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
                 AbstractCard c = this.rewardCards.get(i);
                 CardModifierManager.addModifier(c, this.gem.myMod());
                 float spacingMultiplier = (i + 1) / (float)(this.rewardCards.size() + 1);
-                AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(c, Settings.WIDTH * spacingMultiplier, Settings.HEIGHT / 2.0f));
+                AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c, Settings.WIDTH * spacingMultiplier, Settings.HEIGHT / 2.0f));
             }
         }
     }

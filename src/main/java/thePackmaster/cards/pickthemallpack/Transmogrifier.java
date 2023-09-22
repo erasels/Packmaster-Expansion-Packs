@@ -44,7 +44,7 @@ public class Transmogrifier extends AbstractPickThemAllCard implements OnObtainC
     public void onObtainCard() {
         for (int i = 0; i < this.magicNumber; i++) {
             float spacingMultiplier = (i + 1) / (float)(this.magicNumber + 1);
-            AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new Strike(), Settings.WIDTH * spacingMultiplier, Settings.HEIGHT / 2.0f));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new Strike(), Settings.WIDTH * spacingMultiplier, Settings.HEIGHT / 2.0f));
         }
     }
 

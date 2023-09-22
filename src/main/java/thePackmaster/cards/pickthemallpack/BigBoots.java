@@ -51,7 +51,7 @@ public class BigBoots extends AbstractPickThemAllCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new Stack(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new Stack(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
     }
 
     private boolean checkPileSizes() {

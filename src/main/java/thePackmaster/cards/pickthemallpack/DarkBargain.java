@@ -52,7 +52,7 @@ public class DarkBargain extends AbstractPickThemAllCard implements OnObtainCard
         } else if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             this.addToBot(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
         } else {
-            AbstractDungeon.effectsQueue.add(new ObtainPotionEffect(AbstractDungeon.returnRandomPotion()));
+            AbstractDungeon.topLevelEffectsQueue.add(new ObtainPotionEffect(AbstractDungeon.returnRandomPotion()));
         }
 
         ArrayList<AbstractCard> upgradeableCards = AbstractDungeon.player.masterDeck.group.stream().filter(AbstractCard::canUpgrade).collect(Collectors.toCollection(ArrayList::new));
@@ -68,7 +68,7 @@ public class DarkBargain extends AbstractPickThemAllCard implements OnObtainCard
         gainableCards.addAll(AbstractDungeon.srcRareCardPool.group);
         AbstractCard cardToGain = gainableCards.get(AbstractDungeon.miscRng.random(gainableCards.size() - 1));
 
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(cardToGain, Settings.WIDTH * 1.0f / 3.0f, Settings.HEIGHT / 2.0f));
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new Injury(), Settings.WIDTH * 2.0f / 3.0f, Settings.HEIGHT / 2.0f));
+        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(cardToGain, Settings.WIDTH * 1.0f / 3.0f, Settings.HEIGHT / 2.0f));
+        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new Injury(), Settings.WIDTH * 2.0f / 3.0f, Settings.HEIGHT / 2.0f));
     }
 }
