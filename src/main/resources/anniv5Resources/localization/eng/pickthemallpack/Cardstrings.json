@@ -41,6 +41,7 @@
   },
   "${ModID}:DarkBargain": {
     "NAME": "Dark Bargain",
-    "DESCRIPTION": "Draw !M! cards. Exhaust. NL ${ModID}:Pickup: Gain a random potion, Upgrade a random card, gain a random card, and gain an *Injury."
+    "DESCRIPTION": "Draw !M! cards. Exhaust. NL ${ModID}:Pickup: Gain a random potion, Upgrade a random card, gain a random card, and gain an *Injury.",
+    "EXTENDED_DESCRIPTION": ["Draw !M! cards. NL Exhaust."]
   }
 }

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.SpireAnniversary5Mod;
 
-public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
+public class PackGear extends AbstractPickThemAllCard implements OnObtainCard, ResetDescriptionForCombat {
     public static final String ID = SpireAnniversary5Mod.makeID("PackGear");
     private static final int COST = 1;
     private static final int CARDS_PER_METALLICIZE = 10;
@@ -40,9 +40,7 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
                 this.isDone = true;
             }
         });
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
-        this.cardsToPreview = null;
+        this.resetDescriptionForCombat();
     }
 
     @Override
@@ -50,6 +48,11 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
         this.secondMagic = this.baseSecondMagic = this.getAmount();
         super.applyPowers();
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
+        this.initializeDescription();
+    }
+
+    public void resetDescriptionForCombat() {
+        this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
         this.cardsToPreview = null;
     }
