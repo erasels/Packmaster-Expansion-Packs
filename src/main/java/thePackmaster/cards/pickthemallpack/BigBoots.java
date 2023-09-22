@@ -55,6 +55,6 @@ public class BigBoots extends AbstractPickThemAllCard implements OnObtainCard {
     }
 
     private boolean checkPileSizes() {
-        return Math.max(AbstractDungeon.player.drawPile.size(), AbstractDungeon.player.discardPile.size()) > this.secondMagic;
+        return Math.max(AbstractDungeon.player.drawPile.size(), AbstractDungeon.player.discardPile.size()) >= this.secondMagic;
     }
 }
