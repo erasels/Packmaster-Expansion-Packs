@@ -59,7 +59,7 @@ public class TreasureChest extends AbstractPickThemAllCard implements OnObtainCa
     }
 
     private void decrementMisc() {
-        this.magicNumber = this.baseMagicNumber = this.misc - 1;
+        this.magicNumber = this.baseMagicNumber = this.misc = this.misc - 1;
         this.initializeDescription();
     }
 }
