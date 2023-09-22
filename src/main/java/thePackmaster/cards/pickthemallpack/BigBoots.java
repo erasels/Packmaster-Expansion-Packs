@@ -27,7 +27,7 @@ public class BigBoots extends AbstractPickThemAllCard implements OnObtainCard {
 
     @Override
     public void upp() {
-        this.upgradeSecondMagic(UPGRADE_DRAW);
+        this.upgradeMagicNumber(UPGRADE_DRAW);
     }
 
     @Override
