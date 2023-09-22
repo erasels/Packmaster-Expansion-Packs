@@ -14,9 +14,9 @@ import thePackmaster.SpireAnniversary5Mod;
 
 public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
     public static final String ID = SpireAnniversary5Mod.makeID("PackGear");
-    private static final int COST = 2;
-    private static final int UPGRADE_COST = 1;
+    private static final int COST = 1;
     private static final int CARDS_PER_METALLICIZE = 10;
+    private static final int UPGRADE_CARDS_PER_METALLICIZE = -3;
 
     public PackGear() {
         super(ID, COST, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -28,7 +28,7 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
 
     @Override
     public void upp() {
-        this.upgradeBaseCost(UPGRADE_COST);
+        this.upgradeMagicNumber(UPGRADE_CARDS_PER_METALLICIZE);
     }
 
     @Override
