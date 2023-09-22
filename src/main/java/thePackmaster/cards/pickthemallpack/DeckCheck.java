@@ -2,14 +2,12 @@ package thePackmaster.cards.pickthemallpack;
 
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.CardModifierManager;
-import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -93,8 +91,10 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
     public void onObtainCard() {
         if (this.rewardCards != null) {
             for (int i = 0; i < this.rewardCards.size(); i++) {
+                AbstractCard c = this.rewardCards.get(i);
+                CardModifierManager.addModifier(c, this.gem.myMod());
                 float spacingMultiplier = (i + 1) / (float)(this.rewardCards.size() + 1);
-                AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(this.rewardCards.get(i), Settings.WIDTH * spacingMultiplier, Settings.HEIGHT / 2.0f));
+                AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(c, Settings.WIDTH * spacingMultiplier, Settings.HEIGHT / 2.0f));
             }
         }
     }
@@ -102,12 +102,6 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
     @Override
     public void onRewardListCreated(ArrayList<AbstractCard> rewardCards) {
         this.rewardCards = rewardCards.stream().filter(c -> c != this).collect(Collectors.toCollection(ArrayList::new));
-        for (AbstractCard c : this.rewardCards) {
-            if (c != this) {
-                CardModifierManager.addModifier(c, this.gem.myMod());
-                c.superFlash(Color.SKY.cpy());
-            }
-        }
     }
 
     public static AbstractGemsCard getRandomGem() {
