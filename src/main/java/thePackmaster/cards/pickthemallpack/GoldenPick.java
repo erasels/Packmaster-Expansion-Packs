@@ -12,7 +12,7 @@ import thePackmaster.SpireAnniversary5Mod;
 public class GoldenPick extends AbstractPickThemAllCard implements OnObtainCard {
     public static final String ID = SpireAnniversary5Mod.makeID("GoldenPick");
     private static final int COST = 1;
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 10;
     private static final int UPGRADE_DAMAGE = 3;
     private static final int GOLD = 75;
     private static final int GOLD_PER_CARD = 2;;
