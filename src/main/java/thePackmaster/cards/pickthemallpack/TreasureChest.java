@@ -12,7 +12,7 @@ import thePackmaster.SpireAnniversary5Mod;
 public class TreasureChest extends AbstractPickThemAllCard implements OnObtainCard, CustomSavable<Integer> {
     public static final String ID = SpireAnniversary5Mod.makeID("TreasureChest");
     private static final int COST = 2;
-    private static final int PLAYS = 8;
+    private static final int PLAYS = 7;
     private static final int UPGRADE_PLAYS = -2;
 
     public TreasureChest() {
