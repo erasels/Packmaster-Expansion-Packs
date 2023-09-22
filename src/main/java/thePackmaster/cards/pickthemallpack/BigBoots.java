@@ -1,10 +1,8 @@
 package thePackmaster.cards.pickthemallpack;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.blue.Stack;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -18,7 +16,7 @@ public class BigBoots extends AbstractPickThemAllCard implements OnObtainCard {
     private static final int COST = 1;
     private static final int DRAW = 2;
     private static final int UPGRADE_DRAW = 1;
-    private static final int THRESHOLD = 20;
+    private static final int THRESHOLD = 15;
 
     public BigBoots() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
