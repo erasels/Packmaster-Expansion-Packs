@@ -18,7 +18,7 @@ public class BloodWall extends AbstractPickThemAllCard implements OnObtainCard {
     private static final int UPGRADE_BLOCK = 2;
     private static final int TEMP_HP = 3;
     private static final int UPGRADE_TEMP_HP = 1;
-    private static final int PICKUP_HP_LOSS = 5;
+    private static final int PICKUP_HP_LOSS = 4;
 
     public BloodWall() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
