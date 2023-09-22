@@ -17,7 +17,7 @@ public class TouchedByFlame extends AbstractPickThemAllCard implements OnObtainC
     private static final int UPGRADE_IGNITE = 3;
     private static final int WEAK_VULNERABLE = 1;
     private static final int UPGRADE_WEAK_VULNERABLE = 1;
-    private static final int PICKUP_MAX_HP_LOSS = 8;
+    private static final int PICKUP_MAX_HP_LOSS = 6;
 
     public TouchedByFlame() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
