@@ -51,7 +51,7 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
     }
 
     private int getAmount() {
-        return (AbstractDungeon.player.drawPile.size() + AbstractDungeon.player.discardPile.size()) / this.magicNumber;
+        return (AbstractDungeon.player.drawPile.size() + AbstractDungeon.player.discardPile.size() + this.magicNumber - 1) / this.magicNumber;
     }
 
     @Override

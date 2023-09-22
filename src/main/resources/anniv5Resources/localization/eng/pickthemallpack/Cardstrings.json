@@ -18,7 +18,7 @@
   },
   "${ModID}:PackGear": {
     "NAME": "Pack Gear",
-    "DESCRIPTION": "Gain 1 ${ModID}:Metallicize for every !M! cards in your draw and discard piles combined.",
+    "DESCRIPTION": "Gain 1 ${ModID}:Metallicize for every !M! cards in your draw and discard piles combined (rounded up).",
     "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Add an *Aggregate to your deck.", " NL (Gains !${ModID}:m2! *Metallicize.)"]
   },
   "${ModID}:TouchedByFlame": {
