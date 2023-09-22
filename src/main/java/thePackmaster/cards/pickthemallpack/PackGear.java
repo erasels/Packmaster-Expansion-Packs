@@ -36,10 +36,12 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                this.addToTop(new ApplyPowerAction(p, p, new MetallicizePower(p, getAmount())));
+                this.addToTop(new ApplyPowerAction(p, p, new MetallicizePower(p, secondMagic)));
                 this.isDone = true;
             }
         });
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
     }
 
     @Override

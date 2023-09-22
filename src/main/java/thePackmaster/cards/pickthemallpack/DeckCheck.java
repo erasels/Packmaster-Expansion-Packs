@@ -51,6 +51,8 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
     }
 
     private void updateDescription() {
