@@ -11,7 +11,7 @@
     "NAMES": [
       "metallicize"
     ],
-    "DESCRIPTION": "At the end of your turn, gain block."
+    "DESCRIPTION": "Gain #yBlock at the end of your turn."
   },
   {
     "PROPER_NAME": "Lowest Rarity",
