@@ -91,6 +91,11 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
     }
 
     @Override
+    public void onMoveToDiscard() {
+        this.resetDescriptionForCombat();
+    }
+
+    @Override
     public void onObtainCard() {
         if (this.rewardCards != null) {
             for (int i = 0; i < this.rewardCards.size(); i++) {

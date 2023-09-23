@@ -56,6 +56,11 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
     }
 
     @Override
+    public void onMoveToDiscard() {
+        this.resetDescriptionForCombat();
+    }
+
+    @Override
     public void onObtainCard() {
         AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new Aggregate(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
     }
