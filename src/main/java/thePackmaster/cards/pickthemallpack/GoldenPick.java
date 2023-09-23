@@ -14,8 +14,8 @@ public class GoldenPick extends AbstractPickThemAllCard implements OnObtainCard 
     private static final int COST = 1;
     private static final int DAMAGE = 10;
     private static final int UPGRADE_DAMAGE = 4;
-    private static final int GOLD = 75;
-    private static final int GOLD_PER_CARD = 2;;
+    private static final int GOLD = 50;
+    private static final int GOLD_PER_CARD = 5;
 
     public GoldenPick() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
