@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class Transmogrifier extends AbstractPickThemAllCard implements OnObtainCard, StartupCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Transmogrifier");
     private static final int COST = -2;
-    private static final int STRIKES = 2;
+    private static final int STRIKES = 1;
 
     public Transmogrifier() {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
