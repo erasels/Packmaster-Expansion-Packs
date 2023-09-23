@@ -48,15 +48,12 @@ public class BloodWall extends AbstractPickThemAllCard implements OnObtainCard {
         int hpLoss = Math.min(PICKUP_HP_LOSS, AbstractDungeon.player.currentHealth);
         if (hpLoss > 0) {
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-                SpireAnniversary5Mod.logger.info("BloodWall.onObtainCard: In combat branch");
                 this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, hpLoss, DamageInfo.DamageType.HP_LOSS)));
             }
             else {
-                SpireAnniversary5Mod.logger.info("BloodWall.onObtainCard: In other branch");
                 AbstractDungeon.topLevelEffectsQueue.add(new AbstractGameEffect() {
                     @Override
                     public void update() {
-                        SpireAnniversary5Mod.logger.info("BloodWall.onObtainCard: In other branch, update");
                         AbstractDungeon.player.damage(new DamageInfo(null, hpLoss, DamageInfo.DamageType.HP_LOSS));
                         this.isDone = true;
                     }
