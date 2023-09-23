@@ -31,8 +31,8 @@
   },
   "${ModID}:GrabAndGo": {
     "NAME": "Grab and Go",
-    "DESCRIPTION": "Unplayable. Innate. NL ${ModID}:Pickup: Gain a *Question\u00a0Card. *Removed: Lose a *Question\u00a0Card. NL Remove this from your deck after defeating a boss.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL ${ModID}:Pickup: Gain a *Question\u00a0Card. *Removed: Lose a *Question\u00a0Card. NL Remove this from your deck after defeating a boss."
+    "DESCRIPTION": "Unplayable. Innate. NL ${ModID}:Pickup/Removed: Gain/lose a *Question\u00a0Card. NL Remove this from your deck after the act boss.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL ${ModID}:Pickup/Removed: Gain/lose a *Question\u00a0Card. NL Remove this from your deck after the act boss."
   },
   "${ModID}:Transmogrifier": {
     "NAME": "Transmogrifier",
