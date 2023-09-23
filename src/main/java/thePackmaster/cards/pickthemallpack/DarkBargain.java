@@ -21,7 +21,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class DarkBargain extends AbstractPickThemAllCard implements OnObtainCard, ResetDescriptionForCombat {
+public class DarkBargain extends AbstractPickThemAllCard implements OnObtainCard {
     public static final String ID = SpireAnniversary5Mod.makeID("DarkBargain");
     private static final int COST = 0;
     private static final int DRAW = 2;
@@ -44,10 +44,9 @@ public class DarkBargain extends AbstractPickThemAllCard implements OnObtainCard
         this.addToBot(new DrawCardAction(this.magicNumber));
     }
 
-    public void resetDescriptionForCombat() {
-        this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
-        this.cardsToPreview = null;
+    @Override
+    public String getDescriptionForCombat() {
+        return cardStrings.EXTENDED_DESCRIPTION[1];
     }
 
     @Override

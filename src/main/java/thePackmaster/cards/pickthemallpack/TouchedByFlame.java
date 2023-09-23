@@ -23,8 +23,6 @@ public class TouchedByFlame extends AbstractPickThemAllCard implements OnObtainC
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = IGNITE;
         this.secondMagic = this.baseSecondMagic = WEAK_VULNERABLE;
-        this.rawDescription = cardStrings.DESCRIPTION.replace("{0}", PICKUP_MAX_HP_LOSS + "");
-        this.initializeDescription();
     }
 
     @Override
@@ -44,5 +42,10 @@ public class TouchedByFlame extends AbstractPickThemAllCard implements OnObtainC
     public void onObtainCard() {
         // Not going below 1 max HP is handled by decreaseMaxHealth
         AbstractDungeon.player.decreaseMaxHealth(PICKUP_MAX_HP_LOSS);
+    }
+
+    @Override
+    public String getPickupDescription() {
+        return super.getPickupDescription().replace("{0}", PICKUP_MAX_HP_LOSS + "");
     }
 }

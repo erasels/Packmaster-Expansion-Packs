@@ -22,7 +22,7 @@ import thePackmaster.packs.GemsPack;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, SpawnModificationCard, ResetDescriptionForCombat, CustomSavable<String> {
+public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, SpawnModificationCard, CustomSavable<String> {
     public static final String ID = SpireAnniversary5Mod.makeID("DeckCheck");
     private static final int COST = 2;
     private static final int UPGRADE_COST = 1;
@@ -88,12 +88,6 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
 
     private int countPiles() {
         return Math.max(AbstractDungeon.player.drawPile.size(), AbstractDungeon.player.discardPile.size());
-    }
-
-    public void resetDescriptionForCombat() {
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
-        this.cardsToPreview = null;
     }
 
     @Override

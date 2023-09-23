@@ -1,11 +1,13 @@
 {
   "${ModID}:BloodWall": {
     "NAME": "BloodWall",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! stslib:Temporary_HP. NL ${ModID}:Pickup: Lose !${ModID}:m2! HP."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! stslib:Temporary_HP.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Lose !${ModID}:m2! HP."]
   },
   "${ModID}:GoldenPick": {
     "NAME": "Golden Pick",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Pickup: Gain !M! *Gold plus !${ModID}:m2! *Gold for each card in your deck."
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain !M! *Gold plus !${ModID}:m2! *Gold for each card in your deck."]
   },
   "${ModID}:DeckCheck": {
     "NAME": "Deck Check",
@@ -14,7 +16,8 @@
   },
   "${ModID}:BigBoots": {
     "NAME": "Big Boots",
-    "DESCRIPTION": "If your draw or discard pile has !${ModID}:m2!+ cards, draw !M! cards. NL Draw 1 card. NL ${ModID}:Pickup: Add a *Stack to your deck."
+    "DESCRIPTION": "If your draw or discard pile has !${ModID}:m2!+ cards, draw !M! cards. NL Draw 1 card.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Add a *Stack to your deck."]
   },
   "${ModID}:PackGear": {
     "NAME": "Pack Gear",
@@ -23,25 +26,29 @@
   },
   "${ModID}:TouchedByFlame": {
     "NAME": "Touched by Flame",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL Apply !${ModID}:m2! Weak and Vulnerable. NL ${ModID}:Pickup: Lose {0} Max HP."
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL Apply !${ModID}:m2! Weak. NL Apply !${ModID}:m2! Vulnerable.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Lose {0} Max HP."]
   },
   "${ModID}:TreasureChest": {
     "NAME": "Treasure Chest",
-    "DESCRIPTION": "Exhaust. NL Remove this from your deck after playing it !M! times. NL ${ModID}:Pickup: Gain a random common relic."
+    "DESCRIPTION": "Exhaust. NL Remove this from your deck after playing it !M! times.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain a random common relic."]
   },
   "${ModID}:GrabAndGo": {
     "NAME": "Grab and Go",
-    "DESCRIPTION": "Unplayable. Innate. NL ${ModID}:Pickup/Removed: Gain/lose a *Question\u00a0Card. NL Remove this from your deck after the act boss.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL ${ModID}:Pickup/Removed: Gain/lose a *Question\u00a0Card. NL Remove this from your deck after the act boss."
+    "DESCRIPTION": "Unplayable. Innate.",
+    "UPGRADE_DESCRIPTION": "Unplayable.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup/Removed: Gain/lose a *Question Card. NL Remove this from your deck after the act boss.", "Unplayable. NL Innate."]
   },
   "${ModID}:Transmogrifier": {
     "NAME": "Transmogrifier",
-    "DESCRIPTION": "Unplayable. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck. NL ${ModID}:Pickup: Gain !M! *Strike.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck. NL ${ModID}:Pickup: Gain !M! *Strike."
+    "DESCRIPTION": "Unplayable. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain !M! *Strike."]
   },
   "${ModID}:DarkBargain": {
     "NAME": "Dark Bargain",
-    "DESCRIPTION": "Draw !M! cards. Exhaust. NL ${ModID}:Pickup: Gain a random potion, Upgrade a random card, gain a random card, and gain an *Injury.",
-    "EXTENDED_DESCRIPTION": ["Draw !M! cards. NL Exhaust."]
+    "DESCRIPTION": "Draw !M! cards. Exhaust.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain a random potion, Upgrade a random card, gain a random card, and gain an *Injury.", "Draw !M! cards. NL Exhaust."]
   }
 }

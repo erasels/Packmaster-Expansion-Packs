@@ -32,6 +32,11 @@ public class GrabAndGo extends AbstractPickThemAllCard implements OnObtainCard {
     }
 
     @Override
+    public String getDescriptionForCombat() {
+        return cardStrings.EXTENDED_DESCRIPTION[1];
+    }
+
+    @Override
     public void onObtainCard() {
         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new QuestionCard());
     }
