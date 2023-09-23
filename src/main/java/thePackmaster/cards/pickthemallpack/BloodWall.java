@@ -1,5 +1,6 @@
 package thePackmaster.cards.pickthemallpack;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 
 public class BloodWall extends AbstractPickThemAllCard implements OnObtainCard {
@@ -46,10 +48,23 @@ public class BloodWall extends AbstractPickThemAllCard implements OnObtainCard {
         int hpLoss = Math.min(PICKUP_HP_LOSS, AbstractDungeon.player.currentHealth);
         if (hpLoss > 0) {
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+                SpireAnniversary5Mod.logger.info("BloodWall.onObtainCard: In combat branch");
                 this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, hpLoss, DamageInfo.DamageType.HP_LOSS)));
             }
             else {
-                AbstractDungeon.player.damage(new DamageInfo(null, hpLoss, DamageInfo.DamageType.HP_LOSS));
+                SpireAnniversary5Mod.logger.info("BloodWall.onObtainCard: In other branch");
+                AbstractDungeon.topLevelEffectsQueue.add(new AbstractGameEffect() {
+                    @Override
+                    public void update() {
+                        SpireAnniversary5Mod.logger.info("BloodWall.onObtainCard: In other branch, update");
+                        AbstractDungeon.player.damage(new DamageInfo(null, hpLoss, DamageInfo.DamageType.HP_LOSS));
+                        this.isDone = true;
+                    }
+                    @Override
+                    public void render(SpriteBatch spriteBatch) {}
+                    @Override
+                    public void dispose() {}
+                });
             }
         }
     }
