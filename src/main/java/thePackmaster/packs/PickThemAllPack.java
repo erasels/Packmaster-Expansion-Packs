@@ -16,7 +16,7 @@ public class PickThemAllPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public PickThemAllPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(4, 2, 4, 4, 3));
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(3, 3, 4, 3, 4));
     }
 
     @Override
