@@ -39,8 +39,8 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.gem = gem;
         this.baseDamage = DAMAGE;
-        this.cardsToPreview = this.gem;
         this.updateDescription();
+        this.cardsToPreview = this.gem;
     }
 
     @Override
@@ -60,7 +60,6 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
                 : cardStrings.EXTENDED_DESCRIPTION[1].replace("{0}", "*" + this.gem.name.replace(" ", "\u00a0"));
         this.rawDescription = cardStrings.DESCRIPTION + extraDescription;
         this.initializeDescription();
-        this.cardsToPreview = null;
     }
 
     @Override
