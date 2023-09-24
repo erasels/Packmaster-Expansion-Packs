@@ -16,10 +16,10 @@ import thePackmaster.SpireAnniversary5Mod;
 public class BloodWall extends AbstractPickThemAllCard implements OnObtainCard {
     public static final String ID = SpireAnniversary5Mod.makeID("BloodWall");
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BLOCK = 2;
-    private static final int TEMP_HP = 3;
-    private static final int UPGRADE_TEMP_HP = 1;
+    private static final int BLOCK = 4;
+    private static final int UPGRADE_BLOCK = 1;
+    private static final int TEMP_HP = 5;
+    private static final int UPGRADE_TEMP_HP = 2;
     private static final int PICKUP_HP_LOSS = 4;
 
     public BloodWall() {
