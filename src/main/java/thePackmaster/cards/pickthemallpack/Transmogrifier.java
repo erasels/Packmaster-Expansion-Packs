@@ -73,7 +73,7 @@ public class Transmogrifier extends AbstractPickThemAllCard implements OnObtainC
         if (!allCards.isEmpty()) {
             AbstractCard oldCard = allCards.get(0);
             AbstractDungeon.player.masterDeck.removeCard(oldCard);
-            AbstractDungeon.effectsQueue.add(new PurgeCardEffect(oldCard, Settings.WIDTH / 3.0f, Settings.HEIGHT / 3.0f));
+            AbstractDungeon.effectsQueue.add(new PurgeCardEffect(oldCard, Settings.WIDTH / 3.0f, Settings.HEIGHT / 2.0f));
             AbstractDungeon.transformCard(oldCard, false, AbstractDungeon.miscRng);
             AbstractCard newCard = AbstractDungeon.getTransformedCard();
             AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(newCard, Settings.WIDTH * 2.0f / 3.0f, Settings.HEIGHT / 2.0f));
