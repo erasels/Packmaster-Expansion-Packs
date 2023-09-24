@@ -3,12 +3,13 @@ package thePackmaster.cards.pickthemallpack;
 import basemod.abstracts.CustomSavable;
 import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import thePackmaster.SpireAnniversary5Mod;
 
 public class TreasureChest extends AbstractPickThemAllCard implements OnObtainCard, CustomSavable<Integer> {
@@ -34,13 +35,21 @@ public class TreasureChest extends AbstractPickThemAllCard implements OnObtainCa
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.decrementMisc();
-        this.initializeDescription();
-        TreasureChest masterDeckCard = (TreasureChest)StSLib.getMasterDeckEquivalent(this);
-        if (masterDeckCard != null) {
-            masterDeckCard.decrementMisc();
-            masterDeckCard.initializeDescription();
-        }
+        this.addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                decrementMisc();
+                TreasureChest masterDeckCard = (TreasureChest)StSLib.getMasterDeckEquivalent(TreasureChest.this);
+                if (masterDeckCard != null) {
+                    masterDeckCard.decrementMisc();
+                    if (masterDeckCard.misc <= 0) {
+                        AbstractDungeon.player.masterDeck.removeCard(masterDeckCard);
+                        AbstractDungeon.effectsQueue.add(new PurgeCardEffect(masterDeckCard, Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+                    }
+                }
+                this.isDone = true;
+            }
+        });
     }
 
     @Override
