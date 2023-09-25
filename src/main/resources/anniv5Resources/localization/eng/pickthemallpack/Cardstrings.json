@@ -12,7 +12,7 @@
   "${ModID}:DeckCheck": {
     "NAME": "Deck Check",
     "DESCRIPTION": "Deal damage equal to the larger of your draw or discard pile sizes.",
-    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain the other reward cards with a ${ModID}:randomized gem.", " NL ${ModID}:Pickup: Gain the other reward cards with a {0}.", " NL (Deals !D! damage.)"]
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain the other reward cards with a {0}.", " NL (Deals !D! damage.)"]
   },
   "${ModID}:BigBoots": {
     "NAME": "Big Boots",
