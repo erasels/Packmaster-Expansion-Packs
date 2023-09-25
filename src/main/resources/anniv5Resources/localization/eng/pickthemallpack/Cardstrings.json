@@ -42,9 +42,9 @@
   },
   "${ModID}:Transmogrifier": {
     "NAME": "Transmogrifier",
-    "DESCRIPTION": "Unplayable. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL stslib:Startup: Transform the ${ModID}:lowest_rarity card in your deck.",
-    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain a random common card."]
+    "DESCRIPTION": "Unplayable. NL stslib:Startup: Permanently Transform the ${ModID}:lowest_rarity card in your deck.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL stslib:Startup: Permanently Transform the ${ModID}:lowest_rarity card in your deck.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain a *Strike."]
   },
   "${ModID}:DarkBargain": {
     "NAME": "Dark Bargain",

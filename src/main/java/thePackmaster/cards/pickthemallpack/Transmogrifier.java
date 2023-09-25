@@ -21,6 +21,7 @@ public class Transmogrifier extends AbstractPickThemAllCard implements OnObtainC
 
     public Transmogrifier() {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        this.cardsToPreview = new Strike();
     }
 
     @Override
@@ -39,8 +40,7 @@ public class Transmogrifier extends AbstractPickThemAllCard implements OnObtainC
 
     @Override
     public void onObtainCard() {
-        AbstractCard c = AbstractDungeon.srcCommonCardPool.group.get(AbstractDungeon.miscRng.random(AbstractDungeon.srcCommonCardPool.group.size() - 1));
-        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c, Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new Strike(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
     }
 
     @Override
