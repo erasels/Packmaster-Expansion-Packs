@@ -29,10 +29,10 @@
     "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL Apply !${ModID}:m2! Weak. NL Apply !${ModID}:m2! Vulnerable.",
     "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Lose {0} Max HP."]
   },
-  "${ModID}:TreasureChest": {
-    "NAME": "Treasure Chest",
-    "DESCRIPTION": "{@@}Exhaust. NL Remove this from your deck after playing it !M! {!M!|1=time|@=times}.",
-    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain a random common relic."]
+  "${ModID}:BurningFists": {
+    "NAME": "Burning Fists",
+    "DESCRIPTION": "Deal !D! damage twice. NL Gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Lose !${ModID}:m2! HP."]
   },
   "${ModID}:GrabAndGo": {
     "NAME": "Grab and Go",
