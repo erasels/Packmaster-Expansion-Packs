@@ -22,7 +22,7 @@ public class PickThemAllPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(BloodWall.ID);
+        cards.add(BulkUp.ID);
         cards.add(GoldenPick.ID);
         cards.add(DeckCheck.ID);
         cards.add(BigBoots.ID);

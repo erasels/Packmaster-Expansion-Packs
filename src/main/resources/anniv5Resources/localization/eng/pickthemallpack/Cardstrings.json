@@ -1,8 +1,8 @@
 {
-  "${ModID}:BloodWall": {
-    "NAME": "BloodWall",
+  "${ModID}:BulkUp": {
+    "NAME": "Bulk Up",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! stslib:Temporary_HP.",
-    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Lose !${ModID}:m2! HP."]
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain !${ModID}:m2! Max HP."]
   },
   "${ModID}:GoldenPick": {
     "NAME": "Golden Pick",
