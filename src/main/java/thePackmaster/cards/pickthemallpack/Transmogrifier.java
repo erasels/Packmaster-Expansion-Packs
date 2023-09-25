@@ -18,12 +18,9 @@ import java.util.ArrayList;
 public class Transmogrifier extends AbstractPickThemAllCard implements OnObtainCard, StartupCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Transmogrifier");
     private static final int COST = -2;
-    private static final int STRIKES = 1;
 
     public Transmogrifier() {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
-        this.magicNumber = this.baseMagicNumber = STRIKES;
-        this.cardsToPreview = new Strike();
     }
 
     @Override
@@ -42,10 +39,8 @@ public class Transmogrifier extends AbstractPickThemAllCard implements OnObtainC
 
     @Override
     public void onObtainCard() {
-        for (int i = 0; i < this.magicNumber; i++) {
-            float spacingMultiplier = (i + 1) / (float)(this.magicNumber + 1);
-            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new Strike(), Settings.WIDTH * spacingMultiplier, Settings.HEIGHT / 2.0f));
-        }
+        AbstractCard c = AbstractDungeon.srcCommonCardPool.group.get(AbstractDungeon.miscRng.random(AbstractDungeon.srcCommonCardPool.group.size() - 1));
+        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c, Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
     }
 
     @Override
