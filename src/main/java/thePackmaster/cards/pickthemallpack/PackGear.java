@@ -58,6 +58,14 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
     }
 
     @Override
+    public void onCreateThisCard() {
+        super.onCreateThisCard();
+        if (AbstractDungeon.player.hand.contains(this)) {
+            this.applyPowers();
+        }
+    }
+
+    @Override
     public void onMoveToDiscard() {
         this.resetDescriptionForCombat();
     }
