@@ -21,6 +21,7 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
     public PackGear() {
         super(ID, COST, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = CARDS_PER_METALLICIZE;
+        this.secondMagic = this.baseSecondMagic = 0;
         this.cardsToPreview = new Aggregate();
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
@@ -33,6 +34,7 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.applyPowers();
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
