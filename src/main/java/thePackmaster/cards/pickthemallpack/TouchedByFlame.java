@@ -14,7 +14,7 @@ public class TouchedByFlame extends AbstractPickThemAllCard implements OnObtainC
     public static final String ID = SpireAnniversary5Mod.makeID("TouchedByFlame");
     private static final int COST = 1;
     private static final int IGNITE = 9;
-    private static final int UPGRADE_IGNITE = 2;
+    private static final int UPGRADE_IGNITE = 1;
     private static final int WEAK_VULNERABLE = 1;
     private static final int UPGRADE_WEAK_VULNERABLE = 1;
     private static final int PICKUP_MAX_HP_LOSS = 7;
