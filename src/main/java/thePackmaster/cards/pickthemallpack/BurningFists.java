@@ -17,8 +17,8 @@ import thePackmaster.SpireAnniversary5Mod;
 public class BurningFists extends AbstractPickThemAllCard implements OnObtainCard {
     public static final String ID = SpireAnniversary5Mod.makeID("BurningFists");
     private static final int COST = 1;
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_DAMAGE = 4;
     private static final int STRENGTH = 1;
     private static final int PICKUP_HP_LOSS = 4;
 
@@ -36,7 +36,6 @@ public class BurningFists extends AbstractPickThemAllCard implements OnObtainCar
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber)));
     }

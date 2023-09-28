@@ -31,7 +31,7 @@
   },
   "${ModID}:BurningFists": {
     "NAME": "Burning Fists",
-    "DESCRIPTION": "Deal !D! damage twice. NL Gain !M! Strength.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Lose !${ModID}:m2! HP."]
   },
   "${ModID}:GrabAndGo": {
