@@ -44,7 +44,7 @@ public class BurningFists extends AbstractPickThemAllCard implements OnObtainCar
     public void onObtainCard() {
         // We want to avoid negative scenarios like getting this from Astrolabe or Pandora's Box at low enough HP that
         // it would kill the player, so we make this not reduce the player below 1 HP
-        int hpLoss = Math.min(PICKUP_HP_LOSS, AbstractDungeon.player.currentHealth);
+        int hpLoss = Math.min(PICKUP_HP_LOSS, AbstractDungeon.player.currentHealth - 1);
         if (hpLoss > 0) {
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
                 this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, hpLoss, DamageInfo.DamageType.HP_LOSS)));
