@@ -11,12 +11,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Sozu;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.ObtainPotionEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -54,7 +54,7 @@ public class DarkBargain extends AbstractPickThemAllCard implements OnObtainCard
         AbstractRelic sozu = AbstractDungeon.player.getRelic(Sozu.ID);
         if (sozu != null) {
             sozu.flash();
-        } else if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+        } else if (Wiz.isInCombat()) {
             this.addToBot(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
         } else {
             AbstractDungeon.topLevelEffectsQueue.add(new ObtainPotionEffect(AbstractDungeon.returnRandomPotion()));

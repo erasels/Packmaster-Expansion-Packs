@@ -10,9 +10,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.util.Wiz;
 
 public class BurningFists extends AbstractPickThemAllCard implements OnObtainCard {
     public static final String ID = SpireAnniversary5Mod.makeID("BurningFists");
@@ -46,7 +46,7 @@ public class BurningFists extends AbstractPickThemAllCard implements OnObtainCar
         // it would kill the player, so we make this not reduce the player below 1 HP
         int hpLoss = Math.min(PICKUP_HP_LOSS, AbstractDungeon.player.currentHealth - 1);
         if (hpLoss > 0) {
-            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            if (Wiz.isInCombat()) {
                 this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, hpLoss, DamageInfo.DamageType.HP_LOSS)));
             }
             else {
