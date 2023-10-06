@@ -3,13 +3,16 @@ package thePackmaster;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.mod.stslib.cards.targeting.SelfOrEnemyTargeting;
-import com.evacipated.cardcrawl.mod.stslib.patches.CustomTargeting;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.CalmStance;
+import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import thePackmaster.cards.pickthemallpack.GrabAndGo;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.specialhats.InstantDeathHat;
 import thePackmaster.packs.CthulhuPack;
@@ -28,6 +31,7 @@ import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.util.maridebuffpack.DebuffLossManager;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static thePackmaster.util.Wiz.p;
 
@@ -76,6 +80,13 @@ public class ExpansionPacks implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         MakeRoomPatch.reset();
+        if (abstractRoom instanceof MonsterRoomBoss && abstractRoom.monsters.areMonstersDead()) {
+            List<AbstractCard> cardsToRemove = AbstractDungeon.player.masterDeck.group.stream().filter(c -> c.cardID.equals(GrabAndGo.ID)).collect(Collectors.toCollection(ArrayList::new));
+            for (AbstractCard c : cardsToRemove) {
+                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+                AbstractDungeon.player.masterDeck.removeCard(c);
+            }
+        }
     }
 
     @Override

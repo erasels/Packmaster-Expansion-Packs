@@ -1,0 +1,16 @@
+{
+  "${ModID}:PickThemAllPack": {
+    "TEXT": [
+      "Pick Them All",
+      "Be rewarded for picking up cards... or pay a price for taking the strongest cards. Build your deck big as can be.",
+      "modargo",
+      "Card art from MtG"
+    ]
+  },
+  "${ModID}:PickThemAllPackHat": {
+    "TEXT": [
+      "Gotta pick 'em all.",
+      "League Expo"
+    ]
+  }
+}

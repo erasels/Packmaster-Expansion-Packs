@@ -1,0 +1,54 @@
+{
+  "${ModID}:BulkUp": {
+    "NAME": "Bulk Up",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! stslib:Temporary_HP.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain !${ModID}:m2! Max HP."]
+  },
+  "${ModID}:GoldenPick": {
+    "NAME": "Golden Pick",
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain !M! *Gold plus !${ModID}:m2! *Gold for each card in your deck."]
+  },
+  "${ModID}:DeckCheck": {
+    "NAME": "Deck Check",
+    "DESCRIPTION": "Deal damage equal to the larger of your draw or discard pile sizes.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain the other reward cards with a {0}.", " NL (Deals !D! damage.)"]
+  },
+  "${ModID}:BigBoots": {
+    "NAME": "Big Boots",
+    "DESCRIPTION": "If your draw or discard pile has !${ModID}:m2!+ cards, draw !M! cards. NL Draw 1 card.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Add a *Stack to your deck."]
+  },
+  "${ModID}:PackGear": {
+    "NAME": "Pack Gear",
+    "DESCRIPTION": "Gain 1 ${ModID}:Metallicize plus 1 for every !M! cards in your draw and discard piles combined.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Add an *Aggregate to your deck.", " NL (Gains !${ModID}:m2! *Metallicize.)"]
+  },
+  "${ModID}:TouchedByFlame": {
+    "NAME": "Touched by Flame",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL Apply !${ModID}:m2! Weak. NL Apply !${ModID}:m2! Vulnerable.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Lose {0} Max HP."]
+  },
+  "${ModID}:BurningFists": {
+    "NAME": "Burning Fists",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Lose !${ModID}:m2! HP."]
+  },
+  "${ModID}:GrabAndGo": {
+    "NAME": "Grab and Go",
+    "DESCRIPTION": "Unplayable. Innate.",
+    "UPGRADE_DESCRIPTION": "Unplayable.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup/Removed: Gain/lose a *Question Card. NL Remove this from your deck after the act boss.", "Unplayable. NL Innate."]
+  },
+  "${ModID}:Transmogrifier": {
+    "NAME": "Transmogrifier",
+    "DESCRIPTION": "Unplayable. NL stslib:Startup: Permanently Transform the ${ModID}:lowest_rarity card in your deck.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL stslib:Startup: Permanently Transform the ${ModID}:lowest_rarity card in your deck.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain a *Strike."]
+  },
+  "${ModID}:DarkBargain": {
+    "NAME": "Dark Bargain",
+    "DESCRIPTION": "Draw !M! cards. Exhaust.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:Pickup: Gain a random potion, Upgrade a random card, gain a random card, and gain an *Injury.", "Draw !M! cards. NL Exhaust."]
+  }
+}
