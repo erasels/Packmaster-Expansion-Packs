@@ -17,6 +17,7 @@ public class VexVinciblePower extends AbstractPackmasterPower {
     public VexVinciblePower(AbstractCreature owner, int amount, int amount2) {
         super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
         this.activated = false;
+        this.isTurnBased = false;
         this.isTwoAmount = true;
         this.amount2 = amount2;
         this.updateDescription();
