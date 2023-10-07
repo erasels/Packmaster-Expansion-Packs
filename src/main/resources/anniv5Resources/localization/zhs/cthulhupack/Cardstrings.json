@@ -36,7 +36,7 @@
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "弢莜燊暠",
-    "DESCRIPTION": "结束你的回合。 NL 下回合： NL 获得 !M! 层 临时生命 。 NL 获得 [E] [E] [E] 。 NL 进入 ${ModID}:梦魇 。 NL 消耗 。"
+    "DESCRIPTION": "结束你的回合。 NL 下回合： NL 获得 !M! 层 临时生命 。 NL 获得 [E] [E] 。 NL 进入 ${ModID}:梦魇 。 NL 消耗 。"
   },
   "${ModID}:StarSpawn": {
     "NAME": "斗星召唤",
