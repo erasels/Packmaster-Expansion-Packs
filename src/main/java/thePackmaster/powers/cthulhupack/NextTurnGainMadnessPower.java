@@ -24,7 +24,7 @@ public class NextTurnGainMadnessPower extends AbstractPackmasterPower implements
 
     public void atStartOfTurn() {
         Wiz.atb(new AddTemporaryHPAction(Wiz.p(), Wiz.p(), amount));
-        Wiz.atb(new GainEnergyAction(3));
+        Wiz.atb(new GainEnergyAction(2));
         Wiz.atb(new ChangeStanceAction(new NightmareStance()));
         removeThisInvisibly();
     }
