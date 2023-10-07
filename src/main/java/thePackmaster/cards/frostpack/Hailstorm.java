@@ -21,8 +21,8 @@ public class Hailstorm extends AbstractFrostCard {
 
     public Hailstorm() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 2;
-        baseMagicNumber = magicNumber = 5;
+        baseDamage = 3;
+        baseMagicNumber = magicNumber = 4;
         this.showEvokeValue = true;
         this.showEvokeOrbCount = this.magicNumber;
     }
