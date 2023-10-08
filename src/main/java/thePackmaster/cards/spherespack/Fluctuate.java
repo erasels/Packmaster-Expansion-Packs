@@ -17,9 +17,9 @@ import java.util.Collections;
 public class Fluctuate extends AbstractSpheresCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Fluctuate");
     private static final int COST = 1;
+    private static final int UPGRADE_COST = 0;
     private static final int AMOUNT = 1;
-    private static final int EXTRA_AMOUNT = 1;
-    private static final int UPGRADE_EXTRA_AMOUNT = 1;
+    private static final int EXTRA_AMOUNT = 2;
 
     public Fluctuate() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -28,7 +28,7 @@ public class Fluctuate extends AbstractSpheresCard {
 
     @Override
     public void upp() {
-        this.upgradeMagicNumber(UPGRADE_EXTRA_AMOUNT);
+        this.upgradeBaseCost(UPGRADE_COST);
     }
 
     @Override
