@@ -2,6 +2,7 @@ package thePackmaster.cards.spherespack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -12,10 +13,12 @@ public class Consolidate extends AbstractSpheresCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Consolidate");
     private static final int COST = 1;
     private static final int FOCUS = 1;
+    private static final int DRAW = 1;
 
     public Consolidate() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = FOCUS;
+        this.secondMagic = this.baseSecondMagic = DRAW;
         this.isEthereal = true;
     }
 
@@ -34,5 +37,6 @@ public class Consolidate extends AbstractSpheresCard {
             }
         });
         this.addToBot(new ApplyPowerAction(p, p, new FocusPower(p, this.magicNumber)));
+        this.addToBot(new DrawCardAction(this.secondMagic));
     }
 }
