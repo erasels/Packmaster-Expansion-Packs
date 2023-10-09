@@ -26,8 +26,8 @@
   },
   "${ModID}:Consolidate": {
     "NAME": "凝聚",
-    "DESCRIPTION": "虚无 。 NL 失去右侧1个充能球。 NL 获得1点 集中 。",
-    "UPGRADE_DESCRIPTION": "失去右侧1个充能球。 NL 获得1点 集中 。"
+    "DESCRIPTION": "虚无 。 NL 失去右侧1个充能球。 NL 获得1点 集中 。 NL 抽一张牌。",
+    "UPGRADE_DESCRIPTION": "失去右侧1个充能球。 NL 获得1点 集中 。 NL 抽一张牌。"
   },
   "${ModID}:FrostConversion": {
     "NAME": "冰变",
