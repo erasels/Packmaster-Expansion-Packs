@@ -33,8 +33,7 @@
   },
   "${ModID}:Subspace": {
     "NAME": "子空间",
-    "DESCRIPTION": "所有敌人失去 ${ModID}:扭曲 层数点生命。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "所有敌人失去 ${ModID}:扭曲 层数点生命 !M! 次。 NL 消耗 。"
+    "DESCRIPTION": "所有敌人失去 ${ModID}:扭曲 层数点生命 !M! 次。 NL 消耗 。"
   },
   "${ModID}:SubtleKnife": {
     "NAME": "奥秘匕首",

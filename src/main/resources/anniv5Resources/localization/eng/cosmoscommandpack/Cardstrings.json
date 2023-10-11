@@ -33,8 +33,7 @@
   },
   "${ModID}:Subspace": {
     "NAME": "Subspace",
-    "DESCRIPTION": "ALL enemies lose HP equal to their ${ModID}:Distortion. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "ALL enemies lose HP equal to !M! times their ${ModID}:Distortion. NL Exhaust."
+    "DESCRIPTION": "ALL enemies lose HP equal to !M! times their ${ModID}:Distortion. NL Exhaust."
   },
   "${ModID}:SubtleKnife": {
     "NAME": "Subtle Knife",
