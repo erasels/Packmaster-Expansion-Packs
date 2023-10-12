@@ -14,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Shakedown extends AbstractIntrigueCard {
     public final static String ID = makeID("Shakedown");
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     public Shakedown() {
