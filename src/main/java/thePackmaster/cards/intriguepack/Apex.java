@@ -25,6 +25,7 @@ public class Apex extends AbstractIntrigueCard {
     public Apex() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 3;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

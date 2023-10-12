@@ -16,7 +16,7 @@ public class StanceDance extends AbstractSentinelCard {
 
     public StanceDance() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 10;
         exhaust = true;
     }
 

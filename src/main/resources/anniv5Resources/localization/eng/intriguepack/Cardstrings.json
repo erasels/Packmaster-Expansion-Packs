@@ -40,7 +40,7 @@
   },
   "${ModID}:Apex": {
     "NAME": "Apex",
-    "DESCRIPTION": "If all cards in hand are ${ModID}:Precious, ${ModID}:Ascend. ${ModID}:Demote all cards in hand to common."
+    "DESCRIPTION": "Retain. NL If all cards in hand are ${ModID}:Precious, ${ModID}:Ascend. ${ModID}:Demote all cards in hand to common."
   },
   "${ModID}:PowerStruggle": {
     "NAME": "Power Struggle",
