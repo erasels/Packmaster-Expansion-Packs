@@ -3,27 +3,46 @@ package thePackmaster.cardmodifiers.magnetizepack;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector2;
+import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.vfx.combat.LightningOrbPassiveEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.magnetizepack.MagnetizeAction;
+import thePackmaster.powers.magnetizepack.PolarityPower;
+import thePackmaster.util.TexLoader;
+import thePackmaster.util.Wiz;
+import thePackmaster.vfx.magnetizepack.MagnetizeParticleEffect;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class MagnetizedModifier extends AbstractCardModifier {
     public static String ID = SpireAnniversary5Mod.makeID(MagnetizedModifier.class.getSimpleName());
-    private final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
-    boolean isInherent;
+    private static final float VFX_MIN = 0.3f;
+    private static final float VFX_MAX = 0.5f;
+
+    private boolean isInherent;
+    private float vfxTimer;
+    private ArrayList<MagnetizeParticleEffect> particleEffects = new ArrayList<>();
+    private static final Texture img = TexLoader.getTexture("anniv5Resources/images/ui/magnetizeIcon.png");
 
     public MagnetizedModifier(boolean isInherent) {
         this.isInherent = isInherent;
+        vfxTimer = VFX_MIN;
     }
 
     @Override
@@ -43,13 +62,13 @@ public class MagnetizedModifier extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return uiStrings.EXTRA_TEXT[0] + rawDescription;
+        return uiStrings.TEXT[1] + rawDescription;
     }
 
-//    @Override
-//    public void onExhausted(AbstractCard card) {
-//        spread(card);
-//    }
+    @Override
+    public List<TooltipInfo> additionalTooltips(AbstractCard card) {
+        return Collections.singletonList(new TooltipInfo(uiStrings.EXTRA_TEXT[0], uiStrings.EXTRA_TEXT[1]));
+    }
 
     public void onDiscarded(AbstractCard card) {
         spread(card);
@@ -61,14 +80,70 @@ public class MagnetizedModifier extends AbstractCardModifier {
     }
 
     private void spread(AbstractCard card) {
-        List<AbstractCard> candidates = AbstractDungeon.player.hand.group.stream().filter(c -> {
-            return c != card &&
-                    !CardModifierManager.hasModifier(c, ID) &&
-                    c.cost != -2;
-        }).collect(Collectors.toList());
+        List<AbstractCard> candidates = AbstractDungeon.player.hand.group.stream().filter(c -> c != card && shouldApply(c)).collect(Collectors.toList());
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                List<AbstractCard> newCandidates = candidates.stream().filter(c -> AbstractDungeon.player.hand.contains(c)).collect(Collectors.toList());
+                if (newCandidates.size() > 0) {
+                    AbstractCard newCard = newCandidates.get(AbstractDungeon.cardRandomRng.random(newCandidates.size() - 1));
+                    Wiz.att(new MagnetizeAction(newCard));
+                }
+                isDone = true;
+            }
+        });
+        Wiz.applyToSelf(new PolarityPower(Wiz.adp(), 1));
+    }
 
-        if (candidates.size() > 0)
-            AbstractDungeon.actionManager.addToBottom(new MagnetizeAction(candidates.get(AbstractDungeon.cardRandomRng.random(candidates.size()-1))));
+    private static Vector2 rotatePoint(Vector2 p, float angle) {
+        float s = MathUtils.sin(0.017453292F * angle);
+        float c = MathUtils.cos(0.017453292F * angle);
+        p.x = p.x * c - p.y * s;
+        p.y = p.x * s + p.y * c;
+        return p;
+    }
+
+    @Override
+    public void onRender(AbstractCard card, SpriteBatch sb) {
+//        for (MagnetizeParticleEffect effect : particleEffects)
+//            effect.render(sb);
+        ExtraIcons.icon(img).render(card);
+    }
+
+    @Override
+    public void onUpdate(AbstractCard card) {
+//        if (Wiz.adp() != null && Wiz.adp().hand != null && Wiz.adp().hand.contains(card)) {
+//            vfxTimer -= Gdx.graphics.getDeltaTime();
+//
+////            if (vfxTimer < 0f) {
+////                AbstractDungeon.topLevelEffects.add(new MagnetizedEffect(card.hb.cX, card.hb.cY));
+////                if (MathUtils.randomBoolean())
+////                    AbstractDungeon.topLevelEffects.add(new MagnetizedEffect(Wiz.adp().hb.cX, Wiz.adp().hb.cY));
+////                vfxTimer = MathUtils.random(0.15F, 0.8F);
+////            }
+//
+////            if (vfxTimer <= 0f) {
+////                Vector2 p = new Vector2(-132.0F * card.drawScale * Settings.scale, 192.0F * card.drawScale * Settings.scale);
+////                rotatePoint(p, card.angle);
+////                particleEffects.add(new MagnetizeParticleEffect(card.current_x + p.x, card.current_y + p.y, card.drawScale));
+////                vfxTimer = MathUtils.random(VFX_MIN, VFX_MAX);
+////            }
+////
+////            Iterator<MagnetizeParticleEffect> particleIterator = particleEffects.iterator();
+////            while (particleIterator.hasNext()) {
+////                MagnetizeParticleEffect effect = particleIterator.next();
+////                effect.update();
+////                if (effect.isDone)
+////                    particleIterator.remove();
+////            }
+//        }
+    }
+
+    private class MagnetizedEffect extends LightningOrbPassiveEffect {
+        public MagnetizedEffect(float x, float y) {
+            super(x, y);
+            this.scale = 4f;
+        }
     }
 
     @Override

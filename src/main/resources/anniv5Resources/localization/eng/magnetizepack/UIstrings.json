@@ -15,10 +15,11 @@
   "${ModID}:MagnetizedModifier": {
     "TEXT": [
       "Magnetized",
-      "When you play, discard, or Exhaust a #yMagnetized card, Magnetize another random card in your hand. Some cards have special effects with #yMagnetized cards."
+      "${ModID}:Magnetized. NL "
     ],
     "EXTRA_TEXT": [
-      "${ModID}:Magnetized. NL "
+      "Polarity",
+      "Upon gaining 10 #yPolarity, gain [E] ."
     ]
   }
 }

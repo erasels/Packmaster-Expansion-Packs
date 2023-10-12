@@ -2,22 +2,10 @@ package thePackmaster.cards.magnetizepack;
 
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.red.PerfectedStrike;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
-import thePackmaster.powers.magnetizepack.WorldDynamoPower;
 import thePackmaster.util.Wiz;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -42,10 +30,6 @@ public class PerfectedAlignment extends AbstractMagnetizeCard {
 //                .mapToInt(card -> CardModifierManager.hasModifier(card, MagnetizedModifier.ID) ? 1 : 0).sum();
 
         return count;
-    }
-
-    public static boolean isStrike(AbstractCard c) {
-        return c.hasTag(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

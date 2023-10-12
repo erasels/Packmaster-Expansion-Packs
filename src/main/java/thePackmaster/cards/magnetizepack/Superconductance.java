@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
 import thePackmaster.powers.magnetizepack.SuperconductancePower;
-import thePackmaster.powers.magnetizepack.WorldDynamoPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -14,8 +13,8 @@ public class Superconductance extends AbstractMagnetizeCard {
     public final static String ID = makeID(Superconductance.class.getSimpleName());
 
     public Superconductance() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
         CardModifierManager.addModifier(this, new MagnetizedModifier(true));
     }
 
@@ -25,6 +24,6 @@ public class Superconductance extends AbstractMagnetizeCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeBaseCost(2);
     }
 }

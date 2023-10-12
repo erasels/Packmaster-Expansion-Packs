@@ -7,9 +7,11 @@ import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import javassist.*;
 import org.clapper.util.classutil.*;
 import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
+import thePackmaster.util.Wiz;
 
 import java.io.File;
 import java.lang.reflect.Modifier;
@@ -17,7 +19,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 @SpirePatch(clz = CardCrawlGame.class, method = SpirePatch.CONSTRUCTOR)
-public class OnDiscardModifierPatch {
+public class OnDiscardPatch {
     public static void Raw(CtBehavior ctBehavior) throws NotFoundException {
         ClassFinder finder = new ClassFinder();
 
@@ -54,7 +56,7 @@ public class OnDiscardModifierPatch {
                 for (CtMethod m : methods) {
                     if (m.getName().equals("triggerOnManualDiscard")) {
                         m.insertAfter("{" +
-                                OnDiscardModifierPatch.class.getName() + ".triggerModifiers(this);" +
+                                OnDiscardPatch.class.getName() + ".triggerOnDiscard(this);" +
                                 "}");
                     }
                 }
@@ -64,9 +66,16 @@ public class OnDiscardModifierPatch {
         }
     }
 
-    public static void triggerModifiers(AbstractCard card) {
+    public static void triggerOnDiscard(AbstractCard card) {
         for (AbstractCardModifier mod : CardModifierManager.getModifiers(card, MagnetizedModifier.ID))
             ((MagnetizedModifier)mod).onDiscarded(card);
 
+        for (AbstractPower p : Wiz.adp().powers)
+            if (p instanceof DiscardListener)
+                ((DiscardListener) p).onManualDiscard(card);
+    }
+
+    public interface DiscardListener {
+        void onManualDiscard (AbstractCard card);
     }
 }

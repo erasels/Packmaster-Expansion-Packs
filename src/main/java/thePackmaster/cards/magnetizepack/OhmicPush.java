@@ -1,20 +1,18 @@
 package thePackmaster.cards.magnetizepack;
 
+import basemod.AutoAdd;
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
 import thePackmaster.powers.distortionpack.DistortionPower;
 import thePackmaster.util.Wiz;
 
-import javax.smartcardio.Card;
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
+@AutoAdd.Ignore
 public class OhmicPush extends AbstractMagnetizeCard {
     public final static String ID = makeID(OhmicPush.class.getSimpleName());
 

@@ -1,15 +1,10 @@
 package thePackmaster.cards.magnetizepack;
 
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.magnetizepack.MagnetizeAction;
-import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

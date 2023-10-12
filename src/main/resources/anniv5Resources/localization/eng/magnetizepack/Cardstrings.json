@@ -7,13 +7,18 @@
     "NAME": "Coil Burst",
     "DESCRIPTION": "Deal !D! damage. NL Add 2 *Fuzz to your hand."
   },
+  "${ModID}:ElectronFlow": {
+    "NAME": "Electron Flow",
+    "DESCRIPTION": "Discard any number of cards. Gain !M! *Polarity for each card discarded. NL Add a *Fuzz to your hand.",
+    "EXTENDED_DESCRIPTION": ["Discard"]
+  },
   "${ModID}:FaradayField": {
     "NAME": "Faraday Field",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Magnetize your entire hand."
   },
   "${ModID}:Ferroshield": {
     "NAME": "Ferroshield",
-    "DESCRIPTION": "Gain !B! Block. NL When you ${ModID}:Magnetize this card, gain [E] [E]."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Magnetize !M! random cards in your draw pile."
   },
   "${ModID}:Fuzz": {
     "NAME": "Fuzz",
@@ -29,6 +34,12 @@
     "NAME": "Induce Current",
     "DESCRIPTION": "When you ${ModID}:Magnetize a card, deal !M! damage to a random enemy."
   },
+  "${ModID}:MagneticDomain": {
+    "NAME": "Magnetic Domain",
+    "DESCRIPTION": "${ModID}:Magnetize and discard a card. Play a ${ModID}:Magnetized card in your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Magnetize and discard a card. Play a ${ModID}:Magnetized card in your discard pile.",
+    "EXTENDED_DESCRIPTION": ["Magnetize and discard", "play"]
+  },
   "${ModID}:OhmicPush": {
     "NAME": "Ohmic Push",
     "DESCRIPTION": "Apply !${ModID}:m2! ${ModID}:Distortion and !M! Weak. NL Add a *Fuzz to your hand."
@@ -37,9 +48,17 @@
     "NAME": "Perfected Alignment",
     "DESCRIPTION": "Deal !D! damage. NL Increase by !M! for ALL your ${ModID}:Magnetized cards."
   },
+  "${ModID}:RepulsionField": {
+    "NAME": "Repulsion Field",
+    "DESCRIPTION": "Whenever a ${ModID}:Magnetized card is discarded or Exhausted, gain !M! Block."
+  },
+  "${ModID}:ElectromagneticSynergy": {
+    "NAME": "Electromagnetic Synergy",
+    "DESCRIPTION": "${ModID}:Magnetized cards deal !M! more damage and gain !M! more Block this turn."
+  },
   "${ModID}:Superconductance": {
     "NAME": "Superconductance",
-    "DESCRIPTION": "${ModID}:Magnetized cards deal !M! more damage and gain !M! more Block this turn."
+    "DESCRIPTION": "When you ${ModID}:Magnetize a card this turn, reduce its cost by !M! this turn until played."
   },
   "${ModID}:WorldDynamo": {
     "NAME": "World Dynamo",
