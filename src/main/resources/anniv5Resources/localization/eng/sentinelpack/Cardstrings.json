@@ -1,8 +1,8 @@
 {
   "${ModID}:Fume": {
     "NAME": "Fume",
-    "DESCRIPTION": "Enter ${ModID}:Angry.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Enter ${ModID}:Angry."
+    "DESCRIPTION": "Enter ${ModID}:Angry. NL Gain !M! Vigor.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter ${ModID}:Angry. NL Gain !M! Vigor."
   },
   "${ModID}:Relax": {
     "NAME": "Relax",
