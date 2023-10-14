@@ -47,7 +47,7 @@
     "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 将一张 *打击 加入牌组。"]
   },
   "${ModID}:DarkBargain": {
-    "NAME": "Dark Bargain",
+    "NAME": "黑色交易",
     "DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 随机获得一瓶药水。 NL 随机 升级 牌组一张牌。 NL 随机获得一张牌。 NL 将一张 *受伤 加入牌组。", "抽 !M! 张牌。 NL 消耗 。"]
   }
