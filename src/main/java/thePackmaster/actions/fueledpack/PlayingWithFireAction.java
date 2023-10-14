@@ -2,7 +2,7 @@ package thePackmaster.actions.fueledpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.actions.boardgamepack.RollAction;
+//import thePackmaster.actions.boardgamepack.RollAction;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class PlayingWithFireAction extends AbstractGameAction {
             if (dieFace > IGNITE_THRESHOLD)
                 applyToSelfTop(new IgnitePower(adp(), 1));
         };
-        att(new RollAction(sides, 0, dieConsumer, false));
+//        att(new RollAction(sides, 0, dieConsumer, false));
         isDone = true;
     }
 

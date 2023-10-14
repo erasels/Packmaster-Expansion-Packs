@@ -25,6 +25,7 @@ public class InduceCurrentPower extends AbstractPackmasterPower implements Clone
     @Override
     public void onMagnetize(AbstractCard card) {
         addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        flash();
     }
 
     @Override

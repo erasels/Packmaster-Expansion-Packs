@@ -5,6 +5,7 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
 import thePackmaster.util.Wiz;
@@ -21,11 +22,14 @@ public class MagnetizeAction extends AbstractGameAction {
         AbstractCardModifier newMagnetize = new MagnetizedModifier(false);
         if (newMagnetize.shouldApply(card)) {
             card.superFlash();
-
             CardCrawlGame.sound.play("ORB_LIGHTNING_CHANNEL", 0.1F);
+            CardModifierManager.addModifier(card, newMagnetize);
+            for (AbstractPower pow: AbstractDungeon.player.powers) {
+                if (pow instanceof MagnetizeListener)
+                    ((MagnetizeListener) pow).onMagnetize(card);
+            }
         }
 
-        CardModifierManager.addModifier(card, newMagnetize);
         isDone = true;
     }
 
