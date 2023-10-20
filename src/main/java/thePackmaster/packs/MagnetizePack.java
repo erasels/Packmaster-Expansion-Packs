@@ -27,15 +27,11 @@ public class MagnetizePack extends AbstractCardPack {
         cards.add(FaradayField.ID);
         cards.add(Ferroshield.ID);
         cards.add(Fuzz.ID);
-//        cards.add(Hyperpolarity.ID);
         cards.add(InduceCurrent.ID);
         cards.add(MagneticDomain.ID);
-//        cards.add(OhmicPush.ID);
         cards.add(PerfectedAlignment.ID);
         cards.add(RepulsionField.ID);
-//        cards.add(ElectromagneticSynergy.ID);
         cards.add(Superconductance.ID);
-//        cards.add(WorldDynamo.ID);
         return cards;
     }
 }
