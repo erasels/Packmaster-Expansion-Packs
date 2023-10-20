@@ -14,7 +14,7 @@
   },
   "${ModID}:FaradayField": {
     "NAME": "Faraday Field",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Magnetize your entire hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Magnetize your hand."
   },
   "${ModID}:Ferroshield": {
     "NAME": "Ferroshield",
