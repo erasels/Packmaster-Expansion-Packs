@@ -1,0 +1,9 @@
+{
+  "${ModID}:DancePack": {
+    "TEXT": [
+      "Dance",
+      "Defeat your foes with poise and grace! NL Play cards of different types, and try not to stumble!",
+      "Jedi"
+    ]
+  }
+}
