@@ -1,8 +1,4 @@
 {
-  "${ModID}:HyperpolarityPower": {
-    "NAME": "Hyperpolarity",
-    "DESCRIPTIONS": ["The next #yMagnetized card you play is played twice.", "The next #b%d #yMagnetized cards you play are played twice."]
-  },
   "${ModID}:InduceCurrentPower": {
     "NAME": "Induce Current",
     "DESCRIPTIONS": ["When you #yMagnetize a card, deal #b%d damage to a random enemy."]
@@ -15,16 +11,8 @@
     "NAME": "Repulsion Field",
     "DESCRIPTIONS": ["Whenever a #yMagnetized card is #yExhausted or discarded, gain #b%d Block."]
   },
-  "${ModID}:ElectromagneticSynergyPower": {
-    "NAME": "Electromagnetic Synergy",
-    "DESCRIPTIONS": ["#yMagnetized cards deal #b%d more attack damage and gain #b%d more #yBlock."]
-  },
   "${ModID}:SuperconductancePower": {
     "NAME": "Superconductance",
     "DESCRIPTIONS": ["Whenever you #yMagnetize a card this turn, reduce its cost by #b%d this turn until played."]
-  },
-  "${ModID}:WorldDynamoPower": {
-    "NAME": "World Dynamo",
-    "DESCRIPTIONS": ["The first time each turn your entire hand is #yMagnetized, gain #b%d [E] ."]
   }
 }
