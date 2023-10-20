@@ -9,7 +9,7 @@
   },
   "${ModID}:ElectronFlow": {
     "NAME": "Electron Flow",
-    "DESCRIPTION": "Discard any number of cards. Gain !M! *Polarity for each card discarded. NL Gain a *Fuzz*.",
+    "DESCRIPTION": "Discard any number of cards. Gain !M! *Polarity for each card discarded. NL Gain a *Fuzz.",
     "EXTENDED_DESCRIPTION": ["Discard"]
   },
   "${ModID}:FaradayField": {
