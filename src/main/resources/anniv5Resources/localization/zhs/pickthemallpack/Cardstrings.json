@@ -1,0 +1,54 @@
+{
+  "${ModID}:BulkUp": {
+    "NAME": "巨大化",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 临时生命 。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 获得 !${ModID}:m2! 点 最大生命 。"]
+  },
+  "${ModID}:GoldenPick": {
+    "NAME": "掘金器",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： 获得 !M! *金币 ， NL 牌组每有一张牌， NL 额外获得 !${ModID}:m2! 。"]
+  },
+  "${ModID}:DeckCheck": {
+    "NAME": "牌组测验",
+    "DESCRIPTION": "造成伤害，数值为抽牌堆与弃牌堆牌数的大者。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 一并获得其他卡牌奖励，其嵌有 {0} 。", " NL (造成 !D! 点)"]
+  },
+  "${ModID}:BigBoots": {
+    "NAME": "大靴子",
+    "DESCRIPTION": "若抽或弃牌堆有 !${ModID}:m2!+ 张牌，抽 !M! 张牌。 NL 抽一张牌。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 将一张 *堆栈 加入牌组。"]
+  },
+  "${ModID}:PackGear": {
+    "NAME": "废牌烂卡",
+    "DESCRIPTION": "获得1层 ${ModID}:金属化 ， NL 抽弃牌堆每有 !M! 张牌， NL 额外获得1层。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 将一张 *汇集 加入牌组。", " NL (获得 !${ModID}:m2! 层 )"]
+  },
+  "${ModID}:TouchedByFlame": {
+    "NAME": "引火焚身",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。 NL 给予 !${ModID}:m2! 层 虚弱 。 NL 给予 !${ModID}:m2! 层 易伤 。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： 失去 {0} 点最大生命。"]
+  },
+  "${ModID}:BurningFists": {
+    "NAME": "燃烧之拳",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 力量 。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 失去 !${ModID}:m2! 点生命。"]
+  },
+  "${ModID}:GrabAndGo": {
+    "NAME": "匆匆搜刮",
+    "DESCRIPTION": "不能被打出 。 固有 。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起/移除 ： NL 获得/失去一件 *问号牌 。 NL 击败本幕首领后， NL 从牌组移除本牌。", "不能被打出 。 NL 固有 。"]
+  },
+  "${ModID}:Transmogrifier": {
+    "NAME": "魔变器",
+    "DESCRIPTION": "不能被打出 。 NL stslib:启动 ： 变化牌组中最 ${ModID}:庸碌 的牌，持续整局。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 虚无 。 NL stslib:启动 ： 变化牌组中最 ${ModID}:庸碌 的牌，持续整局。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 将一张 *打击 加入牌组。"]
+  },
+  "${ModID}:DarkBargain": {
+    "NAME": "黑色交易",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 随机获得一瓶药水。 NL 随机 升级 牌组一张牌。 NL 随机获得一张牌。 NL 将一张 *受伤 加入牌组。", "抽 !M! 张牌。 NL 消耗 。"]
+  }
+}
