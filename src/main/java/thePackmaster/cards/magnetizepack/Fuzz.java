@@ -18,16 +18,11 @@ public class Fuzz extends AbstractMagnetizeCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!hasEnoughEnergy())
-            return false;
-
-        if (p.hasRelic(MedicalKit.ID))
-            return true;
-
-        boolean canUse = CardModifierManager.hasModifier(this, MagnetizedModifier.ID);
-        if (!canUse)
+        if (!CardModifierManager.hasModifier(this, MagnetizedModifier.ID) && !p.hasRelic(MedicalKit.ID)) {
             cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
-        return canUse;
+            return false;
+        }
+        else return super.canUse(p, m);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

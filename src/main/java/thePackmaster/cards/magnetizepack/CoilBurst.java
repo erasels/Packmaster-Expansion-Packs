@@ -13,7 +13,7 @@ public class CoilBurst extends AbstractMagnetizeCard {
     public final static String ID = makeID(CoilBurst.class.getSimpleName());
 
     public CoilBurst() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 9;
         cardsToPreview = new Fuzz();
         CardModifierManager.addModifier(this, new MagnetizedModifier(true));

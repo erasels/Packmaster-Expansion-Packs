@@ -26,9 +26,6 @@ public class PerfectedAlignment extends AbstractMagnetizeCard {
         count += Wiz.adp().drawPile   .group.stream().filter(card -> CardModifierManager.hasModifier(card, MagnetizedModifier.ID)).count();
         count += Wiz.adp().discardPile.group.stream().filter(card -> CardModifierManager.hasModifier(card, MagnetizedModifier.ID)).count();
 
-//        return Stream.concat(Stream.concat(Wiz.adp().hand.group.stream(), Wiz.adp().drawPile.group.stream())Wiz.adp().discardPile.group.stream())
-//                .mapToInt(card -> CardModifierManager.hasModifier(card, MagnetizedModifier.ID) ? 1 : 0).sum();
-
         return count;
     }
 

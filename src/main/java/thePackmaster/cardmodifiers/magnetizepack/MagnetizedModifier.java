@@ -105,38 +105,7 @@ public class MagnetizedModifier extends AbstractCardModifier {
 
     @Override
     public void onRender(AbstractCard card, SpriteBatch sb) {
-//        for (MagnetizeParticleEffect effect : particleEffects)
-//            effect.render(sb);
         ExtraIcons.icon(img).render(card);
-    }
-
-    @Override
-    public void onUpdate(AbstractCard card) {
-//        if (Wiz.adp() != null && Wiz.adp().hand != null && Wiz.adp().hand.contains(card)) {
-//            vfxTimer -= Gdx.graphics.getDeltaTime();
-//
-////            if (vfxTimer < 0f) {
-////                AbstractDungeon.topLevelEffects.add(new MagnetizedEffect(card.hb.cX, card.hb.cY));
-////                if (MathUtils.randomBoolean())
-////                    AbstractDungeon.topLevelEffects.add(new MagnetizedEffect(Wiz.adp().hb.cX, Wiz.adp().hb.cY));
-////                vfxTimer = MathUtils.random(0.15F, 0.8F);
-////            }
-//
-////            if (vfxTimer <= 0f) {
-////                Vector2 p = new Vector2(-132.0F * card.drawScale * Settings.scale, 192.0F * card.drawScale * Settings.scale);
-////                rotatePoint(p, card.angle);
-////                particleEffects.add(new MagnetizeParticleEffect(card.current_x + p.x, card.current_y + p.y, card.drawScale));
-////                vfxTimer = MathUtils.random(VFX_MIN, VFX_MAX);
-////            }
-////
-////            Iterator<MagnetizeParticleEffect> particleIterator = particleEffects.iterator();
-////            while (particleIterator.hasNext()) {
-////                MagnetizeParticleEffect effect = particleIterator.next();
-////                effect.update();
-////                if (effect.isDone)
-////                    particleIterator.remove();
-////            }
-//        }
     }
 
     private class MagnetizedEffect extends LightningOrbPassiveEffect {

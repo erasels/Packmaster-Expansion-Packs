@@ -1,7 +1,7 @@
 {
   "${ModID}:Attraction": {
     "NAME": "Attraction",
-    "DESCRIPTION": "Draw !M! cards and ${ModID}:Magnetize them. NL Add a *Fuzz to your hand."
+    "DESCRIPTION": "Draw !M! cards and ${ModID}:Magnetize them. NL Gain a *Fuzz*."
   },
   "${ModID}:CoilBurst": {
     "NAME": "Coil Burst",
@@ -9,12 +9,12 @@
   },
   "${ModID}:ElectronFlow": {
     "NAME": "Electron Flow",
-    "DESCRIPTION": "Discard any number of cards. Gain !M! *Polarity for each card discarded. NL Add a *Fuzz to your hand.",
+    "DESCRIPTION": "Discard any number of cards. Gain !M! *Polarity for each card discarded. NL Gain a *Fuzz*.",
     "EXTENDED_DESCRIPTION": ["Discard"]
   },
   "${ModID}:FaradayField": {
     "NAME": "Faraday Field",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Magnetize your entire hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Magnetize your hand."
   },
   "${ModID}:Ferroshield": {
     "NAME": "Ferroshield",
@@ -42,7 +42,7 @@
   },
   "${ModID}:OhmicPush": {
     "NAME": "Ohmic Push",
-    "DESCRIPTION": "Apply !${ModID}:m2! ${ModID}:Distortion and !M! Weak. NL Add a *Fuzz to your hand."
+    "DESCRIPTION": "Apply !${ModID}:m2! ${ModID}:Distortion and !M! Weak. NL Gain a *Fuzz*."
   },
   "${ModID}:PerfectedAlignment": {
     "NAME": "Perfected Alignment",
