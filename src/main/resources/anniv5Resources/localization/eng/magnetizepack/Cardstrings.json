@@ -42,7 +42,7 @@
   },
   "${ModID}:OhmicPush": {
     "NAME": "Ohmic Push",
-    "DESCRIPTION": "Apply !${ModID}:m2! ${ModID}:Distortion and !M! Weak. NL Add a *Fuzz to your hand."
+    "DESCRIPTION": "Apply !${ModID}:m2! ${ModID}:Distortion and !M! Weak. NL Gain a *Fuzz."
   },
   "${ModID}:PerfectedAlignment": {
     "NAME": "Perfected Alignment",
