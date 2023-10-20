@@ -1,11 +1,11 @@
 {
   "${ModID}:Attraction": {
     "NAME": "Attraction",
-    "DESCRIPTION": "Draw !M! cards and ${ModID}:Magnetize them. NL Gain a *Fuzz*."
+    "DESCRIPTION": "Draw !M! cards and ${ModID}:Magnetize them. NL Gain a *Fuzz."
   },
   "${ModID}:CoilBurst": {
     "NAME": "Coil Burst",
-    "DESCRIPTION": "Deal !D! damage. NL Add 2 *Fuzz to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Fuzz."
   },
   "${ModID}:ElectronFlow": {
     "NAME": "Electron Flow",
@@ -42,7 +42,7 @@
   },
   "${ModID}:OhmicPush": {
     "NAME": "Ohmic Push",
-    "DESCRIPTION": "Apply !${ModID}:m2! ${ModID}:Distortion and !M! Weak. NL Gain a *Fuzz*."
+    "DESCRIPTION": "Apply !${ModID}:m2! ${ModID}:Distortion and !M! Weak. NL Gain a *Fuzz."
   },
   "${ModID}:PerfectedAlignment": {
     "NAME": "Perfected Alignment",
