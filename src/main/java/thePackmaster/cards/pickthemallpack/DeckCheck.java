@@ -90,6 +90,11 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
                 AbstractCard c = this.rewardCards.get(i);
                 CardModifierManager.addModifier(c, this.getGem().myMod());
                 float spacingMultiplier = (i + 1) / (float)(this.rewardCards.size() + 1);
+                // You normally aren't able to get multiple copies of the same card in rewards, but it could be possible
+                // with mods, so to avoid infinite loops we disable the pickup logic for any other copies of Deck Check
+                if (c instanceof DeckCheck) {
+                    ((DeckCheck)c).rewardCards = null;
+                }
                 AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c, Settings.WIDTH * spacingMultiplier, Settings.HEIGHT / 2.0f));
             }
         }
