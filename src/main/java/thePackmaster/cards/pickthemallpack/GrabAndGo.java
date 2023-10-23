@@ -1,11 +1,13 @@
 package thePackmaster.cards.pickthemallpack;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.QuestionCard;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 
 public class GrabAndGo extends AbstractPickThemAllCard implements OnObtainCard {
@@ -43,6 +45,18 @@ public class GrabAndGo extends AbstractPickThemAllCard implements OnObtainCard {
 
     @Override
     public void onRemoveFromMasterDeck() {
-        AbstractDungeon.player.loseRelic(QuestionCard.ID);
+        // We wrap this in an effect in order to avoid concurrent modification exceptions in scenarios where this is
+        // removed as part of a relic's on equip effect (e.g. Astrolabe, Empty Cage).
+        AbstractDungeon.topLevelEffectsQueue.add(new AbstractGameEffect() {
+            @Override
+            public void update() {
+                AbstractDungeon.player.loseRelic(QuestionCard.ID);
+                this.isDone = true;
+            }
+            @Override
+            public void render(SpriteBatch spriteBatch) {}
+            @Override
+            public void dispose() {}
+        });
     }
 }
