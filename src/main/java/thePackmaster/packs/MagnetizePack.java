@@ -15,7 +15,7 @@ public class MagnetizePack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public MagnetizePack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 2, 5, 2, 4, PackSummary.Tags.Exhaust, PackSummary.Tags.Tokens));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 2, 4, 1, 5, PackSummary.Tags.Exhaust, PackSummary.Tags.Discard, PackSummary.Tags.Tokens));
     }
 
     @Override

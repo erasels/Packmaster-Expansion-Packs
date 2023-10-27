@@ -2,13 +2,13 @@
   "${ModID}:MagnetizePack": {
     "TEXT": [
       "Magnetize",
-      "Spread Magnetized to all your cards, and empower Magnetized cards.",
+      "Randomly spread Magnetized through your cards, and turn your deck into an energy generator.",
       "wavewhyse☆"
     ]
   },
   "${ModID}:MagnetizePackHat": {
     "TEXT": [
-      "Always points north.",
+      "You'll never lose a paperclip again!",
       "Magnet"
     ]
   },
