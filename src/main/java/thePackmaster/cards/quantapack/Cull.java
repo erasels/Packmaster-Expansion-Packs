@@ -17,7 +17,7 @@ public class Cull extends AbstractQuantaCard {
     private static final int BLOCK_UP = 3;
 
     public Cull() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = 2;
     }
