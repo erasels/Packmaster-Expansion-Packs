@@ -1,0 +1,50 @@
+{
+  "${ModID}:Attraction": {
+    "NAME": "Attraction",
+    "DESCRIPTION": "Draw !M! cards and ${ModID}:Magnetize them. NL Gain a *Fuzz."
+  },
+  "${ModID}:CoilBurst": {
+    "NAME": "Coil Burst",
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Fuzz."
+  },
+  "${ModID}:ElectronFlow": {
+    "NAME": "Electron Flow",
+    "DESCRIPTION": "Discard any number of cards. Gain !M! *Polarity for each card discarded. NL Gain a *Fuzz.",
+    "EXTENDED_DESCRIPTION": ["Discard"]
+  },
+  "${ModID}:FaradayField": {
+    "NAME": "Faraday Field",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Magnetize your hand."
+  },
+  "${ModID}:Ferroshield": {
+    "NAME": "Ferroshield",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Magnetize !M! random cards in your draw pile."
+  },
+  "${ModID}:Fuzz": {
+    "NAME": "Fuzz",
+    "DESCRIPTION": "Can only be played if ${ModID}:Magnetized. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["That card isn't Magnetized!"]
+  },
+  "${ModID}:InduceCurrent": {
+    "NAME": "Induce Current",
+    "DESCRIPTION": "When you ${ModID}:Magnetize a card, deal !M! damage to a random enemy."
+  },
+  "${ModID}:MagneticDomain": {
+    "NAME": "Magnetic Domain",
+    "DESCRIPTION": "${ModID}:Magnetize and discard a card. Play a ${ModID}:Magnetized card in your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Magnetize and discard a card. Play a ${ModID}:Magnetized card in your discard pile.",
+    "EXTENDED_DESCRIPTION": ["Magnetize and discard", "play"]
+  },
+  "${ModID}:PerfectedAlignment": {
+    "NAME": "Perfected Alignment",
+    "DESCRIPTION": "Deal !D! damage. NL Increase by !M! for ALL your ${ModID}:Magnetized cards."
+  },
+  "${ModID}:RepulsionField": {
+    "NAME": "Repulsion Field",
+    "DESCRIPTION": "Whenever a ${ModID}:Magnetized card is discarded or Exhausted, gain !M! Block."
+  },
+  "${ModID}:Superconductance": {
+    "NAME": "Superconductance",
+    "DESCRIPTION": "When you ${ModID}:Magnetize a card this turn, reduce its cost by !M! this turn until played."
+  }
+}

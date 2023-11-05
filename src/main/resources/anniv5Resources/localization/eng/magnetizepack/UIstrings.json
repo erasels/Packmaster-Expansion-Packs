@@ -1,0 +1,25 @@
+{
+  "${ModID}:MagnetizePack": {
+    "TEXT": [
+      "Magnetize",
+      "Randomly spread Magnetized through your cards, and turn your deck into an energy generator.",
+      "wavewhyse☆"
+    ]
+  },
+  "${ModID}:MagnetizePackHat": {
+    "TEXT": [
+      "You'll never lose a paperclip again!",
+      "Magnet"
+    ]
+  },
+  "${ModID}:MagnetizedModifier": {
+    "TEXT": [
+      "Magnetized",
+      "${ModID}:Magnetized. NL "
+    ],
+    "EXTRA_TEXT": [
+      "Polarity",
+      "Upon gaining 10 #yPolarity, gain [E] ."
+    ]
+  }
+}
