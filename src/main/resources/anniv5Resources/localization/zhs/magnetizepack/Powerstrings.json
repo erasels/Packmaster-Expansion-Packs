@@ -1,0 +1,18 @@
+{
+  "${ModID}:InduceCurrentPower": {
+    "NAME": "电流引导",
+    "DESCRIPTIONS": ["每当你 #y磁化 一张卡牌，对一个随机敌人造成 #b%d 点伤害。"]
+  },
+  "${ModID}:PolarityPower": {
+    "NAME": "极性",
+    "DESCRIPTIONS": ["每当你获得 #b%d 点极性，获得 [E] 。"]
+  },
+  "${ModID}:RepulsionFieldPower": {
+    "NAME": "斥力场",
+    "DESCRIPTIONS": ["每有一张 #y磁化 的牌被 #y消耗 或丢弃，获得 #b%d 点格挡。"]
+  },
+  "${ModID}:SuperconductancePower": {
+    "NAME": "超导",
+    "DESCRIPTIONS": ["在这个回合，每当你 #y磁化 一张卡牌，降低它的本回合耗能 #b%d 点直至被打出。"]
+  }
+}

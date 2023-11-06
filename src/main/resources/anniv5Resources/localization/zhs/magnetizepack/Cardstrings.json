@@ -1,0 +1,50 @@
+{
+  "${ModID}:Attraction": {
+    "NAME": "吸引力",
+    "DESCRIPTION": "抽 !M! 张卡牌并 ${ModID}:磁化 它们。 NL 获得1张 *滋啦 。"
+  },
+  "${ModID}:CoilBurst": {
+    "NAME": "爆裂线圈",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得2张 *滋啦 。"
+  },
+  "${ModID}:ElectronFlow": {
+    "NAME": "电子流",
+    "DESCRIPTION": "丢弃任意数量的手牌。每丢弃一张获得 !M! 层 *极性 。 NL 获得1张 *滋啦 。",
+    "EXTENDED_DESCRIPTION": ["丢弃"]
+  },
+  "${ModID}:FaradayField": {
+    "NAME": "法拉第场",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:磁化 你的手牌。"
+  },
+  "${ModID}:Ferroshield": {
+    "NAME": "铁盾",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL ${ModID}:磁化 你抽牌堆中 !M! 张随机卡牌。"
+  },
+  "${ModID}:Fuzz": {
+    "NAME": "滋啦",
+    "DESCRIPTION": "只有被 ${ModID}:磁化 时才能打出。 NL 消耗。",
+    "EXTENDED_DESCRIPTION": ["那张卡牌没有被磁化！"]
+  },
+  "${ModID}:InduceCurrent": {
+    "NAME": "电流引导",
+    "DESCRIPTION": "每当你 ${ModID}:磁化 一张卡牌，对一个随机敌人造成 !M! 点伤害。"
+  },
+  "${ModID}:MagneticDomain": {
+    "NAME": "磁性领域",
+    "DESCRIPTION": "${ModID}:磁化 并丢弃一张卡牌。打出你弃牌堆中一张 ${ModID}:磁化 的卡牌。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "${ModID}:磁化 并丢弃一张卡牌。打出你弃牌堆中一张 ${ModID}:磁化 的卡牌。",
+    "EXTENDED_DESCRIPTION": ["磁化并丢弃", "打出"]
+  },
+  "${ModID}:PerfectedAlignment": {
+    "NAME": "完美校准",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你每拥有一张 ${ModID}:磁化 的卡牌，额外造成 !M! 点伤害。"
+  },
+  "${ModID}:RepulsionField": {
+    "NAME": "斥力场",
+    "DESCRIPTION": "每当一张 ${ModID}:磁化 的卡牌被丢弃或消耗，获得 !M! 点格挡。"
+  },
+  "${ModID}:Superconductance": {
+    "NAME": "超导",
+    "DESCRIPTION": "在这个回合，每当你 ${ModID}:磁化 一张卡牌，降低它的本回合耗能 !M! 点直至被打出。"
+  }
+}
