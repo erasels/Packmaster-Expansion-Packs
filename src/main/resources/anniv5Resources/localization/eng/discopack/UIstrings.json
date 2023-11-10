@@ -1,0 +1,15 @@
+{
+  "${ModID}:DiscoPack": {
+    "TEXT": [
+      "Disco",
+      "Dance with danger as you discard to dismember your detractors!",
+      "DJM"
+    ]
+  },
+  "${ModID}:DiscoPackHat": {
+    "TEXT": [
+      "Pool's Closed.",
+      "The Afro"
+    ]
+  }
+}

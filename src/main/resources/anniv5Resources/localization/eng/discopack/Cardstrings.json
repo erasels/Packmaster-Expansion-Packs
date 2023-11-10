@@ -1,0 +1,45 @@
+{
+  "${ModID}:DanceTransition": {
+    "NAME": "Explosive Finish",
+    "DESCRIPTION": "${ModID}:Dancing. NL Deal !D! damage to ALL enemies, then discard your hand. NL Deal !M! more for each card discarded."
+  },
+  "${ModID}:ElectricSlide": {
+    "NAME": "Electric Slide",
+    "DESCRIPTION": "${ModID}:Dancing NL Discard up to !M! cards. NL Gain !B! Block per card discarded. NL ${ModID}:Smooth: Draw a card.",
+    "EXTENDED_DESCRIPTION": ["discard."]
+  },
+  "${ModID}:FastMovements": {
+    "NAME": "Fast Movements",
+    "DESCRIPTION": "At the start of your turn, gain !M! Vigor for each card discarded or played last turn."
+  },
+  "${ModID}:FunkyChicken": {
+    "NAME": "Funky Chicken",
+    "DESCRIPTION": "Draw !M! cards. Discard a card. NL ${ModID}:Smooth: Draw !${ModID}:m2! cards."
+  },
+  "${ModID}:InTheRhythm": {
+    "NAME": "In The Rhythm",
+    "DESCRIPTION": "Whenever you discard !${ModID}:m2! cards, gain !M! Strength and 3 Temporary Hp.",
+    "UPGRADE_DESCRIPTION":"Innate. NL Whenever you discard !${ModID}:m2! cards, gain !M! Strength and 3 Temporary Hp."
+  },
+  "${ModID}:PointMove": {
+    "NAME": "Point Move",
+    "DESCRIPTION": "Place a card from your discard pile on top of your deck, then draw a card. NL ${ModID}:Smooth: Gain !M! [E] ."
+  },
+  "${ModID}:TheBump": {
+    "NAME": "The Bump",
+    "DESCRIPTION": "Deal !D! damage. NL Discard a card. NL ${ModID}:Smooth: Deal !D! damage to a random enemy."
+  },
+  "${ModID}:TheBusStop": {
+    "NAME": "The Bus Stop",
+    "DESCRIPTION": "Gain !B! Block. NL Discard a card. NL ${ModID}:Smooth: Gain !B! Block."
+  },
+  "${ModID}:TheRobot": {
+    "NAME": "The Robot",
+    "DESCRIPTION": "Deal !D! damage. NL Until next turn, whenever you discard a card gain !M! Block. NL ${ModID}:Smooth: Gain !B! Block."
+  },
+  "${ModID}:YMCA": {
+    "NAME": "YMCA",
+    "DESCRIPTION": "${ModID}:Dancing. NL Deal !D! damage !${ModID}:m2! times. NL ${ModID}:Smooth: Attacks 1 more time until played.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Dancing. Retain. NL Deal !D! damage !${ModID}:m2! times. NL ${ModID}:Smooth: Attacks 1 more time until played."
+  }
+}

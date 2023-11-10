@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Smooth",
+    "NAMES": [
+      "smooth"
+    ],
+    "DESCRIPTION": "Whenever you discard this card, activate these effects."
+  },
+  {
+    "PROPER_NAME": "Dancing",
+    "NAMES": [
+      "dancing"
+    ],
+    "DESCRIPTION": "Whenever you discard this card, place it back into your hand."
+  }
+]
