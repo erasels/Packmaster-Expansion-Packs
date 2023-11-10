@@ -37,6 +37,7 @@ import static thePackmaster.util.Wiz.p;
 
 @SpireInitializer
 public class ExpansionPacks implements
+        EditCardsSubscriber,
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
@@ -87,6 +88,7 @@ public class ExpansionPacks implements
                 AbstractDungeon.player.masterDeck.removeCard(c);
             }
         }
+        CardCrawlGame.sound.stop(SpireAnniversary5Mod.makeID("YMCA"));
     }
 
     @Override
@@ -141,6 +143,14 @@ public class ExpansionPacks implements
 
     @Override
     public void receiveAddAudio() {
+        BaseMod.addAudio(SpireAnniversary5Mod.makeID("Spotlight"), SpireAnniversary5Mod.makePath("audio/discopack/spotlight.ogg"));
+        BaseMod.addAudio(SpireAnniversary5Mod.makeID("Chicken"), SpireAnniversary5Mod.makePath("audio/discopack/chicken.ogg"));
+        BaseMod.addAudio(SpireAnniversary5Mod.makeID("YMCA"), SpireAnniversary5Mod.makePath("audio/discopack/YMCA.ogg"));
+        BaseMod.addAudio(SpireAnniversary5Mod.makeID("Static"), SpireAnniversary5Mod.makePath("audio/discopack/static.ogg"));
         BaseMod.addAudio(SpireAnniversary5Mod.makeID("MariDebuffPack_TheFLYINGCAR"), SpireAnniversary5Mod.makePath("audio/maridebuffpack/MariTheFlyingCar.ogg"));
+    }
+    @Override
+    public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new SecondBlock());
     }
 }
