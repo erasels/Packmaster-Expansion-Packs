@@ -1,0 +1,15 @@
+{
+  "${ModID}:DiscoPack": {
+    "TEXT": [
+      "Disco",
+      "Dance with danger as you discard to dismember your detractors!",
+      "DJM"
+    ]
+  },
+  "${ModID}:DiscoPackHat": {
+    "TEXT": [
+      "Big hair for a small person. Hard to maintain, though.",
+      "The Afro"
+    ]
+  }
+}
