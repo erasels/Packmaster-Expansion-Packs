@@ -2,13 +2,19 @@ package thePackmaster.cards.magnetizepack;
 
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
 import thePackmaster.powers.magnetizepack.PolarityPower;
 import thePackmaster.util.Wiz;
+
+import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -27,8 +33,22 @@ public class ElectronFlow extends AbstractMagnetizeCard {
 
             Wiz.applyToSelfTop(new PolarityPower(p, cards.size() * magicNumber));
 
-            for (AbstractCard c : cards)
-                addToTop(new DiscardSpecificCardAction(c));
+            ArrayList<AbstractCard> cards2 = new ArrayList<>(cards);
+            Wiz.att(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    CardGroup group = AbstractDungeon.player.hand;
+                    for (AbstractCard c : cards2) {
+                        if (group.contains(c)) {
+                            group.moveToDiscardPile(c);
+                            GameActionManager.incrementDiscard(false);
+                            c.triggerOnManualDiscard();
+                        }
+                    }
+
+                    this.isDone = true;
+                }
+            });
         }));
 
         addToBot(new MakeTempCardInHandAction(cardsToPreview, 1));
