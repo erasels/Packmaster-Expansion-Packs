@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.patches.pickthemallpack.ChangeAbstractPlayerDamageToUseTopLevelEffectsQueuePatch;
 import thePackmaster.util.Wiz;
 
 public class BurningFists extends AbstractPickThemAllCard implements OnObtainCard {
@@ -53,7 +54,13 @@ public class BurningFists extends AbstractPickThemAllCard implements OnObtainCar
                 AbstractDungeon.topLevelEffectsQueue.add(new AbstractGameEffect() {
                     @Override
                     public void update() {
-                        AbstractDungeon.player.damage(new DamageInfo(null, hpLoss, DamageInfo.DamageType.HP_LOSS));
+                        try {
+                            ChangeAbstractPlayerDamageToUseTopLevelEffectsQueuePatch.active = true;
+                            AbstractDungeon.player.damage(new DamageInfo(null, hpLoss, DamageInfo.DamageType.HP_LOSS));
+                        }
+                        finally {
+                            ChangeAbstractPlayerDamageToUseTopLevelEffectsQueuePatch.active = false;
+                        }
                         this.isDone = true;
                     }
                     @Override
