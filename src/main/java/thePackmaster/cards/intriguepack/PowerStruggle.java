@@ -11,7 +11,7 @@ public class PowerStruggle extends AbstractIntrigueCard {
     public final static String ID = makeID("PowerStruggle");
 
     public PowerStruggle() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
     }
 
@@ -20,6 +20,6 @@ public class PowerStruggle extends AbstractIntrigueCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }

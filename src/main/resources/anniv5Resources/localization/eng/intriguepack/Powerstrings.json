@@ -5,5 +5,18 @@
       "Whenever you play a rare card, gain #b",
       " Energy and #yDemote it."
     ]
+  },
+  "${ModID}:ApexPower": {
+    "NAME": "Apex",
+    "DESCRIPTIONS": [
+      "You can only play rare and uncommon cards this turn."
+    ]
+  },
+  "${ModID}:RevolutionPower": {
+    "NAME": "Revolution",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yMundane card, the enemy loses #b",
+      " HP."
+    ]
   }
 }

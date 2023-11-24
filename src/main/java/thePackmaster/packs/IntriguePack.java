@@ -29,7 +29,7 @@ public class IntriguePack extends AbstractCardPack {
         cards.add(EtTu.ID);
         cards.add(Spotlight.ID);
         cards.add(Exultation.ID);
-        cards.add(Radiance.ID);
+        cards.add(Revolution.ID);
         cards.add(Apex.ID);
         cards.add(PowerStruggle.ID);
         return cards;

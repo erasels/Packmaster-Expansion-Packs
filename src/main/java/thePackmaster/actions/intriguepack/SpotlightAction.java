@@ -34,7 +34,7 @@ public class SpotlightAction extends AbstractGameAction {
             {
                 if (upgraded)
                 {
-                    if (AbstractIntrigueCard.isMundane(card) || (card.rarity == AbstractCard.CardRarity.UNCOMMON && card.color != AbstractCard.CardColor.CURSE))
+                    if (card.rarity != AbstractCard.CardRarity.RARE)
                         tmp.addToRandomSpot(card);
                 }
                 else
@@ -63,7 +63,7 @@ public class SpotlightAction extends AbstractGameAction {
                     AbstractDungeon.player.hand.addToTop(card);
                     AbstractDungeon.player.hand.refreshHandLayout();
                     AbstractDungeon.player.hand.applyPowers();
-                    AbstractIntrigueCard.promote(card);
+                    card.rarity = AbstractCard.CardRarity.RARE;
                 }
 
                 this.isDone = true;
@@ -85,7 +85,7 @@ public class SpotlightAction extends AbstractGameAction {
                         AbstractDungeon.player.hand.addToTop(card);
                         AbstractDungeon.player.hand.refreshHandLayout();
                         AbstractDungeon.player.hand.applyPowers();
-                        AbstractIntrigueCard.promote(card);
+                        card.rarity = AbstractCard.CardRarity.RARE;
                     }
                 }
 
@@ -111,7 +111,7 @@ public class SpotlightAction extends AbstractGameAction {
                     } else {
                         this.p.drawPile.removeCard(c);
                         this.p.hand.addToTop(c);
-                        AbstractIntrigueCard.promote(c);
+                        c.rarity = AbstractCard.CardRarity.RARE;
                     }
 
                     this.p.hand.refreshHandLayout();

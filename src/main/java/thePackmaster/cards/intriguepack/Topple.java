@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.Wiz;
 
-import java.util.Iterator;
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Topple extends AbstractIntrigueCard {
