@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class FastLoseHPAction extends AbstractGameAction {
-    private static final float DURATION = 0.33F;
-
     public FastLoseHPAction(AbstractCreature target, AbstractCreature source, int amount) {
         this(target, source, amount, AttackEffect.NONE);
     }

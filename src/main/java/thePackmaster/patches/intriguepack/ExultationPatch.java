@@ -9,15 +9,11 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.cards.intriguepack.Exultation;
 
 public class ExultationPatch {
-
     @SpirePatch(
             clz = FastCardObtainEffect.class,
             method = "update"
     )
     public static class OnPickupCardDoStuffPatch2 {
-        public OnPickupCardDoStuffPatch2() {
-        }
-
         public static void Postfix(FastCardObtainEffect __instance) {
             AbstractCard q = (AbstractCard) ReflectionHacks.getPrivate(__instance, FastCardObtainEffect.class, "card");
             if (__instance.isDone) {
@@ -38,9 +34,6 @@ public class ExultationPatch {
             method = "update"
     )
     public static class OnPickupCardDoStuffPatch {
-        public OnPickupCardDoStuffPatch() {
-        }
-
         public static void Postfix(ShowCardAndObtainEffect __instance) {
             AbstractCard q = (AbstractCard)ReflectionHacks.getPrivate(__instance, ShowCardAndObtainEffect.class, "card");
             if (__instance.isDone) {

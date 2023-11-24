@@ -64,7 +64,7 @@ public class Apex extends AbstractIntrigueCard {
                 this.addToBot(new DrawCardAction(2));
                 this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 10), 10));
                 this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, 10), 10));
-                this.addToBot(new ApplyPowerAction(p, p, new ApexPower(p,-1),-1));
+                this.addToBot(new ApplyPowerAction(p, p, new ApexPower(p),-1));
 
                 isDone = true;
             }

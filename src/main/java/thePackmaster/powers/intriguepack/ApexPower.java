@@ -13,7 +13,7 @@ public class ApexPower extends AbstractPackmasterPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public ApexPower(AbstractCreature owner, int amount) {
+    public ApexPower(AbstractCreature owner) {
         super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, -1);
     }
 
