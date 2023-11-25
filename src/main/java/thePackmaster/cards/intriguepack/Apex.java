@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,6 +14,7 @@ import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
+import thePackmaster.powers.intriguepack.ApexPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -23,72 +23,55 @@ public class Apex extends AbstractIntrigueCard {
     public final static String ID = makeID("Apex");
 
     public Apex() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 3;
-        selfRetain = true;
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        exhaust = true;
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        // PARADOX PREVENTION.
+        if (isMundane(this)) {
+            cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
+            return false;
+        }
+
+        // Unplayable if you detect any filthy, pedestrian, plebeian, run of the mill, mundane cards in the turn card list.
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().anyMatch(q -> q.rarity != CardRarity.RARE && q.rarity != CardRarity.UNCOMMON)) {
+            cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
+            return false;
+        }
+
+        return super.canUse(p, m);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
-                boolean ascend = true;
+                // Ascend.
+                Wiz.atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        CardCrawlGame.sound.playA("ATTACK_FLAME_BARRIER", 0.25F);
+                        CardCrawlGame.sound.play("STANCE_ENTER_WRATH");
+                        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.YELLOW, true));
+                        isDone = true;
+                    }
+                });
+                this.addToBot(new VFXAction(p, new InflameEffect(p), 0.1F));
 
-                // Check if any card is not precious.
-                for(AbstractCard c : Wiz.p().hand.group)
-                {
-                    if (!isPrecious(c))
-                        ascend = false;
-                }
-
-                // Ascend if all cards in hand are precious.
-                if (ascend)
-                {
-                    Wiz.atb(new AbstractGameAction() {
-                        @Override
-                        public void update() {
-                            CardCrawlGame.sound.playA("ATTACK_FLAME_BARRIER", 0.25F);
-                            CardCrawlGame.sound.play("STANCE_ENTER_WRATH");
-                            AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.YELLOW, true));
-                            isDone = true;
-                        }
-                    });
-                    this.addToBot(new VFXAction(p, new InflameEffect(p), 0.1F));
-
-                    this.addToBot(new GainEnergyAction(2));
-                    this.addToBot(new DrawCardAction(2));
-                    this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 10), 10));
-                    this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, 10), 10));
-                }
-
-                // Demote all other cards.
-                for(AbstractCard c : Wiz.p().hand.group)
-                {
-                        fullDemote(c);
-                }
-
-                // And this.
-                fullDemote(Apex.this);
+                this.addToBot(new GainEnergyAction(2));
+                this.addToBot(new DrawCardAction(2));
+                this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 10), 10));
+                this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, 10), 10));
+                this.addToBot(new ApplyPowerAction(p, p, new ApexPower(p),-1));
 
                 isDone = true;
             }
         });
     }
 
-    public void triggerOnGlowCheck() {
-        // Check if any card is not precious.
-        for(AbstractCard c : Wiz.p().hand.group)
-        {
-            if (!isPrecious(c)) {
-                this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-                return;
-            }
-        }
-
-        this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-    }
-
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }
