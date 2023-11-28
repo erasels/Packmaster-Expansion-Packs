@@ -63,7 +63,7 @@ public class PlayOldPowerAction extends AbstractGameAction {
 
         tmp.purgeOnUse = true;
         AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(
-                tmp, null, card.energyOnUse, true, true), true);
+                tmp, true, card.energyOnUse, true, true), true);
     }
 
     static {
