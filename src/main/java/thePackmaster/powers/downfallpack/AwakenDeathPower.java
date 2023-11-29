@@ -27,7 +27,7 @@ public class AwakenDeathPower extends AbstractPackmasterPower implements Packmas
 
 
     public AwakenDeathPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        super(POWER_ID,NAME,PowerType.BUFF,false,owner,amount);
 
     }
 
