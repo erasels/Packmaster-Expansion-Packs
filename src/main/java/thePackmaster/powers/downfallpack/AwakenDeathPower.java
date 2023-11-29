@@ -14,12 +14,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
+import thePackmaster.patches.downfallpack.PackmasterOnPlayerDeathPower;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class AwakenDeathPower extends AbstractPackmasterPower implements OnPlayerDeathPower, CloneablePowerInterface {
+public class AwakenDeathPower extends AbstractPackmasterPower implements PackmasterOnPlayerDeathPower, CloneablePowerInterface {
     public static final String POWER_ID = makeID("AwakenDeathPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
