@@ -19,7 +19,7 @@ public class TheFLYINGCAR extends AbstractMariDebuffCard {
 
     public TheFLYINGCAR() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        this.baseDamage = this.damage = 25;
+        this.baseDamage = this.damage = 27;
         this.baseMagicNumber = this.magicNumber = 5;
    }
 

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import thePackmaster.powers.maridebuffpack.HalfBlockPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -29,7 +30,9 @@ public class Offguard extends AbstractMariDebuffCard {
     @Override
     public void triggerWhenDrawn() {
         AbstractPlayer p = AbstractDungeon.player;
+        applyPowers();
         atb(new GainBlockAction(p, p, this.block));
+        atb(new ReducePowerAction(p, p, HalfBlockPower.POWER_ID, 1));
         atb(new ApplyPowerAction(p, p, new VulnerablePower(p, 1, false), 1));
     }
 
