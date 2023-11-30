@@ -21,7 +21,7 @@ public class RecurringTheme extends AbstractMariDebuffCard {
     }
     public RecurringTheme(boolean upgraded) {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = this.damage = 4;
+        this.baseDamage = this.damage = 5;
         this.exhaust = true;
         if(upgraded){
             this.upgrade();
