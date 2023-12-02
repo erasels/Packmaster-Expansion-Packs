@@ -17,8 +17,8 @@ public class EternalStrike extends AbstractCosmosCard {
 
     public EternalStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        damage = baseDamage = 7;
-        magicNumber = baseMagicNumber = 5;
+        damage = baseDamage = 8;
+        magicNumber = baseMagicNumber = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -48,6 +48,6 @@ public class EternalStrike extends AbstractCosmosCard {
 
     public void upp() {
         upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

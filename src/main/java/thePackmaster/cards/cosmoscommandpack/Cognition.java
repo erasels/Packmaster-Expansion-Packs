@@ -18,7 +18,7 @@ public class Cognition extends AbstractCosmosCard implements AmplifyCard {
     public Cognition() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         secondMagic = baseSecondMagic = 2;
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -44,6 +44,7 @@ public class Cognition extends AbstractCosmosCard implements AmplifyCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

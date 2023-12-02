@@ -5,7 +5,7 @@
   },
   "${ModID}:AstralFracture": {
     "NAME": "Astral Fracture",
-    "DESCRIPTION": "Apply !M! ${ModID}:Distortion to ALL enemies. NL ${ModID}:Amplify [E] : Exhaust a card."
+    "DESCRIPTION": "Apply !M! ${ModID}:Distortion to ALL enemies. NL ${ModID}:Amplify [E] : Exhaust a copy of this card."
   },
   "${ModID}:Cognition": {
     "NAME": "Cognition",
