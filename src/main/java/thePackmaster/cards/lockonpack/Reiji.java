@@ -20,7 +20,7 @@ public class Reiji extends AbstractLockonCard {
     public final static String ID = makeID(Reiji.class.getSimpleName());
 
     public Reiji() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
         magicNumber = baseMagicNumber = 0;
         secondMagic = baseSecondMagic = 3;
         isInnate = true;
