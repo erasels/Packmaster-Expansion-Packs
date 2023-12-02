@@ -22,7 +22,7 @@
   },
   "${ModID}:GlockOn": {
     "NAME": "Glock-On",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Apply !M! Lock-On. NL This turn, your attacks are affected by Focus and Lock-On."
   },
   "${ModID}:LocknLoad": {
     "NAME": "Lock'n'Load",
