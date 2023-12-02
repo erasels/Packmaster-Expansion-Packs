@@ -13,7 +13,7 @@ public class GlockOn extends AbstractLockonCard {
     public final static String ID = makeID(GlockOn.class.getSimpleName());
 
     public GlockOn() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseMagicNumber = magicNumber = 1;
     }
 
