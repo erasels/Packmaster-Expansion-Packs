@@ -14,20 +14,19 @@ public class TunnelVision extends AbstractLockonCard {
     public final static String ID = makeID(TunnelVision.class.getSimpleName());
 
     public TunnelVision() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
         baseSecondMagic = secondMagic = 1;
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (magicNumber > 0)
-        {
+        if (magicNumber > 0) {
             addToBot(new AllEnemyApplyPowerAction(p, magicNumber, (mon) -> new LockOnPower(mon, magicNumber)));
         }
         addToBot(new ApplyPowerAction(p, p, new TunnelVisionPower(p, secondMagic)));

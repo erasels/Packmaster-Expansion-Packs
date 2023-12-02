@@ -30,7 +30,7 @@
   },
   "${ModID}:Reiji": {
     "NAME": "Reiji",
-    "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-On.{!M!|>0= NL If the target already had Lock-On, gain !M! Focus.} NL Exhaust."
+    "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-On to ALL enemies.{!M!|>0= NL For each target that already had Lock-On, gain !M! Focus.} NL Exhaust."
   },
   "${ModID}:LightningRod": {
     "NAME": "Lightning Rod",
