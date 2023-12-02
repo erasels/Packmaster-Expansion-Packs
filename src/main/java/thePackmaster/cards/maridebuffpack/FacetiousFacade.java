@@ -19,7 +19,7 @@ public class FacetiousFacade extends AbstractMariDebuffCard {
     public FacetiousFacade() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseBlock = this.block = 14;
-        this.baseDamage = this.damage = 24;
+        this.baseDamage = this.damage = 26;
         this.baseMagicNumber = this.baseDamage - this.baseBlock;
         this.tags.add(CardTags.STRIKE);
    }
