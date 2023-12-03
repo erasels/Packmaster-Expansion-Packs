@@ -5,7 +5,7 @@
   },
   "${ModID}:AstralFracture": {
     "NAME": "星屑",
-    "DESCRIPTION": "给予 !M! 层群体 ${ModID}:扭曲 。 NL ${ModID}:增幅 [E] : 消耗 一张牌。"
+    "DESCRIPTION": "给予 !M! 层群体 ${ModID}:扭曲 。 NL ${ModID}:增幅 [E] : 消耗 这张牌的一张复制。"
   },
   "${ModID}:Cognition": {
     "NAME": "认知",
@@ -25,7 +25,7 @@
   },
   "${ModID}:RefractEnergy": {
     "NAME": "能量折配",
-    "DESCRIPTION": "造成 !D! 点群体伤害。 NL ${ModID}:增幅 [E] : 本场战斗本牌耗能减1。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL ${ModID}:增幅 [E] : 施加等同于造成未被格挡伤害一半层数的 ${ModID}:扭曲 。"
   },
   "${ModID}:RopeTrick": {
     "NAME": "绳技",

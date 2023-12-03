@@ -22,7 +22,7 @@
   },
   "${ModID}:GlockOn": {
     "NAME": "开火",
-    "DESCRIPTION": "造成 !D! 点伤害，"
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:锁定 。 NL 在这个回合，你的攻击受到 集中 和 ${ModID}:锁定 的影响。"
   },
   "${ModID}:LocknLoad": {
     "NAME": "上膛",
@@ -30,7 +30,7 @@
   },
   "${ModID}:Reiji": {
     "NAME": "雷激",
-    "DESCRIPTION": "{@@}固有 。 NL 给予 !${ModID}:m2! 层 ${ModID}:锁定 。{!M!|>0= NL 若目标已被 *锁定 ， NL 获得 !M! 点 集中 。} NL 消耗 。"
+    "DESCRIPTION": "{@@}固有 。 NL 给予所有敌人 !${ModID}:m2! 层 ${ModID}:锁定 。{!M!|>0= NL 每有1个已被 *锁定 的敌人 NL ，获得 !M! 点 集中 。} NL 消耗 。"
   },
   "${ModID}:LightningRod": {
     "NAME": "引雷针",
