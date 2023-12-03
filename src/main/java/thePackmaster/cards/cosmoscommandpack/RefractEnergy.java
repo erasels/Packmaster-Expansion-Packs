@@ -48,6 +48,6 @@ public class RefractEnergy extends AbstractCosmosCard implements AmplifyCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(3);
     }
 }
