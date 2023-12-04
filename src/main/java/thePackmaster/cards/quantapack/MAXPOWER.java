@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -19,16 +20,10 @@ public class MAXPOWER extends AbstractQuantaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
-        {
-            int str = this.magicNumber - AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-
-            if (str > 0)
-            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, str), str));
-        }
-        else{
-            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        }
+        int str = Wiz.getLogicalPowerAmount(p, StrengthPower.POWER_ID);
+        str = this.magicNumber - str;
+        if (str > 0)
+            Wiz.applyToSelf(new StrengthPower(p, str));
     }
 
     public void upp() {
