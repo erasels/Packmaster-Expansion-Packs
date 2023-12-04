@@ -21,6 +21,6 @@ public class HeatEngine extends AbstractCosmosCard {
     }
 
     public void upp() {
-        upgradeSecondMagic(1);
+        upgradeMagicNumber(1);
     }
 }
