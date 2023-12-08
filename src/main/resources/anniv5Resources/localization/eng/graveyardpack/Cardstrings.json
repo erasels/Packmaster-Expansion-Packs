@@ -2,7 +2,7 @@
   "${ModID}:GreyBargain": {
     "NAME": "Grey Bargain",
     "DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand.",
-    "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand. NL Draw 1 card.",
     "EXTENDED_DESCRIPTION": ["I need a card to Exhaust."]
   },
     "${ModID}:ExtraLimbs": {

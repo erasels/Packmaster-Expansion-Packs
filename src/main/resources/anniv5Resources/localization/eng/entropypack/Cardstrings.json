@@ -10,11 +10,11 @@
   },
   "${ModID}:Collapse": {
     "NAME": "Collapse",
-    "DESCRIPTION": "${ModID}:Unstable. NL Draw a card. NL Gain !M! temporary Strength. NL Gain 1 Vulnerable."
+    "DESCRIPTION": "${ModID}:Unstable. NL Draw 1 card. NL Gain !M! temporary Strength. NL Gain 1 Vulnerable."
   },
   "${ModID}:Construct": {
     "NAME": "Construct",
-    "DESCRIPTION": "${ModID}:Unstable. NL Draw a card. NL Take !M! less damage from attacks this turn. NL Gain 2 Weak."
+    "DESCRIPTION": "${ModID}:Unstable. NL Draw 1 card. NL Take !M! less damage from attacks this turn. NL Gain 2 Weak."
   },
   "${ModID}:Freedom": {
     "NAME": "Freedom",
@@ -31,7 +31,7 @@
   },
   "${ModID}:Diffusion": {
     "NAME": "Diffusion",
-    "DESCRIPTION": "At the start of your turn, gain !M! ${ModID}:Entropy and draw a card."
+    "DESCRIPTION": "At the start of your turn, gain !M! ${ModID}:Entropy and draw 1 card."
   },
   "${ModID}:Waning": {
     "NAME": "Waning",

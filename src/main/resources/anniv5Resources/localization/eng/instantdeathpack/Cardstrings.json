@@ -30,7 +30,7 @@
   },
   "${ModID}:SlashDraw": {
     "NAME": "Slash Draw",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw a card. If it was an Attack, play this card again with {!M!|2=twice|3=thrice|@=!M! times} as much damage."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw 1 card. If it was an Attack, play this card again with {!M!|2=twice|3=thrice|@=!M! times} as much damage."
   },
   "${ModID}:PathToVictory": {
     "NAME": "Path to Victory",

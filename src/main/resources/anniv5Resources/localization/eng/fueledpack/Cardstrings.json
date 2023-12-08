@@ -40,8 +40,8 @@
   },
   "${ModID}:ControlledBurn": {
     "NAME": "Controlled Burn",
-    "DESCRIPTION": "The first time each turn you ${ModID}:Consume a card, gain [E] and draw a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you ${ModID}:Consume a card, gain [E] and draw a card."
+    "DESCRIPTION": "The first time each turn you ${ModID}:Consume a card, gain [E] and draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you ${ModID}:Consume a card, gain [E] and draw 1 card."
   },
   "${ModID}:HotAsh": {
     "NAME": "Hot Ash",
