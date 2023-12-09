@@ -7,32 +7,13 @@
       "(Deals !D! damage.) NL "
     ]
   },
-  "${ModID}:PlannedDefense": {
-    "NAME": "Planned Defense",
-    "DESCRIPTION": "Innate. NL Gain !B! Block. If you played another Innate card this turn, also gain half that much Block next turn."
-  },
   "${ModID}:SecondStrike": {
     "NAME": "Second Strike",
     "DESCRIPTION": "Innate. Retain. NL Deal !D! damage. If it is not the first turn, deal !D! damage again."
   },
-  "${ModID}:DashIn": {
-    "NAME": "Dash In",
-    "DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to ALL enemies X times.",
-    "UPGRADE_DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to ALL enemies X+1 times."
-  },
   "${ModID}:InstinctiveThinking": {
     "NAME": "Instinctive Thinking",
     "DESCRIPTION": "Each turn, if the first card you play is Innate, gain !M! Block."
-  },
-  "${ModID}:Cross": {
-    "NAME": "Cross",
-    "DESCRIPTION": "Deal !D! damage twice. Your *Crosses deal 1 more damage this combat. Shuffle a *Cross into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage twice. Your *Crosses deal 1 more damage this combat. Shuffle a *Cross+ into your draw pile."
-  },
-  "${ModID}:Improvise": {
-    "NAME": "Improvise",
-    "DESCRIPTION": "Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn."
   },
   "${ModID}:Debut": {
     "NAME": "Debut",
@@ -51,5 +32,51 @@
     "NAME": "Surge",
     "DESCRIPTION": "This turn, your next Innate card is played twice.",
     "UPGRADE_DESCRIPTION": "Innate. NL This turn, your next Innate card is played twice."
+  },
+
+
+
+
+  "${ModID}:Foreshadow": {
+    "NAME": "Foreshadow",
+    "DESCRIPTION": "Innate. NL Gain !B! Block. Shuffle copies of other cards you played this turn into your draw pile. NL Exhaust."
+  },
+  "${ModID}:PlannedDefense": {
+    "NAME": "Planned Defense",
+    "DESCRIPTION": "Innate. NL Gain !B! Block. If you played another Innate card this turn, also gain half that much Block next turn."
+  },
+  "${ModID}:BreakALeg": {
+    "NAME": "Break a Leg",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Apply !${ModID}:m2! Vulnerable. NL Startup: Gain{@@}{!M!|1= [E] |2= [E] [E] |3= [E] [E] [E] |>3= !M! [E] }."
+  },
+  "${ModID}:DashIn": {
+    "NAME": "Dash In",
+    "DESCRIPTION": "Gain !B! Block. NL Scry !${ModID}:m2!. NL Startup: Draw !M! {@@}{!M!|@=card|>1=cards}."
+  },
+  "${ModID}:PlotArmor": {
+    "NAME": "Plot Armor",
+    "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for each Innate card played this combat. NL Exhaust."
+  },
+  "${ModID}:Improvise": {
+    "NAME": "Improvise",
+    "DESCRIPTION": "Gain !B! Block. NL If you are holding Innate cards, discard them and your Attacks deal double damage next turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn."
+  },
+  "${ModID}:Cross": {
+    "NAME": "Cross",
+    "DESCRIPTION": "Innate. NL Deal !D! damage !M! times. NL Your *Crosses deal damage 1 more time this combat."
+  },
+  "${ModID}:Kunzite": {
+    "NAME": "Kunzite",
+    "DESCRIPTION": "Innate. NL Unplayable. Turns into a ${ModID}:Gem when Upgraded.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem. NL \"Card gains Innate\""
+  },
+  "${ModID}:StartOver": {
+    "NAME": "Start Over",
+    "DESCRIPTION": "Shuffle ALL your cards into your draw pile. NL Draw all Innate cards and trigger ALL Startup effects. NL Exhaust."
+  },
+  "${ModID}:Starring": {
+    "NAME": "Starring",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! random Innate {@@}{!M!|@=card|>1=cards} of any color."
   }
 }
