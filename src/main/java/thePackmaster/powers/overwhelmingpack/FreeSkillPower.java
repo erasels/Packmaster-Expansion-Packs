@@ -17,7 +17,7 @@ public class FreeSkillPower extends AbstractPackmasterPower {
     private static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public FreeSkillPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {

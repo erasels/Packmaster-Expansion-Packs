@@ -5,7 +5,7 @@
   },
   "${ModID}:SurpriseAttack": {
     "NAME": "Surprise Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL If it's turn 1, NL draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL If it's turn 1, NL draw 1 card."
   },
   "${ModID}:EscapeClause": {
     "NAME": "Escape Clause",

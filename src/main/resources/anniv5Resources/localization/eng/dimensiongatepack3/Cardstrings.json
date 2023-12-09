@@ -25,7 +25,7 @@
   },
   "${ModID}:Jam": {
     "NAME": "Jam",
-    "DESCRIPTION": "Take 3 damage. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Take 3 damage. NL Draw 1 card. NL Exhaust."
   },
   "${ModID}:MantisStrike": {
     "NAME": "Mantis Strike",

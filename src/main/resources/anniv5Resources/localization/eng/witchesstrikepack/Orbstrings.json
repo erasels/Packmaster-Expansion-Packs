@@ -10,8 +10,8 @@
   "${ModID}:FullMoon": {
     "NAME": "Full Moon",
     "DESCRIPTION": [
-      "#yPassive: When activated, draw a card",
-      " #yEvoke this if this has activated #b"," times. NL #yEvoke: draw a card."
+      "#yPassive: When activated, draw 1 card",
+      " #yEvoke this if this has activated #b"," times. NL #yEvoke: draw 1 card."
     ]
   }
 }
