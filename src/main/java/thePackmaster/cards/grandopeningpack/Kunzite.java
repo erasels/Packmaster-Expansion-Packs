@@ -42,5 +42,6 @@ public class Kunzite extends AbstractGemsCard {
 
     @Override
     public void upp() {
+        isInnate = false;
     }
 }
