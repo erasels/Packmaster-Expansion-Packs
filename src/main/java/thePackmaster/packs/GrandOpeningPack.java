@@ -21,16 +21,16 @@ public class GrandOpeningPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(BattlePrep.ID);
-        cards.add(Cross.ID);
+        cards.add(Kunzite.ID);
+        cards.add(PlotArmor.ID);
         cards.add(DashIn.ID);
-        cards.add(InstinctiveThinking.ID);
-        cards.add(Debut.ID);
-        cards.add(MessUp.ID);
+        cards.add(Starring.ID);
+        cards.add(Cross.ID);
+        cards.add(Foreshadow.ID);
         cards.add(Improvise.ID);
         cards.add(PlannedDefense.ID);
-        cards.add(SecondStrike.ID);
-        cards.add(Surge.ID);
+        cards.add(BreakALeg.ID);
+        cards.add(StartOver.ID);
         return cards;
     }
 }
