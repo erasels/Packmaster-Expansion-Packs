@@ -1,32 +1,34 @@
 package thePackmaster.cards.grandopeningpack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.unique.WhirlwindAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
-public class DashIn extends AbstractGrandOpeningCard {
+public class DashIn extends AbstractGrandOpeningCard implements StartupCard {
     public final static String ID = makeID("DashIn");
 
     public DashIn() {
-        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.isInnate = true;
-        this.baseDamage = this.damage = 4;
-        this.baseBlock = this.block = 4;
-        this.baseMagicNumber = this.magicNumber = 0;
-        this.isMultiDamage = true;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 1;
+        baseBlock = block = 6;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new GainBlockAction(abstractPlayer, this.block));
-        addToBot(new WhirlwindAction(abstractPlayer, this.multiDamage, DamageInfo.DamageType.NORMAL, this.freeToPlayOnce, this.energyOnUse+this.magicNumber));
+        blck();
+        atb(new ScryAction(secondMagic));
+    }
+
+    @Override
+    public boolean atBattleStartPreDraw() {
+        addToTop(new DrawCardAction(magicNumber));
+        return true;
     }
 
     @Override
