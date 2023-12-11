@@ -1,7 +1,7 @@
 {
   "${ModID}:ShedWeight": {
     "NAME": "Shed Weight",
-    "DESCRIPTION": "Gain !B! Block. NL Discard a card. NL If that card was *Unplayable, draw a card."
+    "DESCRIPTION": "Gain !B! Block. NL Discard a card. NL If that card was *Unplayable, draw 1 card."
   },
   "${ModID}:RayOfFrost": {
     "NAME": "Ray Of Frost",

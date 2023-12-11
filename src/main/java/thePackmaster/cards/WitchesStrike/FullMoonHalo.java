@@ -16,7 +16,7 @@ public class FullMoonHalo extends AbstractWitchStrikeCard {
 
     public FullMoonHalo() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 10;
+        baseBlock = 12;
         magicNumber = baseMagicNumber = 1;
         CardModifierManager.addModifier(this,new InscribedMod(true,true));
     }

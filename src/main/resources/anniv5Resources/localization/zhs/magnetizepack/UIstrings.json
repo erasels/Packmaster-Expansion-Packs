@@ -1,0 +1,25 @@
+{
+  "${ModID}:MagnetizePack": {
+    "TEXT": [
+      "磁化",
+      "将磁性传遍你的卡牌，把你的卡组变成发电机。",
+      "wavewhyse☆"
+    ]
+  },
+  "${ModID}:MagnetizePackHat": {
+    "TEXT": [
+      "再也不会找不到回形针了！",
+      "磁铁"
+    ]
+  },
+  "${ModID}:MagnetizedModifier": {
+    "TEXT": [
+      "磁化",
+      "${ModID}:磁化 。 NL "
+    ],
+    "EXTRA_TEXT": [
+      "极性",
+      "每当你获得10点 #y极性 ，获得 [E] 。"
+    ]
+  }
+}

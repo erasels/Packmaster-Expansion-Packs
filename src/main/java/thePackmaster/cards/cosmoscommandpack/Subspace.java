@@ -18,7 +18,7 @@ public class Subspace extends AbstractCosmosCard {
 
     public Subspace() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 3;
         this.exhaust = true;
     }
 
@@ -46,6 +46,6 @@ public class Subspace extends AbstractCosmosCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

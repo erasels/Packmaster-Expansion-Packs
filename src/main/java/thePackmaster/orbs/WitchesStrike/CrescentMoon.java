@@ -33,8 +33,8 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
 
-    private static final int PASSIVE_AMOUNT = 5;
-    private static final int EVOKE_AMOUNT = 4;
+    private static final int PASSIVE_AMOUNT = 7;
+    private static final int EVOKE_AMOUNT = 3;
 
     // Animation Rendering Numbers - You can leave these at default, or play around with them and see what they change.
     private float vfxTimer = 1.0f;

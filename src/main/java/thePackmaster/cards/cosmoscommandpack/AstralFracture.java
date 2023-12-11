@@ -1,7 +1,10 @@
 package thePackmaster.cards.cosmoscommandpack;
 
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,7 +21,7 @@ public class AstralFracture extends AbstractCosmosCard implements AmplifyCard {
 
     public AstralFracture() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,7 +40,12 @@ public class AstralFracture extends AbstractCosmosCard implements AmplifyCard {
 
     @Override
     public void useAmplified(AbstractPlayer p, AbstractMonster m) {
-        atb(new ExhaustAction(1, false));
+        CardGroup grp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        AbstractCard c = this.makeStatEquivalentCopy();
+        c.current_x = c.target_x = this.current_x + AbstractCard.RAW_W * Settings.scale;
+        c.current_y = c.target_y = this.current_y;
+        grp.addToBottom(c);
+        atb(new ExhaustSpecificCardAction(c, grp, true));
     }
 
     @Override

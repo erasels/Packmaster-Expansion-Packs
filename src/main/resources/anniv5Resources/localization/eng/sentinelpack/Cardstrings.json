@@ -1,13 +1,13 @@
 {
   "${ModID}:Fume": {
     "NAME": "Fume",
-    "DESCRIPTION": "Enter ${ModID}:Angry.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Enter ${ModID}:Angry."
+    "DESCRIPTION": "Enter ${ModID}:Angry. NL Gain !M! Vigor.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter ${ModID}:Angry. NL Gain !M! Vigor."
   },
   "${ModID}:Relax": {
     "NAME": "Relax",
-    "DESCRIPTION": "Enter Calm.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Enter Calm."
+    "DESCRIPTION": "Enter Calm. NL Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter Calm. NL Gain !B! Block."
   },
   "${ModID}:StanceDance": {
     "NAME": "Stance Dance",

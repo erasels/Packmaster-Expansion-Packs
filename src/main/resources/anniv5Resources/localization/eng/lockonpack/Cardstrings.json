@@ -5,7 +5,7 @@
   },
   "${ModID}:DC": {
     "NAME": "DC",
-    "DESCRIPTION": "{@@}Retain. NL Channel a Lightning. NL Trigger its Evoke{!Upgrades!|>0= and passive} effect{!Upgrades!|>0=s}. NL Exhaust."
+    "DESCRIPTION": "{@@}Retain. NL Channel 1 Lightning. NL Trigger its Evoke{!Upgrades!|>0= and passive} effect{!Upgrades!|>0=s}. NL Exhaust."
   },
   "${ModID}:BlockOn": {
     "NAME": "Block-On",
@@ -22,7 +22,7 @@
   },
   "${ModID}:GlockOn": {
     "NAME": "Glock-On",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Apply !M! Lock-On. NL This turn, your attacks are affected by Focus and Lock-On."
   },
   "${ModID}:LocknLoad": {
     "NAME": "Lock'n'Load",
@@ -30,11 +30,11 @@
   },
   "${ModID}:Reiji": {
     "NAME": "Reiji",
-    "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-On.{!M!|>0= NL If the target already had Lock-On, gain !M! Focus.} NL Exhaust."
+    "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-On to ALL enemies.{!M!|>0= NL For each target that already had Lock-On, gain !M! Focus.} NL Exhaust."
   },
   "${ModID}:LightningRod": {
     "NAME": "Lightning Rod",
-    "DESCRIPTION": "{@@}Lightning targets this enemy for !M! turn{!M!|>1=s}. NL Channel a Lightning."
+    "DESCRIPTION": "{@@}Lightning targets this enemy for !M! turn{!M!|>1=s}. NL Channel 1 Lightning."
   },
   "${ModID}:TunnelVision": {
     "NAME": "Tunnel Vision",

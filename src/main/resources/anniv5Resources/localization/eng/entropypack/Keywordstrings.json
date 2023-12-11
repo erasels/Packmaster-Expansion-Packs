@@ -4,7 +4,7 @@
     "NAMES": [
       "entropy"
     ],
-    "DESCRIPTION": "Whenever you play a card, discard a random card, draw a card, and lose #b1 #yEntropy."
+    "DESCRIPTION": "Whenever you play a card, discard a random card, draw 1 card, and lose #b1 #yEntropy."
   },
   {
     "PROPER_NAME": "Unstable",

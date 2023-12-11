@@ -1,0 +1,19 @@
+[
+  {
+    "PROPER_NAME": "Magnetized",
+    "NAMES": [
+      "Magnetized",
+      "magnetized",
+      "magnetize"
+    ],
+    "DESCRIPTION": "When you play or discard a #yMagnetized card, gain 1 #yPolarity and #yMagnetize another random card (excluding #yUnplayable cards) in your hand."
+  },
+  {
+    "PROPER_NAME": "Polarity",
+    "NAMES": [
+      "Polarity",
+      "polarity"
+    ],
+    "DESCRIPTION": "Upon gaining 10 #yPolarity, gain [E] ."
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "PROPER_NAME": "磁化",
+    "NAMES": [
+      "Magnetized",
+      "magnetized",
+      "magnetize",
+      "磁化"
+    ],
+    "DESCRIPTION": "每当你打出或丢弃一张 #y磁化 的卡牌，获得1 #y极性 并 #y磁化 一张随机手牌。（ #y不可打出 牌除外）"
+  },
+  {
+    "PROPER_NAME": "极性",
+    "NAMES": [
+      "Polarity",
+      "polarity",
+      "极性"
+    ],
+    "DESCRIPTION": "每当你获得10点 #y极性，获得 [E] 。"
+  }
+]

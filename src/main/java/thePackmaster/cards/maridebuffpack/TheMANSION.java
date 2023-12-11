@@ -15,7 +15,7 @@ public class TheMANSION extends AbstractMariDebuffCard {
 
     public TheMANSION() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        this.baseBlock = this.block = 30;
+        this.baseBlock = this.block = 32;
    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,7 +25,7 @@ public class TheMANSION extends AbstractMariDebuffCard {
 
     @Override
     public void upp() {
-        upgradeBlock(6);
+        upgradeBlock(8);
     }
 
 

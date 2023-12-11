@@ -12,8 +12,8 @@ public class RopeTrick extends AbstractCosmosCard {
 
     public RopeTrick() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        magicNumber = baseMagicNumber = 4;
-        block = baseBlock = 5;
+        magicNumber = baseMagicNumber = 5;
+        block = baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

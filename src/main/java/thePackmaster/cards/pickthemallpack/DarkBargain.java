@@ -64,8 +64,8 @@ public class DarkBargain extends AbstractPickThemAllCard implements OnObtainCard
         AbstractCard cardToUpgrade = upgradeableCards.get(AbstractDungeon.miscRng.random(upgradeableCards.size() - 1));
         AbstractDungeon.player.bottledCardUpgradeCheck(cardToUpgrade);
         cardToUpgrade.upgrade();
-        AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(cardToUpgrade.makeStatEquivalentCopy()));
-        AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(cardToUpgrade.makeStatEquivalentCopy()));
+        AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineEffect(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
 
         ArrayList<AbstractCard> gainableCards = new ArrayList<>();
         gainableCards.addAll(AbstractDungeon.srcCommonCardPool.group);

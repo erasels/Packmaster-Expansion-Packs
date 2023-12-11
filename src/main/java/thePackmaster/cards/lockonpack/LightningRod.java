@@ -15,12 +15,12 @@ public class LightningRod extends AbstractLockonCard {
 
     public LightningRod() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(0);
     }
 
     @Override

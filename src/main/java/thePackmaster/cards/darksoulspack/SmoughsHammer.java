@@ -1,7 +1,6 @@
 package thePackmaster.cards.darksoulspack;
 
 import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateJumpAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -14,12 +13,9 @@ import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.weaponspack.WeaponMasteryPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
 
 public class SmoughsHammer extends AbstractDarkSoulsCard {
     public final static String ID = makeID("SmoughsHammer");

@@ -37,7 +37,7 @@ public class LockPower extends AbstractPackmasterPower implements NonStackablePo
 
     public LockPower(final AbstractCreature owner, AbstractCard c, int amount)
     {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
 
         this.card = c;
         updateDescription();

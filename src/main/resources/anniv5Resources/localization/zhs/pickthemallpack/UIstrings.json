@@ -1,0 +1,16 @@
+{
+  "${ModID}:PickThemAllPack": {
+    "TEXT": [
+      "都可以拿",
+      "鼓励拿牌...或是付出代价拿强力牌。牌组自然是厚厚益善？",
+      "modargo",
+      "卡牌贴图源自万智牌"
+    ]
+  },
+  "${ModID}:PickThemAllPackHat": {
+    "TEXT": [
+      "全是我的。",
+      "口袋帽"
+    ]
+  }
+}

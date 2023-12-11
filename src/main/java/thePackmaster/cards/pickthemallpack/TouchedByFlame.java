@@ -13,7 +13,7 @@ import thePackmaster.powers.shamanpack.IgnitePower;
 public class TouchedByFlame extends AbstractPickThemAllCard implements OnObtainCard {
     public static final String ID = SpireAnniversary5Mod.makeID("TouchedByFlame");
     private static final int COST = 1;
-    private static final int IGNITE = 9;
+    private static final int IGNITE = 8;
     private static final int UPGRADE_IGNITE = 1;
     private static final int WEAK_VULNERABLE = 1;
     private static final int UPGRADE_WEAK_VULNERABLE = 1;

@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.cards.intriguepack.AbstractIntrigueCard;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
@@ -23,13 +22,13 @@ public class PowerStrugglePower extends AbstractPackmasterPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard usedCard) {
-        if (usedCard.rarity == AbstractCard.CardRarity.RARE && usedCard.color != AbstractCard.CardColor.CURSE)
+        if (usedCard.rarity == AbstractCard.CardRarity.RARE)
         {
-            Wiz.atb(new GainEnergyAction(1));
+            Wiz.atb(new GainEnergyAction(amount));
             Wiz.atb(new AbstractGameAction() {
                 @Override
                 public void update() {
-                    AbstractIntrigueCard.demote(usedCard);
+                    usedCard.rarity = AbstractCard.CardRarity.COMMON;
                     isDone = true;
                 }
             });

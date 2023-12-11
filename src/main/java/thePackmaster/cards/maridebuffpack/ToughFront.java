@@ -16,7 +16,7 @@ public class ToughFront extends AbstractMariDebuffCard {
 
     public ToughFront() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        this.baseBlock = this.block = 11;
+        this.baseBlock = this.block = 12;
    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

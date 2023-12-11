@@ -14,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Shakedown extends AbstractIntrigueCard {
     public final static String ID = makeID("Shakedown");
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 9;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     public Shakedown() {
@@ -22,13 +22,19 @@ public class Shakedown extends AbstractIntrigueCard {
         baseDamage = DAMAGE;
     }
 
-    public boolean hasRarity(CardRarity rar) {
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        boolean holdingShiny = false;
+
         for (AbstractCard c : Wiz.p().hand.group) {
-            if (c.rarity == rar && c.color != CardColor.CURSE)
-                return true;
+            if (c.rarity == CardRarity.RARE || c.rarity == CardRarity.UNCOMMON) {
+                holdingShiny = true;
+                break;
+            }
         }
 
-        return false;
+        if (holdingShiny) glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override
@@ -36,24 +42,16 @@ public class Shakedown extends AbstractIntrigueCard {
         Wiz.atb(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         int drawnum = 0;
-        boolean com_d = false;
         boolean unc_d = false;
         boolean rar_d = false;
 
         for (AbstractCard c : Wiz.p().hand.group) {
-            if (c.rarity == CardRarity.CURSE)
-                continue;
-
-            if (c.rarity == CardRarity.COMMON || c.rarity == CardRarity.BASIC || c.rarity == CardRarity.SPECIAL)
-                com_d = true;
-            else if (c.rarity == CardRarity.UNCOMMON)
+            if (c.rarity == CardRarity.UNCOMMON)
                 unc_d = true;
-            else if (upgraded && c.rarity == CardRarity.RARE)
+            else if (c.rarity == CardRarity.RARE)
                 rar_d = true;
         }
 
-        if (com_d)
-            drawnum++;
         if (unc_d)
             drawnum++;
         if (rar_d)

@@ -48,7 +48,7 @@ public class Transmogrifier extends AbstractPickThemAllCard implements OnObtainC
         ArrayList<AbstractCard> commons = new ArrayList<>();
         ArrayList<AbstractCard> uncommons = new ArrayList<>();
         ArrayList<AbstractCard> rares = new ArrayList<>();
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.getPurgeableCards().group) {
             if (c.rarity == CardRarity.BASIC || c.rarity == CardRarity.COMMON) {
                 commons.add(c);
             }

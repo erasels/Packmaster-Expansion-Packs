@@ -1,0 +1,19 @@
+[
+  {
+    "PROPER_NAME": "金属化",
+    "NAMES": [
+      "metallicize",
+      "金属化"
+    ],
+    "DESCRIPTION": "回合结束时，获得其层数点 #y格挡 。"
+  },
+  {
+    "PROPER_NAME": "庸碌",
+    "NAMES": [
+      "lowest rarity",
+      "lowest_rarity",
+      "庸碌"
+    ],
+    "DESCRIPTION": "牌组中稀有度最低的牌，同稀有度时优先选择已在牌组最久的牌。初始牌视为普通，特殊牌视为 #y稀有 ， #r诅咒 牌被无视。"
+  }
+]

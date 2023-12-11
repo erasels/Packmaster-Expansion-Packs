@@ -16,7 +16,7 @@ public class Conflagration extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
-    private static final int MAGIC = 7;
+    private static final int MAGIC = 8;
     private static final int UPGRADE_MAGIC = 2;
 
     public Conflagration() {

@@ -5,17 +5,17 @@
   },
   "${ModID}:Vanguard": {
     "NAME": "Vanguard",
-    "DESCRIPTION": "Gain !B! Block. NL If you play a ${ModID}:Precious card with this in hand, play this."
+    "DESCRIPTION": "Gain !B! Block. NL If you play a rare card with this in hand, play this.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you play a rare or uncommon card with this in hand, play this."
   },
   "${ModID}:Shakedown": {
     "NAME": "Shakedown",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card each if you hold a ${ModID}:Mundane or uncommon card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw 1 card each if you hold a ${ModID}:Mundane, uncommon or rare card."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card each, if you hold an uncommon or rare card."
   },
   "${ModID}:Favor": {
     "NAME": "Favor",
-    "DESCRIPTION": "Gain an ${ModID}:Echo of a random rare card. It costs 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain an ${ModID}:Echo of a random rare card. It costs 0 this turn."
+    "DESCRIPTION": "Choose 1 of 3 random rare cards to gain an ${ModID}:Echo of. It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 random rare cards to gain an ${ModID}:Echo of. It costs 0 this turn."
   },
   "${ModID}:EtTu": {
     "NAME": "Et Tu?",
@@ -24,26 +24,26 @@
   },
   "${ModID}:Spotlight": {
     "NAME": "Spotlight",
-    "DESCRIPTION": "Add a ${ModID}:Mundane card from your draw pile to your hand and ${ModID}:Promote it.",
-    "UPGRADE_DESCRIPTION": "Add a ${ModID}:Mundane or uncommon card from your draw pile to your hand and ${ModID}:Promote it."
+    "DESCRIPTION": "Add a ${ModID}:Mundane card from your draw pile to your hand. It becomes rare.",
+    "UPGRADE_DESCRIPTION": "Add a non-rare card from your draw pile to your hand. It becomes rare."
   },
   "${ModID}:Exultation": {
     "NAME": "Exultation",
-    "DESCRIPTION": "${ModID}:Promote all other cards in hand. Gain !M! Block for each card ${ModID}:Promoted.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Gain !B! Block.)"
-    ]
+    "DESCRIPTION": "Gain !B! Block. Permanently gains !M! more Block whenever you pick up a rare card. NL Exhaust."
   },
-  "${ModID}:Radiance": {
-    "NAME": "Radiance",
-    "DESCRIPTION": "If this card is rare, deal !D! damage and apply !M! Vulnerable to ALL enemies. NL ${ModID}:Demote this."
+  "${ModID}:Revolution": {
+    "NAME": "Revolution",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Whenever you play a ${ModID}:Mundane card, they lose !M! HP . NL Exhaust."
   },
   "${ModID}:Apex": {
     "NAME": "Apex",
-    "DESCRIPTION": "If all cards in hand are ${ModID}:Precious, ${ModID}:Ascend. ${ModID}:Demote all cards in hand to common."
+    "DESCRIPTION": "${ModID}:Ascend. NL You can only play uncommon or rare cards the turn you play this. Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Not in a turn with anything but rare and uncommon cards, knave!"
+    ]
   },
   "${ModID}:PowerStruggle": {
     "NAME": "Power Struggle",
-    "DESCRIPTION": "Whenever you play a rare card, gain [E] and ${ModID}:Demote it."
+    "DESCRIPTION": "Whenever you play a rare card, gain [E]. It becomes common."
   }
 }
