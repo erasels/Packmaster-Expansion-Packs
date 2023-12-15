@@ -32,6 +32,7 @@ public class SummonerSpellsPack extends AbstractCardPack {
         cards.add(GhostingMaelstrom.ID);
         cards.add(TeleportBot.ID);
         cards.add(Flash.ID);
+        cards.add(SnowballDash.ID);
         return cards;
     }
 }

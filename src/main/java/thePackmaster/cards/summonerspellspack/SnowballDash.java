@@ -15,7 +15,7 @@ public class SnowballDash extends AbstractSummonerSpellsCard {
 
 
     public SnowballDash() {
-        super(ID, COST, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         this.damage = this.baseDamage = DAMAGE;
         this.isEthereal = true;
         this.exhaust = true;
