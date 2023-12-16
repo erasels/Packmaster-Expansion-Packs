@@ -1,0 +1,106 @@
+{
+  "${ModID}:NobleStrike": {
+    "NAME": "Noble Strike",
+    "DESCRIPTION": "Deal !D! damage. ${ModID}:Tribute 5: Draw an Attack. ${ModID}:Austerity: Gain 5 Gold and draw a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. ${ModID}:Tribute 5: Draw !M! Attacks. ${ModID}:Austerity: Gain 5 Gold and draw !M! cards. "
+  },
+  "${ModID}:NobleStrikeTribute": {
+    "NAME": "Tribute",
+    "DESCRIPTION": "${ModID}:Tribute 5: Draw an Attack.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Tribute 5: Draw !M! Attacks."
+  },
+  "${ModID}:NobleStrikeAusterity": {
+    "NAME": "Austerity",
+    "DESCRIPTION": "Gain 5 Gold and draw a card.",
+    "UPGRADE_DESCRIPTION": "Gain 5 Gold and draw !M! cards."
+  },
+  "${ModID}:NobleSlash": {
+    "NAME": "Noble Slash",
+    "DESCRIPTION": "Deal !D! damage. Discard a random card. Draw one less the next turn."
+  },
+  "${ModID}:WindShield": {
+    "NAME": "Wind Shield",
+    "DESCRIPTION": "Discard any amount of cards. Gain !B! Block for each discarded card."
+  },
+  "${ModID}:Forcefield": {
+    "NAME": "Forcefield",
+    "DESCRIPTION": "Discard one random card. ${ModID}:Tribute 8: Gain !${ModID}:m2! Temp HP. ${ModID}:Austerity: Gain !M! Temp HP."
+  },
+  "${ModID}:ForcefieldTribute": {
+    "NAME": "Tribute",
+    "DESCRIPTION": "${ModID}:Tribute 8: Gain !M! Temp HP."
+  },
+  "${ModID}:ForcefieldAusterity": {
+    "NAME": "Austerity",
+    "DESCRIPTION": "Gain !M! Temp HP."
+  },
+  "${ModID}:ThrowSoulstones": {
+    "NAME": "Throw Soulstones",
+    "DESCRIPTION": "${ModID}:Tribute 10: deal !D! damage to ALL enemies AND play this card again. ${ModID}:Austerity: Deal !${ModID}:sd! damage to ALL enemies."
+  },
+  "${ModID}:ThrowSoulstonesTribute": {
+    "NAME": "Tribute",
+    "DESCRIPTION": "${ModID}:Tribute 10: Deal !D! damage to ALL enemies AND play this card again.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Tribute 10: Deal !D! damage to ALL enemies AND play this card again."
+  },
+  "${ModID}:ThrowSoulstonesAusterity": {
+    "NAME": "Austerity",
+    "DESCRIPTION": "${ModID}:Austerity: Deal !D! damage to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Austerity: Deal !D! damage to ALL enemies."
+  },
+  "${ModID}:BoundlessTalent": {
+    "NAME": "Boundless Talent",
+    "DESCRIPTION": "${ModID}:Tribute 5: Copy one card in your hand. ${ModID}:Austerity: Draw until you have !M!.  NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Tribute 5: Copy one card in your hand. ${ModID}:Austerity: Draw until you have !M!. NL Exhaustive !stslib:ex!."
+  },
+  "${ModID}:BoundlessTalentTribute": {
+    "NAME": "Tribute",
+    "DESCRIPTION": "${ModID}:Tribute 5: Copy one card in your hand."
+  },
+  "${ModID}:BoundlessTalentAusterity": {
+    "NAME": "Austerity",
+    "DESCRIPTION": "Draw until you have !M!."
+  },
+  "${ModID}:Willpower": {
+    "NAME": "Willpower",
+    "DESCRIPTION": "${ModID}:Tribute 10: Gain 1 Artifact and 1 Buffer. ${ModID}:Austerity: Gain 1 Artifact. ",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Tribute 10: Gain 1 Artifact and 1 Buffer. ${ModID}:Austerity: Gain 1 Artifact. "
+  },
+  "${ModID}:WillpowerTribute": {
+    "NAME": "Tribute",
+    "DESCRIPTION": "${ModID}:Tribute 10: Gain 1 Artifact and 1 Buffer."
+  },
+  "${ModID}:WillpowerAusterity": {
+    "NAME": "Austerity",
+    "DESCRIPTION": "Gain 1 Artifact."
+  },
+  "${ModID}:MajesticBloodline": {
+    "NAME": "Majestic Bloodline",
+    "DESCRIPTION": "Shuffle 1 of !M! random Powers to your draw pile. ${ModID}:Tribute 10: play this card again. Exhaust."
+  },
+  "${ModID}:MajesticBloodlineTribute": {
+    "NAME": "Tribute",
+    "DESCRIPTION": "${ModID}:Tribute 10: play this card again."
+  },
+  "${ModID}:MajesticBloodlineAusterity": {
+    "NAME": "Austerity",
+    "DESCRIPTION": "Nothing else happens."
+  },
+  "${ModID}:MoreSupplies": {
+    "NAME": "More Supplies!",
+    "DESCRIPTION": "${ModID}:Tribute 30: fill your Potion Belt with random Potions. ${ModID}:Austerity: Gain a random Potion. "
+  },
+  "${ModID}:MoreSuppliesTribute": {
+    "NAME": "Tribute",
+    "DESCRIPTION": "${ModID}:Tribute 30: fill your Potion Belt with random Potions."
+  },
+  "${ModID}:MoreSuppliesAusterity": {
+    "NAME": "Austerity",
+    "DESCRIPTION": "Gain a random Potion."
+  },
+  "${ModID}:NobleForm": {
+    "NAME": "Noble Form",
+    "DESCRIPTION": "When you discard a card, draw a card. When you lose HP, gain 5 Gold.",
+    "UPGRADE_DESCRIPTION": "When you discard or play a card, draw a card. When you lose Gold or HP, gain 5 Gold."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "${ModID}:NobleFormPower": {
+    "NAME": "Noble Form",
+    "DESCRIPTIONS": [
+      "When you discard a card, draw ",
+      "a card. ",
+      " cards. ",
+      "When you lose gold, gain ",
+      " gold."
+    ]
+  },
+
+  "${ModID}:TrueNobleFormPower": {
+    "NAME": "True Noble Form",
+    "DESCRIPTIONS": [
+      "When you discard or play a card, draw ",
+      "a card. ",
+      " cards. ",
+      "When you lose gold or HP, gain ",
+      " gold."
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "${ModID}:RoyaltyPack": {
+    "TEXT": [
+      "Royalty",
+      "Strong cards, but with downsides involving discard, Gold or HP costs.",
+      "Levender",
+      "test"
+    ]
+  },
+  "${ModID}:RoyaltyPackHat": {
+    "TEXT": [
+      "The golden symbol of a heavy duty.",
+      "Royal Crown"
+    ]
+  },
+  "${ModID}:BoundlessTalentAction": {
+    "TEXT": [
+      "copy."
+    ]
+  },
+  "${ModID}:MajesticBloodlineAction": {
+    "TEXT": [
+      "Choose one card to shuffle on your draw pile."
+    ]
+  },
+  "${ModID}:WindShieldAction": {
+    "TEXT": [
+      "discard them."
+    ]
+  }
+}
