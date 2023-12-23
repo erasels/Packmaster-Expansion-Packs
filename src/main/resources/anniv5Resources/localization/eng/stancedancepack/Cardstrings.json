@@ -1,0 +1,63 @@
+{
+  "${ModID}:Choreography": {
+    "NAME": "Choreography",
+    "DESCRIPTION": "Gain !B! Block. NL Enter ${ModID}:Weaver."
+  },
+  "${ModID}:Pitch": {
+    "NAME": "Pitch",
+    "DESCRIPTION": "Gain !M! *Shivs. NL Enter ${ModID}:Venomous."
+  },
+  "${ModID}:StagLeap": {
+    "NAME": "Stag Leap",
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Enter {ModID}:Cunning. NL Exhaust."
+  },
+  "${ModID}:TimeStep": {
+    "NAME": "Time Step",
+    "DESCRIPTION": "Gain !M! Strength for each unique Stance you've been in this combat.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Strength, plus !M! for each unique Stance you've been in this combat."
+  },
+  "${ModID}:PullBack": {
+    "NAME": "Pull Back",
+    "DESCRIPTION": "Enter Calm. NL At the start of your next turn, enter ${ModID}:Aggression.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter Calm. NL At the start of your next turn, enter ${ModID}:Aggression."
+  },
+  "${ModID}:FanKick": {
+    "NAME": "Fan Kick",
+    "DESCRIPTION": "Deal !D! Damage. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Changes effect based on your Stance.",
+      "Gain [E] the next time you enter a Stance this turn.",
+      "Your next *Woven card created costs 1 less.",
+      "Apply 5 Poison.",
+      "Apply 1 Weak and 1 Vulnerable.",
+      "Draw 2 cards.",
+      "Gain 4 Vigor.",
+      "Deal !D! damage.",
+      "Gain !B! Block.",
+      "Gain 1 Artifact.",
+      "Lose 5 ${ModID}:Sanity.",
+      "Gain 5 Mantra."
+    ]
+
+  },
+  "${ModID}:Abstraction": {
+    "NAME": "Abstraction",
+    "DESCRIPTION": "Gain !M! Dexterity. NL ${ModID}:Serene."
+  },
+  "${ModID}:Pirouette": {
+    "NAME": "Pirouette",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL If X is 0, enter ${ModID}:Ancient."
+   },
+  "${ModID}:DeathDrop": {
+    "NAME": "Death Drop",
+    "DESCRIPTION": "Enter ${ModID}:Nightmare. NL Gain a *Lunacy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Nightmare. NL Gain !M! *Lunacies. NL Exhaust."
+  },
+  "${ModID}:WovenCard": {
+    "NAME": "Woven Card",
+    "DESCRIPTION": " NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Play *"
+    ]
+  }
+}

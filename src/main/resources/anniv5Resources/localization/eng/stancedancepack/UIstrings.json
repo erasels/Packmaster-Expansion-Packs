@@ -1,0 +1,15 @@
+{
+  "${ModID}:StanceDancePack": {
+    "TEXT": [
+      "Dancer",
+      "A support pack of Stances, showing off more of the unique Stances available to Packmaster.",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:StanceDancePackHat": {
+    "TEXT": [
+      "Flows effortlessly with your movements.",
+      "Dancer's Sash"
+    ]
+  }
+}
