@@ -44,7 +44,7 @@
   },
   "${ModID}:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Apply !M! Vulnerable and remove the target's Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !M! Weak, and remove the target's Block. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Vulnerable and !M! Weak, and remove the target's Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !M! Weak, and remove the target's Block."
   }
 }

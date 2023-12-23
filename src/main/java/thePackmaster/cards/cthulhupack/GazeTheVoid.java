@@ -11,16 +11,15 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class GazeTheVoid extends AbstractCthulhuCard {
     public final static String ID = makeID("GazeTheVoid");
 
-    private static final int ATTACK_DMG = 5;
-    private static final int HITS = 3;
+    private static final int ATTACK_DMG = 6;
 
     public GazeTheVoid() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.damage = this.baseDamage = ATTACK_DMG;
-        this.magicNumber = this.baseMagicNumber = HITS;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         for (int i = 0; i < CthulhuPack.lunacyThisCombat; i++) {
             addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));

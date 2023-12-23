@@ -1,8 +1,9 @@
 package thePackmaster.cards.cthulhupack;
 
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.orbs.Dark;
 import thePackmaster.powers.cthulhupack.EndOfDaysPower;
 import thePackmaster.util.Wiz;
 
@@ -14,15 +15,17 @@ public class EndOfDays extends AbstractCthulhuCard {
 
     public EndOfDays() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) Wiz.applyToSelf(new FocusPower(p, magicNumber));
+        for (int i = 0; i < magicNumber; i++) {
+            Wiz.atb(new ChannelAction(new Dark()));
+        }
         Wiz.applyToSelf(new EndOfDaysPower(p, 1));
     }
 
     public void upp() {
-
+        upgradeMagicNumber(2);
     }
 }
