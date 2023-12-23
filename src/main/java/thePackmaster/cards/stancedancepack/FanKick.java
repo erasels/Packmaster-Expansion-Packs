@@ -43,15 +43,15 @@ public class FanKick extends AbstractStanceDanceCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        //TODO: Stance switch effect madness writing to cardtext
+        //TODO: Stance switch effect madness writing to cardtext. EXTENDED DESCRIPTION has them all.
 
 
         switch (p.stance.ID) {
             case NeutralStance.STANCE_ID:
-                //TODO: Gain E next time you enter a Stance this turn.
+                //TODO: Power for Gain E next time you enter a Stance this turn.
                 break;
             case "Weaver":
-                //TODO: Next Woven card costs 1 less.
+                //TODO: Power for Next Woven card costs 1 less until played.
                 break;
             case "Venemous":
                 Wiz.applyToEnemy(m, new PoisonPower(p, m, 5));

@@ -42,7 +42,7 @@
   },
   "${ModID}:Abstraction": {
     "NAME": "Abstraction",
-    "DESCRIPTION": "Gain !M! Dexterity. NL ${ModID}:Serene."
+    "DESCRIPTION": "Gain !M! Dexterity. NL Enter ${ModID}:Serene."
   },
   "${ModID}:Pirouette": {
     "NAME": "Pirouette",

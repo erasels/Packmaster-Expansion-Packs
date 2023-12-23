@@ -44,6 +44,7 @@ public class Weaver extends AbstractStance {
                 this.particleTimer -= Gdx.graphics.getDeltaTime();
                 if (this.particleTimer < 0.0F) {
                     this.particleTimer = 0.04F;
+                    //TODO: New particles
                     AbstractDungeon.effectsQueue.add(new AncientStanceParticleEffect(new Color(1F, .5F, .5F, 0.0F)));
                 }
             }

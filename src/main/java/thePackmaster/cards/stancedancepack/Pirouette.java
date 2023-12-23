@@ -30,7 +30,6 @@ public class Pirouette extends AbstractStanceDanceCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.player.useJumpAnimation();
         atb(new VFXAction(new StanceDanceEffect(AbstractDungeon.player, false, true, true), 0.1F));
 
         atb(new EasyXCostAction(this, (effect, params) -> {

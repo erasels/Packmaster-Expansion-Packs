@@ -23,7 +23,7 @@ public class TimeStep extends AbstractStanceDanceCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //Gain 1 Strength for each Stance entered this combat.
+        //TODO: Gain 1 Strength for each Stance entered this combat.
         if (upgraded){
             Wiz.applyToSelf(new StrengthPower(p, 1));
         }
