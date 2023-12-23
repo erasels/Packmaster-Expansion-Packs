@@ -35,7 +35,7 @@ public class Pitch extends AbstractStanceDanceCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 
 }

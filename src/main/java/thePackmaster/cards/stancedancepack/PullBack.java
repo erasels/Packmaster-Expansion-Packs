@@ -15,10 +15,12 @@ public class PullBack extends AbstractStanceDanceCard {
     public final static String ID = makeID("PullBack");
 
     public PullBack() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         this.addToBot(new ChangeStanceAction(new CalmStance()));
         //TODO: Power that enters Aggression next turn
     }
@@ -26,7 +28,7 @@ public class PullBack extends AbstractStanceDanceCard {
 
     @Override
     public void upp() {
-        this.selfRetain = true;
+        upgradeBlock(3);
     }
 
 }

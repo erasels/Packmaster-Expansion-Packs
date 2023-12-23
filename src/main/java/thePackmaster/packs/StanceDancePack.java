@@ -1,6 +1,5 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.green.*;
 import com.megacrit.cardcrawl.cards.purple.EmptyFist;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -24,15 +23,15 @@ public class StanceDancePack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(EmptyFist.ID);
-        cards.add(Abstraction.ID);
-        cards.add(Choreography.ID);
-        cards.add(DeathDrop.ID);
-        cards.add(FanKick.ID);
-        cards.add(Pirouette.ID);
         cards.add(Pitch.ID);
+        cards.add(Choreography.ID);
         cards.add(PullBack.ID);
-        cards.add(StagLeap.ID);
+        cards.add(FanKick.ID);
         cards.add(TimeStep.ID);
+        cards.add(StagLeap.ID);
+        cards.add(Pirouette.ID);
+        cards.add(FinalPerformance.ID);
+        cards.add(DanceOfTheDead.ID);
         return cards;
     }
 }

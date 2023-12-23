@@ -9,7 +9,7 @@
   },
   "${ModID}:StagLeap": {
     "NAME": "Stag Leap",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Enter {ModID}:Cunning. NL Exhaust."
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Enter ${ModID}:Cunning. NL Exhaust."
   },
   "${ModID}:TimeStep": {
     "NAME": "Time Step",
@@ -18,8 +18,7 @@
   },
   "${ModID}:PullBack": {
     "NAME": "Pull Back",
-    "DESCRIPTION": "Enter Calm. NL At the start of your next turn, enter ${ModID}:Aggression.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Enter Calm. NL At the start of your next turn, enter ${ModID}:Aggression."
+    "DESCRIPTION": "Gain !B! Block. NL Enter Calm. NL At the start of your next turn, enter ${ModID}:Aggression."
   },
   "${ModID}:FanKick": {
     "NAME": "Fan Kick",
@@ -40,16 +39,16 @@
     ]
 
   },
-  "${ModID}:Abstraction": {
-    "NAME": "Abstraction",
+  "${ModID}:FinalPerformance": {
+    "NAME": "Final Performance",
     "DESCRIPTION": "Gain !M! Dexterity. NL Enter ${ModID}:Serene."
   },
   "${ModID}:Pirouette": {
     "NAME": "Pirouette",
     "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL If X is 0, enter ${ModID}:Ancient."
    },
-  "${ModID}:DeathDrop": {
-    "NAME": "Death Drop",
+  "${ModID}:DanceOfTheDead": {
+    "NAME": "Dance of the Dead",
     "DESCRIPTION": "Enter ${ModID}:Nightmare. NL Gain a *Lunacy. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Enter ${ModID}:Nightmare. NL Gain !M! *Lunacies. NL Exhaust."
   },

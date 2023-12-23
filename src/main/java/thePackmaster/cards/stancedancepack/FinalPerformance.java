@@ -5,19 +5,17 @@ import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class Abstraction extends AbstractStanceDanceCard {
-    public final static String ID = makeID("Abstraction");
+public class FinalPerformance extends AbstractStanceDanceCard {
+    public final static String ID = makeID("FinalPerformance");
 
-    public Abstraction() {
+    public FinalPerformance() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
     }
