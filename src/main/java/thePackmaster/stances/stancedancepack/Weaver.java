@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.actions.unique.DoubleYourBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,6 +20,7 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import thePackmaster.cards.stancedancepack.WovenCard;
+import thePackmaster.powers.stancedancepack.NextWovenCheaper;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.downfallpack.AncientStanceParticleEffect;
 
@@ -30,12 +32,20 @@ public class Weaver extends AbstractStance {
     public static final String STANCE_ID = makeID("Weaver");
     private static long sfxId = -1L;
 
-    private ArrayList<AbstractCard> storedcards = new ArrayList<>();
+    public ArrayList<AbstractCard> storedcards = new ArrayList<>();
+    private AbstractCard sourceCard;
 
     public Weaver() {
         this.ID = STANCE_ID;
         this.name = CardCrawlGame.languagePack.getStanceString(STANCE_ID).NAME;
         this.updateDescription();
+    }
+
+    public Weaver(AbstractCard source) {
+        this.ID = STANCE_ID;
+        this.name = CardCrawlGame.languagePack.getStanceString(STANCE_ID).NAME;
+        this.updateDescription();
+        sourceCard = source;
     }
 
     @Override
@@ -71,9 +81,7 @@ public class Weaver extends AbstractStance {
     @Override
     public void onExitStance() {
         if (storedcards.size() > 0){
-            WovenCard c = new WovenCard();
-            c.storedcards = storedcards;
-            c.initializePreview();
+            WovenCard c = new WovenCard(this);
             Wiz.atb(new MakeTempCardInHandAction(c));
         }
     }
@@ -81,13 +89,17 @@ public class Weaver extends AbstractStance {
     @Override
     public void onPlayCard(AbstractCard card) {
         super.onPlayCard(card);
-        if (storedcards.size()<3){
-            storedcards.add(card.makeStatEquivalentCopy());
-            if (storedcards.size()>=3){
-                Wiz.atb(new ChangeStanceAction(NeutralStance.STANCE_ID));}
+        if (card != sourceCard) {
 
-        } else {
-            Wiz.atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
+            if (storedcards.size() < 3) {
+                storedcards.add(card.makeStatEquivalentCopy());
+                if (storedcards.size() >= 3) {
+                    Wiz.atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
+                }
+
+            } else {
+                Wiz.atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
+            }
         }
     }
 

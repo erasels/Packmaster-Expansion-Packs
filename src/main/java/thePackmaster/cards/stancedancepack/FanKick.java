@@ -19,6 +19,9 @@ import com.megacrit.cardcrawl.stances.DivinityStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.stances.WrathStance;
 
+import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.powers.stancedancepack.GainEnergyOnStanceEnter;
+import thePackmaster.powers.stancedancepack.NextWovenCheaper;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
@@ -46,46 +49,62 @@ public class FanKick extends AbstractStanceDanceCard {
         //TODO: Stance switch effect madness writing to cardtext. EXTENDED DESCRIPTION has them all.
 
 
+        SpireAnniversary5Mod.logger.info(p.stance.ID);
+
         switch (p.stance.ID) {
-            case NeutralStance.STANCE_ID:
-                //TODO: Power for Gain E next time you enter a Stance this turn.
+            case NeutralStance.STANCE_ID: {
+                Wiz.applyToSelf(new GainEnergyOnStanceEnter(p, 1));
                 break;
-            case "Weaver":
-                //TODO: Power for Next Woven card costs 1 less until played.
+            }
+            //Manual ID seems be necessary here? Weaver.Stance_ID errors out, constant expression required
+            case "anniv5:Weaver": {
+                Wiz.applyToSelf(new NextWovenCheaper(p, 1));
                 break;
-            case "Venemous":
+            }
+            case "anniv5:Venemous": {
                 Wiz.applyToEnemy(m, new PoisonPower(p, m, 5));
                 break;
-            case "Cunning":
+            }
+            case "anniv5:Cunning": {
                 Wiz.applyToEnemy(m, new WeakPower(m, 1, false));
                 Wiz.applyToEnemy(m, new VulnerablePower(m, 1, false));
                 break;
-            case CalmStance.STANCE_ID:
+            }
+            case CalmStance.STANCE_ID: {
                 Wiz.atb(new DrawCardAction(2));
                 break;
-            case WrathStance.STANCE_ID:
+            }
+            case WrathStance.STANCE_ID: {
                 Wiz.applyToSelf(new VigorPower(p, 4));
                 break;
-            case "Angry":
+            }
+            case "anniv5:Angry": {
                 Wiz.applyToSelf(new VigorPower(p, 4));
                 break;
-            case "Aggression":
+            }
+            case "anniv5:Aggression": {
                 dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
                 break;
-            case "Serene":
+            }
+            case "anniv5:Serene": {
                 blck();
                 break;
-            case "Ancient":
+            }
+            case "anniv5:Ancient": {
                 Wiz.applyToSelf(new ArtifactPower(p, 1));
                 break;
-            case "Nightmare":
+            }
+            case "anniv5:Nightmare": {
                 loseSanity(5);
                 break;
-            case DivinityStance.STANCE_ID:
+            }
+            case DivinityStance.STANCE_ID: {
                 Wiz.applyToSelf(new MantraPower(p, 5));
                 break;
-            default:
+            }
+            default: {
                 break;
+            }
         }
 
 
@@ -94,9 +113,9 @@ public class FanKick extends AbstractStanceDanceCard {
 
     @Override
     public void upp() {
-            upgradeDamage(4);
-        }
+        upgradeDamage(4);
     }
+}
 
 
 

@@ -1,7 +1,14 @@
 {
-  "${ModID}:SwaggerPower": {
-    "NAME": "Swagger",
-    "DESCRIPTIONS": ["If you end your turn in a #yStance, gain #b",
-      " #yStrength and #yDexterity."]
+  "${ModID}:GainEnergyOnStanceEnter": {
+    "NAME": "Fan Approach",
+    "DESCRIPTIONS": ["The next time you enter a #yStance, gain "]
+  },
+  "${ModID}:NextTurnAggression": {
+    "NAME": "Pull Back",
+    "DESCRIPTIONS": ["Enter #yAggression at the start of your next turn."]
+  },
+  "${ModID}:NextWovenCheaper": {
+    "NAME": "Fan Weave",
+    "DESCRIPTIONS": ["The next ", " Woven card ", " Woven cards ", "cost 1 less."]
   }
 }

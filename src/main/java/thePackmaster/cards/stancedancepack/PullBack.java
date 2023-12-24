@@ -6,7 +6,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.CalmStance;
 
+import thePackmaster.powers.stancedancepack.NextTurnAggression;
 import thePackmaster.stances.sentinelpack.Angry;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -22,7 +24,9 @@ public class PullBack extends AbstractStanceDanceCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         this.addToBot(new ChangeStanceAction(new CalmStance()));
-        //TODO: Power that enters Aggression next turn
+        if (!p.hasPower(NextTurnAggression.POWER_ID)) {
+            Wiz.applyToSelf(new NextTurnAggression(p, 1));
+        }
     }
 
 

@@ -27,7 +27,7 @@ public class Choreography extends AbstractStanceDanceCard {
         AbstractDungeon.player.useJumpAnimation();
         Wiz.atb(new VFXAction(new StanceDanceEffect(p, false, false, false), 0.5F));
         blck();
-        this.addToBot(new ChangeStanceAction(new Weaver()));
+        this.addToBot(new ChangeStanceAction(new Weaver(this)));
     }
 
 
