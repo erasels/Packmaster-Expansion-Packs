@@ -14,7 +14,11 @@
   "${ModID}:TimeStep": {
     "NAME": "Time Step",
     "DESCRIPTION": "Gain !M! Strength for each unique Stance you've been in this combat.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength, plus !M! for each unique Stance you've been in this combat."
+    "UPGRADE_DESCRIPTION": "Gain 1 Strength, plus !M! for each unique Stance you've been in this combat.",
+    "EXTENDED_DESCRIPTION": [
+      "(Gains ",
+      " Strength.)"
+    ]
   },
   "${ModID}:PullBack": {
     "NAME": "Pull Back",
@@ -22,9 +26,9 @@
   },
   "${ModID}:FanKick": {
     "NAME": "Fan Kick",
-    "DESCRIPTION": "Deal !D! Damage. NL ",
+    "DESCRIPTION": "Deal !D! Damage. NL Changes effect based on your Stance.",
     "EXTENDED_DESCRIPTION": [
-      "Changes effect based on your Stance.",
+      "Deal !D! Damage. NL ",
       "Gain [E] the next time you enter a Stance this turn.",
       "Your next *Woven card created costs 1 less.",
       "Apply 5 Poison.",

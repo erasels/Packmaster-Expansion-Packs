@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.stances.CalmStance;
 import com.megacrit.cardcrawl.stances.DivinityStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
@@ -110,6 +111,70 @@ public class FanKick extends AbstractStanceDanceCard {
 
     }
 
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
+        if (AbstractDungeon.getCurrRoom() instanceof MonsterRoom) {
+
+            switch (AbstractDungeon.player.stance.ID) {
+                case NeutralStance.STANCE_ID: {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
+                    break;
+                }
+                //Manual ID seems be necessary here? Weaver.Stance_ID errors out, constant expression required
+                case "anniv5:Weaver": {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
+                    break;
+                }
+                case "anniv5:Venemous": {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[3];
+                    break;
+                }
+                case "anniv5:Cunning": {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[4];
+                    break;
+                }
+                case CalmStance.STANCE_ID: {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[5];
+                    break;
+                }
+                case WrathStance.STANCE_ID: {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[6];
+                    break;
+                }
+                case "anniv5:Angry": {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[6];
+                    break;
+                }
+                case "anniv5:Aggression": {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[7];
+                    break;
+                }
+                case "anniv5:Serene": {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[8];
+                    break;
+                }
+                case "anniv5:Ancient": {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[9];
+                    break;
+                }
+                case "anniv5:Nightmare": {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[10];
+                    break;
+                }
+                case DivinityStance.STANCE_ID: {
+                    this.rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[11];
+                    break;
+                }
+                default: {
+                    break;
+                }
+            }
+        }
+        this.initializeDescription();
+    }
 
     @Override
     public void upp() {
