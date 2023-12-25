@@ -11,5 +11,10 @@
       "Flows effortlessly with your movements.",
       "Dancer's Sash"
     ]
+  },
+  "${ModID}:PlayWovenCardModifier": {
+    "TEXT": [
+      "Play *"
+    ]
   }
 }

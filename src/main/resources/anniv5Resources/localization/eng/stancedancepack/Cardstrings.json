@@ -58,9 +58,5 @@
   },
   "${ModID}:WovenCard": {
     "NAME": "Woven Card",
-    "DESCRIPTION": " NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Play *"
-    ]
-  }
+    "DESCRIPTION": ""}
 }
