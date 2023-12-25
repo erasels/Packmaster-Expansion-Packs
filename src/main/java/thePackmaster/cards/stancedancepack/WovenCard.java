@@ -25,6 +25,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class WovenCard extends AbstractStanceDanceCard {
     public final static String ID = makeID("WovenCard");
 
+    public boolean weaveInitialized = false;
     public ArrayList<AbstractCard> storedcards = new ArrayList<>();
 
     public WovenCard() {
@@ -35,18 +36,20 @@ public class WovenCard extends AbstractStanceDanceCard {
 
     public WovenCard(Weaver source) {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        storedcards.addAll(source.storedcards);
 
-        //TODO: This still doesn't work. The logger below reads the cards, so they are getting passed in
-        //at this point, but the MultiCardPreview doesn't kick in, and the cards are gone out of the array
-        //by the time the Use is activated when the card is played.
-        storedcards = source.storedcards;
         this.rawDescription = "";
         for (AbstractCard c:storedcards
         ) {
             SpireAnniversary5Mod.logger.info(c.name);
-            MultiCardPreview.add(this, c);
-            this.rawDescription = this.rawDescription + "NL" + cardStrings.EXTENDED_DESCRIPTION[0] + c.name + LocalizedStrings.PERIOD;
+            if (storedcards.get(0) == c){
+                this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + c.name + LocalizedStrings.PERIOD;
+            } else {
+                this.rawDescription = this.rawDescription + "NL" + cardStrings.EXTENDED_DESCRIPTION[0] + c.name + LocalizedStrings.PERIOD;
+            }
+            SpireAnniversary5Mod.logger.info(c.cost);
             modifyCostForCombat(c.cost);
+            SpireAnniversary5Mod.logger.info(this.cost);
         }
         if (AbstractDungeon.player.hasPower(NextWovenCheaper.POWER_ID)){
             if (AbstractDungeon.player.getPower(NextWovenCheaper.POWER_ID).amount > 0) {
@@ -55,11 +58,21 @@ public class WovenCard extends AbstractStanceDanceCard {
             }
         }
 
+        //dumb, but MultiCardPreview can't accept an arraylist.
+        AbstractCard p1 = null;
+        AbstractCard p2 = null;
+        AbstractCard p3 = null;
+        if (storedcards.size() > 0) p1 = storedcards.get(0);
+        if (storedcards.size() > 1) p2 = storedcards.get(1);
+        if (storedcards.size() > 2) p3 = storedcards.get(2);
+        SpireAnniversary5Mod.logger.info("size " + storedcards.size());
+
+        MultiCardPreview.add(this, p1, p2, p3);
         this.rawDescription = this.rawDescription + cardStrings.DESCRIPTION;
 
         this.initializeDescription();
-
     }
+
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractCard c:storedcards
