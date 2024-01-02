@@ -25,6 +25,6 @@ public class GlockOn extends AbstractLockonCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.applyToEnemy(m, new LockOnPower(m, magicNumber));
-        Wiz.applyToSelf(new GlockOnPower(p, 1));
+        Wiz.applyToSelf(new GlockOnPower(p, magicNumber));
     }
 }
