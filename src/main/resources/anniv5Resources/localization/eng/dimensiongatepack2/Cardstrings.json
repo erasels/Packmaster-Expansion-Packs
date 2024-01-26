@@ -61,7 +61,7 @@
   },
   "${ModID}:WallOfFire": {
     "NAME": "Wall of Fire",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Add 3 *Flame *Pillars to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Add 3 *Flame *Pillars+ to your hand."
+    "DESCRIPTION": "Deal !D! damage to a ALL enemies !M! times. NL Fill your hand with *Flame *Pillars.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL Fill your hand with *Flame *Pillars+."
   }
 }
