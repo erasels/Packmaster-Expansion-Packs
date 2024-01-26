@@ -19,7 +19,7 @@ public class WallOfFire extends AbstractDimensionalCardGordian {
         baseDamage = 8;
         baseMagicNumber = magicNumber = 3;
         cardsToPreview = new FlamePillar();
-
+        isMultiDamage = true;
     }
 
 
@@ -36,7 +36,6 @@ public class WallOfFire extends AbstractDimensionalCardGordian {
     }
 
     public void upp() {
-        //upgradeDamage(3);
         cardsToPreview.upgrade();
     }
 }
