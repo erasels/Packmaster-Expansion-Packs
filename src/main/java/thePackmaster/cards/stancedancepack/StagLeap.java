@@ -34,6 +34,7 @@ public class StagLeap extends AbstractStanceDanceCard {
     public StagLeap() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL);
         baseMagicNumber = magicNumber = 4;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

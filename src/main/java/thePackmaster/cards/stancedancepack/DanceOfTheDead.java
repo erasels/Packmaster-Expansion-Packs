@@ -19,7 +19,7 @@ public class DanceOfTheDead extends AbstractStanceDanceCard {
     public final static String ID = makeID("DanceOfTheDead");
 
     public DanceOfTheDead() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
     }
 
