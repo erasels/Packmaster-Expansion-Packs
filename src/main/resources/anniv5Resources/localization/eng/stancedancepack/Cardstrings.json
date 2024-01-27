@@ -14,11 +14,10 @@
   },
   "${ModID}:TimeStep": {
     "NAME": "Time Step",
-    "DESCRIPTION": "Gain !M! Strength for each unique Stance you've been in this combat.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength, plus !M! for each unique Stance you've been in this combat.",
+    "DESCRIPTION": "Gain !M! Strength, plus 1 for each unique Stance you've been in this combat.",
     "EXTENDED_DESCRIPTION": [
-      "(Gains ",
-      " Strength.)"
+      " NL ( Gains ",
+      " Strength. )"
     ]
   },
   "${ModID}:PullBack": {
@@ -58,5 +57,6 @@
   },
   "${ModID}:WovenCard": {
     "NAME": "Woven Card",
-    "DESCRIPTION": ""}
+    "DESCRIPTION": ""
+  }
 }

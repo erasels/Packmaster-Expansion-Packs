@@ -1,15 +1,15 @@
 package thePackmaster.cards.stancedancepack;
 
 
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-
-import thePackmaster.stances.sentinelpack.Angry;
-import thePackmaster.stances.sentinelpack.Serene;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import thePackmaster.util.Wiz;
+
+import java.util.ArrayList;
+import java.util.Set;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -23,19 +23,26 @@ public class TimeStep extends AbstractStanceDanceCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO: Gain 1 Strength for each Stance entered this combat. Also have the card text state the amount that will be gained.
-        //No stance subscriber I can see... need to patch?
-        if (upgraded){
-            Wiz.applyToSelf(new StrengthPower(p, 1));
-        }
+        Wiz.applyToSelf(new StrengthPower(p, numUniqueStancesButNotNeutralStance() + magicNumber));
     }
 
+    private static int numUniqueStancesButNotNeutralStance() {
+        Set<String> result = AbstractDungeon.actionManager.uniqueStancesThisCombat.keySet();
+        if (result.contains(NeutralStance.STANCE_ID))
+            result.remove(NeutralStance.STANCE_ID);
+        return result.size();
+    }
+
+    public void applyPowers() {
+        super.applyPowers();
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + (numUniqueStancesButNotNeutralStance() + magicNumber) + cardStrings.EXTENDED_DESCRIPTION[1];
+        this.initializeDescription();
+    }
 
     @Override
     public void upp() {
-
+        upgradeMagicNumber(1);
     }
-
 }
 
 
