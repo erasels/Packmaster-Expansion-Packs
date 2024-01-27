@@ -47,8 +47,6 @@ public class FanKick extends AbstractStanceDanceCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        //TODO: Stance switch effect madness writing to cardtext. EXTENDED DESCRIPTION has them all.
-
 
         SpireAnniversary5Mod.logger.info(p.stance.ID);
 

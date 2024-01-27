@@ -20,7 +20,7 @@ public class Choreography extends AbstractStanceDanceCard {
 
     public Choreography() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

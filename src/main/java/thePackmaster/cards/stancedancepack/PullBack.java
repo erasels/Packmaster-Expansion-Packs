@@ -18,7 +18,7 @@ public class PullBack extends AbstractStanceDanceCard {
 
     public PullBack() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

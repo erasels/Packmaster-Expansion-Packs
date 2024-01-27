@@ -23,7 +23,7 @@ public class TimeStep extends AbstractStanceDanceCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO: Gain 1 Strength for each Stance entered this combat.
+        //TODO: Gain 1 Strength for each Stance entered this combat. Also have the card text state the amount that will be gained.
         //No stance subscriber I can see... need to patch?
         if (upgraded){
             Wiz.applyToSelf(new StrengthPower(p, 1));
