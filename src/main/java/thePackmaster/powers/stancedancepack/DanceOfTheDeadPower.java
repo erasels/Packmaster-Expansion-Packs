@@ -22,7 +22,7 @@ public class DanceOfTheDeadPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public DanceOfTheDeadPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF,false, owner, amount);
+        super(POWER_ID, NAME, PowerType.DEBUFF,false, owner, amount);
     }
 
     @Override
