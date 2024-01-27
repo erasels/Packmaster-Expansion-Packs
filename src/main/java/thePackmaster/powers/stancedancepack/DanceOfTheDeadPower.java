@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.stances.AbstractStance;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
@@ -26,7 +27,9 @@ public class DanceOfTheDeadPower extends AbstractPackmasterPower {
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        Wiz.atb(new LoseHPAction(this.owner, AbstractDungeon.player, amount));
+        if (oldStance != newStance && !newStance.ID.equals(NeutralStance.STANCE_ID)) {
+            Wiz.atb(new LoseHPAction(this.owner, AbstractDungeon.player, amount));
+        }
     }
 
     @Override
