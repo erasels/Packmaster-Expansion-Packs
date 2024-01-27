@@ -10,5 +10,9 @@
   "${ModID}:NextWovenCheaper": {
     "NAME": "Fan Weave",
     "DESCRIPTIONS": ["The next ", " Woven card ", " Woven cards ", "cost 1 less."]
+  },
+  "${ModID}:DanceOfTheDeadPower": {
+    "NAME": "The Dead Are Dancing",
+    "DESCRIPTIONS": ["Loses ", " HP whenever you change #yStances."]
   }
 }

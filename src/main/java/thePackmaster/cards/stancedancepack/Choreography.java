@@ -19,21 +19,22 @@ public class Choreography extends AbstractStanceDanceCard {
     public final static String ID = makeID("Choreography");
 
     public Choreography() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 5;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        //baseBlock = 5;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.player.useJumpAnimation();
         Wiz.atb(new VFXAction(new StanceDanceEffect(p, false, false, false), 0.5F));
-        blck();
+        //blck();
         this.addToBot(new ChangeStanceAction(new Weaver(this)));
     }
 
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        this.exhaust = false;
     }
 
 }

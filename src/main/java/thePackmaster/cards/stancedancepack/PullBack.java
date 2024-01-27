@@ -17,8 +17,8 @@ public class PullBack extends AbstractStanceDanceCard {
     public final static String ID = makeID("PullBack");
 
     public PullBack() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 8;
+        super(ID, 3, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,7 +32,7 @@ public class PullBack extends AbstractStanceDanceCard {
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(4);
     }
 
 }

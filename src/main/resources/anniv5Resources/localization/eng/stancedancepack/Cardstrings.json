@@ -1,7 +1,8 @@
 {
   "${ModID}:Choreography": {
     "NAME": "Choreography",
-    "DESCRIPTION": "Gain !B! Block. NL Enter ${ModID}:Weaver."
+    "DESCRIPTION": "Enter ${ModID}:Weaver. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Weaver."
   },
   "${ModID}:Pitch": {
     "NAME": "Pitch",
@@ -53,8 +54,7 @@
    },
   "${ModID}:DanceOfTheDead": {
     "NAME": "Dance of the Dead",
-    "DESCRIPTION": "Enter ${ModID}:Nightmare. NL Gain a *Lunacy. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Nightmare. NL Gain !M! *Lunacies. NL Exhaust."
+    "DESCRIPTION": "Target loses 4 HP. They lose !M! more whenever you enter a new Stance."
   },
   "${ModID}:WovenCard": {
     "NAME": "Woven Card",
