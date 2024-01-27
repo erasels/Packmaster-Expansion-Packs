@@ -54,7 +54,7 @@
    },
   "${ModID}:DanceOfTheDead": {
     "NAME": "Dance of the Dead",
-    "DESCRIPTION": "Target loses 4 HP. They lose !M! more whenever you enter a new Stance."
+    "DESCRIPTION": "Target loses 4 HP. They lose !M! more whenever you enter a Stance."
   },
   "${ModID}:WovenCard": {
     "NAME": "Woven Card",

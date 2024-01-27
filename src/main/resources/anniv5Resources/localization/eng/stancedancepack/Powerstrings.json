@@ -13,6 +13,6 @@
   },
   "${ModID}:DanceOfTheDeadPower": {
     "NAME": "The Dead Are Dancing",
-    "DESCRIPTIONS": ["Loses ", " HP whenever you change #yStances."]
+    "DESCRIPTIONS": ["Loses ", " HP whenever you enter a #yStance."]
   }
 }
