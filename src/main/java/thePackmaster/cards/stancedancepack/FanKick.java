@@ -24,6 +24,8 @@ import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.legacypack.FetchCardToHandAction;
+import thePackmaster.powers.stancedancepack.GainEnergyOnStanceEnter;
 import thePackmaster.powers.stancedancepack.NextWovenCheaper;
 import thePackmaster.util.Wiz;
 

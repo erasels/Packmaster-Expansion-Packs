@@ -1,6 +1,6 @@
 {
   "${ModID}:GainEnergyOnStanceEnter": {
-    "NAME": "Fan Approach",
+    "NAME": "Pivoting",
     "DESCRIPTIONS": ["The next time you enter a #yStance, gain "]
   },
   "${ModID}:NextTurnAggression": {
