@@ -26,10 +26,9 @@ public class DanceOfTheDeadPower extends AbstractPackmasterPower {
     }
 
     @Override
-    public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (oldStance != newStance && !newStance.ID.equals(NeutralStance.STANCE_ID)) {
-            Wiz.atb(new LoseHPAction(this.owner, AbstractDungeon.player, amount));
-        }
+    public void onSpecificTrigger() {
+        Wiz.atb(new LoseHPAction(this.owner, AbstractDungeon.player, amount));
+        flash();
     }
 
     @Override
