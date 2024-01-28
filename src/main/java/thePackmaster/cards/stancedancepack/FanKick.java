@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.stances.WrathStance;
 
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.legacypack.FetchCardToHandAction;
 import thePackmaster.powers.stancedancepack.GainEnergyOnStanceEnter;
 import thePackmaster.powers.stancedancepack.NextWovenCheaper;
 import thePackmaster.stances.aggressionpack.AggressionStance;
@@ -52,7 +53,7 @@ public class FanKick extends AbstractStanceDanceCard {
 
         switch (p.stance.ID) {
             case NeutralStance.STANCE_ID: {
-                Wiz.applyToSelf(new GainEnergyOnStanceEnter(p, 1));
+                //TODO: Draw a card that enters a Stance.
                 break;
             }
             //Manual ID seems be necessary here? Weaver.Stance_ID errors out, constant expression required

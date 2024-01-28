@@ -26,10 +26,10 @@
   },
   "${ModID}:FanKick": {
     "NAME": "Fan Kick",
-    "DESCRIPTION": "Deal !D! Damage. NL Changes effect based on your Stance.",
+    "DESCRIPTION": "Deal !D! damage. NL Changes effect based on your Stance.",
     "EXTENDED_DESCRIPTION": [
-      "Deal !D! Damage. NL ",
-      "Gain [E] the next time you enter a Stance this turn.",
+      "Deal !D! damage. NL ",
+      "Draw a card which enters a Stance.",
       "Your next *Woven card created costs 1 less.",
       "Apply 5 Poison.",
       "Apply 1 Weak and 1 Vulnerable.",
@@ -42,6 +42,10 @@
       "Gain 5 Mantra."
     ]
 
+  },
+  "${ModID}:PivotStrike": {
+    "NAME": "Pivot Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL Gain [E] the next time you enter a Stance."
   },
   "${ModID}:FinalPerformance": {
     "NAME": "Final Performance",

@@ -22,7 +22,7 @@ public class StanceDancePack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(EmptyFist.ID);
+        cards.add(PivotStrike.ID);
         cards.add(Pitch.ID);
         cards.add(Choreography.ID);
         cards.add(PullBack.ID);
