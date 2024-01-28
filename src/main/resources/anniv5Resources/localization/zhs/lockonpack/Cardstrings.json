@@ -22,7 +22,7 @@
   },
   "${ModID}:GlockOn": {
     "NAME": "开火",
-    "DESCRIPTION": "给予 !M! 层 ${ModID}:锁定 。 NL 在这个回合，你的攻击受到 集中 和 ${ModID}:锁定 的影响。"
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:锁定 。 NL 在 !M! 回合内，你的攻击受到 集中 和 ${ModID}:锁定 的影响。"
   },
   "${ModID}:LocknLoad": {
     "NAME": "上膛",
@@ -38,6 +38,6 @@
   },
   "${ModID}:TunnelVision": {
     "NAME": "隧洞思维",
-    "DESCRIPTION": "{@@}{!Upgrades!|>0=给予 !M! 层群体 ${ModID}:锁定 。 NL } 每层 ${ModID}:锁定 额外使敌人受到的充能球伤害提高25%。"
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=给予 !M! 层群体 ${ModID}:锁定 。 NL } 每层 ${ModID}:锁定 额外使敌人受到的伤害提高25%。"
   }
 }
