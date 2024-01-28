@@ -41,6 +41,7 @@ public class FanKick extends AbstractStanceDanceCard {
     public FanKick() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 10;
+        baseBlock = 6;
     }
 
     public static boolean changesStance(AbstractCard card) {

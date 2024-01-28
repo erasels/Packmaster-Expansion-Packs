@@ -29,17 +29,17 @@
     "DESCRIPTION": "Deal !D! damage. NL Changes effect based on your Stance.",
     "EXTENDED_DESCRIPTION": [
       "Deal !D! damage. NL ",
-      "Draw a card which enters a Stance.",
-      "Your next *Woven card created costs 1 less.",
-      "Apply 5 Poison.",
-      "Apply 1 Weak and 1 Vulnerable.",
-      "Draw 2 cards.",
-      "Gain 4 Vigor.",
-      "Deal !D! damage.",
-      "Gain !B! Block.",
-      "Gain 1 Artifact.",
-      "Lose 5 ${ModID}:Sanity.",
-      "Gain 5 Mantra."
+      "*None: Draw a card which enters a Stance.",
+      "*Weaver: Your next *Woven card created costs 1 less.",
+      "*Venomous: Apply 5 Poison.",
+      "*Cunning: Apply 1 Weak and 1 Vulnerable.",
+      "*Calm: Draw 2 cards.",
+      "*Angry/Wrath: Gain 4 Vigor.",
+      "*Aggression: Deal !D! damage.",
+      "*Serene: Gain !B! Block.",
+      "*Ancient: Gain 1 Artifact.",
+      "*Nightmare: Lose 5 ${ModID}:Sanity.",
+      "*Divinity: Gain 5 Mantra."
     ]
 
   },
