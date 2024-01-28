@@ -1,10 +1,11 @@
 package thePackmaster.cards.stancedancepack;
 
 
-import basemod.devcommands.draw.Draw;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,20 +20,16 @@ import com.megacrit.cardcrawl.stances.CalmStance;
 import com.megacrit.cardcrawl.stances.DivinityStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.stances.WrathStance;
-
+import javassist.*;
+import javassist.expr.ExprEditor;
+import javassist.expr.NewExpr;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.legacypack.FetchCardToHandAction;
 import thePackmaster.powers.stancedancepack.GainEnergyOnStanceEnter;
 import thePackmaster.powers.stancedancepack.NextWovenCheaper;
-import thePackmaster.stances.aggressionpack.AggressionStance;
-import thePackmaster.stances.cthulhupack.NightmareStance;
-import thePackmaster.stances.downfallpack.AncientStance;
-import thePackmaster.stances.sentinelpack.Angry;
-import thePackmaster.stances.sentinelpack.Serene;
-import thePackmaster.stances.serpentinepack.CunningStance;
-import thePackmaster.stances.serpentinepack.VenemousStance;
-import thePackmaster.stances.stancedancepack.Weaver;
 import thePackmaster.util.Wiz;
+
+import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.cthulhupack.AbstractCthulhuCard.loseSanity;
@@ -46,6 +43,43 @@ public class FanKick extends AbstractStanceDanceCard {
         baseDamage = 10;
     }
 
+    public static boolean changesStance(AbstractCard card) {
+        ClassPool pool = Loader.getClassPool();
+        final boolean[] stanceChangeFound = {false};
+        try {
+            CtClass ctClass = pool.get(card.getClass().getName());
+            ctClass.defrost();
+            CtMethod useMethod;
+            useMethod = ctClass.getDeclaredMethod("use");
+            useMethod.instrument(new ExprEditor() {
+                @Override
+                public void edit(NewExpr n) {
+                    try {
+                        CtConstructor constructor = n.getConstructor();
+                        CtClass activeClass = constructor.getDeclaringClass();
+
+                        if (activeClass != null) {
+                            CtClass[] plz = {activeClass};
+                            //Loop until we either run out of supers or we find a matching class
+                            while (activeClass != null && !plz[0].getName().equals(ChangeStanceAction.class.getName())) {
+                                activeClass = activeClass.getSuperclass();
+                                plz[0] = activeClass;
+                            }
+                            //We found it, nice
+                            if (activeClass != null && plz[0].getName().equals(ChangeStanceAction.class.getName())) {
+                                stanceChangeFound[0] = true;
+                            }
+                        }
+                    } catch (Exception ignored) {
+                    }
+                }
+            });
+        } catch (NotFoundException | CannotCompileException ignore) {
+            return false;
+        }
+        return stanceChangeFound[0];
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
@@ -53,7 +87,21 @@ public class FanKick extends AbstractStanceDanceCard {
 
         switch (p.stance.ID) {
             case NeutralStance.STANCE_ID: {
-                //TODO: Draw a card that enters a Stance.
+                ArrayList<AbstractCard> valids = new ArrayList<>();
+                for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+                    if (changesStance(c)) {
+                        valids.add(c);
+                    }
+                }
+                if (!valids.isEmpty()) {
+                    addToBot(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            AbstractDungeon.player.drawPile.moveToHand(Wiz.getRandomItem(valids));
+                        }
+                    });
+                }
                 break;
             }
             //Manual ID seems be necessary here? Weaver.Stance_ID errors out, constant expression required
