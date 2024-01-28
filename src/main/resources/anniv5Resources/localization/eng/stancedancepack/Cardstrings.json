@@ -10,7 +10,7 @@
   },
   "${ModID}:StagLeap": {
     "NAME": "Stag Leap",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Enter ${ModID}:Cunning. NL Exhaust."
+    "DESCRIPTION": "{@@}ALL enemies lose !M! Strength this turn. NL Enter ${ModID}:Cunning. Exhaust{!Upgrades!|>0=ive !stslib:ex!}."
   },
   "${ModID}:TimeStep": {
     "NAME": "Time Step",

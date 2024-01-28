@@ -2,6 +2,7 @@ package thePackmaster.cards.stancedancepack;
 
 
 import basemod.Pair;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -55,7 +56,10 @@ public class StagLeap extends AbstractStanceDanceCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        exhaust = false;
+        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 2);
+        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 2);
+        ExhaustiveField.ExhaustiveFields.isExhaustiveUpgraded.set(this, true);
     }
 
 }
