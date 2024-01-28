@@ -35,7 +35,7 @@
       "*Cunning: Apply 1 Weak and 1 Vulnerable.",
       "*Calm: Draw 2 cards.",
       "*Angry/Wrath: Gain 4 Vigor.",
-      "*Aggression: Deal !D! damage.",
+      "*Aggression: Add a *Shiv into your hand.",
       "*Serene: Gain !B! Block.",
       "*Ancient: Gain 1 Artifact.",
       "*Nightmare: Lose 5 ${ModID}:Sanity.",
