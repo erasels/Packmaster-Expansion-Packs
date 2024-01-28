@@ -1,8 +1,8 @@
 {
   "${ModID}:GreyBargain": {
     "NAME": "灰色交易",
-    "DESCRIPTION": "选择 消耗 一张手牌来将一张 ${ModID}:被葬 牌洗回抽牌堆。",
-    "UPGRADE_DESCRIPTION": "选择 消耗 一张手牌来将一张 ${ModID}:被葬 牌洗回抽牌堆。 NL 抽一张牌。",
+    "DESCRIPTION": "选择 *消耗 一张手牌来将一张 ${ModID}:被葬 牌洗回抽牌堆，并给予其 stslib:抹除 。",
+    "UPGRADE_DESCRIPTION": "选择 *消耗 一张手牌来将一张 ${ModID}:被葬 牌洗回抽牌堆，并给予其 stslib:抹除 。 NL 抽一张牌。",
     "EXTENDED_DESCRIPTION": ["我需要一张牌来消耗。"]
   },
     "${ModID}:ExtraLimbs": {
