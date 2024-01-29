@@ -4,8 +4,10 @@ package thePackmaster.cards.stancedancepack;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -41,6 +43,7 @@ public class FanKick extends AbstractStanceDanceCard {
     public FanKick() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 10;
+        baseBlock = 6;
     }
 
     public static boolean changesStance(AbstractCard card) {
@@ -131,7 +134,7 @@ public class FanKick extends AbstractStanceDanceCard {
                 break;
             }
             case "anniv5:Aggression": {
-                dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+                Wiz.atb(new MakeTempCardInHandAction(new Shiv()));
                 break;
             }
             case "anniv5:Serene": {
