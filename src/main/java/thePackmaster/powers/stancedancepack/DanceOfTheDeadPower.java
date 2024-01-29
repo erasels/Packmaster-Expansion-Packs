@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.patches.stancedance.EnemyTriggerOnStanceSwapPower;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
 import java.util.Objects;
 
-public class DanceOfTheDeadPower extends AbstractPackmasterPower {
+public class DanceOfTheDeadPower extends AbstractPackmasterPower implements EnemyTriggerOnStanceSwapPower {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID("DanceOfTheDeadPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
@@ -26,14 +27,13 @@ public class DanceOfTheDeadPower extends AbstractPackmasterPower {
     }
 
     @Override
-    public void onSpecificTrigger() {
-        Wiz.atb(new LoseHPAction(this.owner, AbstractDungeon.player, amount));
-        flash();
-    }
-
-    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
+    @Override
+    public void onPlayerChangeStance() {
+        flash();
+        Wiz.atb(new LoseHPAction(this.owner, AbstractDungeon.player, amount));
+    }
 }
