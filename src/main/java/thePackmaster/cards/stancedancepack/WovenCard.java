@@ -39,7 +39,7 @@ public class WovenCard extends AbstractStanceDanceCard {
         for (int i = 0; i < storedcards.size(); i++) {
             AbstractCard c = storedcards.get(i);
             CardModifierManager.addModifier(this, new PlayWovenCardModifier(c, i == storedcards.size() - 1));
-            totalcost += c.cost;
+            if (c.cost > 0) totalcost += c.cost;
         }
 
         if (AbstractDungeon.player.hasPower(NextWovenCheaper.POWER_ID)) {
