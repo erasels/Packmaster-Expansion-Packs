@@ -2,6 +2,7 @@ package thePackmaster.cards.stancedancepack;
 
 
 import basemod.cardmods.ExhaustMod;
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
@@ -41,7 +42,6 @@ public class WovenCard extends AbstractStanceDanceCard {
             totalcost += c.cost;
         }
 
-        //TODO: I've tried 5 ways of making this cost system work.
         if (AbstractDungeon.player.hasPower(NextWovenCheaper.POWER_ID)) {
             if (AbstractDungeon.player.getPower(NextWovenCheaper.POWER_ID).amount > 0) {
                 cost = totalcost - 2;
@@ -57,8 +57,8 @@ public class WovenCard extends AbstractStanceDanceCard {
         MultiCardPreview.multiCardPreview.get(this).addAll(this.storedcards);
 
         CardModifierManager.addModifier(this, new ExhaustMod());
+        CardModifierManager.addModifier(this, new RetainMod());
 
-        retain = true;
     }
 
 

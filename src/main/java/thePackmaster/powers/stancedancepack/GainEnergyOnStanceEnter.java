@@ -28,7 +28,7 @@ public class GainEnergyOnStanceEnter extends AbstractPackmasterPower {
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
         if (!Objects.equals(oldStance.ID, newStance.ID)){
-            Wiz.atb(new GainEnergyAction(1));
+            Wiz.atb(new GainEnergyAction(amount));
             removeThis();
         }
     }

@@ -1,6 +1,6 @@
 {
   "${ModID}:Weaver": {
     "NAME": "Weaver",
-    "DESCRIPTION": ["Exit #yWeaver after playing 3 cards. NL Upon exiting this #yStance, gain a combined copy of all cards played while in it. The card #yRetains this turn, costs 1 less than the total cost of woven cards, and has #yExhaust."]
+    "DESCRIPTION": ["Exit #yWeaver after playing 3 cards. NL Upon exiting this #yStance, gain a combined copy of all cards played while in it. The card costs 1 less than the total cost of woven cards, and has #yRetain and #yExhaust."]
   }
 }
