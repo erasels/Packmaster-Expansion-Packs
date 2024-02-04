@@ -1,0 +1,15 @@
+{
+  "${ModID}:IndomitablePack": {
+    "TEXT": [
+      "Indomitable",
+      "Stand up to the greatest dangers of the Spire with flexible and synergistic defense.",
+      "modargo"
+    ]
+  },
+  "${ModID}:IndomitablePackHat": {
+    "TEXT": [
+      "Ancient and mysterious.",
+      "The Pyramid"
+    ]
+  }
+}
