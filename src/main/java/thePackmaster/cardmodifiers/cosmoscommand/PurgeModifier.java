@@ -1,6 +1,7 @@
 package thePackmaster.cardmodifiers.cosmoscommand;
 
 import basemod.abstracts.AbstractCardModifier;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PurgeField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -8,7 +9,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class PurgeModifier extends AbstractCardModifier {
-    public static String ID = makeID("PurgeCardModifier");
+    public static String ID = makeID("PurgeModifier");
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("PurgeModifier"));
     public static final String[] TEXT = uiStrings.TEXT;
 
@@ -19,15 +20,15 @@ public class PurgeModifier extends AbstractCardModifier {
     }
 
     public boolean shouldApply(AbstractCard card) {
-        return !card.purgeOnUse;
+        return !PurgeField.purge.get(card);
     }
 
     public void onInitialApplication(AbstractCard card) {
-        card.purgeOnUse = true;
+        PurgeField.purge.set(card, true);
     }
 
     public void onRemove(AbstractCard card) {
-        card.purgeOnUse = false;
+        PurgeField.purge.set(card, false);
     }
 
     public AbstractCardModifier makeCopy() {

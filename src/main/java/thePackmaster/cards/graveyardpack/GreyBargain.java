@@ -1,5 +1,6 @@
 package thePackmaster.cards.graveyardpack;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,6 +16,8 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
+import thePackmaster.cardmodifiers.cosmoscommand.PurgeModifier;
+
 import java.util.function.Predicate;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -38,7 +41,7 @@ public class GreyBargain
   public void use(AbstractPlayer p, AbstractMonster m) {
 	  if(p.hand.size()>0) {
 		  Predicate<AbstractCard> classy = card -> !(card.color.equals(AbstractCard.CardColor.COLORLESS) || card.color.equals(AbstractCard.CardColor.CURSE) || card.type.equals(AbstractCard.CardType.CURSE) || card.type.equals(AbstractCard.CardType.STATUS));
-		  AbstractDungeon.actionManager.addToBottom(new MoveCardsAction(p.drawPile, p.exhaustPile, classy, (c) -> c.forEach(card -> { p.drawPile.removeCard(card); p.drawPile.addToRandomSpot(card); })));
+		  AbstractDungeon.actionManager.addToBottom(new MoveCardsAction(p.drawPile, p.exhaustPile, classy, (c) -> c.forEach(card -> { CardModifierManager.addModifier(card, new PurgeModifier()); p.drawPile.removeCard(card); p.drawPile.addToRandomSpot(card); })));
 		  AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p,p,1,false));
 	  }
 	  if(this.upgraded) {

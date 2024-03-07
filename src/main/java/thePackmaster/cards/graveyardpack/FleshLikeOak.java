@@ -30,8 +30,8 @@ public class FleshLikeOak extends AbstractGraveyardCard
 		super(ID, COST, TYPE, RARITY, TARGET);
 		
 		this.exhaust = true;
-		this.magicNumber = this.baseMagicNumber = 1;
-		this.block = this.baseBlock = 12;
+		this.magicNumber = this.baseMagicNumber = 2;
+		this.block = this.baseBlock = 13;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

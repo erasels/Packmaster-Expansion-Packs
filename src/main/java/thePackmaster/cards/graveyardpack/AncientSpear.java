@@ -26,7 +26,7 @@ public class AncientSpear
   public AncientSpear() {
 	super(ID, COST, TYPE, RARITY, TARGET);
 	
-    this.baseDamage = 20;
+    this.baseDamage = 22;
     this.damage=this.baseDamage;
     
     this.exhaust = true;
