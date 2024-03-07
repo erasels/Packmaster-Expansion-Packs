@@ -1,38 +1,20 @@
-package thePackmaster.cards.grandopeningpack;
+import code.cards.AbstractEasyCard;
 
-import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.utility.ScryAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import static code.ModFile.makeID;
+import static code.util.Wiz.*;
 
-import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.atb;
-
-public class DashIn extends AbstractGrandOpeningCard implements StartupCard {
+public class DashIn extends AbstractEasyCard {
     public final static String ID = makeID("DashIn");
+    // intellij stuff , , , , , , , , 
 
     public DashIn() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 1;
-        baseBlock = block = 6;
+        super(ID, ,  CardType. ATTACK, CardRarity. SPECIAL, CardTarget.  ENEMY);
+                            }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+
     }
 
-    @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        blck();
-        atb(new ScryAction(secondMagic));
-    }
-
-    @Override
-    public boolean atBattleStartPreDraw() {
-        addToTop(new DrawCardAction(magicNumber));
-        return true;
-    }
-
-    @Override
     public void upp() {
-        upgradeMagicNumber(1);
-    }
+            }
 }
