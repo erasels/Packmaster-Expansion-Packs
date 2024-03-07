@@ -1,55 +1,44 @@
 package thePackmaster.cards.grandopeningpack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Slimed;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PhantasmalPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
-public class Improvise extends AbstractGrandOpeningCard {
-    public final static String ID = makeID("Improvise");
+public class StickySituation extends AbstractGrandOpeningCard implements StartupCard {
+    public final static String ID = makeID("StickySituation");
 
-    public Improvise() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = block = 8;
-        baseMagicNumber = magicNumber = 2;
+    public StickySituation() {
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 7;
+        tags.add(CardTags.HEALING);
+        exhaust = true;
+        cardsToPreview = new Slimed();
+    }
+
+    public void triggerWhenDrawn() {
+        this.addToTop(new MakeTempCardInHandAction(cardsToPreview.makeCopy(), 1));
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        int cardsDiscarded = 0;
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.isInnate && c != this) {
-                addToBot(new DiscardSpecificCardAction(c));
-                cardsDiscarded++;
-            }
-        }
-        addToBot(new GainBlockAction(AbstractDungeon.player, block));
-        if(cardsDiscarded > 0)
-            addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new PhantasmalPower(abstractPlayer, 1), 1));
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        boolean holdingInnate = false;
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.isInnate && c != this) {
-                holdingInnate = true;
-                break;
-            }
-        }
-        if (holdingInnate) {
-            glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        } else glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-    }
+    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {}
 
     @Override
     public void upp() {
-        isInnate = true;
+        upgradeMagicNumber(3);
+    }
+
+    @Override
+    public boolean atBattleStartPreDraw() {
+        atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
+        return true;
     }
 }

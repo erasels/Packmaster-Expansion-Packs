@@ -1,19 +1,31 @@
 {
   "${ModID}:MessUp": {
-    "NAME": "Mess Up",
-    "DESCRIPTION": "Deal damage equal to the amount of cards in your draw pile. NL Shuffle your Discard pile into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Shuffle your Discard pile into your deck. NL Deal damage equal to the amount of cards in your draw pile.",
-    "EXTENDED_DESCRIPTION": [
-      "(Deals !D! damage.) NL "
-    ]
+  "NAME": "Mess Up",
+  "DESCRIPTION": "Deal damage equal to the amount of cards in your draw pile. NL Shuffle your Discard pile into your draw pile.",
+  "UPGRADE_DESCRIPTION": "Shuffle your Discard pile into your deck. NL Deal damage equal to the amount of cards in your draw pile.",
+  "EXTENDED_DESCRIPTION": ["(Deals !D! damage.) NL "]
+},
+  "${ModID}:PlannedDefense": {
+    "NAME": "Planned Defense",
+    "DESCRIPTION": "Innate. NL Gain !B! Block. If you played another Innate card this turn, also gain half that much Block next turn."
   },
   "${ModID}:SecondStrike": {
     "NAME": "Second Strike",
     "DESCRIPTION": "Innate. Retain. NL Deal !D! damage. If it is not the first turn, deal !D! damage again."
   },
+  "${ModID}:DashIn": {
+    "NAME": "Dash In",
+    "DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to ALL enemies X times.",
+    "UPGRADE_DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to ALL enemies X+1 times."
+  },
   "${ModID}:InstinctiveThinking": {
     "NAME": "Instinctive Thinking",
     "DESCRIPTION": "Each turn, if the first card you play is Innate, gain !M! Block."
+  },
+  "${ModID}:Improvise": {
+    "NAME": "Improvise",
+    "DESCRIPTION": "Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn."
   },
   "${ModID}:Debut": {
     "NAME": "Debut",
@@ -33,50 +45,59 @@
     "DESCRIPTION": "This turn, your next Innate card is played twice.",
     "UPGRADE_DESCRIPTION": "Innate. NL This turn, your next Innate card is played twice."
   },
-
-
-
-
   "${ModID}:Foreshadow": {
     "NAME": "Foreshadow",
-    "DESCRIPTION": "Innate. NL Gain !B! Block. Shuffle copies of other cards you played this turn into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Startup: Gain a *Warcry.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Startup: Gain a *Warcry+."
   },
-  "${ModID}:PlannedDefense": {
-    "NAME": "Planned Defense",
-    "DESCRIPTION": "Innate. NL Gain !B! Block. If you played another Innate card this turn, also gain half that much Block next turn."
+  "${ModID}:Lights": {
+    "NAME": "Lights",
+    "DESCRIPTION": "Next turn, gain{@@}{!M!|1= [E] |2= [E] [E] |3= [E] [E] [E] |>3= !M! [E] }.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Shuffle a ", "*", "Camera into your draw pile.", " NL Exhaust."]
+  },
+  "${ModID}:Camera": {
+    "NAME": "Camera",
+    "DESCRIPTION": "Gain !B! Block X times. NL Next turn, draw X additional cards.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Shuffle an ", "*", "Action! into your draw pile.", " NL Exhaust."]
+  },
+  "${ModID}:Action": {
+    "NAME": "Action!",
+    "DESCRIPTION": "Discard your hand, then deal !D! damage for each card discarded.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Deals {@@}{!M!|2= double |3= triple |@= !M! x } damage.", " NL Exhaust."]
   },
   "${ModID}:BreakALeg": {
     "NAME": "Break a Leg",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL Apply !${ModID}:m2! Vulnerable. NL Startup: Gain{@@}{!M!|1= [E] |2= [E] [E] |3= [E] [E] [E] |>3= !M! [E] }."
   },
-  "${ModID}:DashIn": {
-    "NAME": "Dash In",
-    "DESCRIPTION": "Gain !B! Block. NL Scry !${ModID}:m2!. NL Startup: Draw !M! {@@}{!M!|@=card|>1=cards}."
+  "${ModID}:GrandOpening": {
+    "NAME": "Grand Opening",
+    "DESCRIPTION": "Can only be played if there are no cards in your discard pile. NL Gain !B! Block. NL Startup: Gain !M! Block"
   },
   "${ModID}:PlotArmor": {
     "NAME": "Plot Armor",
-    "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for each Innate card played this combat. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Gain !M! additional Block for each Innate and Startup card played this combat.", " NL (Gains ", " additional Block.) NL"]
   },
-  "${ModID}:Improvise": {
-    "NAME": "Improvise",
-    "DESCRIPTION": "Gain !B! Block. NL If you are holding Innate cards, discard them and your Attacks deal double damage next turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn."
+  "${ModID}:WellWrittenScript": {
+    "NAME": "Well-Written Script",
+    "DESCRIPTION": "At the end of your turn, Retain !M! {@@}{!M!|@=card|>1=cards}.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Draw !${ModID}:m2! {@@}{!${ModID}:m2!|@=card|>1=cards}."]
   },
   "${ModID}:Cross": {
     "NAME": "Cross",
-    "DESCRIPTION": "Innate. NL Deal !D! damage !M! times. NL Your *Crosses deal damage 1 more time this combat."
-  },
-  "${ModID}:Kunzite": {
-    "NAME": "Kunzite",
-    "DESCRIPTION": "Innate. NL Unplayable. Turns into a ${ModID}:Gem when Upgraded.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem. NL \"Card gains Innate\""
+    "DESCRIPTION": "Deal !D! damage !M! {@@}{!M!|@=time|>1=times}.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage ", " time.", " times."," NL ","${ModID}:First:", " Your ", "*", "Crosses deal damage 1 more time this combat."]
   },
   "${ModID}:StartOver": {
     "NAME": "Start Over",
-    "DESCRIPTION": "Shuffle ALL your cards into your draw pile. NL Draw all Innate cards and trigger ALL Startup effects. NL Exhaust."
+    "DESCRIPTION": "Shuffle ALL cards into your draw pile. Draw !M! cards and trigger ALL Startup effects. NL Exhaust."
   },
   "${ModID}:Starring": {
     "NAME": "Starring",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! random Innate {@@}{!M!|@=card|>1=cards} of any color."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! random Startup {@@}{!M!|@=card|>1=cards} and trigger it. NL Exhaust."
+  },
+  "${ModID}:StickySituation": {
+    "NAME": "Sticky Situation",
+    "DESCRIPTION": "Whenever you draw this card, add *Slime your hand. NL Exhaust. NL Startup: Heal !M! HP."
   }
 }
