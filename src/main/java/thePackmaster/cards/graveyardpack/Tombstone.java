@@ -33,7 +33,7 @@ public class Tombstone
     this.baseDamage = 30;
     this.damage=this.baseDamage;
     
-	this.block = this.baseBlock = 5;
+	this.block = this.baseBlock = 10;
     
     this.exhaust = true;
   }

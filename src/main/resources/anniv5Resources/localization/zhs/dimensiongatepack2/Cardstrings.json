@@ -61,7 +61,7 @@
   },
   "${ModID}:WallOfFire": {
     "NAME": "火墙",
-    "DESCRIPTION": "随机造成 !D! 点 伤害 !M! 次。 NL 获得3张 *火柱 。",
-    "UPGRADE_DESCRIPTION": "随机造成 !D! 点 伤害 !M! 次。 NL 获得3张 *火柱+ 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点 伤害 !M! 次。 NL 获得 *火柱 直到手牌上限。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点 伤害 !M! 次。 NL 获得 *火柱+ 直到手牌上限。"
   }
 }

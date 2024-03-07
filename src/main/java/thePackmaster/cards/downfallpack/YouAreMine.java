@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -22,7 +21,7 @@ public class YouAreMine extends AbstractDownfallCard {
     private static final int MAGIC = 2;
 
     public YouAreMine() {
-        super(ID, 1, AbstractCard.CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, AbstractCard.CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
 
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
@@ -34,7 +33,7 @@ public class YouAreMine extends AbstractDownfallCard {
         atb(new RemoveAllBlockAction(m, p));
 
         atb(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        if (upgraded) atb(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        atb(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
 
@@ -43,6 +42,7 @@ public class YouAreMine extends AbstractDownfallCard {
 
     @Override
     public void upp() {
+        exhaust = false;
     }
 
 

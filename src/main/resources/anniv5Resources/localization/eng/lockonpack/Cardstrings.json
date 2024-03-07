@@ -22,7 +22,7 @@
   },
   "${ModID}:GlockOn": {
     "NAME": "Glock-On",
-    "DESCRIPTION": "Apply !M! Lock-On. NL This turn, your attacks are affected by Focus and Lock-On."
+    "DESCRIPTION": "Apply !M! Lock-On. NL For !M! turn{@@}{!M!|>1=s}, your attacks are affected by Focus and Lock-On."
   },
   "${ModID}:LocknLoad": {
     "NAME": "Lock'n'Load",
@@ -38,6 +38,6 @@
   },
   "${ModID}:TunnelVision": {
     "NAME": "Tunnel Vision",
-    "DESCRIPTION": "{@@}{!Upgrades!|>0=Apply !M! Lock-On to ALL enemies. NL }Lock-On further increases Orb damage by 25% per additional Lock-On."
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Apply !M! Lock-On to ALL enemies. NL }Lock-On further increases damage by 25% per additional Lock-On."
   }
 }
