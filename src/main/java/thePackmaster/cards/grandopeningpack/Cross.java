@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.powers.grandopeningpack.CrossPower;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -45,10 +46,7 @@ public class Cross extends AbstractGrandOpeningCard {
     }
     @Override
     public void applyPowers() {
-        AbstractPower cross = AbstractDungeon.player.getPower(CrossPower.POWER_ID);
-        int crossAmount = magicNumber;
-        if(cross!=null)
-            crossAmount += cross.amount;
+        int crossAmount = magicNumber + Wiz.pwrAmt(AbstractDungeon.player, CrossPower.POWER_ID);
         super.applyPowers();
         this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + crossAmount + cardStrings.EXTENDED_DESCRIPTION[crossAmount==1 ? 1 : 2];
         if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 0) {
@@ -62,12 +60,10 @@ public class Cross extends AbstractGrandOpeningCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractPower cross = p.getPower(CrossPower.POWER_ID);
-        int crossAmount = 0;
-        if(cross!=null)
-            crossAmount = cross.amount;
-        for(int i = 0; i<magicNumber+crossAmount; i++){
+        int crossAmount = magicNumber + Wiz.pwrAmt(AbstractDungeon.player, CrossPower.POWER_ID);
+        for(int i = 0; i<crossAmount; i++){
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-            if(i+1<magicNumber+crossAmount){
+            if(i+1<crossAmount){
                 dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
                 i++;
             }

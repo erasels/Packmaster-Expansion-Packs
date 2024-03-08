@@ -3,13 +3,21 @@ package thePackmaster.cards.grandopeningpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.defect.ReinforcedBodyAction;
+import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.relics.ChemicalX;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import thePackmaster.actions.EasyXCostAction;
+import thePackmaster.actions.HandSelectAction;
 import thePackmaster.actions.grandopening.CameraAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
@@ -17,6 +25,7 @@ import thePackmaster.util.Wiz;
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardColor.COLORLESS;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.evenoddpack.AbstractEvenOddCard.makeCardTextGray;
+import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.atb;
 
 public class Camera extends AbstractPackmasterCard {
@@ -63,8 +72,11 @@ public class Camera extends AbstractPackmasterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ReinforcedBodyAction(p, block, freeToPlayOnce, energyOnUse));
-        atb(new CameraAction(freeToPlayOnce, energyOnUse));
-        addToBot(new AbstractGameAction() {
+        Wiz.atb(new EasyXCostAction(this,(effect, params) -> {
+            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, effect)));
+            return true;
+        }));
+        atb(new AbstractGameAction() {
             @Override
             public void update() {
                 if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 1) {

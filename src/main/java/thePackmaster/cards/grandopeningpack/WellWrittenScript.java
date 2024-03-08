@@ -52,7 +52,7 @@ public class WellWrittenScript extends AbstractGrandOpeningCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
         atb(new ApplyPowerAction(p, p, new RetainCardPower(p, magicNumber)));
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 0) {
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 1) {
             atb(new DrawCardAction(secondMagic));
         }
     }
