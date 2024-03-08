@@ -53,6 +53,7 @@ public class GrandOpening extends AbstractGrandOpeningCard implements StartupCar
 
     @Override
     public void upp() {
+        upgradeBlock(3);
         upgradeMagicNumber(1);
     }
 }

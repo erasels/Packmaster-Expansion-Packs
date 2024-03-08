@@ -25,7 +25,7 @@ public class Starring extends AbstractGrandOpeningCard {
         baseMagicNumber = magicNumber = 1;
         baseBlock = block = 8;
         exhaust = true;
-        tags.add(CardTags.HEALING);
+        tags.add(CardTags.HEALING); //This is healing tagged to prevent in-combat generation because there are several Startup cards that provide permanent benefits (e.g. Shining Style, Transmogrifier, Sticky Situation)
     }
 
     @Override

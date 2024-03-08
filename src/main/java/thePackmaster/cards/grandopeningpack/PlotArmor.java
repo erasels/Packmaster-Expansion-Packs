@@ -15,8 +15,8 @@ public class PlotArmor extends AbstractGrandOpeningCard {
     public final static String ID = makeID("PlotArmor");
     public PlotArmor() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
-        baseBlock = block = 12;
+        baseMagicNumber = magicNumber = 2;
+        baseBlock = block = 4;
         rawDescription = cardStrings.DESCRIPTION;
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
@@ -61,7 +61,7 @@ public class PlotArmor extends AbstractGrandOpeningCard {
 
     @Override
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(2);
         upgradeMagicNumber(1);
     }
 

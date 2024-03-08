@@ -21,7 +21,7 @@ public class WellWrittenScript extends AbstractGrandOpeningCard {
     public WellWrittenScript() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 2;
+        baseSecondMagic = secondMagic = 1;
         rawDescription = cardStrings.DESCRIPTION;
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
@@ -59,7 +59,7 @@ public class WellWrittenScript extends AbstractGrandOpeningCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeSecondMagic(1);
     }
 
     @Override

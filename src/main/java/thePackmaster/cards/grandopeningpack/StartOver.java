@@ -24,7 +24,7 @@ public class StartOver extends AbstractGrandOpeningCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
-        tags.add(CardTags.HEALING);
+        tags.add(CardTags.HEALING); //This is healing tagged to prevent in-combat generation because there are several Startup cards that provide permanent benefits (e.g. Shining Style, Transmogrifier, Sticky Situation)
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
@@ -36,6 +36,6 @@ public class StartOver extends AbstractGrandOpeningCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

@@ -1,18 +1,28 @@
 package thePackmaster.cards.grandopeningpack;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
+import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import thePackmaster.cards.pinnaclepack.FishyCroquettesSpecialColourless;
+import thePackmaster.cards.pinnaclepack.FriendshipCroquettesSpecialColourless;
+import thePackmaster.cards.pinnaclepack.MeatyCroquettesSpecialColourless;
+import thePackmaster.cards.pinnaclepack.MysteryCroquettesSpecialColourless;
 import thePackmaster.util.Wiz;
 
+import java.util.ArrayList;
+
+import static basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview.multiCardPreview;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.evenoddpack.AbstractEvenOddCard.makeCardTextGray;
 import static thePackmaster.util.Wiz.atb;
@@ -23,7 +33,7 @@ public class Lights extends AbstractGrandOpeningCard {
     public Lights() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        cardsToPreview = new Camera();
+        MultiCardPreview.add(this, new Camera(), new Action());
         rawDescription = cardStrings.DESCRIPTION;
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
@@ -65,7 +75,7 @@ public class Lights extends AbstractGrandOpeningCard {
             @Override
             public void update() {
                 if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 1) {
-                    atb(new MakeTempCardInDrawPileAction(cardsToPreview.makeCopy(), 1, true, true));
+                    atb(new MakeTempCardInDrawPileAction((new Camera()).makeCopy(), 1, true, true));
                 }
                 this.isDone = true;
             }
