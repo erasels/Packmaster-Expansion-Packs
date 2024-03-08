@@ -80,7 +80,7 @@
   },
   "${ModID}:WellWrittenScript": {
     "NAME": "Well-Written Script",
-    "DESCRIPTION": "At the end of your turn, Retain !M! {@@}{!M!|@=card|>1=cards}.",
+    "DESCRIPTION": "At the end of your turn, Retain up to !M! {@@}{!M!|@=card|>1=cards}.",
     "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Draw !${ModID}:m2! {@@}{!${ModID}:m2!|@=card|>1=cards}."]
   },
   "${ModID}:Cross": {
