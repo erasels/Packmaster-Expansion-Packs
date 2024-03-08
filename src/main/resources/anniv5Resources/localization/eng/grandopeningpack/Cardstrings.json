@@ -71,7 +71,7 @@
   },
   "${ModID}:GrandOpening": {
     "NAME": "Grand Opening",
-    "DESCRIPTION": "Can only be played if there are no cards in your discard pile. NL Gain !B! Block. NL Startup: Gain !M! Block"
+    "DESCRIPTION": "Can only be played if there are no cards in your discard pile. NL Gain !B! Block. NL Startup: Gain !M! Block."
   },
   "${ModID}:PlotArmor": {
     "NAME": "Plot Armor",
