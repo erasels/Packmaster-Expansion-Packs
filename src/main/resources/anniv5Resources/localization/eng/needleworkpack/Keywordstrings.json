@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Stitch",
+    "NAMES": [
+      "stitch"
+    ],
+    "DESCRIPTION": "Tie this card to a random card in your hand. Whenever you play that card, this card is also played."
+  },
+  {
+    "PROPER_NAME": "Bind",
+    "NAMES": [
+      "bind"
+    ],
+    "DESCRIPTION": "Creatures with #yBind deal reduced damage with their next attack."
+  }
+]
