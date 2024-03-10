@@ -1,12 +1,14 @@
 package thePackmaster.packs;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.instadeathpack.*;
 import thePackmaster.cards.needleworkpack.*;
 
 import java.util.ArrayList;
+
+import static thePackmaster.packs.PackPreviewCard.getCardTextureString;
 
 public class NeedleworkPack extends AbstractCardPack {
     public static final String ID = SpireAnniversary5Mod.makeID("NeedleworkPack");
@@ -17,6 +19,11 @@ public class NeedleworkPack extends AbstractCardPack {
 
     public NeedleworkPack() {
         super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 4, 2, 2, 4, PackSummary.Tags.None));
+    }
+
+    @Override
+    public PackPreviewCard makePreviewCard() {
+        return new PackPreviewCard(this.packID, getCardTextureString("Rethread", AbstractCard.CardType.SKILL), this);
     }
 
     @Override
