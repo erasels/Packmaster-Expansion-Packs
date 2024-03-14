@@ -15,22 +15,22 @@ public class GrandOpeningPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public GrandOpeningPack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 2, 3, 3, 2));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 4, 4, 3, 2));
     }
 
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(BattlePrep.ID);
+        cards.add(WellWrittenScript.ID);
+        cards.add(PlotArmor.ID);
+        cards.add(Lights.ID);
+        cards.add(Starring.ID);
         cards.add(Cross.ID);
-        cards.add(DashIn.ID);
-        cards.add(InstinctiveThinking.ID);
-        cards.add(Debut.ID);
-        cards.add(MessUp.ID);
-        cards.add(Improvise.ID);
-        cards.add(PlannedDefense.ID);
-        cards.add(SecondStrike.ID);
-        cards.add(Surge.ID);
+        cards.add(Foreshadow.ID);
+        cards.add(StickySituation.ID);
+        cards.add(GrandOpening.ID);
+        cards.add(BreakALeg.ID);
+        cards.add(StartOver.ID);
         return cards;
     }
 }
