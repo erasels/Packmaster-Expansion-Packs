@@ -1,10 +1,10 @@
 {
   "${ModID}:CrossPower": {
-    "NAME": "Cross",
+    "NAME": "十字架",
     "DESCRIPTIONS": [
-      "Your #yCrosses deal damage #b",
-      " additional time.",
-      " additional times."
+      "你的 #y十字架 额外造成 #b",
+      " 次伤害。",
+      " 次伤害。"
     ]
   }
 }
