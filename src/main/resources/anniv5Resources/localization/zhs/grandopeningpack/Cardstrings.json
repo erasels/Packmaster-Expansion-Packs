@@ -1,57 +1,57 @@
 {
   "${ModID}:Foreshadow": {
-    "NAME": "Foreshadow",
-    "DESCRIPTION": "Gain !B! Block. NL Startup: Gain a *Warcry.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Startup: Gain a *Warcry+."
+    "NAME": "预示",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 起动 ：获得一张 *战吼 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 起动 ：获得一张 *战吼+ 。"
   },
   "${ModID}:Lights": {
-    "NAME": "Lights",
-    "DESCRIPTION": "Next turn, gain{@@}{!M!|1= [E] |2= [E] [E] |3= [E] [E] [E] |>3= !M! [E] }.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Shuffle a ", "*", "Camera into your draw pile.", " NL Exhaust."]
+    "NAME": "灯光",
+    "DESCRIPTION": "下一回合，获得{@@}{!M!|1= [E] |2= [E] [E] |3= [E] [E] [E] |>3= !M! [E] }。",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:首牌 :", " 把一张 ", "*", "相机 洗入你的抽牌堆。", " NL 消耗。"]
   },
   "${ModID}:Camera": {
-    "NAME": "Camera",
-    "DESCRIPTION": "Gain !B! Block X times. NL Next turn, draw X additional cards.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Shuffle an ", "*", "Action! into your draw pile.", " NL Exhaust."]
+    "NAME": "相机",
+    "DESCRIPTION": "获得 !B! 点格挡 X 次。 NL 下一回合，额外抽 X 张牌。",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:首牌 :", " 把一张 ", "*", "行动！ 洗入你的抽牌堆。", " NL 消耗。"]
   },
   "${ModID}:Action": {
-    "NAME": "Action!",
-    "DESCRIPTION": "Discard your hand, then deal !D! damage for each card discarded.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Deals {@@}{!M!|2= double |3= triple |@= !M! x } damage.", " NL Exhaust."]
+    "NAME": "行动！",
+    "DESCRIPTION": "弃掉你的手牌，每弃掉一张牌造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:首牌 :" , " 造成 !M! 倍伤害。", " NL 消耗。"]
   },
   "${ModID}:BreakALeg": {
-    "NAME": "Break a Leg",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Apply !${ModID}:m2! Vulnerable. NL Startup: Gain{@@}{!M!|1= [E] |2= [E] [E] |3= [E] [E] [E] |>3= !M! [E] }."
+    "NAME": "摔断腿",
+    "DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL 施加 !${ModID}:m2! 层 易伤 。 NL 起动 ：获得{@@}{!M!|1= [E] |2= [E] [E] |3= [E] [E] [E] |>3= !M! [E] }。"
   },
   "${ModID}:GrandOpening": {
-    "NAME": "Grand Opening",
-    "DESCRIPTION": "Can only be played if there are no cards in your discard pile. NL Gain !B! Block. NL Startup: Gain !M! Block."
+    "NAME": "盛大开幕",
+    "DESCRIPTION": "只有在你的弃牌堆中没有牌时才能打出。 NL 获得 !B! 点格挡。 NL 起动 ：获得 !M! 点格挡。"
   },
   "${ModID}:PlotArmor": {
-    "NAME": "Plot Armor",
-    "DESCRIPTION": "Gain !B! Block.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Gain !M! additional Block for each Innate and Startup card played this combat.", " NL (Gains ", " additional Block.) NL"]
+    "NAME": "剧情铠甲",
+    "DESCRIPTION": "获得 !B! 点格挡。",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:首牌 :", " 本场战斗中，每打出过一张 固有 或 起动 牌，获得 !M! 点额外格挡。", " NL (获得 ", " 点额外格挡。) NL"]
   },
   "${ModID}:WellWrittenScript": {
-    "NAME": "Well-Written Script",
-    "DESCRIPTION": "At the end of your turn, Retain up to !M! {@@}{!M!|@=card|>1=cards}.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Draw !${ModID}:m2! {@@}{!${ModID}:m2!|@=card|>1=cards}."]
+    "NAME": "精心编写的剧本",
+    "DESCRIPTION": "在你的回合结束时，保留最多 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:首牌 :", " 抽 !${ModID}:m2! 张牌。"]
   },
   "${ModID}:Cross": {
-    "NAME": "Cross",
-    "DESCRIPTION": "Deal !D! damage !M! {@@}{!M!|@=time|>1=times}.",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage ", " time.", " times."," NL ","${ModID}:First:", " Your ", "*", "Crosses deal damage 1 more time this combat."]
+    "NAME": "十字架",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。",
+    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害 ", " 次。", " 次。"," NL ","${ModID}:首牌 :", " 你的 ", "*", "十字架 在本次战斗中多造成一次伤害。"]
   },
   "${ModID}:StartOver": {
-    "NAME": "Start Over",
-    "DESCRIPTION": "Shuffle ALL cards into your draw pile. Draw !M! cards and trigger ALL Startup effects. NL Exhaust."
+    "NAME": "重新开始",
+    "DESCRIPTION": "把所有牌洗入你的抽牌堆。 抽取 !M! 张牌并触发所有 起动 效果。 NL 消耗 。"
   },
   "${ModID}:Starring": {
-    "NAME": "Starring",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! random Startup {@@}{!M!|@=card|>1=cards} and trigger it. NL Exhaust."
+    "NAME": "主演",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 张随机 起动 牌并触发它。 NL 消耗 。"
   },
   "${ModID}:StickySituation": {
-    "NAME": "Sticky Situation",
-    "DESCRIPTION": "Whenever you draw this card, add *Slime your hand. NL Exhaust. NL Startup: Heal !M! HP."
+    "NAME": "棘手情形",
+    "DESCRIPTION": "每当你抽到这张牌时，在你的手牌中加入 *黏液 。 NL 消耗 。 NL 起动 ： 回复 !M! 点生命。"
   }
 }
