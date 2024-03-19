@@ -17,7 +17,7 @@ public class OuroborosPower extends AbstractPackmasterPower {
     private boolean triggeredThisTurn = false;
 
     public OuroborosPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
 
     }
 
