@@ -1,0 +1,48 @@
+{
+  "${ModID}:Needlework": {
+    "NAME": "Needlework",
+    "DESCRIPTION": "Deal !D! damage. NL stslib:Persist !stslib:persist!."
+  },
+  "${ModID}:Backstitch": {
+    "NAME": "Backstitch",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Stitch."
+  },
+  "${ModID}:CrossStitch": {
+    "NAME": "Cross Stitch",
+    "DESCRIPTION": "Apply !M! Weak. NL ${ModID}:Flurry: Apply 1 ${ModID}:Bind."
+  },
+  "${ModID}:Reading": {
+    "NAME": "Reading",
+    "DESCRIPTION": "At the start of your turn, ${ModID}:Stitch a *Read to a random card in your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, ${ModID}:Stitch a *%s to a random card in your hand."
+  },
+  "${ModID}:Read": {
+    "NAME": "Read",
+    "DESCRIPTION": "{@@}Next turn, draw !M! card{!M!|1=|@=s}."
+  },
+  "${ModID}:Cleanup": {
+  "NAME": "Cleanup",
+  "DESCRIPTION": "{@@}Deal !D! damage twice. NL Discard !M! card{!M!|1=|@=s}."
+  },
+  "${ModID}:Knot": {
+    "NAME": "Knot",
+    "DESCRIPTION": "Apply !M! ${ModID}:Bind to a random enemy. NL ${ModID}:Stitch."
+  },
+  "${ModID}:Pincushion": {
+    "NAME": "Pincushion",
+    "DESCRIPTION": "${ModID}:Flurry: Deal !M! damage to ALL enemies. NL ${ModID}:Stitch."
+  },
+  "${ModID}:Rethread": {
+    "NAME": "Rethread",
+    "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile into your hand. NL stslib:Persist !stslib:persist!."
+  },
+  "${ModID}:CopyAndPaste": {
+    "NAME": "Copy and Paste",
+    "DESCRIPTION": "Whenever you ${ModID}:Stitch a card, ${ModID}:Stitch a copy of it to another card in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you ${ModID}:Stitch a card, ${ModID}:Stitch a copy of it to another card in your hand."
+  },
+  "${ModID}:Patchwork": {
+    "NAME": "Patchwork",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Stitch a copy of this to a random card in your hand."
+  }
+}

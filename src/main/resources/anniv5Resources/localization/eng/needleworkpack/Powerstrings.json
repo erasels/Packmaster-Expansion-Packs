@@ -1,0 +1,34 @@
+{
+  "${ModID}:Bind": {
+    "NAME": "Bind",
+    "DESCRIPTIONS": [
+      "Your next Attack deals #b%d less damage.",
+      "This enemy's next Attack deals #b%d less damage."
+    ]
+  },
+  "${ModID}:CopyAndPastePower": {
+    "NAME": "Copy and Paste",
+    "DESCRIPTIONS": [
+      "Whenever you #yStitch a card, attach a copy of it to another card in your hand.",
+      "Whenever you #yStitch a card, attach a copy of it #b%d other cards in your hand."
+    ]
+  },
+  "${ModID}:CrossStitchPower": {
+    "NAME": "Cross Stitch",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, apply #b%1$d Weak to %2$s."
+    ]
+  },
+  "${ModID}:PincushionPower": {
+    "NAME": "Pincushion",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, deal #b%d damage to ALL enemies."
+    ]
+  },
+  "${ModID}:ReadingPower": {
+    "NAME": "Reading",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yStitch a %s to a random card in your hand."
+    ]
+  }
+}
