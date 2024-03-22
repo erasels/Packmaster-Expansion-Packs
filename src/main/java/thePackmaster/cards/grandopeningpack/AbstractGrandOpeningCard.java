@@ -8,8 +8,13 @@ public abstract class AbstractGrandOpeningCard extends AbstractPackmasterCard
     public AbstractGrandOpeningCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target)
     {
         super(cardID, cost, type, rarity, target, "grandopening");
-
     }
+
+    public AbstractGrandOpeningCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color)
+    {
+        super(cardID, cost, type, rarity, target, color);
+    }
+
     @Override
     public void upp() {
     }

@@ -31,6 +31,8 @@ public class GrandOpeningPack extends AbstractCardPack {
         cards.add(GrandOpening.ID);
         cards.add(BreakALeg.ID);
         cards.add(StartOver.ID);
+        cards.add(Camera.ID);
+        cards.add(Action.ID);
         return cards;
     }
 }

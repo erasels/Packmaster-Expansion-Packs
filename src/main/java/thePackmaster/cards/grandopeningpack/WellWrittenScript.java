@@ -12,7 +12,6 @@ import thePackmaster.ThePackmaster;
 import thePackmaster.cards.gemspack.AbstractGemsCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.evenoddpack.AbstractEvenOddCard.makeCardTextGray;
 import static thePackmaster.util.Wiz.atb;
 
 public class WellWrittenScript extends AbstractGrandOpeningCard {
