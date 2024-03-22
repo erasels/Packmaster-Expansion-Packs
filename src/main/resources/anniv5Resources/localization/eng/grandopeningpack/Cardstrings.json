@@ -17,7 +17,7 @@
   "${ModID}:Action": {
     "NAME": "Action!",
     "DESCRIPTION": "Discard your hand, then deal !D! damage for each card discarded.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Deals {@@}{!M!|2= double |3= triple |@= !M! x } damage.", " NL Exhaust."]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Deals {@@}{!M!|2= double|3= triple|@= !M! x} damage.", " NL Exhaust."]
   },
   "${ModID}:BreakALeg": {
     "NAME": "Break a Leg",

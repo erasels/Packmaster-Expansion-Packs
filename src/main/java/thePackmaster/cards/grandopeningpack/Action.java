@@ -3,22 +3,17 @@ package thePackmaster.cards.grandopeningpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.unique.CalculatedGambleAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.util.Wiz;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardColor.COLORLESS;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.evenoddpack.AbstractEvenOddCard.makeCardTextGray;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class Action extends AbstractPackmasterCard {
+public class Action extends AbstractGrandOpeningCard {
     public final static String ID = makeID("Action");
 
     public Action() {

@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.evenoddpack.AbstractEvenOddCard.makeCardTextGray;
 import static thePackmaster.util.Wiz.atb;
 
 public class PlotArmor extends AbstractGrandOpeningCard {

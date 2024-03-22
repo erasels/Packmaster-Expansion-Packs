@@ -2,8 +2,6 @@ package thePackmaster.cards.grandopeningpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.red.PerfectedStrike;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -11,11 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.powers.grandopeningpack.CrossPower;
 import thePackmaster.util.Wiz;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.evenoddpack.AbstractEvenOddCard.makeCardTextGray;
 import static thePackmaster.util.Wiz.atb;
 
 public class Cross extends AbstractGrandOpeningCard {
