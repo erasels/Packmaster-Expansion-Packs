@@ -3,7 +3,7 @@
     "NAME": "Bind",
     "DESCRIPTIONS": [
       "Your next Attack deals #b%d less damage.",
-      "This enemy's next Attack deals #b%d less damage."
+      "This enemy's next attack deals #b%d less damage."
     ]
   },
   "${ModID}:CopyAndPastePower": {
