@@ -16,7 +16,7 @@
   "${ModID}:CrossStitchPower": {
     "NAME": "Cross Stitch",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, apply #b%1$d Weak to %2$s."
+      "Whenever you play a card this turn, apply #b%1$d #yWeak to %2$s."
     ]
   },
   "${ModID}:PincushionPower": {
