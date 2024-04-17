@@ -14,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class EvasiveTactics extends AbstractSerpentineCard {
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     public final static String ID = makeID("EvasiveTactics");
     private static final int MAGIC = 10;
     private static final int UPG_MAGIC = 3;
