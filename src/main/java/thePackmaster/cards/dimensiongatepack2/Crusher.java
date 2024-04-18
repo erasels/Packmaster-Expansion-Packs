@@ -1,6 +1,7 @@
 package thePackmaster.cards.dimensiongatepack2;
 
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,12 +9,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGrift;
-import thePackmaster.util.creativitypack.onGenerateCardMidcombatInterface;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Crusher extends AbstractDimensionalCardGrift implements onGenerateCardMidcombatInterface {
+public class Crusher extends AbstractDimensionalCardGrift implements OnCreateCardInterface {
     public final static String ID = makeID("Crusher");
 
     private static final int COST = 5;
