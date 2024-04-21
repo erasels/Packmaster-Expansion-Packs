@@ -27,23 +27,6 @@ public class Apex extends AbstractIntrigueCard {
         exhaust = true;
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        // PARADOX PREVENTION.
-        if (isMundane(this)) {
-            cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
-            return false;
-        }
-
-        // Unplayable if you detect any filthy, pedestrian, plebeian, run of the mill, mundane cards in the turn card list.
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().anyMatch(q -> q.rarity != CardRarity.RARE && q.rarity != CardRarity.UNCOMMON)) {
-            cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
-            return false;
-        }
-
-        return super.canUse(p, m);
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new AbstractGameAction() {
             @Override

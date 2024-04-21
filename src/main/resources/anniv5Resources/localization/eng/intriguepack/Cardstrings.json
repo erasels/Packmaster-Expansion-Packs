@@ -37,10 +37,7 @@
   },
   "${ModID}:Apex": {
     "NAME": "Apex",
-    "DESCRIPTION": "${ModID}:Ascend. NL You can only play uncommon or rare cards the turn you play this. Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Not in a turn with anything but rare and uncommon cards, knave!"
-    ]
+    "DESCRIPTION": "${ModID}:Ascend. NL You can only play uncommon and rare cards for the rest of the turn. Exhaust."
   },
   "${ModID}:PowerStruggle": {
     "NAME": "Power Struggle",
