@@ -35,7 +35,7 @@ public class NowYouDontPower extends AbstractPackmasterPower implements NonStack
         if (toGenerate == null){
             toGenerate = new NowYouDont();
         }
-        this.addToBot(new MakeTempCardInHandAction(toGenerate.makeCopy()));
+        this.addToBot(new MakeTempCardInHandAction(toGenerate));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 }
