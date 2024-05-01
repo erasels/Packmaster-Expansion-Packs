@@ -27,6 +27,5 @@ public class Showstopper extends AbstractShowmanCard {
     }
 
     public void upp() {
-        timesUpgraded++;
     }
 }
