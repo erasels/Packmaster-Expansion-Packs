@@ -37,7 +37,7 @@ public class MagicCylinderPower extends AbstractPackmasterPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner && damageAmount >= owner.currentBlock) {
+        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner && damageAmount >= owner.currentBlock && this.amount > 0) {
             addToBot(new VFXAction(new MagicCylinderEffect(owner.hb.cX + (100f * Settings.scale), owner.hb.cY + (80f * Settings.scale), owner.hb.cX + (100f * Settings.scale), owner.hb.cY + (120f * Settings.scale), 0.5f)));
             addToBot(new WaitAction(0.5f));
             addToBot(new VFXAction(new MagicCylinderEffect(owner.hb.cX + (100f * Settings.scale), owner.hb.cY - (80f * Settings.scale), owner.hb.cX + (100f * Settings.scale), owner.hb.cY - (120f * Settings.scale), 0.5f)));
@@ -46,7 +46,7 @@ public class MagicCylinderPower extends AbstractPackmasterPower {
             addToBot(new WaitAction(0.5f));
             addToBot(new DamageAction(info.owner, new DamageInfo(owner, damageAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
             flash();
-            addToBot(new ReducePowerAction(owner, owner, this, 1));
+            this.amount--;
             if (this.amount <= 0){
                 addToBot(new RemoveSpecificPowerAction(owner, owner, this));
             }
