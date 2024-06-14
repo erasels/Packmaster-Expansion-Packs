@@ -25,101 +25,101 @@ import thePackmaster.actions.graveyardpack.ExhaustHandAction;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class SpontaneousRitual extends AbstractGraveyardCard {
-	public static final String ID = makeID("SpontaneousRitual");
+    public static final String ID = makeID("SpontaneousRitual");
 
-	private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
-	private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
-	private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
+    private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
+    private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
+    private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
-	private static final int COST = 1;
+    private static final int COST = 1;
 
-	public SpontaneousRitual() {
-		super(ID, COST, TYPE, RARITY, TARGET);
+    public SpontaneousRitual() {
+        super(ID, COST, TYPE, RARITY, TARGET);
 
-		this.baseDamage = 0;
-		this.damage = this.baseDamage;
-		this.baseMagicNumber=0;
-		this.magicNumber=this.baseMagicNumber;
-		
-	}
-	
-	private int sumDamage() {
-		int tempDamage=SpireAnniversary5Mod.combatExhausts+AbstractDungeon.player.hand.size();
-	    if(AbstractDungeon.player.hand.contains(this)) {
-	    	tempDamage-= 1;
-	    }
-	    
-		if(this.upgraded) {
-			tempDamage+= 3 - java.lang.Math.max(AbstractDungeon.player.hand.size()-BaseMod.MAX_HAND_SIZE+2, 0);	//when hand is too large, don't add the full 3 to damage (extra wounds are automatically discarded)
-		}
-	    
-		return tempDamage;
-	}
+        this.baseDamage = 0;
+        this.damage = this.baseDamage;
+        this.baseMagicNumber = 0;
+        this.magicNumber = this.baseMagicNumber;
 
-	  public void applyPowers() {
-		this.baseDamage=sumDamage();
-		
-	    super.applyPowers();
+    }
 
-	    
-    	if(this.upgraded) {
-    		this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-    	}else {
-    		this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-    	}
-    	initializeDescription();
-	    
-	  }
+    private int sumDamage() {
+        int tempDamage = SpireAnniversary5Mod.combatExhausts + AbstractDungeon.player.hand.size();
+        if (AbstractDungeon.player.hand.contains(this)) {
+            tempDamage -= 1;
+        }
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ExhaustHandAction());
+        if (this.upgraded) {
+            tempDamage += 3 - java.lang.Math.max(AbstractDungeon.player.hand.size() - BaseMod.MAX_HAND_SIZE + 2, 0);    //when hand is too large, don't add the full 3 to damage (extra wounds are automatically discarded)
+        }
 
-		AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_DARK_EVOKE"));
-		
-		if(this.upgraded) {
-			AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new Dazed(), 3));
-		}
-		
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-	}
-	
-	  public void calculateCardDamage(AbstractMonster mo) {
+        return tempDamage;
+    }
 
-	    this.baseDamage = sumDamage();
-		  
-	    super.calculateCardDamage(mo);
-	    
-	    if (SpireAnniversary5Mod.combatExhausts > 0) {
-	    	if(this.upgraded) {
-	    		this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-	    	}else {
-	    		this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-	    	}
-	    }
-    	initializeDescription();
-	  }
-	
-	public void onMoveToDiscard() {
-		if(this.upgraded) {
-			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-		}else {
-			this.rawDescription = cardStrings.DESCRIPTION;
-		}
-		
-	    initializeDescription();
-	}
-	
-	public void triggerOnExhaust(){
-		if(this.upgraded) {
-			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-		}else {
-			this.rawDescription = cardStrings.DESCRIPTION;
-		}
-		
-	    initializeDescription();
-	}
+    public void applyPowers() {
+        this.baseDamage = sumDamage();
 
-	public void upp() {
-		cardsToPreview = new Dazed();
-	}
+        super.applyPowers();
+
+
+        if (this.upgraded) {
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        } else {
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        }
+        initializeDescription();
+
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new ExhaustHandAction());
+
+        AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_DARK_EVOKE"));
+
+        if (this.upgraded) {
+            AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new Dazed(), 3));
+        }
+
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+    }
+
+    public void calculateCardDamage(AbstractMonster mo) {
+
+        this.baseDamage = sumDamage();
+
+        super.calculateCardDamage(mo);
+
+        if (SpireAnniversary5Mod.combatExhausts > 0) {
+            if (this.upgraded) {
+                this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            } else {
+                this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            }
+        }
+        initializeDescription();
+    }
+
+    public void onMoveToDiscard() {
+        if (this.upgraded) {
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        } else {
+            this.rawDescription = cardStrings.DESCRIPTION;
+        }
+
+        initializeDescription();
+    }
+
+    public void triggerOnExhaust() {
+        if (this.upgraded) {
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        } else {
+            this.rawDescription = cardStrings.DESCRIPTION;
+        }
+
+        initializeDescription();
+    }
+
+    public void upp() {
+        cardsToPreview = new Dazed();
+    }
 }
