@@ -8,7 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.fueledpack.ConsumeToDoAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.atb;
 
 public class Burninate extends AbstractFueledCard {
     public final static String ID = makeID(Burninate.class.getSimpleName());

@@ -2,10 +2,8 @@ package thePackmaster.cards.cthulhupack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.MetallicizePower;
 import thePackmaster.powers.cthulhupack.AllSeeingPower;
 import thePackmaster.powers.cthulhupack.AllSeeingPowerTriggerOnCard;
-import thePackmaster.powers.cthulhupack.AllSeeingPowerTriggerOnTurn;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

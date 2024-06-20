@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.BetterPowerNegationCheckPatch;
 
 import java.util.ArrayList;

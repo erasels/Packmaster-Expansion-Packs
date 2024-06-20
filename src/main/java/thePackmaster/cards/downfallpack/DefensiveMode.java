@@ -3,10 +3,9 @@ package thePackmaster.cards.downfallpack;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import thePackmaster.cards.AbstractPackmasterCard;
-import static thePackmaster.util.Wiz.*;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class DefensiveMode extends AbstractDownfallCard {
     public final static String ID = makeID("DefensiveMode");

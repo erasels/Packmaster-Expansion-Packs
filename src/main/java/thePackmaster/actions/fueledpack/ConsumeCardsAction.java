@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import thePackmaster.cards.fueledpack.BurningStrike;
 import thePackmaster.cards.fueledpack.HotAsh;
 import thePackmaster.powers.fueledpack.ControlledBurnPower;
 import thePackmaster.vfx.fueledpack.ConsumeCardEffect;

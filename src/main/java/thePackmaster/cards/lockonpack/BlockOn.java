@@ -1,11 +1,8 @@
 package thePackmaster.cards.lockonpack;
 
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cardmodifiers.lockonpack.GlockOnModifier;
-import thePackmaster.patches.hermitpack.EnumPatch;
 import thePackmaster.powers.lockonpack.BlockOnPower;
 import thePackmaster.util.Wiz;
 

@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.arcanapack.AllEnemyLoseHPAction;
 import thePackmaster.cardmodifiers.InfestModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.OnInfestCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

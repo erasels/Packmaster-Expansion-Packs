@@ -1,9 +1,15 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.blue.*;
-import com.megacrit.cardcrawl.cards.green.*;
-import com.megacrit.cardcrawl.cards.purple.*;
-import com.megacrit.cardcrawl.cards.red.*;
+import com.megacrit.cardcrawl.cards.blue.Buffer;
+import com.megacrit.cardcrawl.cards.blue.GeneticAlgorithm;
+import com.megacrit.cardcrawl.cards.blue.Leap;
+import com.megacrit.cardcrawl.cards.green.Blur;
+import com.megacrit.cardcrawl.cards.green.Caltrops;
+import com.megacrit.cardcrawl.cards.green.PiercingWail;
+import com.megacrit.cardcrawl.cards.purple.WaveOfTheHand;
+import com.megacrit.cardcrawl.cards.red.BodySlam;
+import com.megacrit.cardcrawl.cards.red.FeelNoPain;
+import com.megacrit.cardcrawl.cards.red.Impervious;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;

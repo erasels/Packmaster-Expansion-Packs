@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
-import thePackmaster.patches.DiscardHookPatch;
 import thePackmaster.patches.magnetizepack.OnDiscardPatch;
 import thePackmaster.powers.AbstractPackmasterPower;
 
