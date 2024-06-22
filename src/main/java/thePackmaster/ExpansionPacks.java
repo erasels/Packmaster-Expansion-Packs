@@ -3,6 +3,7 @@ package thePackmaster;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -44,6 +45,7 @@ public class ExpansionPacks implements
         OnPowersModifiedSubscriber,
         AddAudioSubscriber {
 
+    private static final String SHORTENED_MOD_NAME = "PM: Expansion Packs";
     private static ExpansionPacks thismod;
     public static final String modID = "expansionPacks";
 
@@ -58,6 +60,8 @@ public class ExpansionPacks implements
 
     public static void initialize() {
         thismod = new ExpansionPacks();
+        // Shorten name of Expansion Packs, so it doesn't take up two lines with whatmod
+        Arrays.stream(Loader.MODINFOS).filter(mf -> modID.equals(mf.ID)).findAny().ifPresent(mf -> mf.Name = SHORTENED_MOD_NAME);
     }
 
     @Override
