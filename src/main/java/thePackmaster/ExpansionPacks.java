@@ -45,7 +45,7 @@ public class ExpansionPacks implements
         OnPowersModifiedSubscriber,
         AddAudioSubscriber {
 
-    private static final String SHORTENED_MOD_NAME = "PM: Expansion Packs";
+    private static final String SHORTENED_MOD_NAME = "PM Expansion Packs";
     private static ExpansionPacks thismod;
     public static final String modID = "expansionPacks";
 
