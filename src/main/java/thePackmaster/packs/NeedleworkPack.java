@@ -18,7 +18,7 @@ public class NeedleworkPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public NeedleworkPack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 4, 2, 2, 4, PackSummary.Tags.Tokens));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 4, 3, 1, 4, PackSummary.Tags.Tokens));
     }
 
     @Override
