@@ -22,6 +22,7 @@ import thePackmaster.packs.SpheresPack;
 import thePackmaster.patches._expansionpacks.RelicParentPackExpansionPatches;
 import thePackmaster.patches.overwhelmingpack.MakeRoomPatch;
 import thePackmaster.patches.sneckopack.EnergyCountPatch;
+import thePackmaster.powers.needlework.CopyAndPastePower;
 import thePackmaster.relics.summonspack.BlueSkull;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 import thePackmaster.stances.cthulhupack.NightmareStance;
@@ -75,11 +76,13 @@ public class ExpansionPacks implements
         EnergyCountPatch.energySpentThisCombat = 0;
         CthulhuPack.lunacyThisCombat = 0;
         DebuffLossManager.resetDebuffTracker(); // MariDebuffPack
+        CopyAndPastePower.grossStaticListOfUUIDsToShowIcon.clear();
     }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         MakeRoomPatch.reset();
+        CopyAndPastePower.grossStaticListOfUUIDsToShowIcon.clear();
         if (abstractRoom instanceof MonsterRoomBoss && abstractRoom.monsters.areMonstersDead()) {
             List<AbstractCard> cardsToRemove = AbstractDungeon.player.masterDeck.group.stream().filter(c -> c.cardID.equals(GrabAndGo.ID)).collect(Collectors.toCollection(ArrayList::new));
             for (AbstractCard c : cardsToRemove) {

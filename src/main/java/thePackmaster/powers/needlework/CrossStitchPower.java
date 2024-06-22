@@ -5,15 +5,10 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.needlework.StitchAction;
-import thePackmaster.powers.AbstractPackmasterPower;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CrossStitchPower extends FlurryPower implements CloneablePowerInterface {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID("CrossStitchPower");
@@ -35,7 +30,7 @@ public class CrossStitchPower extends FlurryPower implements CloneablePowerInter
 
     public void updateDescription() {
         if (target != null)
-            this.description = String.format(DESCRIPTIONS[0], amount, target);
+            this.description = String.format(DESCRIPTIONS[0], amount, FontHelper.colorString(target.name, "y"));
     }
 
     @Override

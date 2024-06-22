@@ -105,7 +105,7 @@ public class StitchedMod extends AbstractCardModifier implements StitchPatches.C
         lastX = card.current_x;
         lastY = card.current_y;
 
-        updatePositions(AbstractDungeon.player.hoveredCard == null);
+        updatePositions(checkHoverability(card));
     }
 
     public void updatePositions(boolean canHover)
@@ -299,4 +299,23 @@ public class StitchedMod extends AbstractCardModifier implements StitchPatches.C
     {
         return (float) Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
     }
+
+    private static boolean checkHoverability(AbstractCard card) {
+        if (AbstractDungeon.player == null) return false;
+
+        switch (AbstractDungeon.screen) {
+            case NONE:
+                return AbstractDungeon.player.hoveredCard == null;
+            case MASTER_DECK_VIEW:
+                return AbstractDungeon.player.masterDeck.contains(card) && !card.hb.hovered;
+            case GAME_DECK_VIEW:
+                return AbstractDungeon.player.drawPile.contains(card) && !card.hb.hovered;
+            case EXHAUST_VIEW:
+                return AbstractDungeon.player.exhaustPile.contains(card) && !card.hb.hovered;
+            case DISCARD_VIEW:
+                return AbstractDungeon.player.discardPile.contains(card) && !card.hb.hovered;
+        }
+        return false;
+    }
+
 }

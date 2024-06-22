@@ -4,7 +4,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractNeedleworkCard extends AbstractPackmasterCard {
     public AbstractNeedleworkCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {
-        super(cardID, cost, type, rarity, target, "instadeath", null); //"needlework", null);
+        super(cardID, cost, type, rarity, target, (String) null, null);
     }
 
     public AbstractNeedleworkCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color) {

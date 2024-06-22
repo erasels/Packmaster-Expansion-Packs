@@ -8,8 +8,8 @@
   },
   "${ModID}:NeedleworkPackHat": {
     "TEXT": [
-      "???",
-      "???"
+      "Handmade! But it seems like you made it a bit too small.",
+      "Balloon Hat"
     ]
   }
 }

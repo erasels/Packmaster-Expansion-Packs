@@ -38,8 +38,8 @@
   },
   "${ModID}:CopyAndPaste": {
     "NAME": "Copy and Paste",
-    "DESCRIPTION": "Whenever you ${ModID}:Stitch a card, ${ModID}:Stitch a copy of it to another card in your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you ${ModID}:Stitch a card, ${ModID}:Stitch a copy of it to another card in your hand."
+    "DESCRIPTION": "Whenever you play the same card twice in a turn, shuffle a copy of it that costs 0 into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Whenever you play the same card twice in a turn, shuffle a copy of it that costs 0 into your draw pile."
   },
   "${ModID}:Patchwork": {
     "NAME": "Patchwork",

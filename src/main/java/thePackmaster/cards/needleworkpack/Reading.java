@@ -3,10 +3,8 @@ package thePackmaster.cards.needleworkpack;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.upgradespack.SuperUpgradeAction;
-import thePackmaster.powers.needlework.CopyAndPastePower;
 import thePackmaster.powers.needlework.ReadingPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

@@ -3,9 +3,7 @@ package thePackmaster.cards.needleworkpack;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.actions.needlework.StitchAction;
-import thePackmaster.powers.needlework.CrossStitchPower;
 import thePackmaster.powers.needlework.PincushionPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -21,7 +19,7 @@ public class Pincushion extends AbstractNeedleworkCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new PincushionPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new PincushionPower(p, magicNumber)));
         addToBot(new StitchAction(this));
     }
 

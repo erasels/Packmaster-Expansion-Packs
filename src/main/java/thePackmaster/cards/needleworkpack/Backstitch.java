@@ -1,7 +1,5 @@
 package thePackmaster.cards.needleworkpack;
 
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PersistFields;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.needlework.StitchAction;

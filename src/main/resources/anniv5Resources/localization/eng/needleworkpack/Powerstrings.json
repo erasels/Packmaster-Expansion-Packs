@@ -3,20 +3,22 @@
     "NAME": "Bind",
     "DESCRIPTIONS": [
       "Your next Attack deals #b%d less damage.",
-      "This enemy's next Attack deals #b%d less damage."
+      "This enemy's next attack deals #b%d less damage."
     ]
   },
   "${ModID}:CopyAndPastePower": {
     "NAME": "Copy and Paste",
     "DESCRIPTIONS": [
-      "Whenever you #yStitch a card, attach a copy of it to another card in your hand.",
-      "Whenever you #yStitch a card, attach a copy of it #b%d other cards in your hand."
+      "Whenever you play the same card twice in a turn, shuffle a copy of it that costs #b0 into your discard pile.",
+      "Whenever you play the same card twice in a turn, shuffle a #b%d copies of it that cost #b0 into your discard pile.",
+      "Whenever you play the same card twice in a turn, shuffle a copy of it that costs #b0 into your draw pile.",
+      "Whenever you play the same card twice in a turn, shuffle a #b%d copies of it that cost #b0 into your draw pile."
     ]
   },
   "${ModID}:CrossStitchPower": {
     "NAME": "Cross Stitch",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, apply #b%1$d Weak to %2$s."
+      "Whenever you play a card this turn, apply #b%1$d #yBind to %2$s."
     ]
   },
   "${ModID}:PincushionPower": {

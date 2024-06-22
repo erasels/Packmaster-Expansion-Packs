@@ -1,8 +1,5 @@
 package thePackmaster.cards.needleworkpack;
 
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PersistFields;
-import com.evacipated.cardcrawl.mod.stslib.variables.RefundVariable;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

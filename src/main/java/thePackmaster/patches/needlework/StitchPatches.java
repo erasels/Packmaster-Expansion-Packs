@@ -3,6 +3,8 @@ package thePackmaster.patches.needlework;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.stslib.patches.ExtraIconsPatch;
+import com.evacipated.cardcrawl.mod.stslib.util.extraicons.IconPayload;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,7 +12,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CtBehavior;
 import thePackmaster.cardmodifiers.needlework.StitchedMod;
+import thePackmaster.powers.needlework.CopyAndPastePower;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -67,6 +71,14 @@ public class StitchPatches {
     public static class CardModPreRenderPatch {
         @SpirePrefixPatch
         public static void PreRender(AbstractCard __instance, SpriteBatch sb) {
+            //i didn't want to loop over player powers for every card rendered and otherwise caching it is also kinda gross
+            if (CopyAndPastePower.grossStaticListOfUUIDsToShowIcon.contains(__instance.uuid)) {
+                ArrayList<IconPayload> icons = ExtraIconsPatch.ExtraIconsField.extraIcons.get(__instance);
+                if (!icons.contains(CopyAndPastePower.icon)) {
+                    icons.add(CopyAndPastePower.icon);
+                }
+            }
+
             for (AbstractCardModifier mod : CardModifierManager.modifiers(__instance)) {
                 if (mod instanceof PreCardRenderModifier)
                     ((PreCardRenderModifier) mod).preRender(__instance, sb);

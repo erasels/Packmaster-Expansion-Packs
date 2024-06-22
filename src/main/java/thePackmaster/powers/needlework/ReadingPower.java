@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.needlework.StitchAction;
@@ -25,19 +26,20 @@ public class ReadingPower extends AbstractPackmasterPower implements CloneablePo
     public void atStartOfTurnPostDraw() {
         flash();
 
+        int upgAmount = amount;
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
 
                 Read toStitch = new Read();
-                for (int upg = 1; upg < amount; ++upg) {
+                for (int upg = 1; upg < upgAmount; ++upg) {
                     SuperUpgradeAction.forceUpgrade(toStitch, false);
                 }
 
                 toStitch.drawScale = toStitch.targetDrawScale = 0.1f;
                 toStitch.current_x = toStitch.target_x = Settings.WIDTH / 2f;
-                toStitch.current_y = toStitch.target_y = Settings.HEIGHT;
+                toStitch.current_y = toStitch.target_y = Settings.HEIGHT * 2;
                 addToTop(new StitchAction(toStitch));
             }
         });
@@ -48,7 +50,7 @@ public class ReadingPower extends AbstractPackmasterPower implements CloneablePo
         for (int upg = 1; upg < amount; ++upg) {
             SuperUpgradeAction.forceUpgrade(temp, false);
         }
-        this.description = String.format(DESCRIPTIONS[1], temp.name);
+        this.description = String.format(DESCRIPTIONS[0], FontHelper.colorString(temp.name, "y"));
     }
 
     @Override
