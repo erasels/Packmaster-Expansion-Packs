@@ -13,7 +13,7 @@ public class Patchwork extends AbstractNeedleworkCard {
     public Patchwork() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
 
-        baseBlock = block = 3;
+        baseBlock = block = 2;
     }
 
     @Override
