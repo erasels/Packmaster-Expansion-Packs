@@ -20,7 +20,7 @@ public class BindPower extends AbstractPackmasterPower implements CloneablePower
     private boolean remove = false;
 
     public BindPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.DEBUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, amount);
     }
 
     @Override

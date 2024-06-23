@@ -10,7 +10,7 @@ import thePackmaster.util.Wiz;
 
 public abstract class FlurryPower extends AbstractPackmasterPower {
     public FlurryPower(String ID, String NAME, AbstractCreature owner, int amount) {
-        super(ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
     public abstract void onFlurry(AbstractCard played, AbstractMonster m);
