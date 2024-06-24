@@ -3,7 +3,6 @@ package thePackmaster.cards.infestpack;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.infestpack.CompoundeyesPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

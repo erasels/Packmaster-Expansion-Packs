@@ -6,7 +6,7 @@ import thePackmaster.actions.fueledpack.ConsumeToDoAction;
 import thePackmaster.actions.fueledpack.PlayOldPowerAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class BurnBright extends AbstractFueledCard {
     public final static String ID = makeID(BurnBright.class.getSimpleName());

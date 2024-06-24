@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.serpentinepack.*;
-import thePackmaster.cards.shamanpack.*;
 
 import java.util.ArrayList;
 

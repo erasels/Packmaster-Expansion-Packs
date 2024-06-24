@@ -1,0 +1,15 @@
+{
+  "${ModID}:IndomitablePack": {
+    "TEXT": [
+      "刚毅之盾",
+      "以灵活和互相协同的防御牌抵御尖塔最大的危险。",
+      "modargo"
+    ]
+  },
+  "${ModID}:IndomitablePackHat": {
+    "TEXT": [
+      "古老而神秘。",
+      "金字塔帽"
+    ]
+  }
+}

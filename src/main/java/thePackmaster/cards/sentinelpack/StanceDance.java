@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ExpansionPacks;
-import thePackmaster.SpireAnniversary5Mod;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

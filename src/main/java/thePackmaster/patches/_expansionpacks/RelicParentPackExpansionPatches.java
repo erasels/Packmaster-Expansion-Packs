@@ -6,7 +6,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import thePackmaster.relics.AbstractPackmasterRelic;
 
-import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.List;
 

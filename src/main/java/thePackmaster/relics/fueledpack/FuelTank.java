@@ -1,7 +1,7 @@
 package thePackmaster.relics.fueledpack;
 
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.packs.*;
+import thePackmaster.packs.FueledPack;
 import thePackmaster.relics.AbstractPackmasterRelic;
 
 // code in ConsumeCardsAction

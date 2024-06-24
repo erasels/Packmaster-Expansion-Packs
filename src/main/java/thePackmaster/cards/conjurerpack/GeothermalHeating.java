@@ -1,15 +1,9 @@
 package thePackmaster.cards.conjurerpack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import thePackmaster.powers.intothebreachpack.AcidPower;
 import thePackmaster.util.Wiz;
-
-import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class GeothermalHeating extends ConjurerCard
 {

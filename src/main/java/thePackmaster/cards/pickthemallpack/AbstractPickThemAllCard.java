@@ -1,9 +1,10 @@
 package thePackmaster.cards.pickthemallpack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.util.creativitypack.onGenerateCardMidcombatInterface;
 
-public abstract class AbstractPickThemAllCard extends AbstractPackmasterCard implements onGenerateCardMidcombatInterface
+public abstract class AbstractPickThemAllCard extends AbstractPackmasterCard implements OnCreateCardInterface
 {
     public boolean combatVersion;
 
@@ -26,8 +27,9 @@ public abstract class AbstractPickThemAllCard extends AbstractPackmasterCard imp
     }
 
     @Override
-    public void onCreateThisCard() {
-        this.resetDescriptionForCombat();
+    public void onCreateCard(AbstractCard c) {
+        if(c == this)
+            resetDescriptionForCombat();
     }
 
     public String getPickupDescription() {

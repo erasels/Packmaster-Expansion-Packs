@@ -3,7 +3,6 @@ package thePackmaster.cards.secretlevelpack;
 import com.megacrit.cardcrawl.actions.animations.AnimateHopAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.secretlevelpack.DanseMacabrePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

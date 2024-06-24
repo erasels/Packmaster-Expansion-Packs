@@ -5,11 +5,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.overwhelmingpack.FreeSkillPower;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
-import static thePackmaster.util.Wiz.atb;
 
 public class Lariat extends AbstractOverwhelmingCard {
     public final static String ID = makeID("Lariat");

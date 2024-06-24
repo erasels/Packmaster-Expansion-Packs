@@ -1,18 +1,13 @@
 package thePackmaster.cards.overwhelmingpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.jockeypack.Horse;
-import thePackmaster.cards.sneckopack.Gulp;
-import thePackmaster.powers.jockeypack.DerbyPower;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class GigaDrill extends AbstractOverwhelmingCard {
     public final static String ID = makeID("GigaDrill");

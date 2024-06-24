@@ -1,0 +1,15 @@
+{
+  "${ModID}:ShowmanPack": {
+    "TEXT": [
+      "The Showman",
+      "Plan your turns masterfully to Block attacks and put on a grand performance.",
+      "Dayvig"
+    ]
+  },
+  "${ModID}:ShowmanPackHat": {
+    "TEXT": [
+      "A hat fit for a true magician.",
+      "A Magical Hat"
+    ]
+  }
+}

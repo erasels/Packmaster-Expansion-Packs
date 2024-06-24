@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.fueledpack.PlayingWithFireAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class PlayingWithFire extends AbstractFueledCard {
     public final static String ID = makeID(PlayingWithFire.class.getSimpleName());

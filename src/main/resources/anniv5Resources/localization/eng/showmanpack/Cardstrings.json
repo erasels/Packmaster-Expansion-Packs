@@ -1,0 +1,53 @@
+{
+  "${ModID}:Dazzle": {
+    "NAME": "Dazzle",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
+  "${ModID}:Amaze": {
+    "NAME": "Amaze",
+    "DESCRIPTION": "ALL enemies lose !M! HP for each stack of Weak they have."
+  },
+  "${ModID}:Grandstand": {
+    "NAME": "Grandstand",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] ."
+  },
+  "${ModID}:DramaticExit": {
+    "NAME": "Disappear",
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
+  },
+  "${ModID}:ForMyNextTrick": {
+    "NAME": "For My Next Trick...",
+    "DESCRIPTION": "Add a random Power card into your hand. NL Whenever you play a Power, gain !M! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "For my next trick, I will conjure a ",
+      "!"
+    ]
+  },
+  "${ModID}:SeeMe": {
+    "NAME": "Now You See Me...",
+    "DESCRIPTION": "Gain !M! Vigor. NL Next turn, add a *Now *You *Don't to your hand."
+  },
+  "${ModID}:NowYouDont": {
+    "NAME": "Now You Don't",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Exhaust."
+  },
+  "${ModID}:HallOfMirrors": {
+    "NAME": "Hall of Mirrors",
+    "DESCRIPTION": "Now and at the start of every 2 turns afterwards, add an *After *Image to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Now and at the start of every 2 turns afterwards, add an *After *Image to your hand."
+  },
+  "${ModID}:Showstopper": {
+    "NAME": "The Showstopper!",
+    "DESCRIPTION": "Gain !M! Block X times. NL If you have 100 or more Block, ALL enemies lose 50 HP. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Block X+1 times. NL If you have 100 or more Block, ALL enemies lose 50 HP. Exhaust."
+  },
+  "${ModID}:SmokeAndMirrors": {
+    "NAME": "Smoke And Mirrors",
+    "DESCRIPTION": "Gain !B! Block. NL When a card is Exhausted while this is in your hand, increase this Block by !M! this combat. NL Exhaust."
+  },
+  "${ModID}:MagicCylinder": {
+    "NAME": "Magic Cylinder",
+    "DESCRIPTION": "The next time you would take unblocked attack damage, prevent it and deal it to the attacker instead."
+  }
+}

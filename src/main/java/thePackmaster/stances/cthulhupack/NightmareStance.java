@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import thePackmaster.cards.cthulhupack.AbstractCthulhuCard;
 import thePackmaster.cards.cthulhupack.Lunacy;
-import thePackmaster.powers.cthulhupack.SanityPower;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.downfallpack.AncientStanceParticleEffect;
 

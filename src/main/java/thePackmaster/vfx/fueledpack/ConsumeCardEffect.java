@@ -15,11 +15,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.ExhaustEmberEffect;
 import com.megacrit.cardcrawl.vfx.scene.TorchParticleXLEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.transmutationpack.AbstractHydrologistCard;
-import thePackmaster.vfx.transmutationpack.HydrologistParticle;
 
 import java.util.ArrayList;
 import java.util.HashMap;
