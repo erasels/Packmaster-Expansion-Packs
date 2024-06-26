@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.powers.FlurryPower;
 import thePackmaster.vfx.needlework.MiniDieDieEffect;
 
 public class PincushionPower extends FlurryPower implements CloneablePowerInterface {

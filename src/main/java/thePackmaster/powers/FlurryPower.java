@@ -1,4 +1,4 @@
-package thePackmaster.powers.needlework;
+package thePackmaster.powers;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;

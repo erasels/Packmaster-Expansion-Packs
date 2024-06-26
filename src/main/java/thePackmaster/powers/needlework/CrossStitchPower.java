@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.powers.FlurryPower;
 
 public class CrossStitchPower extends FlurryPower implements CloneablePowerInterface {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID("CrossStitchPower");
