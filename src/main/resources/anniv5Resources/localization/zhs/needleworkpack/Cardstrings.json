@@ -1,0 +1,48 @@
+{
+  "${ModID}:Needlework": {
+    "NAME": "针线活",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL stslib:长驻 !stslib:persist! 。"
+  },
+  "${ModID}:Backstitch": {
+    "NAME": "回针",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL ${ModID}:缝合 。"
+  },
+  "${ModID}:CrossStitch": {
+    "NAME": "十字绣",
+    "DESCRIPTION": "施加 !M! 层 虚弱 。 NL ${ModID}:疾风 ：施加1层 ${ModID}:束缚 。"
+  },
+  "${ModID}:Reading": {
+    "NAME": "阅读",
+    "DESCRIPTION": "你的回合开始时，将一张 *读 ${ModID}:缝合 到一张随机手牌上。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时，将一张 *%s ${ModID}:缝合 到一张随机手牌上。"
+  },
+  "${ModID}:Read": {
+    "NAME": "读",
+    "DESCRIPTION": "下一回合开始时，抽 !M! 张牌。"
+  },
+  "${ModID}:Cleanup": {
+    "NAME": "清理",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 丢弃 !M! 张牌。"
+  },
+  "${ModID}:Knot": {
+    "NAME": "打结",
+    "DESCRIPTION": "对一个随机敌人施加 !M! 层 ${ModID}:束缚 。 NL ${ModID}:缝合 。"
+  },
+  "${ModID}:Pincushion": {
+    "NAME": "针垫",
+    "DESCRIPTION": "${ModID}:疾风 ：对所有敌人造成 !M! 点伤害。 NL ${ModID}:缝合 。"
+  },
+  "${ModID}:Rethread": {
+    "NAME": "重新穿线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 从你的弃牌堆中将一张牌置入你的手牌。 NL stslib:长驻 !stslib:persist! 。"
+  },
+  "${ModID}:CopyAndPaste": {
+    "NAME": "复制粘贴",
+    "DESCRIPTION": "每当你在一个回合内打出同一张牌两次时，将一张费用为 0 的复制洗入你的弃牌堆。",
+    "UPGRADE_DESCRIPTION": "每当你在一个回合内打出同一张牌两次时，将一张费用为 0 的复制洗入你的抽牌堆。"
+  },
+  "${ModID}:Patchwork": {
+    "NAME": "拼布",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 将一张该牌的复制 ${ModID}:缝合 到一张随机手牌上。"
+  }
+}
