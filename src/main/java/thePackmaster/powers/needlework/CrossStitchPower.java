@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.FlurryPower;
@@ -25,7 +24,7 @@ public class CrossStitchPower extends FlurryPower implements CloneablePowerInter
     }
 
     @Override
-    public void onFlurry(AbstractCard played, AbstractMonster m) {
+    public void onFlurry(AbstractCard played, AbstractCreature c) {
         addToBot(new ApplyPowerAction(target, owner, new BindPower(target, this.amount), this.amount, true));
     }
 

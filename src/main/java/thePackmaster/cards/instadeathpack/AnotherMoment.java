@@ -11,7 +11,7 @@ public class AnotherMoment extends AbstractInstadeathCard {
     public final static String ID = makeID("AnotherMoment");
 
     public AnotherMoment() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
 
         isEthereal = true;
     }
