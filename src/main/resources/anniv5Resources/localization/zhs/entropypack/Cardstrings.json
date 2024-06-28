@@ -20,7 +20,7 @@
     "NAME": "自由",
     "DESCRIPTION": "${ModID}:不稳定 。 NL 获得 !B! 点 格挡 。"
   },
-  "${ModID}:RuinousPortent": {
+  "${ModID}:RuinousPortent NEEDS UPDATE": {
     "NAME": "毁灭凶兆",
     "DESCRIPTION": "生成 X个 ${ModID}:湮没 充能球。",
     "UPGRADE_DESCRIPTION": "生成 X+1个 ${ModID}:湮没 充能球。"

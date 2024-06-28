@@ -30,5 +30,11 @@
       "Take #b",
       " less damage from attacks this turn."
     ]
+  },
+  "${ModID}:RuinousPower": {
+    "NAME": "Ruinous",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, apply #b%d #yRuin to a random enemy."
+    ]
   }
 }

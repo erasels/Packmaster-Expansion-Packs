@@ -22,8 +22,7 @@
   },
   "${ModID}:RuinousPortent": {
     "NAME": "Ruinous Portent",
-    "DESCRIPTION": "Channel X ${ModID}:Oblivion.",
-    "UPGRADE_DESCRIPTION": "{@@}Channel X{!M!|1=+1|@= + !M!} anniv5:Oblivion."
+    "DESCRIPTION": "Gain !M! ${ModID}:Entropy. NL ${ModID}:Flurry: Apply 1 ${ModID}:Ruin to a random enemy."
   },
   "${ModID}:Unbind": {
     "NAME": "Unbind",
