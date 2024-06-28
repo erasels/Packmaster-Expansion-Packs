@@ -1,6 +1,7 @@
 package thePackmaster.patches.compatibility;
 
-import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import thePackmaster.ExpansionPacks;
 
 import java.util.Objects;
