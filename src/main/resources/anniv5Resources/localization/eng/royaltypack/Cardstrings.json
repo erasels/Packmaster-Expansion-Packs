@@ -24,7 +24,8 @@
   },
   "${ModID}:Forcefield": {
     "NAME": "Forcefield",
-    "DESCRIPTION": "Discard one random card. ${ModID}:Tribute 8: Gain !${ModID}:m2! Temp HP. ${ModID}:Austerity: Gain !M! Temp HP."
+    "DESCRIPTION": "Gain !B! Block X times. If you spent at least 3 !E!, gain 1 Blur.",
+    "UPGRADE_DESCRIPTION": "Gain !B Block X+1 times. If you spent at least !E!, gain 1 Blur."
   },
   "${ModID}:ForcefieldTribute": {
     "NAME": "Tribute",
@@ -34,9 +35,9 @@
     "NAME": "Austerity",
     "DESCRIPTION": "Gain !M! Temp HP."
   },
-  "${ModID}:ThrowSoulstones": {
-    "NAME": "Throw Soulstones",
-    "DESCRIPTION": "${ModID}:Tribute 10: deal !D! damage to ALL enemies AND play this card again. ${ModID}:Austerity: Deal !${ModID}:sd! damage to ALL enemies."
+  "${ModID}:MiningStrike": {
+    "NAME": "Mining Strike",
+    "DESCRIPTION": "Deal !D! damage. If it deals unblocked damage, gain !M! Gold. Exhaust."
   },
   "${ModID}:ThrowSoulstonesTribute": {
     "NAME": "Tribute",
