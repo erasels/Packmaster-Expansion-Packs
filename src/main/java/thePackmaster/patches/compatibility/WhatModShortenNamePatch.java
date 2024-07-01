@@ -1,4 +1,4 @@
-package thePackmaster.patches._expansionpacks;
+package thePackmaster.patches.compatibility;
 
 import basemod.patches.whatmod.WhatMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
