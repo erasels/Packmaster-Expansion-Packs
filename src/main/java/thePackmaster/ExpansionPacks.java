@@ -46,7 +46,8 @@ public class ExpansionPacks implements
         OnPowersModifiedSubscriber,
         AddAudioSubscriber {
 
-    private static final String SHORTENED_MOD_NAME = "PM Expansion Packs";
+    public static final String FULL_MOD_NAME = "The Packmaster: Expansion Packs";
+    public static final String SHORTENED_MOD_NAME = "PM Expansion Packs";
     private static ExpansionPacks thismod;
     public static final String modID = "expansionPacks";
 
@@ -61,8 +62,6 @@ public class ExpansionPacks implements
 
     public static void initialize() {
         thismod = new ExpansionPacks();
-        // Shorten name of Expansion Packs, so it doesn't take up two lines with whatmod
-        Arrays.stream(Loader.MODINFOS).filter(mf -> modID.equals(mf.ID)).findAny().ifPresent(mf -> mf.Name = SHORTENED_MOD_NAME);
     }
 
     @Override
