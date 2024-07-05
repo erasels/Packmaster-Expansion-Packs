@@ -1,0 +1,16 @@
+[
+    {
+      "PROPER_NAME": "Shell",
+      "NAMES": [
+        "shell"
+      ],
+      "DESCRIPTION": "Attacks deal #b5 additional damage to enemies and consume 1 Shell."
+    },
+    {
+      "PROPER_NAME": "Retaliatory",
+      "NAMES": [
+        "retaliatory"
+      ],
+      "DESCRIPTION": "If the enemy is attacking, the listed effects happen."
+    }
+]

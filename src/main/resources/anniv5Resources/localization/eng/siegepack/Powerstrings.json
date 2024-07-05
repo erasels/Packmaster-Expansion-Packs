@@ -1,0 +1,28 @@
+{
+  "${ModID}:ShrapnelPower": {
+    "NAME": "Shrapnel",
+    "DESCRIPTIONS": [
+      "Your attacks that deal at least 10 unblocked damage apply 1 Vulnerable and 2 ${ModID}:Ignite."
+    ]
+  },
+  "${ModID}:ShellForgePower": {
+    "NAME": "Shell Forge",
+    "DESCRIPTIONS": [
+     "Shells give an additional #b",
+      ", damage. You gain 1 Shell at the start of your turn."
+    ]
+  },
+  "${ModID}:DigInPower": {
+    "NAME": "Dig In",
+    "DESCRIPTIONS": [
+     "If you have any block at the start of your turn, gain [E]."
+    ]
+  },
+  "${ModID}:PrevailPower": {
+    "NAME": "Prevail",
+    "DESCRIPTIONS": [
+     "Enemies who take at least 10 damage in a single hit lose #b",
+      ", Strength temporarily."
+    ]
+  }
+}

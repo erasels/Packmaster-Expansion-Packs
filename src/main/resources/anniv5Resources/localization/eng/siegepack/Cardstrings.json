@@ -1,0 +1,44 @@
+{
+    "${ModID}:Shelling": {
+      "NAME": "Shelling",
+      "DESCRIPTION": "Deal !D! damage, and !D! damage to a random other enemy. NL Gain 1 ${ModID}:Shell."
+    },
+    "${ModID}:Suppress": {
+      "NAME": "Suppress",
+      "DESCRIPTION": "Deal !D! damage. Apply !M! Weak. NL ${ModID}:Retaliatory: Target loses 2 Strength temporarily."
+    },
+    "${ModID}:BallisticStrike": {
+      "NAME": "Ballistic Strike",
+      "DESCRIPTION": "Deal !D! damage. ${ModID}:Retaliatory: Target takes double damage. NL Deal !D! damage to other enemies. NL Exhaust."
+    },
+    "${ModID}:DefensePlanning": {
+      "NAME": "Defense Planning",
+      "DESCRIPTION": "Gain !B! Block. NL If you don't have Blur, gain 1 Blur."
+    },
+    "${ModID}:Logistics": {
+      "NAME": "Logistics",
+      "DESCRIPTION": "Apply !M! Weak. NL Gain 1 ${ModID}:Shell. NL Draw 1 card."
+    },
+    "${ModID}:ThinkTwice": {
+      "NAME": "Think Twice",
+      "DESCRIPTION": "Gain !B! Block twice. NL Gain !M! block for each enemy that intends to attack."
+    },
+    "${ModID}:Shrapnel": {
+      "NAME": "Shrapnel",
+      "DESCRIPTION": "Your hits apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
+      "UPGRADE_DESCRIPTION": "Innate. NL Your hits apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage."
+    },
+    "${ModID}:ShellForge": {
+      "NAME": "Shell Forge",
+      "DESCRIPTION": "${ModID}:Shells provide an additional !m! damage. NL At the start of your turn, gain 1 ${ModID}:Shell."
+    },
+    "${ModID}:DigIn": {
+      "NAME": "Dig In",
+      "DESCRIPTION": "Gain 3 Blur. NL At the start of your turn, gain [E] if you have any Block left."
+    },
+    "${ModID}:Prevail": {
+      "NAME": "Prevail",
+      "DESCRIPTION": "Gain 1 Strength and Dexterity. NL Enemies who take at least 10 damage in a single hit lose !M! Strength temporarily."
+    }
+  }
+  
