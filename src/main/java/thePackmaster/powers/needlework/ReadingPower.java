@@ -1,12 +1,15 @@
 package thePackmaster.powers.needlework;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.needlework.StitchAction;
 import thePackmaster.actions.upgradespack.SuperUpgradeAction;
@@ -36,6 +39,11 @@ public class ReadingPower extends AbstractPackmasterPower implements CloneablePo
                 for (int upg = 1; upg < upgAmount; ++upg) {
                     SuperUpgradeAction.forceUpgrade(toStitch, false);
                 }
+
+                if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
+                    toStitch.upgrade(); //Will only do anything if you would make an unupgraded one
+                }
+                StSLib.onCreateCard(toStitch);
 
                 toStitch.drawScale = toStitch.targetDrawScale = 0.1f;
                 toStitch.current_x = toStitch.target_x = Settings.WIDTH / 2f;
