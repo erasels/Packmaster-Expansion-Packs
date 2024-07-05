@@ -1,16 +1,23 @@
 [
-    {
-      "PROPER_NAME": "Shell",
-      "NAMES": [
-        "shell"
-      ],
-      "DESCRIPTION": "Attacks deal #b5 additional damage to enemies and consume 1 Shell."
-    },
-    {
-      "PROPER_NAME": "Retaliatory",
-      "NAMES": [
-        "retaliatory"
-      ],
-      "DESCRIPTION": "If the enemy is attacking, the listed effects happen."
-    }
+  {
+    "PROPER_NAME": "Blur",
+    "NAMES": [
+      "blur"
+    ],
+    "DESCRIPTION": "Block is not removed at the start of your next turn."
+  },
+  {
+    "PROPER_NAME": "Shell",
+    "NAMES": [
+      "shell"
+    ],
+    "DESCRIPTION": "Attacks deal #b5 additional damage to enemies and consume 1 Shell."
+  },
+  {
+    "PROPER_NAME": "Retaliatory",
+    "NAMES": [
+      "retaliatory"
+    ],
+    "DESCRIPTION": "If the enemy is attacking, the listed effects happen."
+  }
 ]
