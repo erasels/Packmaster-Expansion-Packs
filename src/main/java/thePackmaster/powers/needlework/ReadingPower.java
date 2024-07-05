@@ -40,15 +40,22 @@ public class ReadingPower extends AbstractPackmasterPower implements CloneablePo
                     SuperUpgradeAction.forceUpgrade(toStitch, false);
                 }
 
-                if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
-                    toStitch.upgrade(); //Will only do anything if you would make an unupgraded one
-                }
-                StSLib.onCreateCard(toStitch);
-
                 toStitch.drawScale = toStitch.targetDrawScale = 0.1f;
                 toStitch.current_x = toStitch.target_x = Settings.WIDTH / 2f;
                 toStitch.current_y = toStitch.target_y = Settings.HEIGHT * 2;
                 addToTop(new StitchAction(toStitch));
+
+                addToTop(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+
+                        if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
+                            toStitch.upgrade(); //Will only do anything if you would make an unupgraded one
+                        }
+                        StSLib.onCreateCard(toStitch);
+                    }
+                });
             }
         });
     }
