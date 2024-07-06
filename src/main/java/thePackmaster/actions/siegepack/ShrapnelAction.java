@@ -14,7 +14,7 @@ import thePackmaster.powers.shamanpack.IgnitePower;
 LifeGainAction (in base PackMaster).
 ShowstopperAction.
  */
-public class ShrapnelAction  extends AbstractGameAction {
+public class ShrapnelAction extends AbstractGameAction {
 
     private final int DAMAGE_THRESHOLD = 10;
     private final int DAMAGE;
@@ -30,7 +30,7 @@ public class ShrapnelAction  extends AbstractGameAction {
         POWER_STACKS = stacks;
 
         if (damageType != DamageInfo.DamageType.NORMAL
-            || DAMAGE < DAMAGE_THRESHOLD) isDone = true;
+            || DAMAGE < DAMAGE_THRESHOLD) {isDone = true;}
     }
 
     @Override
