@@ -20,6 +20,7 @@ public class Shelling extends AbstractSiegeCard {
     private static final int DAMAGE = 7;
     private static final int DAMAGE_TO_RANDOM = 3;
     private static final int UPGRADE_DAMAGE = 3;
+    private static final int UPGRADE_DAMAGE_TO_RANDOM = 1;
     private static final int AMOUNT_OF_SHELLS = 1;
 
     public Shelling(){
@@ -33,7 +34,7 @@ public class Shelling extends AbstractSiegeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
 
-        //Deal damage to a random other enemy! (hardest part)
+        //Deal damage to a random OTHER enemy
         //atb(new ShellingAction(this, secondDamage));
         atb(new ShellingAction(this, m, 1));
 
@@ -44,6 +45,7 @@ public class Shelling extends AbstractSiegeCard {
     @Override
     public void upp() {
         upgradeDamage(UPGRADE_DAMAGE);
+        upgradeSecondDamage(UPGRADE_DAMAGE_TO_RANDOM);
     }
 
     // This method is used so the second damage value on the card
