@@ -1,39 +1,65 @@
 package thePackmaster.cards.siegepack;
 
-import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cardmodifiers.siegepack.FeralDamage;
-import thePackmaster.cardmodifiers.siegepack.FrontDamage;
+import thePackmaster.actions.siegepack.ShellingAction;
+import thePackmaster.powers.siegepack.ShellPower;
+import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.ExpansionPacks.makeID;
+import static thePackmaster.util.Wiz.atb;
 
+//REF: intothebreachpack's ReboundVolley.
 public class Shelling extends AbstractSiegeCard {
 
-    public final static String ID = makeID(Shelling.class.getSimpleName());
+    public final static String ID = makeID("Shelling");   //Safer technique
+//    public final static String ID = makeID(Shelling.class.getSimpleName()); //Name change breaks saves/history!
 
     private static final int COST = 1;
+    private static final int DAMAGE = 7;
+    private static final int DAMAGE_TO_RANDOM = 3;
+    private static final int UPGRADE_DAMAGE = 3;
+    private static final int AMOUNT_OF_SHELLS = 1;
 
     public Shelling(){
-        super(ID, COST, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseMagicNumber = magicNumber = 2;
-        //Add damage to random enemy
-        //Add Gain 1 Shell
-
-        //REFS
-        //DamageModifierManager.addModifier(this, new FeralDamage());
-        
+        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        damage = baseDamage = DAMAGE;
+        secondDamage = baseSecondDamage = DAMAGE_TO_RANDOM;
+        magicNumber = baseMagicNumber = AMOUNT_OF_SHELLS;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+
+        //Deal damage to a random other enemy! (hardest part)
+        //atb(new ShellingAction(this, secondDamage));
+        atb(new ShellingAction(this, m, 1));
+
+        //Gain 1 Shell
+        Wiz.applyToSelf(new ShellPower(p, magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(UPGRADE_DAMAGE);
+    }
+
+    // This method is used so the second damage value on the card
+    // (the "to a random other enemy" one)
+    // doesn't change based on the targeted enemy's powers
+    // (e.g. Vulnerable)
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.applyPowers();
+        int tmp = baseSecondDamage;
+        baseSecondDamage = -1;
+        super.calculateCardDamage(mo);
+        baseSecondDamage = tmp;
+    }
+
+    public void superCalculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
     }
 }
