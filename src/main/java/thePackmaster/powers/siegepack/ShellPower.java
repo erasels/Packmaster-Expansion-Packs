@@ -15,7 +15,7 @@ import java.util.Objects;
 
 //This buff is the actual shells, boosting damage and consumed (1 per attack).
 public class ShellPower extends AbstractPackmasterPower {
-    public static final String POWER_ID = SpireAnniversary5Mod.makeID(ShellForgeEffectUpPower.class.getSimpleName());
+    public static final String POWER_ID = SpireAnniversary5Mod.makeID(ShellPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
