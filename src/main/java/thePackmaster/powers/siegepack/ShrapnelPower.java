@@ -19,6 +19,7 @@ public class ShrapnelPower extends AbstractPackmasterPower {
 
     public ShrapnelPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF,false, owner, amount);
+        this.amount = amount;
     }
 
     //Start the action to apply debuffs for each 10 damage (full & unblocked) dealt by the attack.
