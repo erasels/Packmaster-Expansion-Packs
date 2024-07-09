@@ -18,15 +18,22 @@ public class PrevailPower extends AbstractPackmasterPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private static final int DAMAGE_THRESHOLD = 9;
+
     public PrevailPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, AbstractPower.PowerType.BUFF,false, owner, amount);
-        this.amount = amount;   //If bug "amounts are doubled", remove this.
+        //this.amount = amount;   //If bug "amounts are doubled", remove this.
+        updateDescription();
     }
 
     //Start the action to apply debuffs for each (full) 10 damage dealt by the attack.
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         //As an action for possible timing reasons.
-        atb(new PrevailAction(target, this.owner, damageAmount, info.type, this.amount, AbstractGameAction.AttackEffect.NONE));
+        atb(new PrevailAction(target, this.owner, damageAmount, info.type, this.amount, DAMAGE_THRESHOLD, AbstractGameAction.AttackEffect.NONE));
+    }
+
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + DAMAGE_THRESHOLD + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
     }
 }

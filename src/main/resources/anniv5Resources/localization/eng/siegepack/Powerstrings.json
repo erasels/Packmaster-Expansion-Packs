@@ -38,8 +38,9 @@
   "${ModID}:PrevailPower": {
     "NAME": "Prevail",
     "DESCRIPTIONS": [
-     "Enemies who take at least 10 damage in a single hit lose #b",
-      ", Strength this turn."
+     "Enemies who take at least #b",
+      " damage in a single hit lose #b",
+      " Strength this turn."
     ]
   }
 }

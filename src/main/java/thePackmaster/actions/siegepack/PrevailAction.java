@@ -9,18 +9,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
 public class PrevailAction extends AbstractGameAction {
 
-    private static final int DAMAGE_THRESHOLD = 10;
+    private static int DAMAGE_THRESHOLD;
     private final int DAMAGE;
     private final int POWER_STACKS;
 
-    public PrevailAction(AbstractCreature target, AbstractCreature source, int amount, DamageInfo.DamageType type, int stacks, AbstractGameAction.AttackEffect effect)
+    public PrevailAction(AbstractCreature target, AbstractCreature source, int amount, DamageInfo.DamageType type, int stacks, int damageThreshold, AbstractGameAction.AttackEffect effect)
     {
         setValues(target, source, amount);  //Shorthand. Also sets duration = 0.5F
         DAMAGE = amount;
@@ -28,6 +27,7 @@ public class PrevailAction extends AbstractGameAction {
         damageType = type;
         attackEffect = effect;
         POWER_STACKS = stacks;
+        DAMAGE_THRESHOLD = damageThreshold;
 
         //In any Action, must set "isDone" to "true" or call tickDuration(), ELSE CRASH.
         if (damageType != DamageInfo.DamageType.NORMAL
@@ -42,9 +42,6 @@ public class PrevailAction extends AbstractGameAction {
         if (isDone) {
             applyDebuffs(DAMAGE);
 
-            //If this Action itself somehow does damage, remove this:
-            target.damage(new DamageInfo(source, DAMAGE, damageType));
-
             if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
             }
@@ -56,7 +53,6 @@ public class PrevailAction extends AbstractGameAction {
     private void applyDebuffs (int damageAmount){
        int triggerCount = damageAmount / DAMAGE_THRESHOLD;
         for (int i = 0; i < triggerCount; i++) {
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new VulnerablePower(target, POWER_STACKS, false), POWER_STACKS, true));
             addToBot(new ApplyPowerAction(target, player, new StrengthPower(target, -POWER_STACKS), -POWER_STACKS)); //Strength power has no "isFast".
             if (target != null && !target.hasPower(ArtifactPower.POWER_ID)) {
                 addToBot(new ApplyPowerAction(target, player, new GainStrengthPower(target, POWER_STACKS), POWER_STACKS));
