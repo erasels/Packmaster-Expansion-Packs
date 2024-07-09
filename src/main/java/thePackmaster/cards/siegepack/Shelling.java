@@ -31,7 +31,7 @@ public class Shelling extends AbstractSiegeCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        //dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
 
         //Deal damage to ONE RANDOM OTHER enemy
         //atb(new ShellingAction(this, secondDamage));

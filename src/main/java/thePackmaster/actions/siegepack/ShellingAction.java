@@ -45,7 +45,7 @@ public class ShellingAction extends AbstractGameAction {
                 }
                 canTarget.remove(targetEnemy);
                 if (targetEnemy != null) {
-                    //VFX and queue reordering would go here.
+                    //VFX (and queue reordering?) would go here.
                     card.superCalculateCardDamage(targetEnemy);
                     actionsHoldingQueue.add(new DamageAction(targetEnemy,
                             new DamageInfo(adp(), firstHit ? this.card.damage : this.card.secondDamage, this.card.damageTypeForTurn),
