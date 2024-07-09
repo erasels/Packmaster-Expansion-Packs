@@ -29,22 +29,28 @@ public class Suppress extends AbstractSiegeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+
         //Applies Weak
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false)));
+
         //Adds temporary Strength reduction to enemy.
-        if (isRetaliatory(m)) {
+        addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -secondMagic), -secondMagic));
+        if (m != null && !m.hasPower(ArtifactPower.POWER_ID)) {
+            addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, secondMagic), secondMagic));
+        }
+        /*if (isRetaliatory(m)) {
             addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -secondMagic), -secondMagic));
             if (m != null && !m.hasPower(ArtifactPower.POWER_ID)) {
                 addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, secondMagic), secondMagic));
             }
-        }
+        }*/
     }
 
     //If enemy is attacking
-    public boolean isRetaliatory(AbstractMonster m)
+    /*public boolean isRetaliatory(AbstractMonster m)
     {
         return m != null && m.getIntentBaseDmg() >= 0;
-    }
+    }*/
 
     @Override
     public void upp() {
