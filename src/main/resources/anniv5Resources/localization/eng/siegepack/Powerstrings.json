@@ -3,8 +3,8 @@
     "NAME": "Shrapnel",
     "DESCRIPTIONS": [
       "Your attacks apply #b",
-      " *Vulnerable and #b",
-      " ${ModID}:Ignite per 10 unblocked damage they deal."
+      " #yVulnerable and #b",
+      " #yIgnite per 10 unblocked damage they deal."
     ]
   },
   "${ModID}:ShellPower": {
@@ -32,7 +32,7 @@
   "${ModID}:DigInPower": {
     "NAME": "Dig In",
     "DESCRIPTIONS": [
-     "If you have any block at the start of your turn, gain [E] [E] [E]."
+     "If you have any block at the start of your turn, gain [E] [E] [E] ."
     ]
   },
   "${ModID}:PrevailPower": {

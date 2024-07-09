@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
@@ -20,8 +21,11 @@ public class DigInPower extends AbstractPackmasterPower {
         this.amount = amount;
         updateDescription();
     }
+
     public void atStartOfTurnPostDraw() {
-        if (player.currentBlock > 0) { new GainEnergyAction(amount); }
+        if (player.currentBlock > 0) {
+            Wiz.atb(new GainEnergyAction(amount));
+        }
     }
 
     public void updateDescription() {
