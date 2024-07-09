@@ -25,6 +25,7 @@ public class ShellPower extends AbstractPackmasterPower {
     public ShellPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         amount2 = updateBoostValue();
+        updateDescription();
     }
 
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
@@ -42,20 +43,27 @@ public class ShellPower extends AbstractPackmasterPower {
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (!Objects.equals(power.ID, ShellForgeEffectUpPower.POWER_ID)) { return; }
         if (power.owner != this.owner) { return; }
-        //if (power.owner != player) { return; }
         updateBoostValue();
+        //this.flash();
     }
 
     private int updateBoostValue() {
         AbstractPower shellEffectUp = owner.getPower(ShellForgeEffectUpPower.POWER_ID);
         if (shellEffectUp != null) {
-            return amount2 = DAMAGE_BOOST + shellEffectUp.amount;
+            amount2 = DAMAGE_BOOST + shellEffectUp.amount;
+        } else {
+            amount2 = DAMAGE_BOOST;
         }
-        return amount2 = DAMAGE_BOOST;
+        updateDescription();
+        return amount2;
+    }
+
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + this.amount2 + DESCRIPTIONS[1];
     }
 }
 
-//Vigor definition (decompiled)
+//REF: Vigor definition (decompiled)
 /*
 public float atDamageGive(float damage, DamageInfo.DamageType type) {
     return type == DamageInfo.DamageType.NORMAL ? damage + (float)this.amount : damage;
