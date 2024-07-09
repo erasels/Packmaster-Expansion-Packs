@@ -47,7 +47,7 @@ public class ShrapnelAction extends AbstractGameAction {
             applyDebuffs(DAMAGE);
 
             //If this Action itself somehow does damage, remove this:
-            target.damage(new DamageInfo(source, DAMAGE, damageType));
+            //target.damage(new DamageInfo(source, DAMAGE, damageType));
 
             if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
