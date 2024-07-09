@@ -17,10 +17,10 @@ public class ShellForgeEffectUpPower extends AbstractPackmasterPower {
     public ShellForgeEffectUpPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         shellEffectBoost = this.amount = amount;
+        updateDescription();
     }
 
-    //This would not bypass "static" requirement on shellEffectBoost.
-    /*public static int GetBoostValue() {
-        return shellEffectBoost;
-    }*/
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+    }
 }

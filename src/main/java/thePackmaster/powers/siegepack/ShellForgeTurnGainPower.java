@@ -18,9 +18,19 @@ public class ShellForgeTurnGainPower extends AbstractPackmasterPower {
     public ShellForgeTurnGainPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
         this.amount = amount;
+        updateDescription();
     }
 
     public void atStartOfTurn(){
         Wiz.applyToSelf(new ShellPower(player, amount));
+        //updateDescription();
+    }
+
+    public void updateDescription() {
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        } else {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+        }
     }
 }
