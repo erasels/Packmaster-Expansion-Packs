@@ -1,17 +1,17 @@
 {
     "${ModID}:Shelling": {
       "NAME": "Shelling",
-      "DESCRIPTION": "Deal !D! damage, and !D2! damage to a random other enemy. NL Gain 1 ${ModID}:Shell.",
+      "DESCRIPTION": "Deal !D! damage, and !${ModID}:sd! damage to a random other enemy. NL Gain 1 ${ModID}:Shell.",
       "FLAVOR": "General purpose insect repellent."
     },
     "${ModID}:Suppress": {
       "NAME": "Suppress",
       "DESCRIPTION": "Deal !D! damage. Apply !M! *Weak. NL ${ModID}:Retaliatory: Target loses 2 Strength this turn.",
-      "FLAVOR": "Strong-arm the opposition!"
+      "FLAVOR": "Offensive tranquilizer."
     },
     "${ModID}:BallisticStrike": {
       "NAME": "Ballistic Strike",
-      "DESCRIPTION": "Deal !D2! damage. ${ModID}:Retaliatory: Deals double damage to target. NL Deal !D! damage to ALL enemies.",
+      "DESCRIPTION": "Deal !${ModID}:sd! damage. ${ModID}:Retaliatory: Deals double damage to target. NL Deal !D! damage to other enemies.",
       "FLAVOR": "Ka-boom!"
     },
     "${ModID}:DefensePlanning": {
@@ -21,18 +21,23 @@
     },
     "${ModID}:Logistics": {
       "NAME": "Logistics",
-      "DESCRIPTION": "Apply !M! Weak. NL Gain 1 ${ModID}:Shell. NL Draw !anniv5:m2! card{!anniv5:m2!|1=|@=s}.",
-      "FLAVOR": "They make everything run smoother."
+      "DESCRIPTION": "Apply !M! Weak. NL Gain 1 ${ModID}:Shell. NL Draw 1 card.",
+      "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL Gain 1 ${ModID}:Shell. NL Draw !anniv5:m2! cards.",
+      "FLAVOR": "They really make everything run smoother."
     },
     "${ModID}:ThinkTwice": {
       "NAME": "Think Twice",
-      "DESCRIPTION": "Gain !B! Block. NL Gain !M! block for each enemy that intends to attack, unaffected by bonuses and penalties.",
+      "DESCRIPTION": "Gain !B! Block. NL Gain !M! block for each enemy that intends to attack.",
       "FLAVOR": "Strength in numbers, maybe."
     },
     "${ModID}:Shrapnel": {
       "NAME": "Shrapnel",
       "DESCRIPTION": "Your hits apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
       "UPGRADE_DESCRIPTION": "Innate. NL Your hits apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
+      "EXTENDED_DESCRIPTION": [
+        "Ignite",
+        "Ignited creatures lose #b1 HP per stack at the start of their turn."
+      ],
       "FLAVOR": "Keep the pressure up!"
     },
     "${ModID}:ShellForge": {
@@ -42,14 +47,14 @@
     },
     "${ModID}:DigIn": {
       "NAME": "Dig In",
-      "DESCRIPTION": "Gain 3 ${ModID}:Blur. NL At the start of your turn, gain [E][E] if you have any Block left.",
-      "UPGRADE_DESCRIPTION": "Gain 3 ${ModID}:Blur. NL At the start of your turn, gain [E][E][E] if you have any Block left.",
+      "DESCRIPTION": "Gain 3 ${ModID}:Blur. NL At the start of your turn, gain [E] [E] if you have any Block left.",
+      "UPGRADE_DESCRIPTION": "Gain 3 ${ModID}:Blur. NL At the start of your turn, gain [E] [E] [E] if you have any Block left.",
       "FLAVOR": "Looks like a nice spot to set up camp."
     },
     "${ModID}:Prevail": {
       "NAME": "Prevail",
       "DESCRIPTION": "Whenever you deal at least 10 damage in a single hit, the enemy loses !M! Strength this turn.",
-      "FLAVOR": "You should see the other guy."
+      "FLAVOR": "Strong-arm the opposition!"
     }
 }
   
