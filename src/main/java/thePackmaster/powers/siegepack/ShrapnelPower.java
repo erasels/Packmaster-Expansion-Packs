@@ -20,6 +20,7 @@ public class ShrapnelPower extends AbstractPackmasterPower {
     public ShrapnelPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF,false, owner, amount);
         this.amount = amount;
+        updateDescription();
     }
 
     //Start the action to apply debuffs for each 10 damage (full & unblocked) dealt by the attack.
@@ -27,5 +28,11 @@ public class ShrapnelPower extends AbstractPackmasterPower {
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         //Adds "unblocked" detection. REF : LifeDrain & LifeDrainAction (bardinspirepack).
         atb(new ShrapnelAction(target, this.owner, damageAmount, info.type, this.amount, AbstractGameAction.AttackEffect.NONE));
+        this.flashWithoutSound();
+    }
+
+    public void updateDescription() {
+        int tmp = amount * 2;
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + tmp + DESCRIPTIONS[2];
     }
 }
