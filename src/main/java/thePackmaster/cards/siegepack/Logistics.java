@@ -18,7 +18,7 @@ public class Logistics extends AbstractSiegeCard {
     private static final int UPGRADE_CARD_DRAW = 1;
 
     public Logistics() {
-        super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = WEAK_AMOUNT;
         baseSecondMagic = secondMagic = CARD_DRAW;
     }
@@ -28,7 +28,7 @@ public class Logistics extends AbstractSiegeCard {
         Wiz.applyToEnemy(m, new WeakPower(m, magicNumber, false));
         //Gain 1 Shell.
         Wiz.applyToSelf(new ShellPower(p, SHELL_GAIN));
-        //Draw 2 (3) cards.
+        //Draw 1 (2) cards.
         addToBot(new DrawCardAction(secondMagic));
     }
 
