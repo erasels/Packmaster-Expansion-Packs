@@ -13,9 +13,9 @@ import static thePackmaster.util.Wiz.getEnemies;
 public class BallisticStrike extends AbstractSiegeCard {
     public final static String ID = makeID("BallisticStrike");
     private static final int COST = 3;
-    private static final int DAMAGE = 25;
+    private static final int DAMAGE = 21;
     private static final int DAMAGE_OTHERS = 6;
-    private static final int UPGRADE_DAMAGE = 5;
+    private static final int UPGRADE_DAMAGE = 9;
     private static final int UPGRADE_DAMAGE_OTHERS = 5;
 
     public BallisticStrike() {
