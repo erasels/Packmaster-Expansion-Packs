@@ -13,7 +13,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 import static thePackmaster.util.Wiz.atb;
 
 public class PrevailPower extends AbstractPackmasterPower {
-    public static final String POWER_ID = SpireAnniversary5Mod.makeID(ShrapnelPower.class.getSimpleName());
+    public static final String POWER_ID = SpireAnniversary5Mod.makeID(PrevailPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
