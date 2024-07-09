@@ -7,12 +7,11 @@ import thePackmaster.actions.siegepack.ShellingAction;
 import thePackmaster.powers.siegepack.ShellPower;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.ExpansionPacks.makeID;
+import static thePackmaster.SpireAnniversary5Mod.makeID;    //ExpansionPacks version gives MISSING_TITLE!
 import static thePackmaster.util.Wiz.atb;
 
-//REF: intothebreachpack's ReboundVolley.
 public class Shelling extends AbstractSiegeCard {
-
+//REF: intothebreachpack's ReboundVolley.
     public final static String ID = makeID("Shelling");   //Safer technique
 //    public final static String ID = makeID(Shelling.class.getSimpleName()); //Name change breaks saves/history!
 
@@ -34,7 +33,7 @@ public class Shelling extends AbstractSiegeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
 
-        //Deal damage to a random OTHER enemy
+        //Deal damage to ONE RANDOM OTHER enemy
         //atb(new ShellingAction(this, secondDamage));
         atb(new ShellingAction(this, m, 1));
 
