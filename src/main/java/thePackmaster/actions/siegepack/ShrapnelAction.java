@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
+
 /*REFS :
 LifeGainAction (in base PackMaster).
 ShowstopperAction.
@@ -44,6 +46,7 @@ public class ShrapnelAction extends AbstractGameAction {
         if (isDone) {
             applyDebuffs(DAMAGE);
 
+            //If this Action itself somehow does damage, remove this:
             target.damage(new DamageInfo(source, DAMAGE, damageType));
 
             if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
@@ -54,18 +57,13 @@ public class ShrapnelAction extends AbstractGameAction {
         }
     }
 
-//Finally apply 1 Vulnerable & 2 Ignite for each 10 unblocked damage dealt by the attack
+//Finally apply Strength loss for each 10 unblocked damage dealt by the attack
 //REF : bardinspirepack's LifeDrain.
     private void applyDebuffs (int damageAmount){
-        int tmp = DAMAGE;
-        tmp -= target.currentBlock;
-
-        if (tmp < DAMAGE_THRESHOLD) return;
-
         int triggerCount = damageAmount / DAMAGE_THRESHOLD;
         for (int i = 0; i < triggerCount; i++) {
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new VulnerablePower(target, POWER_STACKS, false), POWER_STACKS, true));
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new IgnitePower(target, 2* POWER_STACKS), 2* POWER_STACKS, true));
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new VulnerablePower(target, POWER_STACKS, false), POWER_STACKS, true));
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new IgnitePower(target, 2* POWER_STACKS), 2* POWER_STACKS, true));
         }
 //REF: VenEmous (no typo) stance. See also : LifeDrainAction (bardinspirepack)
     }
