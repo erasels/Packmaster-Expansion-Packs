@@ -9,7 +9,7 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class ShellForge extends AbstractSiegeCard {
-    public final static String ID = makeID("Shrapnel");
+    public final static String ID = makeID("ShellForge");
     private static final int COST = 1;
     private static final int SHELL_EFFECT_INCREASE = 2;
     private static final int UPGRADE_SHELL_EFFECT_INCREASE = 2;

@@ -8,7 +8,7 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class ThinkTwice extends AbstractSiegeCard {
-    public final static String ID = makeID("DefensePlanning");
+    public final static String ID = makeID("ThinkTwice");
     private static final int COST = 2;
     private static final int BLOCK = 6;
     private static final int UPGRADE_BLOCK = 3;
