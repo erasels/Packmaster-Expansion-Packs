@@ -5,24 +5,31 @@
       "Your attacks that deal at least 10 unblocked damage apply 1 Vulnerable and 2 ${ModID}:Ignite."
     ]
   },
-  "${ModID}:ShellForgePower": {
+  "${ModID}:ShellForgeEffectUpPower": {
     "NAME": "Shell Forge",
     "DESCRIPTIONS": [
      "Shells give an additional #b",
-      ", damage. You gain 1 Shell at the start of your turn."
+      ", damage."
+    ]
+  },
+  "${ModID}:ShellForgeTurnGainPower": {
+    "NAME": "Shell Forge",
+    "DESCRIPTIONS": [
+      "You gain #b",
+       " Shell(s) at the start of your turn."
     ]
   },
   "${ModID}:DigInPower": {
     "NAME": "Dig In",
     "DESCRIPTIONS": [
-     "If you have any block at the start of your turn, gain [E]."
+     "If you have any block at the start of your turn, gain [E][E]."
     ]
   },
   "${ModID}:PrevailPower": {
     "NAME": "Prevail",
     "DESCRIPTIONS": [
      "Enemies who take at least 10 damage in a single hit lose #b",
-      ", Strength temporarily."
+      ", Strength this turn."
     ]
   }
 }
