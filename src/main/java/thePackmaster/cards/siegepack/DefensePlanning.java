@@ -13,7 +13,7 @@ import static thePackmaster.util.Wiz.atb;
 public class DefensePlanning extends AbstractSiegeCard {
     public final static String ID = makeID("DefensePlanning");
     private static final int COST = 1;
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 7;
     private static final int UPGRADE_BLOCK = 3;
 
     public DefensePlanning() {
