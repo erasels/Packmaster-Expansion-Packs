@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.getEnemies;
@@ -13,9 +15,9 @@ import static thePackmaster.util.Wiz.getEnemies;
 public class BallisticStrike extends AbstractSiegeCard {
     public final static String ID = makeID("BallisticStrike");
     private static final int COST = 3;
-    private static final int DAMAGE = 21;
+    private static final int DAMAGE = 20;
     private static final int DAMAGE_OTHERS = 6;
-    private static final int UPGRADE_DAMAGE = 9;
+    private static final int UPGRADE_DAMAGE = 5;
     private static final int UPGRADE_DAMAGE_OTHERS = 5;
 
     public BallisticStrike() {
@@ -62,6 +64,16 @@ public class BallisticStrike extends AbstractSiegeCard {
     }
 
     public boolean isRetaliatory(AbstractMonster m) {return m != null && m.getIntentBaseDmg() >= 0;}
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                break;
+            }
+        }
+    }
 
     @Override
     public void upp() {
