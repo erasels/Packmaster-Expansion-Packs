@@ -22,7 +22,7 @@
     },
     "${ModID}:Logistics": {
       "NAME": "Logistics",
-      "DESCRIPTION": "Apply !M! Weak. NL Gain 1 ${ModID}:Shell. NL Draw 1 card.",
+      "DESCRIPTION": "Apply !M! Weak. NL Gain 1 ${ModID}:Shell. NL Draw !anniv5:m2! cards.",
       "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL Gain 1 ${ModID}:Shell. NL Draw !anniv5:m2! cards.",
       "FLAVOR": "They really make everything run smoother."
     },
@@ -48,7 +48,7 @@
     },
     "${ModID}:DigIn": {
       "NAME": "Dig In",
-      "DESCRIPTION": "Gain !B! Block and !M! ${ModID}:Blur. NL At the start of your turn, gain [E] [E] if you have any Block left.",
+      "DESCRIPTION": "Gain !B! Block and !M! ${ModID}:Blur. NL At the start of your turn, gain [E] if you have any Block left.",
       "FLAVOR": "Looks like a nice spot to set up camp."
     },
     "${ModID}:Prevail": {

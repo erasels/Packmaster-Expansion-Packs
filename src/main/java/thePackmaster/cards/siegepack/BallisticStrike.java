@@ -3,6 +3,7 @@ package thePackmaster.cards.siegepack;
 import basemod.cardmods.ExhaustMod;
 import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
+import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.cards.siegepack.FlavorConstants.*;
 
 //The single-target damage is stored in SecondDamage because "DmgAllEnemies" methods hardcodedly use Damage.
 public class BallisticStrike extends AbstractSiegeCard {
@@ -31,6 +33,10 @@ public class BallisticStrike extends AbstractSiegeCard {
         baseSecondDamage = TARGETED_DAMAGE;
         baseMagicNumber = magicNumber = TEMP_SHELLINGS;
         //isMultiDamage = true;
+
+        FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
+        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
+        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

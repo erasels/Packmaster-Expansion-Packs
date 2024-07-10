@@ -1,5 +1,6 @@
 package thePackmaster.cards.siegepack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -8,6 +9,7 @@ import thePackmaster.powers.siegepack.ShellPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.cards.siegepack.FlavorConstants.*;
 
 public class Logistics extends AbstractSiegeCard {
     public final static String ID = makeID("Logistics");
@@ -22,6 +24,10 @@ public class Logistics extends AbstractSiegeCard {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = WEAK_AMOUNT;
         baseSecondMagic = secondMagic = CARD_DRAW;
+
+        FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
+        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
+        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,4 +41,6 @@ public class Logistics extends AbstractSiegeCard {
         //upgradeMagicNumber(UPGRADE_WEAK_AMOUNT);
         upgradeSecondMagic(UPGRADE_CARD_DRAW);
     }
+
+
 }
