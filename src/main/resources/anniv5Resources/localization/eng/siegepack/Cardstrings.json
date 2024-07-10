@@ -11,7 +11,8 @@
     },
     "${ModID}:BallisticStrike": {
       "NAME": "Ballistic Strike",
-      "DESCRIPTION": "Deal !${ModID}:sd! damage. ${ModID}:Retaliatory: Deals double damage to target. NL Deal !D! damage to other enemies.",
+      "DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! ${ModID}:Shelling that cost 0 and *Exhaust.",
+      "UPGRADE_DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! ${ModID}:Shelling+ that cost 0 and *Exhaust.",
       "FLAVOR": "Ka-boom!"
     },
     "${ModID}:DefensePlanning": {
@@ -27,7 +28,7 @@
     },
     "${ModID}:ThinkTwice": {
       "NAME": "Think Twice",
-      "DESCRIPTION": "Gain !B! Block. NL Gain !M! block for each enemy that intends to attack.",
+      "DESCRIPTION": "Gain !B! Block. NL Gain !M! Block for each enemy that intends to attack.",
       "FLAVOR": "Strength in numbers, maybe."
     },
     "${ModID}:Shrapnel": {
@@ -52,7 +53,7 @@
     },
     "${ModID}:Prevail": {
       "NAME": "Prevail",
-      "DESCRIPTION": "Whenever you deal at least 10 damage in a single hit, the enemy loses !M! Strength this turn.",
+      "DESCRIPTION": "Whenever you deal at least 9 damage in a single hit, the enemy loses !M! Strength this turn.",
       "FLAVOR": "Strong-arm the opposition!"
     }
 }

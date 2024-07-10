@@ -11,11 +11,11 @@ import static thePackmaster.util.Wiz.applyToSelf;
 
 public class DigIn extends AbstractSiegeCard {
     public final static String ID = makeID("DigIn");
-    private static final int COST = 1;
-    private static final int BLOCK_GAIN = 6;
-    private static final int UPGRADE_BLOCK_GAIN = 3;
-    private static final int BLUR_GAIN = 2;
-    private static final int UPGRADE_BLUR_GAIN = 2;
+    private static final int COST = 2;
+    private static final int BLOCK_GAIN = 9;
+    private static final int UPGRADE_BLOCK_GAIN = 5;
+    private static final int BLUR_GAIN = 3;
+    private static final int UPGRADE_BLUR_GAIN = 1;
     private static final int ENERGY_GAIN = 2;
     //private static final int UPGRADE_ENERGY_GAIN = 1;
 
@@ -27,7 +27,6 @@ public class DigIn extends AbstractSiegeCard {
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        //Adds 2 (+2) Blur and the conditional 2 Energy gain power.
         Wiz.applyToSelf(new BlurPower(p, BLUR_GAIN));
         applyToSelf(new DigInPower(p, secondMagic));
     }
