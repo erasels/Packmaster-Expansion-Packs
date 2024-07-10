@@ -32,7 +32,7 @@
   "${ModID}:DigInPower": {
     "NAME": "Dig In",
     "DESCRIPTIONS": [
-     "If you have any block at the start of your turn, gain [E] ."
+     "After the start of your turn, if you have Block, gain [E] ."
     ]
   },
   "${ModID}:PrevailPower": {

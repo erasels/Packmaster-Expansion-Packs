@@ -11,8 +11,8 @@
     },
     "${ModID}:BallisticStrike": {
       "NAME": "Ballistic Strike",
-      "DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! *Shellings that cost 0 and *Exhaust.",
-      "UPGRADE_DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! *Shellings+ that cost 0 and *Exhaust.",
+      "DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! *Shelling that costs 0 and *Exhausts.",
+      "UPGRADE_DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! *Shelling+ that costs 0 and *Exhausts.",
       "FLAVOR": "Ka-boom!"
     },
     "${ModID}:DefensePlanning": {
@@ -48,7 +48,7 @@
     },
     "${ModID}:DigIn": {
       "NAME": "Dig In",
-      "DESCRIPTION": "Gain !B! Block and !M! ${ModID}:Blur. NL At the start of your turn, gain [E] if you have any Block left.",
+      "DESCRIPTION": "Gain !B! Block and !M! ${ModID}:Blur. NL After the start of your turn, if you have Block, gain [E] .",
       "FLAVOR": "Looks like a nice spot to set up camp."
     },
     "${ModID}:Prevail": {

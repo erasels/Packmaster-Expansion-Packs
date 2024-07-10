@@ -18,7 +18,7 @@ public class DigIn extends AbstractSiegeCard {
     //Boat relics (anchor, Cleat) : ?
     private static final int COST = 1;
     private static final int BLOCK_GAIN = 7;
-    private static final int UPGRADE_BLOCK_GAIN = 4;
+    private static final int UPGRADE_BLOCK_GAIN = 3;
     private static final int BLUR_GAIN = 3;
     private static final int UPGRADE_BLUR_GAIN = 1;
     private static final int ENERGY_GAIN = 1;

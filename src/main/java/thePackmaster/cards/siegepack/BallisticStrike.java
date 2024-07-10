@@ -24,7 +24,7 @@ public class BallisticStrike extends AbstractSiegeCard {
     private static final int UPGRADE_TARGETED_DAMAGE = 4;
     /*private static final int DAMAGE_OTHERS = 6;
     private static final int UPGRADE_DAMAGE_OTHERS = 5;*/
-    private static final int TEMP_SHELLINGS = 2;
+    private static final int TEMP_SHELLINGS = 1;
     //private static final int UPGRADE_TEMP_SHELLINGS = 1;
 
     public BallisticStrike() {
@@ -56,10 +56,10 @@ public class BallisticStrike extends AbstractSiegeCard {
         CardModifierManager.addModifier(tempShelling, new RetainMod());
         tempShelling.cost = 0;  //For some reason this waits until end of turn.
         tempShelling.costForTurn = 0;
-        //Too strong.
-        /*if (upgraded) {
+        //Fine-tune this and amount of Shellings for balance.
+        if (upgraded) {
             tempShelling.upgrade();
-        }*/
+        }
         this.addToBot(new MakeTempCardInHandAction(tempShelling, magicNumber));
 
         //Auto-play the Shellings whenever possible. Not sure how the below works.
