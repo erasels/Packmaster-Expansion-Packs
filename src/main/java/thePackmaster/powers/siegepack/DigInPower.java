@@ -18,13 +18,14 @@ public class DigInPower extends AbstractPackmasterPower {
 
     public DigInPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
-        this.amount = amount;
+        this.amount = amount;   //unnecessary?
         updateDescription();
     }
 
     public void atStartOfTurnPostDraw() {
         if (player.currentBlock > 0) {
             Wiz.atb(new GainEnergyAction(amount));
+            this.flash();
         }
     }
 

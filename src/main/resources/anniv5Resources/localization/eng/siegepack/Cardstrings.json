@@ -47,8 +47,7 @@
     },
     "${ModID}:DigIn": {
       "NAME": "Dig In",
-      "DESCRIPTION": "Gain 3 ${ModID}:Blur. NL At the start of your turn, gain [E] [E] if you have any Block left.",
-      "UPGRADE_DESCRIPTION": "Gain 3 ${ModID}:Blur. NL At the start of your turn, gain [E] [E] [E] if you have any Block left.",
+      "DESCRIPTION": "Gain !B! Block and !M! ${ModID}:Blur. NL At the start of your turn, gain [E] [E] if you have any Block left.",
       "FLAVOR": "Looks like a nice spot to set up camp."
     },
     "${ModID}:Prevail": {
