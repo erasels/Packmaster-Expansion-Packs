@@ -11,8 +11,8 @@
     },
     "${ModID}:BallisticStrike": {
       "NAME": "Ballistic Strike",
-      "DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! ${ModID}:Shelling that cost 0 and *Exhaust.",
-      "UPGRADE_DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! ${ModID}:Shelling+ that cost 0 and *Exhaust.",
+      "DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! *Shellings that cost 0 and *Exhaust.",
+      "UPGRADE_DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! *Shellings+ that cost 0 and *Exhaust.",
       "FLAVOR": "Ka-boom!"
     },
     "${ModID}:DefensePlanning": {
