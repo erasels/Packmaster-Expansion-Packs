@@ -22,7 +22,6 @@ public class PrevailPower extends AbstractPackmasterPower {
 
     public PrevailPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, AbstractPower.PowerType.BUFF,false, owner, amount);
-        //this.amount = amount;   //If bug "amounts are doubled", remove this.
         updateDescription();
     }
 
