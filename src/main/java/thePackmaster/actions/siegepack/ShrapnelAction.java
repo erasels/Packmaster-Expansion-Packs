@@ -61,8 +61,8 @@ public class ShrapnelAction extends AbstractGameAction {
 //REF : bardinspirepack's LifeDrain.
     private void applyDebuffs (int damageAmount){
         int triggerCount = damageAmount / DAMAGE_THRESHOLD;
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new VulnerablePower(target, POWER_STACKS * triggerCount, false), POWER_STACKS * triggerCount, true));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new IgnitePower(target, 2 * POWER_STACKS * triggerCount), 2 * POWER_STACKS * triggerCount, true));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new VulnerablePower(target, POWER_STACKS * triggerCount, false), POWER_STACKS * triggerCount, true));
 
         //Works, more satisfying, but slower:
         /*for (int i = 0; i < triggerCount; i++) {
