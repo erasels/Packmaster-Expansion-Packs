@@ -6,7 +6,7 @@
     },
     "${ModID}:Suppress": {
       "NAME": "Suppress",
-      "DESCRIPTION": "Deal !D! damage. Apply !M! *Weak. Target loses 2 Strength this turn.",
+      "DESCRIPTION": "Deal !D! damage. Apply !M! *Weak. Target loses 3 Strength this turn.",
       "FLAVOR": "Offensive tranquilizer."
     },
     "${ModID}:BallisticStrike": {

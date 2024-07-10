@@ -18,8 +18,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class BallisticStrike extends AbstractSiegeCard {
     public final static String ID = makeID("BallisticStrike");
     private static final int COST = 3;
-    private static final int TARGETED_DAMAGE = 15;
-    private static final int UPGRADE_TARGETED_DAMAGE = 5;
+    private static final int TARGETED_DAMAGE = 11;
+    private static final int UPGRADE_TARGETED_DAMAGE = 4;
     /*private static final int DAMAGE_OTHERS = 6;
     private static final int UPGRADE_DAMAGE_OTHERS = 5;*/
     private static final int TEMP_SHELLINGS = 2;
@@ -50,9 +50,10 @@ public class BallisticStrike extends AbstractSiegeCard {
         CardModifierManager.addModifier(tempShelling, new RetainMod());
         tempShelling.cost = 0;  //For some reason this waits until end of turn.
         tempShelling.costForTurn = 0;
-        if (upgraded) {
+        //Too strong.
+        /*if (upgraded) {
             tempShelling.upgrade();
-        }
+        }*/
         this.addToBot(new MakeTempCardInHandAction(tempShelling, magicNumber));
 
         //Auto-play the Shellings whenever possible. Not sure how the below works.

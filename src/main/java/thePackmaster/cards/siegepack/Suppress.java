@@ -16,7 +16,7 @@ public class Suppress extends AbstractSiegeCard {
     private static final int COST = 2;
     private static final int DAMAGE = 11;
     private static final int WEAK = 1;
-    private static final int CONDITIONAL_STRENGTH_DOWN = 2;
+    private static final int CONDITIONAL_STRENGTH_DOWN = 3;
     private static final int UPGRADE_DAMAGE = 3;
     private static final int UPGRADE_WEAK = 1;
 

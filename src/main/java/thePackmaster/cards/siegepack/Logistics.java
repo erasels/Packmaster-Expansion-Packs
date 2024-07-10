@@ -13,8 +13,9 @@ public class Logistics extends AbstractSiegeCard {
     public final static String ID = makeID("Logistics");
     private static final int COST = 1;
     private static final int WEAK_AMOUNT = 2;
+    //private static final int UPGRADE_WEAK_AMOUNT = 1;
     private static final int SHELL_GAIN = 1;
-    private static final int CARD_DRAW = 1;
+    private static final int CARD_DRAW = 2;
     private static final int UPGRADE_CARD_DRAW = 1;
 
     public Logistics() {
@@ -24,16 +25,14 @@ public class Logistics extends AbstractSiegeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //Apply 2 Weak
         Wiz.applyToEnemy(m, new WeakPower(m, magicNumber, false));
-        //Gain 1 Shell.
         Wiz.applyToSelf(new ShellPower(p, SHELL_GAIN));
-        //Draw 1 (2) cards.
         addToBot(new DrawCardAction(secondMagic));
     }
 
     @Override
     public void upp() {
+        //upgradeMagicNumber(UPGRADE_WEAK_AMOUNT);
         upgradeSecondMagic(UPGRADE_CARD_DRAW);
     }
 }
