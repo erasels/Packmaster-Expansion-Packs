@@ -16,7 +16,7 @@ public class SiegePack extends AbstractCardPack {
 
     public SiegePack() {
         super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 4, 3, 2, 2, PackSummary.Tags.Attacks, PackSummary.Tags.Debuffs, PackSummary.Tags.Powers));
-//        hatHidesHair = true;
+        hatHidesHair = true;
     }
 
     @Override
