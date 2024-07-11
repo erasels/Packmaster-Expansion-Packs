@@ -33,6 +33,7 @@ public class BallisticStrike extends AbstractSiegeCard {
         baseSecondDamage = TARGETED_DAMAGE;
         baseMagicNumber = magicNumber = TEMP_SHELLINGS;
         //isMultiDamage = true;
+        tags.add(CardTags.STRIKE);
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
