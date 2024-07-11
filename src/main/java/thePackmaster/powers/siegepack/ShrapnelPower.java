@@ -9,6 +9,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.siegepack.ShrapnelAction;
 import thePackmaster.powers.AbstractPackmasterPower;
 
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 import static thePackmaster.util.Wiz.atb;
 
 public class ShrapnelPower extends AbstractPackmasterPower {
@@ -17,9 +18,12 @@ public class ShrapnelPower extends AbstractPackmasterPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public ShrapnelPower(AbstractCreature owner, int amount) {
+    private final int DAMAGE_THRESHOLD;
+
+    public ShrapnelPower(AbstractCreature owner, int amount, int threshold) {
         super(POWER_ID, NAME, PowerType.BUFF,false, owner, amount);
         this.amount = amount;
+        DAMAGE_THRESHOLD = threshold;
         updateDescription();
     }
 
@@ -27,7 +31,11 @@ public class ShrapnelPower extends AbstractPackmasterPower {
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         //Adds "unblocked" detection. REF : LifeDrain & LifeDrainAction (bardinspirepack).
-        atb(new ShrapnelAction(target, this.owner, damageAmount, info.type, this.amount, AbstractGameAction.AttackEffect.NONE));
+        //if (target == player || damageAmount < DAMAGE_THRESHOLD) {    //Could be bad with Rend etc.
+        if (target == player || info.type != DamageInfo.DamageType.NORMAL) {
+            return;
+        }
+        atb(new ShrapnelAction(target, this.owner, damageAmount, DAMAGE_THRESHOLD, info.type, this.amount, AbstractGameAction.AttackEffect.NONE));
         this.flashWithoutSound();
     }
 

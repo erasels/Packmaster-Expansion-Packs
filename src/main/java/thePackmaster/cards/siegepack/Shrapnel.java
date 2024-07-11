@@ -14,6 +14,8 @@ public class Shrapnel extends AbstractSiegeCard {
     public final static String ID = makeID("Shrapnel");
     private static final int COST = 1;
 
+    private static final int DAMAGE_THRESHOLD = 10;
+
     public Shrapnel() {
         super(ID, COST, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
@@ -25,7 +27,7 @@ public class Shrapnel extends AbstractSiegeCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction (p, p, new ShrapnelPower(p, magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction (p, p, new ShrapnelPower(p, magicNumber, DAMAGE_THRESHOLD), magicNumber));
     }
 
     @Override

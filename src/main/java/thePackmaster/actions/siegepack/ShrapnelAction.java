@@ -18,11 +18,11 @@ ShowstopperAction.
  */
 public class ShrapnelAction extends AbstractGameAction {
 
-    private final int DAMAGE_THRESHOLD = 10;
+    private final int DAMAGE_THRESHOLD;
     private final int DAMAGE;
     private final int POWER_STACKS;
 
-    public ShrapnelAction(AbstractCreature target, AbstractCreature source, int amount, DamageInfo.DamageType type, int stacks, AbstractGameAction.AttackEffect effect)
+    public ShrapnelAction(AbstractCreature target, AbstractCreature source, int amount, int threshold, DamageInfo.DamageType type, int stacks, AbstractGameAction.AttackEffect effect)
     {
         setValues(target, source, amount);  //Shorthand. Also sets duration = 0.5F
         DAMAGE = amount;
@@ -30,6 +30,7 @@ public class ShrapnelAction extends AbstractGameAction {
         damageType = type;
         attackEffect = effect;
         POWER_STACKS = stacks;
+        DAMAGE_THRESHOLD = threshold;
 
         if (damageType != DamageInfo.DamageType.NORMAL
             || DAMAGE < DAMAGE_THRESHOLD) {isDone = true;}
