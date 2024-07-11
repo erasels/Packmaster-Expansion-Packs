@@ -25,7 +25,7 @@
   "${ModID}:Forcefield": {
     "NAME": "Forcefield",
     "DESCRIPTION": "Gain !B! Block X times. If you spent at least 3 !E!, gain 1 Blur.",
-    "UPGRADE_DESCRIPTION": "Gain !B Block X+1 times. If you spent at least !E!, gain 1 Blur."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times. If you spent at least !E!, gain 1 Blur."
   },
   "${ModID}:ForcefieldTribute": {
     "NAME": "Tribute",
