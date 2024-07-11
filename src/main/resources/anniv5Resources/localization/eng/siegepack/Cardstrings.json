@@ -6,7 +6,7 @@
     },
     "${ModID}:Suppress": {
       "NAME": "Suppress",
-      "DESCRIPTION": "Deal !D! damage. Apply !M! *Weak. Target loses 3 Strength this turn.",
+      "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Weak. NL Target loses 3 Strength this turn.",
       "FLAVOR": "Offensive tranquilizer."
     },
     "${ModID}:BallisticStrike": {
@@ -33,8 +33,8 @@
     },
     "${ModID}:Shrapnel": {
       "NAME": "Shrapnel",
-      "DESCRIPTION": "Your hits apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
-      "UPGRADE_DESCRIPTION": "Innate. NL Your hits apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
+      "DESCRIPTION": "Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
+      "UPGRADE_DESCRIPTION": "Innate. NL Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
       "EXTENDED_DESCRIPTION": [
         "Ignite",
         "Ignited creatures lose #b1 HP per stack at the start of their turn."
