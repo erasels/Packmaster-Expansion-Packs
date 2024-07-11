@@ -1,5 +1,6 @@
 package thePackmaster.cards.siegepack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -7,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.cards.siegepack.FlavorConstants.*;
 
 public class ThinkTwice extends AbstractSiegeCard {
     public final static String ID = makeID("ThinkTwice");
@@ -20,7 +22,10 @@ public class ThinkTwice extends AbstractSiegeCard {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = BLOCK_PER_ATTACKER;
-        //this.attackers = getEnemies().size();
+
+        FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
+        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
+        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

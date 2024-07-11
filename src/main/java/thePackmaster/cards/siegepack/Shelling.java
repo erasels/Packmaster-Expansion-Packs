@@ -1,6 +1,6 @@
 package thePackmaster.cards.siegepack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.siegepack.ShellingAction;
@@ -8,6 +8,7 @@ import thePackmaster.powers.siegepack.ShellPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;    //ExpansionPacks version gives MISSING_TITLE!
+import static thePackmaster.cards.siegepack.FlavorConstants.*;
 import static thePackmaster.util.Wiz.atb;
 
 public class Shelling extends AbstractSiegeCard {
@@ -27,6 +28,10 @@ public class Shelling extends AbstractSiegeCard {
         damage = baseDamage = DAMAGE;
         secondDamage = baseSecondDamage = DAMAGE_TO_RANDOM;
         magicNumber = baseMagicNumber = AMOUNT_OF_SHELLS;
+
+        FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
+        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
+        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
     @Override
