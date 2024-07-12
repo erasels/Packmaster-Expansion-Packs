@@ -42,7 +42,7 @@ public class MagicCylinderPower extends AbstractPackmasterPower {
                 && info.type != DamageInfo.DamageType.HP_LOSS
                 && info.owner != null
                 && info.owner != this.owner
-                && damageAmount > 0 
+                && damageAmount > 0
                 && damageAmount >= owner.currentBlock
                 && this.amount > 0) {
             addToBot(new VFXAction(new MagicCylinderEffect(owner.hb.cX + (100f * Settings.scale), owner.hb.cY + (80f * Settings.scale), owner.hb.cX + (100f * Settings.scale), owner.hb.cY + (120f * Settings.scale), 0.5f)));
