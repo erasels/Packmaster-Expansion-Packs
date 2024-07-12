@@ -1,12 +1,15 @@
-package thePackmaster.cards.intothebreachpack;
+package thePackmaster.cards.intothebreachpack.deprecated;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.intothebreachpack.StormGenPower;
+import thePackmaster.cards.intothebreachpack.IntoTheBreachCard;
+import thePackmaster.powers.intothebreachpack.deprecated.StormGenPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
+@NoCompendium
 public class StormGenerator extends IntoTheBreachCard {
     public final static String ID = makeID("StormGenerator");
 

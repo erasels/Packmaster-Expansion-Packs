@@ -7,18 +7,29 @@
       " turns."
     ]
   },
-  "${ModID}:StormGenPower": {
-    "NAME": "Storm Generator",
+  "${ModID}:FieldResearchPower": {
+    "NAME": "Field Research",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yChannel #b",
-      " #yLightning for each enemy that has a debuff."
-      ]
+      "Whenever you apply a debuff to an enemy, gain #b",
+      " #yStrength."
+    ]
   },
   "${ModID}:VoidShockPower": {
     "NAME": "Void Shocker",
     "DESCRIPTIONS": [
       "Whenever an enemy deals only blocked damage, deal #b",
       " damage back."
+    ]
+  },
+
+
+
+
+  "${ModID}:StormGenPower": {
+    "NAME": "Storm Generator",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yChannel #b",
+      " #yLightning for each enemy that has a debuff."
     ]
   }
 }

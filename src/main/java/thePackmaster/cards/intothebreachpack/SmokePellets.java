@@ -12,8 +12,8 @@ public class SmokePellets extends IntoTheBreachCard {
     public final static String ID = makeID("SmokePellets");
 
     public SmokePellets() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        block = baseBlock = 6;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        block = baseBlock = 5;
         magicNumber = baseMagicNumber = 1;
     }
 

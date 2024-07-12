@@ -24,14 +24,14 @@ public class IntoTheBreachPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(AcidProjector.ID);
-        cards.add(ElectricWhip.ID);
         cards.add(EnrageShot.ID);
+        cards.add(FieldResearch.ID);
         cards.add(MercuryFist.ID);
         cards.add(ReboundVolley.ID);
+        cards.add(ShieldProjector.ID);
         cards.add(SmokePellets.ID);
         cards.add(SmolderingShell.ID);
         cards.add(SpartanShield.ID);
-        cards.add(StormGenerator.ID);
         cards.add(VoidShocker.ID);
         return cards;
     }
