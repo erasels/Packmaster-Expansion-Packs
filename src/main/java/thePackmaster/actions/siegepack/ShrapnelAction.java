@@ -12,9 +12,7 @@ import thePackmaster.powers.shamanpack.IgnitePower;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
-/*REFS :
-LifeGainAction (in base PackMaster).
-ShowstopperAction.
+/*REFS : LifeGainAction (base PackMaster). ShowstopperAction (showmanpack).
  */
 public class ShrapnelAction extends AbstractGameAction {
 
@@ -47,9 +45,6 @@ public class ShrapnelAction extends AbstractGameAction {
         if (isDone) {
             applyDebuffs(DAMAGE);
 
-            //If this Action itself somehow does damage, remove this:
-            //target.damage(new DamageInfo(source, DAMAGE, damageType));
-
             if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
             }
@@ -58,7 +53,7 @@ public class ShrapnelAction extends AbstractGameAction {
         }
     }
 
-//Finally apply Strength loss for each 10 unblocked damage dealt by the attack
+//Finally apply debuffs for each 10 unblocked damage dealt by the attack
 //REF : bardinspirepack's LifeDrain.
     private void applyDebuffs (int damageAmount){
         int triggerCount = damageAmount / DAMAGE_THRESHOLD;
