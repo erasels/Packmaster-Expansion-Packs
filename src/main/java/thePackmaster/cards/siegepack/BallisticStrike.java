@@ -34,6 +34,7 @@ public class BallisticStrike extends AbstractSiegeCard {
         baseMagicNumber = magicNumber = TEMP_SHELLINGS;
         //isMultiDamage = true;
         tags.add(CardTags.STRIKE);
+        cardsToPreview = new Shelling();
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -119,7 +120,10 @@ public class BallisticStrike extends AbstractSiegeCard {
     }
 }
 /*
-REFS: Into The Breach's Smoldering Shell and much Discord channel code.
+(Recorded elsewhere : much Discord channel code.)
+
+REF: Damage OTHER enemies. intothebreachpack's SmolderingShell.
+(Did not work)
 
 public void use(AbstractPlayer p, AbstractMonster m) {
     this.addToBot(new VFXAction(new ExplosionSmallEffect(m.hb.cX, m.hb.cY), 0.1F));
@@ -135,7 +139,6 @@ public void use(AbstractPlayer p, AbstractMonster m) {
 public void calculateCardDamage(AbstractMonster mo) {
     calculateTrueDamage(mo, true);
 }
-
 public void calculateTrueDamage(AbstractMonster mo, boolean isTarget) {
     super.calculateCardDamage(mo);
 
@@ -143,7 +146,6 @@ public void calculateTrueDamage(AbstractMonster mo, boolean isTarget) {
         // double secondDamage
     }
 }
-
 @Override
 public void use(AbstractPlayer p, AbstractMonster m) {
     altDmg(AttackEffect.WHATEVER);
@@ -152,6 +154,49 @@ public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(mo, AttackEffect.WHATEVER);
     }
 }
+
+//================ MAKE AND AUTOPLAY CARDS ================
+
+PERFECT REF : Create a card and autoplay it immediately at random. Daggerstorm (dimensiongatepack2).
+
+public void use(AbstractPlayer p, AbstractMonster m) {
+    applyToSelf(new DaggerstormPower(p, 1));
+}
+
+In the power:
+
+for (int i = 0; i < amount; i++) {
+    Shiv shiv = new Shiv();
+    shiv.purgeOnUse = true;
+    Wiz.atb(new NewQueueCardAction(shiv, true));
+}
+
+REF: Makes and autoplays a specific card (though every turn). odditiespack's FinalForm.
+
+public void use(AbstractPlayer p, AbstractMonster m) {
+        if (!upgraded) {
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if(!p.hand.isEmpty()) {
+                        AbstractCard target = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                        applyToSelfTop(new FinalFormPower(target.makeStatEquivalentCopy()));
+                        att(new ExhaustSpecificCardAction(target, AbstractDungeon.player.hand));
+                    }
+                }
+            });
+        } else {
+            atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+                for (AbstractCard c : cards) {
+                    applyToSelfTop(new FinalFormPower(c.makeStatEquivalentCopy()));
+                    att(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
+                }
+            }));
+        }
+    }
+
+REF: Auto Battler (odditiespack) uses a complex patch class, way out of scope.
 */
 
 
