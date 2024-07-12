@@ -11,8 +11,7 @@
     },
     "${ModID}:BallisticStrike": {
       "NAME": "Ballistic Strike",
-      "DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! *Shelling that costs 0 and *Exhausts.",
-      "UPGRADE_DESCRIPTION": "Deal !${ModID}:sd! damage. Double damage if the enemy is attacking. NL Gain !M! *Shelling+ that costs 0 and *Exhausts.",
+      "DESCRIPTION": "Deal !D! damage to a random enemy !M! times, slightly delayed. NL Double damage on enemies who intend to attack.",
       "FLAVOR": "Ka-boom!"
     },
     "${ModID}:DefensePlanning": {
