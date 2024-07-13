@@ -2,6 +2,7 @@ package thePackmaster.cards.siegepack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
@@ -34,12 +35,19 @@ public class DefensePlanning extends AbstractSiegeCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                if (!player.hasPower(BlurPower.POWER_ID)) {
-                    Wiz.applyToSelfTop(new BlurPower(player, 1));
-                }
-                this.isDone = true;
+            if (!player.hasPower(BlurPower.POWER_ID)) {
+                Wiz.applyToSelfTop(new BlurPower(player, 1));
+            }
+            this.isDone = true;
             }
         });
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (!player.hasPower(BlurPower.POWER_ID)) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
     @Override
