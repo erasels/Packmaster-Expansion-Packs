@@ -37,7 +37,7 @@
   },
   "${ModID}:MiningStrike": {
     "NAME": "Mining Strike",
-    "DESCRIPTION": "Deal !D! damage. If it deals unblocked damage, gain !M! Gold. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Gold. NL Exhaust."
   },
   "${ModID}:ThrowSoulstonesTribute": {
     "NAME": "Tribute",
