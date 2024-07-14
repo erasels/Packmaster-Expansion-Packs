@@ -11,7 +11,7 @@
     },
     "${ModID}:BallisticStrike": {
       "NAME": "Ballistic Strike",
-      "DESCRIPTION": "Deal !D! damage to a random enemy !M! times, slightly delayed. NL Double damage on enemies who intend to attack.",
+      "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Double damage on enemies who intend to attack.",
       "FLAVOR": "Ka-boom!"
     },
     "${ModID}:DefensePlanning": {

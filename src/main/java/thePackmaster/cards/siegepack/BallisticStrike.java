@@ -1,117 +1,68 @@
 package thePackmaster.cards.siegepack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.DarkSmokePuffEffect;
-import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.actions.siegepack.BallisticStrikeAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.siegepack.FlavorConstants.*;
-import static thePackmaster.util.Wiz.atb;
 
-//The single-target damage is stored in SecondDamage because "DmgAllEnemies" methods hardcodedly use Damage.
 public class BallisticStrike extends AbstractSiegeCard {
     public final static String ID = makeID("BallisticStrike");
     private static final int COST = 3;
     private static final int TARGETED_DAMAGE = 10;
     //private static final int UPGRADE_TARGETED_DAMAGE = 4;
-
     private static final int HITS = 2;
     private static final int UPGRADE_HITS = 1;
-
     /*private static final int DAMAGE_OTHERS = 6;
     private static final int UPGRADE_DAMAGE_OTHERS = 5;*/
-
     /*private static final int TEMP_SHELLINGS = 1;
     private static final int UPGRADE_TEMP_SHELLINGS = 1;*/
 
     public BallisticStrike() {
         super(ID, COST, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = TARGETED_DAMAGE;
-//        baseSecondDamage = TARGETED_DAMAGE;
+        baseDamage = damage = TARGETED_DAMAGE;
+        //baseSecondDamage = TARGETED_DAMAGE;
         baseMagicNumber = magicNumber = HITS;
+
         isMultiDamage = true;
         tags.add(CardTags.STRIKE);
-//        cardsToPreview = new Shelling();
+        //cardsToPreview = new Shelling();
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
+    // Anything below will happen BEFORE anything at all in any action happens, Waits change nothing.
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //Queue actions to damage random enemy X times, double damage if attacking.
-        for (int i = 0; i < this.magicNumber; ++i) {
-            /*if (p.hasPower(ShellPower.POWER_ID)) {
-                this.addToTop(new VFXAction(new ExplosionSmallEffect(p.hb.cX, p.hb.cY), 0.04F));
-            }*/
-            this.addToTop(new VFXAction(new ExplosionSmallEffect(p.hb.cX, p.hb.cY), 0.05F));
-            this.addToTop(new VFXAction(new DarkSmokePuffEffect(p.hb.cX, p.hb.cY), 0.10F));
-            atb(new BallisticStrikeAction(p, this));
+        for (int i = 0; i < magicNumber; ++i) {
+            addToBot(new BallisticStrikeAction(this));
         }
-
-        /*if (isRetaliatory(m)) {
-            //Wiz.doDmg(m, secondDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-            altDmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        } else {
-            altDmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        }*/
-
-        //Add temp Shellings
-        /*AbstractCard tempShelling = new Shelling();
-        CardModifierManager.addModifier(tempShelling, new ExhaustMod());
-        CardModifierManager.addModifier(tempShelling, new RetainMod());
-        tempShelling.cost = 0;  //For some reason this waits until end of turn.
-        tempShelling.costForTurn = 0;*/
-
-        //Fine-tune this and amount of Shellings for balance.
-        /*if (upgraded) {
-            tempShelling.upgrade();
-        }
-        this.addToBot(new MakeTempCardInHandAction(tempShelling, magicNumber));*/
-
-        //Does nothing.
-        /*for (AbstractMonster mo : getEnemies()) {
-            if (mo != m) {
-                calculateTrueDamage(mo, false);
-                dmg(m, AbstractGameAction.AttackEffect.FIRE);   //"isFast" ?.
-            }
-        }*/
-
-        //REF: Striking Strike (creativitypack)
-        /*addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(cards), selectedCard -> {
-            CardModifierManager.addModifier(selectedCard, new ExhaustMod());
-            selectedCard.cost = 0;
-            },
-                true));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Cannonball(), this.magicNumber, true));*/
     }
 
-    //calculateCardDamage is Auto-called before every card is played.
-    /*@Override
-    public void calculateCardDamage(AbstractMonster mo){
-        calculateTrueDamage(mo, true);
-    }
-    private void calculateTrueDamage(AbstractMonster mo, boolean isTarget) {
-        if (mo == null) {return;}
-
-        super.calculateCardDamage(mo);
-        if (isTarget && isRetaliatory(mo)) {
-            secondDamage *= 2;
-            this.isSecondDamageModified = true;
+    //calculateCardDamage is auto-called before every card is played.
+    @Override
+    public void calculateCardDamage(AbstractMonster m) {
+        super.calculateCardDamage(m);
+        if (isRetaliatory(m)) {
+            damage *= 2;
+            isDamageModified = damage != baseDamage;
         }
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
-    }*/
+//        this.rawDescription = cardStrings.DESCRIPTION;
+//        this.initializeDescription();
+    }
+
+    public boolean isRetaliatory(AbstractMonster m)
+    {return m != null && !m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0;}
 
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        //Light up in a stronger color if ALL enemies are attacking. Modargo said no.
+        // Light up in a stronger color if ALL enemies are attacking. Modargo said no.
+        // A custom Color would have to be created if not GREEN_ or YELLOW_ .
         /*ArrayList<AbstractMonster> enemies = AbstractDungeon.getCurrRoom().monsters.monsters;
         int attackers = 0;
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
@@ -138,10 +89,8 @@ public class BallisticStrike extends AbstractSiegeCard {
         //upgradeSecondDamage(UPGRADE_TARGETED_DAMAGE);
         upgradeMagicNumber(UPGRADE_HITS);
     }
-
-    public boolean isRetaliatory(AbstractMonster m)
-    {return m != null && !m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0;}
 }
+
 /*
 (Recorded elsewhere : much Discord channel code.)
 
@@ -178,7 +127,9 @@ public void use(AbstractPlayer p, AbstractMonster m) {
     }
 }
 
+//#########################################################
 //================ MAKE AND AUTOPLAY CARDS ================
+//#########################################################
 
 PERFECT REF : Create a card and autoplay it immediately at a random enemy. Daggerstorm (dimensiongatepack2).
 
@@ -222,4 +173,32 @@ public void use(AbstractPlayer p, AbstractMonster m) {
 REF: Auto Battler (odditiespack) uses a complex patch class, way out of scope.
 */
 
+//Alchyr's proposal. WORKS PERFECTLY :
+/*
+public class BallisticStrike extends AbstractSiegeCard {
+    public final static String ID = makeID("BallisticStrike");
+    private static final int COST = 3;
+    private static final int TARGETED_DAMAGE = 10;
+    //private static final int UPGRADE_TARGETED_DAMAGE = 4;
+    private static final int HITS = 2;
+    private static final int UPGRADE_HITS = 1;
 
+    //constructor goes here
+
+    public void calculateCardDamage(AbstractMonster m) {
+        super.calculateCardDamage(m);
+        if (isRetaliatory(m)) {
+            damage *= 2;
+            isDamageModified = damage != baseDamage;
+        }
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        for (int i = 0; i < magicNumber; ++i) {
+            //assuming magicNumber is set to number of hits
+            addToBot(new BallisticStrikeAction(this));
+        }
+    }
+
+    ETC...
+*/
