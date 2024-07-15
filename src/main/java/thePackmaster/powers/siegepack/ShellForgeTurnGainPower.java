@@ -23,7 +23,7 @@ public class ShellForgeTurnGainPower extends AbstractPackmasterPower {
 
     public void atStartOfTurn(){
         Wiz.applyToSelf(new ShellPower(player, amount));
-        //updateDescription();
+        this.flash();
     }
 
     public void updateDescription() {
