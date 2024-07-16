@@ -11,7 +11,7 @@
     "NAME": "Shell",
     "DESCRIPTIONS": [
       "Your attacks deal #b",
-      " additional damage and consume 1 #yShell."
+      " additional damage and consume #b1 #yShell."
     ]
   },
   "${ModID}:ShellForgeEffectUpPower": {
