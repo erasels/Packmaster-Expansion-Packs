@@ -18,7 +18,7 @@
     "NAME": "Shell Forge",
     "DESCRIPTIONS": [
      "#yShells additionally provide #b",
-      " additional damage."
+      " more damage."
     ]
   },
   "${ModID}:ShellForgeTurnGainPower": {
