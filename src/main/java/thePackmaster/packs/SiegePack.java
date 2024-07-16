@@ -15,7 +15,7 @@ public class SiegePack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public SiegePack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 4, 3, 2, 2, PackSummary.Tags.Attacks, PackSummary.Tags.Debuffs, PackSummary.Tags.Powers));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 4, 3, 2, 2, PackSummary.Tags.Attacks));
         hatHidesHair = true;
     }
 
