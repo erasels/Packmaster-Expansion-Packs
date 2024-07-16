@@ -14,7 +14,7 @@ import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
 public class PrevailAction extends AbstractGameAction {
 
-    private static int DAMAGE_THRESHOLD;
+    private static int damageThreshold;
     private final int DAMAGE;
     private final int POWER_STACKS;
 
@@ -27,44 +27,27 @@ public class PrevailAction extends AbstractGameAction {
         damageType = type;
         attackEffect = effect;
         POWER_STACKS = stacks;
-        DAMAGE_THRESHOLD = damageThreshold;
-
-        //In any Action, must set "isDone" to "true" or call tickDuration(), ELSE CRASH.
-        if (damageType != DamageInfo.DamageType.NORMAL || DAMAGE < DAMAGE_THRESHOLD)
-            {isDone = true;}
+        PrevailAction.damageThreshold = damageThreshold;
     }
 
     @Override
     public void update() {
-        tickDuration();
+        //In any Action, must set "isDone" to "true" or call tickDuration(), else Crash.
+        isDone = true;
+        if (damageType != DamageInfo.DamageType.NORMAL || DAMAGE < PrevailAction.damageThreshold)
+        { return; }
 
-        if (isDone) {
-            applyDebuffs(DAMAGE);
-
-            if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                AbstractDungeon.actionManager.clearPostCombatActions();
-            }
-
-            AbstractDungeon.actionManager.addToTop(new WaitAction(0.1f));
+        applyDebuffs();
+        if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            AbstractDungeon.actionManager.clearPostCombatActions();
         }
+        AbstractDungeon.actionManager.addToTop(new WaitAction(0.1f));
     }
 
-    private void applyDebuffs (int damageAmount){
-        //Not sure how the previous check stops bugs so check here too.
-        if (damageType != DamageInfo.DamageType.NORMAL || damageAmount < DAMAGE_THRESHOLD)
-        {return;}
-
+    private void applyDebuffs (){
         addToBot(new ApplyPowerAction(target, player, new StrengthPower(target, -POWER_STACKS), -POWER_STACKS)); //Strength power has no "isFast".
         if (target != null && !target.hasPower(ArtifactPower.POWER_ID)) {
             addToBot(new ApplyPowerAction(target, player, new GainStrengthPower(target, POWER_STACKS), POWER_STACKS));
         }
-        //Scaling version is a bit OP.
-        /*int triggerCount = damageAmount / DAMAGE_THRESHOLD;
-        for (int i = 0; i < triggerCount; i++) {
-            addToBot(new ApplyPowerAction(target, player, new StrengthPower(target, -POWER_STACKS), -POWER_STACKS)); //Strength power has no "isFast".
-            if (target != null && !target.hasPower(ArtifactPower.POWER_ID)) {
-                addToBot(new ApplyPowerAction(target, player, new GainStrengthPower(target, POWER_STACKS), POWER_STACKS));
-            }
-        }*/
     }
 }

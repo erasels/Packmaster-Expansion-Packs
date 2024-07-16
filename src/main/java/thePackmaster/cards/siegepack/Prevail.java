@@ -12,8 +12,8 @@ import static thePackmaster.cards.siegepack.FlavorConstants.*;
 public class Prevail extends AbstractSiegeCard {
     public final static String ID = makeID("Prevail");
     private static final int COST = 0;
-    private static final int STRENGTH_LOSS_ON_HIT = 3;
-    private static final int UPGRADE_STRENGTH_LOSS_ON_HIT = 2;
+    private static final int STRENGTH_LOSS_ON_HIT = 2;
+    private static final int UPGRADE_STRENGTH_LOSS_ON_HIT = 1;
 
     public Prevail() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
