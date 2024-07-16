@@ -13,9 +13,7 @@ import static thePackmaster.util.Wiz.atb;
 
 //REF: intothebreachpack's ReboundVolley.
 public class Shelling extends AbstractSiegeCard {
-    public final static String ID = makeID("Shelling");   //Safer technique
-//    public final static String ID = makeID(Shelling.class.getSimpleName()); //Name change breaks saves/history!
-
+    public final static String ID = makeID("Shelling");
     private static final int COST = 1;
     private static final int DAMAGE = 7;
     private static final int UPGRADE_DAMAGE = 3;
@@ -38,7 +36,6 @@ public class Shelling extends AbstractSiegeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //Deal damage to ONE RANDOM OTHER enemy
         atb(new ShellingAction(this, m, 1));
-
         //Gain 1 Shell
         Wiz.applyToSelf(new ShellPower(p, magicNumber));
     }

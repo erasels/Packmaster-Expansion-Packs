@@ -13,9 +13,8 @@ import java.util.Collections;
 
 import static thePackmaster.util.Wiz.*;
 
-//REF: intothebreachpack's ReboundVolley(Action).
+//REF: intothebreachpack's ReboundVolleyAction.
 public class ShellingAction extends AbstractGameAction {
-    //private int damage;
     private final Shelling card;
     private AbstractMonster targetEnemy;
     private int targets;
@@ -31,7 +30,7 @@ public class ShellingAction extends AbstractGameAction {
         this.actionsHoldingQueue = new ArrayList<>();
     }
 
-    //@Override
+    @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             boolean firstHit = true;
@@ -45,7 +44,7 @@ public class ShellingAction extends AbstractGameAction {
                 }
                 canTarget.remove(targetEnemy);
                 if (targetEnemy != null) {
-                    //VFX (and queue reordering?) would go here.
+                    //VFX would go here.
                     card.superCalculateCardDamage(targetEnemy);
                     actionsHoldingQueue.add(new DamageAction(targetEnemy,
                             new DamageInfo(adp(), firstHit ? this.card.damage : this.card.secondDamage, this.card.damageTypeForTurn),
