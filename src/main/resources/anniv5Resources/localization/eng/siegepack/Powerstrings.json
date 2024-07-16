@@ -17,7 +17,7 @@
   "${ModID}:ShellForgeEffectUpPower": {
     "NAME": "Shell Forge",
     "DESCRIPTIONS": [
-     "#yShells provide an extra #b",
+     "#yShells additionally provide #b",
       " additional damage."
     ]
   },
