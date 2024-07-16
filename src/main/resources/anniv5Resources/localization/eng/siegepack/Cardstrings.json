@@ -1,7 +1,7 @@
 {
     "${ModID}:Shelling": {
       "NAME": "Shelling",
-      "DESCRIPTION": "Deal !D! damage, and !${ModID}:sd! damage to a random other enemy. NL Gain 1 ${ModID}:Shell.",
+      "DESCRIPTION": "Deal !D! damage, and !${ModID}:sd! damage to a random other enemy. NL Gain !M! ${ModID}:Shell.",
       "FLAVOR": "General purpose insect repellent."
     },
     "${ModID}:Suppress": {
