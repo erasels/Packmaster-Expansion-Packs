@@ -11,11 +11,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.DarkSmokePuffEffect;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
+import thePackmaster.util.Wiz;
 
-//REF: Alchyr code, Static (distortionpack), others
+//REF: Alchyr code, StaticAction (distortionpack), others
 public class BallisticStrikeAction extends AbstractGameAction {
     private final AbstractCard card;
-    private static final float VFX_X_OFFSET = 120F;   //it's pixels.
+    private static final float VFX_X_OFFSET = 120F;   //it's seemingly pixels.
     private static final float VFX_Y_OFFSET = 180F;
 
     public BallisticStrikeAction(AbstractCard c) {
@@ -31,52 +32,14 @@ public class BallisticStrikeAction extends AbstractGameAction {
         }
 
         AbstractPlayer p = AbstractDungeon.player;
-        card.calculateCardDamage((AbstractMonster) this.target); //override calculateCardDamage to apply the 2x damage if enemy is attacking
+        card.calculateCardDamage((AbstractMonster) this.target); //override calculateCardDamage for 2x damage if enemy is attacking
 
-        //ADDING TO TOP results in reverse order. But this is also what fixes the bugs!
-        addToTop(new DamageAction(target, new DamageInfo(p, card.damage, card.damageTypeForTurn), isRetaliatory((AbstractMonster) target) ? AttackEffect.BLUNT_HEAVY : AttackEffect.NONE, true, false));
+        // Adding to TOP results in reverse order. But this is also what fixes the bugs!
+        addToTop(new DamageAction(target, new DamageInfo(p, card.damage, card.damageTypeForTurn), Wiz.isAttacking(target) ? AttackEffect.BLUNT_HEAVY : AttackEffect.NONE, true, false));
         addToTop(new VFXAction(new WeightyImpactEffect(target.hb.cX, target.hb.cY), 0.4f));
-        addToTop(new VFXAction(new ExplosionSmallEffect(p.hb.cX + VFX_X_OFFSET, p.hb.cY + VFX_Y_OFFSET), 0.04F));
         addToTop(new VFXAction(new DarkSmokePuffEffect(p.hb.cX + VFX_X_OFFSET, p.hb.cY + VFX_Y_OFFSET), 0.12F));
+        addToTop(new VFXAction(new ExplosionSmallEffect(p.hb.cX + VFX_X_OFFSET, p.hb.cY + VFX_Y_OFFSET), 0.04F));
 
         this.isDone = true;
     }
-
-    public boolean isRetaliatory(AbstractMonster m)
-    {return m != null && !m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0;}
 }
-
-//Alchyr's proposal. IT WORKS PERFECTLY :
-/*
-//Damage a random enemy + vfx
-public class BallisticStrikeAction extends AbstractGameAction {
-    private final AbstractCard card;
-
-    public BallisticStrikeAction(AbstractCard card) {
-        this.card = card;
-    }
-
-    public void update() {
-        this.target = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-        if (target == null) {
-            isDone = true;
-            return;
-        }
-
-        AbstractPlayer p = AbstractDungeon.player;
-        card.calculateCardDamage((AbstractMonster) this.target); //override calculateCardDamage to apply the 2x damage if enemy is attacking
-
-        //add to top stuff results in reverse order
-        addToTop(new DamageAction(target, new DamageInfo(p, card.damage, card.damageTypeForTurn), isRetaliatory((AbstractMonster) target) ? AttackEffect.BLUNT_HEAVY : AttackEffect.NONE, true, false));
-        addToTop(new VFXAction(new WeightyImpactEffect(target.hb.cX, target.hb.cY), 0.4f));
-        addToTop(new VFXAction(new ExplosionSmallEffect(p.hb.cX + VFX_X_OFFSET, p.hb.cY + VFX_Y_OFFSET), 0.04F));
-        addToTop(new VFXAction(new DarkSmokePuffEffect(p.hb.cX + VFX_X_OFFSET, p.hb.cY + VFX_Y_OFFSET), 0.12F));
-
-        this.isDone = true;
-    }
-
-    public boolean isRetaliatory(AbstractMonster m) {
-        return m != null && !m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0;
-    }
-}
-*/
