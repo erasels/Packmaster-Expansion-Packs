@@ -21,7 +21,7 @@
     },
     "${ModID}:Logistics": {
       "NAME": "Logistics",
-      "DESCRIPTION": "Lose !M! Weak, Frail and Vulnerable. NL Gain 1 ${ModID}:Shell. NL Draw !anniv5:m2! cards.",
+      "DESCRIPTION": "Lose !M! Weak, Frail and Vulnerable. NL Gain 1 ${ModID}:Shell. NL Draw !${ModID}:m2! cards.",
       "UPGRADE_DESCRIPTION": "Lose !M! Weak, Frail and Vulnerable. NL Gain 1 ${ModID}:Shell. NL Draw !anniv5:m2! cards.",
       "FLAVOR": "They really make everything run smoother."
     },
