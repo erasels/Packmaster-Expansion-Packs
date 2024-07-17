@@ -18,10 +18,12 @@ public class DefensePlanning extends AbstractSiegeCard {
     private static final int COST = 1;
     private static final int BLOCK = 7;
     private static final int UPGRADE_BLOCK = 3;
+    private static final int CONDITIONAL_BLUR = 1;
 
     public DefensePlanning() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = CONDITIONAL_BLUR;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -36,7 +38,7 @@ public class DefensePlanning extends AbstractSiegeCard {
             @Override
             public void update() {
             if (!player.hasPower(BlurPower.POWER_ID)) {
-                Wiz.applyToSelfTop(new BlurPower(player, 1));
+                Wiz.applyToSelfTop(new BlurPower(player, magicNumber));
             }
             this.isDone = true;
             }

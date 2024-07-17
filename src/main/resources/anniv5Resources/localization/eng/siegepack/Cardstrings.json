@@ -16,13 +16,12 @@
     },
     "${ModID}:DefensePlanning": {
       "NAME": "Defense Planning",
-      "DESCRIPTION": "Gain !B! Block. NL If you don't have ${ModID}:Blur, gain 1 ${ModID}:Blur.",
+      "DESCRIPTION": "Gain !B! Block. NL If you don't have ${ModID}:Blur, gain !M! ${ModID}:Blur.",
       "FLAVOR": "Good to keep up."
     },
     "${ModID}:Logistics": {
       "NAME": "Logistics",
-      "DESCRIPTION": "Lose !M! Weak, Frail and Vulnerable. NL Gain 1 ${ModID}:Shell. NL Draw !${ModID}:m2! cards.",
-      "UPGRADE_DESCRIPTION": "Lose !M! Weak, Frail and Vulnerable. NL Gain 1 ${ModID}:Shell. NL Draw !anniv5:m2! cards.",
+      "DESCRIPTION": "Lose !M! Weak, Frail and Vulnerable. NL Gain !M! ${ModID}:Shell. NL Draw !${ModID}:m2! cards.",
       "FLAVOR": "They really make everything run smoother."
     },
     "${ModID}:ThinkTwice": {
@@ -38,7 +37,7 @@
     },
     "${ModID}:ShellForge": {
       "NAME": "Shell Forge",
-      "DESCRIPTION": "${ModID}:Shells provide an additional !M! damage. NL At the start of your turn, gain 1 ${ModID}:Shell.",
+      "DESCRIPTION": "${ModID}:Shells provide an additional !M! damage. NL At the start of your turn, gain !${ModID}:m2! ${ModID}:Shell.",
       "FLAVOR": "Like a bakery but for explosives."
     },
     "${ModID}:DigIn": {

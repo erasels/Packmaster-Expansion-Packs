@@ -20,20 +20,13 @@ import static thePackmaster.util.Wiz.atb;
 public class Logistics extends AbstractSiegeCard {
     public final static String ID = makeID("Logistics");
     private static final int COST = 1;
-
-    //private static final int WEAK_AMOUNT = 2;
-    //private static final int UPGRADE_WEAK_AMOUNT = 1;
-    private static final int DEBUFF_REMOVAL_PLUS_DRAW = 1;
-    private static final int UPGRADE_DEBUFF_REMOVAL_PLUS_DRAW = 1;
-
-    private static final int SHELL_GAIN = 1;
-
+    private static final int DEBUFF_REMOVAL_AND_DRAW_AND_SHELL_GAIN = 1;
     private static final int CARD_DRAW = 1;
-    //private static final int UPGRADE_CARD_DRAW = 1;
+    private static final int UPGRADE_CARD_DRAW = 1;
 
     public Logistics() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = DEBUFF_REMOVAL_PLUS_DRAW;
+        baseMagicNumber = magicNumber = DEBUFF_REMOVAL_AND_DRAW_AND_SHELL_GAIN;
         baseSecondMagic = secondMagic = magicNumber + CARD_DRAW;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
@@ -42,17 +35,16 @@ public class Logistics extends AbstractSiegeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //Wiz.applyToEnemy(m, new WeakPower(m, magicNumber, false));
-        ReduceCommonDebuffs(p);
+        reduceCommonDebuffs(p);
 
-        Wiz.applyToSelf(new ShellPower(p, SHELL_GAIN));
+        Wiz.applyToSelf(new ShellPower(p, magicNumber));
         addToBot(new DrawCardAction(secondMagic));
     }
 
     private void reduceCommonDebuffs(AbstractPlayer p) {
-        atb(new ReducePowerAction(p, p, WeakPower.POWER_ID, this.magicNumber));
-        atb(new ReducePowerAction(p, p, FrailPower.POWER_ID, this.magicNumber));
-        atb(new ReducePowerAction(p, p, VulnerablePower.POWER_ID, this.magicNumber));
+        atb(new ReducePowerAction(p, p, WeakPower.POWER_ID, this.secondMagic));
+        atb(new ReducePowerAction(p, p, FrailPower.POWER_ID, this.secondMagic));
+        atb(new ReducePowerAction(p, p, VulnerablePower.POWER_ID, this.secondMagic));
     }
 
     public void triggerOnGlowCheck() {
@@ -64,7 +56,8 @@ public class Logistics extends AbstractSiegeCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(UPGRADE_DEBUFF_REMOVAL_PLUS_DRAW);
-        upgradeSecondMagic(UPGRADE_DEBUFF_REMOVAL_PLUS_DRAW);
+        upgradeSecondMagic(UPGRADE_CARD_DRAW);
+        upgradedSecondMagic = true;
+        initializeDescription();
     }
 }
