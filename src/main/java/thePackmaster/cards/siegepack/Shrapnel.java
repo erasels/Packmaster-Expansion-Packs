@@ -13,7 +13,6 @@ import static thePackmaster.cards.siegepack.FlavorConstants.*;
 public class Shrapnel extends AbstractSiegeCard {
     public final static String ID = makeID("Shrapnel");
     private static final int COST = 1;
-
     private static final int DAMAGE_THRESHOLD = 10;
 
     public Shrapnel() {

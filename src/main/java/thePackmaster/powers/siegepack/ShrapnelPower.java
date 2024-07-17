@@ -1,6 +1,5 @@
 package thePackmaster.powers.siegepack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -30,12 +29,11 @@ public class ShrapnelPower extends AbstractPackmasterPower {
     //Start the action to apply debuffs for each 10 damage (full & unblocked) dealt by the attack.
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        //Adds "unblocked" detection. REF : LifeDrain & LifeDrainAction (bardinspirepack).
-        //if (target == player || damageAmount < DAMAGE_THRESHOLD) {    //Could be bad with Rend etc.
         if (target == player || info.type != DamageInfo.DamageType.NORMAL) {
             return;
         }
-        atb(new ShrapnelAction(target, this.owner, damageAmount, DAMAGE_THRESHOLD, info.type, this.amount, AbstractGameAction.AttackEffect.NONE));
+        //Action adds "unblocked" detection. REF : LifeDrain & LifeDrainAction (bardinspirepack).
+        atb(new ShrapnelAction(target, this.owner, damageAmount, DAMAGE_THRESHOLD, info.type, this.amount));
         this.flashWithoutSound();
     }
 
