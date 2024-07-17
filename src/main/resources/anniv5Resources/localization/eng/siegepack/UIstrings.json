@@ -2,13 +2,13 @@
   "${ModID}:SiegePack": {
     "TEXT": [
       "Siege",
-      "Strong, retaliatory attacks from a fortified position.",
+      "Hold the land against myriad foes. Besiege with hammer and ${ModID}:Shells!",
       "Dj0z"
     ]
   },
   "${ModID}:SiegePackHat": {
     "TEXT": [
-      "This makes it hard to see.",
+      "Valorous fortification, humdrum gazing.",
       "Medieval Great Helm"
     ]
   }
