@@ -1,14 +1,12 @@
 package thePackmaster.powers.siegepack;
 
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.siegepack.DigInAction;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
 public class DigInPower extends AbstractPackmasterPower {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID(DigInPower.class.getSimpleName());
@@ -18,18 +16,15 @@ public class DigInPower extends AbstractPackmasterPower {
 
     public DigInPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
-        this.amount = amount;   //unnecessary?
+        this.owner = owner;
         updateDescription();
     }
 
     public void atStartOfTurnPostDraw() {
-        if (player.currentBlock > 0) {
-            Wiz.atb(new GainEnergyAction(amount));
-            this.flash();
-        }
+        Wiz.atb(new DigInAction(amount, this));
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

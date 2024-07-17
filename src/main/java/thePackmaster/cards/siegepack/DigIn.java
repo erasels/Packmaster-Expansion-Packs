@@ -13,16 +13,12 @@ import static thePackmaster.util.Wiz.applyToSelf;
 
 public class DigIn extends AbstractSiegeCard {
     public final static String ID = makeID("DigIn");
-    //TESTLIST:
-    //Defect's Loop with Frost orbs : result?
-    //Boat relics (anchor, Cleat) : ?
     private static final int COST = 1;
     private static final int BLOCK_GAIN = 7;
     private static final int UPGRADE_BLOCK_GAIN = 3;
     private static final int BLUR_GAIN = 3;
     private static final int UPGRADE_BLUR_GAIN = 1;
     private static final int ENERGY_GAIN = 1;
-    //private static final int UPGRADE_ENERGY_GAIN = 1;
 
     public DigIn() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
