@@ -42,9 +42,9 @@ public class Logistics extends AbstractSiegeCard {
     }
 
     private void reduceCommonDebuffs(AbstractPlayer p) {
-        atb(new ReducePowerAction(p, p, WeakPower.POWER_ID, this.secondMagic));
-        atb(new ReducePowerAction(p, p, FrailPower.POWER_ID, this.secondMagic));
-        atb(new ReducePowerAction(p, p, VulnerablePower.POWER_ID, this.secondMagic));
+        atb(new ReducePowerAction(p, p, WeakPower.POWER_ID, this.magicNumber));
+        atb(new ReducePowerAction(p, p, FrailPower.POWER_ID, this.magicNumber));
+        atb(new ReducePowerAction(p, p, VulnerablePower.POWER_ID, this.magicNumber));
     }
 
     public void triggerOnGlowCheck() {
