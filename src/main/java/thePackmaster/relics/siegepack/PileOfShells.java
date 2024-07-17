@@ -8,6 +8,7 @@ import thePackmaster.util.Wiz;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
+//REFS: DimensionCore (pixiepack), FuelTank (fueledpack)
 public class PileOfShells extends AbstractPackmasterRelic {
     public static final String ID = SpireAnniversary5Mod.makeID("PileOfShells");
     public static final int SHELLS = 3;
@@ -18,9 +19,11 @@ public class PileOfShells extends AbstractPackmasterRelic {
 
     @Override
     public void atBattleStart() {
-        super.atBattleStart();
         this.setCounter(SHELLS);
-        //REFS: DimensionCore (pixiepack), FuelTank (fueledpack)
+    }
+
+    public void atTurnStart() {
+        update();   //Seems to fix some visual bugs
     }
 
     @Override
@@ -29,9 +32,17 @@ public class PileOfShells extends AbstractPackmasterRelic {
         counter--;
 
         //Gain Shell
-        if (player == null) { return; }
         Wiz.applyToSelf(new ShellPower(player, 1));
         flash();
+        if (counter <= 0) {
+            this.grayscale = true;
+        }
+    }
+
+    @Override
+    public void onVictory () {
+        this.grayscale = false;
+        this.setCounter(SHELLS);
     }
 
     public String getUpdatedDescription() {

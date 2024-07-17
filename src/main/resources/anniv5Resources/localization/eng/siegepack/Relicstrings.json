@@ -12,7 +12,7 @@
     "FLAVOR": "Recycles leftover energy into manufacturing prowess!",
     "DESCRIPTIONS": [
       "Consuming a #y${ModID}:Shell increases their effect by #b",
-      " this combat."
+      " this combat. Whenever you use a potion, gain a #y${ModID}:Shell."
     ]
   }
 }
