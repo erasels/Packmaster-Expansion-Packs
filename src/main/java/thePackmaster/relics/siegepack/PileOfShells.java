@@ -18,12 +18,13 @@ public class PileOfShells extends AbstractPackmasterRelic {
     }
 
     @Override
-    public void atBattleStart() {
+    public void onEquip() {
         this.setCounter(SHELLS);
     }
 
-    public void atTurnStart() {
-        update();   //Seems to fix some visual bugs
+    @Override
+    public void atBattleStart() {
+        this.setCounter(SHELLS);
     }
 
     @Override

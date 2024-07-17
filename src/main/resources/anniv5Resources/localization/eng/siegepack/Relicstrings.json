@@ -6,13 +6,5 @@
       "At the end of your first #b",
        " turns each combat, gain a #y${ModID}:Shell."
     ]
-  },
-  "${ModID}:ShellCharger": {
-    "NAME": "Shell Charger",
-    "FLAVOR": "Recycles leftover energy into manufacturing prowess!",
-    "DESCRIPTIONS": [
-      "Consuming a #y${ModID}:Shell increases their effect by #b",
-      " this combat. Whenever you use a potion, gain a #y${ModID}:Shell."
-    ]
   }
 }
