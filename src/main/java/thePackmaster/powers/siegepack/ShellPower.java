@@ -13,7 +13,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 
 import java.util.Objects;
 
-//This buff is the actual shells, boosting damage and consumed (1 per attack).
+////REF: Vigor (base game). This is the actual shells, boosting damage and consumed (1 per attack).
 public class ShellPower extends AbstractPackmasterPower {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID(ShellPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -40,11 +40,12 @@ public class ShellPower extends AbstractPackmasterPower {
         }
     }
 
+    @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        //Updates efficiency and its displayed number when the companion power is applied.
         if (!Objects.equals(power.ID, ShellForgeEffectUpPower.POWER_ID)) { return; }
         if (power.owner != this.owner) { return; }
         updateBoostValue();
-        //this.flash();
     }
 
     private int updateBoostValue() {
@@ -62,16 +63,3 @@ public class ShellPower extends AbstractPackmasterPower {
         this.description = DESCRIPTIONS[0] + this.amount2 + DESCRIPTIONS[1];
     }
 }
-
-//REF: Vigor definition (decompiled)
-/*
-public float atDamageGive(float damage, DamageInfo.DamageType type) {
-    return type == DamageInfo.DamageType.NORMAL ? damage + (float)this.amount : damage;
-}
-public void onUseCard(AbstractCard card, UseCardAction action) {
-    if (card.type == AbstractCard.CardType.ATTACK) {
-        this.flash();
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Vigor"));
-    }
-}
-*/
