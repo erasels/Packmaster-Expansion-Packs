@@ -4,7 +4,6 @@ import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.actions.siegepack.BallisticStrikeAction;
 import thePackmaster.util.Wiz;
 
@@ -49,7 +48,7 @@ public class BallisticStrike extends AbstractSiegeCard {
 
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        for (AbstractMonster m : Wiz.getEnemies()) {
             if (Wiz.isAttacking(m)) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
