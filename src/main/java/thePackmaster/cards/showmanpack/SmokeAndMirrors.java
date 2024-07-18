@@ -27,7 +27,7 @@ public class SmokeAndMirrors extends AbstractShowmanCard {
     }
 
     public void triggerExhaustIncreaseBlock() {
-        flash(Color.BLUE.cpy());
+        superFlash(GOLD_BORDER_GLOW_COLOR.cpy());
         baseBlock += magicNumber;
         initializeDescription();
     }
