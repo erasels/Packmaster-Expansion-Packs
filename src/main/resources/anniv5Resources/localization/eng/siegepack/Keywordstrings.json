@@ -12,6 +12,6 @@
       "shell",
       "shells"
     ],
-    "DESCRIPTION": "Attacks deal #b5 additional damage to enemies and consume #b1 Shell."
+    "DESCRIPTION": "Attacks deal #b5 additional damage to enemies and consume #b1 #yShell."
   }
 ]
