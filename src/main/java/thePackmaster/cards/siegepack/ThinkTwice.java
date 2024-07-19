@@ -3,7 +3,6 @@ package thePackmaster.cards.siegepack;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.Wiz;
 
@@ -30,14 +29,9 @@ public class ThinkTwice extends AbstractSiegeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         //Gain block per enemy that intends to attack.
-        for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
-            if (!mo.isDeadOrEscaped()) {
-                if (mo.intent == AbstractMonster.Intent.ATTACK
-                        || mo.intent == AbstractMonster.Intent.ATTACK_BUFF
-                        || mo.intent == AbstractMonster.Intent.ATTACK_DEBUFF
-                        || mo.intent == AbstractMonster.Intent.ATTACK_DEFEND) {
-                    Wiz.doBlk(magicNumber);
-                }
+        for (AbstractMonster mo : Wiz.getEnemies()) {
+            if (Wiz.isAttacking(mo)) {
+                Wiz.doBlk(magicNumber);
             }
         }
     }
