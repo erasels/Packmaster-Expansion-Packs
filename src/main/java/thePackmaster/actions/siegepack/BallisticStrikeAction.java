@@ -16,7 +16,7 @@ import thePackmaster.util.Wiz;
 //REF: Alchyr code, StaticAction (distortionpack), others
 public class BallisticStrikeAction extends AbstractGameAction {
     private final AbstractCard card;
-    private static final float VFX_X_OFFSET = 120F;   //it's seemingly pixels.
+    private static final float VFX_X_OFFSET = 120F * Settings.scale;
     private static final float VFX_Y_OFFSET = 180F;
 
     public BallisticStrikeAction(AbstractCard c) {
