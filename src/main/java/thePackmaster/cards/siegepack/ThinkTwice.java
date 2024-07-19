@@ -44,7 +44,7 @@ public class ThinkTwice extends AbstractSiegeCard {
 
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        for (AbstractMonster m : Wiz.getEnemies()) {
             if (Wiz.isAttacking(m)) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
