@@ -5,10 +5,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import thePackmaster.actions.siegepack.SuppressAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.siegepack.FlavorConstants.*;
@@ -36,27 +34,11 @@ public class Suppress extends AbstractSiegeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
-        //Applies Weak
+        // Applies Weak
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false)));
-
-        //Adds temporary Strength reduction to enemy.
-        addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -secondMagic), -secondMagic));
-        if (m != null && !m.hasPower(ArtifactPower.POWER_ID)) {
-            addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, secondMagic), secondMagic));
-        }
-        /*if (isRetaliatory(m)) {
-            addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -secondMagic), -secondMagic));
-            if (m != null && !m.hasPower(ArtifactPower.POWER_ID)) {
-                addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, secondMagic), secondMagic));
-            }
-        }*/
+        // Applies temporary Strength reduction.
+        addToBot(new SuppressAction(m, secondMagic));
     }
-
-    //If enemy is attacking
-    /*public boolean isRetaliatory(AbstractMonster m)
-    {
-        return m != null && m.getIntentBaseDmg() >= 0;
-    }*/
 
     @Override
     public void upp() {
