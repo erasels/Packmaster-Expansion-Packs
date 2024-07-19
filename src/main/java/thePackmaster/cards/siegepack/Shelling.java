@@ -11,7 +11,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;    //ExpansionPacks ver
 import static thePackmaster.cards.siegepack.FlavorConstants.*;
 import static thePackmaster.util.Wiz.atb;
 
-//REF: intothebreachpack's ReboundVolley.
+//REF: ReboundVolley (intothebreachpack).
 public class Shelling extends AbstractSiegeCard {
     public final static String ID = makeID("Shelling");
     private static final int COST = 1;

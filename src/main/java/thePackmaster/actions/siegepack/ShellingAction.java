@@ -13,7 +13,7 @@ import java.util.Collections;
 
 import static thePackmaster.util.Wiz.*;
 
-//REF: intothebreachpack's ReboundVolleyAction.
+//REF: ReboundVolleyAction (intothebreachpack).
 public class ShellingAction extends AbstractGameAction {
     private final Shelling card;
     private AbstractMonster targetEnemy;
