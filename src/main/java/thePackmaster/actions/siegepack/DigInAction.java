@@ -12,7 +12,6 @@ public class DigInAction extends AbstractGameAction {
     AbstractPower flashingBuff;
 
     public DigInAction(int gain, AbstractPower source) {
-        duration = 0.25F;   //Should be short enough that player can't have played any block yet.
         ENERGY_GAIN = gain;
         flashingBuff = source;
     }
@@ -20,14 +19,12 @@ public class DigInAction extends AbstractGameAction {
     @Override
     public void update() {
         //In any Action, must set "isDone" to "true" or call tickDuration(), else Crash.
-        tickDuration();
-        //Block relics must have triggered by now.
-        if (isDone) {
-            if (player.currentBlock > 0) {
-                Wiz.atb(new GainEnergyAction(ENERGY_GAIN));
-                if (flashingBuff != null) {
-                    flashingBuff.flash();
-                }
+        isDone = true;
+        //Block relics have triggered by now.
+        if (player.currentBlock > 0) {
+            Wiz.atb(new GainEnergyAction(ENERGY_GAIN));
+            if (flashingBuff != null) {
+                flashingBuff.flash();
             }
         }
     }
