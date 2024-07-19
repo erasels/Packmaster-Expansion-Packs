@@ -33,7 +33,7 @@ public class ShrapnelPower extends AbstractPackmasterPower {
             return;
         }
         //Action adds "unblocked" detection. REF : LifeDrain & LifeDrainAction (bardinspirepack).
-        atb(new ShrapnelAction(target, this.owner, damageAmount, DAMAGE_THRESHOLD, info.type, this.amount));
+        atb(new ShrapnelAction(target, this.owner, damageAmount, DAMAGE_THRESHOLD, info.type, this.amount, this));
         this.flashWithoutSound();
     }
 

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
@@ -16,8 +17,9 @@ public class ShrapnelAction extends AbstractGameAction {
     private final int DAMAGE_THRESHOLD;
     private final int DAMAGE;
     private final int POWER_STACKS;
+    private final AbstractPower sourcePower;
 
-    public ShrapnelAction(AbstractCreature target, AbstractCreature source, int amount, int threshold, DamageInfo.DamageType type, int stacks)
+    public ShrapnelAction(AbstractCreature target, AbstractCreature source, int amount, int threshold, DamageInfo.DamageType type, int stacks, AbstractPower sourcePower)
     {
         setValues(target, source, amount);  //Shorthand. Also sets duration = 0.5F
         duration = 0.1F;
@@ -26,6 +28,7 @@ public class ShrapnelAction extends AbstractGameAction {
         damageType = type;
         POWER_STACKS = stacks;
         DAMAGE_THRESHOLD = threshold;
+        this.sourcePower = sourcePower;
     }
 
     @Override
@@ -48,6 +51,7 @@ public class ShrapnelAction extends AbstractGameAction {
         int triggerCount = damageAmount / DAMAGE_THRESHOLD;
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new IgnitePower(target, 2 * POWER_STACKS * triggerCount), 2 * POWER_STACKS * triggerCount, true));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new VulnerablePower(target, POWER_STACKS * triggerCount, false), POWER_STACKS * triggerCount, true));
+        sourcePower.flash();
     }
 }
 
