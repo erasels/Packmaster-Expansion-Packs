@@ -8,16 +8,12 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.DarkSmokePuffEffect;
-import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import thePackmaster.util.Wiz;
 
 //REF: Alchyr code, StaticAction (distortionpack), others
 public class BallisticStrikeAction extends AbstractGameAction {
     private final AbstractCard card;
-    private static final float VFX_X_OFFSET = 120F * Settings.scale;
-    private static final float VFX_Y_OFFSET = 180F;
 
     public BallisticStrikeAction(AbstractCard c) {
         this.card = c;
@@ -37,8 +33,7 @@ public class BallisticStrikeAction extends AbstractGameAction {
         // Adding to TOP results in reverse order. But this is also what fixes the bugs!
         addToTop(new DamageAction(target, new DamageInfo(p, card.damage, card.damageTypeForTurn), Wiz.isAttacking(target) ? AttackEffect.BLUNT_HEAVY : AttackEffect.NONE, true, false));
         addToTop(new VFXAction(new WeightyImpactEffect(target.hb.cX, target.hb.cY), 0.4f));
-        addToTop(new VFXAction(new DarkSmokePuffEffect(p.hb.cX + VFX_X_OFFSET, p.hb.cY + VFX_Y_OFFSET), 0.12F));
-        addToTop(new VFXAction(new ExplosionSmallEffect(p.hb.cX + VFX_X_OFFSET, p.hb.cY + VFX_Y_OFFSET), 0.04F));
+        // Any extra effects would still be added to top.
 
         this.isDone = true;
     }

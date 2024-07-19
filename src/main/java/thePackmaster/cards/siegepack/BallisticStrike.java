@@ -1,9 +1,13 @@
 package thePackmaster.cards.siegepack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.vfx.DarkSmokePuffEffect;
+import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import thePackmaster.actions.siegepack.BallisticStrikeAction;
 import thePackmaster.util.Wiz;
 
@@ -16,6 +20,8 @@ public class BallisticStrike extends AbstractSiegeCard {
     private static final int TARGETED_DAMAGE = 10;
     private static final int HITS = 2;
     private static final int UPGRADE_HITS = 1;
+    private static final float VFX_X_OFFSET = 120F * Settings.scale;
+    private static final float VFX_Y_OFFSET = 180F * Settings.scale;
 
     public BallisticStrike() {
         super(ID, COST, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
@@ -32,6 +38,8 @@ public class BallisticStrike extends AbstractSiegeCard {
     // Everything below will happen BEFORE anything in any action. Waits change nothing.
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; ++i) {
+            addToTop(new VFXAction(new DarkSmokePuffEffect(p.hb.cX + VFX_X_OFFSET, p.hb.cY + VFX_Y_OFFSET), 0.12F));
+            addToTop(new VFXAction(new ExplosionSmallEffect(p.hb.cX + VFX_X_OFFSET, p.hb.cY + VFX_Y_OFFSET), 0.04F));
             addToBot(new BallisticStrikeAction(this));
         }
     }
