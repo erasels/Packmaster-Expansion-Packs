@@ -23,10 +23,10 @@ public class SuppressAction extends AbstractGameAction {
             return;
         }
         // Temporary Strength reduction.
-        addToBot(new ApplyPowerAction(target, player, new StrengthPower(target, -strengthReduction), -strengthReduction));
-        if (target != null && !target.hasPower(ArtifactPower.POWER_ID)) {
-            addToBot(new ApplyPowerAction(target, player, new GainStrengthPower(target, strengthReduction), strengthReduction));
+        if (!target.hasPower(ArtifactPower.POWER_ID)) {
+            addToTop(new ApplyPowerAction(target, player, new GainStrengthPower(target, strengthReduction), strengthReduction));
         }
+        addToTop(new ApplyPowerAction(target, player, new StrengthPower(target, -strengthReduction), -strengthReduction));
 
         this.isDone = true;
     }
