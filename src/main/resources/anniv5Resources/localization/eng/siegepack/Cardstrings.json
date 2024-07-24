@@ -21,7 +21,7 @@
     },
     "${ModID}:Logistics": {
       "NAME": "Logistics",
-      "DESCRIPTION": "Lose !M! Weak, Frail and Vulnerable. NL Gain !M! ${ModID}:Shell. NL Draw !${ModID}:m2! cards.",
+      "DESCRIPTION": "Lose all Vulnerable or Frail or Weak in that order. NL Gain !M! ${ModID}:Shell. NL Draw !${ModID}:m2! cards.",
       "FLAVOR": "They really make everything run smoother."
     },
     "${ModID}:ThinkTwice": {

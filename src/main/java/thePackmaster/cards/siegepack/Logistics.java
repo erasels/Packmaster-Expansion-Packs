@@ -2,7 +2,7 @@ package thePackmaster.cards.siegepack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,13 +20,13 @@ import static thePackmaster.util.Wiz.atb;
 public class Logistics extends AbstractSiegeCard {
     public final static String ID = makeID("Logistics");
     private static final int COST = 1;
-    private static final int DEBUFF_REMOVAL_AND_DRAW_AND_SHELL_GAIN = 1;
+    private static final int BASE_EFFECTS_AND_DRAW = 1;
     private static final int CARD_DRAW = 1;
     private static final int UPGRADE_CARD_DRAW = 1;
 
     public Logistics() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = DEBUFF_REMOVAL_AND_DRAW_AND_SHELL_GAIN;
+        baseMagicNumber = magicNumber = BASE_EFFECTS_AND_DRAW;
         baseSecondMagic = secondMagic = magicNumber + CARD_DRAW;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
@@ -35,16 +35,23 @@ public class Logistics extends AbstractSiegeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        reduceCommonDebuffs(p);
+        removeCommonDebuffInThatOrder(p);
 
         Wiz.applyToSelf(new ShellPower(p, magicNumber));
         addToBot(new DrawCardAction(secondMagic));
     }
 
-    private void reduceCommonDebuffs(AbstractPlayer p) {
-        atb(new ReducePowerAction(p, p, WeakPower.POWER_ID, this.magicNumber));
-        atb(new ReducePowerAction(p, p, FrailPower.POWER_ID, this.magicNumber));
-        atb(new ReducePowerAction(p, p, VulnerablePower.POWER_ID, this.magicNumber));
+    private void removeCommonDebuffInThatOrder(AbstractPlayer p) {
+        //Remove any Vulnerable on player. If none, same for Frail. If none, same for Weak.
+        if (p.hasPower(VulnerablePower.POWER_ID)) {
+            atb(new RemoveSpecificPowerAction(p, p, VulnerablePower.POWER_ID));
+            return;
+        }
+        if (p.hasPower(FrailPower.POWER_ID)) {
+            atb(new RemoveSpecificPowerAction(p, p, FrailPower.POWER_ID));
+            return;
+        }
+        atb(new RemoveSpecificPowerAction(p, p, WeakPower.POWER_ID));
     }
 
     public void triggerOnGlowCheck() {
