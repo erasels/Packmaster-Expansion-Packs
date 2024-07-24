@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.CalmStance;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import thePackmaster.cards.pickthemallpack.GrabAndGo;
+import thePackmaster.cards.showmanpack.AbstractShowmanCard;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.specialhats.InstantDeathHat;
 import thePackmaster.packs.CthulhuPack;
@@ -43,7 +44,8 @@ public class ExpansionPacks implements
         PostBattleSubscriber,
         OnPlayerLoseBlockSubscriber,
         OnPowersModifiedSubscriber,
-        AddAudioSubscriber {
+        AddAudioSubscriber,
+        PostExhaustSubscriber{
 
     public static final String FULL_MOD_NAME = "The Packmaster: Expansion Packs";
     public static final String SHORTENED_MOD_NAME = "PM Expansion Packs";
@@ -147,5 +149,10 @@ public class ExpansionPacks implements
     @Override
     public void receiveAddAudio() {
         BaseMod.addAudio(SpireAnniversary5Mod.makeID("MariDebuffPack_TheFLYINGCAR"), SpireAnniversary5Mod.makePath("audio/maridebuffpack/MariTheFlyingCar.ogg"));
+    }
+
+    @Override
+    public void receivePostExhaust(AbstractCard exhaustedCard) {
+        AbstractShowmanCard.postExhaustTrigger(exhaustedCard);
     }
 }
