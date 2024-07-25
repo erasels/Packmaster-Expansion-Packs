@@ -1,0 +1,47 @@
+{
+  "${ModID}:ShrapnelPower": {
+    "NAME": "弹片",
+    "DESCRIPTIONS": [
+      "你的攻击每造成 #b10 点未被格挡的伤害，施加 #b",
+      " 层 #y易伤 和 #b",
+      " 层 #y燃烧 。"
+    ]
+  },
+  "${ModID}:ShellPower": {
+    "NAME": "炮弹",
+    "DESCRIPTIONS": [
+      "你的攻击额外造成 #b",
+      " 点伤害，并消耗 #b1 个 #y炮弹 。"
+    ]
+  },
+  "${ModID}:ShellForgeEffectUpPower": {
+    "NAME": "炮弹锻造",
+    "DESCRIPTIONS": [
+      "#y炮弹 额外造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:ShellForgeTurnGainPower": {
+    "NAME": "炮弹锻造",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b",
+      " 层 #y炮弹 。",
+      " 层 #y炮弹 。"
+    ]
+  },
+  "${ModID}:DigInPower": {
+    "NAME": "深入防御",
+    "DESCRIPTIONS": [
+      "在你的回合开始后，如果你有 #y格挡 ，获得 #b",
+      " [E] 。"
+    ]
+  },
+  "${ModID}:PrevailPower": {
+    "NAME": "获胜！",
+    "DESCRIPTIONS": [
+      "每当你单次攻击造成至少 #b",
+      " 点伤害时，使敌人本回合失去 #b",
+      " 层 #y力量 。"
+    ]
+  }
+}
