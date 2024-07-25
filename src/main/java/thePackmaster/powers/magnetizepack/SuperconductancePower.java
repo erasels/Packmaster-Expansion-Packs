@@ -22,7 +22,7 @@ public class SuperconductancePower extends AbstractPackmasterPower implements Cl
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        removeThis();
     }
 
     @Override

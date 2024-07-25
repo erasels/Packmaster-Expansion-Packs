@@ -7,7 +7,7 @@ import thePackmaster.actions.siegepack.ShellingAction;
 import thePackmaster.powers.siegepack.ShellPower;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.makeID;    //ExpansionPacks version gives "MISSING_TITLE!"
+import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.siegepack.FlavorConstants.*;
 import static thePackmaster.util.Wiz.atb;
 

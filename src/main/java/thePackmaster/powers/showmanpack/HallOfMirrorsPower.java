@@ -1,15 +1,12 @@
 package thePackmaster.powers.showmanpack;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.green.AfterImage;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.util.Wiz;
 
 public class HallOfMirrorsPower extends AbstractPackmasterPower {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID("HallOfMirrorsPower");
