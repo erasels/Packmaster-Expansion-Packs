@@ -2,6 +2,7 @@ package thePackmaster.cards.grandopeningpack;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.red.Warcry;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -31,7 +32,11 @@ public class Foreshadow extends AbstractGrandOpeningCard implements StartupCard 
 
     @Override
     public boolean atBattleStartPreDraw() {
-        atb(new MakeTempCardInHandAction(cardsToPreview.makeCopy()));
+        AbstractCard c = new Warcry();
+        if (this.upgraded) {
+            c.upgrade();
+        }
+        atb(new MakeTempCardInHandAction(c));
         return false;
     }
 }
