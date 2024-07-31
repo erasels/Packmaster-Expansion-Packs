@@ -30,6 +30,7 @@ import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
+import thePackmaster.stances.stancedancepack.Weaver;
 import thePackmaster.util.maridebuffpack.DebuffLossManager;
 
 import java.util.*;
@@ -125,6 +126,8 @@ public class ExpansionPacks implements
             return new AncientStance();
         } else if (Objects.equals(stance, AggressionStance.STANCE_ID)) {
             return new AggressionStance();
+        } else if (Objects.equals(stance, Weaver.STANCE_ID)) {
+            return new Weaver();
         } else {
 
             return new NightmareStance();
@@ -140,6 +143,7 @@ public class ExpansionPacks implements
         stances.add(AncientStance.STANCE_ID);
         stances.add(AggressionStance.STANCE_ID);
         stances.add(NightmareStance.STANCE_ID);
+        stances.add(Weaver.STANCE_ID);
 
         stances.remove(p().stance.ID);
 
