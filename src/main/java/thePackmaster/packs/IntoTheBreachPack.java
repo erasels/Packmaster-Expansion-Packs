@@ -16,7 +16,7 @@ public class IntoTheBreachPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public IntoTheBreachPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(4, 3, 3, 3, 1));
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(4, 3, 3, 3, 2, PackSummary.Tags.Debuffs));
         hatHidesHair = true;
     }
 
@@ -24,7 +24,6 @@ public class IntoTheBreachPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(AcidProjector.ID);
-        cards.add(EnrageShot.ID);
         cards.add(FieldResearch.ID);
         cards.add(MercuryFist.ID);
         cards.add(ReboundVolley.ID);

@@ -3,10 +3,6 @@
     "NAME": "A.C.I.D. Projector",
     "DESCRIPTION": "The enemy takes double damage from Attacks this turn. NL Exhaust."
   },
-  "${ModID}:EnrageShot": {
-    "NAME": "Enrage Shot",
-    "DESCRIPTION": "Stun the enemy and apply 2 Strength. NL Exhaust."
-  },
   "${ModID}:FieldResearch": {
     "NAME": "Field Research",
     "DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Strength."
@@ -46,6 +42,10 @@
   "${ModID}:ElectricWhip": {
     "NAME": "Electric Whip",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel 1 Lightning."
+  },
+  "${ModID}:EnrageShot": {
+    "NAME": "Enrage Shot",
+    "DESCRIPTION": "Stun the enemy and apply 2 Strength. NL Exhaust."
   },
   "${ModID}:StormGenerator": {
     "NAME": "Storm Generator",
