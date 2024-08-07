@@ -2,7 +2,7 @@
   "${ModID}:ConjurerPack": {
     "TEXT": [
       "Conjurer Petra",
-      "Strike the Petra.",
+      "\u200bStrike the Petra.",
       "pinacolada"
     ]
   },
