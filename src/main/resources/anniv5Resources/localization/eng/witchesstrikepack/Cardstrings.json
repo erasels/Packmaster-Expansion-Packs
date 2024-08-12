@@ -1,45 +1,53 @@
 {
+  "${ModID}:Bullet": {
+    "NAME": "Bullet",
+    "DESCRIPTION": "${ModID}:Wicked. Retain. NL Deal !D! damage to a random enemy."
+  },
+
   "${ModID}:CrescentSweep": {
     "NAME": "Heel Tornado",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon."
+    "DESCRIPTION": "Gain !B! Block. NL Channel !M! ${ModID}:Arcane."
   },
   "${ModID}:MysticFlourish": {
     "NAME": "Tetsuzanko",
-    "DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next Orb.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next Orb twice."
+    "DESCRIPTION": "Deal !D! damage. NL Trigger your next orbs passive twice."
   },
+
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
-    "DESCRIPTION": "${ModID}:Manifest !M! random Orb. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random Orbs. NL Exhaust."
+    "DESCRIPTION": "Channel 1 Dark. NL Gain !M! Focus this turn."
   },
+
+  "${ModID}:ChitteringPunt": {
+    "NAME": "Bullet Climax",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Add a *Bullet to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Add !M! *Bullets to your hand."
+  },
+
   "${ModID}:FullMoonHalo": {
     "NAME": "Full Moon Halo",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Full_Moon."
+    "DESCRIPTION": "${ModID}:Wicked. NL Gain !B! Block. NL Gain !M! Focus this turn."
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Moonlight Barrage",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each channeled Orb."
-  },
-  "${ModID}:ChitteringPunt": {
-    "NAME": "Chittering Punt",
-    "DESCRIPTION": "Deal !D! damage. NL Channel !M! ${ModID}:Crescent_Moon."
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each channeled Orb. NL Channel !M! ${ModID}:Dark."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL When this ${ModID}:Infests, Evoke your next !M! orbs and lose an Orb slot."
+    "DESCRIPTION": "Lose !M! Focus this turn. NL Gain 1 Orb Slot. NL Channel 1 ${ModID}:Arcane."
   },
+
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand: ${ModID}:Inscribed. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Wicked. NL Gain !B! Block. NL Add !M! *Bullets to your hand."
   },
   "${ModID}:MoonlightFlight": {
-    "NAME": "Moonlight Flight",
-    "DESCRIPTION": "Whenever you channel an Orb, gain !M! Focus until your next turn."
+    "NAME": "Moon River",
+    "DESCRIPTION": "Gain 1 Orb Slot. NL Channel 1 ${ModID}:Arcane. NL Whenever you channel an Orb, gain !M! Focus until your next turn."
   },
   "${ModID}:ScarabPlague": {
-    "NAME": "Scarab Plague",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Gain !B! Block. NL When this ${ModID}:infests, ${ModID}:Manifest ${ModID}:Full_Moon."
+    "NAME": "Portal Kick",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and Lock-On. NL Channel 1 ${ModID}:Arcane."
   },
   "${ModID}:Inscribed": {
     "EXTENDED_DESCRIPTION": [

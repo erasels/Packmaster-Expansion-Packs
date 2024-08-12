@@ -1,10 +1,15 @@
 package thePackmaster.cards.WitchesStrike;
 
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.Dark;
+import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
 import thePackmaster.orbs.PackmasterOrb;
+import thePackmaster.powers.witchesstrikepack.LoseFocusPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -15,13 +20,12 @@ public class CrystalMoonlight extends AbstractWitchStrikeCard {
     public CrystalMoonlight() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++){
-            addToBot(new ManifestAction(PackmasterOrb.getPackLimitedOrb(true)));
-        }
+        addToBot(new ChannelAction(new Dark()));
+        Wiz.applyToSelf(new FocusPower(p,magicNumber));
+        Wiz.applyToSelf(new LoseFocusPower(p,magicNumber));
     }
 
     public void upp() {

@@ -18,36 +18,35 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
-import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
+import com.megacrit.cardcrawl.vfx.combat.*;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
+import thePackmaster.vfx.witchesstrike.StarWaveEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeOrbPath;
+import static thePackmaster.SpireAnniversary5Mod.makePath;
 
 public class CrescentMoon extends CustomOrb implements PackmasterOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID("CrescentMoon");
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
 
-    private static final int PASSIVE_AMOUNT = 7;
-    private static final int EVOKE_AMOUNT = 3;
+    private static final int PASSIVE_AMOUNT = 2;
+    private static final int EVOKE_AMOUNT = 6;
 
     // Animation Rendering Numbers - You can leave these at default, or play around with them and see what they change.
-    private float vfxTimer = 1.0f;
+    private float vfxTimer = 2.5f;
     private float vfxIntervalMin = 0.1f;
     private float vfxIntervalMax = 0.4f;
     private static final float ORB_WAVY_DIST = 0.04f;
     private static final float PI_4 = 12.566371f;
-    private boolean possible = false;
-    private boolean betterPossible = false;
+    private static final String IMG_PATH = makePath("/images/orbs/witchesstrike/arcane.png");
     boolean evoking = false;
 
     public CrescentMoon() {
-        super(ORB_ID, orbString.NAME, PASSIVE_AMOUNT, EVOKE_AMOUNT, DESCRIPTIONS[0], DESCRIPTIONS[0], makeOrbPath("default_orb.png"));
-        img = TexLoader.getTexture(makeOrbPath("default_orb.png"));
+        super(ORB_ID, orbString.NAME, PASSIVE_AMOUNT, EVOKE_AMOUNT, DESCRIPTIONS[0], DESCRIPTIONS[0], IMG_PATH);
         updateDescription();
         angle = MathUtils.random(360.0f); // More Animation-related Numbers
         channelAnimTimer = 0.5f;
@@ -58,12 +57,15 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
         applyFocus();
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
-        Wiz.atb(new AbstractGameAction() {
+        Wiz.att(new AbstractGameAction() {
             @Override
             public void update() {
-                AbstractMonster m = Wiz.getRandomEnemy();
-                if(m != null)
-                    Wiz.att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                Wiz.att(new VFXAction(new StarWaveEffect(hb.cX,hb.cY, Settings.BLUE_RELIC_COLOR, ShockWaveEffect.ShockWaveType.NORMAL)));
+                for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    if (!m.isDeadOrEscaped()) {
+                        Wiz.att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, evokeAmount), DamageInfo.DamageType.THORNS), AttackEffect.BLUNT_LIGHT));
+                    }
+                }
                 isDone = true;
             }
         });
@@ -72,7 +74,7 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
     @Override
     public void updateDescription() { // Set the on-hover description of the orb
         applyFocus(); // Apply Focus (Look at the next method)
-        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1]+evokeAmount+DESCRIPTIONS[2]+passiveAmount+DESCRIPTIONS[3];
+        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1]+ evokeAmount + DESCRIPTIONS[2];
     }
 
     @Override
@@ -88,25 +90,14 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
             @Override
             public void update() {
                 AbstractMonster m = Wiz.getRandomEnemy();
-                if(m != null)
-                    Wiz.att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                if (m != null){
+                    Wiz.vfx(new SmallLaserEffect(hb.cX,hb.cY,m.hb.cX,m.hb.cY));
+                    Wiz.atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount),
+                            DamageInfo.DamageType.THORNS), AttackEffect.BLUNT_HEAVY));
+                }
                 isDone = true;
             }
         });
-        evokeAmount -= 1;
-        baseEvokeAmount = evokeAmount;
-        if (evokeAmount < 1 && !evoking) {
-            evoking = true;
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    if (evokeAmount < 1) {
-                        addToBot(new EvokeSpecificOrbAction(CrescentMoon.this));
-                    }
-                    isDone = true;
-                }
-            });
-        }
         updateDescription();
     }
     @Override
@@ -141,9 +132,6 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
         sb.setColor(new Color(1.0f, 1.0f, 1.0f, c.a / 2.0f));
         sb.draw(img, cX - 48.0f, cY - 48.0f + bobEffect.y, 48.0f, 48.0f, 96.0f, 96.0f, scale + MathUtils.sin(angle / PI_4) * ORB_WAVY_DIST * Settings.scale, scale, angle, 0, 0, 96, 96, false, false);
         sb.setColor(new Color(1.0f, 1.0f, 1.0f, this.c.a / 2.0f));
-        sb.setBlendFunction(770, 1);
-        sb.draw(img, cX - 48.0f, cY - 20.0f + bobEffect.y, 48.0f, 48.0f, 96.0f, 96.0f, scale, scale + MathUtils.sin(angle / PI_4) * ORB_WAVY_DIST * Settings.scale, -angle, 0, 0, 96, 96, false, false);
-        sb.setBlendFunction(770, 771);
         renderText(sb);
         hb.render(sb);
     }

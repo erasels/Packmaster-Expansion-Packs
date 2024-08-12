@@ -1,5 +1,7 @@
 package thePackmaster.cards.WitchesStrike;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.green.LegSweep;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,16 +15,21 @@ public class CrescentSweep extends AbstractWitchStrikeCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public CrescentSweep() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseBlock = 7;
+        baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        addToBot(new ManifestAction(new CrescentMoon()));
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        addToBot(new ChannelAction(new CrescentMoon()));
+        if (upgraded){
+            addToBot(new ChannelAction(new CrescentMoon()));
+        }
     }
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
+        upgradeMagicNumber(1);
     }
     @Override
     public String cardArtCopy() {

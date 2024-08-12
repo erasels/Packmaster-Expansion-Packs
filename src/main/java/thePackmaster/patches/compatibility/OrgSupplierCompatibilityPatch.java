@@ -23,7 +23,6 @@ public class OrgSupplierCompatibilityPatch {
 
             suppliers = new ArrayList<>();
             suppliers.add(thePackmaster.orbs.WitchesStrike.CrescentMoon::new);
-            suppliers.add(thePackmaster.orbs.WitchesStrike.FullMoon::new);
             __result.put(WitchesStrikePack.ID, suppliers);
 
             suppliers = new ArrayList<>();

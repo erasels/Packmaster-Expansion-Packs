@@ -2,37 +2,34 @@ package thePackmaster.cards.WitchesStrike;
 
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Leap;
+import com.megacrit.cardcrawl.cards.green.SuckerPunch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-import thePackmaster.cardmodifiers.InscribedMod;
+import thePackmaster.cardmodifiers.InfestModifier;
 import thePackmaster.cardmodifiers.witchesstrike.WickedModifier;
+import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static thePackmaster.SpireAnniversary5Mod.ISCARDMODIFIED;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WitchTwist extends AbstractWitchStrikeCard {
-    public final static String ID = makeID("WitchTwist");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+public class Bullet extends AbstractWitchStrikeCard {
+    public final static String ID = makeID("Bullet");
+    // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
-    public WitchTwist() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 12;
-        baseMagicNumber = magicNumber = 3;
-        cardsToPreview = new Bullet();
-        CardModifierManager.addModifier(this, new WickedModifier(2));
+    public Bullet() {
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY);
+        baseDamage = 4;
+        CardModifierManager.addModifier(this, new WickedModifier(1));
     }
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
@@ -45,21 +42,20 @@ public class WitchTwist extends AbstractWitchStrikeCard {
                     orbs++;
                 }
             }
-            return orbs >= 2;
+            return orbs >= 1;
         }
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new EvokeOrbAction(2));
-        blck();
-        Wiz.atb(new MakeTempCardInHandAction(new Bullet(),magicNumber));
+        Wiz.atb(new EvokeOrbAction(1));
+        Wiz.atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(6);
     }
+
     @Override
     public String cardArtCopy() {
-        return Leap.ID;
+        return SuckerPunch.ID;
     }
 }
-
