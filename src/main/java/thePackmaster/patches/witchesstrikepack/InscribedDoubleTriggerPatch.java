@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.cardmodifiers.InscribedMod;
 import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
-import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.util.Wiz;
 
 @SpirePatch2(clz = InscribedMod.class, method = "patchHook")

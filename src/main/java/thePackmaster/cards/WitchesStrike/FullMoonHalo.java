@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
 import thePackmaster.cardmodifiers.InscribedMod;
-import thePackmaster.orbs.WitchesStrike.FullMoon;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
