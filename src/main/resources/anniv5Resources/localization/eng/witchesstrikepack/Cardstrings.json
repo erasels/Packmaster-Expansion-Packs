@@ -30,7 +30,7 @@
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Moonlight Barrage",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each channeled Orb. NL Channel !M! ${ModID}:Dark."
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each channeled Orb. NL Channel !M! Dark."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
