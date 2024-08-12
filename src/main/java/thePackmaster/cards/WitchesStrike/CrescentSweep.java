@@ -15,7 +15,7 @@ public class CrescentSweep extends AbstractWitchStrikeCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public CrescentSweep() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseBlock = 7;
         baseMagicNumber = 1;
     }
