@@ -22,7 +22,7 @@ public class RoyaltyPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(NobleStrike.ID);
+        cards.add(RetainerStrike.ID);
         cards.add(Soulstone.ID);
         cards.add(WindShield.ID);
         cards.add(Forcefield.ID);

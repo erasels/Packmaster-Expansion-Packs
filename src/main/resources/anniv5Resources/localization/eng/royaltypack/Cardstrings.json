@@ -1,8 +1,8 @@
 {
-  "${ModID}:NobleStrike": {
-    "NAME": "Noble Strike",
-    "DESCRIPTION": "Deal !D! damage. ${ModID}:Tribute 5: Draw an Attack. ${ModID}:Austerity: Gain 5 Gold and draw a card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. ${ModID}:Tribute 5: Draw !M! Attacks. ${ModID}:Austerity: Gain 5 Gold and draw !M! cards. "
+  "${ModID}:RetainerStrike": {
+    "NAME": "Retainer Strike",
+    "DESCRIPTION": "Deal !D! damage. NL !M! random card in your hand NL has Retain this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose !M! random card in your hand. NL It has Retain this turn."
   },
   "${ModID}:NobleStrikeTribute": {
     "NAME": "Tribute",
