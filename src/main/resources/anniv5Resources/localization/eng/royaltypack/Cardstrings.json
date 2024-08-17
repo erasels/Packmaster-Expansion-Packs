@@ -14,9 +14,9 @@
     "DESCRIPTION": "Gain 5 Gold and draw a card.",
     "UPGRADE_DESCRIPTION": "Gain 5 Gold and draw !M! cards."
   },
-  "${ModID}:NobleSlash": {
-    "NAME": "Noble Slash",
-    "DESCRIPTION": "Deal !D! damage. Discard a random card. Draw one less the next turn."
+  "${ModID}:Soulstone": {
+    "NAME": "Soulstone",
+    "DESCRIPTION": "Deal !D! damage. NL Startup: gain !M! Gold. NL Exhaust."
   },
   "${ModID}:WindShield": {
     "NAME": "Wind Shield",
