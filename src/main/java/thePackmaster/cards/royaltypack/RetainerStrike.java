@@ -20,17 +20,32 @@ public class RetainerStrike extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("RetainerStrike");
 
-
     public RetainerStrike(){
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.tags.add(CardTags.STRIKE);
         baseDamage = 8;
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
+        this.rawDescription = cardStrings.DESCRIPTION;
+        if (this.magicNumber == 1){
+            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
+        }
+        else {
+            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
+        }
+        initializeDescription();
     }
 
     @Override
     public void upp() {
-        this.upgradeMagicNumber(10);
+        this.upgradeDamage(2);
+        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        if (this.magicNumber == 1){
+            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
+        }
+        else {
+            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
+        }
+        initializeDescription();
     }
 
     @Override
