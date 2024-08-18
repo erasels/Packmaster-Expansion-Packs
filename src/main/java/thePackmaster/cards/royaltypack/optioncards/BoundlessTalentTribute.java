@@ -4,7 +4,6 @@ import basemod.AutoAdd;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ThePackmaster;
-import thePackmaster.actions.royaltypack.RetainerStrikeAction;
 import thePackmaster.actions.royaltypack.PayTributeAction;
 import thePackmaster.cards.royaltypack.AbstractRoyaltyCard;
 import thePackmaster.util.Wiz;
