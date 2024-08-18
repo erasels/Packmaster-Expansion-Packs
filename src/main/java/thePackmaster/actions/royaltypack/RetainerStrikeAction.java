@@ -7,12 +7,12 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 
-public class BoundlessTalentAction extends AbstractGameAction {
+public class RetainerStrikeAction extends AbstractGameAction {
 
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(
-            SpireAnniversary5Mod.makeID("BoundlessTalentAction")).TEXT;
+            SpireAnniversary5Mod.makeID("RetainerStrikeAction")).TEXT;
 
-    public BoundlessTalentAction() {
+    public RetainerStrikeAction() {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.SPECIAL;
     }
@@ -36,10 +36,9 @@ public class BoundlessTalentAction extends AbstractGameAction {
     private void doAction(){
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             if (AbstractDungeon.handCardSelectScreen.selectedCards.size() != 0){
-                AbstractCard tmpCard = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard().
-                        makeStatEquivalentCopy();
-                AbstractDungeon.player.hand.addToHand(AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard());
-                AbstractDungeon.player.hand.addToHand(tmpCard);
+                AbstractCard card = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard();
+                card.retain = true;
+                card.flash();
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = false;
                 AbstractDungeon.handCardSelectScreen.selectedCards.clear();
                 this.isDone = true;
@@ -48,9 +47,9 @@ public class BoundlessTalentAction extends AbstractGameAction {
     }
 
     private void doActionWithOneCardAtHand(){
-        AbstractCard tmpCard = AbstractDungeon.player.hand.getBottomCard().makeStatEquivalentCopy();
-        AbstractDungeon.player.hand.addToHand(AbstractDungeon.player.hand.getBottomCard());
-        AbstractDungeon.player.hand.addToHand(tmpCard);
+        AbstractCard card = AbstractDungeon.player.hand.getBottomCard();
+        card.retain = true;
+        card.flash();
         AbstractDungeon.handCardSelectScreen.selectedCards.clear();
         AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
         this.isDone = true;

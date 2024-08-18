@@ -4,7 +4,7 @@ import basemod.AutoAdd;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ThePackmaster;
-import thePackmaster.actions.royaltypack.BoundlessTalentAction;
+import thePackmaster.actions.royaltypack.RetainerStrikeAction;
 import thePackmaster.actions.royaltypack.PayTributeAction;
 import thePackmaster.cards.royaltypack.AbstractRoyaltyCard;
 import thePackmaster.util.Wiz;
@@ -35,7 +35,7 @@ public class BoundlessTalentTribute extends AbstractRoyaltyCard {
     @Override
     public void onChoseThisOption() {
         Wiz.atb(new PayTributeAction(TRIBUTE_GOLD_AMOUNT));
-        Wiz.atb(new BoundlessTalentAction());
+        Wiz.atb(new RetainerStrikeAction());
     }
 
 
