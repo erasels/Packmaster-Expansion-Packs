@@ -1,5 +1,6 @@
 package thePackmaster.cards.royaltypack;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,7 +18,10 @@ import thePackmaster.util.Wiz;
 
 import javax.smartcardio.Card;
 
+import java.util.List;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.atb;
 
 public class RetainerStrike extends AbstractRoyaltyCard {
@@ -56,7 +60,33 @@ public class RetainerStrike extends AbstractRoyaltyCard {
             toRetain.flash();
         }
         else {
-            atb(new RetainerStrikeAction(this));
+            if (AbstractDungeon.player.hand.isEmpty()) {
+
+            } else{
+                CardGroup hand = Wiz.p().hand;
+                CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.HAND);
+                for (AbstractCard c: hand.group){
+                    if (!c.retain && c != this) handWithoutRetain.addToHand(c);
+                }
+                if (handWithoutRetain.size() == 0){
+
+                }
+                else if (handWithoutRetain.size() == 1){
+                    AbstractCard card = AbstractDungeon.player.hand.getBottomCard();
+                    card.retain = true;
+                    adp().hand.addToTop(card);
+                    card.flash();
+                } else {
+                    Wiz.atb(new SelectCardsAction(handWithoutRetain.group, TEXT[0],
+                            (List<AbstractCard> cards) -> {
+                                AbstractCard card = cards.get(0);
+                                card.retain = true;
+                                adp().hand.addToBottom(card);
+                                card.flash();
+                            }
+                    ));
+                }
+            }
         }
     }
 }
