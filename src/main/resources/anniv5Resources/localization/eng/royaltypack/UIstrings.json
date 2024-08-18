@@ -13,9 +13,9 @@
       "Royal Crown"
     ]
   },
-  "${ModID}:BoundlessTalentAction": {
+  "${ModID}:RetainerStrikeAction": {
     "TEXT": [
-      "copy."
+      "Select the card that will have Retain this turn."
     ]
   },
   "${ModID}:MajesticBloodlineAction": {
