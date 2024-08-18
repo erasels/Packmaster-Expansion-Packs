@@ -1,6 +1,7 @@
 package thePackmaster.cards.royaltypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,6 +16,7 @@ import thePackmaster.util.Wiz;
 import javax.smartcardio.Card;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
 public class RetainerStrike extends AbstractRoyaltyCard {
 
@@ -24,48 +26,24 @@ public class RetainerStrike extends AbstractRoyaltyCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.tags.add(CardTags.STRIKE);
         baseDamage = 8;
-        magicNumber = baseMagicNumber = 2;
-        this.rawDescription = cardStrings.DESCRIPTION;
-        if (this.magicNumber == 1){
-            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
-        }
-        else {
-            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
-        }
-        initializeDescription();
     }
 
     @Override
     public void upp() {
         this.upgradeDamage(2);
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        if (this.magicNumber == 1){
-            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
-        }
-        else {
-            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
-        }
-        initializeDescription();
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         dmg(abstractMonster, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         if (!this.upgraded){
-            /*
-                Unupgraded retain logic:
-                Get hand group.
-                Remove from hand group all cards that already have Retain.
-                If hand group > 0
-                    Randomly choose one of the cards there.
-                    Give it retain.
-             */
             CardGroup hand = Wiz.p().hand;
             CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.HAND);
             for (AbstractCard c: hand.group){
-                if (!c.retain) handWithoutRetain.addToHand(c);
+                if (!c.retain && c != this) handWithoutRetain.addToHand(c);
             }
             AbstractCard toRetain;
+            atb(new TalkAction(true, "" + handWithoutRetain.size(), 0.6f, 1.6f));
             if (handWithoutRetain.size() > 0) {
                 toRetain = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
             }
@@ -74,6 +52,9 @@ public class RetainerStrike extends AbstractRoyaltyCard {
             }
             toRetain.retain = true;
             toRetain.flash();
+        }
+        else {
+            
         }
     }
 }

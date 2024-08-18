@@ -1,12 +1,8 @@
 {
   "${ModID}:RetainerStrike": {
     "NAME": "Retainer Strike",
-    "DESCRIPTION": "Deal !D! damage. NL ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
-    "EXTENDED_DESCRIPTION": ["One random card in your hand NL has Retain this turn.",
-                            "!M! random cards in your hand have Retain this turn.",
-                            "Choose one card in your hand. NL It has Retain this turn.",
-                            "Choose !M! cards in your hand. NL They have Retain this turn."]
+    "DESCRIPTION": "Deal !D! damage. NL One random card in your hand NL has Retain this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose one card in your hand. NL It has Retain this turn."
   },
   "${ModID}:NobleStrikeTribute": {
     "NAME": "Tribute",
