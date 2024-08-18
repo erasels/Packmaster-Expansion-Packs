@@ -1,11 +1,17 @@
 package thePackmaster.actions.royaltypack;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.util.Wiz;
+
+import java.util.List;
 
 import static thePackmaster.util.Wiz.adp;
 
@@ -14,37 +20,39 @@ public class RetainerStrikeAction extends AbstractGameAction {
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(
             SpireAnniversary5Mod.makeID("RetainerStrikeAction")).TEXT;
 
-    public RetainerStrikeAction() {
+    private static AbstractCard usedCard;
+
+    public RetainerStrikeAction(AbstractCard card) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.SPECIAL;
+        this.usedCard = card;
     }
 
     @Override
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FAST) {
-            if (AbstractDungeon.player.hand.isEmpty()) {
+        if (AbstractDungeon.player.hand.isEmpty()) {
+            this.isDone = true;
+        } else{
+            CardGroup hand = Wiz.p().hand;
+            CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.HAND);
+            for (AbstractCard c: hand.group){
+                if (!c.retain && c != usedCard) handWithoutRetain.addToHand(c);
+            }
+            if (handWithoutRetain.size() == 0){
                 this.isDone = true;
-            } else if (AbstractDungeon.player.hand.size() == 1) {
+            }
+            else if (handWithoutRetain.size() == 1){
                 doActionWithOneCardAtHand();
             } else {
-                AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false);
-                this.tickDuration();
-            }
-        } else {
-            doAction();
-        }
-    }
-
-    private void doAction(){
-        if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-            if (AbstractDungeon.handCardSelectScreen.selectedCards.size() != 0){
-                AbstractCard card = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard();
-                card.retain = true;
-                adp().hand.addToBottom(card);
-                card.flash();
-                AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = false;
-                AbstractDungeon.handCardSelectScreen.selectedCards.clear();
-                this.isDone = true;
+                Wiz.atb(new SelectCardsAction(handWithoutRetain.group, TEXT[0],
+                        (List<AbstractCard> cards) -> {
+                            AbstractCard card = cards.get(0);
+                            card.retain = true;
+                            adp().hand.addToBottom(card);
+                            card.flash();
+                            this.isDone = true;
+                        }
+                ));
             }
         }
     }
@@ -52,10 +60,8 @@ public class RetainerStrikeAction extends AbstractGameAction {
     private void doActionWithOneCardAtHand(){
         AbstractCard card = AbstractDungeon.player.hand.getBottomCard();
         card.retain = true;
-        adp().hand.addToBottom(card);
+        adp().hand.addToTop(card);
         card.flash();
-        AbstractDungeon.handCardSelectScreen.selectedCards.clear();
-        AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
         this.isDone = true;
     }
 }

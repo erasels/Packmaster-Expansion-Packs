@@ -56,7 +56,7 @@ public class RetainerStrike extends AbstractRoyaltyCard {
             toRetain.flash();
         }
         else {
-            atb(new RetainerStrikeAction());
+            atb(new RetainerStrikeAction(this));
         }
     }
 }

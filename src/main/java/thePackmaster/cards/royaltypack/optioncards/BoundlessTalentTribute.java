@@ -35,7 +35,6 @@ public class BoundlessTalentTribute extends AbstractRoyaltyCard {
     @Override
     public void onChoseThisOption() {
         Wiz.atb(new PayTributeAction(TRIBUTE_GOLD_AMOUNT));
-        Wiz.atb(new RetainerStrikeAction());
     }
 
 
