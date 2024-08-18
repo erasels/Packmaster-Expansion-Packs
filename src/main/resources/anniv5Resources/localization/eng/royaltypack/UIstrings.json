@@ -15,7 +15,7 @@
   },
   "${ModID}:RetainerStrikeAction": {
     "TEXT": [
-      "Select the card that will have Retain this turn."
+      "will have Retain this turn."
     ]
   },
   "${ModID}:MajesticBloodlineAction": {
