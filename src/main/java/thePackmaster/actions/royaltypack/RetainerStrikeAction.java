@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 
+import static thePackmaster.util.Wiz.adp;
+
 public class RetainerStrikeAction extends AbstractGameAction {
 
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(
@@ -38,6 +40,7 @@ public class RetainerStrikeAction extends AbstractGameAction {
             if (AbstractDungeon.handCardSelectScreen.selectedCards.size() != 0){
                 AbstractCard card = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard();
                 card.retain = true;
+                adp().hand.addToBottom(card);
                 card.flash();
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = false;
                 AbstractDungeon.handCardSelectScreen.selectedCards.clear();
@@ -49,6 +52,7 @@ public class RetainerStrikeAction extends AbstractGameAction {
     private void doActionWithOneCardAtHand(){
         AbstractCard card = AbstractDungeon.player.hand.getBottomCard();
         card.retain = true;
+        adp().hand.addToBottom(card);
         card.flash();
         AbstractDungeon.handCardSelectScreen.selectedCards.clear();
         AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
