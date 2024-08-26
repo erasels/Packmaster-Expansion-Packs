@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.PotionBounceEffect;
 import thePackmaster.powers.serpentinepack.TaintedEnemy;
-import thePackmaster.stances.serpentinepack.VenemousStance;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

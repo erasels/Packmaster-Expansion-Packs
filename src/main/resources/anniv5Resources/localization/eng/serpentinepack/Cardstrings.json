@@ -38,9 +38,5 @@
 },"${ModID}:BrutalStrikes": {
     "NAME": "Brutal Strikes",
     "DESCRIPTION": "Deal !D! damage twice. NL Deals !M! additional damage for each unique debuff on the enemy."
-},"${ModID}:DirtyTrick": {
-    "NAME": "Dirty Trick",
-    "DESCRIPTION": "Ethereal. NL Enter ${ModID}:Cunning. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Cunning. NL Exhaust."
 }
 }
