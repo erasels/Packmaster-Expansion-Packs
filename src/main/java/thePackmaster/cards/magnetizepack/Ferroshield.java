@@ -1,8 +1,5 @@
 package thePackmaster.cards.magnetizepack;
 
-import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.magnetizepack.MagnetizeAction;
 import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,0 +1,15 @@
+{
+  "${ModID}:NeedleworkPack": {
+    "TEXT": [
+      "Needlework",
+      "${ModID}:Stitch your cards together and ${ModID}:Bind your enemies to render them powerless.",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:NeedleworkPackHat": {
+    "TEXT": [
+      "Handmade! But it seems like you made it a bit too small.",
+      "Balloon Hat"
+    ]
+  }
+}

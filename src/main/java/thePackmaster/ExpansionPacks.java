@@ -13,15 +13,17 @@ import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.CalmStance;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import thePackmaster.cards.pickthemallpack.GrabAndGo;
+import thePackmaster.cards.showmanpack.AbstractShowmanCard;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.specialhats.InstantDeathHat;
 import thePackmaster.packs.CthulhuPack;
 import thePackmaster.packs.FrostPack;
 import thePackmaster.packs.InstantDeathPack;
 import thePackmaster.packs.SpheresPack;
-import thePackmaster.patches._expansionpacks.RelicParentPackExpansionPatches;
+import thePackmaster.patches.compatibility.RelicParentPackExpansionPatches;
 import thePackmaster.patches.overwhelmingpack.MakeRoomPatch;
 import thePackmaster.patches.sneckopack.EnergyCountPatch;
+import thePackmaster.powers.needlework.CopyAndPastePower;
 import thePackmaster.relics.summonspack.BlueSkull;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 import thePackmaster.stances.cthulhupack.NightmareStance;
@@ -42,8 +44,11 @@ public class ExpansionPacks implements
         PostBattleSubscriber,
         OnPlayerLoseBlockSubscriber,
         OnPowersModifiedSubscriber,
-        AddAudioSubscriber {
+        AddAudioSubscriber,
+        PostExhaustSubscriber{
 
+    public static final String FULL_MOD_NAME = "The Packmaster: Expansion Packs";
+    public static final String SHORTENED_MOD_NAME = "PM Expansion Packs";
     private static ExpansionPacks thismod;
     public static final String modID = "expansionPacks";
 
@@ -75,11 +80,13 @@ public class ExpansionPacks implements
         EnergyCountPatch.energySpentThisCombat = 0;
         CthulhuPack.lunacyThisCombat = 0;
         DebuffLossManager.resetDebuffTracker(); // MariDebuffPack
+        CopyAndPastePower.grossStaticListOfUUIDsToShowIcon.clear();
     }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         MakeRoomPatch.reset();
+        CopyAndPastePower.grossStaticListOfUUIDsToShowIcon.clear();
         if (abstractRoom instanceof MonsterRoomBoss && abstractRoom.monsters.areMonstersDead()) {
             List<AbstractCard> cardsToRemove = AbstractDungeon.player.masterDeck.group.stream().filter(c -> c.cardID.equals(GrabAndGo.ID)).collect(Collectors.toCollection(ArrayList::new));
             for (AbstractCard c : cardsToRemove) {
@@ -142,5 +149,10 @@ public class ExpansionPacks implements
     @Override
     public void receiveAddAudio() {
         BaseMod.addAudio(SpireAnniversary5Mod.makeID("MariDebuffPack_TheFLYINGCAR"), SpireAnniversary5Mod.makePath("audio/maridebuffpack/MariTheFlyingCar.ogg"));
+    }
+
+    @Override
+    public void receivePostExhaust(AbstractCard exhaustedCard) {
+        AbstractShowmanCard.postExhaustTrigger(exhaustedCard);
     }
 }

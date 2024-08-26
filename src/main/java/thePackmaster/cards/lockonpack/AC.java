@@ -1,10 +1,7 @@
 package thePackmaster.cards.lockonpack;
 
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.Lightning;
 import thePackmaster.cards.lockonpack.special.DC;
 import thePackmaster.util.Wiz;
 

@@ -1,27 +1,14 @@
 package thePackmaster.cards.sneckopack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import com.megacrit.cardcrawl.vfx.combat.FlashPowerEffect;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.EasyXCostAction;
 import thePackmaster.actions.sneckopack.RandomizeCostAction;
-import thePackmaster.powers.boardgamepack.AdvantagePower;
-import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
-import thePackmaster.vfx.legacypack.ShootAnythingEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.DICE_KEY;
 import static thePackmaster.SpireAnniversary5Mod.makeID;

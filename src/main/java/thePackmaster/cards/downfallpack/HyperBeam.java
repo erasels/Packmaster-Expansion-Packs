@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.downfallpack.DeEnergizedPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

@@ -1,0 +1,10 @@
+{
+  "${ModID}:PileOfShells": {
+    "NAME": "Pile of Shells",
+    "FLAVOR": "They stack up nicely, handle with care.",
+    "DESCRIPTIONS": [
+      "At the end of your first #b",
+       " turns each combat, gain a #y${ModID}:Shell."
+    ]
+  }
+}

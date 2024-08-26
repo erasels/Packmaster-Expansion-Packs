@@ -2,12 +2,10 @@ package thePackmaster.cards.darksoulspack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.darksoulspack.PrisonersChainPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
 
 public class PrisonersChain extends AbstractDarkSoulsCard {
     public final static String ID = makeID("PrisonersChain");

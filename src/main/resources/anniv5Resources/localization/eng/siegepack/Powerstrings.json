@@ -1,0 +1,47 @@
+{
+  "${ModID}:ShrapnelPower": {
+    "NAME": "Shrapnel",
+    "DESCRIPTIONS": [
+      "Your attacks apply #b",
+      " #yVulnerable and #b",
+      " #yIgnite per 10 unblocked damage they deal."
+    ]
+  },
+  "${ModID}:ShellPower": {
+    "NAME": "Shell",
+    "DESCRIPTIONS": [
+      "Your attacks deal #b",
+      " additional damage and consume #b1 #yShell."
+    ]
+  },
+  "${ModID}:ShellForgeEffectUpPower": {
+    "NAME": "Shell Forge",
+    "DESCRIPTIONS": [
+     "#yShells additionally provide #b",
+      " more damage."
+    ]
+  },
+  "${ModID}:ShellForgeTurnGainPower": {
+    "NAME": "Shell Forge",
+    "DESCRIPTIONS": [
+      "You gain #b",
+       " #yShell at the start of your turn.",
+       " #yShells at the start of your turn."
+    ]
+  },
+  "${ModID}:DigInPower": {
+    "NAME": "Dig In",
+    "DESCRIPTIONS": [
+     "After the start of your turn, if you have #yBlock, gain #b",
+      " [E] ."
+    ]
+  },
+  "${ModID}:PrevailPower": {
+    "NAME": "Prevail",
+    "DESCRIPTIONS": [
+     "Whenever you deal at least #b",
+      " damage in a single hit, the enemy loses #b",
+      " #yStrength this turn."
+    ]
+  }
+}

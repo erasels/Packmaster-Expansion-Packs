@@ -2,7 +2,7 @@
   "${ModID}:MagnetizePack": {
     "TEXT": [
       "Magnetize",
-      "Randomly spread Magnetized through your cards, and turn your deck into an energy generator.",
+      "Randomly spread ${ModID}:Magnetized through your cards, and turn your deck into an energy generator.",
       "wavewhyse☆"
     ]
   },

@@ -1,0 +1,33 @@
+{
+  "${ModID}:NextTrickPower": {
+    "NAME": "接下来的把戏...",
+    "DESCRIPTIONS": [
+      "每当你打出一张 #y能力 ，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "${ModID}:NowYouDontPower": {
+    "NAME": "看不见我",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将一张 ",
+      " 加入你的手牌。"
+    ]
+  },
+  "${ModID}:HallOfMirrorsPower": {
+    "NAME": "镜子迷宫",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 回合后，将一张 #y余像 加入你的手牌。",
+      " 回合后，加入 #b",
+      " 张 #y余像 到你的手牌中。"
+    ]
+  },
+  "${ModID}:MagicCylinderPower": {
+    "NAME": "魔法筒",
+    "DESCRIPTIONS": [
+      "下一次你将要受到未被格挡的攻击伤害时，阻止它并将等量伤害反弹给攻击者。",
+      "接下来 #b",
+      " 次你将要受到未被格挡的攻击伤害时，阻止它并将等量伤害反弹给攻击者。"
+    ]
+  }
+}
