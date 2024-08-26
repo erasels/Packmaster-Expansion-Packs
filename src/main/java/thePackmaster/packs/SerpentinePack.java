@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.serpentinepack.*;
-import thePackmaster.cards.shamanpack.*;
 
 import java.util.ArrayList;
 
@@ -28,7 +27,7 @@ public class SerpentinePack extends AbstractCardPack {
         cards.add(Toxicology.ID);
         cards.add(Patience.ID);
         cards.add(CheapShot.ID);
-        cards.add(EvasiveTactics.ID);
+        cards.add(PrepareStrike.ID);
         cards.add(BrutalStrikes.ID);
         cards.add(SinisterConcoction.ID);
         cards.add(ColdCalculated.ID);

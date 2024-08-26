@@ -1,37 +1,43 @@
 {
 "${ModID}:ApplyPoison": {
-    "NAME": "Venomous Sheath",
-    "DESCRIPTION": "Enter ${ModID}:Venomous. NL At the start of your next turn, exit ${ModID}:Venomous.",
-    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Venomous. NL At the start of your next turn, exit ${ModID}:Venomous. NL Draw 1 card."
+    "NAME": "Venom Sheath",
+    "DESCRIPTION": "Enter ${ModID}:Venomous.",
+    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Venomous. NL Draw a card."
 },"${ModID}:Guile": {
     "NAME": "Guile",
-    "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL Add a *Dirty *Trick to your hand."
+    "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL This costs 1 more this combat."
 },"${ModID}:Toxicology": {
     "NAME": "Toxicology",
-    "DESCRIPTION": "Enter ${ModID}:Venomous and draw !M! cards. NL If you are in ${ModID}:Venomous, exit it and gain [E] instead.",
-    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Venomous and draw !M! cards. NL If you are in ${ModID}:Venomous, exit it and gain [E] [E] instead."
+    "DESCRIPTION": "Draw 2 cards. NL Enter ${ModID}:Venomous. If you are in ${ModID}:Venomous, exit it and gain [E] instead.",
+    "UPGRADE_DESCRIPTION": "Draw 2 cards. NL Enter ${ModID}:Venomous. If you are in ${ModID}:Venomous, exit it and gain [E] [E] instead."
 },"${ModID}:Patience": {
-    "NAME": "Patience",
-    "DESCRIPTION": "Retain. NL Enter ${ModID}:Cunning. NL When Retained, gain !B! Block."
+    "NAME": "Hide in Shadow",
+    "DESCRIPTION": "Gain !B! Block. NL If you are in a Stance, exit it and gain !B! Block again."
 },"${ModID}:DaggerRush": {
     "NAME": "Dagger Rush",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Hits an additional time if you are in a Stance."
+    "DESCRIPTION": "Deal !D! damage !M! times."
 },"${ModID}:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL If in a Stance, gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL If in a Stance, gain [E]. NL Exhaust."
 },"${ModID}:ColdCalculated": {
     "NAME": "Cold and Calculated",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Frostbite. NL Enter ${ModID}:Cunning."
-},"${ModID}:EvasiveTactics": {
-    "NAME": "Evasive Tactics",
-    "DESCRIPTION": "At the end of your turn if you are in a Stance, gain !M! Block. NL Exit your Stance at the start of the turn."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Frostbite. NL If in a Stance, Retain 2 cards this turn."
+},"${ModID}:PrepareStrike": {
+    "NAME": "Prepare to strike",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor for each unique debuff on enemies.",
+    "EXTENDED_DESCRIPTION": [
+        "Gain !B! Block. NL Gain !M! Vigor for each unique debuff on enemies. NL ( ",
+        " debuff. )",
+        " debuffs. )"
+    ]
 },"${ModID}:SinisterConcoction": {
     "NAME": "Sinister Concoction",
-    "DESCRIPTION": "Apply !M! ${ModID}:Tainted. NL Enter ${ModID}:Venomous. NL Exhaust."
+    "DESCRIPTION": "Apply !M! ${ModID}:Tainted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! ${ModID}:Tainted. NL Exhaust."
 },"${ModID}:BrutalStrikes": {
     "NAME": "Brutal Strikes",
-    "DESCRIPTION": "Deal !D! damage twice. NL Vigor and ${ModID}:Dice affect this card !M! times."
+    "DESCRIPTION": "Deal !D! damage twice. NL Deals !M! additional damage for each unique debuff on the enemy."
 },"${ModID}:DirtyTrick": {
     "NAME": "Dirty Trick",
     "DESCRIPTION": "Ethereal. NL Enter ${ModID}:Cunning. NL Exhaust.",

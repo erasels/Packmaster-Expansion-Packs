@@ -14,9 +14,9 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class DaggerRush extends AbstractSerpentineCard {
 
     private static final int COST = 1;
-    private static final int MAGIC = 2;
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_PLUS_DAMAGE = 1;
+    private static final int MAGIC = 3;
+    private static final int DAMAGE = 3;
+    private static final int UPG_MAGIC = 1;
     public final static String ID = makeID("DaggerRush");
 
 
@@ -31,18 +31,10 @@ public class DaggerRush extends AbstractSerpentineCard {
         for (int i = 0; i < magicNumber; i++) {
             addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
-        if (!abstractPlayer.stance.ID.equals("Neutral")) {
-            addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        }
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = !AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     @Override
     public void upp() {
-        upgradeDamage(UPGRADE_PLUS_DAMAGE);
+        upgradeMagicNumber(UPG_MAGIC);
     }
 }

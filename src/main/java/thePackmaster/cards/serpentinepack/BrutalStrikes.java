@@ -20,7 +20,7 @@ public class BrutalStrikes extends AbstractSerpentineCard {
     private static final int COST = 2;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 10;
     public final static String ID = makeID("BrutalStrikes");
 
 
@@ -37,48 +37,20 @@ public class BrutalStrikes extends AbstractSerpentineCard {
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
-
-    public void applyPowers() {
-        AbstractPower vigor = AbstractDungeon.player.getPower(VigorPower.POWER_ID);
-        AbstractPower dice = AbstractDungeon.player.getPower(DicePower.POWER_ID);
-        if (vigor != null) {
-            vigor.amount *= this.magicNumber;
-        }
-        if (dice != null) {
-            dice.amount *= this.magicNumber;
-        }
-
-        super.applyPowers();
-
-        if (vigor != null) {
-            vigor.amount /= this.magicNumber;
-        }
-        if (dice != null) {
-            dice.amount /= this.magicNumber;
-        }
-    }
-
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        AbstractPower vigor = AbstractDungeon.player.getPower(VigorPower.POWER_ID);
-        AbstractPower dice = AbstractDungeon.player.getPower(DicePower.POWER_ID);
-        if (vigor != null) {
-            vigor.amount *= this.magicNumber;
-        }
-        if (dice != null) {
-            dice.amount *= this.magicNumber;
-        }
-
         super.calculateCardDamage(mo);
-
-        if (vigor != null) {
-            vigor.amount /= this.magicNumber;
+        int debuffs = 0;
+        for (AbstractPower p : mo.powers){
+            if (p.type.equals(AbstractPower.PowerType.DEBUFF)){
+                debuffs++;
+            }
         }
-        if (dice != null) {
-            dice.amount /= this.magicNumber;
+        if (debuffs != 0){
+            isDamageModified = true;
+            damage += (debuffs * magicNumber);
         }
     }
-
     @Override
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);

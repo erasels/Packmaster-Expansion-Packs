@@ -24,7 +24,6 @@ public class PoisonedBlades extends AbstractSerpentineCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new ChangeStanceAction(new VenemousStance()));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new VenemousExitPower(abstractPlayer, 0), 0));
         if (upgraded){
             addToBot(new DrawCardAction(1));
         }
