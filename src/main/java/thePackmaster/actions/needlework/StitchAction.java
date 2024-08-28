@@ -24,7 +24,7 @@ public class StitchAction extends AbstractGameAction {
     }
     public StitchAction(AbstractCard toStitch, AbstractCard target)
     {
-        this(toStitch, null, true);
+        this(toStitch, target, true);
     }
 
     public StitchAction(AbstractCard toStitch, AbstractCard target, boolean triggerOnStitch) {
