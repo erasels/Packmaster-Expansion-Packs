@@ -43,6 +43,6 @@
   },
   "${ModID}:Patchwork": {
     "NAME": "拼布",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 将一张该牌的复制 ${ModID}:缝合 到一张随机手牌上。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 将一张该牌的复制 ${ModID}:缝合 到抽牌堆的一张随机牌上。"
   }
 }
