@@ -45,7 +45,6 @@ public class RetainerStrike extends AbstractRoyaltyCard {
                 if (!c.retain && !c.selfRetain && c != this) handWithoutRetain.addToHand(c);
             }
             AbstractCard toRetain;
-            atb(new TalkAction(true, "" + handWithoutRetain.size(), 0.6f, 1.6f));
             if (handWithoutRetain.size() > 0) {
                 toRetain = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
             }
@@ -68,16 +67,14 @@ public class RetainerStrike extends AbstractRoyaltyCard {
 
                 }
                 else if (handWithoutRetain.size() == 1){
-                    AbstractCard card = AbstractDungeon.player.hand.getBottomCard();
+                    AbstractCard card = hand.getRandomCard(AbstractDungeon.cardRandomRng);
                     card.retain = true;
-                    adp().hand.addToTop(card);
                     card.flash();
                 } else {
                     Wiz.atb(new SelectCardsAction(handWithoutRetain.group, CHOOSE_RETAIN_TEXT[0],
                             (List<AbstractCard> cards) -> {
                                 AbstractCard card = cards.get(0);
                                 card.retain = true;
-                                adp().hand.addToBottom(card);
                                 card.flash();
                             }
                     ));
