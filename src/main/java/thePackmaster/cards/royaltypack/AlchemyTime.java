@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.potions.PotionSlot;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.royaltypack.MajesticBloodlineAction;
 import thePackmaster.actions.royaltypack.PayTributeAction;
@@ -49,6 +50,7 @@ public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
     @Override
     public void onObtainCard(){
         AbstractDungeon.player.potionSlots += 1;
+        AbstractDungeon.player.potions.add(new PotionSlot(AbstractDungeon.player.potionSlots - 1));
         AbstractDungeon.player.gainGold(75);
         CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
     }

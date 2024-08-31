@@ -76,10 +76,7 @@
   },
   "${ModID}:AlchemyTime": {
     "NAME": "Alchemy Time",
-    "DESCRIPTION": [
-      "Pay 25 Gold to gain a Potion. NL When you use a Potion, draw ",
-      " cards. NL ${ModID}:Pickup: gain a Potion Slot and 75 Gold."
-    ]
+    "DESCRIPTION": "Pay 25 Gold to gain a Potion. NL When you use a Potion, draw !M! cards. NL ${ModID}:Pickup: gain a Potion Slot and 75 Gold."
   },
   "${ModID}:MajesticBloodlineTribute": {
     "NAME": "Tribute",
