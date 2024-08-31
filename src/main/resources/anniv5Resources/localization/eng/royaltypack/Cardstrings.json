@@ -86,9 +86,9 @@
     "NAME": "Austerity",
     "DESCRIPTION": "Nothing else happens."
   },
-  "${ModID}:MoreSupplies": {
-    "NAME": "More Supplies!",
-    "DESCRIPTION": "${ModID}:Tribute 30: fill your Potion Belt with random Potions. ${ModID}:Austerity: Gain a random Potion. "
+  "${ModID}:TacticalReroll": {
+    "NAME": "Tactical Reroll",
+    "DESCRIPTION": "Pay 10 Gold to put !M! cards from your Discard pile in your hand. NL Exhaust."
   },
   "${ModID}:MoreSuppliesTribute": {
     "NAME": "Tribute",

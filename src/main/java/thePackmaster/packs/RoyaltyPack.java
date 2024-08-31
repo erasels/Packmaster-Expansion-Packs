@@ -30,7 +30,7 @@ public class RoyaltyPack extends AbstractCardPack {
         cards.add(BoundlessTalent.ID);
         cards.add(RoyalSupplyLines.ID);
         cards.add(AlchemyTime.ID);
-        cards.add(MoreSupplies.ID);
+        cards.add(TacticalReroll.ID);
         return cards;
     }
 }
