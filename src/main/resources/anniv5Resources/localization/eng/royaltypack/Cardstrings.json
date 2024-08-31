@@ -62,10 +62,9 @@
     "NAME": "Austerity",
     "DESCRIPTION": "Draw until you have !M!."
   },
-  "${ModID}:Willpower": {
-    "NAME": "Willpower",
-    "DESCRIPTION": "${ModID}:Tribute 10: Gain 1 Artifact and 1 Buffer. ${ModID}:Austerity: Gain 1 Artifact. ",
-    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Tribute 10: Gain 1 Artifact and 1 Buffer. ${ModID}:Austerity: Gain 1 Artifact. "
+  "${ModID}:RoyalSupplyLines": {
+    "NAME": "Royal Supply Lines",
+    "DESCRIPTION": "Each turn, draw 2 extra cards. NL At the end of your turn, Retain up to 2 cards."
   },
   "${ModID}:WillpowerTribute": {
     "NAME": "Tribute",

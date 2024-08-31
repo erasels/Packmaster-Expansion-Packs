@@ -1,12 +1,11 @@
 {
-  "${ModID}:NobleFormPower": {
-    "NAME": "Noble Form",
+  "${ModID}:RoyalSupplyLinesPower": {
+    "NAME": "Royal Supply Lines",
     "DESCRIPTIONS": [
-      "When you discard a card, draw ",
-      "a card. ",
-      " cards. ",
-      "When you lose gold, gain ",
-      " gold."
+      "Each turn, draw ",
+      " extra cards.",
+      " At the end of your turn, Retain up to ",
+      " cards."
     ]
   },
 
