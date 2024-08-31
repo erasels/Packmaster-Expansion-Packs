@@ -74,9 +74,12 @@
     "NAME": "Austerity",
     "DESCRIPTION": "Gain 1 Artifact."
   },
-  "${ModID}:MajesticBloodline": {
-    "NAME": "Majestic Bloodline",
-    "DESCRIPTION": "Shuffle 1 of !M! random Powers to your draw pile. ${ModID}:Tribute 10: play this card again. Exhaust."
+  "${ModID}:AlchemyTime": {
+    "NAME": "Alchemy Time",
+    "DESCRIPTION": [
+      "Pay 25 Gold to gain a Potion. NL When you use a Potion, draw ",
+      " cards. NL ${ModID}:Pickup: gain a Potion Slot and 75 Gold."
+    ]
   },
   "${ModID}:MajesticBloodlineTribute": {
     "NAME": "Tribute",
