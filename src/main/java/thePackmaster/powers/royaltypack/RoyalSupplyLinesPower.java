@@ -3,10 +3,12 @@ package thePackmaster.powers.royaltypack;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
+import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.patches.DiscardHookPatch;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
@@ -30,30 +32,19 @@ public class RoyalSupplyLinesPower extends AbstractPackmasterPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + BASE_CARDS_TO_DRAW + DESCRIPTIONS[1];
-        this.description += DESCRIPTIONS[2] + BASE_CARDS_TO_RETAIN + DESCRIPTIONS[3];
+        this.description = DESCRIPTIONS[0] + this.amount * BASE_CARDS_TO_DRAW + DESCRIPTIONS[1];
+        this.description += DESCRIPTIONS[2] + this.amount * BASE_CARDS_TO_RETAIN + DESCRIPTIONS[3];
     }
 
     @Override
     public void atStartOfTurn(){
-        atb(new DrawCardAction(BASE_CARDS_TO_DRAW));
+        atb(new DrawCardAction(this.amount * BASE_CARDS_TO_DRAW));
     }
 
     @Override
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         if (isPlayer){
-            CardGroup hand = Wiz.p().hand;
-            CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.HAND);
-            for (AbstractCard c: hand.group){
-                if (!c.retain && !c.selfRetain) handWithoutRetain.addToHand(c);
-            }
-            Wiz.atb(new SelectCardsAction(handWithoutRetain.group, 2, "testing",
-                    (List<AbstractCard> cards) -> {
-                        AbstractCard card = cards.get(0);
-                        card.retain = true;
-                        card.flash();
-                    }
-            ));
+            Wiz.atb(new RetainCardsAction(AbstractDungeon.player, this.amount * BASE_CARDS_TO_RETAIN));
         }
     }
 

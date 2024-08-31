@@ -7,16 +7,5 @@
       " At the end of your turn, Retain up to ",
       " cards."
     ]
-  },
-
-  "${ModID}:TrueNobleFormPower": {
-    "NAME": "True Noble Form",
-    "DESCRIPTIONS": [
-      "When you discard or play a card, draw ",
-      "a card. ",
-      " cards. ",
-      "When you lose gold or HP, gain ",
-      " gold."
-    ]
   }
 }
