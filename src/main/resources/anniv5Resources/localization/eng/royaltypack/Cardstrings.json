@@ -49,18 +49,9 @@
     "DESCRIPTION": "${ModID}:Austerity: Deal !D! damage to ALL enemies.",
     "UPGRADE_DESCRIPTION": "${ModID}:Austerity: Deal !D! damage to ALL enemies."
   },
-  "${ModID}:BoundlessTalent": {
-    "NAME": "Boundless Talent",
-    "DESCRIPTION": "${ModID}:Tribute 5: Copy one card in your hand. ${ModID}:Austerity: Draw until you have !M!.  NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Tribute 5: Copy one card in your hand. ${ModID}:Austerity: Draw until you have !M!. NL Exhaustive !stslib:ex!."
-  },
-  "${ModID}:BoundlessTalentTribute": {
-    "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 5: Copy one card in your hand."
-  },
-  "${ModID}:BoundlessTalentAusterity": {
-    "NAME": "Austerity",
-    "DESCRIPTION": "Draw until you have !M!."
+  "${ModID}:Stratagem": {
+    "NAME": "Stratagem",
+    "DESCRIPTION": "The target lose !M! Strength this turn. NL At the start of the next turn, NL gain 1 Hired Support."
   },
   "${ModID}:RoyalSupplyLines": {
     "NAME": "Royal Supply Lines",

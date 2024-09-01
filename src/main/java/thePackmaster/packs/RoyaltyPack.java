@@ -27,7 +27,7 @@ public class RoyaltyPack extends AbstractCardPack {
         cards.add(WindShield.ID);
         cards.add(Forcefield.ID);
         cards.add(MiningStrike.ID);
-        cards.add(BoundlessTalent.ID);
+        cards.add(Stratagem.ID);
         cards.add(RoyalSupplyLines.ID);
         cards.add(AlchemyTime.ID);
         cards.add(TacticalReroll.ID);
