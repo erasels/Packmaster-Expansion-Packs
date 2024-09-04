@@ -24,7 +24,7 @@
     "NAME": "Cold and Calculated",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Frostbite. NL If in a Stance, Retain 2 cards this turn."
 },"${ModID}:PrepareStrike": {
-    "NAME": "Prepare to strike",
+    "NAME": "Prepare to Strike",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor for each unique debuff on enemies.",
     "EXTENDED_DESCRIPTION": [
         "Gain !B! Block. NL Gain !M! Vigor for each unique debuff on enemies. NL (",
