@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.combat.EmptyStanceEffect;
 import thePackmaster.stances.serpentinepack.VenemousStance;
 
@@ -31,8 +32,8 @@ public class Toxicology extends AbstractSerpentineCard {
         this.addToBot(new DrawCardAction(2));
 
         if (abstractPlayer.stance.ID.equals(VenemousStance.STANCE_ID)){
-            this.addToBot(new NotStanceCheckAction("Neutral", new VFXAction(new EmptyStanceEffect(abstractPlayer.hb.cX, abstractPlayer.hb.cY), 0.1F)));
-            this.addToBot(new ChangeStanceAction("Neutral"));
+            this.addToBot(new NotStanceCheckAction(NeutralStance.STANCE_ID, new VFXAction(new EmptyStanceEffect(abstractPlayer.hb.cX, abstractPlayer.hb.cY), 0.1F)));
+            this.addToBot(new ChangeStanceAction(NeutralStance.STANCE_ID));
             this.addToBot(new GainEnergyAction(magicNumber));
         }
         else {

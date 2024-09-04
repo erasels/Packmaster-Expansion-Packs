@@ -27,9 +27,8 @@
     "NAME": "Prepare to strike",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor for each unique debuff on enemies.",
     "EXTENDED_DESCRIPTION": [
-        "Gain !B! Block. NL Gain !M! Vigor for each unique debuff on enemies. NL ( ",
-        " debuff. )",
-        " debuffs. )"
+        "Gain !B! Block. NL Gain !M! Vigor for each unique debuff on enemies. NL (#b",
+        " Vigor.)"
     ]
 },"${ModID}:SinisterConcoction": {
     "NAME": "Sinister Concoction",

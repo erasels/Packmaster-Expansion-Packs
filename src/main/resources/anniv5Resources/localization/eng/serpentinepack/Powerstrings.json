@@ -1,8 +1,4 @@
 {
-  "${ModID}:VenemousExitPower": {
-    "NAME": "Exit Venomous",
-    "DESCRIPTIONS": ["At the start of your turn, exit #yVenomous."]
-  },
   "${ModID}:TaintedEnemy": {
     "NAME": "Tainted",
     "DESCRIPTIONS": [

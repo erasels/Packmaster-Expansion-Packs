@@ -34,7 +34,6 @@ public class BrutalStrikes extends AbstractSerpentineCard {
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
         int debuffs = 0;
         for (AbstractPower p : mo.powers){
             if (p.type.equals(AbstractPower.PowerType.DEBUFF)){
@@ -42,8 +41,14 @@ public class BrutalStrikes extends AbstractSerpentineCard {
             }
         }
         if (debuffs != 0){
-            isDamageModified = true;
-            damage += (debuffs * magicNumber);
+            int realBaseDamage = this.baseDamage;
+            this.baseDamage += (this.magicNumber * debuffs);
+            super.calculateCardDamage(mo);
+            this.baseDamage = realBaseDamage;
+            this.isDamageModified = this.damage != this.baseDamage;
+        }
+        else {
+            super.calculateCardDamage(mo);
         }
     }
     @Override

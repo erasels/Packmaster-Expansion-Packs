@@ -38,7 +38,7 @@ public class PrepareStrike extends AbstractSerpentineCard {
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                int uniqueDebuffs = numberUniqueDebuffs();
+                int uniqueDebuffs = getDebuffCount();
                 if (uniqueDebuffs != 0){
                     addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new VigorPower(abstractPlayer, uniqueDebuffs * magicNumber), uniqueDebuffs * magicNumber));
                 }
@@ -50,33 +50,19 @@ public class PrepareStrike extends AbstractSerpentineCard {
     @Override
     public void applyPowers(){
         super.applyPowers();
-
-        int uniqueDebuffs = numberUniqueDebuffs();
-        if (uniqueDebuffs == 1){
-            this.rawDescription = EXTENDED_DESCRIPTION[0] + uniqueDebuffs + EXTENDED_DESCRIPTION[1];
-        }
-        else {
-            this.rawDescription = EXTENDED_DESCRIPTION[0] + uniqueDebuffs + EXTENDED_DESCRIPTION[2];
-        }
+        int uniqueDebuffs = getDebuffCount();
+        this.rawDescription = EXTENDED_DESCRIPTION[0] + (uniqueDebuffs * magicNumber) + EXTENDED_DESCRIPTION[1];
         initializeDescription();
     }
 
-    public int numberUniqueDebuffs(){
-        ArrayList<String> debuffList = new ArrayList<>();
-        for (AbstractMonster mo : Wiz.getEnemies()){
-            for (AbstractPower p : mo.powers){
-                if (p.type.equals(AbstractPower.PowerType.DEBUFF) && !debuffList.contains(p.ID)){
-                    debuffList.add(p.ID);
-                }
-            }
-        }
-        return debuffList.size();
+    private int getDebuffCount() {
+        return (int)Wiz.getEnemies().stream().flatMap(m -> m.powers.stream()).filter(p -> p.type == AbstractPower.PowerType.DEBUFF).map(p -> p.ID).distinct().count();
     }
 
     @Override
     public void triggerOnGlowCheck(){
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (numberUniqueDebuffs() > 0) {
+        if (getDebuffCount() > 0) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
     }

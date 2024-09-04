@@ -30,7 +30,7 @@ public class Patience extends AbstractSerpentineCard {
         addToBot(new GainBlockAction(abstractPlayer, block));
 
         if (!abstractPlayer.stance.ID.equals(NeutralStance.STANCE_ID)){
-            addToBot(new NotStanceCheckAction("Neutral", new VFXAction(new EmptyStanceEffect(abstractPlayer.hb.cX, abstractPlayer.hb.cY), 0.1F)));
+            addToBot(new NotStanceCheckAction(NeutralStance.STANCE_ID, new VFXAction(new EmptyStanceEffect(abstractPlayer.hb.cX, abstractPlayer.hb.cY), 0.1F)));
             addToBot(new ChangeStanceAction(new NeutralStance()));
             addToBot(new GainBlockAction(abstractPlayer, block));
         }
