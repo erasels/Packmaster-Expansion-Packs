@@ -37,5 +37,8 @@
     "NAME": "Tactical Reroll",
     "DESCRIPTION": "Pay 10 Gold to put !M! cards from your Discard pile in your hand. NL Exhaust."
   },
+  "${ModID}:ForTheHistoryBooks": {
+    "NAME": "For The History Books",
+    "DESCRIPTION": "Next turn, NL Gain !M! Temporary Strength, !M! Temporary Dexterity NL and 1 Hired Support."
   }
 }
