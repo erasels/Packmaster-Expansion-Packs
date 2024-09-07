@@ -27,6 +27,9 @@ public class HiredSupportPower extends AbstractPackmasterPower {
             card.setCostForTurn(0);
             AbstractDungeon.player.loseGold(goldAmount);
             this.amount -= 1;
+            if (this.amount <= 0){
+                removeThis();
+            }
         }
     }
 }
