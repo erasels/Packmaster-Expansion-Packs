@@ -39,7 +39,7 @@ public class HiredSupportPower extends AbstractPackmasterPower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        removeThis();
+        if (isPlayer) removeThis();
     }
 
     @Override
