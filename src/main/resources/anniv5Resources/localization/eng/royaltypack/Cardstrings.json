@@ -17,27 +17,9 @@
     "DESCRIPTION": "Gain !B! Block X times. If you spent at least 3 !E!, gain 1 Blur.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times. If you spent at least !E!, gain 1 Blur."
   },
-  "${ModID}:ForcefieldTribute": {
-    "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 8: Gain !M! Temp HP."
-  },
-  "${ModID}:ForcefieldAusterity": {
-    "NAME": "Austerity",
-    "DESCRIPTION": "Gain !M! Temp HP."
-  },
   "${ModID}:MiningStrike": {
     "NAME": "Mining Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Gold. NL Exhaust."
-  },
-  "${ModID}:ThrowSoulstonesTribute": {
-    "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 10: Deal !D! damage to ALL enemies AND play this card again.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Tribute 10: Deal !D! damage to ALL enemies AND play this card again."
-  },
-  "${ModID}:ThrowSoulstonesAusterity": {
-    "NAME": "Austerity",
-    "DESCRIPTION": "${ModID}:Austerity: Deal !D! damage to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Austerity: Deal !D! damage to ALL enemies."
   },
   "${ModID}:Stratagem": {
     "NAME": "Stratagem",
@@ -47,41 +29,13 @@
     "NAME": "Royal Supply Lines",
     "DESCRIPTION": "Each turn, draw 2 extra cards. NL At the end of your turn, Retain up to 2 cards."
   },
-  "${ModID}:WillpowerTribute": {
-    "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 10: Gain 1 Artifact and 1 Buffer."
-  },
-  "${ModID}:WillpowerAusterity": {
-    "NAME": "Austerity",
-    "DESCRIPTION": "Gain 1 Artifact."
-  },
   "${ModID}:AlchemyTime": {
     "NAME": "Alchemy Time",
     "DESCRIPTION": "Pay 25 Gold to gain a Potion. NL When you use a Potion, draw !M! cards. NL ${ModID}:Pickup: gain a Potion Slot and 75 Gold."
-  },
-  "${ModID}:MajesticBloodlineTribute": {
-    "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 10: play this card again."
-  },
-  "${ModID}:MajesticBloodlineAusterity": {
-    "NAME": "Austerity",
-    "DESCRIPTION": "Nothing else happens."
   },
   "${ModID}:TacticalReroll": {
     "NAME": "Tactical Reroll",
     "DESCRIPTION": "Pay 10 Gold to put !M! cards from your Discard pile in your hand. NL Exhaust."
   },
-  "${ModID}:MoreSuppliesTribute": {
-    "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 30: fill your Potion Belt with random Potions."
-  },
-  "${ModID}:MoreSuppliesAusterity": {
-    "NAME": "Austerity",
-    "DESCRIPTION": "Gain a random Potion."
-  },
-  "${ModID}:NobleForm": {
-    "NAME": "Noble Form",
-    "DESCRIPTION": "When you discard a card, draw a card. When you lose HP, gain 5 Gold.",
-    "UPGRADE_DESCRIPTION": "When you discard or play a card, draw a card. When you lose Gold or HP, gain 5 Gold."
   }
 }
