@@ -24,7 +24,7 @@ public class RoyaltyPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(RetainerStrike.ID);
         cards.add(Soulstone.ID);
-        cards.add(WindShield.ID);
+        cards.add(HiringSpecialists.ID);
         cards.add(Forcefield.ID);
         cards.add(MiningStrike.ID);
         cards.add(Stratagem.ID);
