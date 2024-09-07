@@ -4,9 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.royaltypack.TributeOrAusterityAction;
-import thePackmaster.cards.royaltypack.optioncards.WillpowerAusterity;
-import thePackmaster.cards.royaltypack.optioncards.WillpowerTribute;
 import thePackmaster.powers.royaltypack.RoyalSupplyLinesPower;
 import thePackmaster.util.Wiz;
 

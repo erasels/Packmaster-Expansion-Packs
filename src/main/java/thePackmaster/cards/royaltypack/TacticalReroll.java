@@ -4,9 +4,6 @@ import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.royaltypack.PayTributeAction;
-import thePackmaster.actions.royaltypack.TributeOrAusterityAction;
-import thePackmaster.cards.royaltypack.optioncards.MoreSuppliesAusterity;
-import thePackmaster.cards.royaltypack.optioncards.MoreSuppliesTribute;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

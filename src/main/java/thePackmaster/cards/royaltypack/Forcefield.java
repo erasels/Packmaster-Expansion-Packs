@@ -1,14 +1,8 @@
 package thePackmaster.cards.royaltypack;
 
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.defect.ReinforcedBodyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.royaltypack.ForcefieldAction;
-import thePackmaster.actions.royaltypack.TributeOrAusterityAction;
-import thePackmaster.cards.royaltypack.optioncards.ForcefieldAusterity;
-import thePackmaster.cards.royaltypack.optioncards.ForcefieldTribute;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
