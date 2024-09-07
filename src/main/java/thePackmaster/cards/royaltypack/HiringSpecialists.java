@@ -1,10 +1,13 @@
 package thePackmaster.cards.royaltypack;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.royaltypack.WindShieldAction;
+import thePackmaster.powers.royaltypack.HiredSupportPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -24,8 +27,11 @@ public class HiringSpecialists extends AbstractRoyaltyCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        Wiz.atb(new GainBlockAction(Wiz.p(), block));
+        Wiz.atb(new GainBlockAction(abstractPlayer, block));
         Wiz.atb(new DrawCardAction(1));
+        Wiz.atb(new ApplyPowerAction(abstractPlayer,
+                abstractPlayer,
+                new HiredSupportPower(abstractPlayer, 1)));
 
     }
 }
