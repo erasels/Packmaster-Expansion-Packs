@@ -18,9 +18,9 @@
     "NAME": "Soulstone",
     "DESCRIPTION": "Deal !D! damage. NL Startup: gain !M! Gold. NL Exhaust."
   },
-  "${ModID}:WindShield": {
-    "NAME": "Wind Shield",
-    "DESCRIPTION": "Discard any amount of cards. Gain !B! Block for each discarded card."
+  "${ModID}:HiringSpecialists": {
+    "NAME": "Hiring Specialists",
+    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL Gain 1 Hired Support."
   },
   "${ModID}:Forcefield": {
     "NAME": "Forcefield",
