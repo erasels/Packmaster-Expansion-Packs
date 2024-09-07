@@ -39,6 +39,6 @@
   },
   "${ModID}:ForTheHistoryBooks": {
     "NAME": "For The History Books",
-    "DESCRIPTION": "Next turn, NL Gain !M! Temporary Strength, !M! Temporary Dexterity NL and 1 Hired Support."
+    "DESCRIPTION": "Next turn, NL Gain !M! Temporary Strength NL and Temporary Dexterity NL X times, and 1 Hired Support."
   }
 }

@@ -39,7 +39,7 @@ public class ForTheHistoryBooks extends AbstractRoyaltyCard {
         Wiz.atb(new ApplyPowerAction(
                 abstractPlayer,
                 abstractPlayer,
-                new LoseStrengthPower(abstractPlayer, -magicNumber)));
+                new LoseStrengthPower(abstractPlayer, magicNumber)));
 
         Wiz.atb(new ApplyPowerAction(
                 abstractPlayer,
@@ -49,7 +49,7 @@ public class ForTheHistoryBooks extends AbstractRoyaltyCard {
         Wiz.atb(new ApplyPowerAction(
                 abstractPlayer,
                 abstractPlayer,
-                new LoseDexterityPower(abstractPlayer, -magicNumber)));
+                new LoseDexterityPower(abstractPlayer, magicNumber)));
 
         Wiz.atb(new ApplyPowerAction(
                 abstractPlayer,
