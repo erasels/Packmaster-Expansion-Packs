@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.vfx.royaltypack.LoseGoldTextEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -22,14 +23,21 @@ public class HiredSupportPower extends AbstractPackmasterPower {
     }
 
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        int goldAmount = card.cost * ENERGY_TO_GOLD_CONVERSION;
-        if (goldAmount <= AbstractDungeon.player.gold){
-            card.setCostForTurn(0);
-            AbstractDungeon.player.loseGold(goldAmount);
-            this.amount -= 1;
-            if (this.amount <= 0){
-                removeThis();
+        if (card.cost > 0) {
+            int goldAmount = card.cost * ENERGY_TO_GOLD_CONVERSION;
+            if (goldAmount <= AbstractDungeon.player.gold){
+                card.setCostForTurn(0);
+                AbstractDungeon.effectList.add(new LoseGoldTextEffect(-goldAmount));
+                AbstractDungeon.player.loseGold(goldAmount);
+                CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
+                this.amount -= 1;
+                if (this.amount <= 0){
+                    removeThis();
+                }
             }
         }
     }
+
+    @Override
+    public void updateDescription() { description = DESCRIPTIONS[0]; }
 }
