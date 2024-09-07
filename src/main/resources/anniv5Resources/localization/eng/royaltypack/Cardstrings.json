@@ -4,16 +4,6 @@
     "DESCRIPTION": "Deal !D! damage. NL One random card in your hand NL has Retain this turn.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose one card in your hand. NL It has Retain this turn."
   },
-  "${ModID}:NobleStrikeTribute": {
-    "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 5: Draw an Attack.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Tribute 5: Draw !M! Attacks."
-  },
-  "${ModID}:NobleStrikeAusterity": {
-    "NAME": "Austerity",
-    "DESCRIPTION": "Gain 5 Gold and draw a card.",
-    "UPGRADE_DESCRIPTION": "Gain 5 Gold and draw !M! cards."
-  },
   "${ModID}:Soulstone": {
     "NAME": "Soulstone",
     "DESCRIPTION": "Deal !D! damage. NL Startup: gain !M! Gold. NL Exhaust."
