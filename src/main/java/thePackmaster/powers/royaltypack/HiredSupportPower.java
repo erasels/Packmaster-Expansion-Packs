@@ -38,6 +38,10 @@ public class HiredSupportPower extends AbstractPackmasterPower {
         }
     }
 
+    public void atEndOfTurn(boolean isPlayer) {
+        removeThis();
+    }
+
     @Override
     public void updateDescription() { description = DESCRIPTIONS[0]; }
 }
