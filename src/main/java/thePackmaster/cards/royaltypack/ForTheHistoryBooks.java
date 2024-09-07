@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.powers.royaltypack.HiredSupportPower;
 import thePackmaster.util.Wiz;
 
@@ -34,26 +35,32 @@ public class ForTheHistoryBooks extends AbstractRoyaltyCard {
         Wiz.atb(new ApplyPowerAction(
                     abstractPlayer,
                     abstractPlayer,
-                new StrengthPower(abstractPlayer, magicNumber)));
+                new StrengthPower(abstractPlayer,
+                        magicNumber * EnergyPanel.getCurrentEnergy())));
 
         Wiz.atb(new ApplyPowerAction(
                 abstractPlayer,
                 abstractPlayer,
-                new LoseStrengthPower(abstractPlayer, magicNumber)));
+                new LoseStrengthPower(abstractPlayer,
+                        magicNumber * EnergyPanel.getCurrentEnergy())));
 
         Wiz.atb(new ApplyPowerAction(
                 abstractPlayer,
                 abstractPlayer,
-                new DexterityPower(abstractPlayer, magicNumber)));
+                new DexterityPower(abstractPlayer,
+                        magicNumber * EnergyPanel.getCurrentEnergy())));
 
         Wiz.atb(new ApplyPowerAction(
                 abstractPlayer,
                 abstractPlayer,
-                new LoseDexterityPower(abstractPlayer, magicNumber)));
+                new LoseDexterityPower(abstractPlayer,
+                        magicNumber * EnergyPanel.getCurrentEnergy())));
 
         Wiz.atb(new ApplyPowerAction(
                 abstractPlayer,
                 abstractPlayer,
                 new HiredSupportPower(abstractPlayer, 1)));
+
+        abstractPlayer.energy.use(EnergyPanel.totalCount);
     }
 }
