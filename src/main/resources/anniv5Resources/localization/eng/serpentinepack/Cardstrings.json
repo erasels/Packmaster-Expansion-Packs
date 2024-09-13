@@ -18,8 +18,7 @@
     "DESCRIPTION": "Deal !D! damage !M! times."
 },"${ModID}:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL If in a Stance, gain [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL If in a Stance, gain [E]. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL If in a Stance, gain [E]. NL Exhaust."
 },"${ModID}:ColdCalculated": {
     "NAME": "Cold and Calculated",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Frostbite. NL If in a Stance, Retain 2 cards this turn."

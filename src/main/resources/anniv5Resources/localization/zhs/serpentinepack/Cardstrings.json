@@ -18,8 +18,7 @@
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
 },"${ModID}:CheapShot": {
     "NAME": "随意一击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 若处于 姿态 ，获得 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 若处于 姿态 ，获得 [E] 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 若处于 姿态 ，获得 [E] 。 NL 消耗 。"
 },"${ModID}:ColdCalculated": {
     "NAME": "冰冷算计",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:霜噬 。 NL 若处于 姿态 ，本回合 保留 2张牌。"
