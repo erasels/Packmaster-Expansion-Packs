@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -42,7 +43,13 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
     public boolean atBattleStartPreDraw()
     {
         this.addToBot(new GainGoldAction(magicNumber));
-        AbstractDungeon.effectList.add(new GainGoldTextEffect(magicNumber));
+        int amountOfSoulstones = 0;
+        for(AbstractCard card: AbstractDungeon.player.masterDeck.group){
+            if (card.cardID == Soulstone.ID){
+                amountOfSoulstones += 1;
+            }
+        }
+        AbstractDungeon.effectList.add(new GainGoldTextEffect(magicNumber * amountOfSoulstones));
         CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
         return true;
     }
