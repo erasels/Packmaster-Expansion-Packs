@@ -26,10 +26,24 @@ public class HiredSupportPower extends AbstractPackmasterPower {
         if (card.cost > 0) {
             int goldAmount = card.cost * ENERGY_TO_GOLD_CONVERSION;
             if (goldAmount <= AbstractDungeon.player.gold){
-                card.setCostForTurn(0);
+                card.freeToPlayOnce = true;
                 AbstractDungeon.effectList.add(new LoseGoldTextEffect(-goldAmount));
                 AbstractDungeon.player.loseGold(goldAmount);
                 CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
+                this.amount -= 1;
+                if (this.amount <= 0){
+                    removeThis();
+                }
+            }
+        }
+        else if (card.cost == -1){
+            int goldAmount = AbstractDungeon.player.energy.energy * ENERGY_TO_GOLD_CONVERSION;
+            if (goldAmount <= AbstractDungeon.player.gold){
+                card.freeToPlayOnce = true;
+                AbstractDungeon.effectList.add(new LoseGoldTextEffect(-goldAmount));
+                AbstractDungeon.player.loseGold(goldAmount);
+                CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
+
                 this.amount -= 1;
                 if (this.amount <= 0){
                     removeThis();
