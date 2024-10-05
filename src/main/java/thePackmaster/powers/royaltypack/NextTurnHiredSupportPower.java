@@ -23,8 +23,7 @@ public class NextTurnHiredSupportPower  extends AbstractPackmasterPower {
         this.flash();
         this.addToBot(new ApplyPowerAction(this.owner, this.owner,
                 new HiredSupportPower(this.owner, 1)));
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner,
-                "Next Turn Hired Support"));
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
 
