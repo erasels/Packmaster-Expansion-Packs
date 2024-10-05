@@ -20,5 +20,11 @@
       "Next turn, gain ",
       " Temporary Strength, Temporary Dexterity and 1 Hired Support."
     ]
+  },
+  "${ModID}:NextTurnHiredSupportPower": {
+    "NAME": "Next Turn Hired Support",
+    "DESCRIPTIONS": [
+      "Next turn, gain Hired Support."
+    ]
   }
 }
