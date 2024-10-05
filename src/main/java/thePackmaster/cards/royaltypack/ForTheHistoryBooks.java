@@ -33,10 +33,19 @@ public class ForTheHistoryBooks extends AbstractRoyaltyCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster){
+        int currentMultiplier = EnergyPanel.getCurrentEnergy();
+
+        if (abstractPlayer.hasRelic("Chemical X")) {
+            currentMultiplier += 2;
+            abstractPlayer.getRelic("Chemical X").flash();
+        }
+
+        if (!this.freeToPlayOnce) {
+            abstractPlayer.energy.use(EnergyPanel.totalCount);
+        }
         Wiz.atb(new ApplyPowerAction(abstractPlayer,
                 abstractPlayer,
                 new ForTheHistoryBooksPower(abstractPlayer,
-                        magicNumber * EnergyPanel.getCurrentEnergy())));
-        abstractPlayer.energy.use(EnergyPanel.totalCount);
+                        magicNumber * currentMultiplier)));
     }
 }
