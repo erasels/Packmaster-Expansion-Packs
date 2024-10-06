@@ -16,6 +16,8 @@ import com.megacrit.cardcrawl.powers.DrawReductionPower;
 import com.megacrit.cardcrawl.vfx.GainGoldTextEffect;
 import thePackmaster.util.Wiz;
 
+import java.util.ArrayList;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
@@ -43,14 +45,31 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
     public boolean atBattleStartPreDraw()
     {
         this.addToBot(new GainGoldAction(magicNumber));
-        int amountOfSoulstones = 0;
-        for(AbstractCard card: AbstractDungeon.player.masterDeck.group){
-            if (card.cardID == Soulstone.ID){
-                amountOfSoulstones += 1;
-            }
-        }
-        AbstractDungeon.effectList.add(new GainGoldTextEffect(magicNumber * amountOfSoulstones));
+        showGainGoldTextEffect();
         CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
         return true;
     }
+
+    public void showGainGoldTextEffect() {
+        ArrayList<AbstractCard> masterDeck = AbstractDungeon.player.masterDeck.group;
+        for(int i = 0; i < masterDeck.size(); i++){
+            if (masterDeck.get(i).cardID == Soulstone.ID){
+                if (masterDeck.get(i).uuid != this.uuid){
+                    return;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+        int amountOfSoulstones = 0;
+        for (int i = 0; i  < masterDeck.size(); i++){
+            if (masterDeck.get(i).cardID == Soulstone.ID){
+                amountOfSoulstones++;
+            }
+        }
+
+        AbstractDungeon.effectList.add(new GainGoldTextEffect(magicNumber * amountOfSoulstones));
+    }
+
 }
