@@ -52,7 +52,9 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
 
     public void showGainGoldTextEffect() {
         ArrayList<AbstractCard> masterDeck = AbstractDungeon.player.masterDeck.group;
-        for(int i = 0; i < masterDeck.size(); i++){
+        int currentPosition = 0;
+        for (int i = 0; i < masterDeck.size(); i++){
+            currentPosition = i;
             if (masterDeck.get(i).cardID == Soulstone.ID){
                 if (masterDeck.get(i).uuid != this.uuid){
                     return;
@@ -62,14 +64,14 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
                 }
             }
         }
-        int amountOfSoulstones = 0;
-        for (int i = 0; i  < masterDeck.size(); i++){
+        int totalAmountOfGold = 0;
+        for (int i = currentPosition; i < masterDeck.size(); i++){
             if (masterDeck.get(i).cardID == Soulstone.ID){
-                amountOfSoulstones++;
+                totalAmountOfGold += masterDeck.get(i).magicNumber;
             }
         }
 
-        AbstractDungeon.effectList.add(new GainGoldTextEffect(magicNumber * amountOfSoulstones));
+        AbstractDungeon.effectList.add(new GainGoldTextEffect(totalAmountOfGold));
     }
 
 }
