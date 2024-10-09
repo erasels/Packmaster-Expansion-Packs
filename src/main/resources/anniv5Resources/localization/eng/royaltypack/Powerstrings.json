@@ -26,5 +26,14 @@
     "DESCRIPTIONS": [
       "Next turn, gain Hired Support."
     ]
+  },
+  "${ModID}:AlchemyTimePower": {
+    "NAME": "Alchemy Time",
+    "DESCRIPTIONS": [
+      "When you use a Potion, draw ",
+      "card.",
+      "cards."
+    ]
   }
+
 }
