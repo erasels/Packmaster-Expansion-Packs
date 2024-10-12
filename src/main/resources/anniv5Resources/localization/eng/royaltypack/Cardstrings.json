@@ -10,7 +10,7 @@
   },
   "${ModID}:HiringSpecialists": {
     "NAME": "Hiring Specialists",
-    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL Gain 1 ${ModID}:Hired Support."
+    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL Gain 1 ${ModID}:Hired_Support."
   },
   "${ModID}:Forcefield": {
     "NAME": "Forcefield",
@@ -23,7 +23,7 @@
   },
   "${ModID}:Stratagem": {
     "NAME": "Stratagem",
-    "DESCRIPTION": "The target loses !M! Strength this turn. NL At the start of the next turn, NL gain 1 ${ModID}:Hired Support."
+    "DESCRIPTION": "The target loses !M! Strength this turn. NL At the start of the next turn, NL gain 1 ${ModID}:Hired_Support."
   },
   "${ModID}:RoyalSupplyLines": {
     "NAME": "Royal Supply Lines",
@@ -39,6 +39,6 @@
   },
   "${ModID}:ForTheHistoryBooks": {
     "NAME": "For The History Books",
-    "DESCRIPTION": "Next turn, NL Gain !M! Temp Strength NL and Temp Dexterity NL X times, and 1 ${ModID}:Hired Support."
+    "DESCRIPTION": "Next turn, NL Gain !M! Temp Strength NL and Temp Dexterity NL X times, and 1 ${ModID}:Hired_Support."
   }
 }

@@ -2,8 +2,10 @@
   {
     "PROPER_NAME": "Hired Support",
     "NAMES": [
+      "Hired Support",
       "hired support",
-      "Hired Support"
+      "Hired_Support",
+      "hired_support"
     ],
     "DESCRIPTION": "The next card played this turn that costs [E] to play spends 10 Gold per [E] , instead, if you have enough Gold."
   }
