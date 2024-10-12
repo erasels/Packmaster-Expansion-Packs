@@ -19,7 +19,7 @@
   },
   "${ModID}:MiningStrike": {
     "NAME": "Mining Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Gold. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Gold. NL Deal !D! damage. NL Exhaust."
   },
   "${ModID}:Stratagem": {
     "NAME": "Stratagem",

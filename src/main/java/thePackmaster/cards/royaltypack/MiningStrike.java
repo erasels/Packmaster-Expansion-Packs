@@ -31,9 +31,9 @@ public class MiningStrike extends AbstractRoyaltyCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        dmg(abstractMonster, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         this.addToBot(new GainGoldAction(magicNumber));
         AbstractDungeon.effectList.add(new GainGoldTextEffect(magicNumber));
         CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
+        dmg(abstractMonster, AbstractGameAction.AttackEffect.SLASH_HEAVY);
     }
 }
