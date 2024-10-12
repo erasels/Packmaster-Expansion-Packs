@@ -14,8 +14,8 @@
   },
   "${ModID}:Forcefield": {
     "NAME": "Forcefield",
-    "DESCRIPTION": "Gain !B! Block X times. If you spent at least 3 !E!, gain 1 Blur.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times. If you spent at least !E!, gain 1 Blur."
+    "DESCRIPTION": "Gain !B! Block X times. If you spent at least 3 [E], gain 1 Blur.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times. If you spent at least [E], gain 1 Blur."
   },
   "${ModID}:MiningStrike": {
     "NAME": "Mining Strike",
@@ -23,7 +23,7 @@
   },
   "${ModID}:Stratagem": {
     "NAME": "Stratagem",
-    "DESCRIPTION": "The target lose !M! Strength this turn. NL At the start of the next turn, NL gain 1 Hired Support."
+    "DESCRIPTION": "The target loses !M! Strength this turn. NL At the start of the next turn, NL gain 1 Hired Support."
   },
   "${ModID}:RoyalSupplyLines": {
     "NAME": "Royal Supply Lines",
@@ -35,10 +35,10 @@
   },
   "${ModID}:TacticalReroll": {
     "NAME": "Tactical Reroll",
-    "DESCRIPTION": "Pay 10 Gold to put !M! cards from your Discard pile in your hand. NL Exhaust."
+    "DESCRIPTION": "Pay 10 Gold to put !M! cards from your discard pile in your hand. NL Exhaust."
   },
   "${ModID}:ForTheHistoryBooks": {
     "NAME": "For The History Books",
-    "DESCRIPTION": "Next turn, NL Gain !M! Temporary Strength NL and Temporary Dexterity NL X times, and 1 Hired Support."
+    "DESCRIPTION": "Next turn, NL Gain !M! Temp Strength NL and Temp Dexterity NL X times, and 1 Hired Support."
   }
 }
