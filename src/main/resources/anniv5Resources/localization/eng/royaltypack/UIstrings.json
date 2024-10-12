@@ -17,15 +17,5 @@
     "TEXT": [
       "Choose one card to have Retain this turn."
     ]
-  },
-  "${ModID}:MajesticBloodlineAction": {
-    "TEXT": [
-      "Choose one card to shuffle on your draw pile."
-    ]
-  },
-  "${ModID}:WindShieldAction": {
-    "TEXT": [
-      "discard them."
-    ]
   }
 }
