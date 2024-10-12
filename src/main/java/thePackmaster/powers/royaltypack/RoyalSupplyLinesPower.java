@@ -44,7 +44,16 @@ public class RoyalSupplyLinesPower extends AbstractPackmasterPower {
     @Override
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         if (isPlayer){
-            Wiz.atb(new RetainCardsAction(AbstractDungeon.player, this.amount * BASE_CARDS_TO_RETAIN));
+            if (AbstractDungeon.player.hand.size() < this.amount * BASE_CARDS_TO_RETAIN){
+                for(AbstractCard card: AbstractDungeon.player.hand.group){
+                    card.retain = true;
+                    card.flash();
+                }
+            }
+            else {
+                Wiz.atb(new RetainCardsAction(AbstractDungeon.player, this.amount * BASE_CARDS_TO_RETAIN));
+            }
+
         }
     }
 
