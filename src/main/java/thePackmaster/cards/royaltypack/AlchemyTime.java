@@ -39,7 +39,7 @@ public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         Wiz.atb(new PayTributeAction(GOLD_COST));
         Wiz.atb(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
-        Wiz.atb(new ApplyPowerAction(Wiz.p(), Wiz.p(), new AlchemyTimePower(Wiz.p(), magicNumber);
+        Wiz.atb(new ApplyPowerAction(Wiz.p(), Wiz.p(), new AlchemyTimePower(Wiz.p(), magicNumber)));
     }
 
     @Override
