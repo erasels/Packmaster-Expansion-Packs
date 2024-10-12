@@ -18,13 +18,13 @@
     "NAME": "For The History Books",
     "DESCRIPTIONS": [
       "Next turn, gain ",
-      " Temporary Strength, Temporary Dexterity and 1 Hired Support."
+      " Temporary Strength, Temporary Dexterity and 1 ${ModID}:Hired Support."
     ]
   },
   "${ModID}:NextTurnHiredSupportPower": {
     "NAME": "Next Turn Hired Support",
     "DESCRIPTIONS": [
-      "Next turn, gain Hired Support."
+      "Next turn, gain ${ModID}:Hired Support."
     ]
   },
   "${ModID}:AlchemyTimePower": {
