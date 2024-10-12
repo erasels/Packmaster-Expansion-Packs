@@ -31,6 +31,7 @@ public class RoyaltyPack extends AbstractCardPack {
         cards.add(RoyalSupplyLines.ID);
         cards.add(AlchemyTime.ID);
         cards.add(TacticalReroll.ID);
+        cards.add(ForTheHistoryBooks.ID);
         return cards;
     }
 }
