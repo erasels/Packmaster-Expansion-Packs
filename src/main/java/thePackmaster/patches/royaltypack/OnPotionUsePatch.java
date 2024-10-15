@@ -23,6 +23,7 @@ public class OnPotionUsePatch {
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof OnPotionUsePower) {
                 ((OnPotionUsePower) power).onPotionUse();
+                power.flash();
             }
         }
     }
