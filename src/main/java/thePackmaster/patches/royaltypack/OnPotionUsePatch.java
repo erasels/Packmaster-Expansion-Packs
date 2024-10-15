@@ -21,12 +21,10 @@ public class OnPotionUsePatch {
 
     public static void onPotionUse(PotionPopUp __instance) {
         for (AbstractPower power : AbstractDungeon.player.powers) {
-            System.out.println(power.name);
             if (power instanceof OnPotionUsePower) {
                 ((OnPotionUsePower) power).onPotionUse();
             }
         }
-        System.out.println("HM.");
     }
 
     private static class Locator extends SpireInsertLocator {
