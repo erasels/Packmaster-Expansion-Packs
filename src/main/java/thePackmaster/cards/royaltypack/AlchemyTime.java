@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.PotionSlot;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.actions.royaltypack.PayTributeAction;
 import thePackmaster.powers.royaltypack.AlchemyTimePower;
 import thePackmaster.util.Wiz;

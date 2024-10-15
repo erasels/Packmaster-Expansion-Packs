@@ -1,7 +1,6 @@
 package thePackmaster.patches.royaltypack;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.ui.panels.PotionPopUp;

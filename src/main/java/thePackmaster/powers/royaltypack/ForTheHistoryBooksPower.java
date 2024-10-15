@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 

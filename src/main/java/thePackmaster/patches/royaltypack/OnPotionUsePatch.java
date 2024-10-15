@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.ui.panels.PotionPopUp;
-import com.megacrit.cardcrawl.ui.panels.TopPanel;
 import javassist.CtBehavior;
 import thePackmaster.powers.royaltypack.OnPotionUsePower;
 

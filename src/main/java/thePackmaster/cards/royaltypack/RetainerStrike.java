@@ -2,7 +2,6 @@ package thePackmaster.cards.royaltypack;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,8 +14,6 @@ import thePackmaster.util.Wiz;
 import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.atb;
 
 public class RetainerStrike extends AbstractRoyaltyCard {
 
