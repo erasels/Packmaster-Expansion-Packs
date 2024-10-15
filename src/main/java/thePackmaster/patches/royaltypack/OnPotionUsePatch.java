@@ -34,7 +34,7 @@ public class OnPotionUsePatch {
         public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
             Matcher finalMatcher = new Matcher.MethodCallMatcher(SoundMaster.class, "play");
             int[] matches = LineFinder.findAllInOrder(ctMethodToPatch, finalMatcher);
-            return new int[]{matches[1]+1};
+            return new int[]{matches[0]};
         }
     }
 }
