@@ -19,7 +19,7 @@ https://desktop.github.com/
 
 ## Technical
 ### How to make a Pack
-First, navigate to the project on your system and copy the example-pom.txt and rename the copy to pom.xml. Adjust it to the correct steam path if necessary. Do this before you load the project in intellij to ward off some issues.  
+First, navigate to the project on your system and copy the example-pom.txt and rename the copy to pom.xml. Adjust it to the correct steam path if necessary. Change the version from 1.0.0 to the current version number from the Steam workshop or higher; otherwise, ModTheSpire will prioritize the Steam workshop build over any new builds you create (if new versions get released, you'll need to update this). Do this before you load the project in intellij to ward off some issues.  
 **DO NOT DELETE THE EXAMPLE POM!**
 
 Once you've got the project up and running, navigate to the **packs** package.  
@@ -69,11 +69,30 @@ Here is a TL;DR:
 * No additional UI, please use powers/orbs/stances if you need them
 * Most of your cards should have less than 6 lines of text.
 * Don't outsource complexity to single-use Keywords
+* See the section on pack design guidance below for more
 * Artwork needs to be included for all cards in the pack
 * You may add relics that only spawn if your pack is selected, however these must interact with the pack's mechanic, they should not be generic effects
 
 And finally, as the person merging all PRs other reviewers or I (Gk/erasels) may ask you to make changes to your Pack in case some cards lie outside the power curve or skirt the rules too much.
 Please don't be discouraged if your Pack isn't instantly merged.
+
+### Pack design guidance
+Packmaster has many packs, and we want each additional pack to contribute something new and interesting to the mod. The advice below should help with achieving that and creating a well-designed pack, especially for anyone new to making packs. Beyond this advice, people in #modding-technical are always happy to offer feedback.
+
+#### Have a clear mechanical theme
+Typically this means one or two central mechanics, with one or two supporting mechanics or subthemes. (Packs that are grab bags of unrelated effects or that rely entirely on references to other content don't work out well.) Deciding on good mechanical themes is the foundation of a pack, so don't be afraid to devote time to brainstorming and iterating on ideas.
+
+#### Enable synergies
+Think about what synergies enable your mechanic and what synergies it enables. Mechanics that don't do either (or where the synergies are very limited) may not be a good fit for a pack since interactions between packs are a huge part of Packmaster. If cards from your pack are the only thing that enable your mechanics, it puts too much pressure on your pack to do everything itself.
+
+#### Don't go overboard
+Avoid having every card use your mechanics. Even with a solid mechanical focus, a pack's gameplay is more interesting if there are some cards that fill a supporting role, connect the pack to broader synergies, or simply provide good value. 
+
+#### Have some variety
+Packs with too many similar cards are less interesting to play. The same goes for packs filled with cards that are just a basic effect (damage/block/draw) plus your mechanic (or synergy for your mechanic). There's a place for cards like that, but mixing together a broader range of effects results in a more interesting pack. If you're looking for ideas, think about buffs (strength/dexterity/etc.), discard, exhaust, token/status creation, or card manipulation. Or study existing packs.
+
+#### Consider common design pitfalls
+Almost all the same pitfalls that apply to general card and character design apply to packs as well. See the [Character Design Pitfalls Discord thread](https://discord.com/channels/309399445785673728/1146430771528220792/1146430771528220792) for a good list. There are also a few thing to avoid specific to Packmaster packs, such as stances (creators of stance-focused packs have typically been dissatisfied with the result), stun (it's a mechanic we wish we hadn't allowed), and autoplay (it has too many janky interactions).
 
 ### Ratings and tags
 After you've finished your pack, please add ratings and tags for it to the files `ratings.txt` and `tags.txt` (both in the folder `resources/anniv5resources/summaries`).

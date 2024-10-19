@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.instadeathpack.DamageMultiplierModifier;
 import thePackmaster.vfx.instadeathpack.RandomReversingSlashEffect;
 
-
 import java.util.ArrayList;
 import java.util.List;
 

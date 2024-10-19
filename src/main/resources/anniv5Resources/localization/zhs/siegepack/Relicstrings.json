@@ -1,0 +1,10 @@
+{
+  "${ModID}:PileOfShells": {
+    "NAME": "一堆炮弹",
+    "FLAVOR": "堆得很整齐，小心搬运！",
+    "DESCRIPTIONS": [
+      "在每场战斗的前 #b",
+      " 回合结束时，获得一层 #y${ModID}:炮弹 。"
+    ]
+  }
+}

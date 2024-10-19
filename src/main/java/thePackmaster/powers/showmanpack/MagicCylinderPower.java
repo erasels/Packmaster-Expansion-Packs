@@ -38,7 +38,13 @@ public class MagicCylinderPower extends AbstractPackmasterPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner && damageAmount >= owner.currentBlock && this.amount > 0) {
+        if (info.type != DamageInfo.DamageType.THORNS
+                && info.type != DamageInfo.DamageType.HP_LOSS
+                && info.owner != null
+                && info.owner != this.owner
+                && damageAmount > 0
+                && damageAmount >= owner.currentBlock
+                && this.amount > 0) {
             addToBot(new VFXAction(new MagicCylinderEffect(owner.hb.cX + (100f * Settings.scale), owner.hb.cY + (80f * Settings.scale), owner.hb.cX + (100f * Settings.scale), owner.hb.cY + (120f * Settings.scale), 0.5f)));
             addToBot(new WaitAction(0.5f));
             addToBot(new VFXAction(new MagicCylinderEffect(owner.hb.cX + (100f * Settings.scale), owner.hb.cY - (80f * Settings.scale), owner.hb.cX + (100f * Settings.scale), owner.hb.cY - (120f * Settings.scale), 0.5f)));

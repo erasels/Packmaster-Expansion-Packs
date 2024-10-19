@@ -22,8 +22,7 @@
   },
   "${ModID}:RuinousPortent": {
     "NAME": "毁灭凶兆",
-    "DESCRIPTION": "生成 X个 ${ModID}:湮没 充能球。",
-    "UPGRADE_DESCRIPTION": "生成 X+1个 ${ModID}:湮没 充能球。"
+    "DESCRIPTION": "获得 !M! ${ModID}:熵。 NL ${ModID}:疾风：对一个随机敌人施加1个${ModID}:毁灭。"
   },
   "${ModID}:Unbind": {
     "NAME": "解耦",

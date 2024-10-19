@@ -13,7 +13,7 @@ public class AllSeeingPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public AllSeeingPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
     @Override

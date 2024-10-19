@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.powers.FlurryPower;
 import thePackmaster.vfx.needlework.MiniDieDieEffect;
 
 public class PincushionPower extends FlurryPower implements CloneablePowerInterface {
@@ -23,7 +23,7 @@ public class PincushionPower extends FlurryPower implements CloneablePowerInterf
     }
 
     @Override
-    public void onFlurry(AbstractCard played, AbstractMonster m) {
+    public void onFlurry(AbstractCard played, AbstractCreature c) {
         this.addToBot(new VFXAction(new MiniDieDieEffect(), 0.1F));
         this.addToBot(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE, true));
     }

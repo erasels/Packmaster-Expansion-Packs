@@ -22,7 +22,7 @@ public class MagicCylinderEffect extends AbstractGameEffect {
 
     public MagicCylinderEffect(float x, float y, float vX, float vY, float dur) {
 
-        img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("vfx/MagicCylinder.png"));
+        img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("vfx/showmanpack/MagicCylinder.png"));
         this.x = x;
         this.y = y;
         this.vX = vX;
@@ -45,7 +45,6 @@ public class MagicCylinderEffect extends AbstractGameEffect {
         }
 
         if (this.duration <= -holdDur) {
-            System.out.println("done");
             this.isDone = true;
         }
 

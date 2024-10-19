@@ -1,0 +1,17 @@
+[
+  {
+    "PROPER_NAME": "Blur",
+    "NAMES": [
+      "blur"
+    ],
+    "DESCRIPTION": "#yBlock is not removed at the start of your turn."
+  },
+  {
+    "PROPER_NAME": "Shell",
+    "NAMES": [
+      "shell",
+      "shells"
+    ],
+    "DESCRIPTION": "Attacks deal #b5 additional damage to enemies and consume #b1 #yShell."
+  }
+]
