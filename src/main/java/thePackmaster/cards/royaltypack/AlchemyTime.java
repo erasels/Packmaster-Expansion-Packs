@@ -24,7 +24,7 @@ public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
     public final static int GOLD_COST = 25;
 
     public AlchemyTime(){
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = BASE_AMOUNT_OF_DRAWS;
     }
