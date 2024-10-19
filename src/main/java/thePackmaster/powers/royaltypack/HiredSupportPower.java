@@ -1,5 +1,6 @@
 package thePackmaster.powers.royaltypack;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,6 +21,11 @@ public class HiredSupportPower extends AbstractPackmasterPower {
 
     public HiredSupportPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, 1);
+        for(AbstractCard card: AbstractDungeon.player.hand.group){
+            if (card.cost > 0){
+                card.superFlash(Color.YELLOW);
+            }
+        }
     }
 
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
