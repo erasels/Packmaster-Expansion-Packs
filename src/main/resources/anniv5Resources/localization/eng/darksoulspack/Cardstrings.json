@@ -1,7 +1,10 @@
 {
   "${ModID}:MorionBlade": {
     "NAME": "Morion Blade",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff you have."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff you have.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Repeats !M! times.)"
+    ]
   },
   "${ModID}:Bloodlust": {
     "NAME": "Bloodlust",
@@ -25,12 +28,18 @@
   },
   "${ModID}:BlueTearstone": {
     "NAME": "Blue Tearstone",
-    "DESCRIPTION": "Gain !B! Block. NL Repeat for each unique debuff you have."
+    "DESCRIPTION": "Gain !B! Block. NL Repeat for each unique debuff you have.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Repeats !M! times.)"
+    ]
   },
   "${ModID}:EmbraceHollowing": {
     "NAME": "Embrace Hollowing",
     "DESCRIPTION": "Gain !M! Strength for each unique debuff you have.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength for each unique debuff you have + !M!."
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength for each unique debuff you have + !M!.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gains !${ModID}:m2! Strength.)"
+    ]
   },
   "${ModID}:SmoughsHammer": {
     "NAME": "Smough's Hammer",
@@ -38,6 +47,9 @@
   },
   "${ModID}:CloranthyRing": {
     "NAME": "Cloranthy Ring",
-    "DESCRIPTION": "Gain [E] for each unique debuff you have. NL Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Gain [E] for each unique debuff you have. NL Draw !M! cards. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gains !${ModID}:m2! [E] .)"
+    ]
   }
 }
