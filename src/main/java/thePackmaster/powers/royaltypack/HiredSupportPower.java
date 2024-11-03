@@ -19,7 +19,6 @@ public class HiredSupportPower extends AbstractPackmasterPower {
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public static final int ENERGY_TO_GOLD_CONVERSION = 10;
-    public static float timeToFlashGold = 2.5f;
 
     public HiredSupportPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, 1);
@@ -53,21 +52,6 @@ public class HiredSupportPower extends AbstractPackmasterPower {
                 }
             }
         }
-    }
-
-    public void update(int slot) {
-        super.update(slot);
-        /*if (AbstractDungeon.player.energy.energy > 0){
-            timeToFlashGold -= Gdx.graphics.getDeltaTime();
-            if (timeToFlashGold <= 0.0f){
-                for (AbstractCard card: AbstractDungeon.player.hand.group){
-                    if (card.cost == -1 || card.cost > 0){
-                        card.flash(Color.YELLOW);
-                    }
-                }
-                timeToFlashGold = 2.5f;
-            }
-        }*/
     }
 
     public void atEndOfTurn(boolean isPlayer) {
