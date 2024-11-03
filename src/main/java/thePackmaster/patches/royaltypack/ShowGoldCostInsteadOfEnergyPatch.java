@@ -24,7 +24,7 @@ public class ShowGoldCostInsteadOfEnergyPatch {
             locator= Locator.class
     )
 
-    public static void ShowGoldCostInsteadOfEnergy(AbstractCard __instance, SpriteBatch __sb){
+    public static SpireReturn<Void> ShowGoldCostInsteadOfEnergy(AbstractCard __instance, SpriteBatch __sb){
         if (AbstractDungeon.player != null && AbstractDungeon.player.hand.contains(__instance) &&
                 AbstractDungeon.player.hasPower(HiredSupportPower.POWER_ID)) {
             Color costColor = Color.YELLOW;
@@ -43,10 +43,9 @@ public class ShowGoldCostInsteadOfEnergyPatch {
                     __instance.current_x, __instance.current_y, -132.0F * __instance.drawScale *
                             Settings.scale, 192.0F * __instance.drawScale * Settings.scale,
                     __instance.angle, false, costColor);
-
-
-            return;
+            return SpireReturn.Return();
         }
+        return SpireReturn.Continue();
     }
 
 
