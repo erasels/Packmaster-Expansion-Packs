@@ -57,8 +57,7 @@ public class HiredSupportPower extends AbstractPackmasterPower {
 
     public void update(int slot) {
         super.update(slot);
-        //Fix this later, so Hired Support also works when player has 0 E.
-        if (AbstractDungeon.player.energy.energy > 0){
+        /*if (AbstractDungeon.player.energy.energy > 0){
             timeToFlashGold -= Gdx.graphics.getDeltaTime();
             if (timeToFlashGold <= 0.0f){
                 for (AbstractCard card: AbstractDungeon.player.hand.group){
@@ -68,7 +67,7 @@ public class HiredSupportPower extends AbstractPackmasterPower {
                 }
                 timeToFlashGold = 2.5f;
             }
-        }
+        }*/
     }
 
     public void atEndOfTurn(boolean isPlayer) {
