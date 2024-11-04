@@ -20,7 +20,8 @@ public class GoldInsteadOfEnergyPatch {
         if (!__result) {
             return AbstractDungeon.player != null && AbstractDungeon.currMapNode != null &&
                     AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT &&
-                    AbstractDungeon.player.hasPower(HiredSupportPower.POWER_ID);
+                    AbstractDungeon.player.hasPower(HiredSupportPower.POWER_ID) &&
+                    __instance.costForTurn * 10 <= AbstractDungeon.player.gold;
         }
         return true;
     }
