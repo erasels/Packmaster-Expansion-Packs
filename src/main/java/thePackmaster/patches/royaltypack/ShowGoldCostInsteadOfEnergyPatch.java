@@ -26,8 +26,8 @@ public class ShowGoldCostInsteadOfEnergyPatch {
 
     public static SpireReturn<Void> ShowGoldCostInsteadOfEnergy(AbstractCard __instance, SpriteBatch __sb){
         if (AbstractDungeon.player != null && AbstractDungeon.player.hand.contains(__instance) &&
-                AbstractDungeon.player.hasPower(HiredSupportPower.POWER_ID)) {
-            Color costColor = Color.YELLOW;
+                AbstractDungeon.player.hasPower(HiredSupportPower.POWER_ID) &&
+                (__instance.cost > 0 || __instance.cost == -1)) {
             String text;
             if (__instance.cost == -1){
                 text = "10 X";
@@ -37,12 +37,15 @@ public class ShowGoldCostInsteadOfEnergyPatch {
             FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
             BitmapFont font = FontHelper.cardEnergyFont_L;
 
+            Color costColorGold = Color.YELLOW;
+
             FontHelper.renderRotatedText(__sb,
                     font,
                     text,
                     __instance.current_x, __instance.current_y, -132.0F * __instance.drawScale *
                             Settings.scale, 192.0F * __instance.drawScale * Settings.scale,
-                    __instance.angle, false, costColor);
+                    __instance.angle, false, costColorGold);
+
             return SpireReturn.Return();
         }
         return SpireReturn.Continue();
@@ -52,9 +55,9 @@ public class ShowGoldCostInsteadOfEnergyPatch {
     private static class Locator extends SpireInsertLocator {
         @Override
         public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
-            Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractCard.class, "getEnergyFont");
+            Matcher finalMatcher = new Matcher.MethodCallMatcher(Color.class, "cpy");
             int[] matches = LineFinder.findAllInOrder(ctMethodToPatch, finalMatcher);
-            return new int[]{matches[0] + 1};
+            return new int[]{matches[0]};
         }
     }
 }
