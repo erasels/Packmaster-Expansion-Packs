@@ -1,0 +1,41 @@
+{
+  "${ModID}:AttackDoppel": {
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, deal #b%d damage to a random enemy. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn.",
+      "#yPassive: At the end of turn, deal #b%d damage to ALL enemies. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn."
+    ],
+    "NAME": "Doppel"
+  },
+  "${ModID}:DefendDoppel": {
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, gain #b%d #yBlock. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn."
+    ],
+    "NAME": "Doppel"
+  },
+  "${ModID}:AttackDefendDoppel": {
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, deal #b%d damage to a random enemy, gain #b%d #yBlock. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn.",
+      "#yPassive: At the end of turn, deal #b%d damage to ALL enemies, gain #b%d #yBlock. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn."
+    ],
+    "NAME": "Doppel"
+  },
+  "${ModID}:DrawCardDoppel": {
+    "DESCRIPTION": [
+      "#yPassive: At the start of turn, draw a card. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn."
+    ],
+    "NAME": "Doppel"
+  },
+  "${ModID}:GainEnergyDoppel": {
+    "DESCRIPTION": [
+      "#yPassive: At the start of turn, gain [E]. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn."
+    ],
+    "NAME": "Doppel"
+  },
+  "${ModID}:StatusDoppel": {
+    "DESCRIPTION": [
+      "#yEvoke: Put #y%s into your hand and it costs 0 this turn.",
+      "#yEvoke: Put #y%s into your hand."
+    ],
+    "NAME": "Doppel"
+  }
+}

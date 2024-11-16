@@ -1,0 +1,15 @@
+{
+  "${ModID}:TurbulencePower": {
+    "NAME": "Turbulence",
+    "DESCRIPTIONS": [
+      "Whenever you #ySummon a #yDoppel, trigger its passive ability.",
+      "Whenever you #ySummon a #yDoppel, trigger its passive ability #b%d times."
+    ]
+  },
+  "${ModID}:WormHolePower": {
+    "NAME": "Worm Hole",
+    "DESCRIPTIONS": [
+      "Increase damage or #yBlock value of #Doppels by #b%d for each #yStrength or #yDexterity you have."
+    ]
+  }
+}

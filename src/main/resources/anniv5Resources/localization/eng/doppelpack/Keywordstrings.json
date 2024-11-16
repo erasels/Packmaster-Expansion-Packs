@@ -1,0 +1,17 @@
+[
+  {
+    "PROPER_NAME": "Summon",
+    "NAMES": [
+      "summon"
+    ],
+    "DESCRIPTION": "Summon a #yDoppel and put it into the first slot. If you have no empty slots, your first #yDoppel is automatically #yEvoked to make room."
+  },
+  {
+    "PROPER_NAME": "Doppel",
+    "NAMES": [
+      "doppel",
+      "doppels"
+    ],
+    "DESCRIPTION": "When #ySummoned, choose a card to remove from combat. Passive effect of the #yDoppel is the weakened version of the card. NL When #yEvoked, return the removed card to your hand and it costs 0 this turn."
+  }
+]

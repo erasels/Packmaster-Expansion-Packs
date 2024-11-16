@@ -1,0 +1,51 @@
+{
+  "${ModID}:Summon": {
+    "NAME": "Summon",
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Summon a ${ModID}:Doppel."
+  },
+  "${ModID}:Arrive": {
+    "NAME": "Arrive",
+    "DESCRIPTION": "${ModID}:Summon X ${ModID}:Doppels. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Summon X+1 ${ModID}:Doppels. NL Exhaust."
+  },
+  "${ModID}:Concatenation": {
+    "NAME": "Concatenation",
+    "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL ${ModID}:Summon a ${ModID}:Doppel with the leftmost Attack in your hand."
+  },
+  "${ModID}:EmergencyContact": {
+    "NAME": "Emergency Contact",
+    "DESCRIPTION": "${ModID}:Summon {@@}{!M!|1=a|@=!M!} ${ModID}:Doppel{!M!|0,>1=s} with {!M!|1=a card|@=!M! cards} in your draw pile. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to Summon",
+      "Choose %d cards to Summon"
+    ]
+  },
+  "${ModID}:GrandfatherParadox": {
+    "NAME": "Grandfather Paradox",
+    "DESCRIPTION": "${ModID}:Summon {@@}{!M!|1=a|@=!M!} ${ModID}:Doppel{!M!|0,>1=s} with {!M!|1=a card|@=!M! cards} in your discard pile. NL Gain [E] equal to {!M!|1=its|@=their} cost. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to Summon",
+      "Choose %d cards to Summon"
+    ]
+  },
+  "${ModID}:Resistance": {
+    "NAME": "Resistance",
+    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL ${ModID}:Summon a ${ModID}:Doppel with the leftmost Skill in your hand."
+  },
+  "${ModID}:Tides": {
+    "NAME": "Tides",
+    "DESCRIPTION": "Deal !D! damage twice. NL Deal !D! damage for each ${ModID}:Doppel. NL ${ModID}:Summon a ${ModID}:Doppel."
+  },
+  "${ModID}:Turbulence": {
+    "NAME": "Turbulence",
+    "DESCRIPTION": "Whenever you ${ModID}:Summon a ${ModID}:Doppel, trigger its passive ability{@@}{!M!|1=|2= twice|@= !M! times}."
+  },
+  "${ModID}:Vortex": {
+    "NAME": "Vortex",
+    "DESCRIPTION": "Deal !D! damage. NL If you haven't played this card this turn, ${ModID}:Summon a ${ModID}:Doppel with this card."
+  },
+  "${ModID}:WormHole": {
+    "NAME": "Worm Hole",
+    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL Strength or Dexterity increases damage or Block of ${ModID}:Doppels accordingly."
+  }
+}
