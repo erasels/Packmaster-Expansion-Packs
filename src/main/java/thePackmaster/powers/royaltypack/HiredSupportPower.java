@@ -25,7 +25,7 @@ public class HiredSupportPower extends AbstractPackmasterPower {
     }
 
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (card.cost > 0) {
+        if (card.costForTurn > 0) {
             int goldAmount = card.costForTurn * ENERGY_TO_GOLD_CONVERSION;
             if (goldAmount <= AbstractDungeon.player.gold){
                 card.freeToPlayOnce = true;
