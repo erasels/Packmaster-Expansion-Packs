@@ -2,8 +2,8 @@
   "${ModID}:TurbulencePower": {
     "NAME": "Turbulence",
     "DESCRIPTIONS": [
-      "Whenever you #ySummon a #yDoppel, trigger its passive ability.",
-      "Whenever you #ySummon a #yDoppel, trigger its passive ability #b%d times."
+      "Whenever you #yChannel a #yDoppel, trigger its passive ability.",
+      "Whenever you #yChannel a #yDoppel, trigger its passive ability #b%d times."
     ]
   },
   "${ModID}:WormHolePower": {

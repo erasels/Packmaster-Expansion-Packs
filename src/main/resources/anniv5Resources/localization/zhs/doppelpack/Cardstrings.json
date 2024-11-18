@@ -1,48 +1,48 @@
 {
   "${ModID}:Summon": {
     "NAME": "召唤",
-    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:召唤 1 个 ${ModID}:分身 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 生成 1 个 ${ModID}:分身 。"
   },
   "${ModID}:Arrive": {
     "NAME": "降临",
-    "DESCRIPTION": "${ModID}:召唤 X个 ${ModID}:分身 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:召唤 X+1个 ${ModID}:分身 。 NL 消耗 。"
+    "DESCRIPTION": "生成 X个 ${ModID}:分身 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "生成 X+1个 ${ModID}:分身 。 NL 消耗 。"
   },
   "${ModID}:Concatenation": {
     "NAME": "并列",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽1张牌。 NL 使用手中最左侧的 攻击牌 ${ModID}:召唤 1个 ${ModID}:分身 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽1张牌。 NL 使用手中最左侧的 攻击牌 生成 1个 ${ModID}:分身 。"
   },
   "${ModID}:EmergencyContact": {
     "NAME": "紧急联络",
-    "DESCRIPTION": "使用抽牌堆的 !M! 张牌 ${ModID}:召唤 !M! 个 ${ModID}:分身 。 NL 消耗 。",
+    "DESCRIPTION": "使用抽牌堆的 !M! 张牌 生成 !M! 个 ${ModID}:分身 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "选择一张牌召唤",
-      "选择%d张牌召唤"
+      "选择一张牌生成分身",
+      "选择%d张牌生成分身"
     ]
   },
   "${ModID}:GrandfatherParadox": {
     "NAME": "祖父悖论",
-    "DESCRIPTION": "使用弃牌堆的 !M! 张牌 ${ModID}:召唤 !M! 个 ${ModID}:分身 。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
+    "DESCRIPTION": "使用弃牌堆的 !M! 张牌 生成 !M! 个 ${ModID}:分身 。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "选择一张牌召唤",
-      "选择%d张牌召唤"
+      "选择一张牌生成分身",
+      "选择%d张牌生成分身"
     ]
   },
   "${ModID}:Resistance": {
     "NAME": "抵抗",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽1张牌。 NL 使用手中最左侧的 技能牌 ${ModID}:召唤 1个 ${ModID}:分身 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽1张牌。 NL 使用手中最左侧的 技能牌 生成 1个 ${ModID}:分身 。"
   },
   "${ModID}:Tides": {
     "NAME": "浪潮",
-    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 每有一个 ${ModID}:分身 ，再造成 !D! 点伤害。 NL ${ModID}:召唤 1个 ${ModID}:分身 。"
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 每有一个 ${ModID}:分身 ，再造成 !D! 点伤害。 NL 生成 1个 ${ModID}:分身 。"
   },
   "${ModID}:Turbulence": {
     "NAME": "湍流",
-    "DESCRIPTION": "每当你 ${ModID}:召唤 ${ModID}:分身 后，使用它的被动能力{@@}{!M!|1=|@= !M! 次}。"
+    "DESCRIPTION": "每当你 生成 ${ModID}:分身 后，使用它的被动能力{@@}{!M!|1=|@= !M! 次}。"
   },
   "${ModID}:Vortex": {
     "NAME": "漩涡",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果是本回合第一次打出这张牌，使用这张牌 ${ModID}:召唤 1个 ${ModID}:分身 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果是本回合第一次打出这张牌，使用这张牌 生成 1个 ${ModID}:分身 。"
   },
   "${ModID}:WormHole": {
     "NAME": "虫洞",

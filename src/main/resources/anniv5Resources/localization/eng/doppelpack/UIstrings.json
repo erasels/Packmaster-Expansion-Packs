@@ -6,7 +6,7 @@
       "Chaofan",
       "Draw\\s*(\\d+|![\\w:.]+!)\\s*cards?",
       "Gain\\s*(\\d+\\s*|![\\w:.]+!\\s+)?\\[[RGBWE]\\]",
-      "Summon"
+      "Channel Doppel"
     ]
   },
   "${ModID}:DoppelPackHat": {

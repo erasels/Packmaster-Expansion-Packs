@@ -2,8 +2,8 @@
   "${ModID}:TurbulencePower": {
     "NAME": "湍流",
     "DESCRIPTIONS": [
-      "#y召唤分身 后，使用它的被动能力。",
-      "#y召唤分身 后，使用它的被动能力 #b%d 次。"
+      "#y生成分身 后，使用它的被动能力。",
+      "#y生成分身 后，使用它的被动能力 #b%d 次。"
     ]
   },
   "${ModID}:WormHolePower": {
