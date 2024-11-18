@@ -16,7 +16,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.doppelpack.AnonymousAction;
 import thePackmaster.actions.doppelpack.SummonAction;
 import thePackmaster.cardmodifiers.doppelpack.ShowDoppel;
 
@@ -71,12 +70,18 @@ public class Concatenation extends AbstractDoppelCard {
                     AbstractGameAction.AttackEffect.NONE));
         this.addToBot(new DrawCardAction(1));
         this.addToBot(new WaitAction(0.1f));
-        this.addToBot(new AnonymousAction(() -> p.hand.group.stream()
-                .filter(c -> c.type == CardType.ATTACK)
-                .findFirst()
-                .ifPresent(c -> {
-                    AbstractDungeon.player.hand.empower(c);
-                    SummonAction.doSummon(c, true);
-                })));
+        this.addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                p.hand.group.stream()
+                        .filter(c -> c.type == CardType.ATTACK)
+                        .findFirst()
+                        .ifPresent(c -> {
+                            AbstractDungeon.player.hand.empower(c);
+                            SummonAction.doSummon(c, true);
+                        });
+                isDone = true;
+            }
+        });
     }
 }

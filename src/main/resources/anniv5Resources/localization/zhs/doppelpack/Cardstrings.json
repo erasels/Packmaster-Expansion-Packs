@@ -46,6 +46,6 @@
   },
   "${ModID}:WormHole": {
     "NAME": "虫洞",
-    "DESCRIPTION": "获得 !M! 点 力量 和 敏捷 。 NL ${ModID}:分身 的 攻击和 格挡 数值 分别受 力量 和 敏捷 的加成。"
+    "DESCRIPTION": "获得 !M! 点 力量 和 敏捷 。 NL 力量 和 敏捷 也会影响 ${ModID}:分身 。"
   }
 }

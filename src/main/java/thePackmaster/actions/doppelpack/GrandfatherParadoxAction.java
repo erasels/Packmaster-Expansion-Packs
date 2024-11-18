@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class GrandfatherParadoxAction extends AbstractGameAction {
     private final String text;
-    private ArrayList<AbstractCard> affectedCards;
+    private final ArrayList<AbstractCard> affectedCards = new ArrayList<>();
 
     public GrandfatherParadoxAction(int amount, String description) {
         this.amount = amount;
@@ -22,7 +22,7 @@ public class GrandfatherParadoxAction extends AbstractGameAction {
     @Override
     public void update() {
         isDone = true;
-        affectedCards = new ArrayList<>(AbstractDungeon.player.discardPile.group);
+        affectedCards.addAll(AbstractDungeon.player.discardPile.group);
         for (AbstractCard card : affectedCards) {
             CardModifierManager.addModifier(card, new ShowDoppel());
         }
@@ -38,10 +38,8 @@ public class GrandfatherParadoxAction extends AbstractGameAction {
     }
 
     private void afterSelected(SelectFromGridAction.Source[] sources, AbstractCard[] abstractCards) {
-        if (affectedCards != null) {
-            for (AbstractCard card : affectedCards) {
-                CardModifierManager.removeModifiersById(card, ShowDoppel.ID, false);
-            }
+        for (AbstractCard card : affectedCards) {
+            CardModifierManager.removeModifiersById(card, ShowDoppel.ID, false);
         }
         int sumCost = 0;
         for (int i = abstractCards.length - 1; i >= 0; i--) {

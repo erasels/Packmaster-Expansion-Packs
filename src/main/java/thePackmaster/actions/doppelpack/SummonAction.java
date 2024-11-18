@@ -73,12 +73,16 @@ public class SummonAction extends AbstractGameAction {
 
         AbstractPlayer player = AbstractDungeon.player;
         if (player != null) {
-            AnonymousAction action = new AnonymousAction(() -> {
-                TurbulencePower power = (TurbulencePower) player.getPower(TurbulencePower.ID);
-                if (power != null) {
-                    power.onSummoned(doppel);
+            AbstractGameAction action = new AbstractGameAction() {
+                @Override
+                public void update() {
+                    TurbulencePower power = (TurbulencePower) player.getPower(TurbulencePower.ID);
+                    if (power != null) {
+                        power.onSummoned(doppel);
+                    }
+                    isDone = true;
                 }
-            });
+            };
             if (addToTop) {
                 AbstractDungeon.actionManager.addToTop(action);
             } else {
