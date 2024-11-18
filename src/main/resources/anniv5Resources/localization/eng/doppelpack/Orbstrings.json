@@ -27,7 +27,7 @@
   },
   "${ModID}:GainEnergyDoppel": {
     "DESCRIPTION": [
-      "#yPassive: At the start of turn, gain [E]. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn."
+      "#yPassive: At the start of turn, gain [E] . NL #yEvoke: Put #y%s into your hand and it costs 0 this turn."
     ],
     "NAME": "Doppel"
   },

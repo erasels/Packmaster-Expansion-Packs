@@ -32,8 +32,6 @@ public class DoppelPack extends AbstractCardPack {
         if (frameBuffer == null) {
             frameBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, Settings.WIDTH, Settings.HEIGHT, false, false);
         }
-
-        // hatHidesHair = true;
     }
 
     @Override

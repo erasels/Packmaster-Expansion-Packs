@@ -4,7 +4,7 @@
       "Doppel",
       "Turn cards into orbs to gain long-term effect.",
       "Chaofan",
-      "Draw\\s*(\\d+|![\\w:.]+!)\\s*cards?",
+      "(?:Draw\\s+(\\d+|![\\w:.]+!|a)\\s+cards?|Draw cards until|Draw that many(?: cards)?)",
       "Gain\\s*(\\d+\\s*|![\\w:.]+!\\s+)?\\[[RGBWE]\\]",
       "Channel Doppel"
     ]
