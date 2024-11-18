@@ -46,6 +46,6 @@
   },
   "${ModID}:WormHole": {
     "NAME": "Worm Hole",
-    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL Strength or Dexterity increases damage or Block of ${ModID}:Doppels accordingly."
+    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL Strength and Dexterity affect ${ModID}:Doppels."
   }
 }
