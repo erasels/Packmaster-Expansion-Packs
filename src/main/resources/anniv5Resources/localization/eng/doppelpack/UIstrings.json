@@ -1,0 +1,18 @@
+{
+  "${ModID}:DoppelPack": {
+    "TEXT": [
+      "Doppel",
+      "Turn cards into orbs to gain long-term effect.",
+      "Chaofan",
+      "(?:Draw\\s+(\\d+|![\\w:.]+!|a)\\s+cards?|Draw cards until|Draw that many(?: cards)?)",
+      "Gain\\s*(\\d+\\s*|![\\w:.]+!\\s+)?\\[[RGBWE]\\]",
+      "Channel Doppel"
+    ]
+  },
+  "${ModID}:DoppelPackHat": {
+    "TEXT": [
+      "From a girl that travels through time and space.",
+      "A Hat in Time"
+    ]
+  }
+}
