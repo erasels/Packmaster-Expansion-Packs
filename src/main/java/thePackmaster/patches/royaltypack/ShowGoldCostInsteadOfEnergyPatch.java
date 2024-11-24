@@ -25,7 +25,8 @@ public class ShowGoldCostInsteadOfEnergyPatch {
     )
 
     public static SpireReturn<Void> ShowGoldCostInsteadOfEnergy(AbstractCard __instance, SpriteBatch __sb){
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(HiredSupportPower.POWER_ID) &&
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hand.contains(__instance) &&
+                AbstractDungeon.player.hasPower(HiredSupportPower.POWER_ID) &&
                 __instance.costForTurn * 10 <= AbstractDungeon.player.gold &&
                 (__instance.costForTurn > 0 || __instance.costForTurn == -1)) {
             String text;
