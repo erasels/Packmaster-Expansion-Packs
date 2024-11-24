@@ -2,14 +2,14 @@
   "${ModID}:RoyaltyPack": {
     "TEXT": [
       "Royalty",
-      "Strong cards, but with downsides involving discard, Gold or HP costs.",
+      "Who needs Energy when you have Gold? Also defense options for a good setup!",
       "Levender",
-      "Character from #yBuriedbornes. NL Pack and Noble Form drawings from NL #ypixiv.net/en/users/5887541 NL All the other character arts made by #yoninego NL twitter - onineg0 NL email - oniplingz@gmail.com"
+      "Character from #yBuriedbornes. NL Pack drawing from NL #ypixiv.net/en/users/5887541 NL All the other character arts will be made by #yoninego NL twitter - onineg0 NL email - oniplingz@gmail.com"
     ]
   },
   "${ModID}:RoyaltyPackHat": {
     "TEXT": [
-      "The golden symbol of a heavy duty.",
+      "Found buried under hopes waiting to be reborn.",
       "Royal Crown"
     ]
   },
