@@ -14,12 +14,13 @@ public class RoyalSupplyLines extends AbstractRoyaltyCard {
     public final static String ID = makeID("RoyalSupplyLines");
 
     public RoyalSupplyLines(){
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(this.cost - 1);
+        //upgradeBaseCost(this.cost - 1);
+        this.isInnate = true;
     }
 
     @Override
