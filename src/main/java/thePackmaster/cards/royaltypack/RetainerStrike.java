@@ -28,7 +28,8 @@ public class RetainerStrike extends AbstractRoyaltyCard {
     }
 
     @Override
-    public void upp() {
+    public void upp()
+    {
         this.upgradeDamage(2);
     }
 
@@ -49,7 +50,7 @@ public class RetainerStrike extends AbstractRoyaltyCard {
                 toRetain = hand.getRandomCard(AbstractDungeon.cardRandomRng);
             }
             toRetain.retain = true;
-            toRetain.flash();
+            toRetain.superFlash();
         }
         else {
             if (AbstractDungeon.player.hand.isEmpty()) {
