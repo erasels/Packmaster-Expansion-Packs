@@ -27,7 +27,7 @@ public class RetainForOneTurnModifier extends AbstractCardModifier {
     {
         card.retain = true;
         startingGlowColor = card.glowColor.cpy();
-        card.glowColor = Color.WHITE;
+        card.glowColor = Color.WHITE.cpy();
     }
 
     public boolean removeAtEndOfTurn(AbstractCard card) {
@@ -35,7 +35,7 @@ public class RetainForOneTurnModifier extends AbstractCardModifier {
     }
 
     public void onRemove(AbstractCard card) {
-        //card.glowColor = startingGlowColor;
+        card.glowColor = startingGlowColor;
     }
 
     public AbstractCardModifier makeCopy() {
