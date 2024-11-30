@@ -17,5 +17,10 @@
     "TEXT": [
       "Choose one card to have Retain this turn."
     ]
+  },
+  "${ModID}:RetainForOneTurnModifier": {
+    "TEXT": [
+      "Retain this turn. NL "
+    ]
   }
 }
