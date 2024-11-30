@@ -20,7 +20,7 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
 
     public Soulstone(){
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = damage = 7;
+        baseDamage = damage = 3;
         magicNumber = baseMagicNumber = 5;
         exhaust = true;
     }
@@ -28,7 +28,7 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
     @Override
     public void upp() {
 
-        upgradeDamage(2);
+        upgradeDamage(1);
         upgradeMagicNumber(4);
     }
 
