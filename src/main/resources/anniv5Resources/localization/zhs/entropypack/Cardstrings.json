@@ -22,7 +22,7 @@
   },
   "${ModID}:RuinousPortent": {
     "NAME": "毁灭凶兆",
-    "DESCRIPTION": "获得 !M! ${ModID}:熵。 NL ${ModID}:疾风：对一个随机敌人施加1个${ModID}:毁灭。"
+    "DESCRIPTION": "获得 !M! ${ModID}:熵 。 NL ${ModID}:疾风 ：对一个随机敌人施加1个 ${ModID}:毁灭 。"
   },
   "${ModID}:Unbind": {
     "NAME": "解耦",

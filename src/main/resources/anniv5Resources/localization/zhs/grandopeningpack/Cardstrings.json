@@ -28,7 +28,7 @@
     "DESCRIPTION": "只有在你的弃牌堆中没有牌时才能打出。 NL 获得 !B! 点格挡。 NL 起动 ：获得 !M! 点格挡。"
   },
   "${ModID}:PlotArmor": {
-    "NAME": "剧情铠甲",
+    "NAME": "主角光环",
     "DESCRIPTION": "获得 !B! 点格挡。",
     "EXTENDED_DESCRIPTION": [" NL ","${ModID}:首牌 :", " 本场战斗中，每打出过一张 固有 或 起动 牌，获得 !M! 点额外格挡。", " NL (获得 ", " 点额外格挡。) NL"]
   },
