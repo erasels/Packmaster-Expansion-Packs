@@ -2,8 +2,8 @@
   "${ModID}:RoyalSupplyLinesPower": {
     "NAME": "Royal Supply Lines",
     "DESCRIPTIONS": [
-      "Each turn, draw ",
-      " extra cards.",
+      "At the start of your turn, draw ",
+      " additional cards.",
       " At the end of your turn, Retain up to ",
       " cards."
     ]
