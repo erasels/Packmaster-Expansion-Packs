@@ -6,7 +6,7 @@
   },
   "${ModID}:Soulstone": {
     "NAME": "Soulstone",
-    "DESCRIPTION": "Deal !D! damage. NL Startup: gain !M! Gold. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Startup: Gain !M! Gold. NL Exhaust."
   },
   "${ModID}:HiringSpecialists": {
     "NAME": "Hiring Specialists",
