@@ -36,7 +36,7 @@
   },
   "${ModID}:TacticalReroll": {
     "NAME": "Tactical Reroll",
-    "DESCRIPTION": "Pay 10 Gold to put !M! cards from your discard pile in your hand. NL Exhaust."
+    "DESCRIPTION": "Pay 10 Gold to put !M! cards from your discard pile into your hand. NL Exhaust."
   },
   "${ModID}:ForTheHistoryBooks": {
     "NAME": "For The History Books",
