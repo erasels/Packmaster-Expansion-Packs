@@ -28,13 +28,13 @@ public class RetainerStrike extends AbstractRoyaltyCard {
     public RetainerStrike(){
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.tags.add(CardTags.STRIKE);
-        baseDamage = 8;
+        baseDamage = 9;
     }
 
     @Override
     public void upp()
     {
-        this.upgradeDamage(2);
+        this.upgradeDamage(1);
     }
 
     @Override
