@@ -23,7 +23,7 @@
   },
   "${ModID}:Stratagem": {
     "NAME": "Stratagem",
-    "DESCRIPTION": "The target loses !M! Strength this turn. NL At the start of the next turn, NL gain 1 ${ModID}:Hired_Support."
+    "DESCRIPTION": "The target loses !M! Strength this turn. NL At the start of your next turn, NL gain 1 ${ModID}:Hired_Support."
   },
   "${ModID}:RoyalSupplyLines": {
     "NAME": "Royal Supply Lines",
