@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.vfx.royaltypack.LoseGoldTextEffect;
 
@@ -39,7 +40,7 @@ public class HiredSupportPower extends AbstractPackmasterPower {
             }
         }
         else if (card.cost == -1){
-            int goldAmount = AbstractDungeon.player.energy.energy * ENERGY_TO_GOLD_CONVERSION;
+            int goldAmount = EnergyPanel.getCurrentEnergy() * ENERGY_TO_GOLD_CONVERSION;
             if (goldAmount <= AbstractDungeon.player.gold){
                 card.freeToPlayOnce = true;
                 AbstractDungeon.effectList.add(new LoseGoldTextEffect(-goldAmount));
