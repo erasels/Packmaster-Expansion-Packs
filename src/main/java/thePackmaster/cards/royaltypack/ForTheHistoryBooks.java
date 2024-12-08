@@ -17,8 +17,9 @@ public class ForTheHistoryBooks extends AbstractRoyaltyCard {
     public final static int INCREASE_ON_UPGRADE = 2;
 
     public ForTheHistoryBooks(){
-        super(ID, -1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = AMOUNT_OF_TEMP_STR_AND_DEX;
+        exhaust = true;
     }
 
     @Override

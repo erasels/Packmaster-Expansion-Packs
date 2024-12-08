@@ -40,6 +40,6 @@
   },
   "${ModID}:ForTheHistoryBooks": {
     "NAME": "For The History Books",
-    "DESCRIPTION": "Next turn, NL Gain !M! Temp Strength NL and Temp Dexterity NL X times, and 1 ${ModID}:Hired_Support."
+    "DESCRIPTION": "Next turn, NL Gain !M! Temp Strength NL and Temp Dexterity NL X times, and 1 ${ModID}:Hired_Support. NL Exhaust."
   }
 }
