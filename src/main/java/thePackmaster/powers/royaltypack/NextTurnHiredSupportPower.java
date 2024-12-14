@@ -27,6 +27,6 @@ public class NextTurnHiredSupportPower  extends AbstractPackmasterPower {
 
 
     @Override
-    public void updateDescription() { description = DESCRIPTIONS[0]; }
+    public void updateDescription() { description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1]; }
 
 }

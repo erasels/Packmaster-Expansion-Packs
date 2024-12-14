@@ -25,7 +25,8 @@
   "${ModID}:NextTurnHiredSupportPower": {
     "NAME": "Next Turn Hired Support",
     "DESCRIPTIONS": [
-      "Next turn, gain Hired Support."
+      "Next turn, gain ",
+      " Hired Support."
     ]
   },
   "${ModID}:AlchemyTimePower": {
