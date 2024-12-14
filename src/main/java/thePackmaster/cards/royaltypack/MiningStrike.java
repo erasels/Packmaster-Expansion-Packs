@@ -2,11 +2,14 @@ package thePackmaster.cards.royaltypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.GainGoldTextEffect;
+import thePackmaster.actions.royaltypack.MiningStrikeAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -31,9 +34,9 @@ public class MiningStrike extends AbstractRoyaltyCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        this.addToBot(new GainGoldAction(magicNumber));
-        AbstractDungeon.effectList.add(new GainGoldTextEffect(magicNumber));
-        CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
-        dmg(abstractMonster, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        this.addToBot(new MiningStrikeAction(
+                abstractMonster,
+                new DamageInfo(abstractPlayer, this.damage, this.damageTypeForTurn),
+                magicNumber));
     }
 }
