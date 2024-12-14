@@ -22,7 +22,7 @@ public class HiredSupportPower extends AbstractPackmasterPower {
     public static final int ENERGY_TO_GOLD_CONVERSION = 10;
 
     public HiredSupportPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, 1);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
     }
 
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
