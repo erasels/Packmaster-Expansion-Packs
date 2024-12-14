@@ -43,9 +43,6 @@ public class ForTheHistoryBooksPower extends AbstractPackmasterPower {
         Wiz.atb(new ApplyPowerAction(
                 p, p, new LoseDexterityPower(p, amount)));
 
-        Wiz.atb(new ApplyPowerAction(
-                p, p, new HiredSupportPower(p, 1)));
-
         Wiz.atb(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 

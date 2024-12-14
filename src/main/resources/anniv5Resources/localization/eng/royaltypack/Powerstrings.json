@@ -18,8 +18,8 @@
     "NAME": "For The History Books",
     "DESCRIPTIONS": [
       "Next turn, gain ",
-      " Temporary Strength, ",
-      " Temporary Dexterity and 1 Hired Support."
+      " Temporary Strength and ",
+      " Temporary Dexterity."
     ]
   },
   "${ModID}:NextTurnHiredSupportPower": {

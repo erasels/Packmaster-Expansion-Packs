@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.powers.royaltypack.ForTheHistoryBooksPower;
+import thePackmaster.powers.royaltypack.NextTurnHiredSupportPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -43,5 +44,8 @@ public class ForTheHistoryBooks extends AbstractRoyaltyCard {
                 abstractPlayer,
                 new ForTheHistoryBooksPower(abstractPlayer,
                         magicNumber * currentMultiplier)));
+
+        this.addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,
+                new NextTurnHiredSupportPower(abstractPlayer, 1)));
     }
 }
