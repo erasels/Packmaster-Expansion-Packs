@@ -60,5 +60,11 @@ public class HiredSupportPower extends AbstractPackmasterPower {
     }
 
     @Override
-    public void updateDescription() { description = DESCRIPTIONS[0]; }
+    public void updateDescription() {
+        if (amount <= 1) description = DESCRIPTIONS[0];
+        else
+        {
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        }
+    }
 }

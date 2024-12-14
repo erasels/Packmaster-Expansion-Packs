@@ -11,7 +11,9 @@
   "${ModID}:HiredSupportPower": {
     "NAME": "Hired Support",
     "DESCRIPTIONS": [
-      "The next card played this turn that costs [E] to play spends 10 Gold per [E] , instead, if you have enough Gold."
+      "The next card played this turn that costs [E] to play spends 10 Gold per [E] , instead, if you have enough Gold.",
+      "The next ",
+      " cards played this turn that cost [E] to play spends 10 Gold per [E] , instead, if you have enough Gold."
     ]
   },
   "${ModID}:ForTheHistoryBooksPower": {
