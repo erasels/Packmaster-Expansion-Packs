@@ -21,7 +21,7 @@ public class NextTurnHiredSupportPower  extends AbstractPackmasterPower {
     public void atStartOfTurnPostDraw() {
         this.flash();
         this.addToBot(new ApplyPowerAction(this.owner, this.owner,
-                new HiredSupportPower(this.owner, 1)));
+                new HiredSupportPower(this.owner, amount)));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
