@@ -40,10 +40,13 @@ public class ForTheHistoryBooks extends AbstractRoyaltyCard {
         if (!this.freeToPlayOnce) {
             abstractPlayer.energy.use(EnergyPanel.totalCount);
         }
-        Wiz.atb(new ApplyPowerAction(abstractPlayer,
-                abstractPlayer,
-                new ForTheHistoryBooksPower(abstractPlayer,
-                        magicNumber * currentMultiplier)));
+
+        if (currentMultiplier > 0){
+            Wiz.atb(new ApplyPowerAction(abstractPlayer,
+                    abstractPlayer,
+                    new ForTheHistoryBooksPower(abstractPlayer,
+                            magicNumber * currentMultiplier)));
+        }
 
         this.addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,
                 new NextTurnHiredSupportPower(abstractPlayer, 1)));
