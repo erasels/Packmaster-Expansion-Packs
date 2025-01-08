@@ -38,7 +38,7 @@
   },
   "${ModID}:Turbulence": {
     "NAME": "Turbulence",
-    "DESCRIPTION": "Whenever you Channel a ${ModID}:Doppel, trigger its passive ability{@@}{!M!|1=|2= twice|@= !M! times}."
+    "DESCRIPTION": "Whenever you Channel an Orb, trigger its passive ability{@@}{!M!|1=|2= twice|@= !M! times}."
   },
   "${ModID}:Vortex": {
     "NAME": "Vortex",
