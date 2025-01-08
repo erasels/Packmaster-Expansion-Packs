@@ -151,21 +151,21 @@ public abstract class AbstractDoppel extends AbstractOrb {
     public void setSlot(int slotNum, int maxOrbs) {
         if (maxOrbs == 1) {
             this.tX = AbstractDungeon.player.drawX + 30.0F * Settings.scale;
-            this.tY = AbstractDungeon.player.drawY + 160.0F * Settings.yScale;
+            this.tY = AbstractDungeon.player.drawY + 15.0F * Settings.yScale;
         } else if (maxOrbs < 6) {
             float dist = 160.0F * Settings.scale + maxOrbs * 10.0F * Settings.scale;
             this.tX = AbstractDungeon.player.drawX + dist - (dist * 2) * slotNum / (maxOrbs - 1) + 20.0F * Settings.scale;
-            this.tY = AbstractDungeon.player.drawY + (160 + 50 * MathUtils.sinDeg(180f * slotNum / (maxOrbs - 1))) * Settings.yScale;
+            this.tY = AbstractDungeon.player.drawY + (15 + 50 * MathUtils.sinDeg(180f * slotNum / (maxOrbs - 1))) * Settings.yScale;
         } else {
             float dist = 160.0F * Settings.scale + maxOrbs * 10.0F * Settings.scale;
             this.tX = AbstractDungeon.player.drawX + dist - (dist * 2) * slotNum / (maxOrbs - 1) + 20.0F * Settings.scale;
-            this.tY = AbstractDungeon.player.drawY + (170 + 40 * MathUtils.sinDeg(180f * slotNum / (maxOrbs - 1))) * Settings.yScale
-                + ((slotNum % 2) * 2 - 1) * 30 * Settings.yScale;
+            this.tY = AbstractDungeon.player.drawY + (25 + 40 * MathUtils.sinDeg(180f * slotNum / (maxOrbs - 1))) * Settings.yScale
+                    + ((slotNum % 2) * 2 - 1) * 30 * Settings.yScale;
         }
 
         this.tX += MathUtils.random(-1f, 1f) * 10 * Settings.scale;
         this.tY += MathUtils.random(-1f, 1f) * 5 * Settings.scale;
-        this.tY += AbstractDungeon.player.hb_h / Settings.xScale * Settings.renderScale / 2.0F;
+        this.tY += 265f * Settings.renderScale;
         this.hb.move(this.tX, this.tY);
     }
 
