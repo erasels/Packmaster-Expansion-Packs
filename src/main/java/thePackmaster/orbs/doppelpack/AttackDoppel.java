@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.SpireAnniversary5Mod;
@@ -86,7 +85,7 @@ public class AttackDoppel extends AbstractDoppel {
     }
 
     @Override
-    public AbstractOrb makeCopy() {
+    protected AbstractDoppel makeDoppelCopy() {
         return new AttackDoppel(this.card, this.cardProperty);
     }
 

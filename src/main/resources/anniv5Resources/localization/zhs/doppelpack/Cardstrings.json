@@ -38,7 +38,7 @@
   },
   "${ModID}:Turbulence": {
     "NAME": "湍流",
-    "DESCRIPTION": "每当你 生成 ${ModID}:分身 后，使用它的被动能力{@@}{!M!|1=|@= !M! 次}。"
+    "DESCRIPTION": "每当你 生成 充能球后，使用它的被动能力{@@}{!M!|1=|@= !M! 次}。"
   },
   "${ModID}:Vortex": {
     "NAME": "漩涡",

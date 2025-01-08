@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.OrbStrings;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.doppelpack.AnimateDoppelAction;
@@ -44,7 +43,7 @@ public class DrawCardDoppel extends AbstractDoppel {
     }
 
     @Override
-    public AbstractOrb makeCopy() {
+    protected AbstractDoppel makeDoppelCopy() {
         return new DrawCardDoppel(this.card);
     }
 

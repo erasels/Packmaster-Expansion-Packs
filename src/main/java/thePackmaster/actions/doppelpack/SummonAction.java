@@ -4,12 +4,10 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.cardmodifiers.doppelpack.ShowDoppel;
 import thePackmaster.orbs.doppelpack.AbstractDoppel;
 import thePackmaster.packs.DoppelPack;
-import thePackmaster.powers.doppelpack.TurbulencePower;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,25 +67,6 @@ public class SummonAction extends AbstractGameAction {
             AbstractDungeon.actionManager.addToTop(new ChannelAction(doppel));
         } else {
             AbstractDungeon.actionManager.addToBottom(new ChannelAction(doppel));
-        }
-
-        AbstractPlayer player = AbstractDungeon.player;
-        if (player != null) {
-            AbstractGameAction action = new AbstractGameAction() {
-                @Override
-                public void update() {
-                    TurbulencePower power = (TurbulencePower) player.getPower(TurbulencePower.ID);
-                    if (power != null) {
-                        power.onSummoned(doppel);
-                    }
-                    isDone = true;
-                }
-            };
-            if (addToTop) {
-                AbstractDungeon.actionManager.addToTop(action);
-            } else {
-                AbstractDungeon.actionManager.addToBottom(action);
-            }
         }
     }
 }

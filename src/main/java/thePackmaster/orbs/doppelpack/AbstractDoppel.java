@@ -8,6 +8,9 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
+import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -42,6 +45,8 @@ public abstract class AbstractDoppel extends AbstractOrb {
     public float animationTimer;
     protected float animX;
     private final Color color = Color.GRAY.cpy();
+
+    protected boolean hasEvoked = false;
 
     public AbstractDoppel(AbstractCard card) {
         this.baseEvokeAmount = 0;
@@ -86,7 +91,28 @@ public abstract class AbstractDoppel extends AbstractOrb {
     @Override
     public void onEvoke() {
         this.card.setCostForTurn(0);
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.card, true, true));
+        AbstractCard[] lastCard = new AbstractCard[1];
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.card, true, !this.hasEvoked) {
+            @SpireOverride
+            public AbstractCard makeNewCard() {
+                AbstractCard card = SpireSuper.call();
+                lastCard[0] = card;
+                return card;
+            }
+        });
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                AbstractCard card = lastCard[0];
+                if (card != null) {
+                    // Set cost again in case the cost changes when copied. For example, Eviscerate.
+                    card.setCostForTurn(0);
+                }
+            }
+        });
+
+        this.hasEvoked = true;
     }
 
     @Override
@@ -142,6 +168,15 @@ public abstract class AbstractDoppel extends AbstractOrb {
         this.tY += AbstractDungeon.player.hb_h / Settings.xScale * Settings.renderScale / 2.0F;
         this.hb.move(this.tX, this.tY);
     }
+
+    @Override
+    public final AbstractOrb makeCopy() {
+        AbstractDoppel doppel = this.makeDoppelCopy();
+        doppel.hasEvoked = this.hasEvoked;
+        return null;
+    }
+
+    protected abstract AbstractDoppel makeDoppelCopy();
 
     protected int getDoppelDamage(AbstractCard card) {
         if (card.type != AbstractCard.CardType.ATTACK) {

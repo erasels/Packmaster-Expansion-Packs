@@ -3,8 +3,9 @@ package thePackmaster.powers.doppelpack;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.doppelpack.AbstractDoppel;
+import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 public class TurbulencePower extends AbstractPackmasterPower {
@@ -21,11 +22,13 @@ public class TurbulencePower extends AbstractPackmasterPower {
         this.description = String.format(DESCRIPTIONS[amount == 1 ? 0 : 1], this.amount);
     }
 
-    public void onSummoned(AbstractDoppel doppel) {
+    @Override
+    public void onChannel(AbstractOrb orb) {
         this.flash();
         for (int i = 0; i < amount; i++) {
-            doppel.onStartOfTurn();
-            doppel.onEndOfTurn();
+            if (orb instanceof PackmasterOrb) ((PackmasterOrb) orb).passiveEffect();
+            orb.onStartOfTurn();
+            orb.onEndOfTurn();
         }
     }
 }
