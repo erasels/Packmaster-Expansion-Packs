@@ -30,7 +30,7 @@
     "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。 NL 消耗 。"
   },
   "${ModID}:Haymaker": {
-    "NAME": "强力一击",
+    "NAME": "重拳",
     "DESCRIPTION": "造成 !D! 点群体伤害。 NL 本回合每用过一张牌， NL 本牌伤害增加 !M! 点。"
   },
   "${ModID}:ManaShield": {
@@ -47,7 +47,7 @@
     ]
   },
   "${ModID}:Crusher": {
-    "NAME": "破坏者",
+    "NAME": "压碎",
     "DESCRIPTION": "保留 。 NL 造成 !D! 点 伤害。 NL 本牌在手时，每当一张牌被 ${ModID}:创造 ，本牌下次耗能减1。"
   },
   "${ModID}:PreservedThorns": {
