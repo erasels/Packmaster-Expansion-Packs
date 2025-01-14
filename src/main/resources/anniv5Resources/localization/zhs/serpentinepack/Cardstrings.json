@@ -8,11 +8,11 @@
     "DESCRIPTION": "抽 !M! 张牌。 NL 丢弃2张牌。 NL 本场战斗中多消耗 [E] 。"
 },"${ModID}:Toxicology": {
     "NAME": "毒药学",
-    "DESCRIPTION": "抽2张牌。 NL ${ModID}:恶毒 ：获得 [E] ，并退出姿态。 NL 否则，进入 ${ModID}:恶毒 。",
-    "UPGRADE_DESCRIPTION": "抽2张牌。 NL ${ModID}:恶毒 ：获得 [E] [E] ，并退出姿态。 NL 否则，进入 ${ModID}:恶毒 。"
+    "DESCRIPTION": "抽2张牌。 NL ${ModID}:恶毒 ：获得 [E] ， NL 退出当前 姿态 。 NL 否则，进入 ${ModID}:恶毒 。",
+    "UPGRADE_DESCRIPTION": "抽2张牌。 NL ${ModID}:恶毒 ：获得 [E] [E] ， NL 退出当前 姿态 。 NL 否则，进入 ${ModID}:恶毒 。"
 },"${ModID}:Patience": {
     "NAME": "藏于暗影",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若处于 姿态 ，再获得一次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若处于 姿态 ，退出它，再获得 !B! 点 格挡 。"
 },"${ModID}:DaggerRush": {
     "NAME": "匕首蛇击",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
