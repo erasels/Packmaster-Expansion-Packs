@@ -16,7 +16,6 @@ public class BreakALeg extends AbstractGrandOpeningCard implements StartupCard {
 
     public BreakALeg() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        tags.add(CardTags.STRIKE);
         baseDamage = damage = 4;
         baseMagicNumber = magicNumber = 1;
         baseSecondMagic = secondMagic = 1;
