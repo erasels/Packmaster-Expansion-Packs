@@ -25,6 +25,7 @@ public class IntoTheBreachPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(AcidProjector.ID);
         cards.add(FieldResearch.ID);
+        cards.add(Flamethrower.ID);
         cards.add(MercuryFist.ID);
         cards.add(ReboundVolley.ID);
         cards.add(ShieldProjector.ID);

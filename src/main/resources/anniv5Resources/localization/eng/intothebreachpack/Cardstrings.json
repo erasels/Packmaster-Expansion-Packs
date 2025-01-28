@@ -7,6 +7,10 @@
     "NAME": "Field Research",
     "DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Strength."
   },
+  "${ModID}:Flamethrower": {
+    "NAME": "Flamethrower",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL ALL enemies lose HP equal to their ${ModID}:Ignite."
+  },
   "${ModID}:MercuryFist": {
     "NAME": "Mercury Fist",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
