@@ -3,7 +3,6 @@ package thePackmaster.cards.intothebreachpack;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.BranchingUpgradesCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.intothebreachpack.ReboundVolleyAction;
@@ -59,8 +58,6 @@ public class ReboundVolley extends IntoTheBreachCard implements BranchingUpgrade
         upgradeDamage(-1);
         upgradeSecondDamage(-2);
         upgradeMagicNumber(1);
-        rawDescription = CardCrawlGame.languagePack.getCardStrings(ReboundVolley.ID).EXTENDED_DESCRIPTION[0];
-        initializeDescription();
     }
 
     // This method is used so the second damage value on the card

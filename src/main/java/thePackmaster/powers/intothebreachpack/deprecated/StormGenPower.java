@@ -1,4 +1,4 @@
-package thePackmaster.powers.intothebreachpack;
+package thePackmaster.powers.intothebreachpack.deprecated;
 
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;

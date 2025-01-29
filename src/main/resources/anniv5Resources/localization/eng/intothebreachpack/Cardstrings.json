@@ -3,13 +3,13 @@
     "NAME": "A.C.I.D. Projector",
     "DESCRIPTION": "The enemy takes double damage from Attacks this turn. NL Exhaust."
   },
-  "${ModID}:ElectricWhip": {
-    "NAME": "Electric Whip",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel 1 Lightning."
+  "${ModID}:FieldResearch": {
+    "NAME": "Field Research",
+    "DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Strength."
   },
-  "${ModID}:EnrageShot": {
-    "NAME": "Enrage Shot",
-    "DESCRIPTION": "Stun the enemy and apply 2 Strength. NL Exhaust."
+  "${ModID}:Flamethrower": {
+    "NAME": "Flamethrower",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL ALL enemies lose HP equal to their ${ModID}:Ignite."
   },
   "${ModID}:MercuryFist": {
     "NAME": "Mercury Fist",
@@ -17,8 +17,11 @@
   },
   "${ModID}:ReboundVolley": {
     "NAME": "Rebound Volley",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !${ModID}:sd! damage to a random other enemy.",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Deal !${ModID}:sd! damage to !M! random other enemies."]
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Deal !${ModID}:sd! damage to {!M!|1=a|@=!M!} random other enem{!M!|1=y|@=ies}."
+  },
+  "${ModID}:ShieldProjector": {
+    "NAME": "Shield Projector",
+    "DESCRIPTION": "Gain !M! Dexterity. NL At the end of this turn, lose !${ModID}:m2! Dexterity."
   },
   "${ModID}:SmokePellets": {
     "NAME": "Smoke Pellets",
@@ -32,12 +35,24 @@
     "NAME": "Spartan Shield",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Temporary Strength."
   },
-  "${ModID}:StormGenerator": {
-    "NAME": "Storm Generator",
-    "DESCRIPTION": "At the end of your turn, Channel !M! Lightning for each enemy that has a debuff."
-  },
   "${ModID}:VoidShocker": {
     "NAME": "Void Shocker",
     "DESCRIPTION": "Whenever an enemy deals only blocked damage, deal !M! damage back."
+  },
+
+
+
+
+  "${ModID}:ElectricWhip": {
+    "NAME": "Electric Whip",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel 1 Lightning."
+  },
+  "${ModID}:EnrageShot": {
+    "NAME": "Enrage Shot",
+    "DESCRIPTION": "Stun the enemy and apply 2 Strength. NL Exhaust."
+  },
+  "${ModID}:StormGenerator": {
+    "NAME": "Storm Generator",
+    "DESCRIPTION": "At the end of your turn, Channel !M! Lightning for each enemy that has a debuff."
   }
 }

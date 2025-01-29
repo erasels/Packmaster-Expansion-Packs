@@ -12,15 +12,16 @@ public class SmokePellets extends IntoTheBreachCard {
     public final static String ID = makeID("SmokePellets");
 
     public SmokePellets() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         block = baseBlock = 6;
         magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        for (AbstractMonster mo : getEnemies())
+        for (AbstractMonster mo : getEnemies()) {
             applyToEnemy(mo, new WeakPower(mo, magicNumber, false));
+        }
     }
 
     public void upp() {
