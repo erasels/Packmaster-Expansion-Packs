@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
+import thePackmaster.orbs.WitchesStrike.Arcane;
 import thePackmaster.powers.witchesstrikepack.MoonlightFlightPower;
 import thePackmaster.util.Wiz;
 
@@ -19,17 +19,18 @@ public class MoonlightFlight extends AbstractWitchStrikeCard
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public MoonlightFlight() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-         magicNumber = baseMagicNumber = 2;
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        cardsToPreview = new Bullet();
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p,new MoonlightFlightPower(p,magicNumber)));
-        Wiz.atb(new IncreaseMaxOrbAction(1));
-        Wiz.atb(new ChannelAction(new CrescentMoon()));
+        addToBot(new ApplyPowerAction(p,p,new MoonlightFlightPower(p)));
+        Wiz.atb(new IncreaseMaxOrbAction(magicNumber));
     }
 
     public void upp() {
+        selfRetain = true;
         upgradeMagicNumber(1);
     }
     @Override

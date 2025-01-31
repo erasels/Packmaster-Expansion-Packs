@@ -1,53 +1,57 @@
 {
   "${ModID}:Bullet": {
-    "NAME": "Bullet",
-    "DESCRIPTION": "${ModID}:Wicked. Retain. NL Deal !D! damage to a random enemy."
+    "NAME": "Dodge Offset",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
   },
 
   "${ModID}:CrescentSweep": {
     "NAME": "Heel Tornado",
-    "DESCRIPTION": "Gain !B! Block. NL Channel !M! ${ModID}:Arcane."
-  },
-  "${ModID}:MysticFlourish": {
-    "NAME": "Tetsuzanko",
-    "DESCRIPTION": "Deal !D! damage. NL Trigger your next orbs passive twice."
-  },
-
-  "${ModID}:CrystalMoonlight": {
-    "NAME": "Crystal Moonlight",
-    "DESCRIPTION": "Channel 1 Dark. NL Gain !M! Focus this turn."
-  },
-
-  "${ModID}:ChitteringPunt": {
-    "NAME": "Bullet Climax",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Add a *Bullet to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Add !M! *Bullets to your hand."
+    "DESCRIPTION": "Add a *Dodge *Offset to your hand. NL Channel 1 ${ModID}:Arcane.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Dodge *Offsets to your hand. NL Channel 1 ${ModID}:Arcane."
   },
 
   "${ModID}:FullMoonHalo": {
     "NAME": "Full Moon Halo",
-    "DESCRIPTION": "${ModID}:Wicked. NL Gain !B! Block. NL Gain !M! Focus this turn."
+    "DESCRIPTION": "Gain !B! Block. NL If you have 2 or more orbs, Add a *Dodge *Offset to your hand."
+  },
+
+  "${ModID}:ChitteringPunt": {
+    "NAME": "Bullet Climax",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a random Skill from your drawpile into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Put a random Skill from your drawpile into your hand."
+  },
+
+  "${ModID}:MysticFlourish": {
+    "NAME": "Tetsuzanko",
+    "DESCRIPTION": "Deal !D! damage. NL Trigger the passive effect of ALL your orbs.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Trigger the passive effect of ALL your orbs twice."
+  },
+  "${ModID}:CrystalMoonlight": {
+    "NAME": "Crystal Moonlight",
+    "DESCRIPTION": "Channel 1 ${ModID}:Arcane. NL Gain !M! Focus this turn."
   },
   "${ModID}:MoonlightBarrage": {
-    "NAME": "Moonlight Barrage",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each channeled Orb. NL Channel !M! Dark."
+    "NAME": "Flow of the Sword",
+    "DESCRIPTION": "Draw a card the first time you play a Skill each turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Draw a card the first time you play a Skill each turn."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "Lose !M! Focus this turn. NL Gain 1 Orb Slot. NL Channel 1 ${ModID}:Arcane."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Orb Slot. NL Channel 1 ${ModID}:Arcane."
   },
 
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:Wicked. NL Gain !B! Block. NL Add !M! *Bullets to your hand."
+    "DESCRIPTION": "Whenever you play a skill this turn, gain !M! block."
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moon River",
-    "DESCRIPTION": "Gain 1 Orb Slot. NL Channel 1 ${ModID}:Arcane. NL Whenever you channel an Orb, gain !M! Focus until your next turn."
+    "DESCRIPTION": "Gain !M! Orb Slots. NL At the start of your turn, Add a *Dodge *Offset to your hand",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Orb Slots. NL At the start of your turn, Add a *Dodge *Offset to your hand"
   },
   "${ModID}:ScarabPlague": {
-    "NAME": "Portal Kick",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and Lock-On. NL Channel 1 ${ModID}:Arcane."
+    "NAME": "Space Slip",
+    "DESCRIPTION": "Channel 1 ${ModID}:Arcane. NL Add !M! *Dodge *Offsets to your hand."
   },
   "${ModID}:Inscribed": {
     "EXTENDED_DESCRIPTION": [

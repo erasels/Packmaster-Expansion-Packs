@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import javassist.CtBehavior;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
+import thePackmaster.orbs.WitchesStrike.Arcane;
 
 import java.util.ArrayList;
 
@@ -23,8 +23,8 @@ public class ArcaneOrbPatch {
 
         for (AbstractOrb abstractOrb : AbstractDungeon.player.orbs) {
             AbstractOrb Orb = abstractOrb;
-            if (Orb instanceof CrescentMoon && targetCard.type == AbstractCard.CardType.SKILL) {
-                ((CrescentMoon) Orb).passiveEffect();
+            if (Orb instanceof Arcane && targetCard.type == AbstractCard.CardType.SKILL) {
+                ((Arcane) Orb).passiveEffect();
             }
         }
 

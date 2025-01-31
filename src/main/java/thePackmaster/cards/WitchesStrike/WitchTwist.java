@@ -1,9 +1,11 @@
 package thePackmaster.cards.WitchesStrike;
 
+import basemod.devcommands.draw.Draw;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,6 +17,8 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import thePackmaster.cardmodifiers.InscribedMod;
 import thePackmaster.cardmodifiers.witchesstrike.WickedModifier;
+import thePackmaster.powers.shamanpack.IgnitePower;
+import thePackmaster.powers.witchesstrikepack.WitchTwistPower;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -28,34 +32,15 @@ public class WitchTwist extends AbstractWitchStrikeCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public WitchTwist() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 12;
-        baseMagicNumber = magicNumber = 3;
-        cardsToPreview = new Bullet();
-        CardModifierManager.addModifier(this, new WickedModifier(2));
-    }
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean canUse = super.canUse(p, m);
-        if (!canUse) {
-            return false;
-        } else {
-            int orbs = 0;
-            for (AbstractOrb o : p.orbs) {
-                if (!(o instanceof EmptyOrbSlot)) {
-                    orbs++;
-                }
-            }
-            return orbs >= 2;
-        }
-    }
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new EvokeOrbAction(2));
-        blck();
-        Wiz.atb(new MakeTempCardInHandAction(new Bullet(),magicNumber));
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 6;
     }
 
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        Wiz.applyToSelf(new WitchTwistPower(p,magicNumber));
+    }
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(3);
     }
     @Override
     public String cardArtCopy() {

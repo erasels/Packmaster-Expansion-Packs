@@ -1,12 +1,15 @@
 package thePackmaster.cards.WitchesStrike;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.green.LegSweep;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.witchesstrikepack.ManifestAction;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
+import com.megacrit.cardcrawl.powers.FocusPower;
+import thePackmaster.orbs.WitchesStrike.Arcane;
+import thePackmaster.powers.witchesstrikepack.LoseFocusPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -15,20 +18,16 @@ public class CrescentSweep extends AbstractWitchStrikeCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public CrescentSweep() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseBlock = 7;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = 1;
+        cardsToPreview = new Bullet();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        addToBot(new ChannelAction(new CrescentMoon()));
-        if (upgraded){
-            addToBot(new ChannelAction(new CrescentMoon()));
-        }
+        Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(),magicNumber));
+        addToBot(new ChannelAction(new Arcane()));
     }
     public void upp() {
-        upgradeBlock(3);
         upgradeMagicNumber(1);
     }
     @Override

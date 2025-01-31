@@ -46,7 +46,7 @@ public class StarWaveEffect extends AbstractGameEffect {
                 i = 0;
 
                 while(true) {
-                    if (i >= 40) {
+                    if (i >= 60) {
                         break label32;
                     }
 

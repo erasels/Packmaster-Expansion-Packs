@@ -4,10 +4,8 @@ import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.Dark;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import thePackmaster.actions.witchesstrikepack.ManifestAction;
-import thePackmaster.orbs.PackmasterOrb;
+import thePackmaster.orbs.WitchesStrike.Arcane;
 import thePackmaster.powers.witchesstrikepack.LoseFocusPower;
 import thePackmaster.util.Wiz;
 
@@ -19,17 +17,17 @@ public class CrystalMoonlight extends AbstractWitchStrikeCard {
 
     public CrystalMoonlight() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ChannelAction(new Dark()));
+        addToBot(new ChannelAction(new Arcane()));
         Wiz.applyToSelf(new FocusPower(p,magicNumber));
         Wiz.applyToSelf(new LoseFocusPower(p,magicNumber));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
     @Override
     public String cardArtCopy() {

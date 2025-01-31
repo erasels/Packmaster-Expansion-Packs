@@ -1,10 +1,10 @@
 {
-  "${ModID}:CrescentMoon": {
+  "${ModID}:Arcane": {
     "NAME": "Arcane",
     "DESCRIPTION": [
       "#yPassive: After you play an #gSkill card, deal #b",
-      " damage to a random enemy. NL #yEvoke: deal #b",
-      " damage to ALL enemies."
+      " damage to a random enemy. NL ",
+      "#yEvoke: Deal #b"," damage to ALL enemies. NL #yEvoke damage is increased for each channeled #yArcane"
     ]
   }
 }

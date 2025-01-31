@@ -5,14 +5,6 @@
       "Arcane",
       "arcane"
     ],
-    "DESCRIPTION": "Orb. Passive: After you play a #gSkill card deals damage to a random enemy. Evoke : Deals damage to ALL enemies."
-  },
-  {
-    "PROPER_NAME": "Wicked",
-    "NAMES": [
-      "Wicked",
-      "wicked"
-    ],
-    "DESCRIPTION": "In addition to paying its cost, a Wicked card also requires that you have a number of orbs equal to its Wicked Counters, which will be evoked when the card is played"
+    "DESCRIPTION": "Orb. Passive: After you play a #gSkill card deals damage to a random enemy. Evoke : Deals damage based on the number of #ychanneled #yArcane."
   }
 ]

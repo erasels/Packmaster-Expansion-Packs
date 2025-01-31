@@ -31,7 +31,7 @@ public class StarEffect extends AbstractGameEffect {
         this.scale = MathUtils.random(0.5F, 0.9F);
         this.x = x - (float)this.img.packedWidth / 2.0F;
         this.y = y - (float)this.img.packedHeight / 2.0F;
-        this.duration = 2.0F;
+        this.duration = 0.5F;
         this.color = color;
         this.renderBehind = MathUtils.randomBoolean();
         this.speedStart = chosenSpeed;
@@ -56,13 +56,12 @@ public class StarEffect extends AbstractGameEffect {
             duration -= Gdx.graphics.getDeltaTime();
             if (this.duration < 0.0F) {
                 this.isDone = true;
-            } else if (this.duration > 1.5F) {
-                this.color.a = Interpolation.fade.apply(0.0F, 0.7F, (2.0F - this.duration) * 2.0F);
-            } else if (this.duration < 0.5F) {
-                this.color.a = Interpolation.fade.apply(0.0F, 0.7F, this.duration * 2.0F);
+            } else if (this.duration < 0.25F) {
+                this.color.a = Interpolation.fade.apply(0.0F, 0.7F, (0.5F - this.duration) * 0.5F);
+            } else if (this.duration > 0.25F) {
+                this.color.a = Interpolation.fade.apply(0.7F, 0.0F, this.duration * -0.5F);
             }
         }
-
     }
 
     public void render(SpriteBatch sb) {
