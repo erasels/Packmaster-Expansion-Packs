@@ -2,7 +2,7 @@
   "${ModID}:WitchesStrikePack": {
     "TEXT": [
       "Witches Strike",
-      "Directly activate your orbs abilities, care not for maximum orb slots with the ${ModID}:Manifest ability creating more as you Channel.",
+      "Never lose momentum, pour magic into every maneuver, #yArcane orbs deal damage whenever you play #gSkills.",
       "Silver",
       "#yBayonetta series originally created by #yPlatinum #yGames for card names and thematic inspiration."
     ]
@@ -11,12 +11,6 @@
     "TEXT": [
       "Witchcraft is equal parts magic and fashion.",
       "Sunday Best"
-    ]
-  },
-  "${ModID}:WickedTooltip": {
-    "TEXT": [
-      "Wicked",
-      "In addition to paying its cost, a Wicked card also requires that you have a number of orbs equal to its Wicked Counters, which will be evoked when the card is played"
     ]
   }
 }
