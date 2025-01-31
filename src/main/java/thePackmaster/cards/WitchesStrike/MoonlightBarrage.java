@@ -1,8 +1,10 @@
 package thePackmaster.cards.WitchesStrike;
 
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.blue.Capacitor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.orbs.summonspack.FireSpirit;
 import thePackmaster.powers.witchesstrikepack.FlowoftheSwordPower;
 import thePackmaster.util.Wiz;
 
@@ -17,6 +19,7 @@ public class MoonlightBarrage extends AbstractWitchStrikeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Wiz.atb(new ChannelAction(new FireSpirit()));
         Wiz.applyToSelf(new FlowoftheSwordPower(p,1));
     }
 
