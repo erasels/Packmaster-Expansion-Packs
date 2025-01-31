@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.BlurWaveAdditiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.BlurWaveChaoticEffect;
-import com.megacrit.cardcrawl.vfx.combat.BlurWaveNormalEffect;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
 public class StarWaveEffect extends AbstractGameEffect {

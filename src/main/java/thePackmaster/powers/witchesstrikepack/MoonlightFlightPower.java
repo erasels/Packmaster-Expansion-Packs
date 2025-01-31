@@ -1,18 +1,10 @@
 package thePackmaster.powers.witchesstrikepack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.FocusPower;
-import thePackmaster.actions.highenergypack.AllEnemyApplyPowerAction;
 import thePackmaster.cards.WitchesStrike.Bullet;
-import thePackmaster.orbs.WitchesStrike.Arcane;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

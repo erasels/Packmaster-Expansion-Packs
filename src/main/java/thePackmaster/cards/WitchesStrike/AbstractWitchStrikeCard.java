@@ -1,9 +1,5 @@
 package thePackmaster.cards.WitchesStrike;
 
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.UIStrings;
-import thePackmaster.ExpansionPacks;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractWitchStrikeCard extends AbstractPackmasterCard {
