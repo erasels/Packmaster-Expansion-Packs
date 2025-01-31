@@ -1,0 +1,10 @@
+[
+  {
+    "PROPER_NAME": "Windrush",
+    "NAMES": [
+      "windrush",
+      "windrushes"
+    ],
+    "DESCRIPTION": "Whenever you would receive unblocked attack damage this turn, reduce it by this amount."
+  }
+]

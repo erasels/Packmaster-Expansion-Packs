@@ -1,0 +1,9 @@
+{
+  "${ModID}:WindrushPower": {
+    "NAME": "Windrush",
+    "DESCRIPTIONS": [
+      "Whenever you would receive unblocked attack damage this turn, reduce it by #b",
+      "."
+    ]
+  }
+}

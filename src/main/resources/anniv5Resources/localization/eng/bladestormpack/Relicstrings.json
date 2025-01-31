@@ -1,0 +1,10 @@
+{
+  "${ModID}:MiniFlyingDutchman": {
+    "NAME": "Mini Flying Dutchman",
+    "FLAVOR": "You'd swear it glows and hovers when the weather's real bad.",
+    "DESCRIPTIONS": [
+      "When you play your first #b",
+       " Attacks each turn, gain #y${ModID}:Windrush."
+    ]
+  }
+}

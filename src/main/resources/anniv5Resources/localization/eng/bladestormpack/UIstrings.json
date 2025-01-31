@@ -1,0 +1,15 @@
+{
+  "${ModID}:BladeStormPack": {
+    "TEXT": [
+      "Blade Storm",
+      "Attack with a pirate's enthusiasm, protected by ${ModID}:Windrush, ${ModID}:Bind and other effects.",
+      "Dj0z"
+    ]
+  },
+  "${ModID}:BladeStormPackHat": {
+    "TEXT": [
+      "It's well worn.",
+      "Temp Hat"
+    ]
+  }
+}
