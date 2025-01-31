@@ -14,7 +14,7 @@ public class WitchTwist extends AbstractWitchStrikeCard {
 
     public WitchTwist() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

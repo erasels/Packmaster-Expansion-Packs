@@ -23,8 +23,8 @@
 
   "${ModID}:MysticFlourish": {
     "NAME": "Tetsuzanko",
-    "DESCRIPTION": "Deal !D! damage. NL Trigger the passive effect of ALL your orbs.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Trigger the passive effect of ALL your orbs twice."
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL If you have 2 or more orbs, Apply !M! ${ModID}:Ignite",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy twice. NL ."
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
@@ -32,8 +32,8 @@
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Flow of the Sword",
-    "DESCRIPTION": "Draw a card the first time you play a Skill each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Draw a card the first time you play a Skill each turn."
+    "DESCRIPTION": "Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw a card the first time you play a Skill each turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw a card the first time you play a Skill each turn."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
@@ -46,7 +46,7 @@
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moon River",
-    "DESCRIPTION": "Gain !M! Orb Slots. NL At the start of your turn, Add a *Dodge *Offset to your hand",
+    "DESCRIPTION": "Gain !M! Orb Slot. NL At the start of your turn, Add a *Dodge *Offset to your hand",
     "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Orb Slots. NL At the start of your turn, Add a *Dodge *Offset to your hand"
   },
   "${ModID}:ScarabPlague": {

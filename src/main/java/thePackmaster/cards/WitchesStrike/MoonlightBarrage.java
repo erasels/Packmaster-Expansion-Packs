@@ -21,7 +21,7 @@ public class MoonlightBarrage extends AbstractWitchStrikeCard {
     }
 
     public void upp() {
-
+        isInnate = true;
     }
     @Override
     public String cardArtCopy() {

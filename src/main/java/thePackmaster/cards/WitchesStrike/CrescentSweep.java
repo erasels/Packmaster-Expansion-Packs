@@ -16,13 +16,13 @@ public class CrescentSweep extends AbstractWitchStrikeCard {
 
     public CrescentSweep() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = 1;
+        baseMagicNumber = magicNumber = 1;
         cardsToPreview = new Bullet();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(),magicNumber));
-        addToBot(new ChannelAction(new Arcane()));
+        Wiz.atb(new ChannelAction(new Arcane()));
     }
     public void upp() {
         upgradeMagicNumber(1);
