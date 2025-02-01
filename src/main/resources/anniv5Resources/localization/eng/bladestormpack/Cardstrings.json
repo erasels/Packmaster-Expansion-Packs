@@ -1,8 +1,54 @@
 {
-    "${ModID}:BSTempCard": {
-      "NAME": "BSTempCard",
-      "DESCRIPTION": "BSTempCard desc.",
-      "FLAVOR": "blade and wind."
-    }
+  "${ModID}:FlyingSwords": {
+    "NAME": "Flying Swords",
+    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Startup: Gain !M! Plated Armor.",
+    "FLAVOR": "This is ridiculous!"
+  },
+  "${ModID}:GeoDaRay": {
+    "NAME": "Geo Da Ray",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Gain !M! ${ModID}:Windrush and Vigor for each.",
+    "FLAVOR": "Get ready!"
+  },
+  "${ModID}:Overpressure": {
+    "NAME": "Overpressure",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Frail.",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First:", " Gain !B! Block."],
+    "FLAVOR": "So... you dare to defy me?!"
+  },
+  "${ModID}:Airdrop": {
+    "NAME": "Airdrop",
+    "DESCRIPTION": "Discover an Attack. If it’s Common, heal !M! HP. If it’s Rare, take 3 damage.",
+    "FLAVOR": "Sword! Return to your master!"
+  },
+  "${ModID}:TempestOfStrikes": {
+    "NAME": "Tempest of Strikes",
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Bind for each Attack in your deck. NL Exhaust.",
+    "FLAVOR": "Drown in fear!"
+  },
+  "${ModID}:FallOver": {
+    "NAME": "Fall Over",
+    "DESCRIPTION": "Deal !D! damage. Gain !${ModID}:m2! Strength. NL If the enemy dies, apply !M! ${ModID}:Bind to a random enemy and Exhaust.",
+    "FLAVOR": "Stay still... and let me slay you!"
+  },
+  "${ModID}:FeedingWinds": {
+    "NAME": "Feeding Winds",
+    "DESCRIPTION": "Gain 1 ${ModID}:Windrush per Attack in your hand. NL Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\"",
+    "FLAVOR": "Let's see just how strong I am!"
+  },
+  "${ModID}:EscalatingBreeze": {
+    "NAME": "Escalating Breeze",
+    "DESCRIPTION": "At the end of this turn, Retain up to !M! attacks and reduce their cost by !${ModID}:m2! next turn.",
+    "FLAVOR": "I won't forget!"
+  },
+  "${ModID}:GaleForce": {
+    "NAME": "Gale-Force",
+    "DESCRIPTION": "Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost +!M!, and draw a card if it costs !${ModID}:m2! or more.",
+    "FLAVOR": "Hurry up and die!"
+  },
+  "${ModID}:DownwindBlows": {
+    "NAME": "Downwind Blows",
+    "DESCRIPTION": "Deal !D! damage twice. Take !M! % less attack damage this turn.",
+    "FLAVOR": "Right here!"
+  }
 }
   
