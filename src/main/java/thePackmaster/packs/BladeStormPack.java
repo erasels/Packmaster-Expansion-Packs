@@ -3,6 +3,10 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.bladestormpack.FlyingSwords;
+import thePackmaster.cards.bladestormpack.GeoDaRay;
+import thePackmaster.cards.bladestormpack.Overpressure;
+import thePackmaster.cards.bladestormpack.TempestOfStrikes;
 
 import java.util.ArrayList;
 
@@ -15,17 +19,17 @@ public class BladeStormPack  extends AbstractCardPack {
 
     public BladeStormPack() {
         super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 3, 3, 3, PackSummary.Tags.Attacks, PackSummary.Tags.Strength));
-        hatHidesHair = true;
+        hatHidesHair = false;
     }
 
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-//        cards.add(Shelling.ID);
-//        cards.add(Suppress.ID);
-//        cards.add(BallisticStrike.ID);
+        cards.add(FlyingSwords.ID);
+        cards.add(GeoDaRay.ID);
+        cards.add(Overpressure.ID);
 //        cards.add(DefensePlanning.ID);
-//        cards.add(ThinkTwice.ID);
+        cards.add(TempestOfStrikes.ID);
 //        cards.add(Logistics.ID);
 //        cards.add(ShellForge.ID);
 //        cards.add(Shrapnel.ID);
