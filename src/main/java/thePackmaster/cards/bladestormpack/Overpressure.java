@@ -73,7 +73,6 @@ public class Overpressure extends AbstractBladeStormCard {
     {
         // This skips the replacement of "anniv5:" with "" that the AbstractEvenOddCard version does to avoid issues
         // with text formatting when using custom dynamic variables (e.g. !anniv5:m2!)
-        //input = input.replace(modID + ":", "");   //uncomment if issues.
         return input.replaceAll("(\\s)((?!!|\\[E]|NL))"," " + EvenOddPack.GRAY + "$2");
     }
 

@@ -2,7 +2,7 @@
   "${ModID}:BladeStormPack": {
     "TEXT": [
       "Blade Storm",
-      "Attack with a pirate's enthusiasm, protected by ${ModID}:Windrush, ${ModID}:Bind and other effects.",
+      "Benefit from using Attacks with a pirate's enthusiasm, thanks to ${ModID}:Windrush, ${ModID}:Precision, ${ModID}:Bind and more!",
       "Dj0z"
     ]
   },

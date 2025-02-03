@@ -22,7 +22,8 @@
   },
   "${ModID}:TempestOfStrikes": {
     "NAME": "Tempest of Strikes",
-    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Bind for each Attack in your deck. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage and apply !${ModID}:m2! ${ModID}:Bind for each Attack in your deck.",
+    "EXTENDED_DESCRIPTION": [" NL ", "Your Strikes deal ", " additional damage.", " NL ", " Exhaust."],
     "FLAVOR": "Drown in fear!"
   },
   "${ModID}:FallOver": {

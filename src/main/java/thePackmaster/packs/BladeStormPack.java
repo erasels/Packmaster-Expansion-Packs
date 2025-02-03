@@ -7,8 +7,11 @@ import thePackmaster.cards.bladestormpack.*;
 
 import java.util.ArrayList;
 
-/*TODO: rest of the cards.
-fix dutchman only having the first string of its description, and zero functionality, when a save is loaded.
+/*TODO: test FallOver exhaust-on-kill.
+   Do rest of the cards.
+    fix dutchman only having the first string of its description, and zero functionality, when a save is loaded.
+    Test pack's description length.
+    Test flavor colors.
 */
 public class BladeStormPack  extends AbstractCardPack {
     public static final String ID = SpireAnniversary5Mod.makeID("BladeStormPack");
@@ -30,7 +33,7 @@ public class BladeStormPack  extends AbstractCardPack {
         cards.add(Overpressure.ID);
 //        cards.add(DefensePlanning.ID);
         cards.add(TempestOfStrikes.ID);
-//        cards.add(Logistics.ID);
+        cards.add(FallOver.ID);
 //        cards.add(ShellForge.ID);
         cards.add(EscalatingBreeze.ID);
 //        cards.add(DigIn.ID);
