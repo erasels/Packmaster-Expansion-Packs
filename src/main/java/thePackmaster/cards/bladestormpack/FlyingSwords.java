@@ -12,6 +12,7 @@ import thePackmaster.util.Wiz;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
+//REFS: Transmogrifier (pickthemall)
 public class FlyingSwords extends AbstractBladeStormCard implements StartupCard {
     public final static String ID = makeID("FlyingSwords");
     private static final int COST = 1;
@@ -20,16 +21,12 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard 
     private static final int HITS = 2;
     private static final int PLATED_ARMOR = 2;
 
-
     public FlyingSwords() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = PLATED_ARMOR;
-        //rawDescription = cardStrings.DESCRIPTION;
-        //initializeDescription();
     }
 
-    //Do Startup effects.
     @Override
     public boolean atBattleStartPreDraw() {
         Wiz.applyToSelf(new PlatedArmorPower(player, magicNumber));

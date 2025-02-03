@@ -3,13 +3,13 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.bladestormpack.FlyingSwords;
-import thePackmaster.cards.bladestormpack.GeoDaRay;
-import thePackmaster.cards.bladestormpack.Overpressure;
-import thePackmaster.cards.bladestormpack.TempestOfStrikes;
+import thePackmaster.cards.bladestormpack.*;
 
 import java.util.ArrayList;
 
+/*TODO: rest of the cards.
+fix dutchman only having the first string of its description, and zero functionality, when a save is loaded.
+*/
 public class BladeStormPack  extends AbstractCardPack {
     public static final String ID = SpireAnniversary5Mod.makeID("BladeStormPack");
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
@@ -18,7 +18,7 @@ public class BladeStormPack  extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public BladeStormPack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 3, 3, 3, PackSummary.Tags.Attacks, PackSummary.Tags.Strength));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 4, 3, 4, PackSummary.Tags.Attacks, PackSummary.Tags.Strength));
         hatHidesHair = false;
     }
 
@@ -32,9 +32,9 @@ public class BladeStormPack  extends AbstractCardPack {
         cards.add(TempestOfStrikes.ID);
 //        cards.add(Logistics.ID);
 //        cards.add(ShellForge.ID);
-//        cards.add(Shrapnel.ID);
+        cards.add(EscalatingBreeze.ID);
 //        cards.add(DigIn.ID);
-//        cards.add(Prevail.ID);
+        cards.add(DownwindBlow.ID);
         return cards;
     }
 }

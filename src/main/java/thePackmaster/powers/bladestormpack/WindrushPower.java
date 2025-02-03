@@ -8,7 +8,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-//REF: ConstructPower (EntropyPack)
+//REFS: BufferPower & TungstenRod relic (base game), ConstructPower (entropypack)
 public class WindrushPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("WindrushPower");
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
@@ -17,24 +17,21 @@ public class WindrushPower extends AbstractPackmasterPower {
     public WindrushPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
-        this.priority = -42068;     //ConstructPower has -42069.
+        this.priority = -42068; //ConstructPower: -42069, BufferPower: 5. Triggers after Construct, and protects Buffer.
+
     }
 
+    //Based on BufferPower, which does not affect enemy intents (that results in over-mitigation).
     @Override
-    public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
-        if (damageType != DamageInfo.DamageType.NORMAL) {
-            return damage;
-        }
-        //How much damage isn't blocked? Make sure Block didn't already reduce damage by this point.
-        int unblocked = 0;
-        //unblocked = damage - player.getBlock;
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        if (info.type != DamageInfo.DamageType.NORMAL) { return damageAmount; }
 
-        //Reduce only unblocked damage.
-        if (unblocked > 0) {
-            //return Math.max(0, damage - this.amount);
-            return Math.max(0, unblocked - this.amount);
+        //Block DID already reduce damage by this point. Game pretends blocked damage never happened.
+        if (damageAmount > 0) {    //So this is only unblocked damage.
+            this.flashWithoutSound();
+            return Math.max(0, damageAmount - this.amount);
         }
-        return damage;
+        return damageAmount;
     }
 
     @Override
@@ -43,11 +40,6 @@ public class WindrushPower extends AbstractPackmasterPower {
     }
 
     public void updateDescription() {
-        if (this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
-        }
-        else {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-        }
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }

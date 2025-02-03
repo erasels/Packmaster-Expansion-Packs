@@ -6,7 +6,7 @@
   },
   "${ModID}:GeoDaRay": {
     "NAME": "Geo Da Ray",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Gain !M! ${ModID}:Windrush and Vigor for each.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Gain !M! ${ModID}:Windrush and ${ModID}:Precision for each.",
     "FLAVOR": "Get ready!"
   },
   "${ModID}:Overpressure": {
@@ -45,9 +45,9 @@
     "DESCRIPTION": "Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost +!M!, and draw a card if it costs !${ModID}:m2! or more.",
     "FLAVOR": "Hurry up and die!"
   },
-  "${ModID}:DownwindBlows": {
-    "NAME": "Downwind Blows",
-    "DESCRIPTION": "Deal !D! damage twice. Take !M! % less attack damage this turn.",
+  "${ModID}:DownwindBlow": {
+    "NAME": "Downwind Blow",
+    "DESCRIPTION": "Deal !D! damage. Gain !M! ${ModID}:Precision. Take !${ModID}:m2!% less attack damage this turn.",
     "FLAVOR": "Right here!"
   }
 }

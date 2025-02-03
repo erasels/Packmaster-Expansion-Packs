@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
+import thePackmaster.packs.EvenOddPack;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.siegepack.FlavorConstants.*;
@@ -46,21 +47,34 @@ public class Overpressure extends AbstractBladeStormCard {
 
     @Override
     public void applyPowers() {
+        super.applyPowers();
+        this.rawDescription = this.createEvenOddText();
+        initializeDescription();
+    }
+
+    public String createEvenOddText() {
         if(AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty())
         {
-            this.rawDescription =  cardStrings.DESCRIPTION
+            return cardStrings.DESCRIPTION
                     + cardStrings.EXTENDED_DESCRIPTION[0]
                     + cardStrings.EXTENDED_DESCRIPTION[1]
                     + cardStrings.EXTENDED_DESCRIPTION[2];
         }
         else
         {
-            this.rawDescription =  cardStrings.DESCRIPTION
+            return cardStrings.DESCRIPTION
                     + cardStrings.EXTENDED_DESCRIPTION[0]
                     + cardStrings.EXTENDED_DESCRIPTION[1]
                     + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2]);
         }
-        initializeDescription();
+    }
+
+    public static String makeCardTextGray(String input)
+    {
+        // This skips the replacement of "anniv5:" with "" that the AbstractEvenOddCard version does to avoid issues
+        // with text formatting when using custom dynamic variables (e.g. !anniv5:m2!)
+        //input = input.replace(modID + ":", "");   //uncomment if issues.
+        return input.replaceAll("(\\s)((?!!|\\[E]|NL))"," " + EvenOddPack.GRAY + "$2");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -73,12 +87,10 @@ public class Overpressure extends AbstractBladeStormCard {
                 }
 
                 this.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
-                this.addToTop(new ApplyPowerAction(p, p, new FrailPower(p, 1, false)));
+                this.addToTop(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false)));
                 this.isDone = true;
             }
         });
-        //applyToSelf(new StrengthPower(p, magicNumber));
-        //applyToSelf(new LoseStrengthPower(p, magicNumber));
     }
 
     @Override

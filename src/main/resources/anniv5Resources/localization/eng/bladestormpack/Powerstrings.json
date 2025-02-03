@@ -3,12 +3,11 @@
     "NAME": "Windrush",
     "DESCRIPTIONS": [
       "Whenever you would receive unblocked attack damage this turn, reduce it by #b",
-      "Whenever they would receive unblocked attack damage this turn, reduce it by #b",
       "."
     ]
   },
-  "${ModID}:DownwindBlowsPower": {
-    "NAME": "Downwind Blows",
+  "${ModID}:DownwindBlowPower": {
+    "NAME": "Downwind Blow",
     "DESCRIPTIONS": [
       "Take #b50% less damage this turn.",
       "Take #b50% less damage for #b",
