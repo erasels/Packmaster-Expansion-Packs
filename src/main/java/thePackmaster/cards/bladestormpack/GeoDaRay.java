@@ -9,7 +9,7 @@ import thePackmaster.powers.instadeathpack.Precision;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.siegepack.FlavorConstants.*;
+import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
 public class GeoDaRay extends AbstractBladeStormCard {
     public final static String ID = makeID("GeoDaRay");

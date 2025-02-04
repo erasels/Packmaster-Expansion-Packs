@@ -18,7 +18,6 @@ public class WindrushPower extends AbstractPackmasterPower {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
         this.priority = -42068; //ConstructPower: -42069, BufferPower: 5. Triggers after Construct, and protects Buffer.
-
     }
 
     //Based on BufferPower, which does not affect enemy intents (that results in over-mitigation).

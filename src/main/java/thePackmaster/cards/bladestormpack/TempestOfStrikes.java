@@ -13,7 +13,7 @@ import thePackmaster.powers.strikepack.StrikeDummyJrPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.siegepack.FlavorConstants.*;
+import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
 //REFS: StrikeDummyJr (strikepack), Bees (infestpack), ShrapnelAction (siegepack), Master's Strike (upgradespack)
 public class TempestOfStrikes extends AbstractBladeStormCard {

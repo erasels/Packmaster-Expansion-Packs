@@ -13,5 +13,15 @@
       "Take #b50% less damage for #b",
       " turns."
     ]
+  },
+  "${ModID}:GaleForcePower": {
+    "NAME": "Gale-Force",
+    "DESCRIPTIONS": [
+      "Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost +#b",
+      ", and draw #b",
+      " card if it costs #b",
+      " cards if it costs #b",
+      " or more."
+    ]
   }
 }

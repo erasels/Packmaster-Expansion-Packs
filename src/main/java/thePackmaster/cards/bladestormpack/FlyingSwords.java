@@ -1,6 +1,7 @@
 package thePackmaster.cards.bladestormpack;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
+import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,6 +12,7 @@ import thePackmaster.util.Wiz;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
 //REFS: Transmogrifier (pickthemall)
 public class FlyingSwords extends AbstractBladeStormCard implements StartupCard {
@@ -25,6 +27,10 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard 
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = PLATED_ARMOR;
+
+        FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
+        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
+        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
     @Override
