@@ -1,5 +1,6 @@
 package thePackmaster.cards.bladestormpack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -8,6 +9,7 @@ import thePackmaster.actions.bladestormpack.FallOverAction;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 import static thePackmaster.util.Wiz.atb;
 
 //REFS: DummyStrikeJr (strikepack), KillThirst (rimworldpack)
@@ -25,6 +27,10 @@ public class FallOver extends AbstractBladeStormCard {
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = BIND_ON_KILL;
         baseSecondMagic = secondMagic = STRENGTH_GAIN;
+
+        FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
+        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
+        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package thePackmaster.cards.bladestormpack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,6 +9,7 @@ import thePackmaster.powers.instadeathpack.CloudPower;
 import thePackmaster.powers.instadeathpack.Precision;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
 public class DownwindBlow extends AbstractBladeStormCard {
     public final static String ID = makeID("DownwindBlow");
@@ -23,6 +25,10 @@ public class DownwindBlow extends AbstractBladeStormCard {
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = PRECISION;
         baseSecondMagic = secondMagic = DAMAGE_PROTECTION_PERCENTS;
+
+        FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
+        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
+        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
     @Override

@@ -1,9 +1,11 @@
 {
-  "${ModID}:WindrushPower": {
-    "NAME": "Windrush",
+  "${ModID}:EscalatingBreezePower": {
+    "NAME": "Escalating Breeze",
     "DESCRIPTIONS": [
-      "Whenever you would receive unblocked attack damage this turn, reduce it by #b",
-      "."
+      "Retain up to #b",
+      " card this turn. Chosen Attacks will cost #b",
+      " cards this turn. Chosen Attacks will cost #b",
+      " less next turn."
     ]
   },
   "${ModID}:DownwindBlowPower": {
@@ -12,6 +14,24 @@
       "Take #b50% less damage this turn.",
       "Take #b50% less damage for #b",
       " turns."
+    ]
+  },
+  "${ModID}:GaleForcePower": {
+    "NAME": "Gale-Force",
+    "DESCRIPTIONS": [
+      "Whenever you play an Attack, gain #yWindrush equal to its cost + #b",
+      ", and draw #b",
+      " card if it costs #b",
+      " cards if it costs #b",
+      " or more. NL NL ",
+      "  Windrush : Whenever you would receive unblocked Attack damage this turn, reduce it that much."
+    ]
+  },
+  "${ModID}:WindrushPower": {
+    "NAME": "Windrush",
+    "DESCRIPTIONS": [
+      "Whenever you would receive unblocked Attack damage this turn, reduce it by #b",
+      "."
     ]
   }
 }

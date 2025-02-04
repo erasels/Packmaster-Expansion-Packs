@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.FrailPower;
 import thePackmaster.packs.EvenOddPack;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.siegepack.FlavorConstants.*;
+import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
 //REFS: PlotArmor (grandopening), QuickReflex (evenodd), TheMANSION (maridebuff)
 public class Overpressure extends AbstractBladeStormCard {

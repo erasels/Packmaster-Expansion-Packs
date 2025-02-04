@@ -23,7 +23,7 @@ public class FallOverAction extends AbstractGameAction {
         this.p = source;
         this.BIND_ON_KILL = bindOnKill;
         this.cardToExhaust = cardToExhaust;
-        this.actionType = ActionType.DAMAGE;
+        this.actionType = ActionType.SPECIAL;
     }
 
     public void update() {
