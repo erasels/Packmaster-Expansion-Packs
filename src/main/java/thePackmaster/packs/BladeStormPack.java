@@ -7,11 +7,6 @@ import thePackmaster.cards.bladestormpack.*;
 
 import java.util.ArrayList;
 
-/*TODO:   Do rest of the cards.
-    Trade Winds upgraded description
-   Test pack's description length.
-    fix dutchman only having the first string of its description, and zero functionality, when a save is loaded.
-*/
 public class BladeStormPack  extends AbstractCardPack {
     public static final String ID = SpireAnniversary5Mod.makeID("BladeStormPack");
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
@@ -33,7 +28,7 @@ public class BladeStormPack  extends AbstractCardPack {
         cards.add(TradeWinds.ID);
         cards.add(TempestOfStrikes.ID);
         cards.add(FallOver.ID);
-//        cards.add(ShellForge.ID);
+        cards.add(FeedingWinds.ID);
         cards.add(EscalatingBreeze.ID);
         cards.add(GaleForce.ID);
         cards.add(DownwindBlow.ID);

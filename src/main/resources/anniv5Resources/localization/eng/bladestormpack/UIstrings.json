@@ -6,6 +6,12 @@
       "Dj0z"
     ]
   },
+  "${ModID}:BladeStormModifiers": {
+    "TEXT": [
+      " NL Gain ",
+      " Strength."
+    ]
+  },
   "${ModID}:BladeStormPackHat": {
     "TEXT": [
       "It's well worn.",

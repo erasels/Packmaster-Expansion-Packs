@@ -39,7 +39,8 @@
   },
   "${ModID}:EscalatingBreeze": {
     "NAME": "Escalating Breeze",
-    "DESCRIPTION": "At the end of this turn, Retain up to !M! attacks and reduce their cost by !${ModID}:m2! next turn.",
+    "DESCRIPTION": "Retain up to !M! card this turn. A chosen Attack will cost !${ModID}:m2! less next turn.",
+    "EXTENDED_DESCRIPTION": ["Retain up to ", " cards this turn. Chosen Attacks will cost ", " less next turn."],
     "FLAVOR": "I won't forget!"
   },
   "${ModID}:GaleForce": {
