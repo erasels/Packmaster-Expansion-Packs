@@ -17,12 +17,12 @@ public class TradeWinds extends AbstractBladeStormCard {
     public final static String ID = makeID("TradeWinds");
     private static final int COST = 0;
     private static final int COMMON_HEAL = 2;
-    private static final int RARE_DAMAGE = 3;
+    private static final int GOLD_LOSS_IF_RARE = 5;
 
     public TradeWinds() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = COMMON_HEAL;
-        baseSecondMagic = secondMagic = RARE_DAMAGE;
+        baseSecondMagic = secondMagic = GOLD_LOSS_IF_RARE;
         exhaust = true;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);

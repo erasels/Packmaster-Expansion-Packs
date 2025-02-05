@@ -17,8 +17,8 @@
   },
   "${ModID}:TradeWinds": {
     "NAME": "Trade Winds",
-    "DESCRIPTION": "Discover an Attack. If it’s Common, heal !M! HP. If it’s Rare, take !${ModID}:m2! damage.",
-    "EXTENDED_DESCRIPTION": ["Discover an upgraded Attack. If it’s Common, heal ", " HP. If it’s Rare, take ", " damage."],
+    "DESCRIPTION": "Discover an Attack. If it’s Common, heal !M! HP. If it’s Rare, lose #y !${ModID}:m2! gold.",
+    "EXTENDED_DESCRIPTION": ["Discover an upgraded Attack. If it’s Common, heal ", " HP. If it’s Rare, lose #y", " gold."],
     "FLAVOR": "Sword! Return to your master!"
   },
   "${ModID}:TempestOfStrikes": {
