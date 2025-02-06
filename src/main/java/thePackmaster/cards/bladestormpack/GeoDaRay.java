@@ -19,7 +19,7 @@ public class GeoDaRay extends AbstractBladeStormCard {
     private static final int WINDRUSH_AND_VIGOR_GAIN = 1;
 
     public GeoDaRay(){
-        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         damage = baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = WINDRUSH_AND_VIGOR_GAIN;
         isMultiDamage = true;
