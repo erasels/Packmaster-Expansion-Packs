@@ -2,8 +2,10 @@ package thePackmaster.cards.bladestormpack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import thePackmaster.powers.bladestormpack.WindrushPower;
 import thePackmaster.powers.instadeathpack.Precision;
 import thePackmaster.util.Wiz;
@@ -35,7 +37,10 @@ public class GeoDaRay extends AbstractBladeStormCard {
         int count = Wiz.getEnemies().size();
         Wiz.applyToSelf(new WindrushPower(p, magicNumber * count));
         Wiz.applyToSelf(new Precision(p, magicNumber * count));
-        Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, false);
+
+        addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
+
+        Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, false);
     }
 
     @Override

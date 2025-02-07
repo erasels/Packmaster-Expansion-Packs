@@ -1,5 +1,6 @@
 package thePackmaster.cards.bladestormpack;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 import thePackmaster.powers.needlework.BindPower;
 import thePackmaster.powers.strikepack.StrikeDummyJrPower;
 import thePackmaster.util.Wiz;
@@ -69,10 +71,14 @@ public class TempestOfStrikes extends AbstractBladeStormCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int attacksInDeck = countAttacksInDeck();
+        if (attacksInDeck <= 0) { return; }
+
+        AbstractDungeon.effectsQueue.add(new BorderLongFlashEffect(Color.CYAN));
+
         for (int i = 0; i < attacksInDeck; i++) {
             dmg(m, getRandomAttackEffect());
         }
-        //Separate loop to apply debuff(s), to avoid surprise damage changes from FieldResearch (intothebreachpack).
+        //Separate loop to apply debuff(s), to avoid surprise damage changes from FieldResearch (intothebreachpack) and such.
         for (int i = 0; i < attacksInDeck; i++) {
             addToBot(new ApplyPowerAction(m, p, new BindPower(m, secondMagic), secondMagic, true));
         }
