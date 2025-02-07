@@ -13,7 +13,7 @@ import thePackmaster.util.Wiz;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
-//REFS: Necronomicon & Shuriken (base game)
+//REFS: Necronomicon & Shuriken & Centennial Puzzle (base game)
 public class FlyingDutchman extends AbstractPackmasterRelic {
     public static final String ID = SpireAnniversary5Mod.makeID("FlyingDutchman");
     public static final int WINDRUSH = 2;
@@ -39,6 +39,7 @@ public class FlyingDutchman extends AbstractPackmasterRelic {
     public void init() {
         grayscale = false;
         counter = 0;
+        pulse = true;
     }
 
     @Override
@@ -49,17 +50,27 @@ public class FlyingDutchman extends AbstractPackmasterRelic {
             Wiz.applyToSelf(new WindrushPower(player, WINDRUSH));
             Wiz.applyToSelf(new Precision(player, PRECISION));
 
+            pulse = false;
             addToTop(new RelicAboveCreatureAction( player, this));
             flash();
 
             this.grayscale = true;
         } else {
             counter++;
+            if (counter >= ATTACKS_FOR_TRIGGER) {
+                beginPulse();
+            }
         }
     }
 
     @Override
+    public void onPlayerEndTurn () {
+        pulse = false;
+    }
+
+    @Override
     public void onVictory () {
+        pulse = false;
         grayscale = false;
         this.counter = -1;  //Shuriken hides counter between battles this way.
     }
