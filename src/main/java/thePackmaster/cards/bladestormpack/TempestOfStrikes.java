@@ -15,7 +15,8 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
-//REFS: StrikeDummyJr (strikepack), Bees (infestpack), ShrapnelAction (siegepack), Master's Strike (upgradespack)
+/*REFS: StrikeDummyJr (strikepack), Bees (infestpack), ShrapnelAction (siegepack), Master's Strike (upgradespack),
+Finisher (base game)*/
 public class TempestOfStrikes extends AbstractBladeStormCard {
     public final static String ID = makeID("TempestOfStrikes");
     private static final int COST = 2;
@@ -33,12 +34,37 @@ public class TempestOfStrikes extends AbstractBladeStormCard {
         tags.add(CardTags.STRIKE);
         exhaust = true;
 
-        rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[4];
-        initializeDescription();
+        updateDescription();
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        updateDescription();
+    }
+
+    //New
+    public void updateDescription () {
+        int attacks = countAttacksInDeck();
+        if (!upgraded) {
+            rawDescription = cardStrings.DESCRIPTION
+                            + attacks + cardStrings.EXTENDED_DESCRIPTION[0]
+                            + cardStrings.EXTENDED_DESCRIPTION[5];
+        } else {
+            rawDescription = cardStrings.DESCRIPTION
+                            + attacks + cardStrings.EXTENDED_DESCRIPTION[0]
+                            + cardStrings.EXTENDED_DESCRIPTION[1]
+                            + cardStrings.EXTENDED_DESCRIPTION[2]
+                            + magicNumber
+                            + cardStrings.EXTENDED_DESCRIPTION[3]
+                            + cardStrings.EXTENDED_DESCRIPTION[4]
+                            + cardStrings.EXTENDED_DESCRIPTION[5];
+        }
+        initializeDescription();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -80,18 +106,12 @@ public class TempestOfStrikes extends AbstractBladeStormCard {
     @Override
     public void upp() {
         upgradeMagicNumber(UPG_STRIKES_BOOST);
-
-        rawDescription = cardStrings.DESCRIPTION;
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
-        rawDescription += magicNumber;
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[4];
-        initializeDescription();
+        updateDescription();
     }
 
     public static int countAttacksInDeck() {
+        if (AbstractDungeon.player == null) { return 0; }
+
         int count = 0;
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.type == CardType.ATTACK) {
