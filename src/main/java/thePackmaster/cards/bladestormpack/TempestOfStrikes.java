@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 import thePackmaster.powers.needlework.BindPower;
-import thePackmaster.powers.strikepack.StrikeDummyJrPower;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
@@ -22,17 +20,16 @@ Finisher (base game)*/
 public class TempestOfStrikes extends AbstractBladeStormCard {
     public final static String ID = makeID("TempestOfStrikes");
     private static final int COST = 2;
-    private static final int DAMAGE = 3;
-    private static final int BIND = 1;
-    private static final int STRIKES_BOOST = 0;
-    private static final int UPG_STRIKES_BOOST = 2;
+    private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = 2;
+    private static final int BIND = 2;
+    private static final int UPG_BIND = 1;
+    private static final int COUNTED_CARDS_PER_HIT = 2;
 
     public TempestOfStrikes() {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
-        baseSecondMagic = secondMagic = BIND;
-
-        baseMagicNumber = magicNumber = STRIKES_BOOST;
+        baseMagicNumber = magicNumber = BIND;
         tags.add(CardTags.STRIKE);
         exhaust = true;
 
@@ -49,42 +46,27 @@ public class TempestOfStrikes extends AbstractBladeStormCard {
         updateDescription();
     }
 
-    //New
     public void updateDescription () {
-        int attacks = countAttacksInDeck();
-        if (!upgraded) {
-            rawDescription = cardStrings.DESCRIPTION
-                            + attacks + cardStrings.EXTENDED_DESCRIPTION[0]
-                            + cardStrings.EXTENDED_DESCRIPTION[5];
-        } else {
-            rawDescription = cardStrings.DESCRIPTION
-                            + attacks + cardStrings.EXTENDED_DESCRIPTION[0]
-                            + cardStrings.EXTENDED_DESCRIPTION[1]
-                            + cardStrings.EXTENDED_DESCRIPTION[2]
-                            + magicNumber
-                            + cardStrings.EXTENDED_DESCRIPTION[3]
-                            + cardStrings.EXTENDED_DESCRIPTION[4]
-                            + cardStrings.EXTENDED_DESCRIPTION[5];
-        }
+        int hits = countHits();
+        rawDescription = cardStrings.DESCRIPTION
+                + hits + cardStrings.EXTENDED_DESCRIPTION[0]
+                + cardStrings.EXTENDED_DESCRIPTION[1];
         initializeDescription();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int attacksInDeck = countAttacksInDeck();
-        if (attacksInDeck <= 0) { return; }
+        int hits = countHits();
+        if (hits <= 0) { return; }
 
         AbstractDungeon.effectsQueue.add(new BorderLongFlashEffect(Color.CYAN));
 
-        for (int i = 0; i < attacksInDeck; i++) {
+        for (int i = 0; i < hits; i++) {
             dmg(m, getRandomAttackEffect());
         }
         //Separate loop to apply debuff(s), to avoid surprise damage changes from FieldResearch (intothebreachpack) and such.
-        for (int i = 0; i < attacksInDeck; i++) {
-            addToBot(new ApplyPowerAction(m, p, new BindPower(m, secondMagic), secondMagic, true));
+        for (int i = 0; i < hits; i++) {
+            addToBot(new ApplyPowerAction(m, p, new BindPower(m, magicNumber), magicNumber, true));
         }
-
-        if (magicNumber <= 0) {return;}
-        Wiz.applyToSelf(new StrikeDummyJrPower(p, magicNumber));
     }
 
     private AbstractGameAction.AttackEffect getRandomAttackEffect() {
@@ -111,12 +93,18 @@ public class TempestOfStrikes extends AbstractBladeStormCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(UPG_STRIKES_BOOST);
+        upgradeDamage(UPG_DAMAGE);
+        upgradeMagicNumber(UPG_BIND);
         updateDescription();
     }
 
-    public static int countAttacksInDeck() {
-        if (AbstractDungeon.player == null) { return 0; }
+    private int countHits() {
+        if (COUNTED_CARDS_PER_HIT == 0) { return 0; }
+        return countAttacksInDeck() / COUNTED_CARDS_PER_HIT;
+    }
+
+    private int countAttacksInDeck() {
+        if (AbstractDungeon.player == null) { return 0; }   //Else the game crashes.
 
         int count = 0;
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {

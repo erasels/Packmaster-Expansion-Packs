@@ -25,10 +25,10 @@ public class Overpressure extends AbstractBladeStormCard {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = FRAIL;
-        rawDescription = cardStrings.DESCRIPTION;
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
+        rawDescription = cardStrings.EXTENDED_DESCRIPTION[0]
+                + cardStrings.EXTENDED_DESCRIPTION[1]
+                + cardStrings.EXTENDED_DESCRIPTION[2]
+                + cardStrings.DESCRIPTION;
         initializeDescription();
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
@@ -38,10 +38,10 @@ public class Overpressure extends AbstractBladeStormCard {
 
     @Override
     public void onMoveToDiscard() {
-        rawDescription = cardStrings.DESCRIPTION;
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
+        rawDescription = cardStrings.EXTENDED_DESCRIPTION[0]
+                + cardStrings.EXTENDED_DESCRIPTION[1]
+                + cardStrings.EXTENDED_DESCRIPTION[2]
+                + cardStrings.DESCRIPTION;
         initializeDescription();
     }
 
@@ -55,17 +55,17 @@ public class Overpressure extends AbstractBladeStormCard {
     public String createEvenOddText() {
         if(AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty())
         {
-            return cardStrings.DESCRIPTION
-                    + cardStrings.EXTENDED_DESCRIPTION[0]
+            return cardStrings.EXTENDED_DESCRIPTION[0]
                     + cardStrings.EXTENDED_DESCRIPTION[1]
-                    + cardStrings.EXTENDED_DESCRIPTION[2];
+                    + cardStrings.EXTENDED_DESCRIPTION[2]
+                    + cardStrings.DESCRIPTION;
         }
         else
         {
-            return cardStrings.DESCRIPTION
-                    + cardStrings.EXTENDED_DESCRIPTION[0]
+            return cardStrings.EXTENDED_DESCRIPTION[0]
                     + cardStrings.EXTENDED_DESCRIPTION[1]
-                    + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2]);
+                    + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2])
+                    + cardStrings.DESCRIPTION;
         }
     }
 

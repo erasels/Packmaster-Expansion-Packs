@@ -6,51 +6,51 @@
   },
   "${ModID}:GeoDaRay": {
     "NAME": "Geo Da Ray",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Gain !M! ${ModID}:Windrush and ${ModID}:Precision for each.",
+    "DESCRIPTION": "Gain !M! ${ModID}:Windrush and ${ModID}:Precision for each enemy in combat. NL Deal !D! damage to ALL enemies.",
     "FLAVOR": "Get ready!"
   },
   "${ModID}:Overpressure": {
     "NAME": "Overpressure",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Frail.",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First:", " Gain !B! Block."],
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Frail. ",
+    "EXTENDED_DESCRIPTION": ["${ModID}:First:", " Gain !B! Block.", " NL "],
     "FLAVOR": "So... you dare to defy me?!"
   },
   "${ModID}:TradeWinds": {
     "NAME": "Trade Winds",
-    "DESCRIPTION": "Discover an Attack. If it’s Common, heal !M! HP. If it’s Rare, lose !${ModID}:m2! gold. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": ["Discover an upgraded Attack. If it’s Common, heal ", " HP. If it’s Rare, lose ", " gold. NL Exhaust."],
+    "DESCRIPTION": "Discover an Attack. NL If it is common, heal !M! HP, or if it is rare, lose !${ModID}:m2! gold. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Discover an upgraded Attack. NL If it is common, heal ", " HP, or if it is rare, lose ", " gold. NL Exhaust."],
     "FLAVOR": "Sword! Return to your master!"
   },
   "${ModID}:TempestOfStrikes": {
     "NAME": "Tempest of Strikes",
-    "DESCRIPTION": "Deal !D! damage and apply !${ModID}:m2! ${ModID}:Bind for each Attack in your deck (",
-    "EXTENDED_DESCRIPTION": [ " attacks).", " NL ", "Your Strikes deal +", " damage.", " NL ", " Exhaust."],
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Bind a number of times equal to half of the number of Attacks in your deck (",
+    "EXTENDED_DESCRIPTION": [ " times).", " NL Exhaust."],
     "FLAVOR": "Sink down with your fear!"
   },
   "${ModID}:FallOver": {
     "NAME": "Fall Over",
-    "DESCRIPTION": "Deal !D! damage. Gain !${ModID}:m2! Strength. NL If the enemy dies, apply !M! ${ModID}:Bind to a random enemy and Exhaust.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !${ModID}:m2! Strength. NL Apply !M! ${ModID}:Bind to ALL enemies. NL Exhaust.",
     "FLAVOR": "Stay still... and let me slay you!"
   },
   "${ModID}:FeedingWinds": {
     "NAME": "Feeding Winds",
-    "DESCRIPTION": "Gain 1 ${ModID}:Windrush per Attack in your hand. NL Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\"",
+    "DESCRIPTION": "Gain ${ModID}:Windrush equal to the number of Attacks in your hand. NL Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\"",
     "FLAVOR": "Let's see just how strong I am!"
   },
   "${ModID}:EscalatingBreeze": {
     "NAME": "Escalating Breeze",
-    "DESCRIPTION": "Retain up to !M! card this turn. A chosen Attack will cost !${ModID}:m2! less next turn.",
-    "EXTENDED_DESCRIPTION": ["Retain up to ", " cards this turn. Chosen Attacks will cost ", " less next turn."],
+    "DESCRIPTION": "Retain up to !M! card. NL Attacks Retained this way cost !${ModID}:m2! less next turn.",
+    "EXTENDED_DESCRIPTION": ["Retain up to ", " cards. NL Attacks Retained this way cost ", " less next turn."],
     "FLAVOR": "I won't forget!"
   },
   "${ModID}:GaleForce": {
     "NAME": "Gale-Force",
-    "DESCRIPTION": "Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost +!M!, and draw a card if it costs !${ModID}:m2! or more.",
+    "DESCRIPTION": "Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost +!M!. NL Whenever you play an Attack with a cost of !${ModID}:m2! or greater, draw a card.",
     "FLAVOR": "Hurry up and die!"
   },
   "${ModID}:DownwindBlow": {
     "NAME": "Downwind Blow",
-    "DESCRIPTION": "Deal !D! damage. Gain !M! ${ModID}:Precision. Take !${ModID}:m2!% less attack damage this turn.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Precision. NL Take !${ModID}:m2!% less damage from attacks this turn.",
     "FLAVOR": "Right here!"
   }
 }
