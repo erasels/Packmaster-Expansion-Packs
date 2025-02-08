@@ -12,27 +12,30 @@ NeowReward (base game)*/
 public class TradeWindsAction extends AbstractGameAction {
     private final AbstractCreature p;
     private final AbstractCard chosenCard;
-    private final int HEAL_IF_COMMON;
-    private final int GOLD_LOSS_IF_RARE;
-    private final boolean upgradeIt;
+    private final int healIfCommon;
+    private final int goldLossIfRare;
 
-    public TradeWindsAction(AbstractCreature source, int heal, int goldLoss, AbstractCard chosenCard, boolean upgradeIt) {
+    public TradeWindsAction(AbstractCreature source, int heal, int goldLoss, AbstractCard chosenCard) {
         this.p = source;
-        HEAL_IF_COMMON = heal;
-        GOLD_LOSS_IF_RARE = goldLoss;
+        healIfCommon = heal;
+        goldLossIfRare = goldLoss;
         this.chosenCard = chosenCard;
         this.actionType = ActionType.SPECIAL;
-        this.upgradeIt = upgradeIt;
     }
 
     public void update() {
         this.isDone = true;
         //Depending on rarity of the card printed by the Discover calling this Action, heal or lose gold.
         if (chosenCard.rarity == AbstractCard.CardRarity.COMMON) {
-            addToTop(new HealAction(p, p, HEAL_IF_COMMON, 0));
+            addToTop(new HealAction(p, p, healIfCommon, 0));
         } else if (chosenCard.rarity == AbstractCard.CardRarity.RARE) {
-            AbstractDungeon.player.loseGold(GOLD_LOSS_IF_RARE);     //from NeowReward.
+            addToTop(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractDungeon.player.loseGold(TradeWindsAction.this.goldLossIfRare);  //from NeowReward (base game).
+                }
+            });
         }
-        if (upgradeIt) { chosenCard.upgrade(); }
     }
 }
