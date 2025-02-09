@@ -17,7 +17,7 @@
   },
   "${ModID}:TradeWinds": {
     "NAME": "Trade Winds",
-    "DESCRIPTION": "Discover an Attack. NL If it is common, heal !M! HP, or if it is rare, lose !${ModID}:m2! gold. NL Exhaust.",
+    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it is common, heal !M! HP, or if it is rare, lose !${ModID}:m2! gold. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Discover an upgraded Attack. NL If it is common, heal ", " HP, or if it is rare, lose ", " gold. NL Exhaust."],
     "FLAVOR": "Sword! Return to your master!"
   },
