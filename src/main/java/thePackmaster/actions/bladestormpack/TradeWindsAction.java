@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
-/*REFS: AttackVial (womaninbluepack), StrikingStrike (strikepack), Mimicry & Paintbrush (creativitypack),
+/*REFS: AttackVial (womaninbluepack), StrikingStrike (creativitypack), Mimicry & Paintbrush (creativitypack),
 RazorWind (dragonwrathpack), DualHeal (summonerspellspack), RandomUpgradeWithVfxAction (upgradespack),
 NeowReward & DamageAction (base game), BallisticStrike (siegepack)*/
 public class TradeWindsAction extends AbstractGameAction {

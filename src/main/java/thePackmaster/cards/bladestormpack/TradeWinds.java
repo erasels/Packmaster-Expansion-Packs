@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
-/*REFS: AttackVial (womaninbluepack), StrikingStrike (strikepack), Mimicry & Paintbrush (creativitypack),
+/*REFS: AttackVial (womaninbluepack), StrikingStrike (creativitypack), Mimicry & Paintbrush (creativitypack),
 RazorWind (dragonwrathpack), DualHeal (summonerspellspack), Maddii (Discord) */
 public class TradeWinds extends AbstractBladeStormCard {
     public final static String ID = makeID("TradeWinds");

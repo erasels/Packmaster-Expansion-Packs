@@ -17,8 +17,7 @@
   },
   "${ModID}:TradeWinds": {
     "NAME": "Trade Winds",
-    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it is common, heal !M! HP, or if it is rare, lose !${ModID}:m2! gold. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": ["Discover an upgraded Attack. NL If it is common, heal ", " HP, or if it is rare, lose ", " gold. NL Exhaust."],
+    "DESCRIPTION": "{@@}Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it is common, heal !M! HP, or if it is rare, lose !${ModID}:m2! gold. NL Exhaust.",
     "FLAVOR": "Sword! Return to your master!"
   },
   "${ModID}:TempestOfStrikes": {
@@ -34,7 +33,7 @@
   },
   "${ModID}:FeedingWinds": {
     "NAME": "Feeding Winds",
-    "DESCRIPTION": "{@@}Exhaust a card to NL gain {!${ModID}:m2!|1=[E] |2= [E] [E] |3=[E] [E] [E] |>3 !${ModID}:m2![E] }. NL Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\"",
+    "DESCRIPTION": "{@@}Exhaust a card to gain [E] {!${ModID}:m2!|>0=and !${ModID}:m2! ${ModID}:Windrush}. NL Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\"",
     "FLAVOR": "Let's see just how strong I am!"
   },
   "${ModID}:EscalatingBreeze": {

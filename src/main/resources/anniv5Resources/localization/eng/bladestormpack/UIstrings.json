@@ -14,7 +14,7 @@
   },
   "${ModID}:FeedWindsUiText": {
     "TEXT": [
-      "exhaust for energy."
+      "exhaust for energy and Windrush."
     ]
   },
   "${ModID}:BladeStormPackHat": {

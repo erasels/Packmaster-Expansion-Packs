@@ -1,16 +1,17 @@
 package thePackmaster.actions.bladestormpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.powers.bladestormpack.WindrushPower;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.att;
+import static thePackmaster.util.Wiz.*;
 
 //REFS: ConsumeToDoAction (fueledpack), DifferentStrikes (strikespack), FalseGritAction (cosmoscommandpack)
 public class FeedingWindsAction extends AbstractGameAction {
@@ -20,12 +21,14 @@ public class FeedingWindsAction extends AbstractGameAction {
     public static final String[] TEXT;
     private final AbstractGameAction action;
     private final int cardsToExhaust;
+    private final int windrush;
 
-    public FeedingWindsAction(int cardsToExhaust, AbstractGameAction action) {
+    public FeedingWindsAction(int cardsToExhaust, int windrush, AbstractGameAction action) {
         this.action = action;
         duration = startDuration = Settings.ACTION_DUR_FAST;
         actionType = ActionType.DAMAGE;
         this.cardsToExhaust = cardsToExhaust;
+        this.windrush = windrush;
     }
 
     public void update() {
@@ -66,6 +69,7 @@ public class FeedingWindsAction extends AbstractGameAction {
         adp().hand.refreshHandLayout();
         if (card != null) {
             att(action);
+            atb(new ApplyPowerAction(player, player, new WindrushPower(player, windrush)));
             player.hand.moveToExhaustPile(card);
         }
         isDone = true;
