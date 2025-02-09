@@ -42,7 +42,7 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < HITS; i++) {
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
     }
 
