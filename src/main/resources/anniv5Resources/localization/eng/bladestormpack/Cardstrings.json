@@ -45,7 +45,7 @@
   },
   "${ModID}:GaleForce": {
     "NAME": "Gale-Force",
-    "DESCRIPTION": "Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost +!M!. NL Whenever you play an Attack with a cost of !${ModID}:m2! or greater, draw a card.",
+    "DESCRIPTION": "Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost +!M!. NL Whenever you play an Attack with a cost of !${ModID}:m2! or greater, draw 1 card.",
     "FLAVOR": "Hurry up and die!"
   },
   "${ModID}:DownwindBlow": {
