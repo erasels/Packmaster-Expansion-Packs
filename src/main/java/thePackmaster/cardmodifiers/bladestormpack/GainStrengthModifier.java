@@ -23,9 +23,7 @@ public class GainStrengthModifier extends AbstractMadScienceModifier {
     }
 
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        for(int i = 0; i < this.value; ++i) {
-            Wiz.applyToSelf(new StrengthPower(player, 1));
-        }
+        Wiz.applyToSelf(new StrengthPower(player, this.value));
     }
 
     public AbstractCardModifier makeCopy() {

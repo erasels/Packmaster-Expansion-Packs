@@ -12,6 +12,11 @@
       " Strength."
     ]
   },
+  "${ModID}:FeedWindsUiText": {
+    "TEXT": [
+      "exhaust for energy."
+    ]
+  },
   "${ModID}:BladeStormPackHat": {
     "TEXT": [
       "It's well worn.",

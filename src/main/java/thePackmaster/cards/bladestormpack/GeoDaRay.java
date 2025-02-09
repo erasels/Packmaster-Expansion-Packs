@@ -18,12 +18,12 @@ public class GeoDaRay extends AbstractBladeStormCard {
     private static final int COST = 2;
     private static final int DAMAGE = 12;
     private static final int UPGRADE_DAMAGE = 4;
-    private static final int WINDRUSH_AND_VIGOR_GAIN = 1;
+    private static final int WINDRUSH_AND_PRECISION_GAIN = 3;
 
     public GeoDaRay(){
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         damage = baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = WINDRUSH_AND_VIGOR_GAIN;
+        magicNumber = baseMagicNumber = WINDRUSH_AND_PRECISION_GAIN;
         isMultiDamage = true;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
@@ -33,14 +33,11 @@ public class GeoDaRay extends AbstractBladeStormCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //Gain buffs once for each enemy.
-        int count = Wiz.getEnemies().size();
-        Wiz.applyToSelf(new WindrushPower(p, magicNumber * count));
-        Wiz.applyToSelf(new Precision(p, magicNumber * count));
-
         addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
 
         Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, false);
+        Wiz.applyToSelf(new WindrushPower(p, magicNumber));
+        Wiz.applyToSelf(new Precision(p, magicNumber));
     }
 
     @Override

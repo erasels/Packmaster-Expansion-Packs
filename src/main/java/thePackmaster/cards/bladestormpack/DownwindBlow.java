@@ -22,13 +22,11 @@ public class DownwindBlow extends AbstractBladeStormCard {
     private static final int UPG_DAMAGE = 5;
     private static final int PRECISION = 9;
     private static final int UPG_PRECISION = 3;
-    private static final int DAMAGE_PROTECTION_PERCENTS = 50;
 
     public DownwindBlow() {
         super(ID, COST, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = PRECISION;
-        baseSecondMagic = secondMagic = DAMAGE_PROTECTION_PERCENTS;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);

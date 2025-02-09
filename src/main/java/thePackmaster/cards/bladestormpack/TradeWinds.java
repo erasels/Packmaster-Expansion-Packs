@@ -20,14 +20,17 @@ RazorWind (dragonwrathpack), DualHeal (summonerspellspack), Maddii (Discord) */
 public class TradeWinds extends AbstractBladeStormCard {
     public final static String ID = makeID("TradeWinds");
     private static final int COST = 0;
-    private static final int HEAL_IF_COMMON = 2;
+    private static final int HEAL_IF_COMMON = 4;
     private static final int GOLD_LOSS_IF_RARE = 5;
+
 
     public TradeWinds() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = HEAL_IF_COMMON;
         baseSecondMagic = secondMagic = GOLD_LOSS_IF_RARE;
         exhaust = true;
+
+        tags.add(CardTags.HEALING);
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -50,12 +53,5 @@ public class TradeWinds extends AbstractBladeStormCard {
     @Override
     public void upp() {
         //handled in use() by if(upgraded) before FlexibleDiscoveryAction().
-
-        rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
-        rawDescription += magicNumber;
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
-        rawDescription += secondMagic;
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
-        initializeDescription();
     }
 }

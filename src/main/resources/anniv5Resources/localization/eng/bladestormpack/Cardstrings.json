@@ -6,7 +6,7 @@
   },
   "${ModID}:GeoDaRay": {
     "NAME": "Geo Da Ray",
-    "DESCRIPTION": "Gain !M! ${ModID}:Windrush and ${ModID}:Precision for each enemy in combat. NL Deal !D! damage to ALL enemies.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! ${ModID}:Windrush and ${ModID}:Precision.",
     "FLAVOR": "Get ready!"
   },
   "${ModID}:Overpressure": {
@@ -34,13 +34,12 @@
   },
   "${ModID}:FeedingWinds": {
     "NAME": "Feeding Winds",
-    "DESCRIPTION": "Gain ${ModID}:Windrush equal to the number of Attacks in your hand. NL Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\"",
+    "DESCRIPTION": "{@@}Exhaust a card to NL gain {!${ModID}:m2!|1=[E] |2= [E] [E] |3=[E] [E] [E] |>3 !${ModID}:m2![E] }. NL Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\"",
     "FLAVOR": "Let's see just how strong I am!"
   },
   "${ModID}:EscalatingBreeze": {
     "NAME": "Escalating Breeze",
-    "DESCRIPTION": "Retain up to !M! card. NL Attacks Retained this way cost !${ModID}:m2! less next turn.",
-    "EXTENDED_DESCRIPTION": ["Retain up to ", " cards. NL Attacks Retained this way cost ", " less next turn."],
+    "DESCRIPTION": "{@@}Retain up to !M! card{!M!|>1=s} this turn. NL Attacks Retained this way cost !${ModID}:m2! less next turn.",
     "FLAVOR": "I won't forget!"
   },
   "${ModID}:GaleForce": {
@@ -50,7 +49,7 @@
   },
   "${ModID}:DownwindBlow": {
     "NAME": "Downwind Blow",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Precision. NL Take !${ModID}:m2!% less attack damage this turn.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Precision. NL Take 50% less attack damage this turn.",
     "FLAVOR": "Right here!"
   }
 }

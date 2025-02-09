@@ -3,17 +3,9 @@
     "NAME": "Escalating Breeze",
     "DESCRIPTIONS": [
       "Retain up to #b",
-      " card this turn. Chosen Attacks will cost #b",
-      " cards this turn. Chosen Attacks will cost #b",
+      " card this turn. Attacks Retained this way cost #b",
+      " cards this turn. Attacks Retained this way cost #b",
       " less next turn."
-    ]
-  },
-  "${ModID}:DownwindBlowPower": {
-    "NAME": "Downwind Blow",
-    "DESCRIPTIONS": [
-      "Take #b50% less damage this turn.",
-      "Take #b50% less damage for #b",
-      " turns."
     ]
   },
   "${ModID}:GaleForcePower": {
@@ -30,7 +22,7 @@
   "${ModID}:WindrushPower": {
     "NAME": "Windrush",
     "DESCRIPTIONS": [
-      "Whenever you would receive unblocked Attack damage this turn, reduce it by #b",
+      "Whenever you would receive unblocked attack damage this turn, reduce it by #b",
       "."
     ]
   }

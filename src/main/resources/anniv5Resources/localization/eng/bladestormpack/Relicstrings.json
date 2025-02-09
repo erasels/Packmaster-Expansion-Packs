@@ -4,8 +4,8 @@
     "FLAVOR": "You'd swear it glows and hovers when the weather's real bad.",
     "DESCRIPTIONS": [
       "Each turn, after playing #b",
-        " Attack, the next one  grants #b",
-        " Attacks, the next one  grants #b",
+        " Attack, the next one grants #b",
+        " Attacks, the next one grants #b",
         " #y${ModID}:Windrush and #b",
         " #y${ModID}:Precision."
     ]

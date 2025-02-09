@@ -10,7 +10,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
 /*REFS: Crusher (dimensiongatepack2), Paintball (monsterhunterpack), WellWrittenScript (grandopeningpack),
-TempRetainCardsPower & RetainCardsAction (base game), Rummage (packmaster), */
+TempRetainCardsPower & RetainCardsAction (base game), Rummage (packmaster)*/
 public class EscalatingBreeze extends AbstractBladeStormCard {
     public final static String ID = makeID("EscalatingBreeze");
     private static final int COST = 0;
@@ -22,9 +22,6 @@ public class EscalatingBreeze extends AbstractBladeStormCard {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = RETAINED_CARDS;
         baseSecondMagic = secondMagic = COST_REDUCTION;
-
-        //Adapts when magic number is changed.
-        adaptDescription();
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -38,19 +35,5 @@ public class EscalatingBreeze extends AbstractBladeStormCard {
     @Override
     public void upp() {
         upgradeMagicNumber(UPG_RETAINED_CARDS);
-        adaptDescription();
-    }
-
-    public void adaptDescription() {
-        if (magicNumber == 1) {
-            rawDescription = cardStrings.DESCRIPTION;
-        } else {
-            rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
-            rawDescription += magicNumber;
-            rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
-            rawDescription += secondMagic;
-            rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
-        }
-        initializeDescription();
     }
 }

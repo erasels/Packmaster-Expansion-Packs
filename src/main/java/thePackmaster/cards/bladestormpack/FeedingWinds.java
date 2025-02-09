@@ -2,25 +2,29 @@ package thePackmaster.cards.bladestormpack;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.actions.bladestormpack.FeedingWindsAction;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
 import thePackmaster.cardmodifiers.bladestormpack.GainStrengthModifier;
-import thePackmaster.powers.bladestormpack.WindrushPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
-/*REFS: Transmogrifier (pickthemall), Master's Strike (upgradespack),
+/*REFS: Transmogrifier (pickthemall), Master's Strike (upgradespack), Fuel & ConsumeToDoAction (fueledpack)
 Winterize & FrostOrbModifier & FindCardForAddModifierAction (madsciencepack)*/
 public class FeedingWinds extends AbstractBladeStormCard implements StartupCard {
     public final static String ID = makeID("FeedingWinds");
-    private static final int COST = 1;
-    private static final int WINDRUSH_PER_ATTACK = 1;
+    private static final int COST = 0;
+    private static final int CARDS_TO_EXHAUST = 1;
+    private static final int ENERGY_GAIN = 1;
+    private static final int UPG_ENERGY_GAIN = 1;
     private static final int STRENGTH_GAIN = 1;
     private static final int STRENGTH_CARDS = 2;
     private static final int UPG_STRENGTH_CARDS = 1;
@@ -28,7 +32,7 @@ public class FeedingWinds extends AbstractBladeStormCard implements StartupCard 
     public FeedingWinds() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         baseMagicNumber = magicNumber = STRENGTH_CARDS;
-        baseSecondMagic = secondMagic = WINDRUSH_PER_ATTACK;
+        baseSecondMagic = secondMagic = ENERGY_GAIN;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -47,19 +51,18 @@ public class FeedingWinds extends AbstractBladeStormCard implements StartupCard 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int attacksInHand = 0;
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.type == CardType.ATTACK) {
-                attacksInHand += secondMagic;
+        atb(new FeedingWindsAction(CARDS_TO_EXHAUST, new AbstractGameAction() {
+            @Override
+            public void update() {
+                att(new GainEnergyAction(ENERGY_GAIN));
+                isDone = true;
             }
-        }
-        if (attacksInHand > 0) {
-            atb(new ApplyPowerAction(p, p, new WindrushPower(p, attacksInHand)));
-        }
+        }));
     }
 
     @Override
     public void upp() {
         upgradeMagicNumber(UPG_STRENGTH_CARDS);
+        upgradeSecondMagic(UPG_ENERGY_GAIN);
     }
 }
