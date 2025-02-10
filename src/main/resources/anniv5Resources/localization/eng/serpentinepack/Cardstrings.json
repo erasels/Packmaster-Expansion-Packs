@@ -2,7 +2,7 @@
 "${ModID}:ApplyPoison": {
     "NAME": "Venom Sheath",
     "DESCRIPTION": "Enter ${ModID}:Venomous.",
-    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Venomous. NL Draw a card."
+    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Venomous. NL Draw 1 card."
 },"${ModID}:Guile": {
     "NAME": "Guile",
     "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL This costs 1 more this combat."
