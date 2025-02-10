@@ -57,7 +57,7 @@
   },
   "${ModID}:Sting": {
     "NAME": "Sting",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, draw an additional card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, draw 1 additional card. NL Exhaust."
   },
   "${ModID}:WallOfFire": {
     "NAME": "Wall of Fire",
