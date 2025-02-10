@@ -15,8 +15,8 @@ import thePackmaster.powers.needlework.BindPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
-/*REFS: StrikeDummyJr (strikepack), Bees (infestpack), ShrapnelAction (siegepack), Master's Strike (upgradespack),
-Finisher (base game)*/
+/*REFS: StrikeDummyJr (strikepack), Bees (infestpack), ShrapnelAction & BallisticStrike (siegepack),
+ Master's Strike (upgradespack), Finisher (base game)*/
 public class TempestOfStrikes extends AbstractBladeStormCard {
     public final static String ID = makeID("TempestOfStrikes");
     private static final int COST = 2;
@@ -43,14 +43,28 @@ public class TempestOfStrikes extends AbstractBladeStormCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        updateDescription();
+        updateDescriptionWithHits();
+    }
+
+    // calculateCardDamage is auto-called before every card is played.
+    @Override
+    public void calculateCardDamage(AbstractMonster m) {
+        super.calculateCardDamage(m);
+        updateDescriptionWithHits();
     }
 
     public void updateDescription () {
+        rawDescription = cardStrings.DESCRIPTION
+                + cardStrings.EXTENDED_DESCRIPTION[2];
+        initializeDescription();
+    }
+
+    public void updateDescriptionWithHits () {
         int hits = countHits();
         rawDescription = cardStrings.DESCRIPTION
-                + hits + cardStrings.EXTENDED_DESCRIPTION[0]
-                + cardStrings.EXTENDED_DESCRIPTION[1];
+                + cardStrings.EXTENDED_DESCRIPTION[0]
+                + hits + cardStrings.EXTENDED_DESCRIPTION[1]
+                + cardStrings.EXTENDED_DESCRIPTION[2];
         initializeDescription();
     }
 

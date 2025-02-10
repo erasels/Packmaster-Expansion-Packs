@@ -22,8 +22,8 @@
   },
   "${ModID}:TempestOfStrikes": {
     "NAME": "Tempest of Strikes",
-    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Bind a number of times equal to half of the number of Attacks in your deck (",
-    "EXTENDED_DESCRIPTION": [ " times).", " NL Exhaust."],
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Bind a number of times equal to half of the number of Attacks in your deck",
+    "EXTENDED_DESCRIPTION": [" (", " times)", ". NL Exhaust."],
     "FLAVOR": "Sink down with your fear!"
   },
   "${ModID}:FallOver": {
