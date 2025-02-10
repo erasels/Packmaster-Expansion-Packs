@@ -36,7 +36,7 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard 
     @Override
     public boolean atBattleStartPreDraw() {
         Wiz.applyToSelf(new WindrushPower(player, magicNumber));
-        return false;
+        return true;
     }
 
     @Override

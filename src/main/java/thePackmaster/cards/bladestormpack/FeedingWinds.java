@@ -48,7 +48,7 @@ public class FeedingWinds extends AbstractBladeStormCard implements StartupCard 
                 AbstractDungeon.player.drawPile, (card) -> card.type == CardType.ATTACK
             )
         );
-        return false;
+        return true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -17,7 +17,7 @@
   },
   "${ModID}:TradeWinds": {
     "NAME": "Trade Winds",
-    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it is common, heal !M! HP, or if it is rare, lose !${ModID}:m2! gold. NL Exhaust.",
+    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it's Common, heal !M! HP. If it's Rare, lose !${ModID}:m2! gold. NL Exhaust.",
     "FLAVOR": "Sword! Return to your master!"
   },
   "${ModID}:TempestOfStrikes": {
@@ -38,7 +38,7 @@
   },
   "${ModID}:EscalatingBreeze": {
     "NAME": "Escalating Breeze",
-    "DESCRIPTION": "{@@}Retain up to !M! card{!M!|>1=s} this turn (after normal Retain effects). NL Attacks Retained this way cost !${ModID}:m2! less next turn.",
+    "DESCRIPTION": "{@@}Retain up to !M! card{!M!|>1=s} this turn. NL Attacks Retained this way cost !${ModID}:m2! less next turn.",
     "FLAVOR": "I won't forget!"
   },
   "${ModID}:GaleForce": {
