@@ -16,7 +16,7 @@ import static thePackmaster.util.Wiz.*;
 //REFS: ConsumeToDoAction (fueledpack), DifferentStrikes (strikespack), FalseGritAction (cosmoscommandpack)
 public class FeedingWindsAction extends AbstractGameAction {
     //Based on ConsumeToDoAction (fueledpack).
-    private static final String UI_KEY = SpireAnniversary5Mod.makeID("FeedWindsUiText");
+    private static final String UI_KEY = SpireAnniversary5Mod.makeID("FeedingWindsUiText");
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private final AbstractGameAction action;

@@ -7,11 +7,13 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.bladestormpack.EscalatingBreezePower;
 
-//REFS: RetainCardsAction (base game), Preparation (replicatorspack)
+//REFS: RetainCardsAction (base game), Preparation (replicatorspack), ConsumeToDoAction (fueledpack)
 public class EscalatingBreezeAction extends AbstractGameAction {
     //Does not reduce the costs, the Power does.
+    private static final String UI_KEY = SpireAnniversary5Mod.makeID("EscalatingBreezeUiText");
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private final EscalatingBreezePower sourcePower;
@@ -45,7 +47,7 @@ public class EscalatingBreezeAction extends AbstractGameAction {
     }
 
     static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("RetainCardsAction");
+        uiStrings = CardCrawlGame.languagePack.getUIString(UI_KEY);
         TEXT = uiStrings.TEXT;
     }
 }

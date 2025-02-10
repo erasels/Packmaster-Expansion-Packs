@@ -12,9 +12,14 @@
       " Strength."
     ]
   },
-  "${ModID}:FeedWindsUiText": {
+  "${ModID}:FeedingWindsUiText": {
     "TEXT": [
       "exhaust for energy and Windrush."
+    ]
+  },
+  "${ModID}:EscalatingBreezeUiText": {
+    "TEXT": [
+      "retain. The cost of attacks is reduced next turn."
     ]
   },
   "${ModID}:BladeStormPackHat": {

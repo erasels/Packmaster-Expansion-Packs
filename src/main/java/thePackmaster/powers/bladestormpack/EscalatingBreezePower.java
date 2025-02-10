@@ -25,13 +25,14 @@ public class EscalatingBreezePower  extends AbstractPackmasterPower {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
         this.amount2 = costReduction;
         updateDescription();
+        //If ever needed, set priority to avoid bugs, like "this.priority = -42068".
     }
 
     //Based on RetainCardsAction (base game)
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         //Choose and retain the Attacks that will have their cost reduced (at the start of next turn).
-        addToTop(new EscalatingBreezeAction(player, amount, this)); //Makes the list of cards.
+        addToBot(new EscalatingBreezeAction(player, amount, this)); //Makes the list of cards.
     }
 
     @Override
@@ -65,14 +66,12 @@ public class EscalatingBreezePower  extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
         if (amount == 1) {
-            this.description = DESCRIPTIONS[0]
-                    + this.amount + DESCRIPTIONS[1]
-                    + this.amount2 + DESCRIPTIONS[3];
+            this.description += this.amount + DESCRIPTIONS[1];
         } else {
-            this.description = DESCRIPTIONS[0]
-                    + this.amount + DESCRIPTIONS[2]
-                    + this.amount2 + DESCRIPTIONS[3];
+            this.description += this.amount + DESCRIPTIONS[2];
         }
+        this.description += DESCRIPTIONS[3];
     }
 }
