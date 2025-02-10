@@ -5,31 +5,31 @@
   },
   "${ModID}:Vanguard": {
     "NAME": "Vanguard",
-    "DESCRIPTION": "Gain !B! Block. NL If you play a rare card with this in hand, play this.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you play a rare or uncommon card with this in hand, play this."
+    "DESCRIPTION": "Gain !B! Block. NL If you play a Rare card with this in hand, play this.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you play a Rare or Uncommon card with this in hand, play this."
   },
   "${ModID}:Shakedown": {
     "NAME": "Shakedown",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card each, if you hold an uncommon or rare card."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card each, if you hold an Uncommon or Rare card."
   },
   "${ModID}:Favor": {
     "NAME": "Favor",
-    "DESCRIPTION": "Choose 1 of 3 random rare cards to gain an ${ModID}:Echo of. It costs 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 random rare cards to gain an ${ModID}:Echo of. It costs 0 this turn."
+    "DESCRIPTION": "Choose 1 of 3 random Rare cards to gain an ${ModID}:Echo of. It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 random Rare cards to gain an ${ModID}:Echo of. It costs 0 this turn."
   },
   "${ModID}:EtTu": {
     "NAME": "Et Tu?",
     "DESCRIPTION": "Gain !M! *Shivs. They have Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! *Shivs and 1 rare *Shiv. They have Retain. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain !M! *Shivs and 1 Rare *Shiv. They have Retain. NL Exhaust."
   },
   "${ModID}:Spotlight": {
     "NAME": "Spotlight",
-    "DESCRIPTION": "Add a ${ModID}:Mundane card from your draw pile to your hand. It becomes rare.",
-    "UPGRADE_DESCRIPTION": "Add a non-rare card from your draw pile to your hand. It becomes rare."
+    "DESCRIPTION": "Add a ${ModID}:Mundane card from your draw pile to your hand. It becomes Rare.",
+    "UPGRADE_DESCRIPTION": "Add a non-Rare card from your draw pile to your hand. It becomes Rare."
   },
   "${ModID}:Exultation": {
     "NAME": "Exultation",
-    "DESCRIPTION": "Gain !B! Block. Permanently gains !M! more Block whenever you pick up a rare card. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. Permanently gains !M! more Block whenever you pick up a Rare card. NL Exhaust."
   },
   "${ModID}:Revolution": {
     "NAME": "Revolution",
@@ -37,10 +37,10 @@
   },
   "${ModID}:Apex": {
     "NAME": "Apex",
-    "DESCRIPTION": "${ModID}:Ascend. NL You can only play uncommon and rare cards for the rest of the turn. Exhaust."
+    "DESCRIPTION": "${ModID}:Ascend. NL You can only play Uncommon and Rare cards for the rest of the turn. Exhaust."
   },
   "${ModID}:PowerStruggle": {
     "NAME": "Power Struggle",
-    "DESCRIPTION": "Whenever you play a rare card, gain [E]. It becomes common."
+    "DESCRIPTION": "Whenever you play a Rare card, gain [E]. It becomes Common."
   }
 }

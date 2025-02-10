@@ -2,14 +2,14 @@
   "${ModID}:PowerStrugglePower": {
     "NAME": "Power Struggle",
     "DESCRIPTIONS": [
-      "Whenever you play a rare card, gain #b",
+      "Whenever you play a Rare card, gain #b",
       " Energy and #yDemote it."
     ]
   },
   "${ModID}:ApexPower": {
     "NAME": "Apex",
     "DESCRIPTIONS": [
-      "You can only play rare and uncommon cards this turn."
+      "You can only play Rare and Uncommon cards this turn."
     ]
   },
   "${ModID}:RevolutionPower": {
