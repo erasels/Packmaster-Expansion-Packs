@@ -1,7 +1,7 @@
 {
   "${ModID}:Summon": {
     "NAME": "Summon",
-    "DESCRIPTION": "Draw !M! cards. NL Channel a ${ModID}:Doppel."
+    "DESCRIPTION": "Draw !M! cards. NL Channel 1 ${ModID}:Doppel."
   },
   "${ModID}:Arrive": {
     "NAME": "Arrive",
@@ -10,11 +10,11 @@
   },
   "${ModID}:Concatenation": {
     "NAME": "Concatenation",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL Channel a ${ModID}:Doppel with the leftmost Attack in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Channel 1 ${ModID}:Doppel with the leftmost Attack in your hand."
   },
   "${ModID}:EmergencyContact": {
     "NAME": "Emergency Contact",
-    "DESCRIPTION": "Channel {@@}{!M!|1=a|@=!M!} ${ModID}:Doppel{!M!|0,>1=s} with {!M!|1=a card|@=!M! cards} in your draw pile. NL Exhaust.",
+    "DESCRIPTION": "Channel {@@}!M! ${ModID}:Doppel{!M!|0,>1=s} with {!M!|1=a card|@=!M! cards} in your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to Channel Doppel",
       "Choose %d cards to Channel Doppel"
@@ -22,7 +22,7 @@
   },
   "${ModID}:GrandfatherParadox": {
     "NAME": "Grandfather Paradox",
-    "DESCRIPTION": "Channel {@@}{!M!|1=a|@=!M!} ${ModID}:Doppel{!M!|0,>1=s} with {!M!|1=a card|@=!M! cards} in your discard pile. NL Gain [E] equal to {!M!|1=its|@=their} cost. NL Exhaust.",
+    "DESCRIPTION": "Channel {@@}!M! ${ModID}:Doppel{!M!|0,>1=s} with {!M!|1=a card|@=!M! cards} in your discard pile. NL Gain [E] equal to {!M!|1=its|@=their} cost. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to Channel Doppel",
       "Choose %d cards to Channel Doppel"
@@ -30,11 +30,11 @@
   },
   "${ModID}:Resistance": {
     "NAME": "Resistance",
-    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL Channel a ${ModID}:Doppel with the leftmost Skill in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Channel 1 ${ModID}:Doppel with the leftmost Skill in your hand."
   },
   "${ModID}:Tides": {
     "NAME": "Tides",
-    "DESCRIPTION": "Deal !D! damage twice. NL Deal !D! damage for each ${ModID}:Doppel. NL Channel a ${ModID}:Doppel."
+    "DESCRIPTION": "Deal !D! damage twice. NL Deal !D! damage for each ${ModID}:Doppel. NL Channel 1 ${ModID}:Doppel."
   },
   "${ModID}:Turbulence": {
     "NAME": "Turbulence",
@@ -42,7 +42,7 @@
   },
   "${ModID}:Vortex": {
     "NAME": "Vortex",
-    "DESCRIPTION": "Deal !D! damage. NL If you haven't played this card this turn, Channel a ${ModID}:Doppel with this card."
+    "DESCRIPTION": "Deal !D! damage. NL If you haven't played this card this turn, Channel 1 ${ModID}:Doppel with this card."
   },
   "${ModID}:WormHole": {
     "NAME": "Worm Hole",
