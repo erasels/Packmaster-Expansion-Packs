@@ -1,5 +1,6 @@
 package thePackmaster.powers.bladestormpack;
 
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -35,7 +36,14 @@ public class WindrushPower extends AbstractPackmasterPower {
 
     @Override
     public void atEndOfRound() {
-        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        //Cut in half, rounding down ( = rounding the reduction up) and able to fully fade out.
+        if (amount == 1) {
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        } else if ((amount % 2) != 0){
+            addToBot(new ReducePowerAction(this.owner, this.owner, this, (amount+1) / 2));
+        } else {
+            addToBot(new ReducePowerAction(this.owner, this.owner, this, amount / 2));
+        }
     }
 
     public void updateDescription() {

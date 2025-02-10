@@ -1,7 +1,7 @@
 {
   "${ModID}:FlyingSwords": {
     "NAME": "Flying Swords",
-    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Startup: Gain !M! Plated Armor.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Startup: Gain !M! ${ModID}:Windrush.",
     "FLAVOR": "This is ridiculous!"
   },
   "${ModID}:GeoDaRay": {
@@ -17,7 +17,7 @@
   },
   "${ModID}:TradeWinds": {
     "NAME": "Trade Winds",
-    "DESCRIPTION": "{@@}Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it is common, heal !M! HP, or if it is rare, lose !${ModID}:m2! gold. NL Exhaust.",
+    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it is common, heal !M! HP, or if it is rare, lose !${ModID}:m2! gold. NL Exhaust.",
     "FLAVOR": "Sword! Return to your master!"
   },
   "${ModID}:TempestOfStrikes": {
@@ -43,7 +43,7 @@
   },
   "${ModID}:GaleForce": {
     "NAME": "Gale-Force",
-    "DESCRIPTION": "Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost +!M!. NL Whenever you play an Attack with a cost of !${ModID}:m2! or greater, draw 1 card.",
+    "DESCRIPTION": "{@@}Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost{!${ModID}:m2!|>1= +!${ModID}:m2!}. NL Whenever you play an Attack with a cost of 1 or greater, draw !M! card.",
     "FLAVOR": "Hurry up and die!"
   },
   "${ModID}:DownwindBlow": {

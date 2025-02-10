@@ -8,22 +8,27 @@
       " less next turn."
     ]
   },
-  "${ModID}:GaleForcePower": {
+  "${ModID}:GaleForceDrawPower": {
+    "NAME": "Gale-Force",
+    "DESCRIPTIONS": [
+      "Whenever you play an Attack, draw #b",
+      " card if it costs #b",
+      " cards if it costs #b",
+      " or more."
+    ]
+  },
+  "${ModID}:GaleForceWindrushPower": {
     "NAME": "Gale-Force",
     "DESCRIPTIONS": [
       "Whenever you play an Attack, gain #yWindrush equal to its cost + #b",
-      ", and draw #b",
-      " card if it costs #b",
-      " cards if it costs #b",
-      " or more. NL NL ",
-      "  Windrush : Whenever you would receive unblocked Attack damage this turn, reduce it that much."
+      "."
     ]
   },
   "${ModID}:WindrushPower": {
     "NAME": "Windrush",
     "DESCRIPTIONS": [
-      "Whenever you would receive unblocked attack damage this turn, reduce it by #b",
-      "."
+      "Whenever you would receive unblocked attack damage, reduce it by #b",
+      ". NL Reduced by half (rounded up) at end of round."
     ]
   }
 }

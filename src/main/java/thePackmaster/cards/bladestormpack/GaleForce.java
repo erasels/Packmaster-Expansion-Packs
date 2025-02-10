@@ -4,7 +4,8 @@ import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.bladestormpack.GaleForcePower;
+import thePackmaster.powers.bladestormpack.GaleForceDrawPower;
+import thePackmaster.powers.bladestormpack.GaleForceWindrushPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
@@ -29,7 +30,8 @@ public class GaleForce extends AbstractBladeStormCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ApplyPowerAction(p, p, new GaleForcePower(p, 1, magicNumber, secondMagic, DRAW_COST_THRESHOLD)));
+        atb(new ApplyPowerAction(p, p, new GaleForceWindrushPower(p, magicNumber)));
+        atb(new ApplyPowerAction(p, p, new GaleForceDrawPower(p, secondMagic, DRAW_COST_THRESHOLD)));
     }
 
     @Override

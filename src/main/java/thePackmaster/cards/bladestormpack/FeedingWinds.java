@@ -24,7 +24,7 @@ public class FeedingWinds extends AbstractBladeStormCard implements StartupCard 
     private static final int COST = 0;
     private static final int CARDS_TO_EXHAUST = 1;
     private static final int ENERGY_GAIN = 1;
-    private static final int WINDRUSH = 2;
+    private static final int WINDRUSH = 4;
     private static final int UPG_WINDRUSH = 2;
     private static final int STRENGTH_GAIN = 1;
     private static final int STRENGTH_CARDS = 2;

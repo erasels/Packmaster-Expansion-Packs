@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.vfx.combat.WindyParticleEffect;
 
 //REFS: WhirlwindEffect (base game), EssenceGraspEffect (calamitypack)
 public class GaleForceEffect  extends AbstractGameEffect {
-    private static final int COUNT_LIMIT = 5;   //was 18
+    private static final int COUNT_LIMIT = 4;   //was 18
     private static final float DELAY_BETWEEN_PARTICLES = 0.03f; //was 0.05f
 
     private int count = 0;
@@ -19,10 +19,6 @@ public class GaleForceEffect  extends AbstractGameEffect {
     public GaleForceEffect(Color setColor, boolean reverse) {
         this.color = setColor.cpy();
         this.reverse = reverse;
-    }
-
-    public GaleForceEffect() {
-        this(new Color(0.6F, 0.9F, 1.0F, 1.0F), true);
     }
 
     public void update() {
