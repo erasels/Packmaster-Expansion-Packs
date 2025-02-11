@@ -1,9 +1,11 @@
 package thePackmaster.cards.bladestormpack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.bladestormpack.WindrushPower;
@@ -14,7 +16,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
 //REFS: Transmogrifier (pickthemallpack), SmithingHammer (coresetpack), SwordBoomerang & DaggerSpray & RipAndTear (base game).
-public class FlyingSwords extends AbstractBladeStormCard implements StartupCard {
+public class FlyingSwords extends AbstractBladeStormCard implements StartupCard, OnCreateCardInterface {
     public final static String ID = makeID("FlyingSwords");
     private static final int COST = 1;
     private static final int DAMAGE = 5;
@@ -23,10 +25,16 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard 
     private static final int WINDRUSH = 3;
     private static final int UPG_WINDRUSH = 1;
 
+    public boolean combatVersion;
+
     public FlyingSwords() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = WINDRUSH;
+
+        this.combatVersion = false;
+        this.rawDescription = getDescriptionWithStartup();
+        initializeDescription();
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -36,7 +44,7 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard 
     @Override
     public boolean atBattleStartPreDraw() {
         Wiz.applyToSelf(new WindrushPower(player, magicNumber));
-        return true;
+        return true;    //"true" plays the Startup animation with the card when combat starts.
     }
 
     @Override
@@ -50,5 +58,32 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_WINDRUSH);
+    }
+
+    //From here down, dynamic Startup tooltip based on AbstractPickThemAllCard (pickthemallpack).
+
+    public void onCreateCard(AbstractCard c) {
+        if(c == this) {
+            resetDescriptionForCombat();
+        }
+    }
+
+    @Override
+    public void resetDescriptionForCombat() {
+        this.combatVersion = true;
+        this.rawDescription = getDescriptionWithoutStartup();
+        this.initializeDescription();
+    }
+
+    protected String getDescriptionWithStartup() {
+        return getDescriptionWithoutStartup() + getStartupDescription();
+    }
+
+    protected String getDescriptionWithoutStartup() {
+        return cardStrings.DESCRIPTION;
+    }
+
+    public String getStartupDescription() {
+        return cardStrings.EXTENDED_DESCRIPTION[0];
     }
 }

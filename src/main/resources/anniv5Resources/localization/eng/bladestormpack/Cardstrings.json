@@ -1,7 +1,8 @@
 {
   "${ModID}:FlyingSwords": {
     "NAME": "Flying Swords",
-    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Startup: Gain !M! ${ModID}:Windrush.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy twice.",
+    "EXTENDED_DESCRIPTION": [" NL stslib:Startup: Gain !M! ${ModID}:Windrush."],
     "FLAVOR": "This is ridiculous!"
   },
   "${ModID}:GeoDaRay": {
@@ -17,12 +18,12 @@
   },
   "${ModID}:TradeWinds": {
     "NAME": "Trade Winds",
-    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it's Common, heal !M! HP. If it's Rare, lose !${ModID}:m2! gold. NL Exhaust.",
+    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it's Common, heal !M! HP. NL If it's Rare, lose !${ModID}:m2! gold. NL Exhaust.",
     "FLAVOR": "Sword! Return to your master!"
   },
   "${ModID}:TempestOfStrikes": {
     "NAME": "Tempest of Strikes",
-    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Bind a number of times equal to half of the number of Attacks in your deck",
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Bind once for every 2 Attacks in your deck",
     "EXTENDED_DESCRIPTION": [" (", " times)", ". NL Exhaust."],
     "FLAVOR": "Sink down with your fear!"
   },
@@ -33,7 +34,8 @@
   },
   "${ModID}:FeedingWinds": {
     "NAME": "Feeding Winds",
-    "DESCRIPTION": "{@@}Exhaust a card to gain [E] {!${ModID}:m2!|>0=and !${ModID}:m2! ${ModID}:Windrush}. NL Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\"",
+    "DESCRIPTION": "{@@}Exhaust a card to gain [E] {!${ModID}:m2!|>0=and !${ModID}:m2! ${ModID}:Windrush}.",
+    "EXTENDED_DESCRIPTION": [" NL stslib:Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\""],
     "FLAVOR": "Let's see just how strong I am!"
   },
   "${ModID}:EscalatingBreeze": {
@@ -43,7 +45,7 @@
   },
   "${ModID}:GaleForce": {
     "NAME": "Gale-Force",
-    "DESCRIPTION": "{@@}Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost{!${ModID}:m2!|>1= +!${ModID}:m2!}. NL Whenever you play an Attack with a cost of 1 or greater, draw !M! card.",
+    "DESCRIPTION": "{@@}Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost{!M!|>0= +!M!}. NL Whenever you play an Attack with a cost of 1 or greater, draw !${ModID}:m2! card.",
     "FLAVOR": "Hurry up and die!"
   },
   "${ModID}:DownwindBlow": {

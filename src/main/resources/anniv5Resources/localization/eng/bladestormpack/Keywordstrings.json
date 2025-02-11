@@ -5,6 +5,6 @@
       "windrush",
       "windrushes"
     ],
-    "DESCRIPTION": "Whenever you would receive unblocked attack damage this turn, reduce it by this amount."
+    "DESCRIPTION": "Whenever you would receive unblocked attack damage this turn, reduce it by this amount. NL Reduced by half (rounded up) at end of round."
   }
 ]

@@ -38,7 +38,7 @@ public class TradeWinds extends AbstractBladeStormCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //Based on StrikingStrike (strikepack)
+        //Based on StrikingStrike (strikepack).
         CardGroup cards = JediUtil.filterCardsForDiscovery((c) -> c.type == CardType.ATTACK && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC);
         if (upgraded) {
             this.addToBot(new FlexibleDiscoveryAction(
