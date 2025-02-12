@@ -20,6 +20,8 @@ public class FlyingDutchman extends AbstractPackmasterRelic {
     public static final int PRECISION = 3;
     public static final int ATTACKS_FOR_TRIGGER = 1;
 
+    private boolean activated = true;
+
     public FlyingDutchman() {
         super(ID, RelicTier.COMMON, LandingSound.FLAT, BladeStormPack.ID);
         this.counter = 0;
@@ -37,16 +39,19 @@ public class FlyingDutchman extends AbstractPackmasterRelic {
     }
 
     public void init() {
-        grayscale = false;
+        activated = false;
         counter = 0;
         pulse = true;
     }
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (grayscale || c.type != AbstractCard.CardType.ATTACK) { return; }
+        if (c.type != AbstractCard.CardType.ATTACK) { return; }
+        counter++;
 
-        if (counter >= ATTACKS_FOR_TRIGGER) {
+        if (activated) { return; }
+
+        if (counter > ATTACKS_FOR_TRIGGER) {
             Wiz.applyToSelf(new WindrushPower(player, WINDRUSH));
             Wiz.applyToSelf(new Precision(player, PRECISION));
 
@@ -54,10 +59,9 @@ public class FlyingDutchman extends AbstractPackmasterRelic {
             addToTop(new RelicAboveCreatureAction( player, this));
             flash();
 
-            this.grayscale = true;
+            activated = true;
         } else {
-            counter++;
-            if (counter >= ATTACKS_FOR_TRIGGER) {
+            if (counter == ATTACKS_FOR_TRIGGER) {
                 beginPulse();
             }
         }
@@ -71,15 +75,11 @@ public class FlyingDutchman extends AbstractPackmasterRelic {
     @Override
     public void onVictory () {
         pulse = false;
-        grayscale = false;
+        activated = false;
         this.counter = -1;  //Shuriken hides counter between battles this way.
     }
 
     public String getUpdatedDescription() {
-        //Auto-pluralize.
-        if (ATTACKS_FOR_TRIGGER == 1) {
-            return this.DESCRIPTIONS[0] + ATTACKS_FOR_TRIGGER + this.DESCRIPTIONS[1] + WINDRUSH + this.DESCRIPTIONS[3] + PRECISION + this.DESCRIPTIONS[4];
-        }
-        return this.DESCRIPTIONS[0] + ATTACKS_FOR_TRIGGER + this.DESCRIPTIONS[2] + WINDRUSH + this.DESCRIPTIONS[3] + PRECISION + this.DESCRIPTIONS[4];
+        return this.DESCRIPTIONS[0] + WINDRUSH + this.DESCRIPTIONS[1] + PRECISION + this.DESCRIPTIONS[2];
     }
 }

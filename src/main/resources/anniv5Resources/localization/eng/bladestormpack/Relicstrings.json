@@ -3,9 +3,7 @@
     "NAME": "Flying Dutchman",
     "FLAVOR": "You'd swear it glows and hovers when the weather's real bad.",
     "DESCRIPTIONS": [
-      "Each turn, after playing #b",
-        " Attack, the next one grants #b",
-        " Attacks, the next one grants #b",
+      "The second time you play an Attack each turn, gain #b",
         " #y${ModID}:Windrush and #b",
         " #y${ModID}:Precision."
     ]
