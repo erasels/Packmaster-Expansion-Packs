@@ -20,7 +20,7 @@ import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 public class TempestOfStrikes extends AbstractBladeStormCard {
     public final static String ID = makeID("TempestOfStrikes");
     private static final int COST = 2;
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 2;
     private static final int UPG_DAMAGE = 1;
     private static final int BIND = 2;
     private static final int UPG_BIND = 1;

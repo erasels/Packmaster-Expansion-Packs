@@ -62,6 +62,7 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard,
 
     //From here down, dynamic Startup tooltip based on AbstractPickThemAllCard (pickthemallpack).
 
+    @Override
     public void onCreateCard(AbstractCard c) {
         if(c == this) {
             resetDescriptionForCombat();

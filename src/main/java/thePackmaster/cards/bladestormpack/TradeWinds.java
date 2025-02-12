@@ -50,8 +50,5 @@ public class TradeWinds extends AbstractBladeStormCard {
         }
     }
 
-    @Override
-    public void upp() {
-        //handled in use() by if(upgraded) before FlexibleDiscoveryAction().
-    }
+    //Upgrade is handled in use() by if(upgraded) before FlexibleDiscoveryAction().
 }

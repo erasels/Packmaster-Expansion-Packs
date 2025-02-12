@@ -20,7 +20,7 @@ public class FallOver extends AbstractBladeStormCard {
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
     private static final int STRENGTH_GAIN = 1;
-    private static final int BIND = 3;
+    private static final int BIND = 2;
     private static final int UPG_BIND = 1;
 
     public FallOver() {

@@ -36,9 +36,7 @@ public class GaleForceDrawPower extends AbstractPackmasterPower {
         this.flashWithoutSound();
         addToBot(new VFXAction(new GaleForceEffect(Color.LIGHT_GRAY, true), 0.0F));
 
-        if (Wiz.getLogicalCardCost(c) >= DRAW_COST_THRESHOLD) {
-            addToBot(new DrawCardAction(amount));
-        }
+        addToBot(new DrawCardAction(amount));
     }
 
     @Override

@@ -14,14 +14,14 @@ import thePackmaster.powers.bladestormpack.WindrushPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
-//REFS: PlotArmor (grandopening), QuickReflex (evenodd), TheMANSION (maridebuff)
+//REFS: PlotArmor (grandopening), QuickReflex (evenodd), TheMANSION (maridebuff).
 public class Overpressure extends AbstractBladeStormCard {
     public final static String ID = makeID("Overpressure");
     private static final int COST = 1;
     private static final int BLOCK = 8;
     private static final int UPG_BLOCK = 3;
-    private static final int WINDRUSH = 3;
-    private static final int UPG_WINDRUSH = 1;
+    private static final int WINDRUSH = 5;
+    private static final int UPG_WINDRUSH = 2;
     private static final int FRAIL = 1;
 
     public Overpressure() {
