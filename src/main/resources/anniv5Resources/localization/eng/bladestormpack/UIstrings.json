@@ -19,7 +19,7 @@
   },
   "${ModID}:EscalatingBreezeUiText": {
     "TEXT": [
-      "retain. The cost of attacks is reduced next turn."
+      "retain. The cost of Attacks is reduced next turn."
     ]
   },
   "${ModID}:BladeStormPackHat": {

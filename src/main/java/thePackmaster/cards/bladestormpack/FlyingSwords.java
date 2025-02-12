@@ -20,10 +20,10 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard,
     public final static String ID = makeID("FlyingSwords");
     private static final int COST = 1;
     private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 1;
     private static final int HITS = 2;
     private static final int WINDRUSH = 3;
-    private static final int UPG_WINDRUSH = 1;
+    private static final int UPG_WINDRUSH = 2;
 
     public boolean combatVersion;
 

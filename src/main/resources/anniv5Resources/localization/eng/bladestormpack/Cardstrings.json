@@ -12,7 +12,7 @@
   },
   "${ModID}:Overpressure": {
     "NAME": "Overpressure",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Frail. ",
+    "DESCRIPTION": "Gain !M! ${ModID}:Windrush. NL Gain !${ModID}:m2! Frail. ",
     "EXTENDED_DESCRIPTION": ["${ModID}:First:", " Gain !B! Block.", " NL "],
     "FLAVOR": "So... you dare to defy me?!"
   },

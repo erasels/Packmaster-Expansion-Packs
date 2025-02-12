@@ -15,7 +15,7 @@ public class BladeStormPack  extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public BladeStormPack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 4, 3, 4, PackSummary.Tags.Attacks, PackSummary.Tags.Strength));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 4, 3, 3, PackSummary.Tags.Attacks, PackSummary.Tags.Strength));
         hatHidesHair = false;
     }
 

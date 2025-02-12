@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import thePackmaster.packs.EvenOddPack;
+import thePackmaster.powers.bladestormpack.WindrushPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
@@ -17,14 +18,17 @@ import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 public class Overpressure extends AbstractBladeStormCard {
     public final static String ID = makeID("Overpressure");
     private static final int COST = 1;
-    private static final int BLOCK = 7;
-    private static final int UPG_BLOCK = 2;
+    private static final int BLOCK = 8;
+    private static final int UPG_BLOCK = 3;
+    private static final int WINDRUSH = 3;
+    private static final int UPG_WINDRUSH = 1;
     private static final int FRAIL = 1;
 
     public Overpressure() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = BLOCK;
-        baseMagicNumber = magicNumber = FRAIL;
+        baseMagicNumber = magicNumber = WINDRUSH;
+        baseSecondMagic = secondMagic = FRAIL;
         rawDescription = cardStrings.EXTENDED_DESCRIPTION[0]
                 + cardStrings.EXTENDED_DESCRIPTION[1]
                 + cardStrings.EXTENDED_DESCRIPTION[2]
@@ -63,8 +67,8 @@ public class Overpressure extends AbstractBladeStormCard {
         else
         {
             return cardStrings.EXTENDED_DESCRIPTION[0]
-                    + cardStrings.EXTENDED_DESCRIPTION[1]
-                    + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2])
+                    + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[1])
+                    + cardStrings.EXTENDED_DESCRIPTION[2]
                     + cardStrings.DESCRIPTION;
         }
     }
@@ -80,14 +84,14 @@ public class Overpressure extends AbstractBladeStormCard {
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
+                this.isDone = true;
                 //Check "First"
                 if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 1) {
                     this.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
                 }
 
-                this.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
-                this.addToTop(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false)));
-                this.isDone = true;
+                this.addToTop(new ApplyPowerAction(p, p, new WindrushPower(p, magicNumber)));
+                this.addToTop(new ApplyPowerAction(p, p, new FrailPower(p, secondMagic, false)));
             }
         });
     }
@@ -95,6 +99,7 @@ public class Overpressure extends AbstractBladeStormCard {
     @Override
     public void upp() {
         upgradeBlock(UPG_BLOCK);
+        upgradeMagicNumber(UPG_WINDRUSH);
     }
 
     @Override
