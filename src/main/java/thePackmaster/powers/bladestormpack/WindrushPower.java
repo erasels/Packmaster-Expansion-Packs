@@ -1,7 +1,6 @@
 package thePackmaster.powers.bladestormpack;
 
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,7 +8,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-//REFS: BufferPower & TungstenRod relic (base game), ConstructPower (entropypack)
+//REFS: BufferPower & TungstenRod relic (base game), ConstructPower (entropypack).
 public class WindrushPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("WindrushPower");
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
@@ -21,7 +20,7 @@ public class WindrushPower extends AbstractPackmasterPower {
         this.priority = -42068; //ConstructPower: -42069, BufferPower: 5. Triggers after Construct, and protects Buffer.
     }
 
-    //Based on BufferPower, which does not affect enemy intents (that results in over-mitigation).
+    //Based on BufferPower, which does not affect enemy intents (doing that results in over-mitigation).
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.NORMAL) { return damageAmount; }
@@ -37,13 +36,7 @@ public class WindrushPower extends AbstractPackmasterPower {
     @Override
     public void atEndOfRound() {
         //Cut in half, rounding down ( = rounding the reduction up) and able to fully fade out.
-        if (amount == 1) {
-            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        } else if ((amount % 2) != 0){
-            addToBot(new ReducePowerAction(this.owner, this.owner, this, (amount+1) / 2));
-        } else {
-            addToBot(new ReducePowerAction(this.owner, this.owner, this, amount / 2));
-        }
+        addToBot(new ReducePowerAction(this.owner, this.owner, this, (amount+1) / 2));
     }
 
     public void updateDescription() {
