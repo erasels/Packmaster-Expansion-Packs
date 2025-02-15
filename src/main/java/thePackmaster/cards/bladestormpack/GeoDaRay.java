@@ -1,5 +1,6 @@
 package thePackmaster.cards.bladestormpack;
 
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import thePackmaster.powers.bladestormpack.WindrushPower;
 import thePackmaster.powers.instadeathpack.Precision;
 import thePackmaster.util.Wiz;
+import thePackmaster.vfx.bladestormpack.GeoDaRayEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
@@ -34,6 +36,7 @@ public class GeoDaRay extends AbstractBladeStormCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new VFXAction(new GeoDaRayEffect(Color.GRAY, false), 0.0F));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
 
         Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, false);
