@@ -31,7 +31,7 @@ public class GaleForceWindrushPower extends AbstractPackmasterPower {
         if (amount <= 0 || c.type != AbstractCard.CardType.ATTACK) { return; }
 
         this.flashWithoutSound();
-        addToBot(new VFXAction(new GaleForceEffect(Color.TEAL, true), 0.0F));
+        addToBot(new VFXAction(new GaleForceEffect(Color.TEAL, false), 0.0F));
 
         atb(new ApplyPowerAction(player, player, new WindrushPower(player, (Wiz.getLogicalCardCost(c)) + amount)));
     }
