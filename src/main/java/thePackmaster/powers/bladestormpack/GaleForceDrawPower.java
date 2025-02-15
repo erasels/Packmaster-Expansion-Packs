@@ -34,7 +34,7 @@ public class GaleForceDrawPower extends AbstractPackmasterPower {
         }
 
         this.flashWithoutSound();
-        addToBot(new VFXAction(new GaleForceEffect(Color.LIGHT_GRAY, true), 0.0F));
+        addToBot(new VFXAction(new GaleForceEffect(Color.LIGHT_GRAY, false), 0.0F));
 
         addToBot(new DrawCardAction(amount));
     }

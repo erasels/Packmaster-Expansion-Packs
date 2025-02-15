@@ -1,20 +1,24 @@
 package thePackmaster.cards.bladestormpack;
 
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
+import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
 import thePackmaster.powers.instadeathpack.CloudPower;
 import thePackmaster.powers.instadeathpack.Precision;
+import thePackmaster.vfx.bladestormpack.ColoredSmokeBombEffect;
+import thePackmaster.vfx.bladestormpack.DownwindBlowEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
-//REFS: DramaticExit (showmanpack)
+//REFS: DramaticExit (showmanpack), Cloud (instadeathpack), TabooDrop (Professor mod).
 public class DownwindBlow extends AbstractBladeStormCard {
     public final static String ID = makeID("DownwindBlow");
     private static final int COST = 3;
@@ -35,10 +39,17 @@ public class DownwindBlow extends AbstractBladeStormCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new VFXAction(new SmokeBombEffect(p.hb.cX, p.hb.cY)));
+        addToBot(new VFXAction(new ColoredSmokeBombEffect(p.hb.cX, p.hb.cY, Color.SKY)));
+        if (m != null) {
+            addToBot(new VFXAction(new DownwindBlowEffect(m.hb.cX, m.hb.cY, Color.LIGHT_GRAY)));
+        }
         addToBot(new SFXAction("ATTACK_HEAVY"));
+        addToBot(new WaitAction(0.35f));
+        if (m != null) {
+            this.addToBot(new VFXAction(new ClashEffect(m.hb.cX, m.hb.cY), 0.1F));
+        }
 
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
 
         addToBot(new ApplyPowerAction(p, p, new Precision(p, magicNumber)));
         addToBot(new ApplyPowerAction(p, p, new CloudPower(p, 1), 1));

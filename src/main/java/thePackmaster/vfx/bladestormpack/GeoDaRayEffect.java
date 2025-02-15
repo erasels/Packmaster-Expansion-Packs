@@ -7,15 +7,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 //REFS: WhirlwindEffect (base game), EssenceGraspEffect (calamitypack).
-public class GaleForceEffect  extends AbstractGameEffect {
-    private static final int COUNT_LIMIT = 4;   //was 18
+public class GeoDaRayEffect  extends AbstractGameEffect {
+    private static final int COUNT_LIMIT = 10;   //was 18
     private static final float DELAY_BETWEEN_PARTICLES = 0.03f; //was 0.05f
 
     private int count = 0;
     private float timer = 0.0F;
     private final boolean reverse;
 
-    public GaleForceEffect(Color setColor, boolean reverse) {
+    public GeoDaRayEffect(Color setColor, boolean reverse) {
         this.color = setColor.cpy();
         this.reverse = reverse;
     }
@@ -25,7 +25,7 @@ public class GaleForceEffect  extends AbstractGameEffect {
         if (this.timer < 0.0F) {
             this.timer += DELAY_BETWEEN_PARTICLES;
 
-            AbstractDungeon.effectsQueue.add(new BladeStormParticleEffect(this.color, this.reverse, 1.5f));
+            AbstractDungeon.effectsQueue.add(new BladeStormParticleEffect(this.color, this.reverse, 4.0f)); //3 nice.
 
             this.count++;
             if (this.count == COUNT_LIMIT) {
