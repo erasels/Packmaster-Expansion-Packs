@@ -46,8 +46,8 @@
 
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "Whenever you play a skill this turn, gain !M! block. NL Exhaust",
-    "UPGRADE_DESCRIPTION":"Whenever you play a skill this turn, gain !M! block."
+    "DESCRIPTION": "Whenever you play a skill this turn, gain !M! Block. NL Exhaust",
+    "UPGRADE_DESCRIPTION":"Whenever you play a skill this turn, gain !M! Block."
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moon River",

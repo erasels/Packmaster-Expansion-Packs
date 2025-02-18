@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.purple.CutThroughFate;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -24,7 +25,18 @@ public class MysticFlourish extends AbstractWitchStrikeCard {
         baseDamage = 8;
         magicNumber = baseMagicNumber = 4;
     }
-
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        int orbs = 0;
+        for (AbstractOrb o : Wiz.p().orbs) {
+            if (!(o instanceof EmptyOrbSlot)) {
+                orbs++;
+            }
+        }
+        if (orbs >= 3){
+            glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         Wiz.atb(new ChannelAction(new FireSpirit()));

@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.cards.green.LegSweep;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import thePackmaster.orbs.WitchesStrike.Arcane;
 import thePackmaster.util.Wiz;
 
@@ -22,7 +24,18 @@ public class CrescentSweep extends AbstractWitchStrikeCard {
         baseMagicNumber = magicNumber = 1;
         cardsToPreview = new Bullet();
     }
-
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        int skillcount = 0;
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn){
+            if (c.type == CardType.SKILL && !(c.uuid == this.uuid)){
+                skillcount++;
+            }
+        }
+        if (skillcount >= 2) {
+            glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(),magicNumber));
         int skillcount = 0;
