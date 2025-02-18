@@ -1,9 +1,12 @@
 package thePackmaster.cards.WitchesStrike;
 
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.green.LegSweep;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.orbs.WitchesStrike.Arcane;
 import thePackmaster.util.Wiz;
@@ -22,7 +25,15 @@ public class CrescentSweep extends AbstractWitchStrikeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(),magicNumber));
-        Wiz.atb(new ChannelAction(new Arcane()));
+        int skillcount = 0;
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn){
+            if (c.type == CardType.SKILL && !(c.uuid == this.uuid)){
+                skillcount++;
+            }
+        }
+        if (skillcount >= 2) {
+            Wiz.atb(new ChannelAction(new Arcane()));
+        }
     }
     public void upp() {
         upgradeMagicNumber(1);

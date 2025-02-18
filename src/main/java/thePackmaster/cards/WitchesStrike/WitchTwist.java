@@ -13,15 +13,17 @@ public class WitchTwist extends AbstractWitchStrikeCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public WitchTwist() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 4;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.applyToSelf(new WitchTwistPower(p,magicNumber));
     }
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(2);
+        exhaust = false;
     }
     @Override
     public String cardArtCopy() {

@@ -15,7 +15,7 @@ public class MoonlightBarrage extends AbstractWitchStrikeCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public MoonlightBarrage() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

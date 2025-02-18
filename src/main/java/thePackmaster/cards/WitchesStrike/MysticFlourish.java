@@ -20,7 +20,7 @@ public class MysticFlourish extends AbstractWitchStrikeCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public MysticFlourish() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 8;
         magicNumber = baseMagicNumber = 4;
     }
@@ -34,7 +34,7 @@ public class MysticFlourish extends AbstractWitchStrikeCard {
                 orbs++;
             }
         }
-        if (orbs >= 2){
+        if (orbs >= 3){
             Wiz.atb(new ApplyPowerAction(m,p,new IgnitePower(m,magicNumber)));
         }
     }

@@ -6,13 +6,13 @@
 
   "${ModID}:CrescentSweep": {
     "NAME": "Heel Tornado",
-    "DESCRIPTION": "Add a *Dodge *Offset to your hand. NL Channel 1 ${ModID}:Arcane.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Dodge *Offsets to your hand. NL Channel 1 ${ModID}:Arcane."
+    "DESCRIPTION": "Add a *Dodge *Offset to your hand. NL If you played 2 other skills this turn Channel 1 ${ModID}:Arcane.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Dodge *Offsets to your hand. NL If you played 2 other skills this turn Channel 1 ${ModID}:Arcane."
   },
 
   "${ModID}:FullMoonHalo": {
     "NAME": "Full Moon Halo",
-    "DESCRIPTION": "Gain !B! Block. NL If you have 2 or more orbs, Add a *Dodge *Offset to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL If you have 2 or more orbs, add a *Dodge *Offset to your hand."
   },
 
   "${ModID}:ChitteringPunt": {
@@ -22,8 +22,8 @@
   },
 
   "${ModID}:MysticFlourish": {
-    "NAME": "Tetsuzanko",
-    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL If you have 2 or more orbs, Apply !M! ${ModID}:Ignite",
+    "NAME": "Wicked Weave",
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL If you have 3 or more orbs, Apply !M! ${ModID}:Ignite",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy twice. NL ."
   },
   "${ModID}:CrystalMoonlight": {
@@ -42,7 +42,8 @@
 
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "Whenever you play a skill this turn, gain !M! block."
+    "DESCRIPTION": "Whenever you play a skill this turn, gain !M! block. NL Exhaust",
+    "UPGRADE_DESCRIPTION":"Whenever you play a skill this turn, gain !M! block."
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moon River",
