@@ -23,8 +23,7 @@
 
   "${ModID}:MysticFlourish": {
     "NAME": "Wicked Weave",
-    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL If you have 3 or more orbs, Apply !M! ${ModID}:Ignite",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy twice. NL ."
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL If you have 3 or more orbs, Apply !M! ${ModID}:Ignite"
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
@@ -37,7 +36,12 @@
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Orb Slot. NL Channel 1 ${ModID}:Arcane."
+    "DESCRIPTION": "Deal !D! damage for each Skill in your hand. NL Channel 1 ${ModID}:Arcane.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (You have ",
+      " Skill).",
+      " Skills)."
+    ]
   },
 
   "${ModID}:WitchTwist": {
