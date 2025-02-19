@@ -1,0 +1,11 @@
+{
+  "${ModID}:FlyingDutchman": {
+    "NAME": "飞翔的荷兰人",
+    "FLAVOR": "你发誓，它在天气糟糕时会悬浮发光。",
+    "DESCRIPTIONS": [
+      "每回合第二次打出攻击牌时，获得 #b",
+      " 层 #y${ModID}:风行 和 #b",
+      " 层 #y${ModID}:精确 。"
+    ]
+  }
+}

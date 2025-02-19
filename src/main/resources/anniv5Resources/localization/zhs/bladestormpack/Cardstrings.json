@@ -1,0 +1,57 @@
+{
+  "${ModID}:FlyingSwords": {
+    "NAME": "飞剑",
+    "DESCRIPTION": "对一个随机敌人造成 !D! 点伤害两次。",
+    "EXTENDED_DESCRIPTION": [" NL stslib:起动 ：获得 !M! 层 ${ModID}:风行 。"],
+    "FLAVOR": "这太荒谬了！"
+  },
+  "${ModID}:GeoDaRay": {
+    "NAME": "地球射线",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 获得 !M! 层 ${ModID}:风行 和 ${ModID}:精确 。",
+    "FLAVOR": "准备好！"
+  },
+  "${ModID}:Overpressure": {
+    "NAME": "超压",
+    "DESCRIPTION": "获得 !M! 层 ${ModID}:风行 。 NL 获得 !${ModID}:m2! 层 脆弱 。",
+    "EXTENDED_DESCRIPTION": [" ${ModID}:首牌 :", " 获得 !B! 点格挡。", " NL "],
+    "FLAVOR": "所以...你胆敢违抗我？！"
+  },
+  "${ModID}:TradeWinds": {
+    "NAME": "交易之风",
+    "DESCRIPTION": "{@@} 发现 一张{!Upgrades!|>0= 升级过的}攻击牌。 NL 如果是普通卡牌，恢复 !M! 点生命。 NL 如果是稀有卡牌，失去 !${ModID}:m2! 金币。 NL 消耗。",
+    "FLAVOR": "剑！回到你的主人身边！"
+  },
+  "${ModID}:TempestOfStrikes": {
+    "NAME": "连击风暴",
+    "DESCRIPTION": "造成 !D! 点伤害，牌库中每有2张攻击牌，施加一次 !M! 层 ${ModID}:束缚 。",
+    "EXTENDED_DESCRIPTION": [" (", " 次)", " NL 消耗 。"],
+    "FLAVOR": "沉浸于恐惧中吧！"
+  },
+  "${ModID}:FallOver": {
+    "NAME": "击倒",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !${ModID}:m2! 层 力量 。 NL 对所有敌人施加 !M! 层 ${ModID}:束缚 。 NL 消耗 。",
+    "FLAVOR": "站着别动...然后被消灭吧！"
+  },
+  "${ModID}:FeedingWinds": {
+    "NAME": "投喂风灵",
+    "DESCRIPTION": "{@@} 消耗 一张牌以获得 [E] {!${ModID}:m2!|>0=和 !${ModID}:m2! 层 ${ModID}:风行 }。",
+    "EXTENDED_DESCRIPTION": [" NL stslib:起动 : ${ModID}:修改 !M! 张随机攻击牌: \"获得 1 层 力量 \""],
+    "FLAVOR": "来看看我有多强！"
+  },
+  "${ModID}:EscalatingBreeze": {
+    "NAME": "微风渐强",
+    "DESCRIPTION": "本回合保留至多 !M! 张牌。 NL 保留的攻击牌下回合费用减少 !${ModID}:m2! 点。",
+    "FLAVOR": "我不会忘记的！"
+  },
+  "${ModID}:GaleForce": {
+    "NAME": "烈风",
+    "DESCRIPTION": "{@@}每当你使用攻击牌时，获得等同于其费用{!M!|>0=+ !M!} 层的 ${ModID}:风行 。 NL 每当你打出费用为 1 或更高的攻击牌时，抽 !${ModID}:m2! 张牌。",
+    "FLAVOR": "快，死吧！"
+  },
+  "${ModID}:DownwindBlow": {
+    "NAME": "顺风击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 ${ModID}:精确 。 NL 本回合受到的攻击伤害减少50%。",
+    "FLAVOR": "在这里！"
+  }
+}
+  

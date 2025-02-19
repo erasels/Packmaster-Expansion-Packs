@@ -3,13 +3,13 @@
     "NAME": "酸液发射器",
     "DESCRIPTION": "目标本回合受到2倍攻击伤害。 NL 消耗 。"
   },
-  "${ModID}:ElectricWhip": {
-    "NAME": "电鞭",
-    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 生成 一个 闪电 充能球。"
+  "${ModID}:FieldResearch": {
+    "NAME": "实地研究",
+    "DESCRIPTION": "每当你对敌人施加负面效果时，获得 !M! 层 力量 。"
   },
-  "${ModID}:EnrageShot": {
-    "NAME": "暴怒射击",
-    "DESCRIPTION": "击晕目标并给予2点 力量 。 NL 消耗 。"
+  "${ModID}:Flamethrower": {
+    "NAME": "火焰喷射器",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。 NL 所有敌人失去等同于其 ${ModID}:燃烧 层数的生命值。"
   },
   "${ModID}:MercuryFist": {
     "NAME": "水银拳套",
@@ -17,8 +17,11 @@
   },
   "${ModID}:ReboundVolley": {
     "NAME": "回弹齐射",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机造成 !${ModID}:sd! 点伤害。",
-    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。 NL 随机对其他敌人造成 !${ModID}:sd! 点伤害 !M! 次。"]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对 !M! 个其他敌人造成 !${ModID}:sd! 点伤害。"
+  },
+  "${ModID}:ShieldProjector": {
+    "NAME": "护盾投射器",
+    "DESCRIPTION": "获得 !M! 点 敏捷 。 NL 本回合结束时，失去 !${ModID}:m2! 点 敏捷 。"
   },
   "${ModID}:SmokePellets": {
     "NAME": "烟雾弹",
@@ -32,12 +35,24 @@
     "NAME": "斯巴达之盾",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层临时 力量 。"
   },
+  "${ModID}:VoidShocker": {
+    "NAME": "虚空振荡器",
+    "DESCRIPTION": "敌人的攻击未击破你的格挡时，对其造成 !M! 点伤害。"
+  },
+
+
+
+
+  "${ModID}:ElectricWhip": {
+    "NAME": "电鞭",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 生成 1 个 闪电 充能球。"
+  },
+  "${ModID}:EnrageShot": {
+    "NAME": "激怒射击",
+    "DESCRIPTION": "眩晕敌人并给予 2 层 力量。 NL 消耗 。"
+  },
   "${ModID}:StormGenerator": {
     "NAME": "雷暴生成器",
     "DESCRIPTION": "回合结束时，每有一名带有负面效果的敌人， 生成 !M! 个 闪电 充能球。"
-  },
-  "${ModID}:VoidShocker": {
-    "NAME": "虚空振荡器",
-    "DESCRIPTION": "敌人未击破你的格挡时，其受到 !M! 点伤害。"
   }
 }
