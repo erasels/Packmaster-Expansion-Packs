@@ -2,7 +2,8 @@
   "${ModID}:MoonlightFlightPower": {
     "NAME": "Moon River",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a #yDodge #yOffset to your hand"
+      "At the start of your turn, add a #yDodge #yOffset to your hand",
+      "At the start of your turn, add #b", " #yDodge #yOffsets to your hand"
     ]
   },
   "${ModID}:FlowoftheSwordPower": {

@@ -22,9 +22,8 @@ public class ArcaneOrbPatch {
     public static void Insert(UseCardAction __instance, AbstractCard targetCard) {
         if (targetCard.type == AbstractCard.CardType.SKILL) {
             for (AbstractOrb abstractOrb : AbstractDungeon.player.orbs) {
-                AbstractOrb Orb = abstractOrb;
-                if (Orb instanceof Arcane) {
-                    ((Arcane) Orb).passiveEffect();
+                if (abstractOrb instanceof Arcane) {
+                    ((Arcane) abstractOrb).passiveEffect();
                 }
             }
         }

@@ -28,7 +28,7 @@ public class CrescentSweep extends AbstractWitchStrikeCard {
         glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         int skillcount = 0;
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn){
-            if (c.type == CardType.SKILL && !(c == AbstractDungeon.actionManager.cardsPlayedThisTurn.get(0))){
+            if (c.type == CardType.SKILL && !(c == AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1))){
                 skillcount++;
             }
         }
@@ -40,7 +40,7 @@ public class CrescentSweep extends AbstractWitchStrikeCard {
         Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(),magicNumber));
         int skillcount = 0;
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn){
-            if (c.type == CardType.SKILL && !(c == AbstractDungeon.actionManager.cardsPlayedThisTurn.get(0))){
+            if (c.type == CardType.SKILL && !(c == AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1))){
                 skillcount++;
             }
         }
