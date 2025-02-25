@@ -25,6 +25,7 @@ public class ChitteringPunt extends AbstractWitchStrikeCard {
         baseDamage = 3;
         baseMagicNumber = magicNumber = 1;
         cardsToPreview = new Bullet();
+        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
