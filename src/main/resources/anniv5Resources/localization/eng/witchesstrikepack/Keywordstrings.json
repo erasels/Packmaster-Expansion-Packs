@@ -1,22 +1,10 @@
 [
   {
-    "PROPER_NAME": "Crescent Moon",
+    "PROPER_NAME": "Arcane",
     "NAMES": [
-      "Crescent Moon",
-      "crescent moon",
-      "Crescent_Moon",
-      "crescent_moon"
+      "Arcane",
+      "arcane"
     ],
-    "DESCRIPTION": "Orb. Passive: Deals damage to a random enemy when activated by a card's effect. Evokes after activating #b4 times. Evoke: Deal damage to a random enemy."
-  },
-  {
-    "PROPER_NAME": "Full Moon",
-    "NAMES": [
-      "Full Moon",
-      "full moon",
-      "Full_Moon",
-      "full_moon"
-    ],
-    "DESCRIPTION": "Orb. Passive: Draw 1 card when activated by a card's effect. Evokes after activating #b4 times. Evoke: Draw 1 card."
+    "DESCRIPTION": "Orb. Passive: Deals damage to a random enemy after playing a #gSkill. Evoke : Deals damage based on the number of #ychanneled #yArcane."
   }
 ]

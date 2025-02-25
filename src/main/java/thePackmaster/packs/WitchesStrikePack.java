@@ -31,6 +31,7 @@ public class WitchesStrikePack extends AbstractCardPack {
         cards.add(MoonlightFlight.ID);
         cards.add(WitchTwist.ID);
         cards.add(FullMoonHalo.ID);
+        cards.add(Bullet.ID);
         return cards;
     }
 }
