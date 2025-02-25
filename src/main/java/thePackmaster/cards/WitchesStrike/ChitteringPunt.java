@@ -1,8 +1,6 @@
 package thePackmaster.cards.WitchesStrike;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.DrawPileToHandAction;
 import com.megacrit.cardcrawl.cards.green.SuckerPunch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,10 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import thePackmaster.util.Wiz;
 
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
-import static thePackmaster.util.Wiz.att;
 
 public class ChitteringPunt extends AbstractWitchStrikeCard {
     public final static String ID = makeID("ChitteringPunt");
@@ -32,31 +28,31 @@ public class ChitteringPunt extends AbstractWitchStrikeCard {
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
-                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
-                    if (!mo.isDeadOrEscaped()){
-                        AbstractDungeon.effectsQueue.add(new SmallLaserEffect(Wiz.p().hb.cX,Wiz.p().hb.cY,mo.hb.cX,mo.hb.cY));
+                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    if (!mo.isDeadOrEscaped()) {
+                        AbstractDungeon.effectsQueue.add(new SmallLaserEffect(Wiz.p().hb.cX, Wiz.p().hb.cY, mo.hb.cX, mo.hb.cY));
                     }
                 }
                 isDone = true;
             }
         });
-        Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT,false);
+        Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false);
 
-        if (upgraded){
+        if (upgraded) {
             Wiz.atb(new AbstractGameAction() {
                 @Override
                 public void update() {
-                    for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
-                        if (!mo.isDeadOrEscaped()){
-                            AbstractDungeon.effectsQueue.add(new SmallLaserEffect(Wiz.p().hb.cX,Wiz.p().hb.cY,mo.hb.cX,mo.hb.cY));
+                    for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                        if (!mo.isDeadOrEscaped()) {
+                            AbstractDungeon.effectsQueue.add(new SmallLaserEffect(Wiz.p().hb.cX, Wiz.p().hb.cY, mo.hb.cX, mo.hb.cY));
                         }
                     }
                     isDone = true;
                 }
             });
-            Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT,false);
+            Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false);
         }
-        atb(new DrawPileToHandAction(1,CardType.SKILL));
+        atb(new DrawPileToHandAction(1, CardType.SKILL));
     }
 
     public void upp() {

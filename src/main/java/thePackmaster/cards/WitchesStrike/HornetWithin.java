@@ -1,7 +1,6 @@
 package thePackmaster.cards.WitchesStrike;
 
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.actions.unique.FlechetteAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,8 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.orbs.WitchesStrike.Arcane;
 import thePackmaster.util.Wiz;
-
-import java.util.Iterator;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -36,7 +33,7 @@ public class HornetWithin extends AbstractWitchStrikeCard {
     public void applyPowers() {
         super.applyPowers();
         int skills = 0;
-        for (AbstractCard c : AbstractDungeon.player.hand.group){
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.type == CardType.SKILL) {
                 ++skills;
             }
@@ -57,9 +54,11 @@ public class HornetWithin extends AbstractWitchStrikeCard {
         this.rawDescription = cardStrings.DESCRIPTION;// 61
         this.initializeDescription();// 62
     }
+
     public void upp() {
         upgradeDamage(2);
     }
+
     @Override
     public String cardArtCopy() {
         return Bane.ID;

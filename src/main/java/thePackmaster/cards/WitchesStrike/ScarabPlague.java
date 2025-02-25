@@ -22,11 +22,13 @@ public class ScarabPlague extends AbstractWitchStrikeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ChannelAction(new Arcane()));
-        Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(),magicNumber));
+        Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(), magicNumber));
     }
+
     public void upp() {
         upgradeMagicNumber(1);
     }
+
     @Override
     public String cardArtCopy() {
         return Backflip.ID;

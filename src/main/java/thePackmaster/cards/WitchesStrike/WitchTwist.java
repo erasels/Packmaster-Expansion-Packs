@@ -19,12 +19,14 @@ public class WitchTwist extends AbstractWitchStrikeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.applyToSelf(new WitchTwistPower(p,magicNumber));
+        Wiz.applyToSelf(new WitchTwistPower(p, magicNumber));
     }
+
     public void upp() {
         upgradeMagicNumber(1);
         exhaust = false;
     }
+
     @Override
     public String cardArtCopy() {
         return Leap.ID;

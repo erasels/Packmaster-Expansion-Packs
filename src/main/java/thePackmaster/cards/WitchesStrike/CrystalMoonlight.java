@@ -22,13 +22,14 @@ public class CrystalMoonlight extends AbstractWitchStrikeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ChannelAction(new Arcane()));
-        Wiz.applyToSelf(new FocusPower(p,magicNumber));
-        Wiz.applyToSelf(new LoseFocusPower(p,magicNumber));
+        Wiz.applyToSelf(new FocusPower(p, magicNumber));
+        Wiz.applyToSelf(new LoseFocusPower(p, magicNumber));
     }
 
     public void upp() {
         upgradeMagicNumber(2);
     }
+
     @Override
     public String cardArtCopy() {
         return Miracle.ID;

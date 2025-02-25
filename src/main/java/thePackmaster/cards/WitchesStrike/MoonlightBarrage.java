@@ -21,12 +21,13 @@ public class MoonlightBarrage extends AbstractWitchStrikeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new ChannelAction(new FireSpirit()));
-        Wiz.applyToSelf(new FlowoftheSwordPower(p,1));
+        Wiz.applyToSelf(new FlowoftheSwordPower(p, 1));
     }
 
     public void upp() {
         isEthereal = false;
     }
+
     @Override
     public String cardArtCopy() {
         return Capacitor.ID;
