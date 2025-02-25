@@ -34,23 +34,20 @@ public class HornetWithin extends AbstractWitchStrikeCard {
     }// 36
 
     public void applyPowers() {
-        super.applyPowers();// 40
-        int count = 0;// 42
-        Iterator var2 = AbstractDungeon.player.hand.group.iterator();// 43
-
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
-            if (c.type == CardType.SKILL) {// 44
-                ++count;// 45
+        super.applyPowers();
+        int skills = 0;
+        for (AbstractCard c : AbstractDungeon.player.hand.group){
+            if (c.type == CardType.SKILL) {
+                ++skills;
             }
         }
 
-        this.rawDescription = cardStrings.DESCRIPTION;// 49
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + count;// 50
-        if (count == 1) {// 51
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];// 52
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + skills;
+        if (skills == 1) {// 51
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
         } else {
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];// 54
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
         }
 
         this.initializeDescription();// 56

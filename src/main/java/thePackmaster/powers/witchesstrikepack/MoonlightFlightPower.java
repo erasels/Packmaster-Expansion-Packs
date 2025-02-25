@@ -13,14 +13,13 @@ public class MoonlightFlightPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("MoonlightFlightPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
-    public static boolean activated = false;
-    public MoonlightFlightPower(AbstractCreature owner) {
-        super(POWER_ID,NAME,PowerType.BUFF,false,owner,-1);
+    public MoonlightFlightPower(AbstractCreature owner, int amt) {
+        super(POWER_ID,NAME,PowerType.BUFF,false,owner,amt);
         canGoNegative = false;
     }
     @Override
     public void atStartOfTurnPostDraw() {
-        Wiz.atb(new MakeTempCardInHandAction(new Bullet()));
+        Wiz.atb(new MakeTempCardInHandAction(new Bullet(),amount));
     }
     @Override
     public void updateDescription() {

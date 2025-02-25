@@ -22,7 +22,7 @@ public class WitchTwist extends AbstractWitchStrikeCard {
         Wiz.applyToSelf(new WitchTwistPower(p,magicNumber));
     }
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
         exhaust = false;
     }
     @Override

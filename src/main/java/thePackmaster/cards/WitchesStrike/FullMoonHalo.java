@@ -21,7 +21,6 @@ public class FullMoonHalo extends AbstractWitchStrikeCard {
     public FullMoonHalo() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
-        magicNumber = baseMagicNumber = 4;
         cardsToPreview = new Bullet();
     }
     public void triggerOnGlowCheck() {

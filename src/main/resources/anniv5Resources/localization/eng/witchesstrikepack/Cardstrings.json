@@ -6,8 +6,8 @@
 
   "${ModID}:CrescentSweep": {
     "NAME": "Heel Tornado",
-    "DESCRIPTION": "Add a *Dodge *Offset to your hand. NL If you played 2 other skills this turn Channel 1 ${ModID}:Arcane.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Dodge *Offsets to your hand. NL If you played 2 other skills this turn Channel 1 ${ModID}:Arcane."
+    "DESCRIPTION": "Add a *Dodge *Offset to your hand. NL If you played 2 other Skills this turn Channel 1 ${ModID}:Arcane.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Dodge *Offsets to your hand. NL If you played 2 other Skills this turn Channel 1 ${ModID}:Arcane."
   },
 
   "${ModID}:FullMoonHalo": {
@@ -23,7 +23,7 @@
 
   "${ModID}:MysticFlourish": {
     "NAME": "Wicked Weave",
-    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL If you have 3 or more orbs, Apply !M! ${ModID}:Ignite"
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL If you have 3 or more orbs, apply !M! ${ModID}:Ignite"
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
@@ -31,8 +31,8 @@
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Flow of the Sword",
-    "DESCRIPTION": "Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw a card the first time you play a Skill each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw a card the first time you play a Skill each turn."
+    "DESCRIPTION": "Ethereal. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw a card the first time you play a Skill each turn.",
+    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw a card the first time you play a Skill each turn."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
@@ -51,8 +51,8 @@
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moon River",
-    "DESCRIPTION": "Gain !M! Orb Slot. NL At the start of your turn, Add a *Dodge *Offset to your hand",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Orb Slots. NL At the start of your turn, Add a *Dodge *Offset to your hand"
+    "DESCRIPTION": "Gain !M! Orb Slot. NL At the start of your turn, add a *Dodge *Offset to your hand",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Orb Slots. NL At the start of your turn, add a *Dodge *Offset to your hand"
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Space Slip",

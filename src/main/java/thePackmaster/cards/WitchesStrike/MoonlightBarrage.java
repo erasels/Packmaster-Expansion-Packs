@@ -16,6 +16,7 @@ public class MoonlightBarrage extends AbstractWitchStrikeCard {
 
     public MoonlightBarrage() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,7 +25,7 @@ public class MoonlightBarrage extends AbstractWitchStrikeCard {
     }
 
     public void upp() {
-        isInnate = true;
+        isEthereal = false;
     }
     @Override
     public String cardArtCopy() {

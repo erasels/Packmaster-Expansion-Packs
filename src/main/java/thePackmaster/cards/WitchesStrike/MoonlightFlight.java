@@ -23,7 +23,7 @@ public class MoonlightFlight extends AbstractWitchStrikeCard
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p,new MoonlightFlightPower(p)));
+        addToBot(new ApplyPowerAction(p,p,new MoonlightFlightPower(p,1)));
         Wiz.atb(new IncreaseMaxOrbAction(magicNumber));
     }
 

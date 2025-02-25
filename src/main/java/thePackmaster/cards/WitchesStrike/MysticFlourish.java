@@ -22,7 +22,7 @@ public class MysticFlourish extends AbstractWitchStrikeCard {
 
     public MysticFlourish() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 6;
         magicNumber = baseMagicNumber = 4;
     }
     public void triggerOnGlowCheck() {

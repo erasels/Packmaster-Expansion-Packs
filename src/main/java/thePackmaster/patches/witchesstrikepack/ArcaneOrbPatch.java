@@ -20,14 +20,14 @@ public class ArcaneOrbPatch {
             localvars = {"targetCard"}
     )
     public static void Insert(UseCardAction __instance, AbstractCard targetCard) {
-
-        for (AbstractOrb abstractOrb : AbstractDungeon.player.orbs) {
-            AbstractOrb Orb = abstractOrb;
-            if (Orb instanceof Arcane && targetCard.type == AbstractCard.CardType.SKILL) {
-                ((Arcane) Orb).passiveEffect();
+        if (targetCard.type == AbstractCard.CardType.SKILL) {
+            for (AbstractOrb abstractOrb : AbstractDungeon.player.orbs) {
+                AbstractOrb Orb = abstractOrb;
+                if (Orb instanceof Arcane) {
+                    ((Arcane) Orb).passiveEffect();
+                }
             }
         }
-
     }
 
     private static class Locator extends SpireInsertLocator {
