@@ -2,30 +2,30 @@
   "${ModID}:MoonlightFlightPower": {
     "NAME": "Moon River",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a #yDodge #yOffset to your hand",
-      "At the start of your turn, add #b", " #yDodge #yOffsets to your hand"
+      "At the start of your turn, add #b1 #yDodge #yOffset into your hand",
+      "At the start of your turn, add #b", " #yDodge #yOffsets into your hand"
     ]
   },
   "${ModID}:FlowoftheSwordPower": {
     "NAME": "Flow of the Sword",
     "DESCRIPTIONS": [
-      "Draw a card the first time you play a #gSkill each turn.",
-      "Draw a card the first #b",
+      "Draw 1 card the first time you play a #gSkill each turn.",
+      "Draw 1 card the first #b",
       " times you play a #gSkill each turn."
     ]
   },
   "${ModID}:WitchTwistPower": {
     "NAME": "Witch Twist",
     "DESCRIPTIONS": [
-      "Whenever you play a #gSkill gain #b"," block"
+      "Whenever you play a #gSkill, gain #b"," block"
     ]
   },
   "${ModID}:LoseFocusPower": {
     "NAME": "Intensity",
     "DESCRIPTIONS": [
-      "At the start of your turn lose #b",
+      "At the start of your turn, lose #b",
       " #yFocus.",
-      "Incorporeal","At the start of your turn gain #b"
+      "Incorporeal","At the start of your turn, gain #b"
     ]
   }
 }
