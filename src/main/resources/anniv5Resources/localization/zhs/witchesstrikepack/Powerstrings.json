@@ -1,16 +1,31 @@
 {
   "${ModID}:MoonlightFlightPower": {
-    "NAME": "月色飞行",
+    "NAME": "月河",
     "DESCRIPTIONS": [
-      "每当你 #y生成 一个 充能球，获得 #b",
-      " 层 临时 #y集中 。"
+      "回合开始时，增加 #b1 张 #y闪避偏移 到手牌。",
+      "回合开始时，增加 #b", " 张 #y闪避偏移 到手牌。"
+    ]
+  },
+  "${ModID}:FlowoftheSwordPower": {
+    "NAME": "剑流如月",
+    "DESCRIPTIONS": [
+      "每个回合首次打出 #g技能 牌时，抽1张牌。",
+      "每个回合前 #b",
+      " 次打出 #g技能 牌时，抽1张牌。"
+    ]
+  },
+  "${ModID}:WitchTwistPower": {
+    "NAME": "乱射升龙击",
+    "DESCRIPTIONS": [
+      "每当你打出1张 #g技能 牌时，获得 #b"," 点格挡。"
     ]
   },
   "${ModID}:LoseFocusPower": {
-    "NAME": "Discharge",
+    "NAME": "强度",
     "DESCRIPTIONS": [
-      "你的下回合开始时，失去 #b",
-      " 点 #y集中 。"
+      "你的回合开始时，失去 #b",
+      " 点 #y集中 。",
+      "无形","回合开始时，获得 #b"
     ]
   }
 }
