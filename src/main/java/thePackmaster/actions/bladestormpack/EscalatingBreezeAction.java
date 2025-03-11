@@ -26,6 +26,10 @@ public class EscalatingBreezeAction extends AbstractGameAction {
 
     //Based on RetainCardsAction (base game)
     public void update() {
+        if (AbstractDungeon.player.hand.group.isEmpty()) {
+            this.isDone = true;
+            return;
+        }
         if (this.duration == 0.5F) {
             AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, true, false, false, true);
             this.addToBot(new WaitAction(0.25F));
