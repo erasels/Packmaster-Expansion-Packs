@@ -15,7 +15,7 @@ public class WormHolePower extends AbstractPackmasterPower {
     private static final String[] DESCRIPTIONS = STRINGS.DESCRIPTIONS;
 
     public WormHolePower(AbstractCreature owner, int amount) {
-        super(ID, STRINGS.NAME, PowerType.BUFF, false, owner, amount);
+        super(ID, STRINGS.NAME, PowerType.BUFF, false, owner, -1);
     }
 
     @Override
@@ -35,6 +35,10 @@ public class WormHolePower extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0], amount);
+        this.description = String.format(DESCRIPTIONS[0], 1);
+    }
+
+    public int getEffectAmount() {
+        return 1;
     }
 }

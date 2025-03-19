@@ -1,7 +1,7 @@
 {
   "${ModID}:Summon": {
     "NAME": "Summon",
-    "DESCRIPTION": "Draw !M! cards. NL Channel 1 ${ModID}:Doppel."
+    "DESCRIPTION": "Draw {@@}!M! card{!M!|0,>1=s}. NL Channel 1 ${ModID}:Doppel."
   },
   "${ModID}:Arrive": {
     "NAME": "Arrive",
@@ -10,7 +10,7 @@
   },
   "${ModID}:Concatenation": {
     "NAME": "Concatenation",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Channel 1 ${ModID}:Doppel with the leftmost Attack in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Doppel with the leftmost Attack in your hand."
   },
   "${ModID}:EmergencyContact": {
     "NAME": "Emergency Contact",
@@ -30,11 +30,11 @@
   },
   "${ModID}:Resistance": {
     "NAME": "Resistance",
-    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Channel 1 ${ModID}:Doppel with the leftmost Skill in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 ${ModID}:Doppel with the leftmost Skill in your hand."
   },
   "${ModID}:Tides": {
     "NAME": "Tides",
-    "DESCRIPTION": "Deal !D! damage twice. NL Deal !D! damage for each ${ModID}:Doppel. NL Channel 1 ${ModID}:Doppel."
+    "DESCRIPTION": "Deal !D! damage 3 times. NL Deal !M! additional damage for each Channeled Orb."
   },
   "${ModID}:Turbulence": {
     "NAME": "Turbulence",
