@@ -68,7 +68,6 @@ public class Concatenation extends AbstractDoppelCard {
         this.addToBot(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                     AbstractGameAction.AttackEffect.NONE));
-        this.addToBot(new DrawCardAction(1));
         this.addToBot(new WaitAction(0.1f));
         this.addToBot(new AbstractGameAction() {
             @Override

@@ -83,8 +83,8 @@ public abstract class AbstractDoppel extends AbstractOrb {
         super.applyFocus();
         AbstractPower focusPower = AbstractDungeon.player.getPower(FocusPower.POWER_ID);
         int numFocus = (focusPower != null ? focusPower.amount : 0);
-        AbstractPower wormHolePower = AbstractDungeon.player.getPower(WormHolePower.ID);
-        int numWormHole = (wormHolePower != null ? wormHolePower.amount : 0);
+        WormHolePower wormHolePower = (WormHolePower) AbstractDungeon.player.getPower(WormHolePower.ID);
+        int numWormHole = (wormHolePower != null ? wormHolePower.getEffectAmount() : 0);
         applyPowers(numFocus, numWormHole);
     }
 
