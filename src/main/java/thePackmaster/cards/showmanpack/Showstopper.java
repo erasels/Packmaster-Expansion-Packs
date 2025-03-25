@@ -22,7 +22,7 @@ public class Showstopper extends AbstractShowmanCard {
         for (int i = 0; i < timesUpgraded; i++){
             energy++;
         }
-        addToBot(new ShowstopperAction(p, magicNumber, this.freeToPlayOnce, energy, BLOCKTHRESHOLD, DAMAGE  ));
+        addToBot(new ShowstopperAction(p, magicNumber, this.freeToPlayOnce, energy, BLOCKTHRESHOLD, DAMAGE));
     }
 
     public void upp() {
