@@ -1,0 +1,11 @@
+{
+  "${ModID}:ALSJAKSLA": {
+    "NAME": "wwwwwww",
+    "DESCRIPTION": "wwwwwwww",
+    "UPGRADE_DESCRIPTION": "www"
+  },
+  "${ModID}:InsectGlaiveTemp": {
+    "NAME": "测试",
+    "DESCRIPTION": "防 !B! 。 NL 虫虫的棍 。"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "${ModID}:InsectGlaive": {
+    "TEXT": [
+      "虫棍",
+      "一跃登天纵横四方",
+      "332"
+    ]
+  },
+  "${ModID}:InsectGlaiveEssenceNameAndDescription": {
+    "TEXT": [
+      "红灯",
+      "白灯",
+      "黄灯",
+      "战斗奖励中的 #y虫棍牌 都会随机获得一种灯。打出那些牌，本回合将会根据其灯的类型强化角色。"
+    ]
+  }
+}

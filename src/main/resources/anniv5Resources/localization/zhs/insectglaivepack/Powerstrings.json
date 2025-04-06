@@ -1,0 +1,34 @@
+{
+  "${ModID}:TurbulencePower": {
+    "NAME": "湍流",
+    "DESCRIPTIONS": [
+      "#y生成 充能球后，使用它的被动能力。",
+      "#y生成 充能球后，使用它的被动能力 #b%d 次。"
+    ]
+  },
+  "${ModID}:ExtractedEssenceYellow": {
+    "NAME": "黄灯",
+    "DESCRIPTIONS": [
+      "本回合，你从卡牌中获得的格挡增加 #b2 点。"
+    ]
+  },
+  "${ModID}:ExtractedEssenceRed": {
+    "NAME": "红灯",
+    "DESCRIPTIONS": [
+      "本回合，你攻击造成的伤害增加 #b2 点。"
+    ]
+  },
+  "${ModID}:ExtractedEssenceWhite": {
+    "NAME": "白灯",
+    "DESCRIPTIONS": [
+      "本回合， 打出 #y虫棍牌 时抽1张牌。"
+    ]
+  },
+  "${ModID}:MountingPower": {
+    "NAME": "骑乘",
+    "DESCRIPTIONS": [
+      "在 #y空中 打出攻击牌时获得 #b1 层，再获得 #b",
+      " 层后失去这个能力，所有敌人失去一半的当前 #y生命 。"
+    ]
+  }
+}
