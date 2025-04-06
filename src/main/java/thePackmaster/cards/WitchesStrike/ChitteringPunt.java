@@ -20,7 +20,6 @@ public class ChitteringPunt extends AbstractWitchStrikeCard {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 3;
         baseMagicNumber = magicNumber = 1;
-        cardsToPreview = new Bullet();
         isMultiDamage = true;
     }
 
