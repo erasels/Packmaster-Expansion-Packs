@@ -40,25 +40,11 @@ public class ChitteringPunt extends AbstractWitchStrikeCard {
             }
         });
         Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT,false);
-
-        if (upgraded){
-            Wiz.atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
-                        if (!mo.isDeadOrEscaped()){
-                            AbstractDungeon.effectsQueue.add(new SmallLaserEffect(Wiz.p().hb.cX,Wiz.p().hb.cY,mo.hb.cX,mo.hb.cY));
-                        }
-                    }
-                    isDone = true;
-                }
-            });
-            Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT,false);
-        }
         atb(new DrawPileToHandAction(1,CardType.SKILL));
     }
 
     public void upp() {
+        upgradeDamage(2);
     }
 
     @Override
