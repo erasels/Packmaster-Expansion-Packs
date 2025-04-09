@@ -15,7 +15,7 @@ public class ScarabPlague extends AbstractWitchStrikeCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public ScarabPlague() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
         cardsToPreview = new Bullet();
     }
