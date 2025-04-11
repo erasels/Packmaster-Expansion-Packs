@@ -56,7 +56,7 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
         applyFocus();
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
-        Wiz.vfx(new MagicRingEffect(hb.cX, hb.cY, Color.NAVY, Color.SKY));
+        Wiz.vfx(new MagicRingEffect(hb.cX, hb.cY, Color.NAVY.cpy(), Color.SKY.cpy()));
         int arcanecount = 1;
         for (AbstractOrb o : Wiz.p().orbs) {
             if (o instanceof Arcane && !(o == this)) {
@@ -71,9 +71,9 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
                 Wiz.atb(new AbstractGameAction() {
                     @Override
                     public void update() {
-                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX, mo.hb.cY, Color.CYAN, 1.2f));
-                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX, mo.hb.cY, Color.CYAN, 1.2f));
-                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX, mo.hb.cY, Color.CYAN, 1.2f));
+                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX, mo.hb.cY, Color.CYAN.cpy(), 1.2f));
+                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX, mo.hb.cY, Color.CYAN.cpy(), 1.2f));
+                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX, mo.hb.cY, Color.CYAN.cpy(), 1.2f));
                         isDone = true;
                     }
                 });
@@ -118,12 +118,12 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
                     Wiz.atb(new AbstractGameAction() {
                         @Override
                         public void update() {
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN, 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN, 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN, 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN, 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN, 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN, 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
                             isDone = true;
                         }
                     });
@@ -157,7 +157,7 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
         angle += Gdx.graphics.getDeltaTime() * 25.0f;
         vfxTimer -= Gdx.graphics.getDeltaTime();
         if (vfxTimer < 0.0f) {
-            AbstractDungeon.effectList.add(new MagicRingEffect(cX, cY, Color.BLUE, Color.SKY));
+            AbstractDungeon.effectList.add(new MagicRingEffect(cX, cY, Color.BLUE.cpy(), Color.SKY.cpy()));
             vfxTimer = MathUtils.random(vfxIntervalMin, vfxIntervalMax);
         }
     }
