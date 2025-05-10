@@ -21,7 +21,7 @@
   },
   "${ModID}:DrawCardDoppel": {
     "DESCRIPTION": [
-      "#yPassive: At the start of turn, draw a card. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn."
+      "#yPassive: At the start of turn, draw 1 card. NL #yEvoke: Put #y%s into your hand and it costs 0 this turn."
     ],
     "NAME": "Doppel"
   },

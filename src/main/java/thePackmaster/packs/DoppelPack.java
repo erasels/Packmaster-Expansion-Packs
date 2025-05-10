@@ -27,7 +27,7 @@ public class DoppelPack extends AbstractCardPack {
     public static final HashMap<String, CardProperty> cachedCardProperties = new HashMap<>();
 
     public DoppelPack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 3, 5, 4, 1, PackSummary.Tags.Orbs));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 3, 5, 4, 1, PackSummary.Tags.Orbs));
 
         if (frameBuffer == null) {
             frameBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, Settings.WIDTH, Settings.HEIGHT, false, false);

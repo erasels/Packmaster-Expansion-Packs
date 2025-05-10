@@ -1,0 +1,57 @@
+{
+  "${ModID}:FlyingSwords": {
+    "NAME": "Flying Swords",
+    "DESCRIPTION": "Deal !D! damage to a random enemy twice.",
+    "EXTENDED_DESCRIPTION": [" NL stslib:Startup: Gain !M! ${ModID}:Windrush."],
+    "FLAVOR": "This is ridiculous!"
+  },
+  "${ModID}:GeoDaRay": {
+    "NAME": "Geo Da Ray",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! ${ModID}:Windrush and ${ModID}:Precision.",
+    "FLAVOR": "Get ready!"
+  },
+  "${ModID}:Overpressure": {
+    "NAME": "Overpressure",
+    "DESCRIPTION": "Gain !M! ${ModID}:Windrush. NL Gain !${ModID}:m2! Frail. ",
+    "EXTENDED_DESCRIPTION": ["${ModID}:First:", " Gain !B! Block.", " NL "],
+    "FLAVOR": "So... you dare to defy me?!"
+  },
+  "${ModID}:TradeWinds": {
+    "NAME": "Trade Winds",
+    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it's Common, heal !M! HP. NL If it's Rare, lose !${ModID}:m2! gold. NL Exhaust.",
+    "FLAVOR": "Sword! Return to your master!"
+  },
+  "${ModID}:TempestOfStrikes": {
+    "NAME": "Tempest of Strikes",
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Bind once for every 2 Attacks in your deck",
+    "EXTENDED_DESCRIPTION": [" (", " times)", ". NL Exhaust."],
+    "FLAVOR": "Sink down with your fear!"
+  },
+  "${ModID}:FallOver": {
+    "NAME": "Fall Over",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !${ModID}:m2! Strength. NL Apply !M! ${ModID}:Bind to ALL enemies. NL Exhaust.",
+    "FLAVOR": "Stay still... and let me slay you!"
+  },
+  "${ModID}:FeedingWinds": {
+    "NAME": "Feeding Winds",
+    "DESCRIPTION": "{@@}Exhaust a card to gain [E] {!${ModID}:m2!|>0=and !${ModID}:m2! ${ModID}:Windrush}.",
+    "EXTENDED_DESCRIPTION": [" NL stslib:Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\""],
+    "FLAVOR": "Let's see just how strong I am!"
+  },
+  "${ModID}:EscalatingBreeze": {
+    "NAME": "Escalating Breeze",
+    "DESCRIPTION": "{@@}Retain up to !M! card{!M!|>1=s} this turn. NL Attacks Retained this way cost !${ModID}:m2! less next turn.",
+    "FLAVOR": "I won't forget!"
+  },
+  "${ModID}:GaleForce": {
+    "NAME": "Gale-Force",
+    "DESCRIPTION": "{@@}Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost{!M!|>0= +!M!}. NL Whenever you play an Attack with a cost of 1 or greater, draw !${ModID}:m2! card.",
+    "FLAVOR": "Hurry up and die!"
+  },
+  "${ModID}:DownwindBlow": {
+    "NAME": "Downwind Blow",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Precision. NL Take 50% less attack damage this turn.",
+    "FLAVOR": "Right here!"
+  }
+}
+  

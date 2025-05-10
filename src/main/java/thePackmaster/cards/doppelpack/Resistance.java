@@ -53,7 +53,6 @@ public class Resistance extends AbstractDoppelCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, block));
-        this.addToBot(new DrawCardAction(1));
         this.addToBot(new WaitAction(0.1f));
         this.addToBot(new AbstractGameAction() {
             @Override

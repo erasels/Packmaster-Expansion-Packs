@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.SpireAnniversary5Mod;
 
 public class StatusDoppel extends AbstractDoppel {
@@ -32,7 +31,7 @@ public class StatusDoppel extends AbstractDoppel {
     }
 
     @Override
-    public AbstractOrb makeCopy() {
+    protected AbstractDoppel makeDoppelCopy() {
         return new StatusDoppel(this.card);
     }
 

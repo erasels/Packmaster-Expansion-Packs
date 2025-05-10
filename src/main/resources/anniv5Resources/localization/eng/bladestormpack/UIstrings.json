@@ -1,0 +1,31 @@
+{
+  "${ModID}:BladeStormPack": {
+    "TEXT": [
+      "Blade Storm",
+      "Benefit from using Attacks with a pirate's enthusiasm, thanks to ${ModID}:Windrush, ${ModID}:Precision, ${ModID}:Bind and more!",
+      "Dj0z"
+    ]
+  },
+  "${ModID}:BladeStormModifiers": {
+    "TEXT": [
+      " NL Gain ",
+      " Strength."
+    ]
+  },
+  "${ModID}:FeedingWindsUiText": {
+    "TEXT": [
+      "exhaust for energy and Windrush."
+    ]
+  },
+  "${ModID}:EscalatingBreezeUiText": {
+    "TEXT": [
+      "retain. The cost of Attacks is reduced next turn."
+    ]
+  },
+  "${ModID}:BladeStormPackHat": {
+    "TEXT": [
+      "It's well worn.",
+      "Pirate Tricorn"
+    ]
+  }
+}

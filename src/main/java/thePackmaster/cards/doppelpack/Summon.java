@@ -12,7 +12,7 @@ public class Summon extends AbstractDoppelCard {
 
     public Summon() {
         super(ID, 1, AbstractCard.CardType.SKILL, CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 1;
         previewDoppel = true;
     }
 

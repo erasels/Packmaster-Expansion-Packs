@@ -2,14 +2,14 @@
   "${ModID}:TurbulencePower": {
     "NAME": "Turbulence",
     "DESCRIPTIONS": [
-      "Whenever you #yChannel a #yDoppel, trigger its passive ability.",
-      "Whenever you #yChannel a #yDoppel, trigger its passive ability #b%d times."
+      "Whenever you #yChannel an Orb, trigger its passive ability.",
+      "Whenever you #yChannel an Orb, trigger its passive ability #b%d times."
     ]
   },
   "${ModID}:WormHolePower": {
     "NAME": "Worm Hole",
     "DESCRIPTIONS": [
-      "Increase damage or #yBlock value of #Doppels by #b%d for each #yStrength or #yDexterity you have."
+      "Increase damage or #yBlock value of #yDoppels by #b%d for each #yStrength or #yDexterity you have."
     ]
   }
 }

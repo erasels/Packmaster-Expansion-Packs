@@ -10,7 +10,7 @@
   },
   "${ModID}:Concatenation": {
     "NAME": "并列",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽1张牌。 NL 使用手中最左侧的 攻击牌 生成 1个 ${ModID}:分身 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 使用手中最左侧的 攻击牌 生成 1个 ${ModID}:分身 。"
   },
   "${ModID}:EmergencyContact": {
     "NAME": "紧急联络",
@@ -30,15 +30,15 @@
   },
   "${ModID}:Resistance": {
     "NAME": "抵抗",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽1张牌。 NL 使用手中最左侧的 技能牌 生成 1个 ${ModID}:分身 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 使用手中最左侧的 技能牌 生成 1个 ${ModID}:分身 。"
   },
   "${ModID}:Tides": {
     "NAME": "浪潮",
-    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 每有一个 ${ModID}:分身 ，再造成 !D! 点伤害。 NL 生成 1个 ${ModID}:分身 。"
+    "DESCRIPTION": "造成 !D! 点伤害 3 次。 NL 你每有一个充能球，伤害+ !M! 。"
   },
   "${ModID}:Turbulence": {
     "NAME": "湍流",
-    "DESCRIPTION": "每当你 生成 ${ModID}:分身 后，使用它的被动能力{@@}{!M!|1=|@= !M! 次}。"
+    "DESCRIPTION": "每当你 生成 充能球后，使用它的被动能力{@@}{!M!|1=|@= !M! 次}。"
   },
   "${ModID}:Vortex": {
     "NAME": "漩涡",

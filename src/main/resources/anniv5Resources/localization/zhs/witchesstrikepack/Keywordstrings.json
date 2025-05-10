@@ -1,24 +1,11 @@
 [
   {
-    "PROPER_NAME": "新月",
+    "PROPER_NAME": "奥术",
     "NAMES": [
-      "Crescent Moon",
-      "crescent moon",
-      "Crescent_Moon",
-      "crescent_moon",
-      "新月"
+      "Arcane",
+      "arcane",
+      "奥术"
     ],
-    "DESCRIPTION": "充能球。被动：随机对一名敌人造成 #b5 点伤害，只能被牌触发该效果。触发 #b4 次后将其 #y激发 。 #y激发 ：随机对一名敌人造成 #b5 点伤害。"
-  },
-  {
-    "PROPER_NAME": "满月",
-    "NAMES": [
-      "Full Moon",
-      "full moon",
-      "Full_Moon",
-      "full_moon",
-      "满月"
-    ],
-    "DESCRIPTION": "充能球。被动：抽一张牌，只能被牌触发该效果。触发 #b4 次后将其 #y激发 。 #y激发 :抽一张牌。"
+    "DESCRIPTION": "充能球。被动：每打出一张 #g技能 牌，对一个随机敌人造成伤害。激发：根据已 #y生成 的 #y奥术 充能球数量造成伤害。"
   }
 ]

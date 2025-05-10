@@ -1,10 +1,17 @@
 package thePackmaster.cards.WitchesStrike;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.purple.CutThroughFate;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.witchesstrikepack.MysticFlourishAction;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
+import thePackmaster.orbs.summonspack.FireSpirit;
+import thePackmaster.powers.shamanpack.IgnitePower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -13,14 +20,36 @@ public class MysticFlourish extends AbstractWitchStrikeCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public MysticFlourish() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        magicNumber = baseMagicNumber = 1;
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        baseDamage = 6;
+        magicNumber = baseMagicNumber = 4;
+    }
+
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        int orbs = 0;
+        for (AbstractOrb o : Wiz.p().orbs) {
+            if (!(o instanceof EmptyOrbSlot)) {
+                orbs++;
+            }
+        }
+        if (orbs >= 3) {
+            glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        addToBot(new MysticFlourishAction(magicNumber));
+        Wiz.atb(new ChannelAction(new FireSpirit()));
+        int orbs = 0;
+        for (AbstractOrb o : p.orbs) {
+            if (!(o instanceof EmptyOrbSlot)) {
+                orbs++;
+            }
+        }
+        if (orbs >= 3) {
+            Wiz.atb(new ApplyPowerAction(m, p, new IgnitePower(m, magicNumber)));
+        }
     }
 
     public void upp() {

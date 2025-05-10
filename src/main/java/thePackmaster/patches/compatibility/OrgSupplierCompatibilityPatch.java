@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.orbs.PackmasterOrb;
+import thePackmaster.orbs.WitchesStrike.Arcane;
 import thePackmaster.packs.DownfallPack;
 import thePackmaster.packs.EntropyPack;
 import thePackmaster.packs.SpheresPack;
@@ -22,8 +23,7 @@ public class OrgSupplierCompatibilityPatch {
             List<Supplier<AbstractOrb>> suppliers;
 
             suppliers = new ArrayList<>();
-            suppliers.add(thePackmaster.orbs.WitchesStrike.CrescentMoon::new);
-            suppliers.add(thePackmaster.orbs.WitchesStrike.FullMoon::new);
+            suppliers.add(Arcane::new);
             __result.put(WitchesStrikePack.ID, suppliers);
 
             suppliers = new ArrayList<>();

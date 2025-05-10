@@ -1,0 +1,11 @@
+[
+  {
+    "PROPER_NAME": "风行",
+    "NAMES": [
+      "windrush",
+      "windrushes",
+      "风行"
+    ],
+    "DESCRIPTION": "每当你受到未被格挡的攻击伤害，每层减少1点伤害。 NL 回合结束时层数减半(向上取整)。"
+  }
+]

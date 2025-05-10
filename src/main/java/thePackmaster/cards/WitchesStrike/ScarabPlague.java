@@ -1,42 +1,36 @@
 package thePackmaster.cards.WitchesStrike;
 
-import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.green.Bane;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.cards.green.Backflip;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.witchesstrikepack.ManifestAction;
-import thePackmaster.cardmodifiers.InfestModifier;
-import thePackmaster.cards.OnInfestCard;
-import thePackmaster.orbs.WitchesStrike.FullMoon;
+import thePackmaster.orbs.WitchesStrike.Arcane;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ScarabPlague extends AbstractWitchStrikeCard implements OnInfestCard {
+public class ScarabPlague extends AbstractWitchStrikeCard {
     public final static String ID = makeID("ScarabPlague");
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public ScarabPlague() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseBlock = 7;
-        CardModifierManager.addModifier(this, new InfestModifier());
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 3;
+        cardsToPreview = new Bullet();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        blck();
+        addToBot(new ChannelAction(new Arcane()));
+        Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(), magicNumber));
     }
-    @Override
-    public void onInfest(int infestCounter) {
-        addToBot(new ManifestAction(new FullMoon()));
-    }
+
     public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
+
     @Override
     public String cardArtCopy() {
-        return Bane.ID;
+        return Backflip.ID;
     }
 }

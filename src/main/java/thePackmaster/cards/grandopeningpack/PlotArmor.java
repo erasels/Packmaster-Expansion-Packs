@@ -34,13 +34,26 @@ public class PlotArmor extends AbstractGrandOpeningCard {
 
     @Override
     public void applyPowers() {
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 0) {
+        super.applyPowers();
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty()) {
             int innateCount = 0;
             for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
                 if (c.isInnate || c instanceof StartupCard)
                     innateCount++;
             }
-            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[3] + (innateCount * magicNumber) + cardStrings.EXTENDED_DESCRIPTION[4] + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[1] + cardStrings.EXTENDED_DESCRIPTION[2];
+            int originalBaseBlock = this.baseBlock;
+            int originalBlock = this.block;
+            boolean originalIsBlockModified = this.isBlockModified;
+
+            this.baseBlock = innateCount * magicNumber;
+            super.applyPowers();
+            int extraBlock = this.block;
+
+            this.baseBlock = originalBaseBlock;
+            this.block = originalBlock;
+            this.isBlockModified = originalIsBlockModified;
+
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[3] + extraBlock + cardStrings.EXTENDED_DESCRIPTION[4] + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[1] + cardStrings.EXTENDED_DESCRIPTION[2];
         } else {
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[1] + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2]);
         }
@@ -55,7 +68,19 @@ public class PlotArmor extends AbstractGrandOpeningCard {
                     innateCount++;
             }
         }
-        atb(new GainBlockAction(p, block+magicNumber*innateCount));
+        int originalBaseBlock = this.baseBlock;
+        int originalBlock = this.block;
+        boolean originalIsBlockModified = this.isBlockModified;
+
+        this.baseBlock = innateCount * magicNumber;
+        super.applyPowers();
+        int extraBlock = this.block;
+
+        this.baseBlock = originalBaseBlock;
+        this.block = originalBlock;
+        this.isBlockModified = originalIsBlockModified;
+
+        atb(new GainBlockAction(p, block + extraBlock));
     }
 
     @Override

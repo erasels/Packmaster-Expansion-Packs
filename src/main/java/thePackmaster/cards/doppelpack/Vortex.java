@@ -25,7 +25,7 @@ public class Vortex extends AbstractDoppelCard {
 
     public Vortex() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 8;
     }
 
     @Override
