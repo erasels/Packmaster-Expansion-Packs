@@ -5,9 +5,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import thePackmaster.cardmodifiers.insectglaivepack.doppelpack.ExtractedEssenceRed;
-import thePackmaster.cardmodifiers.insectglaivepack.doppelpack.ExtractedEssenceWhite;
-import thePackmaster.cardmodifiers.insectglaivepack.doppelpack.ExtractedEssenceYellow;
+import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceRed;
+import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceWhite;
+import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceYellow;
 import thePackmaster.cards.insectglaivepack.AbstractInsectGlaiveCard;
 import thePackmaster.packs.InsectGlaivePack;
 

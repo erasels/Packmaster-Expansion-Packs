@@ -1,4 +1,4 @@
-package thePackmaster.cardmodifiers.insectglaivepack.doppelpack;
+package thePackmaster.cardmodifiers.insectglaivepack;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.TooltipInfo;
@@ -14,20 +14,19 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.InsectGlaivePack;
-import thePackmaster.powers.insectglaivepack.ExtractedEssenceYellowPower;
+import thePackmaster.powers.insectglaivepack.ExtractedEssenceWhitePower;
 import thePackmaster.util.TexLoader;
 
 import java.util.Collections;
 import java.util.List;
 
 
-public class ExtractedEssenceYellow extends AbstractCardModifier {
+public class ExtractedEssenceWhite extends AbstractCardModifier {
     public static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("InsectGlaiveEssenceNameAndDescription"));
 
-    public static String ID = SpireAnniversary5Mod.makeID("ExtractedEssenceYellow");
+    public static String ID = SpireAnniversary5Mod.makeID("ExtractedEssenceWhite");
 
-    private static Texture texture = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/insectglaivepack/yellow.png");
-    ;
+    private static Texture texture = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/insectglaivepack/white.png");;
 
 
     @Override
@@ -44,16 +43,16 @@ public class ExtractedEssenceYellow extends AbstractCardModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ExtractedEssenceYellowPower(AbstractDungeon.player)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ExtractedEssenceWhitePower(AbstractDungeon.player)));
     }
 
     @Override
     public List<TooltipInfo> additionalTooltips(AbstractCard card) {
-        return Collections.singletonList(new TooltipInfo(UI_STRINGS.TEXT[2], UI_STRINGS.TEXT[5]));
+        return Collections.singletonList(new TooltipInfo(UI_STRINGS.TEXT[1], UI_STRINGS.TEXT[4]));
     }
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new ExtractedEssenceYellow();
+        return new ExtractedEssenceWhite();
     }
 }

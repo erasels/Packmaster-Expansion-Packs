@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cardmodifiers.insectglaivepack.doppelpack.ExtractedEssenceRed;
-import thePackmaster.cardmodifiers.insectglaivepack.doppelpack.ExtractedEssenceWhite;
-import thePackmaster.cardmodifiers.insectglaivepack.doppelpack.ExtractedEssenceYellow;
+import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceRed;
+import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceWhite;
+import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceYellow;
 import thePackmaster.packs.InsectGlaivePack;
 
 import java.util.ArrayList;
