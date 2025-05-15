@@ -30,9 +30,10 @@ public class MountingPower extends AbstractPackmasterPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (InsectGlaivePack.isHover(2)) {
+        if (card.type == AbstractCard.CardType.ATTACK && InsectGlaivePack.isHover(2)) {
             this.amount++;
-            if (this.amount > 10) {
+            this.flash();
+            if (this.amount >= 10) {
                 for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                     if (!m.isDeadOrEscaped()) {
                         addToBot(new LoseHPAction(m, this.owner, (int) (m.currentHealth * 0.5F)));

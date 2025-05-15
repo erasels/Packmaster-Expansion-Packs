@@ -1,16 +1,11 @@
 {
-  "${ModID}:ALSJAKSLA": {
-    "NAME": "wwwwwww",
-    "DESCRIPTION": "wwwwwwww",
-    "UPGRADE_DESCRIPTION": "www"
-  },
   "${ModID}:InsectGlaiveTemp": {
     "NAME": "测试",
     "DESCRIPTION": "防 !B! 。 NL ${ModID}:虫虫的棍 。"
   },
   "${ModID}:RisingSlashCombo": {
     "NAME": "连续上捞斩",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 你打出的下一张 *攻击牌 耗能变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
   },
   "${ModID}:OverheadSmash": {
     "NAME": "飞圆斩",
@@ -28,7 +23,7 @@
   },
   "${ModID}:Vault": {
     "NAME": "起跳",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "下回合开始时，抽 !M! 张牌。"
   },
   "${ModID}:LeapingSlash": {
     "NAME": "飞身跃入斩",
@@ -60,6 +55,6 @@
   },
   "${ModID}:Mounting": {
     "NAME": "骑乘",
-    "DESCRIPTION": "在空中攻击时获得一层骑乘值，骑乘值到达10时，玩家失去这个能力，所有敌人失去50%%的当前生命。"
+    "DESCRIPTION": "在 空中 攻击时获得一层 *骑乘值 。 NL 当 *骑乘值 到达10时，玩家失去这个能力，所有敌人失去50%的当前生命。"
   }
 }

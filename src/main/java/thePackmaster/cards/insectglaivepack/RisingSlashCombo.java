@@ -13,7 +13,7 @@ public class RisingSlashCombo extends AbstractInsectGlaiveCard {
     public static final String ID = SpireAnniversary5Mod.makeID(RisingSlashCombo.class.getSimpleName());
 
     public RisingSlashCombo() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 4;
     }
@@ -23,7 +23,6 @@ public class RisingSlashCombo extends AbstractInsectGlaiveCard {
         for (int i = 0; i < this.magicNumber; i++) {
             addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
-        addToBot(new ApplyPowerAction(p, p, new FreeAttackPower(p, 1)));
     }
 
     @Override

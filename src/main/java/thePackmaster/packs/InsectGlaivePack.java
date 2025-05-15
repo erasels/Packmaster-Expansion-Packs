@@ -4,11 +4,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.math.Vector2;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
@@ -16,7 +16,9 @@ import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.insectglaivepack.*;
 import thePackmaster.patches.insectglaivepack.DrawAnalyzer;
-import thePackmaster.powers.insectglaivepack.ExtractedEssenceWhite;
+import thePackmaster.powers.insectglaivepack.ExtractedEssenceRedPower;
+import thePackmaster.powers.insectglaivepack.ExtractedEssenceWhitePower;
+import thePackmaster.powers.insectglaivepack.ExtractedEssenceYellowPower;
 
 import java.util.ArrayList;
 
@@ -102,5 +104,22 @@ public class InsectGlaivePack extends AbstractCardPack {
         float newY = vec.x * sin + vec.y * cos;
         vec.x = newX;
         vec.y = newY;
+    }
+
+    //移动位置
+    public static void movePowerPosition(AbstractPower p) {
+        int index = -1;
+        for (int i = 0; i < AbstractDungeon.player.powers.size(); i++) {
+            AbstractPower po = AbstractDungeon.player.powers.get(i);
+            if ((po instanceof ExtractedEssenceRedPower || po instanceof ExtractedEssenceWhitePower || po instanceof ExtractedEssenceYellowPower) &&
+                    po != p) {
+                index = i;
+            }
+        }
+
+        if (index >= 0) {
+            AbstractDungeon.player.powers.remove(p);
+            AbstractDungeon.player.powers.add(index+1, p);
+        }
     }
 }

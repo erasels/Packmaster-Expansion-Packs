@@ -2,22 +2,17 @@ package thePackmaster.cards.insectglaivepack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.powers.insectglaivepack.ExtractedEssenceRed;
-import thePackmaster.powers.insectglaivepack.ExtractedEssenceWhite;
-import thePackmaster.powers.insectglaivepack.ExtractedEssenceYellow;
+import thePackmaster.powers.insectglaivepack.ExtractedEssenceRedPower;
+import thePackmaster.powers.insectglaivepack.ExtractedEssenceWhitePower;
+import thePackmaster.powers.insectglaivepack.ExtractedEssenceYellowPower;
 
 public class RisingSpiralSlash extends AbstractInsectGlaiveCard {
     public static final String ID = SpireAnniversary5Mod.makeID(RisingSpiralSlash.class.getSimpleName());
@@ -31,9 +26,9 @@ public class RisingSpiralSlash extends AbstractInsectGlaiveCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return super.canUse(p, m) && p.hasPower(ExtractedEssenceWhite.ID)
-                && p.hasPower(ExtractedEssenceYellow.ID)
-                && p.hasPower(ExtractedEssenceRed.ID);
+        return super.canUse(p, m) && p.hasPower(ExtractedEssenceWhitePower.ID)
+                && p.hasPower(ExtractedEssenceYellowPower.ID)
+                && p.hasPower(ExtractedEssenceRedPower.ID);
     }
 
     @Override
@@ -44,9 +39,9 @@ public class RisingSpiralSlash extends AbstractInsectGlaiveCard {
             addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
             addToBot(new DrawCardAction(1));
         }
-        addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceWhite.ID));
-        addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceYellow.ID));
-        addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceRed.ID));
+        addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceWhitePower.ID));
+        addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceYellowPower.ID));
+        addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceRedPower.ID));
     }
 
     @Override

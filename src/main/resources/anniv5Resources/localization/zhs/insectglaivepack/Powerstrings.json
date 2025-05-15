@@ -1,24 +1,17 @@
 {
-  "${ModID}:TurbulencePower": {
-    "NAME": "湍流",
-    "DESCRIPTIONS": [
-      "#y生成 充能球后，使用它的被动能力。",
-      "#y生成 充能球后，使用它的被动能力 #b%d 次。"
-    ]
-  },
-  "${ModID}:ExtractedEssenceYellow": {
+  "${ModID}:ExtractedEssenceYellowPower": {
     "NAME": "黄灯",
     "DESCRIPTIONS": [
       "本回合，你从卡牌中获得的格挡增加 #b2 点。"
     ]
   },
-  "${ModID}:ExtractedEssenceRed": {
+  "${ModID}:ExtractedEssenceRedPower": {
     "NAME": "红灯",
     "DESCRIPTIONS": [
       "本回合，你攻击造成的伤害增加 #b2 点。"
     ]
   },
-  "${ModID}:ExtractedEssenceWhite": {
+  "${ModID}:ExtractedEssenceWhitePower": {
     "NAME": "白灯",
     "DESCRIPTIONS": [
       "本回合， 打出 #y虫棍牌 时抽1张牌。"

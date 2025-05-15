@@ -104,7 +104,7 @@ public class DrawAnalyzer {
             }
 
             analyzedMethods.add(calledClassName + "." + calledMethodName);
-            InsectGlaivePack.logger.info("Analyzing " + calledClassName + "." + calledMethodName);
+//            InsectGlaivePack.logger.info("Analyzing " + calledClassName + "." + calledMethodName);
 
             if (analyzeMethodFromMethod(calledClassName, calledMethodName, depth + 1)) {
                 return true;
@@ -117,7 +117,7 @@ public class DrawAnalyzer {
             }
 
             analyzedClasses.add(className);
-            InsectGlaivePack.logger.info("Analyzing " + className);
+//            InsectGlaivePack.logger.info("Analyzing " + className);
 
             try {
                 ClassPool cp = Loader.getClassPool();

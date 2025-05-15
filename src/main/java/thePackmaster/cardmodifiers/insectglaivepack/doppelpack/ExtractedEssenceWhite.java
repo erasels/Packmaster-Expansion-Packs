@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.InsectGlaivePack;
+import thePackmaster.powers.insectglaivepack.ExtractedEssenceWhitePower;
 import thePackmaster.util.TexLoader;
 
 import java.util.Collections;
@@ -37,17 +38,17 @@ public class ExtractedEssenceWhite extends AbstractCardModifier {
     public void onRender(AbstractCard card, SpriteBatch sb) {
         InsectGlaivePack.renderRotateTexture(sb, texture, card.current_x, card.current_y,
                 -AbstractCard.IMG_WIDTH_S * 0.6F * Settings.scale * card.drawScale, AbstractCard.IMG_HEIGHT_S * 0.25F * Settings.scale * card.drawScale,
-                card.drawScale * 0.5F, card.angle);
+                card.drawScale, card.angle);
     }
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new thePackmaster.powers.insectglaivepack.ExtractedEssenceWhite(AbstractDungeon.player)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ExtractedEssenceWhitePower(AbstractDungeon.player)));
     }
 
     @Override
     public List<TooltipInfo> additionalTooltips(AbstractCard card) {
-        return Collections.singletonList(new TooltipInfo(UI_STRINGS.TEXT[1], UI_STRINGS.TEXT[3]));
+        return Collections.singletonList(new TooltipInfo(UI_STRINGS.TEXT[1], UI_STRINGS.TEXT[4]));
     }
 
     @Override

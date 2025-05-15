@@ -14,7 +14,7 @@ public class DescendingSlash extends AbstractInsectGlaiveCard {
     public static final String ID = SpireAnniversary5Mod.makeID(DescendingSlash.class.getSimpleName());
 
     public DescendingSlash() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 8;
         this.magicNumber = this.baseMagicNumber = 3;
     }

@@ -14,7 +14,7 @@ public class Evade extends AbstractInsectGlaiveCard {
     public static final String ID = SpireAnniversary5Mod.makeID(Evade.class.getSimpleName());
 
     public Evade() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         this.block = this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 3;
     }
