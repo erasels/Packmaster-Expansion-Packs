@@ -19,29 +19,45 @@ public class DescendingSlash extends AbstractInsectGlaiveCard {
         this.magicNumber = this.baseMagicNumber = 3;
     }
 
+    private void changeName(String name) {
+        this.name = name;
+        if (upgraded) {
+            this.name = this.name + "+";
+            this.initializeTitle();
+        }
+    }
+
     @Override
     public void applyPowers() {
         if (InsectGlaivePack.isHover(1)) {
-            this.name = this.cardStrings.EXTENDED_DESCRIPTION[0];
-            upgradeName();
-            //改卡图
-
-            this.baseDamage += DrawCountAndHarvestExtractPatch.drawCount * this.baseMagicNumber;
-            super.applyPowers();
-            this.baseDamage -= DrawCountAndHarvestExtractPatch.drawCount * this.baseMagicNumber;
+            changeName(cardStrings.EXTENDED_DESCRIPTION[0]);
         } else {
-            this.name = this.cardStrings.EXTENDED_DESCRIPTION[0];
-            upgradeName();
-
-            super.applyPowers();
+            changeName(cardStrings.NAME);
         }
 
+        super.applyPowers();
+
         if (DrawCountAndHarvestExtractPatch.drawCount > 0) {
-            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = cardStrings.DESCRIPTION
+                    + cardStrings.EXTENDED_DESCRIPTION[1]
+                    + DrawCountAndHarvestExtractPatch.drawCount
+                    + cardStrings.EXTENDED_DESCRIPTION[2];
         } else {
             this.rawDescription = cardStrings.DESCRIPTION;
         }
         initializeDescription();
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        if (DrawCountAndHarvestExtractPatch.drawCount > 0 && InsectGlaivePack.isHover(1)) {
+            this.baseDamage += DrawCountAndHarvestExtractPatch.drawCount * this.baseMagicNumber;
+            super.calculateCardDamage(mo);
+            this.baseDamage -= DrawCountAndHarvestExtractPatch.drawCount * this.baseMagicNumber;
+            this.isDamageModified = (this.damage != this.baseDamage);
+        } else {
+            super.calculateCardDamage(mo);
+        }
     }
 
     @Override
@@ -53,6 +69,15 @@ public class DescendingSlash extends AbstractInsectGlaiveCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (DrawCountAndHarvestExtractPatch.drawCount > 0 && InsectGlaivePack.isHover(2)) {
+            this.baseDamage += DrawCountAndHarvestExtractPatch.drawCount * this.baseMagicNumber;
+            super.calculateCardDamage(m);
+            this.baseDamage -= DrawCountAndHarvestExtractPatch.drawCount * this.baseMagicNumber;
+            this.isDamageModified = (this.damage != this.baseDamage);
+        } else {
+            super.calculateCardDamage(m);
+        }
+
         AbstractGameAction.AttackEffect effect = AbstractGameAction.AttackEffect.SLASH_DIAGONAL;
         if (this.damage > 15)
             effect = AbstractGameAction.AttackEffect.SLASH_HEAVY;

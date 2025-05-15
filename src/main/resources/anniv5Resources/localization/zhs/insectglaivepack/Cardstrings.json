@@ -42,7 +42,8 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:空中 ：回合开始抽牌外，每抽过一张牌，这张牌伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "急袭突刺",
-      "（抽过 !M! 张）"
+      "（抽过 ",
+      " 张）"
     ]
   },
   "${ModID}:RisingSpiralSlash": {

@@ -1,11 +1,61 @@
 {
-  "${ModID}:ALSJAKSLA": {
-    "NAME": "wwwwwww",
-    "DESCRIPTION": "wwwwwwww",
-    "UPGRADE_DESCRIPTION": "www"
-  },
   "${ModID}:InsectGlaiveTemp": {
     "NAME": "测试",
-    "DESCRIPTION": "防 !B! 。 NL 虫虫的棍 。"
+    "DESCRIPTION": "防 !B! 。 NL ${ModID}:虫虫的棍 。"
+  },
+  "${ModID}:RisingSlashCombo": {
+    "NAME": "Rising Slash Combo",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
+  "${ModID}:OverheadSmash": {
+    "NAME": "Overhead Smash",
+    "DESCRIPTION": "Can only be played if last card played was an *Attack. NL Deal !D! damage !M! times."
+  },
+  "${ModID}:DodgeSlash": {
+    "NAME": "Dodge Slash",
+    "DESCRIPTION": "Gain !B! Block. NL If your current Block exceeds enemy's intended damage, gain [E].",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If your current Block exceeds enemy's intended damage, gain [E] [E]."
+  },
+  "${ModID}:KinsectHarvestExtract": {
+    "NAME": "Kinsect Harvest Extract",
+    "DESCRIPTION": "Gain 1 random Extract you don't have. NL At start of turn, return to hand from Exhaust pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. NL Gain 1 random Extract you don't have. NL At start of turn, return to hand from Exhaust pile. NL Exhaust."
+  },
+  "${ModID}:Vault": {
+    "NAME": "Vault",
+    "DESCRIPTION": "At the start of next turn, draw !M! cards."
+  },
+  "${ModID}:LeapingSlash": {
+    "NAME": "Leaping Slash",
+    "DESCRIPTION": "Innate. NL Deal !D! damage."
+  },
+  "${ModID}:JumpingAdvancingSlash": {
+    "NAME": "Jumping Advancing Slash",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL ${ModID}:Aerial: Add a *Dance to your hand."
+  },
+  "${ModID}:VaultingDance": {
+    "NAME": "Vaulting Dance",
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust."
+  },
+  "${ModID}:DescendingSlash": {
+    "NAME": "Descending Slash",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Aerial: For each card drawn this turn beyond starting hand, increase damage by !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "Swift Assault Thrust",
+      "(Drawn ",
+      " cards)"
+    ]
+  },
+  "${ModID}:RisingSpiralSlash": {
+    "NAME": "Rising Spiral Slash",
+    "DESCRIPTION": "Can only be played with 3 different Extracts. NL Deal !D! damage to ALL enemies !M! times. NL Draw !M! cards. NL Lose all Extracts."
+  },
+  "${ModID}:Evade": {
+    "NAME": "Evade",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Aerial: Draw !M! cards."
+  },
+  "${ModID}:Mounting": {
+    "NAME": "Mounting",
+    "DESCRIPTION": "When attacking while Aerial, gain 1 *Mount. NL When *Mount reaches 10, lose this power and ALL enemies lose 50% of current HP."
   }
 }

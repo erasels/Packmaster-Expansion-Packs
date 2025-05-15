@@ -14,7 +14,7 @@
   "${ModID}:ExtractedEssenceWhitePower": {
     "NAME": "白灯",
     "DESCRIPTIONS": [
-      "本回合， 打出 #y虫棍牌 时抽1张牌。"
+      "本回合， 打出 #y虫棍牌 时抽 #b1 张牌。"
     ]
   },
   "${ModID}:MountingPower": {

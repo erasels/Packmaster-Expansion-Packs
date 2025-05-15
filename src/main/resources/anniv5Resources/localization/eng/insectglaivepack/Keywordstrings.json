@@ -1,9 +1,9 @@
 [
   {
-    "PROPER_NAME": "虫虫的棍",
+    "PROPER_NAME": "Aerial",
     "NAMES": [
-      "虫虫的棍"
+      "aerial"
     ],
-    "DESCRIPTION": "用于测试的关键字"
+    "DESCRIPTION": "If the last card you played contained a card draw effect, you are considered Aerial."
   }
 ]

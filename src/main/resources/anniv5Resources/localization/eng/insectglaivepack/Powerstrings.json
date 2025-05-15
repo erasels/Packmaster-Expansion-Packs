@@ -1,15 +1,27 @@
 {
-  "${ModID}:TurbulencePower": {
-    "NAME": "湍流",
+  "${ModID}:ExtractedEssenceYellowPower": {
+    "NAME": "Yellow Extract",
     "DESCRIPTIONS": [
-      "#y生成 充能球后，使用它的被动能力。",
-      "#y生成 充能球后，使用它的被动能力 #b%d 次。"
+      "This turn, gain #b2 additional Block from cards."
     ]
   },
-  "${ModID}:WormHolePower": {
-    "NAME": "虫洞",
+  "${ModID}:ExtractedEssenceRedPower": {
+    "NAME": "Red Extract",
     "DESCRIPTIONS": [
-      "每点 #y力量 和 #y敏捷 分别增加 #y分身 #b%d 点攻击和 #y格挡 数值。"
+      "This turn, deal #b2 additional damage with attacks."
+    ]
+  },
+  "${ModID}:ExtractedEssenceWhitePower": {
+    "NAME": "White Extract",
+    "DESCRIPTIONS": [
+      "This turn, draw #b1 card when playing #yInsect #yGlaive cards."
+    ]
+  },
+  "${ModID}:MountingPower": {
+    "NAME": "Mount",
+    "DESCRIPTIONS": [
+      "When playing Attack cards while #yAerial, gain #b1 stack. When reaching #b",
+      " stacks, lose this power and ALL enemies lose half their current #yHP."
     ]
   }
 }

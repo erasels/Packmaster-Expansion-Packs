@@ -17,7 +17,7 @@ public class DodgeSlash extends AbstractInsectGlaiveCard {
 
     public DodgeSlash() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.block = this.baseBlock = 8;
+        this.block = this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

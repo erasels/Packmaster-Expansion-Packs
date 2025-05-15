@@ -1,15 +1,19 @@
 {
   "${ModID}:InsectGlaive": {
     "TEXT": [
-      "虫棍",
-      "一跃登天纵横四方",
+      "Insect Glaive",
+      "Soar through the skies, dominate all directions! NL Card Draw and Utilization",
       "332"
     ]
   },
-  "${ModID}:InsectGlaiveHat": {
+  "${ModID}:InsectGlaiveEssenceNameAndDescription": {
     "TEXT": [
-      "来自神奇的可以穿越时空的女孩。",
-      "时光之帽"
+      "Red Extract",
+      "White Extract",
+      "Yellow Extract",
+      "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type. NL #rRed Extract: Boosts offense.",
+      "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type. NL White Extract: Enhances card draw.",
+      "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type. NL #yYellow Extract: Improves defense."
     ]
   }
 }

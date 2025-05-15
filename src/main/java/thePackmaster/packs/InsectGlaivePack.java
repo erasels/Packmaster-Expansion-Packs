@@ -34,7 +34,7 @@ public class InsectGlaivePack extends AbstractCardPack {
 
 
     public InsectGlaivePack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 3, 5, 4, 1, PackSummary.Tags.Orbs));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 3, 3, 3));
     }
 
     @Override

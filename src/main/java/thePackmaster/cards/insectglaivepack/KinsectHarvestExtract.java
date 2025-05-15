@@ -2,10 +2,7 @@ package thePackmaster.cards.insectglaivepack;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -41,9 +38,9 @@ public class KinsectHarvestExtract extends AbstractInsectGlaiveCard {
         list.add(new ExtractedEssenceYellow());
 
         list = list.stream().filter(e -> !(CardModifierManager.hasModifier(this, e.identifier(this))
-                || AbstractDungeon.player.hasPower(e.identifier(this)))).collect(Collectors.toList());
+                || AbstractDungeon.player.hasPower(e.identifier(this)+"Power"))).collect(Collectors.toList());
 
-        InsectGlaivePack.logger.info("====" + list + "====");
+//        InsectGlaivePack.logger.info("====" + list + "====");
 
         if (!list.isEmpty())
             list.get(cardRandomRng.random(list.size() - 1)).onUse(null, null, null);

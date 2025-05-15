@@ -30,7 +30,7 @@ public class JumpingAdvancingSlash extends AbstractInsectGlaiveCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DrawCardAction(p, this.magicNumber));
-        if (InsectGlaivePack.isHover(2)) addToBot(new MakeTempCardInHandAction(new InsectGlaiveTemp()));
+        if (InsectGlaivePack.isHover(2)) addToBot(new MakeTempCardInHandAction(new VaultingDance()));
     }
 
     @Override
