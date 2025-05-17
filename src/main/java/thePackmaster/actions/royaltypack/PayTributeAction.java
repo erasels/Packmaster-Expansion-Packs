@@ -11,11 +11,16 @@ import thePackmaster.vfx.royaltypack.LoseGoldTextEffect;
 public class PayTributeAction extends AbstractGameAction {
 
     private int amountToPay;
+    private AbstractGameAction actionToUseIfPaid;
+    private AbstractGameAction[] actionsToUseAfterPaidOne;
 
-    public PayTributeAction(int amountToPay) {
+    public PayTributeAction(int amountToPay, AbstractGameAction actionToUseIfPaid,
+                            AbstractGameAction[] actionsToUseAfterPaidOne) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.SPECIAL;
         this.amountToPay = amountToPay;
+        this.actionToUseIfPaid = actionToUseIfPaid;
+        this.actionsToUseAfterPaidOne = actionsToUseAfterPaidOne;
     }
 
     @Override
@@ -25,16 +30,13 @@ public class PayTributeAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new LoseGoldTextEffect(-amountToPay));
             CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
             AbstractDungeon.player.loseGold(amountToPay);
+            Wiz.att(actionToUseIfPaid);
         }
         else {
-            int trueGoldAmountToLose = currentPlayerGold;
-            AbstractDungeon.effectList.add(new LoseGoldTextEffect(-trueGoldAmountToLose));
-            AbstractDungeon.player.loseGold(trueGoldAmountToLose);
-            CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
-            int HPToLose = amountToPay - trueGoldAmountToLose;
-            if (HPToLose > 0){
-                Wiz.atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, HPToLose));
-            }
+            //add code for not enough gold balloon
+        }
+        for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--){
+            Wiz.att(actionsToUseAfterPaidOne[i]);
         }
 
         this.isDone = true;

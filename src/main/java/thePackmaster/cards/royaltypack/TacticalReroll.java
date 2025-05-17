@@ -1,5 +1,6 @@
 package thePackmaster.cards.royaltypack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -27,7 +28,10 @@ public class TacticalReroll extends AbstractRoyaltyCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        Wiz.atb(new PayTributeAction(GOLD_COST));
-        this.addToBot(new BetterDiscardPileToHandAction(magicNumber));
+        AbstractGameAction[] actionArrayAfterPay = new AbstractGameAction[0];
+
+        Wiz.atb(new PayTributeAction(GOLD_COST,
+                                    new BetterDiscardPileToHandAction(magicNumber),
+                                    actionArrayAfterPay));
     }
 }
