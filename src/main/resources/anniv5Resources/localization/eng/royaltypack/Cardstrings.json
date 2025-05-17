@@ -27,8 +27,8 @@
   },
   "${ModID}:RoyalSupplyLines": {
     "NAME": "Royal Supply Lines",
-    "DESCRIPTION": "At the start of your turn, draw 2 additional cards. NL At the end of your turn, Retain up to 2 cards.",
-    "UPGRADE_DESCRIPTION": "Innate. At the start of your turn, draw 2 additional cards. NL At the end of your turn, Retain up to 2 cards."
+    "DESCRIPTION": "When your turn starts, NL draw 2 cards. At the end of your turn, Retain up to 2 cards.",
+    "UPGRADE_DESCRIPTION": "Innate. NL When your turn starts, draw 2 cards. At the end of your turn, Retain up to 2 cards."
   },
   "${ModID}:AlchemyTime": {
     "NAME": "Alchemy Time",
