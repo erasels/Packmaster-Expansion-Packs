@@ -1,0 +1,27 @@
+{
+  "${ModID}:ExtractedEssenceYellowPower": {
+    "NAME": "Yellow Extract",
+    "DESCRIPTIONS": [
+      "This turn, gain #b2 additional Block from cards."
+    ]
+  },
+  "${ModID}:ExtractedEssenceRedPower": {
+    "NAME": "Red Extract",
+    "DESCRIPTIONS": [
+      "This turn, deal #b2 additional damage with attacks."
+    ]
+  },
+  "${ModID}:ExtractedEssenceWhitePower": {
+    "NAME": "White Extract",
+    "DESCRIPTIONS": [
+      "This turn, draw #b1 card when playing #yInsect #yGlaive cards."
+    ]
+  },
+  "${ModID}:MountingPower": {
+    "NAME": "Mount",
+    "DESCRIPTIONS": [
+      "When playing Attack cards while #yAerial, gain #b1 stack. When reaching #b",
+      " stacks, lose this power and ALL enemies lose half their current #yHP."
+    ]
+  }
+}
