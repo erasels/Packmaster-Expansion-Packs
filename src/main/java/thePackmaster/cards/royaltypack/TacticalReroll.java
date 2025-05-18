@@ -32,6 +32,7 @@ public class TacticalReroll extends AbstractRoyaltyCard {
 
         Wiz.atb(new PayTributeAction(GOLD_COST,
                                     new BetterDiscardPileToHandAction(magicNumber),
-                                    actionArrayAfterPay));
+                                    actionArrayAfterPay,
+                                    cardStrings.EXTENDED_DESCRIPTION[0]));
     }
 }

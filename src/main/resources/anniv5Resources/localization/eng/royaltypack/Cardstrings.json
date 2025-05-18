@@ -32,11 +32,13 @@
   },
   "${ModID}:AlchemyTime": {
     "NAME": "Alchemy Time",
-    "DESCRIPTION": "Pay 25 Gold to gain a Potion. NL When you use a Potion, draw !M! cards. NL ${ModID}:Pickup: gain a Potion Slot and 75 Gold."
+    "DESCRIPTION": "Pay 25 Gold to gain a Potion. NL When you use a Potion, draw !M! cards. NL ${ModID}:Pickup: gain a Potion Slot and 75 Gold.",
+    "EXTENDED_DESCRIPTION": ["Wished I had more Gold for potion ingredients!"]
   },
   "${ModID}:TacticalReroll": {
     "NAME": "Tactical Reroll",
-    "DESCRIPTION": "Pay 10 Gold to put !M! cards from your discard pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Pay 10 Gold to put !M! cards from your discard pile into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Tch... not enough Gold for a reroll."]
   },
   "${ModID}:ForTheHistoryBooks": {
     "NAME": "For The History Books",

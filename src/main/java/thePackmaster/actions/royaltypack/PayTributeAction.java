@@ -15,13 +15,17 @@ public class PayTributeAction extends AbstractGameAction {
     private AbstractGameAction actionToUseIfPaid;
     private AbstractGameAction[] actionsToUseAfterPaidOne;
 
+    private String talkMessage;
+
     public PayTributeAction(int amountToPay, AbstractGameAction actionToUseIfPaid,
-                            AbstractGameAction[] actionsToUseAfterPaidOne) {
+                            AbstractGameAction[] actionsToUseAfterPaidOne,
+                            String talkMessage) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.SPECIAL;
         this.amountToPay = amountToPay;
         this.actionToUseIfPaid = actionToUseIfPaid;
         this.actionsToUseAfterPaidOne = actionsToUseAfterPaidOne;
+        this.talkMessage = talkMessage;
     }
 
     @Override
@@ -32,16 +36,20 @@ public class PayTributeAction extends AbstractGameAction {
             CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
             AbstractDungeon.player.loseGold(amountToPay);
             Wiz.att(actionToUseIfPaid);
-        }
-        else {
+
+            for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--){
+                Wiz.att(actionsToUseAfterPaidOne[i]);
+            }
+        } else {
+            for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--){
+                Wiz.att(actionsToUseAfterPaidOne[i]);
+            }
+
             AbstractDungeon.actionManager.addToBottom(
                     new TalkAction(
-                            AbstractDungeon.player,
-                            "Tch... not enough Gold.",
+                            true,
+                            talkMessage,
                             1.0F, 2.0F));
-        }
-        for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--){
-            Wiz.att(actionsToUseAfterPaidOne[i]);
         }
 
         this.isDone = true;

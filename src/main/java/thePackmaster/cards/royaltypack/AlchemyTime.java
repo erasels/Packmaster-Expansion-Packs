@@ -43,7 +43,8 @@ public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
 
         Wiz.atb(new PayTributeAction(GOLD_COST,
                         new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)),
-                        actionArrayAfterPay));
+                        actionArrayAfterPay,
+                        cardStrings.EXTENDED_DESCRIPTION[0]));
     }
 
     @Override
