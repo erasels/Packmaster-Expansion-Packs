@@ -1,6 +1,7 @@
 package thePackmaster.actions.royaltypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -33,7 +34,11 @@ public class PayTributeAction extends AbstractGameAction {
             Wiz.att(actionToUseIfPaid);
         }
         else {
-            //add code for not enough gold balloon
+            AbstractDungeon.actionManager.addToBottom(
+                    new TalkAction(
+                            AbstractDungeon.player,
+                            "Tch... not enough Gold.",
+                            1.0F, 2.0F));
         }
         for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--){
             Wiz.att(actionsToUseAfterPaidOne[i]);
