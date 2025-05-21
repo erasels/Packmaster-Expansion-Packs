@@ -9,8 +9,8 @@
   "${ModID}:FlowoftheSwordPower": {
     "NAME": "Flow of the Sword",
     "DESCRIPTIONS": [
-      "Draw 1 card the first time you play a #gSkill each turn.",
-      "Draw 1 card the first #b",
+      "Draw #b1 card the first time you play a #gSkill each turn.",
+      "Draw #b1 card the first #b",
       " times you play a #gSkill each turn."
     ]
   },
