@@ -39,7 +39,8 @@
   },
   "${ModID}:DescendingSlash": {
     "NAME": "Descending Slash",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Aerial: For each card drawn this turn beyond starting hand, increase damage by !M!.",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Aerial: Gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Aerial: Gain [E] [E] [E] .",
     "EXTENDED_DESCRIPTION": [
       "Swift Assault Thrust",
       "(Drawn ",
@@ -48,7 +49,7 @@
   },
   "${ModID}:RisingSpiralSlash": {
     "NAME": "Rising Spiral Slash",
-    "DESCRIPTION": "Can only be played with 3 different Extracts. NL Deal !D! damage to ALL enemies !M! times. NL Draw !M! cards. NL Lose all Extracts."
+    "DESCRIPTION": "Can only be played with 3 different Extracts. NL Deal !D! damage to ALL enemies !M! times. NL Draw !M! cards. NL Randomly lose one Extract."
   },
   "${ModID}:Evade": {
     "NAME": "Evade",

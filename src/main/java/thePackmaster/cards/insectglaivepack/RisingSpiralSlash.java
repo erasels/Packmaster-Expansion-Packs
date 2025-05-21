@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import thePackmaster.SpireAnniversary5Mod;
@@ -39,9 +40,17 @@ public class RisingSpiralSlash extends AbstractInsectGlaiveCard {
             addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
             addToBot(new DrawCardAction(1));
         }
-        addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceWhitePower.ID));
-        addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceYellowPower.ID));
-        addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceRedPower.ID));
+        switch (AbstractDungeon.cardRandomRng.random(2)) {
+            case 0:
+                addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceWhitePower.ID));
+                break;
+            case 1:
+                addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceYellowPower.ID));
+                break;
+            case 2:
+                addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceRedPower.ID));
+                break;
+        }
     }
 
     @Override

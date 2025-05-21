@@ -35,7 +35,7 @@ public class Evade extends AbstractInsectGlaiveCard {
 
     @Override
     public void upp() {
-        upgradeBlock(1);
+        upgradeBlock(2);
         upgradeMagicNumber(1);
     }
 }

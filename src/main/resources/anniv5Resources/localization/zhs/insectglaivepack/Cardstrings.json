@@ -39,16 +39,15 @@
   },
   "${ModID}:DescendingSlash": {
     "NAME": "急袭斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:空中 ：回合开始抽牌外，每抽过一张牌，这张牌伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:空中 ：获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:空中 ：获得 [E] [E] [E] 。",
     "EXTENDED_DESCRIPTION": [
-      "急袭突刺",
-      "（抽过 ",
-      " 张）"
+      "急袭突刺"
     ]
   },
   "${ModID}:RisingSpiralSlash": {
     "NAME": "飞天螺旋斩",
-    "DESCRIPTION": "拥有3种灯时才能打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。 NL 抽 !M! 张牌。 NL 失去所有灯。"
+    "DESCRIPTION": "拥有3种灯时才能打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。 NL 抽 !M! 张牌。 NL 随机失去一种灯。"
   },
   "${ModID}:Evade": {
     "NAME": "回避",
