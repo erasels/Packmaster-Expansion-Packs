@@ -49,7 +49,7 @@
   },
   "${ModID}:RisingSpiralSlash": {
     "NAME": "Rising Spiral Slash",
-    "DESCRIPTION": "Can only be played with 3 different Extracts. NL Deal !D! damage to ALL enemies !M! times. NL Draw !M! cards. NL Randomly lose one Extract."
+    "DESCRIPTION": "Can only be played with 3 different Extracts. NL Deal !D! damage to ALL enemies 5 times. NL Draw 5 cards. NL Randomly lose !M! Extracts."
   },
   "${ModID}:Evade": {
     "NAME": "Evade",

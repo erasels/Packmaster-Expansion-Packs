@@ -21,7 +21,7 @@ public class RisingSpiralSlash extends AbstractInsectGlaiveCard {
     public RisingSpiralSlash() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.damage = this.baseDamage = 5;
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.isMultiDamage = true;
     }
 
@@ -34,13 +34,28 @@ public class RisingSpiralSlash extends AbstractInsectGlaiveCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < this.magicNumber; ++i) {
+        for (int i = 0; i < 5; ++i) {
             addToBot(new SFXAction("ATTACK_HEAVY"));
             addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
             addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
             addToBot(new DrawCardAction(1));
         }
-        switch (AbstractDungeon.cardRandomRng.random(2)) {
+        if (!upgraded)
+            switch (AbstractDungeon.cardRandomRng.random(2)) {
+                case 0:
+                    addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceWhitePower.ID));
+                    addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceYellowPower.ID));
+                    break;
+                case 1:
+                    addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceYellowPower.ID));
+                    addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceRedPower.ID));
+                    break;
+                case 2:
+                    addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceRedPower.ID));
+                    addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceWhitePower.ID));
+                    break;
+            }
+        else switch (AbstractDungeon.cardRandomRng.random(2)) {
             case 0:
                 addToBot(new RemoveSpecificPowerAction(p, p, ExtractedEssenceWhitePower.ID));
                 break;
@@ -55,7 +70,6 @@ public class RisingSpiralSlash extends AbstractInsectGlaiveCard {
 
     @Override
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(-1);
     }
 }

@@ -47,7 +47,7 @@
   },
   "${ModID}:RisingSpiralSlash": {
     "NAME": "飞天螺旋斩",
-    "DESCRIPTION": "拥有3种灯时才能打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。 NL 抽 !M! 张牌。 NL 随机失去一种灯。"
+    "DESCRIPTION": "拥有3种灯时才能打出。 NL 对所有敌人造成 !D! 点伤害5次。 NL 抽5张牌。 NL 随机失去 !M! 种灯。"
   },
   "${ModID}:Evade": {
     "NAME": "回避",
