@@ -1,21 +1,20 @@
 package thePackmaster.cards.insectglaivepack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.insectglaivepack.derivative.VaultingDance;
 import thePackmaster.packs.InsectGlaivePack;
 
 public class JumpingAdvancingSlash extends AbstractInsectGlaiveCard {
     public static final String ID = SpireAnniversary5Mod.makeID(JumpingAdvancingSlash.class.getSimpleName());
 
     public JumpingAdvancingSlash() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 7;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 2;
         this.cardsToPreview = new VaultingDance();
     }
@@ -29,13 +28,13 @@ public class JumpingAdvancingSlash extends AbstractInsectGlaiveCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false)));
         addToBot(new DrawCardAction(p, this.magicNumber));
         if (InsectGlaivePack.isHover(2)) addToBot(new MakeTempCardInHandAction(new VaultingDance()));
     }
 
     @Override
     public void upp() {
-        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 }

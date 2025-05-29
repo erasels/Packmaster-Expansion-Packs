@@ -19,6 +19,7 @@ import thePackmaster.patches.insectglaivepack.DrawAnalyzer;
 import thePackmaster.powers.insectglaivepack.ExtractedEssenceRedPower;
 import thePackmaster.powers.insectglaivepack.ExtractedEssenceWhitePower;
 import thePackmaster.powers.insectglaivepack.ExtractedEssenceYellowPower;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -60,51 +61,14 @@ public class InsectGlaivePack extends AbstractCardPack {
         InsectRamdom = new Random(Settings.seed + AbstractDungeon.floorNum * 10L);
     }
 
-    //是否处于战斗中
-    public static boolean isInCombat() {
-        return (AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT &&
-                AbstractDungeon.player != null;
-    }
-
-
     //是否处于空中
     public static boolean isHover(int n) {
-        return isInCombat() && AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= n &&
+        return Wiz.isInCombat() && AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= n &&
                 DrawAnalyzer.isDrawCard(
                         AbstractDungeon.actionManager.cardsPlayedThisCombat.get(
                                 AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - n).getClass().getName());
     }
 
-    //画图案
-    private static final Matrix4 mx4 = new Matrix4();
-    private static final Matrix4 rotatedTextMatrix = new Matrix4();
-
-    public static void renderRotateTexture(SpriteBatch sb, Texture t, float x, float y, float offsetX, float offsetY, float scale, float angle) {
-        mx4.setToRotation(0.0F, 0.0F, 1.0F, angle);
-
-        Vector2 vec = new Vector2(offsetX, offsetY);
-        rotate(vec, angle);
-        mx4.trn(x + vec.x,
-                y + vec.y, 0.0F);
-        sb.end();
-        sb.setTransformMatrix(mx4);
-        sb.begin();
-        sb.draw(t, 0, 0, 0, 0, t.getWidth(), t.getHeight(), scale, scale, 0,
-                0, 0, t.getWidth(), t.getHeight(), false, false);
-        sb.end();
-        sb.setTransformMatrix(rotatedTextMatrix);
-        sb.begin();
-    }
-
-    //旋转
-    public static void rotate(Vector2 vec, float radians) {
-        float cos = (float) Math.cos((double) radians * 0.017453292F);
-        float sin = (float) Math.sin((double) radians * 0.017453292F);
-        float newX = vec.x * cos - vec.y * sin;
-        float newY = vec.x * sin + vec.y * cos;
-        vec.x = newX;
-        vec.y = newY;
-    }
 
     //移动位置
     public static void movePowerPosition(AbstractPower p) {

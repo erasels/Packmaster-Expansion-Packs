@@ -20,8 +20,17 @@
   "${ModID}:MountingPower": {
     "NAME": "骑乘",
     "DESCRIPTIONS": [
-      "在 #y空中 打出攻击牌时获得 #b1 层，再获得 #b",
-      " 层后失去这个能力，所有敌人失去一半的当前 #y生命 。"
+      "在 #y空中 攻击敌人 #b",
+      " 次后，所有敌人失去一半的当前 #g生命 。"
+    ]
+  },
+  "${ModID}:KinsectHarvestExtractPower": {
+    "NAME": "操虫",
+    "DESCRIPTIONS": [
+      "回合开始时，获得",
+      " #r红灯 ,",
+      " 白灯 ,",
+      " #y黄灯 。"
     ]
   }
 }

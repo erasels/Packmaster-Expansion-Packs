@@ -16,7 +16,7 @@ public class OverheadSmash extends AbstractInsectGlaiveCard {
 
     public OverheadSmash() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = 13;
+        this.damage = this.baseDamage = 11;
         this.magicNumber = this.baseMagicNumber = 2;
     }
 

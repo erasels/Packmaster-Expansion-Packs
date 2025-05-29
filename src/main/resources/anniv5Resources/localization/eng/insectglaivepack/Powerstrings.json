@@ -20,8 +20,17 @@
   "${ModID}:MountingPower": {
     "NAME": "Mount",
     "DESCRIPTIONS": [
-      "When playing Attack cards while #yAerial, gain #b1 stack. When reaching #b",
-      " stacks, lose this power and ALL enemies lose half their current #yHP."
+      "After Attacking while #yAerial #b",
+      " times, ALL enemies lose half their current #gHP."
+    ]
+  },
+  "${ModID}:KinsectHarvestExtractPower": {
+    "NAME": "Kinsect Control",
+    "DESCRIPTIONS": [
+      "At start of turn, Gain ",
+      "#rRed #rExtract , ",
+      "White Extract , ",
+      "#yYellow #yExtract . "
     ]
   }
 }

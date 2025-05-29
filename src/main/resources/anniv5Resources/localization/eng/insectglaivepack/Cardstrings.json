@@ -1,8 +1,4 @@
 {
-  "${ModID}:InsectGlaiveTemp": {
-    "NAME": "测试",
-    "DESCRIPTION": "防 !B! 。 NL ${ModID}:虫虫的棍 。"
-  },
   "${ModID}:RisingSlashCombo": {
     "NAME": "Rising Slash Combo",
     "DESCRIPTION": "Deal !D! damage !M! times."
@@ -13,34 +9,37 @@
   },
   "${ModID}:DodgeSlash": {
     "NAME": "Dodge Slash",
-    "DESCRIPTION": "Gain !B! Block. NL If your current Block exceeds enemy's intended damage, gain [E].",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If your current Block exceeds enemy's intended damage, gain [E] [E]."
+    "DESCRIPTION": "Gain !B! Block. NL If your current Block exceeds enemy's intended damage, gain [E]."
   },
   "${ModID}:KinsectHarvestExtract": {
-    "NAME": "Kinsect Harvest Extract",
-    "DESCRIPTION": "Gain 1 random Extract you don't have. NL At start of turn, return to hand from Exhaust pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw 1 card. NL Gain 1 random Extract you don't have. NL At start of turn, return to hand from Exhaust pile. NL Exhaust."
+    "NAME": "Kinsect Control",
+    "DESCRIPTION": "Choose an Extract. NL Gain that Extract at the start of each turn."
+  },
+  "${ModID}:CardForSectionOfIG": {
+    "NAME": "ChooseOne",
+    "DESCRIPTION": "At start of turn, Gain ",
+    "EXTENDED_DESCRIPTION": [
+      "Red Extract",
+      "White Extract",
+      "Yellow Extract",
+      "."
+    ]
   },
   "${ModID}:Vault": {
-    "NAME": "Vault",
+    "NAME": "Swiftly Vault",
     "DESCRIPTION": "At the start of next turn, draw !M! cards."
   },
-  "${ModID}:LeapingSlash": {
-    "NAME": "Leaping Slash",
-    "DESCRIPTION": "Innate. NL Deal !D! damage."
-  },
   "${ModID}:JumpingAdvancingSlash": {
-    "NAME": "Jumping Advancing Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL ${ModID}:Aerial: Add a *Dance to your hand."
+    "NAME": "Advancing Slash",
+    "DESCRIPTION": "Apply !M! Weak. NL Draw !M! cards. NL ${ModID}:Aerial: Add a *Dance to your hand."
   },
   "${ModID}:VaultingDance": {
     "NAME": "Vaulting Dance",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Draw !M! cards. NL Exhaust."
   },
   "${ModID}:DescendingSlash": {
     "NAME": "Descending Slash",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Aerial: Gain [E] [E] .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Aerial: Gain [E] [E] [E] .",
     "EXTENDED_DESCRIPTION": [
       "Swift Assault Thrust",
       "(Drawn ",
@@ -57,6 +56,6 @@
   },
   "${ModID}:Mounting": {
     "NAME": "Mounting",
-    "DESCRIPTION": "When attacking while Aerial, gain 1 *Mount. NL When *Mount reaches 10, lose this power and ALL enemies lose 50% of current HP."
+    "DESCRIPTION": "After attacking !M! times while ${ModID}:Aerial, ALL enemies lose 50% of their current HP."
   }
 }

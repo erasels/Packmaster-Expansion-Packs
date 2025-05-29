@@ -15,5 +15,11 @@
       "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type. NL White Extract: Enhances card draw.",
       "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type. NL #yYellow Extract: Improves defense."
     ]
+  },
+  "${ModID}:EssenceNoticeMod": {
+    "TEXT": [
+      "Extract Harvest",
+      "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type."
+    ]
   }
 }

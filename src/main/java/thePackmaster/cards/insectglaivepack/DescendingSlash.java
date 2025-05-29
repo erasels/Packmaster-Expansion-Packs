@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.InsectGlaivePack;
-import thePackmaster.patches.insectglaivepack.HarvestExtractPatch;
 
 public class DescendingSlash extends AbstractInsectGlaiveCard {
     public static final String ID = SpireAnniversary5Mod.makeID(DescendingSlash.class.getSimpleName());
@@ -54,6 +53,6 @@ public class DescendingSlash extends AbstractInsectGlaiveCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(4);
     }
 }

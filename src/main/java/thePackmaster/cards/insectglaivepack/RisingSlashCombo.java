@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 import thePackmaster.SpireAnniversary5Mod;
@@ -15,7 +16,17 @@ public class RisingSlashCombo extends AbstractInsectGlaiveCard {
     public RisingSlashCombo() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = 1;
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber = 3;
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language== Settings.GameLanguage.ZHS){
+            return -1.0F;
+        }
+        else {
+            return 20.0f;
+        }
     }
 
     @Override
@@ -27,6 +38,6 @@ public class RisingSlashCombo extends AbstractInsectGlaiveCard {
 
     @Override
     public void upp() {
-        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }

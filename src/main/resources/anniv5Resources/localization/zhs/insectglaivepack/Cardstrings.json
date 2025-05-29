@@ -1,8 +1,4 @@
 {
-  "${ModID}:InsectGlaiveTemp": {
-    "NAME": "测试",
-    "DESCRIPTION": "防 !B! 。 NL ${ModID}:虫虫的棍 。"
-  },
   "${ModID}:RisingSlashCombo": {
     "NAME": "连续上捞斩",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
@@ -13,34 +9,37 @@
   },
   "${ModID}:DodgeSlash": {
     "NAME": "回避斩",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若你当前的 格挡 高于敌人意图的伤害，获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 若你当前的 格挡 高于敌人意图的伤害，获得 [E] [E] 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若你当前的 格挡 高于敌人意图的伤害，获得 [E] 。"
   },
   "${ModID}:KinsectHarvestExtract": {
     "NAME": "操虫",
-    "DESCRIPTION": "随机获得一种自身没有的灯。 NL 回合开始时，从 消耗 堆加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 随机获得一种自身没有的灯。 NL 回合开始时，从 消耗 堆加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "选择一种灯，每回合开始时获得那种灯。"
+  },
+  "${ModID}:CardForSectionOfIG": {
+    "NAME": "选择",
+    "DESCRIPTION": "每回合开始时，获得",
+    "EXTENDED_DESCRIPTION": [
+      "红灯",
+      "白灯",
+      "黄灯",
+      "。"
+    ]
   },
   "${ModID}:Vault": {
     "NAME": "起跳",
     "DESCRIPTION": "下回合开始时，抽 !M! 张牌。"
   },
-  "${ModID}:LeapingSlash": {
-    "NAME": "飞身跃入斩",
-    "DESCRIPTION": "固有。 NL 造成 !D! 点伤害。"
-  },
   "${ModID}:JumpingAdvancingSlash": {
     "NAME": "跳跃突进斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL ${ModID}:空中 ：在手牌加入一张 *舞踏 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 抽 !M! 张牌。 NL ${ModID}:空中 ：在手牌加入一张 *舞踏 。"
   },
   "${ModID}:VaultingDance": {
     "NAME": "舞踏",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 抽 !M! 张牌。 NL 消耗 。"
   },
   "${ModID}:DescendingSlash": {
     "NAME": "急袭斩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:空中 ：获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:空中 ：获得 [E] [E] [E] 。",
     "EXTENDED_DESCRIPTION": [
       "急袭突刺"
     ]
@@ -55,6 +54,6 @@
   },
   "${ModID}:Mounting": {
     "NAME": "骑乘",
-    "DESCRIPTION": "在 空中 攻击时获得一层 *骑乘值 。 NL 当 *骑乘值 到达10时，玩家失去这个能力，所有敌人失去50%的当前生命。"
+    "DESCRIPTION": "在 ${ModID}:空中 攻击 !M! 次后，所有敌人失去50%的当前生命。"
   }
 }

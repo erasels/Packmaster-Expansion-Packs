@@ -14,15 +14,16 @@ public class Mounting extends AbstractInsectGlaiveCard {
 
     public Mounting() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        this.magicNumber = this.baseMagicNumber = 5;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new MountingPower(p)));
+        addToBot(new ApplyPowerAction(p, p, new MountingPower(p, this.magicNumber)));
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeMagicNumber(-1);
     }
 }

@@ -23,9 +23,12 @@ public class MountingPower extends AbstractPackmasterPower {
     private static final PowerStrings STRINGS = CardCrawlGame.languagePack.getPowerStrings(ID);
     private static final String[] DESCRIPTIONS = STRINGS.DESCRIPTIONS;
 
-    public MountingPower(AbstractCreature owner) {
+    public MountingPower(AbstractCreature owner, int amount) {
         super(ID, STRINGS.NAME, PowerType.BUFF, false, owner, 0);
         loadRegion("flight");
+        this.amount2 = amount;
+        this.isTwoAmount = true;
+        this.updateDescription();
     }
 
     @Override
@@ -33,7 +36,7 @@ public class MountingPower extends AbstractPackmasterPower {
         if (card.type == AbstractCard.CardType.ATTACK && InsectGlaivePack.isHover(2)) {
             this.amount++;
             this.flash();
-            if (this.amount >= 10) {
+            if (this.amount >= this.amount2) {
                 for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                     if (!m.isDeadOrEscaped()) {
                         addToBot(new LoseHPAction(m, this.owner, (int) (m.currentHealth * 0.5F)));
@@ -47,6 +50,6 @@ public class MountingPower extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + (10 - this.amount) + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + (this.amount2 - this.amount) + DESCRIPTIONS[1];
     }
 }

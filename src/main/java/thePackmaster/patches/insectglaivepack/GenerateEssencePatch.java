@@ -9,6 +9,7 @@ import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceRed;
 import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceWhite;
 import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceYellow;
 import thePackmaster.cards.insectglaivepack.AbstractInsectGlaiveCard;
+import thePackmaster.cards.insectglaivepack.RisingSpiralSlash;
 import thePackmaster.packs.InsectGlaivePack;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class GenerateEssencePatch {
     @SpireInsertPatch(rloc = 1866 - 1792, localvars = {"retVal2"})
     public static void Insert(ArrayList<AbstractCard> retVal2) {
         for (AbstractCard c : retVal2) {
-            if (c instanceof AbstractInsectGlaiveCard) {
+            if (c instanceof AbstractInsectGlaiveCard && !(c instanceof RisingSpiralSlash)) {
                 InsectGlaivePack.initInsectRamdom();
                 //添加modifier
                 if (CardModifierManager.modifiers(c).stream().noneMatch(e ->

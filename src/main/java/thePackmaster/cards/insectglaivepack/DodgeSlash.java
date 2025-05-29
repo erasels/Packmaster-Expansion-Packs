@@ -36,7 +36,6 @@ public class DodgeSlash extends AbstractInsectGlaiveCard {
 
     @Override
     public void upp() {
-        upgradeBlock(1);
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
     }
 }

@@ -2,8 +2,10 @@ package thePackmaster.cardmodifiers.insectglaivepack;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.TooltipInfo;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -36,9 +38,7 @@ public class ExtractedEssenceRed extends AbstractCardModifier {
 
     @Override
     public void onRender(AbstractCard card, SpriteBatch sb) {
-        InsectGlaivePack.renderRotateTexture(sb, texture, card.current_x, card.current_y,
-                -AbstractCard.IMG_WIDTH_S * 0.6F * Settings.scale * card.drawScale, AbstractCard.IMG_HEIGHT_S * 0.25F * Settings.scale * card.drawScale,
-                card.drawScale, card.angle);
+        ExtraIcons.renderIcon(card, texture, 0, 0, Color.WHITE);
     }
 
     @Override
