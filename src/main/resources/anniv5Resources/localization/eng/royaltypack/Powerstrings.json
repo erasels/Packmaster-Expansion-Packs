@@ -1,0 +1,43 @@
+{
+  "${ModID}:RoyalSupplyLinesPower": {
+    "NAME": "Royal Supply Lines",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw ",
+      " additional cards.",
+      " At the end of your turn, Retain up to ",
+      " cards."
+    ]
+  },
+  "${ModID}:HiredSupportPower": {
+    "NAME": "Hired Support",
+    "DESCRIPTIONS": [
+      "The next card played this turn that costs [E] to play spends 10 Gold per [E] , instead, if you have enough Gold.",
+      "The next ",
+      " cards played this turn that cost [E] to play spends 10 Gold per [E] , instead, if you have enough Gold."
+    ]
+  },
+  "${ModID}:ForTheHistoryBooksPower": {
+    "NAME": "For The History Books",
+    "DESCRIPTIONS": [
+      "Next turn, gain ",
+      " Temporary Strength and ",
+      " Temporary Dexterity."
+    ]
+  },
+  "${ModID}:NextTurnHiredSupportPower": {
+    "NAME": "Next Turn Hired Support",
+    "DESCRIPTIONS": [
+      "Next turn, gain ",
+      " Hired Support."
+    ]
+  },
+  "${ModID}:AlchemyTimePower": {
+    "NAME": "Alchemy Time",
+    "DESCRIPTIONS": [
+      "When you use a Potion, draw ",
+      " card.",
+      " cards."
+    ]
+  }
+
+}
