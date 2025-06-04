@@ -1,0 +1,25 @@
+{
+  "${ModID}:InsectGlaive": {
+    "TEXT": [
+      "Insect Glaive",
+      "Soar through the skies, dominate all directions! NL Card draw and draw synergy.",
+      "332"
+    ]
+  },
+  "${ModID}:InsectGlaiveEssenceNameAndDescription": {
+    "TEXT": [
+      "Red Extract",
+      "White Extract",
+      "Yellow Extract",
+      "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type. NL #rRed Extract: Boosts offense.",
+      "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type. NL White Extract: Enhances card draw.",
+      "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type. NL #yYellow Extract: Improves defense."
+    ]
+  },
+  "${ModID}:EssenceNoticeMod": {
+    "TEXT": [
+      "Extract Harvest",
+      "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type."
+    ]
+  }
+}
