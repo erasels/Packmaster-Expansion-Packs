@@ -15,6 +15,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.insectglaivepack.*;
+import thePackmaster.cards.insectglaivepack.derivative.VaultingDance;
 import thePackmaster.patches.insectglaivepack.DrawAnalyzer;
 import thePackmaster.powers.insectglaivepack.ExtractedEssenceRedPower;
 import thePackmaster.powers.insectglaivepack.ExtractedEssenceWhitePower;
@@ -35,7 +36,7 @@ public class InsectGlaivePack extends AbstractCardPack {
 
 
     public InsectGlaivePack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 3, 3, 3));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 3, 4, 3, 3));
     }
 
     @Override
@@ -51,6 +52,7 @@ public class InsectGlaivePack extends AbstractCardPack {
         cards.add(RisingSpiralSlash.ID);
         cards.add(Evade.ID);
         cards.add(Mounting.ID);
+        cards.add(VaultingDance.ID);
         return cards;
     }
 

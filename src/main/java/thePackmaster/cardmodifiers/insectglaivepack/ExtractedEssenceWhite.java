@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.insectglaivepack.derivative.CardForSectionOfIG;
 import thePackmaster.packs.InsectGlaivePack;
 import thePackmaster.powers.insectglaivepack.ExtractedEssenceWhitePower;
 import thePackmaster.util.TexLoader;
@@ -37,7 +38,13 @@ public class ExtractedEssenceWhite extends AbstractCardModifier {
 
     @Override
     public void onRender(AbstractCard card, SpriteBatch sb) {
-        ExtraIcons.renderIcon(card, texture, 0, 0, Color.WHITE);
+        if (card instanceof CardForSectionOfIG)
+            ExtraIcons.renderIcon(card, texture,
+                    AbstractCard.IMG_WIDTH_S * 0.4F / Settings.scale,
+                    -AbstractCard.IMG_HEIGHT_S * 0.1F / Settings.scale,
+                    Color.WHITE);
+        else
+            ExtraIcons.renderIcon(card, texture, 0, 0, Color.WHITE);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package thePackmaster.powers.insectglaivepack;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -18,7 +19,7 @@ import thePackmaster.cards.insectglaivepack.AbstractInsectGlaiveCard;
 import thePackmaster.packs.InsectGlaivePack;
 import thePackmaster.powers.AbstractPackmasterPower;
 
-public class MountingPower extends AbstractPackmasterPower {
+public class MountingPower extends AbstractPackmasterPower implements NonStackablePower {
     public static String ID = SpireAnniversary5Mod.makeID(MountingPower.class.getSimpleName());
     private static final PowerStrings STRINGS = CardCrawlGame.languagePack.getPowerStrings(ID);
     private static final String[] DESCRIPTIONS = STRINGS.DESCRIPTIONS;

@@ -12,7 +12,7 @@ public class VaultingDance extends AbstractInsectGlaiveCard {
     public static final String ID = SpireAnniversary5Mod.makeID(VaultingDance.class.getSimpleName());
 
     public VaultingDance() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
     }

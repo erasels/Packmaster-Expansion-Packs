@@ -27,11 +27,11 @@
   },
   "${ModID}:Vault": {
     "NAME": "Swiftly Vault",
-    "DESCRIPTION": "At the start of next turn, draw !M! cards."
+    "DESCRIPTION": "Next turn, draw !M! additional cards."
   },
   "${ModID}:JumpingAdvancingSlash": {
     "NAME": "Advancing Slash",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw !M! cards. NL ${ModID}:Aerial: Add a *Dance to your hand."
+    "DESCRIPTION": "Apply !M! Weak. NL Draw !M! cards. NL ${ModID}:Aerial: Add 1 *Dance into your hand."
   },
   "${ModID}:VaultingDance": {
     "NAME": "Vaulting Dance",
@@ -41,9 +41,7 @@
     "NAME": "Descending Slash",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Aerial: Gain [E] [E] .",
     "EXTENDED_DESCRIPTION": [
-      "Swift Assault Thrust",
-      "(Drawn ",
-      " cards)"
+      "Swift Assault Thrust"
     ]
   },
   "${ModID}:RisingSpiralSlash": {

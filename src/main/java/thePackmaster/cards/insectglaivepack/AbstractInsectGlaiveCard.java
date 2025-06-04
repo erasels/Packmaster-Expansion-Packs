@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.ThePackmaster;
 import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceRed;
 import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceWhite;
 import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceYellow;
@@ -25,7 +26,11 @@ public abstract class AbstractInsectGlaiveCard extends AbstractPackmasterCard {
 
 
     public AbstractInsectGlaiveCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {
-        super(cardID, cost, type, rarity, target, "insectglaive");
+        this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+    }
+
+    public AbstractInsectGlaiveCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color) {
+        super(cardID, cost, type, rarity, target, color, "insectglaive");
 
         CardModifierManager.addModifier(this, new AbstractCardModifier() {
 

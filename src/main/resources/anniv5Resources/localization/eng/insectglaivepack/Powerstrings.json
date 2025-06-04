@@ -20,14 +20,14 @@
   "${ModID}:MountingPower": {
     "NAME": "Mount",
     "DESCRIPTIONS": [
-      "After Attacking while #yAerial #b",
+      "After attacking while #yAerial #b",
       " times, ALL enemies lose half their current #gHP."
     ]
   },
   "${ModID}:KinsectHarvestExtractPower": {
     "NAME": "Kinsect Control",
     "DESCRIPTIONS": [
-      "At start of turn, Gain ",
+      "At start of turn, gain ",
       "#rRed #rExtract , ",
       "White Extract , ",
       "#yYellow #yExtract . "
