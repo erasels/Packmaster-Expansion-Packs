@@ -33,7 +33,7 @@
   "${ModID}:AlchemyTime": {
     "NAME": "Alchemy Time",
     "DESCRIPTION": "Pay 25 Gold to gain a Potion. NL When you use a Potion, draw !M! cards. NL ${ModID}:Pickup: gain a Potion Slot and 75 Gold.",
-    "EXTENDED_DESCRIPTION": ["Wished I had more Gold for potion ingredients!"]
+    "EXTENDED_DESCRIPTION": ["Wish I had more Gold for potion ingredients!"]
   },
   "${ModID}:TacticalReroll": {
     "NAME": "Tactical Reroll",
