@@ -31,35 +31,31 @@ public class RetainerStrikeRetainAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (!this.retainerStrikeIsUpgraded){
+        if (!AbstractDungeon.player.hand.isEmpty()) {
+
             CardGroup hand = Wiz.p().hand;
             CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.HAND);
+
             for (AbstractCard c: hand.group){
-                if (!c.retain && !c.selfRetain && c.uuid != retainerStrikeIdentifier) handWithoutRetain.addToHand(c);
+                if (!c.retain && !c.selfRetain && c.uuid != retainerStrikeIdentifier)
+                    handWithoutRetain.addToHand(c);
             }
-            AbstractCard toRetain;
-            if (handWithoutRetain.size() > 0) {
-                toRetain = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
+
+            if (!this.retainerStrikeIsUpgraded){
+                AbstractCard toRetain;
+                if (handWithoutRetain.size() > 0) {
+                    toRetain = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
+                }
+                else {
+                    toRetain = hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                }
+                CardModifierManager.addModifier(toRetain, new RetainForOneTurnModifier());
+                toRetain.flash();
             }
+
             else {
-                toRetain = hand.getRandomCard(AbstractDungeon.cardRandomRng);
-            }
-            CardModifierManager.addModifier(toRetain, new RetainForOneTurnModifier());
-            toRetain.flash();
 
-        }
-        else {
-            if (AbstractDungeon.player.hand.isEmpty()) {
-
-            } else{
-                CardGroup hand = Wiz.p().hand;
-                CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.HAND);
-                for (AbstractCard c: hand.group){
-                    if (!c.retain && !c.selfRetain && c.uuid != retainerStrikeIdentifier) handWithoutRetain.addToHand(c);
-                }
-                if (handWithoutRetain.size() == 0){
-
-                }
+                if (handWithoutRetain.size() == 0){  }
                 else if (handWithoutRetain.size() == 1){
                     AbstractCard card = hand.getRandomCard(AbstractDungeon.cardRandomRng);
                     CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
@@ -74,6 +70,9 @@ public class RetainerStrikeRetainAction extends AbstractGameAction {
                 }
             }
         }
+
+
+
 
         this.isDone = true;
 
