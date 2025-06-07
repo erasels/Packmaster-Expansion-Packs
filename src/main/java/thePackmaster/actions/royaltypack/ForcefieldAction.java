@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.powers.BlurPower;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static thePackmaster.util.Wiz.atb;
@@ -34,9 +35,9 @@ public class ForcefieldAction extends AbstractGameAction {
             effect = this.energyOnUse;
         }
 
-        if (this.p.hasRelic("Chemical X")) {
+        if (this.p.hasRelic(ChemicalX.ID)) {
             effect += 2;
-            this.p.getRelic("Chemical X").flash();
+            this.p.getRelic(ChemicalX.ID).flash();
         }
 
         if (effect + extraUses > 0) {
