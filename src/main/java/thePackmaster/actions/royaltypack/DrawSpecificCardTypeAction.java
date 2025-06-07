@@ -39,7 +39,7 @@ public class DrawSpecificCardTypeAction extends AbstractGameAction {
         }
 
         for (AbstractCard c: validTargets){
-            if (AbstractDungeon.player.hand.size() == 10) {
+            if (AbstractDungeon.player.hand.size() == AbstractDungeon.player.masterHandSize) {
                 AbstractDungeon.player.drawPile.moveToDiscardPile(c);
                 AbstractDungeon.player.createHandIsFullDialog();
             } else {
