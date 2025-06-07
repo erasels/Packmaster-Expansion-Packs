@@ -42,28 +42,27 @@ public class RetainerStrikeRetainAction extends AbstractGameAction {
                     handWithoutRetain.addToHand(c);
             }
 
-            if (!this.retainerStrikeIsUpgraded){
-                if (handWithoutRetain.size() > 0) {
+            if (handWithoutRetain.size() > 0){
+
+                if (!this.retainerStrikeIsUpgraded){
                     AbstractCard toRetain = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
                     CardModifierManager.addModifier(toRetain, new RetainForOneTurnModifier());
                     toRetain.flash();
                 }
-            }
-
-            else {
-
-                if (handWithoutRetain.size() == 0){  }
-                else if (handWithoutRetain.size() == 1){
-                    AbstractCard card = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
-                    CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
-                } else {
-                    Wiz.atb(new SelectCardsAction(handWithoutRetain.group, selectCardsActionText,
-                            (List<AbstractCard> cards) -> {
-                                AbstractCard card = cards.get(0);
-                                CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
-                                card.flash();
-                            }
-                    ));
+                else {
+                    if (handWithoutRetain.size() == 1){
+                        AbstractCard card = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
+                        CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
+                        card.flash();
+                    } else {
+                        Wiz.atb(new SelectCardsAction(handWithoutRetain.group, selectCardsActionText,
+                                (List<AbstractCard> cards) -> {
+                                    AbstractCard card = cards.get(0);
+                                    CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
+                                    card.flash();
+                                }
+                        ));
+                    }
                 }
             }
         }
