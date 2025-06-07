@@ -34,7 +34,7 @@
   "${ModID}:AlchemyTimePower": {
     "NAME": "Alchemy Time",
     "DESCRIPTIONS": [
-      "When you use a Potion, draw ",
+      "When you use a potion, draw ",
       " card.",
       " cards."
     ]
