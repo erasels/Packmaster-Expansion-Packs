@@ -1,8 +1,8 @@
 {
   "${ModID}:RetainerStrike": {
     "NAME": "Retainer Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Retain a random card in your hand this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Retain a card in your hand this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Retain a random card this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Retain a card this turn."
   },
   "${ModID}:Soulstone": {
     "NAME": "Soulstone",
