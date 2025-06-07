@@ -33,7 +33,9 @@ public class HiredSupportPower extends AbstractPackmasterPower {
                 AbstractDungeon.effectList.add(new LoseGoldTextEffect(-goldAmount));
                 AbstractDungeon.player.loseGold(goldAmount);
                 CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
+
                 this.amount -= 1;
+                updateDescription();
                 if (this.amount <= 0){
                     removeThis();
                 }
@@ -48,6 +50,7 @@ public class HiredSupportPower extends AbstractPackmasterPower {
                 CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
 
                 this.amount -= 1;
+                updateDescription();
                 if (this.amount <= 0){
                     removeThis();
                 }
