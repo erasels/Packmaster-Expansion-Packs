@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.powers.royaltypack.NextTurnHiredSupportPower;
@@ -31,7 +32,7 @@ public class Stratagem extends AbstractRoyaltyCard {
         this.addToBot(new ApplyPowerAction(m, p,
                 new StrengthPower(m, -this.magicNumber),
                 -this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        if (!m.hasPower("Artifact")) {
+        if (!m.hasPower(ArtifactPower.POWER_ID)) {
             this.addToBot(new ApplyPowerAction(m, p,
                     new GainStrengthPower(m, this.magicNumber),
                     this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
