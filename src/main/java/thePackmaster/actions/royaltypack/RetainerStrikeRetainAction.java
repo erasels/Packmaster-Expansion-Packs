@@ -37,27 +37,24 @@ public class RetainerStrikeRetainAction extends AbstractGameAction {
             CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.HAND);
 
             for (AbstractCard c: hand.group){
-                if (!c.retain && !c.selfRetain && c.uuid != retainerStrikeIdentifier)
+                if (!c.retain && !c.selfRetain && c.uuid != retainerStrikeIdentifier &&
+                    !CardModifierManager.hasModifier(c, RetainForOneTurnModifier.ID))
                     handWithoutRetain.addToHand(c);
             }
 
             if (!this.retainerStrikeIsUpgraded){
-                AbstractCard toRetain;
                 if (handWithoutRetain.size() > 0) {
-                    toRetain = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
+                    AbstractCard toRetain = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
+                    CardModifierManager.addModifier(toRetain, new RetainForOneTurnModifier());
+                    toRetain.flash();
                 }
-                else {
-                    toRetain = hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                }
-                CardModifierManager.addModifier(toRetain, new RetainForOneTurnModifier());
-                toRetain.flash();
             }
 
             else {
 
                 if (handWithoutRetain.size() == 0){  }
                 else if (handWithoutRetain.size() == 1){
-                    AbstractCard card = hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                    AbstractCard card = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
                     CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
                 } else {
                     Wiz.atb(new SelectCardsAction(handWithoutRetain.group, selectCardsActionText,
