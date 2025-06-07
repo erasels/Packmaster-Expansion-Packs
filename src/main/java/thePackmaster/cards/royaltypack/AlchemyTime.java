@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.PotionSlot;
-import thePackmaster.actions.royaltypack.PayTributeAction;
+import thePackmaster.actions.royaltypack.NeedsGoldToBePartiallyDoneAction;
 import thePackmaster.powers.royaltypack.AlchemyTimePower;
 import thePackmaster.util.Wiz;
 
@@ -41,7 +41,7 @@ public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
         actionArrayAfterPay[0] = new ApplyPowerAction(
                 Wiz.p(), Wiz.p(), new AlchemyTimePower(Wiz.p(), magicNumber));
 
-        Wiz.atb(new PayTributeAction(GOLD_COST,
+        Wiz.atb(new NeedsGoldToBePartiallyDoneAction(GOLD_COST,
                         new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)),
                         actionArrayAfterPay,
                         cardStrings.EXTENDED_DESCRIPTION[0]));

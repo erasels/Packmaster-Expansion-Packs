@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.royaltypack.PayTributeAction;
+import thePackmaster.actions.royaltypack.NeedsGoldToBePartiallyDoneAction;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -30,7 +30,7 @@ public class TacticalReroll extends AbstractRoyaltyCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         AbstractGameAction[] actionArrayAfterPay = new AbstractGameAction[0];
 
-        Wiz.atb(new PayTributeAction(GOLD_COST,
+        Wiz.atb(new NeedsGoldToBePartiallyDoneAction(GOLD_COST,
                                     new BetterDiscardPileToHandAction(magicNumber),
                                     actionArrayAfterPay,
                                     cardStrings.EXTENDED_DESCRIPTION[0]));

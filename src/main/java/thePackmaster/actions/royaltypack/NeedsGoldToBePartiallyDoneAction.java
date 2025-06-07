@@ -2,27 +2,26 @@ package thePackmaster.actions.royaltypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.royaltypack.LoseGoldTextEffect;
 
-public class PayTributeAction extends AbstractGameAction {
+public class NeedsGoldToBePartiallyDoneAction extends AbstractGameAction {
 
-    private int amountToPay;
+    private int amountOfGoldToPay;
     private AbstractGameAction actionToUseIfPaid;
     private AbstractGameAction[] actionsToUseAfterPaidOne;
 
     private String talkMessage;
 
-    public PayTributeAction(int amountToPay, AbstractGameAction actionToUseIfPaid,
-                            AbstractGameAction[] actionsToUseAfterPaidOne,
-                            String talkMessage) {
+    public NeedsGoldToBePartiallyDoneAction(int amountOfGoldToPay, AbstractGameAction actionToUseIfPaid,
+                                            AbstractGameAction[] actionsToUseAfterPaidOne,
+                                            String talkMessage) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.SPECIAL;
-        this.amountToPay = amountToPay;
+        this.amountOfGoldToPay = amountOfGoldToPay;
         this.actionToUseIfPaid = actionToUseIfPaid;
         this.actionsToUseAfterPaidOne = actionsToUseAfterPaidOne;
         this.talkMessage = talkMessage;
@@ -31,10 +30,11 @@ public class PayTributeAction extends AbstractGameAction {
     @Override
     public void update() {
         int currentPlayerGold = AbstractDungeon.player.gold;
-        if (currentPlayerGold >= amountToPay){
-            AbstractDungeon.effectList.add(new LoseGoldTextEffect(-amountToPay));
+        
+        if (currentPlayerGold >= amountOfGoldToPay){
+            AbstractDungeon.effectList.add(new LoseGoldTextEffect(-amountOfGoldToPay));
             CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
-            AbstractDungeon.player.loseGold(amountToPay);
+            AbstractDungeon.player.loseGold(amountOfGoldToPay);
             Wiz.att(actionToUseIfPaid);
 
             for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--){
