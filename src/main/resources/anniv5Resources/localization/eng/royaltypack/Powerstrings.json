@@ -4,7 +4,7 @@
     "DESCRIPTIONS": [
       "At the start of your turn, draw ",
       " additional cards.",
-      " At the end of your turn, Retain up to ",
+      " At the end of your turn, #yRetain up to ",
       " cards."
     ]
   },
@@ -20,15 +20,15 @@
     "NAME": "For The History Books",
     "DESCRIPTIONS": [
       "Next turn, gain ",
-      " Temporary Strength and ",
-      " Temporary Dexterity."
+      " Temporary #yStrength and ",
+      " Temporary #yDexterity."
     ]
   },
   "${ModID}:NextTurnHiredSupportPower": {
     "NAME": "Next Turn Hired Support",
     "DESCRIPTIONS": [
       "Next turn, gain ",
-      " Hired Support."
+      " #yHired #ySupport."
     ]
   },
   "${ModID}:AlchemyTimePower": {
