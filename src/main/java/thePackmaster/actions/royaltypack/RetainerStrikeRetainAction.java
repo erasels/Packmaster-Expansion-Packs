@@ -1,6 +1,7 @@
 package thePackmaster.actions.royaltypack;
 
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -45,33 +46,32 @@ public class RetainerStrikeRetainAction extends AbstractGameAction {
             if (handWithoutRetain.size() > 0){
 
                 if (!this.retainerStrikeIsUpgraded){
-                    AbstractCard toRetain = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
-                    CardModifierManager.addModifier(toRetain, new RetainForOneTurnModifier());
-                    toRetain.flash();
+                    AbstractCard card = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
+                    addModifierAndDoSuperFlash(card);
                 }
                 else {
                     if (handWithoutRetain.size() == 1){
                         AbstractCard card = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
-                        CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
-                        card.flash();
+                        addModifierAndDoSuperFlash(card);
                     } else {
                         Wiz.atb(new SelectCardsAction(handWithoutRetain.group, selectCardsActionText,
                                 (List<AbstractCard> cards) -> {
                                     AbstractCard card = cards.get(0);
-                                    CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
-                                    card.flash();
+                                    addModifierAndDoSuperFlash(card);
                                 }
                         ));
                     }
                 }
             }
         }
-
-
-
-
+        
         this.isDone = true;
 
+    }
+
+    private void addModifierAndDoSuperFlash(AbstractCard card){
+        CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
+        card.superFlash(Color.YELLOW);
     }
 
 
