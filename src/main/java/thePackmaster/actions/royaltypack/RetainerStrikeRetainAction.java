@@ -34,7 +34,7 @@ public class RetainerStrikeRetainAction extends AbstractGameAction {
         if (!AbstractDungeon.player.hand.isEmpty()) {
 
             CardGroup hand = Wiz.p().hand;
-            CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.HAND);
+            CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
             for (AbstractCard c: hand.group){
                 if (!c.retain && !c.selfRetain && c.uuid != retainerStrikeIdentifier &&
