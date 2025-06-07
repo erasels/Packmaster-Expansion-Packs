@@ -15,7 +15,7 @@
   },
   "${ModID}:RetainerStrikeAction": {
     "TEXT": [
-      "Choose one card to have Retain this turn."
+      "Choose one card to Retain this turn."
     ]
   },
   "${ModID}:RetainForOneTurnModifier": {
