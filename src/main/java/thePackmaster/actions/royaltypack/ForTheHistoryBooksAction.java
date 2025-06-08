@@ -49,5 +49,7 @@ public class ForTheHistoryBooksAction extends AbstractGameAction {
 
         this.addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer,
                 new NextTurnHiredSupportPower(abstractPlayer, 1)));
+
+        this.isDone = true;
     }
 }
