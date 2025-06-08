@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.actions.EasyXCostAction;
 import thePackmaster.cards.royaltypack.ForTheHistoryBooks;
@@ -31,9 +32,9 @@ public class ForTheHistoryBooksAction extends AbstractGameAction {
     public void update() {
         int currentMultiplier = EnergyPanel.getCurrentEnergy();
 
-        if (abstractPlayer.hasRelic("Chemical X")) {
+        if (abstractPlayer.hasRelic(ChemicalX.ID)) {
             currentMultiplier += 2;
-            abstractPlayer.getRelic("Chemical X").flash();
+            abstractPlayer.getRelic(ChemicalX.ID).flash();
         }
 
         if (!isFreeToPlayOnce) {
