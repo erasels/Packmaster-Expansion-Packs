@@ -12,14 +12,14 @@ public class AlchemyTimePower extends AbstractPackmasterPower implements OnPotio
 
     public static final String POWER_ID = makeID("AlchemyTimePower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public AlchemyTimePower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
     }
 
     @Override
-    public void onPotionUse(){
+    public void onPotionUse() {
         Wiz.atb(new DrawCardAction(amount));
     }
 
