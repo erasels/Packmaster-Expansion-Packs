@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.cardmodifiers.royaltypack.RetainForOneTurnModifier;
-import thePackmaster.cards.royaltypack.RetainerStrike;
 import thePackmaster.util.Wiz;
 
 import java.util.List;
@@ -16,14 +15,14 @@ import java.util.UUID;
 
 public class RetainerStrikeRetainAction extends AbstractGameAction {
 
-    private UUID retainerStrikeIdentifier;
-    private boolean retainerStrikeIsUpgraded;
+    private final UUID retainerStrikeIdentifier;
+    private final boolean retainerStrikeIsUpgraded;
 
-    private String selectCardsActionText;
+    private final String selectCardsActionText;
 
     public RetainerStrikeRetainAction(UUID retainerStrikeIdentifier,
-                                            boolean retainerStrikeIsUpgraded,
-                                            String selectCardsActionText){
+                                      boolean retainerStrikeIsUpgraded,
+                                      String selectCardsActionText) {
 
         this.retainerStrikeIdentifier = retainerStrikeIdentifier;
         this.retainerStrikeIsUpgraded = retainerStrikeIsUpgraded;
@@ -37,20 +36,19 @@ public class RetainerStrikeRetainAction extends AbstractGameAction {
             CardGroup hand = Wiz.p().hand;
             CardGroup handWithoutRetain = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
-            for (AbstractCard c: hand.group){
+            for (AbstractCard c : hand.group) {
                 if (!c.retain && !c.selfRetain && c.uuid != retainerStrikeIdentifier &&
-                    !CardModifierManager.hasModifier(c, RetainForOneTurnModifier.ID))
+                        !CardModifierManager.hasModifier(c, RetainForOneTurnModifier.ID))
                     handWithoutRetain.addToHand(c);
             }
 
-            if (handWithoutRetain.size() > 0){
+            if (handWithoutRetain.size() > 0) {
 
-                if (!this.retainerStrikeIsUpgraded){
+                if (!this.retainerStrikeIsUpgraded) {
                     AbstractCard card = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
                     addModifierAndDoSuperFlash(card);
-                }
-                else {
-                    if (handWithoutRetain.size() == 1){
+                } else {
+                    if (handWithoutRetain.size() == 1) {
                         AbstractCard card = handWithoutRetain.getRandomCard(AbstractDungeon.cardRandomRng);
                         addModifierAndDoSuperFlash(card);
                     } else {
@@ -64,18 +62,15 @@ public class RetainerStrikeRetainAction extends AbstractGameAction {
                 }
             }
         }
-        
+
         this.isDone = true;
 
     }
 
-    private void addModifierAndDoSuperFlash(AbstractCard card){
+    private void addModifierAndDoSuperFlash(AbstractCard card) {
         CardModifierManager.addModifier(card, new RetainForOneTurnModifier());
         card.superFlash(Color.YELLOW);
     }
-
-
-
 
 
 }

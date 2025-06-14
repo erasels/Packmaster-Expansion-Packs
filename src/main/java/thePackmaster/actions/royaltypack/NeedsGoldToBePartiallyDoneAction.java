@@ -10,11 +10,11 @@ import thePackmaster.vfx.royaltypack.LoseGoldTextEffect;
 
 public class NeedsGoldToBePartiallyDoneAction extends AbstractGameAction {
 
-    private int amountOfGoldToPay;
-    private AbstractGameAction actionToUseIfPaid;
-    private AbstractGameAction[] actionsToUseAfterPaidOne;
+    private final int amountOfGoldToPay;
+    private final AbstractGameAction actionToUseIfPaid;
+    private final AbstractGameAction[] actionsToUseAfterPaidOne;
 
-    private String talkMessage;
+    private final String talkMessage;
 
     public NeedsGoldToBePartiallyDoneAction(int amountOfGoldToPay, AbstractGameAction actionToUseIfPaid,
                                             AbstractGameAction[] actionsToUseAfterPaidOne,
@@ -30,18 +30,18 @@ public class NeedsGoldToBePartiallyDoneAction extends AbstractGameAction {
     @Override
     public void update() {
         int currentPlayerGold = AbstractDungeon.player.gold;
-        
-        if (currentPlayerGold >= amountOfGoldToPay){
+
+        if (currentPlayerGold >= amountOfGoldToPay) {
             AbstractDungeon.effectList.add(new LoseGoldTextEffect(-amountOfGoldToPay));
             CardCrawlGame.sound.play("GOLD_GAIN", 0.3F);
             AbstractDungeon.player.loseGold(amountOfGoldToPay);
             Wiz.att(actionToUseIfPaid);
 
-            for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--){
+            for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--) {
                 Wiz.att(actionsToUseAfterPaidOne[i]);
             }
         } else {
-            for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--){
+            for (int i = actionsToUseAfterPaidOne.length - 1; i >= 0; i--) {
                 Wiz.att(actionsToUseAfterPaidOne[i]);
             }
 

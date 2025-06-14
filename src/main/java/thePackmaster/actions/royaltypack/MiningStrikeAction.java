@@ -5,15 +5,12 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.GainGoldTextEffect;
-import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class MiningStrikeAction extends AbstractGameAction {
-    private int increaseGold;
-    private DamageInfo info;
-    private static final float DURATION = 0.1F;
+    private final int increaseGold;
+    private final DamageInfo info;
 
     public MiningStrikeAction(AbstractCreature target, DamageInfo info, int goldAmount) {
         this.info = info;

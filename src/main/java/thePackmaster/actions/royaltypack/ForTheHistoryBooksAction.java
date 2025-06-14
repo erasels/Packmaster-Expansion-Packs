@@ -6,23 +6,20 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import thePackmaster.actions.EasyXCostAction;
-import thePackmaster.cards.royaltypack.ForTheHistoryBooks;
 import thePackmaster.powers.royaltypack.ForTheHistoryBooksPower;
 import thePackmaster.powers.royaltypack.NextTurnHiredSupportPower;
 import thePackmaster.util.Wiz;
 
 public class ForTheHistoryBooksAction extends AbstractGameAction {
 
-    private AbstractPlayer abstractPlayer;
-    private AbstractMonster abstractMonster;
+    private final AbstractPlayer abstractPlayer;
 
-    private boolean isFreeToPlayOnce;
+    private final boolean isFreeToPlayOnce;
 
-    private int magicNumber;
+    private final int magicNumber;
 
     public ForTheHistoryBooksAction(AbstractPlayer abstractPlayer,
-                                    boolean isFreeToPlayOnce, int magicNumber){
+                                    boolean isFreeToPlayOnce, int magicNumber) {
         this.abstractPlayer = abstractPlayer;
         this.isFreeToPlayOnce = isFreeToPlayOnce;
         this.magicNumber = magicNumber;

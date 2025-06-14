@@ -14,7 +14,7 @@ import static thePackmaster.util.Wiz.atb;
 public class ForcefieldAction extends AbstractGameAction {
 
     private boolean freeToPlayOnce = false;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     private int energyOnUse = -1;
     private int extraUses = 0;
 
@@ -41,11 +41,11 @@ public class ForcefieldAction extends AbstractGameAction {
         }
 
         if (effect + extraUses > 0) {
-            for(int i = 0; i < effect + extraUses; ++i) {
+            for (int i = 0; i < effect + extraUses; ++i) {
                 this.addToBot(new GainBlockAction(this.p, this.p, this.amount));
             }
 
-            if (effect >= 3){
+            if (effect >= 3) {
                 atb(new ApplyPowerAction(p, p, new BlurPower(p, 1)));
             }
 
