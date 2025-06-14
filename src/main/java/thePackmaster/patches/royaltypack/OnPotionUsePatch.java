@@ -15,7 +15,7 @@ import thePackmaster.powers.royaltypack.OnPotionUsePower;
 public class OnPotionUsePatch {
 
     @SpireInsertPatch(
-        locator=Locator.class
+            locator = Locator.class
     )
 
     public static void onPotionUse(PotionPopUp __instance) {

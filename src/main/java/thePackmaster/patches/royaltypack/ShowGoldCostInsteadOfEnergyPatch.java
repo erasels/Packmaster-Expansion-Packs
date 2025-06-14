@@ -1,6 +1,5 @@
 package thePackmaster.patches.royaltypack;
 
-import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -9,7 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.vfx.FastCardObtainEffect;
 import javassist.CtBehavior;
 import thePackmaster.powers.royaltypack.HiredSupportPower;
 
@@ -21,19 +19,19 @@ import thePackmaster.powers.royaltypack.HiredSupportPower;
 public class ShowGoldCostInsteadOfEnergyPatch {
 
     @SpireInsertPatch(
-            locator= Locator.class
+            locator = Locator.class
     )
 
-    public static SpireReturn<Void> ShowGoldCostInsteadOfEnergy(AbstractCard __instance, SpriteBatch __sb){
+    public static SpireReturn<Void> ShowGoldCostInsteadOfEnergy(AbstractCard __instance, SpriteBatch __sb) {
         if (AbstractDungeon.player != null && AbstractDungeon.player.hand.contains(__instance) &&
                 AbstractDungeon.player.hasPower(HiredSupportPower.POWER_ID) &&
                 __instance.costForTurn * 10 <= AbstractDungeon.player.gold &&
                 (__instance.costForTurn > 0 || __instance.costForTurn == -1)) {
             String text;
-            if (__instance.cost == -1){
+            if (__instance.cost == -1) {
                 text = "10 X";
             } else {
-                text = Integer.toString(__instance.costForTurn*10);
+                text = Integer.toString(__instance.costForTurn * 10);
             }
             FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
             BitmapFont font = FontHelper.cardEnergyFont_L;
