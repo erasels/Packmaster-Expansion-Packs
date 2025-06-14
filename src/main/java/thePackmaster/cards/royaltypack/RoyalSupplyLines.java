@@ -13,22 +13,21 @@ public class RoyalSupplyLines extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("RoyalSupplyLines");
 
-    public RoyalSupplyLines(){
+    public RoyalSupplyLines() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override
     public void upp() {
-        //upgradeBaseCost(this.cost - 1);
         this.isInnate = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         Wiz.atb(new ApplyPowerAction(AbstractDungeon.player,
-                                     AbstractDungeon.player,
-                    new RoyalSupplyLinesPower(AbstractDungeon.player, 1)
-                    )
+                        AbstractDungeon.player,
+                        new RoyalSupplyLinesPower(AbstractDungeon.player, 1)
+                )
         );
     }
 }

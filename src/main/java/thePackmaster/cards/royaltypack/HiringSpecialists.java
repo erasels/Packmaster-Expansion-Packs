@@ -13,9 +13,9 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class HiringSpecialists extends AbstractRoyaltyCard {
     public final static String ID = makeID("HiringSpecialists");
 
-    public HiringSpecialists(){
+    public HiringSpecialists() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = block =  5;
+        baseBlock = block = 5;
     }
 
     @Override

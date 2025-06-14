@@ -16,15 +16,14 @@ public class RetainerStrike extends AbstractRoyaltyCard {
     private static final String[] CHOOSE_RETAIN_TEXT = CardCrawlGame.languagePack.getUIString(
             SpireAnniversary5Mod.makeID("RetainerStrikeAction")).TEXT;
 
-    public RetainerStrike(){
+    public RetainerStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.tags.add(CardTags.STRIKE);
         baseDamage = 9;
     }
 
     @Override
-    public void upp()
-    {
+    public void upp() {
         this.upgradeDamage(1);
     }
 

@@ -13,7 +13,6 @@ import thePackmaster.actions.royaltypack.NeedsGoldToBePartiallyDoneAction;
 import thePackmaster.powers.royaltypack.AlchemyTimePower;
 import thePackmaster.util.Wiz;
 
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
@@ -24,7 +23,7 @@ public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
 
     public final static int GOLD_COST = 25;
 
-    public AlchemyTime(){
+    public AlchemyTime() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = BASE_AMOUNT_OF_DRAWS;
@@ -42,13 +41,13 @@ public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
                 Wiz.p(), Wiz.p(), new AlchemyTimePower(Wiz.p(), magicNumber));
 
         Wiz.atb(new NeedsGoldToBePartiallyDoneAction(GOLD_COST,
-                        new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)),
-                        actionArrayAfterPay,
-                        cardStrings.EXTENDED_DESCRIPTION[0]));
+                new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)),
+                actionArrayAfterPay,
+                cardStrings.EXTENDED_DESCRIPTION[0]));
     }
 
     @Override
-    public void onObtainCard(){
+    public void onObtainCard() {
         AbstractDungeon.player.potionSlots += 1;
         AbstractDungeon.player.potions.add(new PotionSlot(AbstractDungeon.player.potionSlots - 1));
         AbstractDungeon.player.gainGold(75);

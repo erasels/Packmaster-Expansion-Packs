@@ -18,7 +18,7 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
 
     public final static String ID = makeID("Soulstone");
 
-    public Soulstone(){
+    public Soulstone() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 5;
         magicNumber = baseMagicNumber = 5;
@@ -37,10 +37,9 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
         dmg(abstractMonster, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 
-    public boolean atBattleStartPreDraw()
-    {
+    public boolean atBattleStartPreDraw() {
         int totalGoldToGain = calculateTotalAmountOfGold();
-        if (totalGoldToGain > 0){
+        if (totalGoldToGain > 0) {
             this.addToBot(new GainGoldAction(totalGoldToGain));
             showGainGoldTextEffect(totalGoldToGain);
         }
@@ -48,23 +47,22 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
         return true;
     }
 
-    private int calculateTotalAmountOfGold(){
+    private int calculateTotalAmountOfGold() {
         ArrayList<AbstractCard> masterDeck = AbstractDungeon.player.masterDeck.group;
         int currentPosition = 0;
-        for (int i = 0; i < masterDeck.size(); i++){
+        for (int i = 0; i < masterDeck.size(); i++) {
             currentPosition = i;
-            if (masterDeck.get(i).cardID == Soulstone.ID){
-                if (masterDeck.get(i).uuid != this.uuid){
+            if (masterDeck.get(i).cardID == Soulstone.ID) {
+                if (masterDeck.get(i).uuid != this.uuid) {
                     return 0;
-                }
-                else {
+                } else {
                     break;
                 }
             }
         }
         int totalAmountOfGold = 0;
-        for (int i = currentPosition; i < masterDeck.size(); i++){
-            if (masterDeck.get(i).cardID == Soulstone.ID){
+        for (int i = currentPosition; i < masterDeck.size(); i++) {
+            if (masterDeck.get(i).cardID == Soulstone.ID) {
                 totalAmountOfGold += masterDeck.get(i).magicNumber;
             }
         }

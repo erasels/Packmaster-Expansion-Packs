@@ -15,7 +15,7 @@ public class TacticalReroll extends AbstractRoyaltyCard {
     public final static int BASE_AMOUNT_OF_RETRIEVES = 2;
     public final static int GOLD_COST = 10;
 
-    public TacticalReroll(){
+    public TacticalReroll() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = BASE_AMOUNT_OF_RETRIEVES;
@@ -31,8 +31,8 @@ public class TacticalReroll extends AbstractRoyaltyCard {
         AbstractGameAction[] actionArrayAfterPay = new AbstractGameAction[0];
 
         Wiz.atb(new NeedsGoldToBePartiallyDoneAction(GOLD_COST,
-                                    new BetterDiscardPileToHandAction(magicNumber),
-                                    actionArrayAfterPay,
-                                    cardStrings.EXTENDED_DESCRIPTION[0]));
+                new BetterDiscardPileToHandAction(magicNumber),
+                actionArrayAfterPay,
+                cardStrings.EXTENDED_DESCRIPTION[0]));
     }
 }

@@ -37,7 +37,7 @@ public class Stratagem extends AbstractRoyaltyCard {
                     new GainStrengthPower(m, this.magicNumber),
                     this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
-        this.addToBot(new ApplyPowerAction(p,p,
+        this.addToBot(new ApplyPowerAction(p, p,
                 new NextTurnHiredSupportPower(p, 1)));
     }
 }

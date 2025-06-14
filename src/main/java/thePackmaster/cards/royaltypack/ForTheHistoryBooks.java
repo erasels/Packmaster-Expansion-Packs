@@ -1,12 +1,8 @@
 package thePackmaster.cards.royaltypack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.actions.royaltypack.ForTheHistoryBooksAction;
-import thePackmaster.powers.royaltypack.ForTheHistoryBooksPower;
-import thePackmaster.powers.royaltypack.NextTurnHiredSupportPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -18,7 +14,7 @@ public class ForTheHistoryBooks extends AbstractRoyaltyCard {
     public final static int AMOUNT_OF_TEMP_STR_AND_DEX = 3;
     public final static int INCREASE_ON_UPGRADE = 2;
 
-    public ForTheHistoryBooks(){
+    public ForTheHistoryBooks() {
         super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = AMOUNT_OF_TEMP_STR_AND_DEX;
         exhaust = true;
@@ -30,7 +26,7 @@ public class ForTheHistoryBooks extends AbstractRoyaltyCard {
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster){
+    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         Wiz.atb(new ForTheHistoryBooksAction(abstractPlayer, this.freeToPlayOnce, magicNumber));
     }
 }
