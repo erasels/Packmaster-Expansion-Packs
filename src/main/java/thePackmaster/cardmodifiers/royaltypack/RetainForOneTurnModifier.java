@@ -1,13 +1,11 @@
 package thePackmaster.cardmodifiers.royaltypack;
 
 import basemod.abstracts.AbstractCardModifier;
-import basemod.cardmods.RetainMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
 
 public class RetainForOneTurnModifier extends AbstractCardModifier {
 
@@ -20,11 +18,10 @@ public class RetainForOneTurnModifier extends AbstractCardModifier {
     }
 
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return  String.format(uiStrings.TEXT[0], rawDescription) + rawDescription;
+        return String.format(uiStrings.TEXT[0], rawDescription) + rawDescription;
     }
 
-    public void onInitialApplication(AbstractCard card)
-    {
+    public void onInitialApplication(AbstractCard card) {
         card.retain = true;
     }
 
