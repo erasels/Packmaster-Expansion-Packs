@@ -17,9 +17,9 @@ public class LoseGoldTextEffect extends AbstractGameEffect {
     private static int totalGold;
     private int gold = 0;
     private boolean reachedCenter = false;
-    private float x;
+    private final float x;
     private float y;
-    private float destinationY;
+    private final float destinationY;
     private static final float WAIT_TIME = 1.0F;
     private float waitTimer = 1.0F;
     private float fadeTimer = 1.0F;
@@ -78,7 +78,7 @@ public class LoseGoldTextEffect extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         if (!this.isDone) {
-            FontHelper.renderFontCentered(sb, FontHelper.buttonLabelFont, Integer.toString(this.gold) + TEXT[0], this.x, this.y, this.color);
+            FontHelper.renderFontCentered(sb, FontHelper.buttonLabelFont, this.gold + TEXT[0], this.x, this.y, this.color);
         }
 
     }
