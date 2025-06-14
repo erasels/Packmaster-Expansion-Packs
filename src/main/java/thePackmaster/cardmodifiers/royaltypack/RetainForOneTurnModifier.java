@@ -12,8 +12,6 @@ public class RetainForOneTurnModifier extends AbstractCardModifier {
     public static String ID = SpireAnniversary5Mod.makeID(RetainForOneTurnModifier.class.getSimpleName());
     private static final UIStrings uiStrings;
 
-    private Color startingGlowColor;
-
     public RetainForOneTurnModifier() {
     }
 
@@ -27,10 +25,6 @@ public class RetainForOneTurnModifier extends AbstractCardModifier {
 
     public boolean removeAtEndOfTurn(AbstractCard card) {
         return true;
-    }
-
-    public void onRemove(AbstractCard card) {
-        card.glowColor = startingGlowColor;
     }
 
     public AbstractCardModifier makeCopy() {
