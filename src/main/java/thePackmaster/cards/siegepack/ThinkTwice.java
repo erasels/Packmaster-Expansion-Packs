@@ -1,9 +1,9 @@
 package thePackmaster.cards.siegepack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.powers.siegepack.NextTurnGainShellPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -11,15 +11,17 @@ import static thePackmaster.cards.siegepack.FlavorConstants.*;
 
 public class ThinkTwice extends AbstractSiegeCard {
     public final static String ID = makeID("ThinkTwice");
-    private static final int COST = 2;
-    private static final int BLOCK = 6;
-    private static final int UPGRADE_BLOCK = 4;
-    private static final int BLOCK_PER_ATTACKER = 5;
+    private static final int COST = 1;
+    private static final int BLOCK = 16;
+    private static final int BLOCK_REDUCTION = 8;
+    private static final int UPG_BLOCK_REDUCTION = -4;
+    private static final int NEXT_TURN_SHELLS_GAIN = 1;
 
     public ThinkTwice() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = BLOCK_PER_ATTACKER;
+        baseMagicNumber = magicNumber = BLOCK_REDUCTION;
+        baseSecondMagic = secondMagic = NEXT_TURN_SHELLS_GAIN;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -28,26 +30,20 @@ public class ThinkTwice extends AbstractSiegeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        //Gain block per enemy that intends to attack.
-        for (AbstractMonster mo : Wiz.getEnemies()) {
-            if (Wiz.isAttacking(mo)) {
-                Wiz.doBlk(magicNumber);
-            }
-        }
+        reduceBlock();
+        Wiz.applyToSelf(new NextTurnGainShellPower(p, secondMagic));
     }
 
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        for (AbstractMonster m : Wiz.getEnemies()) {
-            if (Wiz.isAttacking(m)) {
-                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                break;
-            }
-        }
+    //Base game's ModifyBlockAction seems bugged at 0 block.
+    public void reduceBlock () {
+        if (magicNumber <= 0) { return; }
+
+        baseBlock -= magicNumber;
+        if (baseBlock < 0) { baseBlock = 0; }
     }
 
     @Override
     public void upp() {
-        upgradeBlock(UPGRADE_BLOCK);
+        upgradeMagicNumber(UPG_BLOCK_REDUCTION);
     }
 }

@@ -1,7 +1,7 @@
 {
     "${ModID}:Shelling": {
       "NAME": "Shelling",
-      "DESCRIPTION": "Deal !D! damage, and !${ModID}:sd! damage to a random other enemy. NL Gain !M! ${ModID}:Shell.",
+      "DESCRIPTION": "Gain 1 ${ModID}:Shell for each enemy next turn. NL Deal !D! damage.",
       "FLAVOR": "General purpose insect repellent."
     },
     "${ModID}:Suppress": {
@@ -26,8 +26,8 @@
     },
     "${ModID}:ThinkTwice": {
       "NAME": "Think Twice",
-      "DESCRIPTION": "Gain !B! Block. NL Gain !M! Block for each enemy that intends to attack.",
-      "FLAVOR": "Strength in numbers, maybe."
+      "DESCRIPTION": "Gain !B! Block, then reduce this number by !M!. NL Gain !${ModID}:m2! ${ModID}:Shell next turn.",
+      "FLAVOR": "Shiiieeeld... UP! Prepare!"
     },
     "${ModID}:Shrapnel": {
       "NAME": "Shrapnel",
@@ -37,7 +37,8 @@
     },
     "${ModID}:ShellForge": {
       "NAME": "Shell Forge",
-      "DESCRIPTION": "${ModID}:Shells provide an additional !M! damage. NL At the start of your turn, gain !${ModID}:m2! ${ModID}:Shell.",
+      "DESCRIPTION": "Gain !M! ${ModID}:Shell. NL At the start of your turn, gain !${ModID}:m2! ${ModID}:Shell.",
+      "UPGRADE_DESCRIPTION": "Gain !M! ${ModID}:Shells. NL At the start of your turn, gain !${ModID}:m2! ${ModID}:Shell.",
       "FLAVOR": "Like a bakery but for explosives."
     },
     "${ModID}:DigIn": {

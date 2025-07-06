@@ -11,14 +11,23 @@
     "NAME": "Shell",
     "DESCRIPTIONS": [
       "Your attacks deal #b",
-      " additional damage and consume #b1 #yShell."
+      " additional damage and consume #b1 #yShell. NL #yShells get stronger at the start of each turn after you first gained any."
+    ]
+  },
+  "${ModID}:NextTurnGainShellPower": {
+    "NAME": "Shell production",
+    "DESCRIPTIONS": [
+      "Next turn, gain #b",
+      " #yShell.",
+      " #yShells."
     ]
   },
   "${ModID}:ShellForgeEffectUpPower": {
-    "NAME": "Shell Forge",
+    "NAME": "Shell improvements",
     "DESCRIPTIONS": [
      "#yShells additionally provide #b",
-      " more damage."
+      " more damage. NL At the start of your turn, increase this number by #b",
+      "."
     ]
   },
   "${ModID}:ShellForgeTurnGainPower": {
