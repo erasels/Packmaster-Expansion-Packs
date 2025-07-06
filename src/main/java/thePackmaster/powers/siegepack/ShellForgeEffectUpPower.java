@@ -13,14 +13,29 @@ public class ShellForgeEffectUpPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public static int shellEffectBoost;
+    public static int DAMAGE_BOOST_INCREASE_PER_TURN = 2;
 
     public ShellForgeEffectUpPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         shellEffectBoost = this.amount = amount;
+        amount2 = DAMAGE_BOOST_INCREASE_PER_TURN;
         updateDescription();
     }
 
+    public void atStartOfTurn(){
+        increaseDamageBoost();
+        this.flash();
+    }
+
+    private void increaseDamageBoost() {
+        amount += amount2;
+        updateDescription();
+        //Shell buff auto-updates its damage boost.
+    }
+
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0]
+            + this.amount + DESCRIPTIONS[1]
+            + this.amount2 + DESCRIPTIONS[2];
     }
 }

@@ -3,8 +3,8 @@ package thePackmaster.cards.siegepack;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.siegepack.ShellForgeEffectUpPower;
 import thePackmaster.powers.siegepack.ShellForgeTurnGainPower;
+import thePackmaster.powers.siegepack.ShellPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -13,13 +13,13 @@ import static thePackmaster.cards.siegepack.FlavorConstants.*;
 public class ShellForge extends AbstractSiegeCard {
     public final static String ID = makeID("ShellForge");
     private static final int COST = 1;
-    private static final int SHELL_EFFECT_INCREASE = 2;
-    private static final int UPGRADE_SHELL_EFFECT_INCREASE = 2;
+    private static final int INSTANT_SHELL_GAIN = 1;
+    private static final int UPG_INSTANT_SHELL_GAIN = 1;
     private static final int SHELL_GAIN_PER_TURN = 1;
 
     public ShellForge() {
         super(ID, COST, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = SHELL_EFFECT_INCREASE;
+        baseMagicNumber = magicNumber = INSTANT_SHELL_GAIN;
         baseSecondMagic = secondMagic = SHELL_GAIN_PER_TURN;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
@@ -29,12 +29,12 @@ public class ShellForge extends AbstractSiegeCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.applyToSelf(new ShellForgeEffectUpPower(p, magicNumber));
+        Wiz.applyToSelf(new ShellPower(p, magicNumber));
         Wiz.applyToSelf(new ShellForgeTurnGainPower(p, secondMagic));
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(UPGRADE_SHELL_EFFECT_INCREASE);
+        upgradeMagicNumber(UPG_INSTANT_SHELL_GAIN);
     }
 }

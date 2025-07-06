@@ -10,32 +10,39 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import java.util.Objects;
 
-////REF: Vigor (base game). This is the actual shells, boosting damage and consumed (1 per attack).
+//REF: Vigor (base game). This is the actual shells, boosting damage and consumed (1 per attack).
 public class ShellPower extends AbstractPackmasterPower {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID(ShellPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public int DAMAGE_BOOST = 5;
+    public int INITIAL_DAMAGE_BOOST = 3;
 
     public ShellPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+
+        AbstractPower shellEffectUp = owner.getPower(ShellForgeEffectUpPower.POWER_ID);
+        if (shellEffectUp == null) {
+            applyShellImprovementPower();
+        }
+
         amount2 = updateBoostValue();
         updateDescription();
     }
 
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage + (float)updateBoostValue() : damage;
+        return type == DamageInfo.DamageType.NORMAL ? damage + (float) updateBoostValue() : damage;
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
             this.flash();
-            //Remove only 1 stack, don't change damage.
+            //Remove only 1 stack, don't change damage boost.
             this.addToBot(new ReducePowerAction(this.owner,this.owner, this, 1));
         }
     }
@@ -49,14 +56,21 @@ public class ShellPower extends AbstractPackmasterPower {
     }
 
     private int updateBoostValue() {
+        amount2 = INITIAL_DAMAGE_BOOST;
+
         AbstractPower shellEffectUp = owner.getPower(ShellForgeEffectUpPower.POWER_ID);
         if (shellEffectUp != null) {
-            amount2 = DAMAGE_BOOST + shellEffectUp.amount;
-        } else {
-            amount2 = DAMAGE_BOOST;
+            amount2 += shellEffectUp.amount;
         }
         updateDescription();
         return amount2;
+    }
+
+    private void applyShellImprovementPower() {
+        AbstractPower shellEffectUp = owner.getPower(ShellForgeEffectUpPower.POWER_ID);
+        if (shellEffectUp != null) { return; }
+
+        Wiz.applyToSelf(new ShellForgeEffectUpPower(owner, 0));     //onApplyPower() will be called.
     }
 
     public void updateDescription() {
