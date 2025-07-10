@@ -1,8 +1,8 @@
 {
     "${ModID}:Shelling": {
       "NAME": "Shelling",
-      "DESCRIPTION": "Gain 1 ${ModID}:Shell for each enemy next turn. NL Deal !D! damage.",
-      "FLAVOR": "General purpose insect repellent."
+      "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain Vigor next turn equal to half of unblocked damage dealt.",
+      "FLAVOR": "Yield, there's more where that came from!"
     },
     "${ModID}:Suppress": {
       "NAME": "Suppress",
@@ -21,25 +21,24 @@
     },
     "${ModID}:Logistics": {
       "NAME": "Logistics",
-      "DESCRIPTION": "Lose !M! Weak, Frail and Vulnerable. NL Gain !M! ${ModID}:Shell. NL Draw !${ModID}:m2! cards.",
+      "DESCRIPTION": "Lose 1 Weak, Frail and Vulnerable. NL Gain !M! Vigor. NL Draw !${ModID}:m2! cards.",
       "FLAVOR": "They really make everything run smoother."
     },
     "${ModID}:ThinkTwice": {
       "NAME": "Think Twice",
       "DESCRIPTION": "Gain !B! Block, then reduce this number by !M!. NL Gain !${ModID}:m2! ${ModID}:Shell next turn.",
-      "FLAVOR": "Shiiieeeld... UP! Prepare!"
+      "FLAVOR": "Deflect with full fervor! We shall strike tomorrow!"
     },
     "${ModID}:Shrapnel": {
       "NAME": "Shrapnel",
       "DESCRIPTION": "Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
-      "UPGRADE_DESCRIPTION": "Innate. NL Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
+      "UPGRADE_DESCRIPTION": "Gain !${ModID}:m2! Vigor. NL Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
       "FLAVOR": "Keep the pressure up!"
     },
     "${ModID}:ShellForge": {
       "NAME": "Shell Forge",
-      "DESCRIPTION": "Gain !M! ${ModID}:Shell. NL At the start of your turn, gain !${ModID}:m2! ${ModID}:Shell.",
-      "UPGRADE_DESCRIPTION": "Gain !M! ${ModID}:Shells. NL At the start of your turn, gain !${ModID}:m2! ${ModID}:Shell.",
-      "FLAVOR": "Like a bakery but for explosives."
+      "DESCRIPTION": "At the start of your turn, gain !M! Vigor, +1 for each !${ModID}:m2! Vigor gained while this is active.",
+      "FLAVOR": "Step 2: energetically craft ammunition."
     },
     "${ModID}:DigIn": {
       "NAME": "Dig In",

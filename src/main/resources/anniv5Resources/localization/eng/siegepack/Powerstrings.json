@@ -22,6 +22,13 @@
       " #yShells."
     ]
   },
+  "${ModID}:NextTurnGainVigorPower": {
+    "NAME": "Vigor next turn",
+    "DESCRIPTIONS": [
+      "Next turn, gain #b",
+      " #yVigor."
+    ]
+  },
   "${ModID}:ShellForgeEffectUpPower": {
     "NAME": "Shell improvements",
     "DESCRIPTIONS": [
@@ -36,6 +43,15 @@
       "You gain #b",
        " #yShell at the start of your turn.",
        " #yShells at the start of your turn."
+    ]
+  },
+  "${ModID}:RampingTurnVigorGainPower": {
+    "NAME": "Shell Forge Vigor",
+    "DESCRIPTIONS": [
+      "Next turn, gain #b",
+      " #yVigor, plus an additional #b",
+      ". NL Additional #yVigor is 50% of the #b",
+      " #yVigor gained (from any source) since this buff was applied."
     ]
   },
   "${ModID}:DigInPower": {
