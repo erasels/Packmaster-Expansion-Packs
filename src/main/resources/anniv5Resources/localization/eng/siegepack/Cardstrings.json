@@ -26,8 +26,8 @@
     },
     "${ModID}:ThinkTwice": {
       "NAME": "Think Twice",
-      "DESCRIPTION": "Gain !B! Block, then reduce this number by !M!. NL Gain !${ModID}:m2! ${ModID}:Shell next turn.",
-      "FLAVOR": "Deflect with full fervor! We shall strike tomorrow!"
+      "DESCRIPTION": "Gain !B! Block, affected by Vigor, then lose all Vigor. NL Gain !M! Vigor next turn.",
+      "FLAVOR": "Deflect with full fervor and wait for an opening!"
     },
     "${ModID}:Shrapnel": {
       "NAME": "Shrapnel",
@@ -37,7 +37,7 @@
     },
     "${ModID}:ShellForge": {
       "NAME": "Shell Forge",
-      "DESCRIPTION": "At the start of your turn, gain !M! Vigor, +1 for each !${ModID}:m2! Vigor gained while this is active.",
+      "DESCRIPTION": "At the start of your turn, gain !M! Vigor. Whenever you gain or lose Vigor, increase the gain per turn by !${ModID}:m2!.",
       "FLAVOR": "Step 2: energetically craft ammunition."
     },
     "${ModID}:DigIn": {

@@ -48,10 +48,9 @@
   "${ModID}:RampingTurnVigorGainPower": {
     "NAME": "Shell Forge Vigor",
     "DESCRIPTIONS": [
-      "Next turn, gain #b",
-      " #yVigor, plus an additional #b",
-      ". NL Additional #yVigor is 50% of the #b",
-      " #yVigor gained (from any source) since this buff was applied."
+      "At the start of your turn, gain #b",
+      " #yVigor. NL Whenever you gain or lose Vigor, increase this gain per turn by #b",
+      "."
     ]
   },
   "${ModID}:DigInPower": {

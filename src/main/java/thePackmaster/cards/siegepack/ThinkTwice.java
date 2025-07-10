@@ -1,27 +1,31 @@
 package thePackmaster.cards.siegepack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.siegepack.NextTurnGainShellPower;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import thePackmaster.powers.siegepack.NextTurnGainVigorPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.siegepack.FlavorConstants.*;
+import static thePackmaster.util.Wiz.atb;
 
+//REFS (vigor version) : PlotArmor (grandopeningpack), Subdue (bitingcoldpack)
 public class ThinkTwice extends AbstractSiegeCard {
     public final static String ID = makeID("ThinkTwice");
-    private static final int COST = 1;
-    private static final int BLOCK = 16;
-    private static final int BLOCK_REDUCTION = 8;
-    private static final int UPG_BLOCK_REDUCTION = -4;
-    private static final int NEXT_TURN_SHELLS_GAIN = 1;
+    private static final int COST = 2;
+    private static final int BLOCK = 12;
+    private static final int UPG_BLOCK = 3;
+    private static final int NEXT_TURN_VIGOR_GAIN = 4;
+    private static final int UPG_NEXT_TURN_VIGOR_GAIN = 1;
 
     public ThinkTwice() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = BLOCK_REDUCTION;
-        baseSecondMagic = secondMagic = NEXT_TURN_SHELLS_GAIN;
+        baseBlock = block = BLOCK;
+        baseMagicNumber = magicNumber = NEXT_TURN_VIGOR_GAIN;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -29,21 +33,20 @@ public class ThinkTwice extends AbstractSiegeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        reduceBlock();
-        Wiz.applyToSelf(new NextTurnGainShellPower(p, secondMagic));
-    }
+        AbstractPower currentVigor = p.getPower(VigorPower.POWER_ID);
+        if (currentVigor != null && currentVigor.amount > 0) {
+            atb(new GainBlockAction(p, block + currentVigor.amount));
+            Wiz.removePower(currentVigor);
+        } else {
+            blck();
+        }
 
-    //Base game's ModifyBlockAction seems bugged at 0 block.
-    public void reduceBlock () {
-        if (magicNumber <= 0) { return; }
-
-        baseBlock -= magicNumber;
-        if (baseBlock < 0) { baseBlock = 0; }
+        Wiz.applyToSelf(new NextTurnGainVigorPower(p, magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(UPG_BLOCK_REDUCTION);
+        upgradeBlock(UPG_BLOCK);
+        upgradeMagicNumber(UPG_NEXT_TURN_VIGOR_GAIN);
     }
 }
