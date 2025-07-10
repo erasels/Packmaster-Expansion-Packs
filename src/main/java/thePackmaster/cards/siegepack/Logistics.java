@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import thePackmaster.powers.siegepack.ShellPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import thePackmaster.util.Wiz;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
@@ -20,14 +20,15 @@ import static thePackmaster.util.Wiz.atb;
 public class Logistics extends AbstractSiegeCard {
     public final static String ID = makeID("Logistics");
     private static final int COST = 1;
-    private static final int DEBUFF_REMOVAL_AND_DRAW_AND_SHELL_GAIN = 1;
-    private static final int CARD_DRAW = 1;
+    private static final int DEBUFF_REMOVAL = 1;
+    private static final int VIGOR_GAIN = 5;
+    private static final int CARD_DRAW = 2;
     private static final int UPGRADE_CARD_DRAW = 1;
 
     public Logistics() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = DEBUFF_REMOVAL_AND_DRAW_AND_SHELL_GAIN;
-        baseSecondMagic = secondMagic = magicNumber + CARD_DRAW;
+        baseMagicNumber = magicNumber = VIGOR_GAIN;
+        baseSecondMagic = secondMagic = CARD_DRAW;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -37,14 +38,14 @@ public class Logistics extends AbstractSiegeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         reduceCommonDebuffs(p);
 
-        Wiz.applyToSelf(new ShellPower(p, magicNumber));
+        Wiz.applyToSelf(new VigorPower(p, magicNumber));
         addToBot(new DrawCardAction(secondMagic));
     }
 
     private void reduceCommonDebuffs(AbstractPlayer p) {
-        atb(new ReducePowerAction(p, p, WeakPower.POWER_ID, this.magicNumber));
-        atb(new ReducePowerAction(p, p, FrailPower.POWER_ID, this.magicNumber));
-        atb(new ReducePowerAction(p, p, VulnerablePower.POWER_ID, this.magicNumber));
+        atb(new ReducePowerAction(p, p, WeakPower.POWER_ID, DEBUFF_REMOVAL));
+        atb(new ReducePowerAction(p, p, FrailPower.POWER_ID, DEBUFF_REMOVAL));
+        atb(new ReducePowerAction(p, p, VulnerablePower.POWER_ID, DEBUFF_REMOVAL));
     }
 
     public void triggerOnGlowCheck() {
