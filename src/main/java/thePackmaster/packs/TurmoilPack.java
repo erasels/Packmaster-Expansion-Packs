@@ -29,6 +29,7 @@ public class TurmoilPack extends AbstractCardPack {
         cards.add(BurntOffering.ID);
         cards.add(ForsakenDreams.ID);
         cards.add(TormentedMind.ID);
+        cards.add(Compulsion.ID);
         cards.add(Burden.ID);
         return cards;
     }

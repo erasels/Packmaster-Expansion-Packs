@@ -21,7 +21,7 @@
   },
   "${ModID}:BurntOffering": {
     "NAME": "Burnt Offering",
-    "DESCRIPTION": "${ModID}:Abandon: Colorless or Curse and Exhaust them. NL Deal !D! damage and apply !M! Ignite per ${ModID}:Abandon."
+    "DESCRIPTION": "${ModID}:Abandon: Colorless or Curse and Exhaust them. Deal !D! damage and apply !M! Ignite per ${ModID}:Abandon."
   },
   "${ModID}:ForsakenDreams": {
     "NAME": "Forsaken Dreams",
@@ -30,5 +30,9 @@
   "${ModID}:TormentedMind": {
     "NAME": "Tormented Mind",
     "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. Add 1 *Burden and 1 *Dazed into your hand. Exhaust up to 2 cards in your draw or discard piles."
+  },
+  "${ModID}:Compulsion": {
+    "NAME": "Compulsion",
+    "DESCRIPTION": "{@@}${ModID}:Abandon: Unplayable or 2+ cost. NL Draw 1 card now and next turn per ${ModID}:Abandon.{!Upgrades!|0= NL Exhaust.}"
   }
 }
