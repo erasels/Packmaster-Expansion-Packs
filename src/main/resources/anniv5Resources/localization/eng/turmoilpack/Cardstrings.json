@@ -34,5 +34,9 @@
   "${ModID}:Compulsion": {
     "NAME": "Compulsion",
     "DESCRIPTION": "{@@}${ModID}:Abandon: Unplayable or 2+ cost. NL Draw 1 card now and next turn per ${ModID}:Abandon.{!Upgrades!|0= NL Exhaust.}"
+  },
+  "${ModID}:EternalToil": {
+    "NAME": "Eternal Toil",
+    "DESCRIPTION": "{@@}${ModID}:Abandon: Unupgraded and Upgrade them. Put !M! card{!M!|>1=s} and all Powers from your discard pile into your hand."
   }
 }
