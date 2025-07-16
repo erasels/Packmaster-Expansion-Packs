@@ -9,18 +9,22 @@
   },
   "${ModID}:SpitefulBrand": {
     "NAME": "Spiteful Brand",
-    "DESCRIPTION": "anniv5:Abandon: 1 cost. NL Deal !D! damage. NL Apply !M! Weak and !M! Vulnerable per anniv5:Abandon."
+    "DESCRIPTION": "${ModID}:Abandon: 1 cost. NL Deal !D! damage. NL Apply !M! Weak and !M! Vulnerable per ${ModID}:Abandon."
   },
   "${ModID}:LonelyVigil": {
     "NAME": "Lonely Vigil",
-    "DESCRIPTION": "anniv5:Abandon: Attack. NL Gain !B! Block plus !M! per anniv5:Abandon."
+    "DESCRIPTION": "${ModID}:Abandon: Attack. NL Gain !B! Block plus !M! per ${ModID}:Abandon."
   },
   "${ModID}:LashOut": {
     "NAME": "Lash Out",
-    "DESCRIPTION": "anniv5:Abandon: anniv5:Packless. NL Deal !D! damage X+1 times. Draw !M! card next turn per anniv5:Abandon."
+    "DESCRIPTION": "{@@}${ModID}:Abandon: ${ModID}:Packless. NL Deal !D! damage X+1 times. Draw !M! card{!M!|>1=s} next turn per ${ModID}:Abandon."
   },
   "${ModID}:BurntOffering": {
     "NAME": "Burnt Offering",
-    "DESCRIPTION": "anniv5:Abandon: Colorless/Curse and Exhaust them. NL Deal !D! damage and apply !M! Ignite per anniv5:Abandon."
+    "DESCRIPTION": "${ModID}:Abandon: Colorless or Curse and Exhaust them. NL Deal !D! damage and apply !M! Ignite per ${ModID}:Abandon."
+  },
+  "${ModID}:ForsakenDreams": {
+    "NAME": "Forsaken Dreams",
+    "DESCRIPTION": "{@@}{!Upgrades!|0=Ethereal. NL }${ModID}:Abandon: All. Gain !M! Strength, Dexterity, ${ModID}:Metallicize, and Thorns per card type discarded."
   }
 }
