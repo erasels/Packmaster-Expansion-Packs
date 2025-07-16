@@ -18,5 +18,9 @@
   "${ModID}:LashOut": {
     "NAME": "Lash Out",
     "DESCRIPTION": "anniv5:Abandon: anniv5:Packless. NL Deal !D! damage X+1 times. Draw !M! card next turn per anniv5:Abandon."
+  },
+  "${ModID}:BurntOffering": {
+    "NAME": "Burnt Offering",
+    "DESCRIPTION": "anniv5:Abandon: Colorless/Curse and Exhaust them. NL Deal !D! damage and apply !M! Ignite per anniv5:Abandon."
   }
 }

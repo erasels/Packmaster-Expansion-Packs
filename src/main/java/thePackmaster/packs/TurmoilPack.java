@@ -26,6 +26,7 @@ public class TurmoilPack extends AbstractCardPack {
         cards.add(SpitefulBrand.ID);
         cards.add(LonelyVigil.ID);
         cards.add(LashOut.ID);
+        cards.add(BurntOffering.ID);
         cards.add(Burden.ID);
         return cards;
     }
