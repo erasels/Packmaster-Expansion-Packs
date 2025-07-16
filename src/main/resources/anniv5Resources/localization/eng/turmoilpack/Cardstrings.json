@@ -38,5 +38,9 @@
   "${ModID}:EternalToil": {
     "NAME": "Eternal Toil",
     "DESCRIPTION": "{@@}${ModID}:Abandon: Unupgraded and Upgrade them. Put !M! card{!M!|>1=s} and all Powers from your discard pile into your hand."
+  },
+  "${ModID}:CycleOfRenewal": {
+    "NAME": "Cycle of Renewal",
+    "DESCRIPTION": "At the start of your turn, ${ModID}:Abandon: Starter or Common. Draw 1 card and gain 1 Block per ${ModID}:Abandon."
   }
 }
