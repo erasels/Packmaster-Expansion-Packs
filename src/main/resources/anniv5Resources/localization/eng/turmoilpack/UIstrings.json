@@ -12,5 +12,10 @@
       "A prison of your own making.",
       "Mind Cage"
     ]
+  },
+  "${ModID}:TormentedMindScreen": {
+    "TEXT": [
+      "Exhaust."
+    ]
   }
 }

@@ -26,5 +26,9 @@
   "${ModID}:ForsakenDreams": {
     "NAME": "Forsaken Dreams",
     "DESCRIPTION": "{@@}{!Upgrades!|0=Ethereal. NL }${ModID}:Abandon: All. Gain !M! Strength, Dexterity, ${ModID}:Metallicize, and Thorns per card type discarded."
+  },
+  "${ModID}:TormentedMind": {
+    "NAME": "Tormented Mind",
+    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. Add 1 *Burden and 1 *Dazed into your hand. Exhaust up to 2 cards in your draw or discard piles."
   }
 }
