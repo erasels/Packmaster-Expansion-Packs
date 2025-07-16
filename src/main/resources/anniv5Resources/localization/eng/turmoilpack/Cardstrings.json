@@ -1,0 +1,22 @@
+{
+  "${ModID}:Burden": {
+    "NAME": "Burden",
+    "DESCRIPTION": "Gain !M! Strength."
+  },
+  "${ModID}:DarkPath": {
+    "NAME": "Dark Path",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Burden into your hand."
+  },
+  "${ModID}:SpitefulBrand": {
+    "NAME": "Spiteful Brand",
+    "DESCRIPTION": "anniv5:Abandon: 1 cost. NL Deal !D! damage. NL Apply !M! Weak and !M! Vulnerable per anniv5:Abandon."
+  },
+  "${ModID}:LonelyVigil": {
+    "NAME": "Lonely Vigil",
+    "DESCRIPTION": "anniv5:Abandon: Attack. NL Gain !B! Block plus !M! per anniv5:Abandon."
+  },
+  "${ModID}:LashOut": {
+    "NAME": "Lash Out",
+    "DESCRIPTION": "anniv5:Abandon: anniv5:Packless. NL Deal !D! damage X+1 times. Draw !M! card next turn per anniv5:Abandon."
+  }
+}

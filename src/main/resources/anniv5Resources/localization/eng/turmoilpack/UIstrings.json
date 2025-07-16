@@ -1,0 +1,16 @@
+{
+  "${ModID}:TurmoilPack": {
+    "TEXT": [
+      "Turmoil",
+      "#yAbandon everything by discarding masses of cards in return for powerful benefits.",
+      "modargo",
+      "Card art from MtG"
+    ]
+  },
+  "${ModID}:TurmoilPackHat": {
+    "TEXT": [
+      "A prison of your own making.",
+      "Mind Cage"
+    ]
+  }
+}
