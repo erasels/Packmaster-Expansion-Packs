@@ -1,7 +1,7 @@
 {
   "${ModID}:Burden": {
     "NAME": "Burden",
-    "DESCRIPTION": "Gain !M! Strength."
+    "DESCRIPTION": "Retain. NL Gain !M! Strength."
   },
   "${ModID}:DarkPath": {
     "NAME": "Dark Path",

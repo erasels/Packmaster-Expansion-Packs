@@ -15,6 +15,7 @@ public class Burden extends AbstractTurmoilCard {
     public Burden() {
         super(ID, COST, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         this.magicNumber = this.baseMagicNumber = STRENGTH;
+        this.selfRetain = true;
     }
 
     @Override
