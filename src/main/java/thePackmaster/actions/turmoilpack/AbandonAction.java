@@ -21,11 +21,17 @@ public class AbandonAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        this.isDone = true;
+
         List<AbstractCard> discardedCards = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (this.condition.apply(c)) {
                 discardedCards.add(c);
             }
+        }
+
+        if (discardedCards.isEmpty()) {
+            return;
         }
 
         this.addToTop(new AbstractGameAction() {
@@ -39,7 +45,5 @@ public class AbandonAction extends AbstractGameAction {
         for (int i = 0; i < n; i++) {
             this.addToTop(new DiscardSpecificCardAction(discardedCards.get(n - i - 1)));
         }
-
-        this.isDone = true;
     }
 }
