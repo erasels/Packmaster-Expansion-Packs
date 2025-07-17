@@ -1,10 +1,9 @@
 package thePackmaster.cards.turmoilpack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.unique.EnlightenmentAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.turmoilpack.AbandonAction;
 
@@ -24,8 +23,8 @@ public class Compulsion extends AbstractTurmoilCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new AbandonAction(c -> c.cost == -2 || c.costForTurn >= 2, l -> {
-            this.addToTop(new ApplyPowerAction(m, p, new DrawCardNextTurnPower(m, l.size())));
+        this.addToBot(new EnlightenmentAction(true));
+        this.addToBot(new AbandonAction(c -> c.costForTurn >= 2, l -> {
             this.addToTop(new DrawCardAction(l.size()));
         }));
     }

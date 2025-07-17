@@ -33,7 +33,7 @@
   },
   "${ModID}:Compulsion": {
     "NAME": "Compulsion",
-    "DESCRIPTION": "{@@}${ModID}:Abandon: Unplayable or 2+ cost. NL Draw 1 card now and next turn per ${ModID}:Abandon.{!Upgrades!|0= NL Exhaust.}"
+    "DESCRIPTION": "{@@}${ModID}:Abandon: 2+ cost. Reduce their cost to 1 this combat. Draw 1 card per ${ModID}:Abandon.{!Upgrades!|0= NL Exhaust.}"
   },
   "${ModID}:EternalToil": {
     "NAME": "Eternal Toil",
