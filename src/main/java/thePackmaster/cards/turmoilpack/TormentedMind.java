@@ -41,6 +41,7 @@ public class TormentedMind extends AbstractTurmoilCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DrawCardAction(this.magicNumber));
         this.addToBot(new MakeTempCardInHandAction(new Burden()));
+        this.addToBot(new MakeTempCardInHandAction(new Dazed()));
         this.addToBot(new MultiGroupSelectAction(SCREEN_MSG, (list, map) ->
         {
             List<AbstractCard> l = new ArrayList<>(list);
