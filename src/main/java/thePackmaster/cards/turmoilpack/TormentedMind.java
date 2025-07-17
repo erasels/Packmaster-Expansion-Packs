@@ -47,7 +47,8 @@ public class TormentedMind extends AbstractTurmoilCard {
             List<AbstractCard> l = new ArrayList<>(list);
             Collections.reverse(l);
             for (AbstractCard c : l) {
-                this.addToTop(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
+                CardGroup pile = AbstractDungeon.player.drawPile.group.contains(c) ? AbstractDungeon.player.drawPile : AbstractDungeon.player.discardPile;
+                this.addToTop(new ExhaustSpecificCardAction(c, pile));
             }
         }, EXHAUST, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE));
     }
