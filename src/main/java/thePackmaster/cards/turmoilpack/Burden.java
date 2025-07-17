@@ -8,7 +8,7 @@ import thePackmaster.SpireAnniversary5Mod;
 
 public class Burden extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Burden");
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int STRENGTH = 2;
     private static final int UPGRADE_STRENGTH = 1;
 

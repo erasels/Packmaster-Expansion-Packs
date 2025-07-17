@@ -9,7 +9,7 @@ import thePackmaster.cards.spherespack.AbstractSpheresCard;
 
 public class LonelyVigil extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("LonelyVigil");
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int BLOCK = 12;
     private static final int UPGRADE_BLOCK = 2;
     private static final int EXTRA_BLOCK = 2;
