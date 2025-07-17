@@ -3,6 +3,7 @@ package thePackmaster.cards.turmoilpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,14 +15,15 @@ import thePackmaster.actions.turmoilpack.AbandonAction;
 public class LashOut extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("LashOut");
     private static final int COST = -1;
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int DAMAGE = 6;
+    private static final int UPGRADE_DAMAGE = 3;
     private static final int DRAW = 1;
 
     public LashOut() {
-        super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = DRAW;
+        this.isMultiDamage = true;
     }
 
     @Override
@@ -33,11 +35,11 @@ public class LashOut extends AbstractTurmoilCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         new EasyXCostAction(this, (amount, params) -> {
            for (int i = 0 ; i < amount + 1; i++) {
-               this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+               this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
            }
            return true;
         });
-        this.addToBot(new AbandonAction(c -> SpireAnniversary5Mod.cardParentMap.containsKey(c.cardID), l -> {
+        this.addToBot(new AbandonAction(c -> true, l -> {
             this.addToTop(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber * l.size())));
         }));
     }
