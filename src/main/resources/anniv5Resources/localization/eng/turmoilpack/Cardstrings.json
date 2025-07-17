@@ -9,7 +9,7 @@
   },
   "${ModID}:SpitefulBrand": {
     "NAME": "Spiteful Brand",
-    "DESCRIPTION": "${ModID}:Abandon: 1 cost. NL Deal !D! damage. NL Apply !M! Weak and !M! Vulnerable per ${ModID}:Abandon."
+    "DESCRIPTION": "${ModID}:Abandon: 1 cost. Deal !D! damage. NL Apply !M! Weak and !M! Vulnerable per ${ModID}:Abandon."
   },
   "${ModID}:LonelyVigil": {
     "NAME": "Lonely Vigil",
