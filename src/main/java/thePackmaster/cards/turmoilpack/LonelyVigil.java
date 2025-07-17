@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.turmoilpack.AbandonAction;
-import thePackmaster.cards.spherespack.AbstractSpheresCard;
 
 public class LonelyVigil extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("LonelyVigil");

@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.turmoilpack.AbandonAction;
-import thePackmaster.cards.spherespack.AbstractSpheresCard;
 
 public class SpitefulBrand extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("SpitefulBrand");

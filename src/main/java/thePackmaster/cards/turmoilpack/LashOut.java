@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.EasyXCostAction;
 import thePackmaster.actions.turmoilpack.AbandonAction;
-import thePackmaster.cards.spherespack.AbstractSpheresCard;
 
 public class LashOut extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("LashOut");
