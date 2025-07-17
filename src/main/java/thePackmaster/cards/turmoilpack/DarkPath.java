@@ -8,8 +8,8 @@ import thePackmaster.SpireAnniversary5Mod;
 
 public class DarkPath extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("DarkPath");
-    private static final int COST = 1;
-    private static final int BLOCK = 9;
+    private static final int COST = 0;
+    private static final int BLOCK = 5;
     private static final int UPGRADE_BLOCK = 3;
     private static final int STATUSES = 1;
 
@@ -28,6 +28,6 @@ public class DarkPath extends AbstractTurmoilCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, this.block));
-        this.addToBot(new MakeTempCardInHandAction(new Burden()));
+        this.addToBot(new MakeTempCardInHandAction(new Burden(), this.magicNumber));
     }
 }
