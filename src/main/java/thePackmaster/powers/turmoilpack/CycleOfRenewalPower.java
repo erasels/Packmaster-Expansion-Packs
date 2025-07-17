@@ -23,7 +23,7 @@ public class CycleOfRenewalPower extends AbstractPackmasterPower {
     @Override
     public void atStartOfTurnPostDraw() {
         this.flashWithoutSound();
-        this.addToBot(new AbandonAction(c -> c.rarity == AbstractCard.CardRarity.BASIC || c.rarity == AbstractCard.CardRarity.COMMON, l -> {
+        this.addToBot(new AbandonAction(c -> c.rarity == AbstractCard.CardRarity.BASIC || c.rarity == AbstractCard.CardRarity.COMMON || c.type == AbstractCard.CardType.STATUS,l -> {
             this.addToTop(new GainBlockAction(this.owner, this.amount * l.size()));
             this.addToTop(new DrawCardAction(l.size()));
         }));
