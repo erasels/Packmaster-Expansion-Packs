@@ -1,5 +1,5 @@
 {
-  "${ModID}:CycleOfRenewalPower": {
+  "${ModID}:CycleOfRenewal": {
     "NAME": "Cycle of Renewal",
     "DESCRIPTIONS": [
       "At the start of your turn, #yAbandon: Starter or Common. Draw #b1 card and gain #b{0} #yBlock per #yAbandon."
