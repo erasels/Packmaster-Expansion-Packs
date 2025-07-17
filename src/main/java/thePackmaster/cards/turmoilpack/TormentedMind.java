@@ -50,6 +50,6 @@ public class TormentedMind extends AbstractTurmoilCard {
                 CardGroup pile = AbstractDungeon.player.drawPile.group.contains(c) ? AbstractDungeon.player.drawPile : AbstractDungeon.player.discardPile;
                 this.addToTop(new ExhaustSpecificCardAction(c, pile));
             }
-        }, EXHAUST, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE));
+        }, EXHAUST, true, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE));
     }
 }
