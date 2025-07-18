@@ -16,7 +16,7 @@ public class TurmoilPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public TurmoilPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(1, 1, 1, 1, 1));
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(1, 1, 1, 1, 1, PackSummary.Tags.Discard));
     }
 
     @Override
