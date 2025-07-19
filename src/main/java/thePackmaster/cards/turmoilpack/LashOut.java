@@ -20,7 +20,7 @@ public class LashOut extends AbstractTurmoilCard {
     private static final int DRAW = 1;
 
     public LashOut() {
-        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = DRAW;
         this.isMultiDamage = true;
@@ -33,12 +33,12 @@ public class LashOut extends AbstractTurmoilCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        new EasyXCostAction(this, (amount, params) -> {
-           for (int i = 0 ; i < amount + 1; i++) {
+        this.addToBot(new EasyXCostAction(this, (amount, params) -> {
+           for (int i = 0; i < amount; i++) {
                this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
            }
            return true;
-        });
+        }));
         this.addToBot(new AbandonAction(c -> true, l -> {
             this.addToTop(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber * l.size())));
         }));
