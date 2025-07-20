@@ -33,6 +33,7 @@ public class SpitefulBrand extends AbstractTurmoilCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         this.addToBot(new AbandonAction(c -> c.costForTurn == 1, l -> {
+            if (l.isEmpty()) { return; }
             this.addToTop(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber * l.size(), false)));
             this.addToTop(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber * l.size(), false)));
         }));

@@ -29,6 +29,7 @@ public class ForsakenDreams extends AbstractTurmoilCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new AbandonAction(c -> true, l -> {
+            if (l.isEmpty()) { return; }
             int amount = (int)l.stream().map(c -> c.type).distinct().count();
             this.addToTop(new ApplyPowerAction(p, p, new ThornsPower(p, amount)));
             this.addToTop(new ApplyPowerAction(p, p, new MetallicizePower(p, amount)));

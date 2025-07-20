@@ -41,6 +41,7 @@ public class BurntOffering extends AbstractTurmoilCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new AbandonAction(c -> c.color == CardColor.COLORLESS || c.color == CardColor.CURSE || c.type == CardType.CURSE, l -> {
+            if (l.isEmpty()) { return; }
             this.addToTop(new ApplyPowerAction(m, p, new IgnitePower(m, this.magicNumber * l.size())));
             this.addToTop(new DamageAction(m, new DamageInfo(p, this.damage * l.size(), this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
             Collections.reverse(l);

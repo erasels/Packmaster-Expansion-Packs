@@ -40,6 +40,7 @@ public class LashOut extends AbstractTurmoilCard {
            return true;
         }));
         this.addToBot(new AbandonAction(c -> true, l -> {
+            if (l.isEmpty()) { return; }
             this.addToTop(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber * l.size())));
         }));
     }

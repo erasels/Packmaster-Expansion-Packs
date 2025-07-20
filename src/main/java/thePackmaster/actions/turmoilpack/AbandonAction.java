@@ -30,10 +30,6 @@ public class AbandonAction extends AbstractGameAction {
             }
         }
 
-        if (discardedCards.isEmpty()) {
-            return;
-        }
-
         this.addToTop(new AbstractGameAction() {
             @Override
             public void update() {

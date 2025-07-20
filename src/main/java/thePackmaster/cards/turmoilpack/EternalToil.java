@@ -29,6 +29,7 @@ public class EternalToil extends AbstractTurmoilCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new AbandonAction(c -> !c.upgraded, l -> {
+            if (l.isEmpty()) { return; }
             for (AbstractCard c : l) {
                 if (c.canUpgrade()) {
                     c.upgrade();
