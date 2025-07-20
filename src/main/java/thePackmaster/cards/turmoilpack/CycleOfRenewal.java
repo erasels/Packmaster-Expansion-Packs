@@ -10,7 +10,7 @@ public class CycleOfRenewal extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("CycleOfRenewal");
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
-    private static final int BLOCK = 2;
+    private static final int BLOCK = 1;
 
     public CycleOfRenewal() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
