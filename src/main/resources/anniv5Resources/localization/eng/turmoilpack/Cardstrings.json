@@ -17,7 +17,7 @@
   },
   "${ModID}:LashOut": {
     "NAME": "Lash Out",
-    "DESCRIPTION": "{@@}${ModID}:Abandon: All. Deal !D! damage to ALL enemies X times. Draw !M! card{!M!|>1=s} next turn per ${ModID}:Abandon."
+    "DESCRIPTION": "{@@}${ModID}:Abandon: Skill. Deal !D! damage to ALL enemies X times. Draw !M! card{!M!|>1=s} next turn per ${ModID}:Abandon."
   },
   "${ModID}:BurntOffering": {
     "NAME": "Burnt Offering",
