@@ -6,12 +6,5 @@
       "abandoned"
     ],
     "DESCRIPTION": "Discard all cards in your hand that match the condition. Often paired with a per Abandon effect for each card discarded."
-  },
-  {
-    "PROPER_NAME": "Packless",
-    "NAMES": [
-      "packless"
-    ],
-    "DESCRIPTION": "Cards that are not in any Packmaster pack."
   }
 ]
