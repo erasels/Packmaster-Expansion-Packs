@@ -41,6 +41,6 @@
   },
   "${ModID}:CycleOfRenewal": {
     "NAME": "Cycle of Renewal",
-    "DESCRIPTION": "At the start of your turn, ${ModID}:Abandon: Starter or Common or Status. Draw 1 card and gain !M! Block per ${ModID}:Abandon."
+    "DESCRIPTION": "At the start of your turn, ${ModID}:Abandon: Starter or Common or Status. Draw 1 card per ${ModID}:Abandon."
   }
 }

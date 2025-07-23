@@ -10,11 +10,9 @@ public class CycleOfRenewal extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("CycleOfRenewal");
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
-    private static final int BLOCK = 1;
 
     public CycleOfRenewal() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = BLOCK;
     }
 
     @Override
@@ -24,6 +22,6 @@ public class CycleOfRenewal extends AbstractTurmoilCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-       this.addToBot(new ApplyPowerAction(p, p, new CycleOfRenewalPower(p, this.magicNumber)));
+       this.addToBot(new ApplyPowerAction(p, p, new CycleOfRenewalPower(p)));
     }
 }
