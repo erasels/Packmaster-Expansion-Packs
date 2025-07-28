@@ -37,6 +37,7 @@ public class Soulstone extends AbstractRoyaltyCard implements StartupCard {
         dmg(abstractMonster, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 
+    @Override
     public boolean atBattleStartPreDraw() {
         int totalGoldToGain = calculateTotalAmountOfGold();
         if (totalGoldToGain > 0) {
