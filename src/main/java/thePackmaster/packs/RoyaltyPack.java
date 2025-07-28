@@ -16,7 +16,7 @@ public class RoyaltyPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public RoyaltyPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(3,3,5,2,3, PackSummary.Tags.Discard));
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(2,3,5,2,3));
     }
 
     @Override
