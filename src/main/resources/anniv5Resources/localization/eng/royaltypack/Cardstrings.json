@@ -27,8 +27,8 @@
   },
   "${ModID}:RoyalSupplyLines": {
     "NAME": "Royal Supply Lines",
-    "DESCRIPTION": "At the start of your turn, NL draw 2 cards. At the end of your turn, Retain up to 2 cards.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 2 cards. At the end of your turn, Retain up to 2 cards."
+    "DESCRIPTION": "At the start of your turn, draw 2 cards. NL At the end of your turn, Retain up to 2 cards.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 2 cards. NL At the end of your turn, Retain up to 2 cards."
   },
   "${ModID}:AlchemyTime": {
     "NAME": "Alchemy Time",
@@ -42,6 +42,6 @@
   },
   "${ModID}:ForTheHistoryBooks": {
     "NAME": "For The History Books",
-    "DESCRIPTION": "Next turn, NL gain !M! Temp Str NL and Temp Dex X times, NL and 1 ${ModID}:Hired_Support. NL Exhaust."
+    "DESCRIPTION": "Next turn, gain !M! NL Temporary Strength NL and Temporary Dexterity X times, NL and 1 ${ModID}:Hired_Support. NL Exhaust."
   }
 }
