@@ -1,0 +1,18 @@
+{
+  "${ModID}:JournalPower": {
+    "NAME": "Archaeological Journal",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a card you played this combat to your hand.",
+      "At the start of your turn, add #b",
+      " cards you played this combat to your hand."
+    ]
+  },
+  "${ModID}:ObeliskPower": {
+    "NAME": "Power of the Obelisk",
+    "DESCRIPTIONS": [
+      "When you change stances, Channel a random orb.",
+      "When you change stances, Channel #b",
+      " random orbs."
+    ]
+  }
+}

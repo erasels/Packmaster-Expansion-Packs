@@ -1,0 +1,8 @@
+{
+  "${ModID}:Glyph": {
+    "NAME": "Glyph",
+    "DESCRIPTION": [
+      "#yPassive: Gain #b{0} #bBlock and #yVigor. NL #yEvoke: Gain #b{1} #bBlock and #yVigor."
+    ]
+  }
+}

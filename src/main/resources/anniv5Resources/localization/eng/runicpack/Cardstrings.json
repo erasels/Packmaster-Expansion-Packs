@@ -1,0 +1,33 @@
+{
+"${ModID}:ReadRunes": {
+    "NAME": "Read the Runes",
+    "DESCRIPTION": "Gain !B! Block. NL Enter ${ModID}:Runic."
+},"${ModID}:AncientBlade": {
+    "NAME": "Ancient Blade",
+    "DESCRIPTION": "Deal !D! damage. NL If you channeled an Orb this turn, deal !D! damage again."
+},"${ModID}:MeditationChamber": {
+    "NAME": "Meditation Chamber",
+    "DESCRIPTION": "Channel !M! ${ModID}:glyphs. NL Enter Calm."
+},"${ModID}:AncientTexts": {
+    "NAME": "Ancient Texts",
+    "DESCRIPTION": "Draw !M! cards. NL Enter ${ModID}:Ancient. NL If you channeled an Orb this turn, costs 0."
+},"${ModID}:Journal": {
+    "NAME": "Archaeological Journal",
+    "DESCRIPTION": "At the start of your turn, add a random card you played this combat to your hand."
+},"${ModID}:Chakram": {
+    "NAME": "Chakram",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Enter ${ModID}:Aggression."
+},"${ModID}:Secrets": {
+    "NAME": "Discover Secrets",
+    "DESCRIPTION": "Gain !M! Orb slots. NL Enter ${ModID}:Runic. NL Fill your orb slots with ${ModID}:glyphs. NL Exhaust."
+},"${ModID}:DaringEscape": {
+    "NAME": "Daring Escape",
+    "DESCRIPTION": "Gain !B! Block. NL Channel 2 ${ModID}:glyphs. NL Exit your stance."
+},"${ModID}:RunicSpear": {
+    "NAME": "Runic Spear",
+    "DESCRIPTION": "Deal !D! damage. NL Affected by Focus !M! times and ${ModID}:Lock-on."
+},"${ModID}:AncientObelisk": {
+    "NAME": "Ancient Obelisk",
+    "DESCRIPTION": "Whenever you change stances, channel !M! random orbs. NL Enter ${ModID}:Runic."
+}
+}

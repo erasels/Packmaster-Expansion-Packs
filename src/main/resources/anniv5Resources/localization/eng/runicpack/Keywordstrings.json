@@ -1,0 +1,17 @@
+[
+  {
+    "PROPER_NAME": "Runic",
+    "NAMES": ["runic"],
+    "DESCRIPTION": "At the start of the turn add a card which Channels orbs to your hand with Ethereal and Exhaust. When exited, gain 1 Focus."
+  },
+  {
+    "PROPER_NAME": "Glyph",
+    "NAMES": ["glyph"],
+    "DESCRIPTION": "Orb: At the start of your turn, gain 1 Block and Vigor. On evoke, gain 4 Block and Vigor."
+  },
+  {
+    "PROPER_NAME": "Glyphs",
+    "NAMES": ["glyphs"],
+    "DESCRIPTION": "Orb: At the start of your turn, gain 1 Block and Vigor. On evoke, gain 4 Block and Vigor."
+  }
+]

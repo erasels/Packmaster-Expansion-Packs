@@ -1,0 +1,16 @@
+{
+  "${ModID}:RunicPack": {
+    "TEXT": [
+      "Runic Artifacts",
+      "A strange collection of mysterious artifacts. Utilize orbs and stances together with newfound runic knowledge.",
+      "Dayvig",
+      "Pack Art - Dayvig"
+    ]
+  },
+  "${ModID}:RunicPackHat": {
+    "TEXT": [
+      "The honorary hood symbolizing entry into the Reptomancer order.",
+      "Reptomancer Hood"
+    ]
+  }
+}
