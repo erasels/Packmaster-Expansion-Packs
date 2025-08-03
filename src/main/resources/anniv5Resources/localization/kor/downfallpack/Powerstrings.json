@@ -1,0 +1,40 @@
+{
+  "${ModID}:AwakenDeathPower": {
+    "NAME": "각성 중",
+    "DESCRIPTIONS": [
+      "죽으면 체력을 #b",
+      " 회복하고 이 효과를 제거합니다. 사용되지 않으면 전투 종료 시 절반만큼 회복합니다."
+    ]
+  },
+  "${ModID}:ChronoBoostPower": {
+    "NAME": "시간 가속",
+    "DESCRIPTIONS": [
+      " #b",
+      " 장의 카드를 더 사용하면 힘을 #b",
+      " 얻습니다."
+    ]
+  },
+  "${ModID}:DeEnergizedPower": {
+    "NAME": "에너지 감소",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시 [E] 를 #b",
+      " 잃습니다."
+    ]
+  },
+  "${ModID}:VexVinciblePower": {
+    "NAME": "천하무적",
+    "DESCRIPTIONS": [
+      "한 턴에 체력 감소를 #b",
+      " 로 제한합니다. 발동 이후에 제거됩니다.",
+      "한 턴에 체력 감소를 #b",
+      " 로 제한합니다. #b",
+      " 번 발동 이후에 제거됩니다."
+    ]
+  },
+  "${ModID}:NextTurnGainSlimeCrushPower": {
+    "NAME": "으깨기 준비 중",
+    "DESCRIPTIONS": [
+      "이건 나타나지 않아야 하지, 맞지?"
+    ]
+  }
+}

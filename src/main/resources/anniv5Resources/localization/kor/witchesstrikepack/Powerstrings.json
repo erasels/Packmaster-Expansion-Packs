@@ -1,0 +1,31 @@
+{
+  "${ModID}:MoonlightFlightPower": {
+    "NAME": "달빛의 강",
+    "DESCRIPTIONS": [
+      "턴 시작 시, #y회피 #y상쇄 를 #b1 장 얻습니다.",
+      "턴 시작 시, #y회피 #y상쇄 를 #b", " 장 얻습니다."
+    ]
+  },
+  "${ModID}:FlowoftheSwordPower": {
+    "NAME": "검의 흐름",
+    "DESCRIPTIONS": [
+      "매 턴 처음으로 스킬 카드를 사용할 때마다 카드를 #b1 장 뽑습니다.",
+      "매 턴 처음으로 스킬 카드를 사용할 때마다 카드를 #b",
+      " 장 뽑습니다."
+    ]
+  },
+  "${ModID}:WitchTwistPower": {
+    "NAME": "위치 트위스트",
+    "DESCRIPTIONS": [
+      "스킬 카드를 사용할 때마다 방어도를 #b"," 얻습니다."
+    ]
+  },
+  "${ModID}:LoseFocusPower": {
+    "NAME": "Intensity",
+    "DESCRIPTIONS": [
+      "턴 시작 시 #y밀집을 #b",
+      " 잃습니다.",
+      "무형","턴 시작 시, 다음을 얻습니다: #b"
+    ]
+  }
+}

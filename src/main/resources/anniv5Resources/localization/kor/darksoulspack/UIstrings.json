@@ -1,0 +1,15 @@
+{
+  "${ModID}:DarkSoulsPack": {
+    "TEXT": [
+      "다크 소울",
+      "자신에게 해로운 효과를 주는 다크소울 테마의 팩입니다.",
+      "Doodle"
+    ]
+  },
+  "${ModID}:DarkSoulsPackHat": {
+    "TEXT": [
+      "태양을 믿습니까?",
+      "태양충"
+    ]
+  }
+}

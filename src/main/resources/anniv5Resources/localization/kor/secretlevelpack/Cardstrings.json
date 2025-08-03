@@ -1,0 +1,46 @@
+{
+  "${ModID}:MysteryBox": {
+    "NAME": "미스터리 박스",
+    "DESCRIPTION": "취약을 !M! 부여합니다. NL 무작위 공격 카드를 얻습니다. NL 미지에서 사용했다면 이번 턴에 비용이 0이 됩니다."
+  },
+  "${ModID}:SurpriseAttack": {
+    "NAME": "서프라이즈 공격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화를 !M! 부여합니다. NL 1 턴이라면 카드를 1 장 뽑습니다."
+  },
+  "${ModID}:EscapeClause": {
+    "NAME": "탈출 클로스",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적이 약화나 취약이 있다면 뽑을 카드 더미 맨 위의 카드를 사용합니다."
+  },
+  "${ModID}:Banana": {
+    "NAME": "바나나",
+    "DESCRIPTION": "체력을 !M! 회복합니다. NL 민첩을 !${ModID}:m2! 얻습니다. NL 뽑을 카드 더미 맨 위에 *헛디딤 을 섞어 넣습니다."
+  },
+  "${ModID}:Joust": {
+    "NAME": "마상 시합",
+    "DESCRIPTION": "약화에 걸린 적만 공격할 수 있습니다. NL 피해를 !D! 줍니다. NL 약화를 !M! 부여합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "이 적은 약화가 없어!"
+    ]
+  },
+  "${ModID}:Conglaturation": {
+    "NAME": "축하합니다!",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 테두리가 빛나는 카드를 사용했다면 [E] 를 얻고 카드를 1 장 뽑습니다."
+  },
+  "${ModID}:EnoughTalk": {
+    "NAME": "대화 끝",
+    "DESCRIPTION": "이전 턴에 적이 말을 했다면 비용이 0이 됩니다. NL 약화와 손상을 모두 제거합니다. NL 힘을 !M! 얻습니다."
+  },
+  "${ModID}:DanseMacabre": {
+    "NAME": "죽음의 왈츠",
+    "DESCRIPTION": "턴 종료 시, 약화나 취약에 걸린 적이 체력을 !M! 잃습니다."
+  },
+  "${ModID}:TheDonut": {
+    "NAME": "도넛",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 재밌게 플레이하고 있다면 무작위 파워 카드를 사용합니다!",
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 재밌게 플레이하고 있다면 무작위 강화된 파워 카드를 사용합니다!"
+  },
+  "${ModID}:AchievementHunter": {
+    "NAME": "도전과제 헌터",
+    "DESCRIPTION": "테두리가 빛나는 카드를 사용할 때마다 힘을 1 얻습니다. NL !M! 번 발동하고 나서 민첩을 2 얻습니다."
+  }
+}

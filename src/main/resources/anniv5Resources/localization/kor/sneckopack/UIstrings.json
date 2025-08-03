@@ -1,0 +1,21 @@
+{
+  "${ModID}:SneckoPack": {
+    "TEXT": [
+      "스네코",
+      "왕에게 적합한, 신뢰할 수 없지만 강력한 힘.",
+      "(Gk) Erasels, Pandemonium",
+      "이미지는 다운폴 모드에서 왔습니다."
+    ]
+  },
+  "${ModID}:TwitchScreen": {
+    "TEXT": [
+      "비용을 무작위로 변경합니다."
+    ]
+  },
+  "${ModID}:SneckoPackHat": {
+    "TEXT": [
+      "뭘 봐?",
+      "스네코 눈"
+    ]
+  }
+}

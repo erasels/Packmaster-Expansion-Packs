@@ -1,0 +1,20 @@
+{
+  "${ModID}:JockeyPack": {
+    "TEXT": [
+      "경마 기수",
+      "말 카드를 타서 엄청난 반향을 일으키세요.",
+      "Vex"
+    ]
+  },
+  "${ModID}:JockeyPackHat": {
+    "TEXT": [
+      "알잖습니까, 말을 타기 위함입니다.",
+      "기수"
+    ]
+  },
+  "${ModID}:LuckyModifier": {
+    "TEXT": [
+      "Lucky "
+    ]
+  }
+}

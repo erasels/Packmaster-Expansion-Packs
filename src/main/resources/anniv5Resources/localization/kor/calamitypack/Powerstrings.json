@@ -1,0 +1,6 @@
+{
+  "${ModID}:GrowingFlames": {
+    "NAME": "성장하는 불꽃",
+    "DESCRIPTIONS": ["턴 시작 시, 적 전체에게 #y점화를 #b{0} 부여합니다."]
+  }
+}

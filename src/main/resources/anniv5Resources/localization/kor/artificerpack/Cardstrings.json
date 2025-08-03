@@ -1,0 +1,42 @@
+{
+  "${ModID}:SpellStone": {
+    "NAME": "주문석",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 인접한 카드를 ${ModID}:부스트합니다: NL \"방어도를 !M! 얻습니다\""
+  },
+  "${ModID}:PolarBlessing": {
+    "NAME": "극지의 축복",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 인접한 카드를 보존합니다."
+  },
+  "${ModID}:MysticCycle": {
+    "NAME": "마력 순환",
+    "DESCRIPTION": " !M! 장 까지 카드를 버리고 그만큼 뽑습니다."
+  },
+  "${ModID}:GravitySlam": {
+    "NAME": "중력 강타",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 인접한 카드를 소멸시킵니다."
+  },
+  "${ModID}:GrantSwiftness": {
+  "NAME": "신속 부여",
+  "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 인접한 카드를 ${ModID}:부스트합니다: NL \"카드를 1 장 뽑습니다\""
+  },
+  "${ModID}:WhiteSteelCharm": {
+    "NAME": "새하얀 강철 주문",
+    "DESCRIPTION": "사용불가. NL 인접한 카드를 사용할 때마다 무작위 적에게 피해를 !M! 줍니다."
+  },
+  "${ModID}:EclipseCharm": {
+    "NAME": "일식 주문",
+    "DESCRIPTION": "{@@}사용불가. NL {!Upgrades!|<1= 한 턴에} 인접한 카드를 !M! 번 사용하면, 힘과 민첩을 1 얻습니다."
+  },
+  "${ModID}:Chronobooster": {
+    "NAME": "시간 부스터",
+    "DESCRIPTION": "{@@}사용불가. NL 인접한 카드를 사용할 때마다 두 번 사용하고 소멸시킨 후 이 카드를 {!Upgrades!|>0=버립니다.|@=소멸시킵니다.} "
+  },
+  "${ModID}:MirrorsCurse": {
+    "NAME": "거울의 저주",
+    "DESCRIPTION": "{@@}피해를 !D! 줍니다. NL 인접한 카드를 ${ModID}:수정합니다: \"이 *거울의 *저주 의 복사본을 사용합니다.\" NL 소멸합니다."
+  },
+  "${ModID}:BattleFocus": {
+    "NAME": "전투 집중",
+    "DESCRIPTION": "턴 시작 시 !M! 장 까지 카드를 버리고 그만큼 뽑습니다."
+  }
+}

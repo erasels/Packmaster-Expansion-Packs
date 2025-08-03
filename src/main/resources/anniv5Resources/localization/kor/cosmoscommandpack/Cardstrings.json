@@ -1,0 +1,42 @@
+{
+  "${ModID}:ArcingEnergy": {
+    "NAME": "아크 에너지",
+    "DESCRIPTION": "매 턴 처음으로 ${ModID}:증폭을 발동하면, [E] 를 얻습니다."
+  },
+  "${ModID}:AstralFracture": {
+    "NAME": "아스트랄 조각",
+    "DESCRIPTION": "적 전체에게 ${ModID}:왜곡 을 !M! 부여합니다. NL ${ModID}:증폭 [E] : 이 카드의 복사본을 소멸시킵니다."
+  },
+  "${ModID}:Cognition": {
+    "NAME": "인지",
+    "DESCRIPTION": "카드를 !${ModID}:m2! 장 뽑습니다. NL ${ModID}:증폭 [E] : 뽑기 전에 예지 !M! ."
+  },
+  "${ModID}:EternalStrike": {
+    "NAME": "영원한 불꽃",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 소멸되면, 피해가 !M! 증가한 복사본을 손으로 가져옵니다."
+  },
+  "${ModID}:FalseGrit": {
+    "NAME": "그릇된 끈기",
+    "DESCRIPTION": "카드를 !M! 장 소멸시킵니다. NL 소멸시킨 카드마다 방어도를 !B! 얻습니다. NL ${ModID}:증폭 [E] : 카드를 !M! 장 더 소멸시킵니다."
+  },
+  "${ModID}:HeatEngine": {
+    "NAME": "열기관",
+    "DESCRIPTION": " ${ModID}:증폭 포함, 비용이 2 이상인 카드를 사용할 때마다 힘을 !M! 얻습니다."
+  },
+  "${ModID}:RefractEnergy": {
+    "NAME": "굴절 에너지",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL ${ModID}:증폭 [E] : 막히지 않은 피해의 절반만큼 ${ModID}:왜곡 을 부여합니다."
+  },
+  "${ModID}:RopeTrick": {
+    "NAME": "로프 트릭",
+    "DESCRIPTION": "${ModID}:왜곡 을 !M! 부여합니다. NL 방어도를 !B! 얻습니다."
+  },
+  "${ModID}:Subspace": {
+    "NAME": "부분 공간",
+    "DESCRIPTION": "모든 적이 각자의 ${ModID}:왜곡 만큼 !M! 번 체력을 잃습니다. NL 소멸."
+  },
+  "${ModID}:SubtleKnife": {
+    "NAME": "미세한 칼",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:왜곡 을 !M! 부여합니다. NL ${ModID}:증폭 [E] : 소멸, 이 카드의 복사본을 버린 카드 더미에 넣습니다."
+  }
+}

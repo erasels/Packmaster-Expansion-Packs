@@ -1,0 +1,49 @@
+{
+  "${ModID}:BeyondTheStars": {
+      "NAME": "별 너머",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 공격한 적마다 ${ModID}:정신을 !M! 잃습니다."
+  },
+  "${ModID}:NamelessMist": {
+    "NAME": "이름없는 안개",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:돌풍: 임시체력 을 !M! 얻습니다."
+  },
+  "${ModID}:FlailingTendril": {
+    "NAME": "도리깨질 덩굴손",
+    "DESCRIPTION": "무작위 적에게 피해를 !M! 줍니다. NL ${ModID}:정신을 !M! 얻습니다. NL 이 카드가 비용이 0이라면 두 번 공격합니다."
+  },
+  "${ModID}:PageOfTheDead": {
+    "NAME": "죽음의 페이지",
+    "DESCRIPTION": "${ModID}:정신을 !M! 잃습니다. NL 비용이 2인 무작위 공격 카드를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:정신을 !M! 잃습니다. NL 비용이 2인 무작위 강화된 공격 카드를 얻습니다."
+  },
+  "${ModID}:FamilialCurse": {
+    "NAME": "유전성 저주",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적 전체에게 약화를 !M! 부여합니다. NL ${ModID}:정신을 4 잃습니다."
+  },
+  "${ModID}:GazeTheVoid": {
+    "NAME": "공허 응시",
+    "DESCRIPTION": "무작위 적에게 피해를 !M! 만큼 2 번에, 이번 전투 동안 사용된 *광증 마다 1 번 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL ( ", " 번 공격합니다.)"]
+  },
+  "${ModID}:AllSeeing": {
+    "NAME": "끔찍한 조약",
+    "DESCRIPTION": "턴 시작 시, ${ModID}:정신을 !M! 잃습니다. NL ${ModID}:정신을 잃을 때마다 방어도를 !M! 얻습니다."
+  },
+  "${ModID}:EndOfDays": {
+    "NAME": "종말의 날",
+    "DESCRIPTION": "암흑을 !M! 번 영창합니다. NL 턴 종료 시, 사용하지 않은 [E] 마다 암흑을 1 번 영창합니다."
+  },
+  "${ModID}:RlyehFhtagn": {
+    "NAME": "르뤼에 파탄",
+    "DESCRIPTION": "턴을 종료합니다. NL 다음 턴 임시체력 을 !M! 얻고, [E] [E] 를 얻고, ${ModID}:절망합니다. 소멸."
+  },
+  "${ModID}:StarSpawn": {
+    "NAME": "별 소환",
+    "DESCRIPTION": "피해를 !D! 만큼 두 번 줍니다. NL 체력을 !M! 회복합니다. NL 플라즈마를 1 번 영창합니다. NL 소멸."
+  },
+  "${ModID}:Lunacy": {
+    "NAME": "광증",
+    "DESCRIPTION": "이번 턴에 손에 있는 무작위 카드의 비용이 0이 됩니다. NL 체력을 !M! 잃고 ${ModID}:정신을 1 잃습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "이번 턴에 손에 있는 무작위 카드의 비용이 0이 됩니다. NL ${ModID}:정신을 1 잃습니다. NL 소멸."
+  }
+}

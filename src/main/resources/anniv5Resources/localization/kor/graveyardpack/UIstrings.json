@@ -1,0 +1,25 @@
+{
+  "${ModID}:GraveyardPack": {
+    "TEXT": [
+      "묘지",
+      "카드를 매장하는 팩입니다... 아니면 되살리거나요.",
+      "Charlie"
+    ]
+  },
+  "${ModID}:ReturnExhaustedToDeckAction": {
+    "TEXT": [
+      "뽑을 카드 더미로 되돌릴 카드를 선택하십시오"
+    ]
+  },
+  "${ModID}:PlayFromExhaustAction": {
+    "TEXT": [
+      "사용할 카드를 선택하십시오"
+    ]
+  },
+  "${ModID}:GraveyardPackHat": {
+    "TEXT": [
+      "머리가 가벼워집니다.",
+      "리치화"
+    ]
+  }
+}

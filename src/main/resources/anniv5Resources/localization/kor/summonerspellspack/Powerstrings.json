@@ -1,0 +1,25 @@
+{
+  "${ModID}:SnowballStrikePower": {
+    "NAME": "돌진",
+    "DESCRIPTIONS": [
+      "턴 시작 시, #y눈덩이 #y돌진 을 #b",
+      " 장 얻습니다.",
+      " 장 얻습니다."
+    ]
+  },
+  "${ModID}:TeleportBotPower": {
+    "NAME": "로봇 순간이동",
+    "DESCRIPTIONS": [
+      "턴 시작 시, 버린 카드 더미 맨 밑의 카드를 손으로 가져옵니다.",
+      "턴 시작 시, 버린 카드 더미 맨 밑 #b",
+      " 장의 카드를 손으로 가져옵니다."
+    ]
+  },
+  "${ModID}:GhostingMaelstromPower": {
+    "NAME": "폭풍의 유체화",
+    "DESCRIPTIONS": [
+      "손에 #b6 장 이상의 카드가 있을때 카드를 사용하면, 적 전체에게 피해를 #b",
+      " 줍니다."
+    ]
+  }
+}

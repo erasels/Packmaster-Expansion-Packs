@@ -1,0 +1,47 @@
+{
+  "${ModID}:ShrapnelPower": {
+    "NAME": "파편",
+    "DESCRIPTIONS": [
+      "공격이 막히지 않은 피해 10마다 #y취약을 #b",
+      " 부여하고 #y점화를 #b",
+      " 부여합니다."
+    ]
+  },
+  "${ModID}:ShellPower": {
+    "NAME": "포탄",
+    "DESCRIPTIONS": [
+      "공격 카드가 피해를 #b",
+      " 더 주고 #y포탄이 #b1 감소합니다."
+    ]
+  },
+  "${ModID}:ShellForgeEffectUpPower": {
+    "NAME": "포탄 재련",
+    "DESCRIPTIONS": [
+     "#y포탄이 추가 피해를 #b",
+      " 더 줍니다."
+    ]
+  },
+  "${ModID}:ShellForgeTurnGainPower": {
+    "NAME": "포탄 재련",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 #y포탄을 #b",
+       " 얻습니다.",
+       " 얻습니다."
+    ]
+  },
+  "${ModID}:DigInPower": {
+    "NAME": "땅굴",
+    "DESCRIPTIONS": [
+     "턴 시작 시, #y방어도가 있다면 [E] 를 #b",
+      " 얻습니다."
+    ]
+  },
+  "${ModID}:PrevailPower": {
+    "NAME": "우세",
+    "DESCRIPTIONS": [
+     "한 공격으로 피해를 #b",
+      " 이상으로 줄 때마다 이번 턴에 적이 힘을 #b",
+      " 잃습니다."
+    ]
+  }
+}

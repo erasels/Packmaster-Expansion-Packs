@@ -1,0 +1,18 @@
+{
+  "${ModID}:CosmosCommandPack": {
+    "TEXT": [
+      "우주 통솔",
+      "힘을 얻기 위해 카드를 소멸시키고, ${ModID}:왜곡 을 조절하고, 변하는 코스트를 사용해서 이득을 보세요.",
+      "Enbeon"
+    ]
+  },
+  "${ModID}:CosmosCommandPackHat": {
+    "TEXT": [
+      "최대 7차원까지 볼 수 있습니다!",
+      "뜬 눈"
+    ]
+  },
+  "${ModID}:PurgeModifier": {
+    "TEXT": [" NL stslib:파괴."]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "${ModID}:HalfBlockPower": {
+    "NAME": "방어도 절반",
+    "DESCRIPTIONS": [
+      "다음 #y방어도 카드가 방어도를 #b50% 덜 줍니다!",
+      "다음 #b",
+      " 장의 #y방어도 카드가 방어도를 #b50% 덜 줍니다!"
+    ]
+  },
+  "${ModID}:RecurringThemePower": {
+    "NAME": "사연 회상",
+    "DESCRIPTIONS": [
+      "다음으로 해로운 효과를 완전히 잃으면 #b",
+      " 장의 #y사연 #y회상 을 얻습니다.",
+      " 장의 #y사연 #y회상+ 을 얻습니다."
+    ]
+  },
+  "${ModID}:CharacterDevelopmentPower": {
+    "NAME": "캐릭터 개발",
+    "DESCRIPTIONS": [
+      "해로운 효과를 완전히 잃을 때마다 #y힘을 #b",
+      " 얻습니다."
+    ]
+  },
+  "${ModID}:DenouementPower": {
+    "NAME": "대단원",
+    "DESCRIPTIONS": [
+      "이번 턴, 보유한 #y취약은 내 공격 카드의 피해량도 증가시킵니다.",
+      "#b",
+      " 턴 동안, 보유한 #y취약은 내 공격 카드의 피해량도 증가시킵니다."
+    ]
+  }
+}

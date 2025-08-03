@@ -1,0 +1,51 @@
+{
+  "${ModID}:Ignition": {
+    "NAME": "불 붙이기",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL ${ModID}:섬광을 1 번 영창합니다 ."
+  },
+  "${ModID}:DualBlade": {
+    "NAME": "양날",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 구체를 두 번 발현합니다."
+  },
+  "${ModID}:Sphere": {
+    "NAME": "구체",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:무작위\u00a0구체를 1 번 영창합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "{0} 구체",
+      "방어도를 !B! 얻습니다. NL {0} 를 1 번 영창합니다."
+    ]
+  },
+  "${ModID}:Winterwisp": {
+    "NAME": "겨울줄기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:극지를 1 번 영창합니다. NL 그것이 빈 구체 슬롯을 채웠다면 지속 효과를 발동시킵니다."
+  },
+  "${ModID}:FrozenMagma": {
+    "NAME": "얼어붙은 마그마",
+    "DESCRIPTION": "${ModID}:극지를 1 번 영창합니다. NL 냉기를 1 번 영창합니다. NL ${ModID}:섬광을 1 번 영창합니다. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:극지를 1 번 영창합니다. NL 냉기를 1 번 영창합니다. NL ${ModID}:섬광을 1 번 영창합니다."
+  },
+  "${ModID}:Consolidate": {
+    "NAME": "통합",
+    "DESCRIPTION": "휘발성. NL 첫 번째 구체를 제거합니다. NL 밀집을 1 얻습니다. NL 카드를 1 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "첫 번째 구체를 제거합니다. NL 밀집을 1 얻습니다. NL 카드를 1 장 뽑습니다."
+  },
+  "${ModID}:FrostConversion": {
+    "NAME": "냉기 전환",
+    "DESCRIPTION": "서로 다른 3개 이상의 구체가 있다면 냉기를 1 번 영창합니다. NL 냉기를 1 번 영창합니다.",
+    "UPGRADE_DESCRIPTION": "서로 다른 3개 이상의 구체가 있다면 냉기를 1 번 영창하고 지속 효과를 발동시킵니다. NL 냉기를 1 번 영창합니다."
+  },
+  "${ModID}:Fluctuate": {
+    "NAME": "변동",
+    "DESCRIPTION": "적 전체에게 약화와 취약을 1 부여합니다. NL 서로 다른 3개 이상의 구체가 있다면 !M! 더 부여합니다."
+  },
+  "${ModID}:VoidEngine": {
+    "NAME": "공허 엔진",
+    "DESCRIPTION": "밀집을 !M! 얻습니다. NL 구체 슬롯을 1 얻습니다. NL 뽑을 카드 더미에 공허 를 섞어 넣습니다.",
+    "UPGRADE_DESCRIPTION": "밀집을 !M! 얻습니다. NL 구체 슬롯을 1 얻습니다. NL 버린 카드 더미에 공허 를 섞어 넣습니다."
+  },
+  "${ModID}:ChaosGenerator": {
+    "NAME": "혼돈 생성기",
+    "DESCRIPTION": "턴 시작 시, 무작위 구체를 !M! 번 영창합니다.",
+    "UPGRADE_DESCRIPTION": "턴 시작 시, 무작위 구체를 !M! 번 영창합니다."
+  }
+}
