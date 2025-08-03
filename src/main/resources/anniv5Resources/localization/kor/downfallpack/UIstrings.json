@@ -1,0 +1,15 @@
+{
+  "${ModID}:DownfallPack": {
+    "TEXT": [
+      "다운폴",
+      "각 첨탑의 보스가 포함된 강력한 팩입니다.",
+      "Downfall Team"
+    ]
+  },
+  "${ModID}:DownfallPackHat": {
+    "TEXT": [
+      "이제 당신이 보스입니다.",
+      "작은 중산모"
+    ]
+  }
+}

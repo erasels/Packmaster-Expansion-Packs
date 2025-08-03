@@ -1,0 +1,43 @@
+{
+  "${ModID}:Disorder": {
+    "NAME": "무질서",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:엔트로피를 !M! 얻습니다."
+  },
+  "${ModID}:Wither": {
+    "NAME": "시듦",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:파멸 을 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 적 전체에게 ${ModID}:파멸 을 !M! 부여합니다."
+  },
+  "${ModID}:Collapse": {
+    "NAME": "붕괴",
+    "DESCRIPTION": "${ModID}:불안정. NL 카드를 1 장 뽑습니다. NL 임시 힘을 !M! 얻습니다. NL 취약을 1 얻습니다."
+  },
+  "${ModID}:Construct": {
+    "NAME": "건설",
+    "DESCRIPTION": "${ModID}:불안정. NL 카드를 1 장 뽑습니다. NL 이번 턴에 공격으로부터 피해를 !M! 덜 받습니다. NL 약화를 2 얻습니다."
+  },
+  "${ModID}:Freedom": {
+    "NAME": "자유",
+    "DESCRIPTION": "${ModID}:불안정. NL 방어도를 !B! 얻습니다."
+  },
+  "${ModID}:RuinousPortent": {
+    "NAME": "파멸적인 힘",
+    "DESCRIPTION": "${ModID}:엔트로피를 !M! 얻습니다. NL ${ModID}:돌풍: 무작위 적에게 ${ModID}:파멸 을 1 부여합니다."
+  },
+  "${ModID}:Unbind": {
+    "NAME": "개방",
+    "DESCRIPTION": "손에 있는 공격 카드가 아닌 카드를 모두 버립니다. NL 버린 카드마다 피해를 !D! 줍니다."
+  },
+  "${ModID}:Diffusion": {
+    "NAME": "확산",
+    "DESCRIPTION": "턴 시작 시, ${ModID}:엔트로피를 !M! 얻고 카드를 1 장 뽑습니다."
+  },
+  "${ModID}:Waning": {
+    "NAME": "쇠약",
+    "DESCRIPTION": "${ModID}:불안정. NL ${ModID}:파멸 을 !M! 부여합니다."
+  },
+  "${ModID}:Entanglement": {
+    "NAME": "얽힘",
+    "DESCRIPTION": "해로운 효과를 받을 때마다, 무작위 적에게 ${ModID}:파멸 을 !M! 부여합니다."
+  }
+}

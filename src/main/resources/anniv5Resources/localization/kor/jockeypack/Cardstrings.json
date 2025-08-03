@@ -1,0 +1,52 @@
+{
+  "${ModID}:Horse": {
+    "NAME": "말",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 소멸."
+  },
+  "${ModID}:StartingGun": {
+    "NAME": "스타팅 피스톨",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 뽑을 카드 더미에 *말 을 !M! 장 섞어 넣습니다."
+  },
+  "${ModID}:Trample": {
+    "NAME": "짓밟기",
+    "DESCRIPTION": "약화를 2 부여합니다. NL ${ModID}:돌풍: 적이 체력을 !M! 잃습니다."
+  },
+  "${ModID}:TakeTheLead": {
+    "NAME": "앞장 서기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 5 장 이상의 카드를 사용했다면 피해를 다시 !D! 줍니다."
+  },
+  "${ModID}:ReinIn": {
+    "NAME": "고삐 쥐기",
+    "DESCRIPTION": "카드를 1 장 뽑습니다. NL ${ModID}:돌풍: 방어도를 !M! 얻습니다."
+  },
+  "${ModID}:Homestretch": {
+    "NAME": "최후의 직선 코스",
+    "DESCRIPTION": "*말 을 얻습니다. NL 이번 턴에 카드를 뽑을 때마다 모든 적이 체력을 !M! 잃습니다."
+  },
+  "${ModID}:LuckyHorseshoe": {
+    "NAME": "행운의 말발굽",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 이번 턴에 뽑을 카드 더미의 무작위 카드의 비용이 0 이 됩니다."
+  },
+  "${ModID}:Derby": {
+    "NAME": "더비 경마",
+    "DESCRIPTION": "뽑을 카드 더미에 *말 !M! 장을 섞어 넣습니다. NL 턴 종료 시 6 장 이상의 카드를 사용했다면 힘을 얻습니다."
+  },
+  "${ModID}:Giddyap": {
+    "NAME": "이랴!",
+    "DESCRIPTION": "턴 시작 시 *말 을 얻습니다."
+  },
+  "${ModID}:TheSpin": {
+    "NAME": "회전",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 카드마다 피해를 !M! 더 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " 장 사용됨.)",
+      " 장 사용됨.)"
+    ]
+  },
+  "${ModID}:OffToTheRaces": {
+    "NAME": "경주 시작",
+    "DESCRIPTION": "민첩을 2 얻습니다. NL ${ModID}:돌풍: 힘을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "보존. 민첩을 2 얻습니다. NL ${ModID}:돌풍: 힘을 1 얻습니다."
+  }
+}

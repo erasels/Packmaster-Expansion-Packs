@@ -1,0 +1,24 @@
+{
+  "${ModID}:MagicMissilePower": {
+    "NAME": "마법의 힘",
+    "DESCRIPTIONS": [
+      "#y마법 #y미사일은 이번 턴 피해를 #b",
+      " 더 줍니다."
+    ]
+  },
+  "${ModID}:ArsenalGearPower": {
+    "NAME": "보급 기어",
+    "DESCRIPTIONS": [
+      "다음 #b",
+      " 턴 동안, 무작위 #y특별 또는 #y희귀 카드를 얻고 비용이 이번 전투 동안 #b1 감소합니다."
+    ]
+  },
+  "${ModID}:DaggerstormPower": {
+    "NAME": "단검의 폭풍",
+    "DESCRIPTIONS": [
+      "#y단도 외 카드를 생성할 때마다 #y단도 를 생성하고 사용합니다.",
+      "#y단도 외 카드를 생성할 때마다 #y단도 를 #b",
+      " 장 생성하고 사용합니다."
+    ]
+  }
+}

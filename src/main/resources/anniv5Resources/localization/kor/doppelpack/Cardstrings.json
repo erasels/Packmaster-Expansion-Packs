@@ -1,0 +1,51 @@
+{
+  "${ModID}:Summon": {
+    "NAME": "소환",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL ${ModID}:분신을 1개 영창합니다."
+  },
+  "${ModID}:Arrive": {
+    "NAME": "도착",
+    "DESCRIPTION": "${ModID}:분신을 X 번 영창합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "${ModID}:분신을 X+1 번 영창합니다. NL 소멸."
+  },
+  "${ModID}:Concatenation": {
+    "NAME": "연쇄",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 가장 왼쪽에 있는 공격 카드로 ${ModID}:분신을 영창합니다."
+  },
+  "${ModID}:EmergencyContact": {
+    "NAME": "비상 연락",
+    "DESCRIPTION": "뽑을 카드 더미에서 !M! 장의 카드를 ${ModID}:분신 으로 영창합니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "분신으로 영창할 카드를 선택하십시오",
+      "분신으로 영창할 %d 장의 카드를 선택하십시오"
+    ]
+  },
+  "${ModID}:GrandfatherParadox": {
+    "NAME": "할아버지 역설",
+    "DESCRIPTION": "버린 카드 더미의 !M! 장의 카드로 ${ModID}:분신을 영창합니다. NL 카드의 비용만큼 [E]를 얻습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "분신으로 영창할 카드를 선택하십시오",
+      "분신으로 영창할 %d 장의 카드를 선택하십시오"
+    ]
+  },
+  "${ModID}:Resistance": {
+    "NAME": "저항",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 가장 왼쪽에 있는 스킬 카드로 ${ModID}:분신을 영창합니다."
+  },
+  "${ModID}:Tides": {
+    "NAME": "조수",
+    "DESCRIPTION": "피해를 !D! 만큼 세 번 줍니다. NL 영창된 구체마다 피해를 !M! 줍니다."
+  },
+  "${ModID}:Turbulence": {
+    "NAME": "난기류",
+    "DESCRIPTION": "구체를 영창할 때마다 지속 효과를 !M! 번 발동합니다."
+  },
+  "${ModID}:Vortex": {
+    "NAME": "소용돌이",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 이 카드를 사용하지 않았다면, 이 카드로 ${ModID}:분신을 영창합니다."
+  },
+  "${ModID}:WormHole": {
+    "NAME": "웜홀",
+    "DESCRIPTION": "힘과 민첩을 !M! 얻습니다. NL 힘과 민첩이 ${ModID}:분신에 영향을 줍니다."
+  }
+}

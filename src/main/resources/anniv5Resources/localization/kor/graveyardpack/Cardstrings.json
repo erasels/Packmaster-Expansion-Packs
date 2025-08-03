@@ -1,0 +1,49 @@
+{
+  "${ModID}:GreyBargain": {
+    "NAME": "회색 거래",
+    "DESCRIPTION": "손에 있는 카드를 소멸시켜서 ${ModID}:매장된 카드를 뽑을 카드 더미로 되돌립니다. NL stslib:파괴 를 부여합니다.",
+    "UPGRADE_DESCRIPTION": "손에 있는 카드를 소멸시켜서 ${ModID}:매장된 카드를 뽑을 카드 더미로 되돌립니다. NL stslib:파괴 를 부여합니다. NL 카드를 1 장 뽑습니다.",
+    "EXTENDED_DESCRIPTION": ["소멸시킬 카드가 필요해."]
+  },
+    "${ModID}:ExtraLimbs": {
+    "NAME": "추가 장기",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL 소멸되면 이번 전투 동안 공격 횟수를 1 증가시킵니다. NL 소멸."
+  },
+    "${ModID}:AncientSpear": {
+    "NAME": "고대의 창",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸."
+  },
+    "${ModID}:FleshLikeOak": {
+    "NAME": "거친 살점",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 힘을 !M! 얻습니다. NL 소멸."
+  },
+    "${ModID}:CallOfTheGrave": {
+    "NAME": "무덤의 부름",
+    "DESCRIPTION": "턴 시작 시, 무작위 ${ModID}:매장된 카드를 사용하고 stslib:파괴 합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시, 무작위 ${ModID}:매장된 카드를 사용하고 stslib:파괴 합니다."
+  },
+    "${ModID}:SpontaneousRitual": {
+    "NAME": "이어진 의식",
+    "DESCRIPTION": "손에 있는 카드를 모두 소멸시킵니다. NL 이번 전투 동안 소멸된 카드만큼 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": " *어지러움 3 장을 얻고 손에 있는 카드를 모두 소멸시킵니다. NL 이번 전투 동안 소멸된 카드만큼 피해를 줍니다.",
+  	"EXTENDED_DESCRIPTION": [" NL ( !D! 피해 )"]
+  },
+    "${ModID}:FuneraryJewels": {
+    "NAME": "장례용 보석",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. 카드를 !M! 장 뽑습니다. [E] 를 얻습니다. NL 소멸."
+  },
+    "${ModID}:Tombstone": {
+    "NAME": "묘비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 소멸."
+  },
+    "${ModID}:DarkOfNight": {
+    "NAME": "밤의 어둠",
+    "DESCRIPTION": "이번 턴에 다음으로 소멸하는 카드는 두 번 사용됩니다.",
+    "UPGRADE_DESCRIPTION": "이번 턴에 다음으로 소멸하는 카드 두 장은 두 번 사용됩니다."
+  },
+    "${ModID}:LastGasp": {
+    "NAME": "마지막 숨결",
+    "DESCRIPTION": "휘발성. NL ${ModID}:매장된 카드를 선택해서 사용하고 stslib:파괴 합니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:매장된 카드를 선택해서 사용하고 stslib:파괴 합니다."
+  }
+}

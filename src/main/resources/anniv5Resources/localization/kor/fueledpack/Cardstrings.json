@@ -1,0 +1,50 @@
+{
+  "${ModID}:BurningStrike": {
+    "NAME": "불타는 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 뽑습니다."
+  },
+  "${ModID}:FireOfLife": {
+    "NAME": "생명의 불꽃",
+    "DESCRIPTION": "임시체력 을 !M! 얻습니다."
+  },
+  "${ModID}:Burninate": {
+    "NAME": "태워버리기",
+    "DESCRIPTION": "카드를 ${ModID}:소비해서 피해를 !D! 줍니다."
+  },
+  "${ModID}:Conflagration": {
+    "NAME": "대화재",
+    "DESCRIPTION": "카드를 ${ModID}:소비해서 ${ModID}:점화를 !M! 부여합니다."
+  },
+  "${ModID}:Fuel": {
+    "NAME": "연료",
+    "DESCRIPTION": "카드를 ${ModID}:소비해서 [E] [E] 를 얻습니다. NL 에너지는 다음 턴까지 보존됩니다.",
+    "UPGRADE_DESCRIPTION": "카드를 ${ModID}:소비해서 [E] [E] [E] 를 얻습니다. NL 에너지는 다음 턴까지 보존됩니다."
+  },
+  "${ModID}:InfernalBlaze": {
+    "NAME": "지옥의 불길",
+    "DESCRIPTION": "카드를 ${ModID}:소비해서 적 전체에게 피해를 !D! 주고 ${ModID}:점화를 !M! 부여합니다."
+  },
+  "${ModID}:PlayingWithFire": {
+    "NAME": "불장난",
+    "DESCRIPTION": " ${ModID}:D8 을 !M! 개 굴립니다. NL 7 또는 8 의 눈마다 ${ModID}:점화를 얻습니다."
+  },
+  "${ModID}:PhoenixHeart": {
+    "NAME": "불사조의 심장",
+    "DESCRIPTION": "손에 있는 모든 *뜨거운 *재 를 소멸시킵니다. NL 소멸시킨 카드마다 무작위 카드를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "손에 있는 모든 *뜨거운 *재 를 소멸시킵니다. NL 소멸시킨 카드마다 무작위 강화된 카드를 얻습니다."
+  },
+  "${ModID}:BurnBright": {
+    "NAME": "밝게 타오르기",
+    "DESCRIPTION": "카드를 ${ModID}:소비해서 이번 전투 동안 이미 사용한 파워 카드를 사용합니다. NL 소멸."
+  },
+  "${ModID}:ControlledBurn": {
+    "NAME": "조절된 연소",
+    "DESCRIPTION": "매 턴 처음으로 카드를 ${ModID}:소비하면 [E] 를 얻고 카드를 1 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 카드를 ${ModID}:소비하면 [E] 를 얻고 카드를 1 장 뽑습니다."
+  },
+  "${ModID}:HotAsh": {
+    "NAME": "뜨거운 재",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 체력을 !M! 잃습니다."
+  }
+}

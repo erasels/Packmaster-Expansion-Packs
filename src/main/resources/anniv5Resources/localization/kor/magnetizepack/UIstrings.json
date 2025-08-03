@@ -1,0 +1,25 @@
+{
+  "${ModID}:MagnetizePack": {
+    "TEXT": [
+      "자석",
+      "카드에게 무작위로 ${ModID}:자화를 퍼뜨리고 덱을 에너지 생성기로 바꾸세요.",
+      "wavewhyse☆"
+    ]
+  },
+  "${ModID}:MagnetizePackHat": {
+    "TEXT": [
+      "이젠 영원히 클립을 안 잃어버리겠네요!",
+      "자석"
+    ]
+  },
+  "${ModID}:MagnetizedModifier": {
+    "TEXT": [
+      "자화된",
+      "${ModID}:자화됨. NL "
+    ],
+    "EXTRA_TEXT": [
+      "극성",
+      "#y극성을 10 얻으면 [E] 를 얻습니다."
+    ]
+  }
+}

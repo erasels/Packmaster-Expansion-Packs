@@ -1,0 +1,59 @@
+{
+  "${ModID}:RisingSlashCombo": {
+    "NAME": "상승 베기 연격",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다."
+  },
+  "${ModID}:OverheadSmash": {
+    "NAME": "오버헤드 스매시",
+    "DESCRIPTION": "마지막으로 사용한 카드가 *공격 카드여야 사용할 수 있습니다. NL 피해를 !D! 만큼 !M! 번 줍니다."
+  },
+  "${ModID}:DodgeSlash": {
+    "NAME": "회피 베기",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 가진 방어도가 적이 의도한 공격보다 크다면 [E] 를 얻습니다."
+  },
+  "${ModID}:KinsectHarvestExtract": {
+    "NAME": "킨섹트 조종",
+    "DESCRIPTION": "추출물을 선택합니다. NL 매 턴 시작 시 추출물을 얻습니다."
+  },
+  "${ModID}:CardForSectionOfIG": {
+    "NAME": "선택",
+    "DESCRIPTION": "매턴 시작 시 다음을 얻습니다: ",
+    "EXTENDED_DESCRIPTION": [
+      "붉은 추출물",
+      "흰 추출물",
+      "노란 추출물",
+      "."
+    ]
+  },
+  "${ModID}:Vault": {
+    "NAME": "신속 도약",
+    "DESCRIPTION": "다음 턴, 카드를 !M! 장 추가로 뽑습니다."
+  },
+  "${ModID}:JumpingAdvancingSlash": {
+    "NAME": "전진 베기",
+    "DESCRIPTION": "약화를 !M! 부여합니다. NL 카드를 !M! 장 뽑습니다. NL ${ModID}:공중: *춤 을 얻습니다."
+  },
+  "${ModID}:VaultingDance": {
+    "NAME": "도약의 춤",
+    "DESCRIPTION": "약화를 !M! 부여합니다. NL 카드를 !M! 장 뽑습니다. NL 소멸."
+  },
+  "${ModID}:DescendingSlash": {
+    "NAME": "강하 베기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:공중: [E] [E] 를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "신속한 찌르기"
+    ]
+  },
+  "${ModID}:RisingSpiralSlash": {
+    "NAME": "상승 나선 베기",
+    "DESCRIPTION": "서로 다른 3개의 추출물이 있을 때 사용할 수 있습니다. NL 적 전체에게 피해를 !D! 만큼 5 번 줍니다. NL 카드를 5 장 뽑습니다. NL 무작위로 추출물을 !M! 잃습니다."
+  },
+  "${ModID}:Evade": {
+    "NAME": "회피",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:공중: 카드를 !M! 장 뽑습니다."
+  },
+  "${ModID}:Mounting": {
+    "NAME": "탑승",
+    "DESCRIPTION": "${ModID}:공중 에서 !M! 번 공격하면, 적 전체가 각자 현재 체력의 50% 를 잃습니다."
+  }
+}

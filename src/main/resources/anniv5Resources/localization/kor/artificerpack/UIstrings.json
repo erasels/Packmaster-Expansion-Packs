@@ -1,0 +1,30 @@
+{
+  "${ModID}:ArtificerPack": {
+    "TEXT": [
+      "공학자",
+      "손에서 인접한 카드에 영향을 미치는 마법 주문을 사용하세요.",
+      "Pandemonium"
+    ]
+  },
+  "${ModID}:ArtificerPackHat": {
+    "TEXT": [
+      "이래도 숨을 쉴 수 있다고 약속하죠. 마법입니다.",
+      "거대 수정"
+    ]
+  },
+  "${ModID}:BlockEnchantModifier": {
+    "TEXT": [
+      " NL 방어도를 "," 얻습니다."
+    ]
+  },
+  "${ModID}:LimitedGambleAction": {
+    "TEXT": [
+      "버리기."
+    ]
+  },
+  "${ModID}:DrawEnchantModifier": {
+    "TEXT": [
+      " NL 카드를 "," 장 뽑습니다."," 장 뽑습니다."
+    ]
+  }
+}

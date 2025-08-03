@@ -1,0 +1,49 @@
+{
+  "${ModID}:Lariat": {
+    "NAME": "래리어트",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 두 번 줍니다. NL 다음 사용하는 스킬 카드의 비용이 0이 됩니다."
+  },
+  "${ModID}:GigaDrill": {
+    "NAME": "기가 드릴",
+    "DESCRIPTION": "{@@}피해를 !D! 줍니다. NL 뽑을 카드 더미 맨 위의 !M! 장의 카드가 사용하기 전까지 비용이 0이 됩니다."
+  },
+  "${ModID}:OpeningStrike": {
+    "NAME": "오프닝 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 손에 있는 모든 공격 카드의 비용이 1 감소합니다."
+  },
+  "${ModID}:Withstand": {
+    "NAME": "견뎌내기",
+    "DESCRIPTION": "손의 비용이 !M! 이하인 카드마다 방어도를 !B! 얻습니다."
+  },
+  "${ModID}:Approach": {
+    "NAME": "접근",
+    "DESCRIPTION": "카드를 !M! 장 뽑고 하나를 선택합니다. NL 이번 턴에 비용을 1 감소시킵니다.",
+    "EXTENDED_DESCRIPTION": [
+      "비용 감소시키기."
+    ]
+  },
+  "${ModID}:SheerEffort": {
+    "NAME": "순수한 노력",
+    "DESCRIPTION": "원하는 만큼 카드를 소멸시킵니다. NL 뽑을 카드 더미에 소멸시킨 카드의 수보다 적은 비용의 카드를 사용합니다."
+  },
+  "${ModID}:Overcome": {
+    "NAME": "극복",
+    "DESCRIPTION": "원래 비용이 현재 [E] 보다 큰 카드를 사용하면 방어도를 !M! 얻습니다."
+  },
+  "${ModID}:FurtherBeyond": {
+    "NAME": "더 멀리",
+    "DESCRIPTION": " [E] 가 없을때만 사용할 수 있습니다. NL 피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      "에너지가 너무 많아."
+    ]
+  },
+  "${ModID}:MakeRoom": {
+    "NAME": "공간 만들기",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 손이 가득 찬 상태에서는 가장 왼쪽에 있는 카드를 먼저 사용합니다."
+  },
+  "${ModID}:ActuallyFinalForm": {
+    "NAME": "최종의 형상",
+    "DESCRIPTION": "휘발성. NL 턴 종료 시, 손에 있는 비용이 가장 높은 카드를 사용합니다.",
+    "UPGRADE_DESCRIPTION": "턴 종료 시, 손에 있는 비용이 가장 높은 카드를 사용합니다."
+  }
+}

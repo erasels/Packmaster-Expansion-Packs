@@ -1,0 +1,48 @@
+{
+  "${ModID}:PentupAnger": {
+    "NAME": "억눌린 분노",
+    "DESCRIPTION": "이 카드를 뽑으면 손상을 1 얻습니다. NL 피해를 !D! 주고 손상을 !M! 잃습니다."
+  },
+  "${ModID}:OldCostume": {
+    "NAME": "구식 의상",
+    "DESCRIPTION": "방어도를 !B! 얻어서 어떤 대상에든지 주고 그 대상에게 취약을 1 부여합니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 방어도를 !B! 얻어서 어떤 대상에든지 주고 그 대상에게 취약을 1 부여합니다."
+  },
+  "${ModID}:ToughFront": {
+    "NAME": "완고한 앞잡이",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드로부터 얻는 다음 방어도가 절반이 됩니다."
+  },
+  "${ModID}:FacetiousFacade": {
+    "NAME": "익살맞은 타격",
+    "DESCRIPTION": "방어도를 !B! 얻어서 적에게 줍니다. NL 피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (피해를 !M! 줍니다.)",
+      " NL (방어도를 !M! 줍니다.)"
+    ]
+  },
+  "${ModID}:RecurringTheme": {
+    "NAME": "사연 회상",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음으로 해로운 효과를 완전히 잃으면 *사연 *회상 을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 다음으로 해로운 효과를 완전히 잃으면 *사연 *회상+ 을 얻습니다. NL 소멸."
+  },
+  "${ModID}:Offguard": {
+    "NAME": "부주의",
+    "DESCRIPTION": "이 카드를 뽑을 때마다 방어도를 !B! 얻고 취약을 1 얻습니다. NL 취약을 !M! 잃습니다."
+  },
+  "${ModID}:CharacterDevelopment": {
+    "NAME": "캐릭터 개발",
+    "DESCRIPTION": "힘을 !${ModID}:m2! 얻습니다. NL 해로운 효과를 완전히 잃을 때마다 힘을 !M! 얻습니다."
+  },
+  "${ModID}:TheFLYINGCAR": {
+    "NAME": "하늘을 나는 차",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투에서 해로운 효과를 완전히 잃은 때마다 피해를 !M! 더 줍니다."
+  },
+  "${ModID}:Denouement": {
+    "NAME": "대단원",
+    "DESCRIPTION": "취약을 !M! 부여합니다. NL 이번 턴에 보유한 취약은 내 공격 카드의 피해량도 증가시킵니다."
+  },
+  "${ModID}:TheMANSION": {
+    "NAME": "맨션",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 손상과 취약을 1로 만듭니다."
+  }
+}

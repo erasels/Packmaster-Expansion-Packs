@@ -1,0 +1,47 @@
+{
+  "${ModID}:BuggyBash": {
+    "NAME": "벌레 강타",
+    "DESCRIPTION": "${ModID}:감염. NL 피해를 !D! 줍니다. NL [bugIcon] 마다 피해를 !M! 더 줍니다."
+  },
+  "${ModID}:SwarmSword": {
+    "NAME": "벌레 타격",
+    "DESCRIPTION": "${ModID}:감염. NL 피해를 !D! 줍니다. NL [bugIcon] 마다 카드를 1 장 뽑습니다."
+  },
+  "${ModID}:GrassHop": {
+    "NAME": "메뚜기",
+    "DESCRIPTION": "${ModID}:감염. NL 방어도를 !B! 얻습니다. NL 이 카드가 [bugIcon] 를 얻으면, NL 모든 적이 체력을 !M! 잃습니다."
+  },
+  "${ModID}:Bzzzzz": {
+    "NAME": "왜애앵",
+    "DESCRIPTION": "약화와 취약을 1 부여합니다. NL 카드를 !M! 장 뽑습니다."
+  },
+  "${ModID}:BugOut": {
+    "NAME": "들끓음",
+    "DESCRIPTION": "${ModID}:감염. NL [bugIcon] 마다 힘과 민첩을 1 얻습니다."
+  },
+  "${ModID}:ScarabShield": {
+    "NAME": "풍뎅이 방패",
+    "DESCRIPTION": "${ModID}:감염. NL 방어도를 !B! 얻습니다. NL 카드를 1 장 뽑습니다. NL 이 카드가 [bugIcon] 를 얻으면 NL 인공물을 1 얻습니다."
+  },
+  "${ModID}:Entomology": {
+    "NAME": "곤충학",
+    "DESCRIPTION": "${ModID}:감염. NL 피해를 !D! 줍니다. NL 이 카드에 [bugIcon] 가 있다면 하나를 제거해서 카드를 1 장 뽑고 [E] 를 얻습니다."
+  },
+  "${ModID}:Compoundeyes": {
+    "NAME": "복안",
+    "DESCRIPTION": "선천성. NL 카드를 !M! 장 뽑습니다. NL 다음으로 카드를 사용하고 나서 턴을 종료합니다."
+  },
+  "${ModID}:Bees": {
+    "NAME": "벌이다!!!",
+    "DESCRIPTION": "${ModID}:감염. NL 피해를 !D! 만큼 !M! 줍니다. NL [bugIcon] 마다 피해를 1 더 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      "벌",
+      "이",
+      "다!!!"
+    ]
+  },
+  "${ModID}:LordOfTheFlies": {
+    "NAME": "곤충의 제왕",
+    "DESCRIPTION": "매 턴 카드를 추가로 1 장 뽑습니다. NL 카드가 ${ModID}:감염 카운터를 얻을 때, 추가로 [bugIcon] 얻습니다."
+  }
+}

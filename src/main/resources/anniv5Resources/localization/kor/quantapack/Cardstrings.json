@@ -1,0 +1,47 @@
+{
+  "${ModID}:MissileStrike": {
+    "NAME": "미사일 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적 전체에게 피해를 !${ModID}:sd! 줍니다."
+  },
+  "${ModID}:MagicDart": {
+    "NAME": "마법 다트",
+    "DESCRIPTION": "손에 있는 카드만큼 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 손에 있는 카드만큼 피해를 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL (피해를 !D! 줍니다.)"]
+  },
+  "${ModID}:Cull": {
+    "NAME": "도태",
+    "DESCRIPTION": "피해를 !M! 받습니다. NL 방어도를 !B! 얻습니다."
+  },
+  "${ModID}:Potential": {
+    "NAME": "잠재력",
+    "DESCRIPTION": "임시체력 을 !M! 얻습니다. NL 카드를 !${ModID}:m2! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "임시체력 을 !M! 얻습니다. NL 카드를 !${ModID}:m2! 장 뽑습니다. NL 소멸."
+  },
+  "${ModID}:Aura": {
+    "NAME": "아우라",
+    "DESCRIPTION": "다음 번에 체력을 잃는 것을 막아줍니다."
+  },
+  "${ModID}:MAXPOWER": {
+    "NAME": "최대의 힘",
+    "DESCRIPTION": "힘을 11 까지 증가시킵니다."
+  },
+  "${ModID}:Flow": {
+    "NAME": "플로우",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 마지막으로 사용한 카드가 공격 카드라면 카드를 !M! 장 뽑습니다."
+  },
+  "${ModID}:Manaburst": {
+    "NAME": "마나 버스트",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미에서 무작위 비용이 0인 공격 카드를 가져옵니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미에서 무작위 비용이 0인 공격 카드를 !M! 장 가져옵니다."
+  },
+  "${ModID}:Dominate": {
+    "NAME": "지배력",
+    "DESCRIPTION": "적을 ${ModID}:기절시킵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "적 전체를 ${ModID}:기절시킵니다. NL 소멸."
+  },
+  "${ModID}:IchorGoblet": {
+    "NAME": "이코르 술잔",
+    "DESCRIPTION": "다음 !M! 턴 동안 턴 시작 시 [E] 를 얻습니다. 체력을 잃으면 즉시 모두 얻습니다."
+  }
+}
