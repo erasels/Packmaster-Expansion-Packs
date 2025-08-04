@@ -10,16 +10,18 @@ import thePackmaster.actions.turmoilpack.AbandonAction;
 public class Compulsion extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Compulsion");
     private static final int COST = 1;
+    private static final int DRAW = 1;
+    private static final int UPGRADE_DRAW = 1;
 
     public Compulsion() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.magicNumber = this.baseMagicNumber = DRAW;
         this.selfRetain = true;
-        this.exhaust = true;
     }
 
     @Override
     public void upp() {
-        this.exhaust = false;
+        this.upgradeMagicNumber(UPGRADE_DRAW);
     }
 
     @Override
@@ -35,7 +37,7 @@ public class Compulsion extends AbstractTurmoilCard {
                     c.isCostModified = true;
                 }
             }
-            this.addToTop(new DrawCardAction(l.size()));
+            this.addToTop(new DrawCardAction(l.size() * this.magicNumber));
         }));
     }
 }

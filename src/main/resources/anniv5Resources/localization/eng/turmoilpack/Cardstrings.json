@@ -33,7 +33,7 @@
   },
   "${ModID}:Compulsion": {
     "NAME": "Compulsion",
-    "DESCRIPTION": "{@@}Retain. NL ${ModID}:Abandon: 2+ cost. Reduce their cost to 1 this combat. Draw 1 card per ${ModID}:Abandon.{!Upgrades!|0= NL Exhaust.}"
+    "DESCRIPTION": "{@@}Retain. NL ${ModID}:Abandon: 2+ cost. Reduce their cost to 1 this combat. Draw !M! card{!M!|>1=s} per ${ModID}:Abandon."
   },
   "${ModID}:EternalToil": {
     "NAME": "Eternal Toil",
