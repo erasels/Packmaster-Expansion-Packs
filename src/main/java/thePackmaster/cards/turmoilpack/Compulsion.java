@@ -13,6 +13,7 @@ public class Compulsion extends AbstractTurmoilCard {
 
     public Compulsion() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.selfRetain = true;
         this.exhaust = true;
     }
 
