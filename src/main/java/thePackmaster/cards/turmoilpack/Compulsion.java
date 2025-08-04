@@ -16,7 +16,6 @@ public class Compulsion extends AbstractTurmoilCard {
     public Compulsion() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = DRAW;
-        this.selfRetain = true;
     }
 
     @Override
