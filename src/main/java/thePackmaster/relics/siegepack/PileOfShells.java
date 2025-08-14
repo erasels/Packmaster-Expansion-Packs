@@ -1,8 +1,8 @@
 package thePackmaster.relics.siegepack;
 
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.SiegePack;
-import thePackmaster.powers.siegepack.ShellPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.util.Wiz;
 
@@ -11,7 +11,7 @@ import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 //REFS: DimensionCore (pixiepack), FuelTank (fueledpack)
 public class PileOfShells extends AbstractPackmasterRelic {
     public static final String ID = SpireAnniversary5Mod.makeID("PileOfShells");
-    public static final int SHELLS = 3;
+    public static final int VIGOR_DELIVERIES = 3;
 
     public PileOfShells() {
         super(ID, RelicTier.COMMON, LandingSound.CLINK, SiegePack.ID);
@@ -19,12 +19,12 @@ public class PileOfShells extends AbstractPackmasterRelic {
 
     @Override
     public void onEquip() {
-        this.setCounter(SHELLS);
+        this.setCounter(VIGOR_DELIVERIES);
     }
 
     @Override
     public void atBattleStart() {
-        this.setCounter(SHELLS);
+        this.setCounter(VIGOR_DELIVERIES);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class PileOfShells extends AbstractPackmasterRelic {
         counter--;
 
         //Gain Shell
-        Wiz.applyToSelf(new ShellPower(player, 1));
+        Wiz.applyToSelf(new VigorPower(player, 5));
         flash();
         if (counter <= 0) {
             this.grayscale = true;
@@ -43,10 +43,10 @@ public class PileOfShells extends AbstractPackmasterRelic {
     @Override
     public void onVictory () {
         this.grayscale = false;
-        this.setCounter(SHELLS);
+        this.setCounter(VIGOR_DELIVERIES);
     }
 
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + SHELLS + this.DESCRIPTIONS[1];
+        return this.DESCRIPTIONS[0] + VIGOR_DELIVERIES + this.DESCRIPTIONS[1];
     }
 }
