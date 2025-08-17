@@ -29,7 +29,7 @@ public class Reiji extends AbstractLockonCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new AllEnemyApplyPowerAction(p, magicNumber, (mon) -> new LockOnPower(mon, secondMagic)));
+        addToBot(new AllEnemyApplyPowerAction(p, secondMagic, (mon) -> new LockOnPower(mon, secondMagic)));
         if (magicNumber > 0) {
             Wiz.forAllMonstersLiving(mon -> {
                 if(mon.hasPower(LockOnPower.POWER_ID))
