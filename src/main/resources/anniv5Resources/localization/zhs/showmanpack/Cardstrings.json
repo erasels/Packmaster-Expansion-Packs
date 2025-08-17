@@ -39,8 +39,8 @@
   },
   "${ModID}:Showstopper": {
     "NAME": "压轴大戏！",
-    "DESCRIPTION": "获得 !M! 点格挡 X 次。 NL 如果你拥有100点或以上的格挡，所有敌人失去50点生命。 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 点格挡 X+1 次。 NL 如果你拥有100点或以上的格挡，所有敌人失去50点生命。 消耗 。"
+    "DESCRIPTION": "获得 !B! 点格挡 X 次。 NL 如果你拥有100点或以上的格挡，所有敌人失去50点生命。 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡 X+1 次。 NL 如果你拥有100点或以上的格挡，所有敌人失去50点生命。 消耗 。"
   },
   "${ModID}:SmokeAndMirrors": {
     "NAME": "烟雾与镜像",

@@ -39,8 +39,8 @@
   },
   "${ModID}:Showstopper": {
     "NAME": "명장면",
-    "DESCRIPTION": "방어도를 !M! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸.",
-    "UPGRADE_DESCRIPTION": "방어도를 !M! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸."
+    "DESCRIPTION": "방어도를 !B! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸."
   },
   "${ModID}:SmokeAndMirrors": {
     "NAME": "연기와 거울",
