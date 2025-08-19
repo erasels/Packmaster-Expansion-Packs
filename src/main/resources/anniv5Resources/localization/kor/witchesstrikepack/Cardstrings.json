@@ -1,0 +1,66 @@
+{
+  "${ModID}:Bullet": {
+    "NAME": "회피 상쇄",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 소멸."
+  },
+
+  "${ModID}:CrescentSweep": {
+    "NAME": "힐 토네이도",
+    "DESCRIPTION": "*회피 *상쇄 를 얻습니다. NL 이번 턴에 다른 스킬 카드를 2장 이상 사용했다면 ${ModID}:비전을 1 번 영창합니다.",
+    "UPGRADE_DESCRIPTION": "*회피 *상쇄 를 !M! 장 얻습니다. NL 이번 턴에 다른 스킬 카드를 2장 이상 사용했다면 ${ModID}:비전을 1 번 영창합니다."
+  },
+
+  "${ModID}:FullMoonHalo": {
+    "NAME": "풀 문 헤일로",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 2개 이상의 구체가 있으면, *회피 *상쇄 를 얻습니다."
+  },
+
+  "${ModID}:ChitteringPunt": {
+    "NAME": "불렛 클라이맥스",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 뽑을 카드 더미에서 무작위 스킬 카드를 손으로 가져옵니다.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 두 번 줍니다. NL 뽑을 카드 더미에서 무작위 스킬 카드를 손으로 가져옵니다."
+  },
+
+  "${ModID}:MysticFlourish": {
+    "NAME": "위키드 위브",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:불의\u00a0정령을 1 번 영창합니다. NL 3개 이상의 구체가 있으면, ${ModID}:점화를 !M! 부여합니다."
+  },
+  "${ModID}:CrystalMoonlight": {
+    "NAME": "수정 달빛",
+    "DESCRIPTION": "${ModID}:비전을 1 번 영창합니다. NL 이번 턴에 밀집을 !M! 얻습니다."
+  },
+  "${ModID}:MoonlightBarrage": {
+    "NAME": "검의 흐름",
+    "DESCRIPTION": "휘발성. NL ${ModID}:불의\u00a0정령을 1 번 영창합니다. NL 매 턴 처음으로 스킬 카드를 사용할 때 카드를 1 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:불의\u00a0정령을 1 번 영창합니다. NL 매 턴 처음으로 스킬 카드를 사용할 때 카드를 1 장 뽑습니다."
+  },
+  "${ModID}:HornetWithin": {
+    "NAME": "호넷 위딘",
+    "DESCRIPTION": "손에 있는 스킬 카드마다 피해를 !D! 줍니다. NL ${ModID}:비전을 1 번 영창합니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (스킬 카드 ",
+      " 장).",
+      " 장)."
+    ]
+  },
+
+  "${ModID}:WitchTwist": {
+    "NAME": "위치 트위스트",
+    "DESCRIPTION": "이번 턴에 스킬 카드를 사용할 때마다 방어도를 !M! 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION":"이번 턴에 스킬 카드를 사용할 때마다 방어도를 !M! 얻습니다."
+  },
+  "${ModID}:MoonlightFlight": {
+    "NAME": "달빛의 강",
+    "DESCRIPTION": "구체 슬롯을 !M! 얻습니다. NL 턴 시작 시, *회피 *상쇄 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 구체 슬롯을 !M! 얻습니다. NL 턴 시작 시, *회피 *상쇄 를 얻습니다."
+  },
+  "${ModID}:ScarabPlague": {
+    "NAME": "스페이스 슬립",
+    "DESCRIPTION": "${ModID}:비전을 1 번 영창합니다. NL *회피 *상쇄 를 !M! 장 얻습니다."
+  },
+  "${ModID}:Inscribed": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:새기기. NL "
+    ]
+  }
+}

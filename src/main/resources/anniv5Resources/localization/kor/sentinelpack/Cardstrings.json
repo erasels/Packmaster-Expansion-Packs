@@ -1,0 +1,34 @@
+{
+  "${ModID}:Fume": {
+    "NAME": "발열",
+    "DESCRIPTION": "${ModID}:분노합니다. NL 활력을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL ${ModID}:분노합니다. NL 활력을 !M! 얻습니다."
+  },
+  "${ModID}:Relax": {
+    "NAME": "안정",
+    "DESCRIPTION": "명상합니다. NL 방어도를 !B! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 명상합니다. NL 방어도를 !B! 얻습니다."
+  },
+  "${ModID}:StanceDance": {
+    "NAME": "경지 전환",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 경지에 진입합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 경지에 진입합니다."
+  },
+  "${ModID}:RagnarokNRoll": {
+    "NAME": "라그나로 구르기",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 !M! 번 줍니다. NL 현재 경지에서 벗어납니다."
+  },
+  "${ModID}:Serenity": {
+    "NAME": "맑음",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:침착합니다."
+  },
+  "${ModID}:Swagger": {
+    "NAME": "오만",
+    "DESCRIPTION": "경지에서 턴을 종료하면, 힘과 민첩을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 경지에서 턴을 종료하면, 힘과 민첩을 !M! 얻습니다."
+  },
+  "${ModID}:MoodSwing": {
+    "NAME": "기분 수양",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 2 장 버립니다. NL ${ModID}:분노 중이라면 명상합니다. 아니라면, ${ModID}:분노합니다."
+  }
+}

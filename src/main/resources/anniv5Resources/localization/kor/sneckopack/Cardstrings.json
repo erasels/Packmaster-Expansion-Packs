@@ -1,0 +1,46 @@
+{
+  "${ModID}:Whirligig": {
+  "NAME": "팔랑개비",
+  "DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 줍니다 적의 수만큼 반복합니다."
+  },
+  "${ModID}:Sliiiiither": {
+    "NAME": "미끌미끌",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴, 카드를 추가로 !M! 장 뽑습니다."
+  },
+  "${ModID}:TailFlail": {
+    "NAME": "꼬리 채찍",
+    "DESCRIPTION": "적 전체에게 피해를 !D! - !${ModID}:sd! 만큼 줍니다. NL 손에서 비용이 가장 높은 카드 !M! 장이 ${ModID}:뒤엉킵니다."
+  },
+  "${ModID}:Sneckpot": {
+    "NAME": "스넥팟",
+    "DESCRIPTION": "카드를 X 장 뽑고 ${ModID}:뒤엉킵니다. NL 손에서 비용의 총합의 !M! 배만큼 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": "카드를 X+! 장 뽑고 ${ModID}:뒤엉킵니다. NL 손에서 비용의 총합의 !M! 배만큼 피해를 줍니다."
+  },
+  "${ModID}:WhipNSnapper": {
+    "NAME": "채찍과 이빨",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화나 취약을 무작위로 1 만큼 !M! 번 부여합니다."
+  },
+  "${ModID}:Twitch": {
+    "NAME": "잡아채기",
+    "DESCRIPTION": "카드 !M! 장이 ${ModID}:뒤엉킵니다. NL stslib:Persist !stslib:persist!.",
+    "UPGRADE_DESCRIPTION": "카드가 !M! 장까지 ${ModID}:뒤엉킵니다. NL stslib:Persist !stslib:persist!."
+  },
+  "${ModID}:Gulp": {
+    "NAME": "식사 준비",
+    "DESCRIPTION" : "*탈피 를 이 카드의 비용마다 !M! 얻습니다. 그리고 가능한 한 많이 발동시킵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL *탈피 를 이 카드의 비용마다 !M! 얻습니다. 그리고 가능한 한 많이 발동시킵니다. NL 소멸."
+  },
+  "${ModID}:SnazzySwagger": {
+    "NAME": "멋진 허풍",
+    "DESCRIPTION" : "{@@}카드를 !M! 장 뽑습니다. NL 손에 있는 모든 카드가 anniv5:뒤엉킵니다. NL 카드를 !M! 장 버립니다."
+  },
+  "${ModID}:SneckoEyes": {
+    "NAME": "스네코의 눈",
+    "DESCRIPTION" : "혼란을 얻습니다. NL 턴 시작 시 카드를 !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 혼란을 얻습니다. NL 턴 시작 시 카드를 !M! 장 뽑습니다."
+  },
+  "${ModID}:Shedding": {
+    "NAME": "허물",
+    "DESCRIPTION" : "{@@}턴 시작 시 손에서 비용이 가장 높은 카드 !M! 장이 anniv5:뒤엉킵니다."
+  }
+}

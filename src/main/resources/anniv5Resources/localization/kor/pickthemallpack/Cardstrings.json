@@ -1,0 +1,54 @@
+{
+  "${ModID}:BulkUp": {
+    "NAME": "벌크업",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL stslib:임시체력 을 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업: 최대 체력을 !${ModID}:m2! 얻습니다."]
+  },
+  "${ModID}:GoldenPick": {
+    "NAME": "황금 픽",
+    "DESCRIPTION": "피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업: 덱에 있는 카드마다 !${ModID}:m2! 에 !M! 를 더한만큼 *골드 를 얻습니다."]
+  },
+  "${ModID}:DeckCheck": {
+    "NAME": "덱 체크",
+    "DESCRIPTION": "뽑을 카드와 버린 카드 더미 중 카드 최댓값만큼 피해를 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업: 다른 카드들을 {0} 를 가지고 얻습니다.", " NL (피해를 !D! 줍니다.)"]
+  },
+  "${ModID}:BigBoots": {
+    "NAME": "거대 장화",
+    "DESCRIPTION": "뽑을 카드 또는 버린 카드 더미에 !${ModID}:m2! 장 이상이 있다면 카드를 !M! 장 뽑습니다. NL 카드를 1 장 뽑습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업: *스택 을 얻습니다."]
+  },
+  "${ModID}:PackGear": {
+    "NAME": "팩 기어",
+    "DESCRIPTION": "뽑을 카드와 버린 카드 더미의 총 카드마다 1에 1을 더한만큼 ${ModID}:금속화를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업: *합하기 를 얻습니다.", " NL ( *금속화를 !${ModID}:m2! 얻습니다.)"]
+  },
+  "${ModID}:TouchedByFlame": {
+    "NAME": "불꽃으로 인한 화상",
+    "DESCRIPTION": "${ModID}:점화를 !M! 부여합니다. NL 약화를 !${ModID}:m2! 부여합니다. NL 취약을 !${ModID}:m2! 부여합니다.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업: 최대 체력을 {0} 잃습니다."]
+  },
+  "${ModID}:BurningFists": {
+    "NAME": "불타는 주먹",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업: 체력을 !${ModID}:m2! 잃습니다."]
+  },
+  "${ModID}:GrabAndGo": {
+    "NAME": "잡고 놓아주기",
+    "DESCRIPTION": "사용불가. 선천성.",
+    "UPGRADE_DESCRIPTION": "사용불가.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업/제거됨: *물음표 *카드 를 얻습니다/잃습니다. NL 막 보스 처치 후 제거됩니다.", "사용불가. NL 선천성."]
+  },
+  "${ModID}:Transmogrifier": {
+    "NAME": "변화 성소",
+    "DESCRIPTION": "사용불가. NL stslib:개전: ${ModID}:최하희귀도 카드를 영구적으로 변화시킵니다.",
+    "UPGRADE_DESCRIPTION": "사용불가. 휘발성. NL stslib:개전: ${ModID}:최하희귀도 카드를 영구적으로 변화시킵니다.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업: *타격 을 얻습니다."]
+  },
+  "${ModID}:DarkBargain": {
+    "NAME": "어둠의 거래",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. 소멸.",
+    "EXTENDED_DESCRIPTION": [" NL ${ModID}:픽업: 무작위 포션을 얻고, 무작위 카드를 강화하고, 무작위 카드와 *상처 를 얻습니다.", "카드를 !M! 장 뽑습니다. NL 소멸."]
+  }
+}

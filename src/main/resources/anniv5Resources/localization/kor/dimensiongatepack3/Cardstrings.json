@@ -1,0 +1,52 @@
+{
+  "${ModID}:Knighthood": {
+    "NAME": "기사도",
+    "DESCRIPTION": "체력을 !M! 잃습니다. NL 손에서 영구적으로 강화할 카드를 선택합니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "영구적으로 강화."
+    ]
+  },
+  "${ModID}:Inferno": {
+    "NAME": "지옥불길",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 주고 ${ModID}:점화를 !M! 부여합니다. NL *화상 을 2 장 얻습니다."
+  },
+  "${ModID}:Minniegun": {
+    "NAME": "미니건",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL *잼 을 뽑을 카드 더미에 섞어 넣습니다."
+  },
+  "${ModID}:Ouroboros": {
+    "NAME": "우로보로스",
+    "DESCRIPTION": "매 턴 처음으로 피해를 완전히 방어할 때마다 힘을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 피해를 완전히 방어할 때마다 힘을 1 얻습니다."
+  },
+  "${ModID}:Corset": {
+    "NAME": "코르셋",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *잼 을 얻습니다."
+  },
+  "${ModID}:Jam": {
+    "NAME": "잼",
+    "DESCRIPTION": "피해를 3 입습니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+  "${ModID}:MantisStrike": {
+    "NAME": "사마귀 타격",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 이번 턴에 피해를 완전히 방어할 때마다 반복합니다."
+  },
+  "${ModID}:RestorationDetonation": {
+    "NAME": "폭발하는 회복",
+    "DESCRIPTION": "체력을 !M! 회복합니다. NL 적이 회복량의 두 배만큼 체력을 잃습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "체력을 !M! 회복합니다. NL 적이 회복량의 세 배만큼 체력을 잃습니다. NL 소멸."
+  },
+  "${ModID}:SelfWound": {
+    "NAME": "자기 부상",
+    "DESCRIPTION": "피해를 3 입습니다. NL 임시체력 을 !M! 얻습니다."
+  },
+  "${ModID}:SignInBlood": {
+    "NAME": "피의 서약",
+    "DESCRIPTION": "피해를 3 입습니다. NL 카드를 3 장 뽑습니다. NL 임시 힘을 !M! 얻습니다."
+  },
+  "${ModID}:SpreadingSpores": {
+    "NAME": "퍼져나가는 포자",
+    "DESCRIPTION": "휘발성. NL 가시를 !M! 얻습니다. NL stslib:임시체력 을 !M! 얻습니다. NL 이 카드의 복사본을 뽑을 카드 더미에 섞어 넣습니다.",
+    "UPGRADE_DESCRIPTION": "가시를 !M! 얻습니다. NL stslib:임시체력 을 !M! 얻습니다. NL 이 카드의 복사본을 뽑을 카드 더미에 섞어 넣습니다."
+  }
+}

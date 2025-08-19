@@ -21,6 +21,7 @@ import thePackmaster.util.Wiz;
 import java.util.Collections;
 import java.util.List;
 
+@AbstractCardModifier.SaveIgnore
 public abstract class AbstractInsectGlaiveCard extends AbstractPackmasterCard {
     public static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("EssenceNoticeMod"));
 

@@ -1,0 +1,16 @@
+{
+  "${ModID}:GeomorphologyPower": {
+    "NAME": "지형학",
+    "DESCRIPTIONS": [
+      "카드를 #y소멸시키거나 구체를 #y영창할 때마다 무작위 적에게 #y페트라를 #b",
+      " 부여합니다."
+    ]
+  },
+  "${ModID}:PetraPower": {
+    "NAME": "페트라",
+    "DESCRIPTIONS": [
+      "이 대상을 공격할 때마다, 막히지 않은 피해의 #b",
+      "% 를 #y방어도로 다음 턴에 얻습니다."
+    ]
+  }
+}

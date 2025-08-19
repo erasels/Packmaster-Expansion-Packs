@@ -1,0 +1,16 @@
+{
+  "${ModID}:SummonerSpellsPack": {
+    "TEXT": [
+      "소환사의 주문",
+      "엄청난 카드들로 엄청난 피해를 입히는 리그 오브 레전드 카드들입니다.",
+      "MaybeLater_x",
+      "원작은 #b라이엇 #b게임즈 가 제작한 #b리그 #b오브 #b레전드 입니다."
+    ]
+  },
+  "${ModID}:SummonerSpellsPackHat": {
+    "TEXT": [
+      "크기가 전부가 아니야.",
+      "티모 모자"
+    ]
+  }
+}

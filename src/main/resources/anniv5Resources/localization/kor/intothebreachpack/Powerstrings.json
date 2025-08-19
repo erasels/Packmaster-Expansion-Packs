@@ -1,0 +1,31 @@
+{
+  "${ModID}:AcidPower": {
+    "NAME": "A.C.I.D.",
+    "DESCRIPTIONS": [
+      "이번 턴에 공격으로부터 피해를 두 배로 받습니다.",
+      "#b",
+      " 턴 동안 공격으로부터 피해를 두 배로 받습니다."
+    ]
+  },
+  "${ModID}:FieldResearchPower": {
+    "NAME": "현장 연구",
+    "DESCRIPTIONS": [
+      "적에게 해로운 효과를 부여할 때마다 #y힘을 #b",
+      " 얻습니다."
+    ]
+  },
+  "${ModID}:VoidShockPower": {
+    "NAME": "공허 충격기",
+    "DESCRIPTIONS": [
+      "적이 방어도에 막히는 피해를 줄 경우, 피해를 #b",
+      " 돌려줍니다."
+    ]
+  },
+  "${ModID}:StormGenPower": {
+    "NAME": "폭풍 생성기",
+    "DESCRIPTIONS": [
+      "턴 종료 시, 해로운 효과를 가진 적마다 #y전기를 #b",
+      " 번 영창합니다."
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "${ModID}:FlyingSwords": {
+    "NAME": "비행검",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 두 번 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL stslib:Startup: ${ModID}:풍화를 !M! 얻습니다."
+    ],
+    "FLAVOR": "말도 안 돼!"
+  },
+  "${ModID}:GeoDaRay": {
+    "NAME": "대지의 일격",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL ${ModID}:풍화와 ${ModID}:정확 을 !M! 얻습니다.",
+    "FLAVOR": "준비하세요!"
+  },
+  "${ModID}:Overpressure": {
+    "NAME": "억압",
+    "DESCRIPTION": "${ModID}:풍화를 !M! 얻습니다. NL ${ModID}:손상을 !m2! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:최초:",
+      " 방어도를 !B! 얻습니다.",
+      " NL "
+    ],
+    "FLAVOR": "감히.. 나에게 반항해?!"
+  },
+  "${ModID}:TradeWinds": {
+    "NAME": "무역풍",
+    "DESCRIPTION": "{@@}${ModID}:발견합니다 an{!Upgrades!|>0= 강화된} 공격 카드를. NL 일반 등급이면, 체력을 !M! 회복합니다. NL 희귀 등급이면, 골드를 !${ModID}:m2! 잃습니다. NL 소멸.",
+    "FLAVOR": "주인에게 돌아와라! 검이여!"
+  },
+  "${ModID}:TempestOfStrikes": {
+    "NAME": "타격의 폭풍",
+    "DESCRIPTION": "덱에 있는 2 장의 공격 카드마다 피해를 !D! 주고 ${ModID}:묶음 을 부여합니다",
+    "EXTENDED_DESCRIPTION": [
+      " (",
+      " 번)",
+      ". NL 소멸."
+    ],
+    "FLAVOR": "공포에 잠기거라!"
+  },
+  "${ModID}:FallOver": {
+    "NAME": "넘어짐",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 !${ModID}:m2! 얻습니다. NL 적 전체에게 ${ModID}:묶음 을 !M! 부여합니다. NL 소멸.",
+    "FLAVOR": "Stay still... and let me slay you!"
+  },
+  "${ModID}:FeedingWinds": {
+    "NAME": "바람 모으기",
+    "DESCRIPTION": "{@@}카드를 소멸시키고 [E] {!${ModID}:m2!|>0=와 !${ModID}:m2! ${ModID}:풍화} 를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL stslib:Startup: 무작위 !M! 장의 공격 카드를 ${ModID}:수정합니다: \"힘을 1 얻습니다\""
+    ],
+    "FLAVOR": "내가 얼마나 강한지 한번 보자!"
+  },
+  "${ModID}:EscalatingBreeze": {
+    "NAME": "상승 기류",
+    "DESCRIPTION": "{@@}이번 턴에 !M! 장까지 카드를 보존합니다. NL 이 방법으로 보존된 공격 카드의 비용이 다음 턴 !${ModID}:m2! 감소합니다.",
+    "FLAVOR": "잊지 않을거다!"
+  },
+  "${ModID}:GaleForce": {
+    "NAME": "강풍",
+    "DESCRIPTION": "{@@}공격 카드를 사용할 때마다 그 비용만큼 ${ModID}:풍화를 얻습니다{!M!|>0= +!M!}. NL 비용이 1 이상인 공격 카드를 사용할 때마다 카드를 !${ModID}:m2! 장 뽑습니다.",
+    "FLAVOR": "빨리 죽어라!"
+  },
+  "${ModID}:DownwindBlow": {
+    "NAME": "하강 일격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:정확 을 !M! 얻습니다. NL 이번 턴에 공격 피해를 50% 덜 받습니다.",
+    "FLAVOR": "지금!"
+  }
+}

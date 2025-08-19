@@ -1,0 +1,52 @@
+{
+  "${ModID}:UnleashedSmite": {
+    "NAME": "해방된 강타",
+    "DESCRIPTION": "손에 있는 카드의 !M! 배만큼 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": "손에 있는 카드의 !M! 배만큼 피해를 줍니다. NL stslib:Persist !stslib:persist!.",
+    "EXTENDED_DESCRIPTION": [" NL (피해를 !D! 줍니다.)"]
+  },
+  "${ModID}:SnowballStrike": {
+    "NAME": "눈덩이 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴 시작 시 *눈덩이 *돌진 을 !M! 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴 시작 시 *눈덩이 *돌진 을 !M! 장 얻습니다."
+  },
+  "${ModID}:SnowballDash": {
+    "NAME": "눈덩이 돌진",
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 소멸."
+  },
+  "${ModID}:GrievousIgnite": {
+    "NAME": "쓰라린 점화",
+    "DESCRIPTION": "손에 있는 카드마다 ${ModID}:점화를 !M! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "손에 있는 카드마다 ${ModID}:점화를 !M! 부여합니다.",
+    "EXTENDED_DESCRIPTION": [" NL ( *점화 를 !${ModID}:m2! 부여합니다.)"]
+  },
+  "${ModID}:WitheringExhaust": {
+    "NAME": "위축된 탈진",
+    "DESCRIPTION": "이번 턴 동안 적이 힘을 !M! 잃습니다. NL 손에 6장 이상의 카드가 있다면 약화를 !${ModID}:m2! 부여합니다."
+  },
+  "${ModID}:DualHeal": {
+    "NAME": "이중 회복",
+    "DESCRIPTION": "적과 자신의 체력을 !M! 회복합니다. NL ${ModID}:점화를 가진 적은 회복하지 않습니다. NL 소멸."
+  },
+  "${ModID}:DeftBarrier": {
+    "NAME": "데프트 방어막",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴 카드를 !M! 장 뽑습니다."
+  },
+  "${ModID}:PerfectClarity": {
+    "NAME": "완벽한 총명",
+    "DESCRIPTION": "*기적 을 !M! 장 얻습니다. NL 소멸."
+  },
+  "${ModID}:GhostingMaelstrom": {
+    "NAME": "폭풍의 유체화",
+    "DESCRIPTION": "손에 6장 이상의 카드가 있을 때 카드를 사용하면 적 전체에게 피해를 !M! 줍니다."
+  },
+  "${ModID}:TeleportBot": {
+    "NAME": "로봇 순간이동",
+    "DESCRIPTION": "턴 시작 시, 버린 카드 더미 맨 밑의 카드를 손으로 가져옵니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시, 버린 카드 더미 맨 밑의 카드를 손으로 가져옵니다."
+  },
+  "${ModID}:Flash": {
+    "NAME": "점멸",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 초과된 장수는 [E] 로 전환됩니다. NL 소멸."
+  }
+}

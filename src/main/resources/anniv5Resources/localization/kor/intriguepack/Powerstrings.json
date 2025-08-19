@@ -1,0 +1,22 @@
+{
+  "${ModID}:PowerStrugglePower": {
+    "NAME": "권력 투쟁",
+    "DESCRIPTIONS": [
+      "희귀 카드를 사용할 때마다 에너지를 #b",
+      " 얻고 일반 카드로 만듭니다."
+    ]
+  },
+  "${ModID}:ApexPower": {
+    "NAME": "정점",
+    "DESCRIPTIONS": [
+      "이번 턴에 희귀 또는 특별 카드만 사용할 수 있습니다."
+    ]
+  },
+  "${ModID}:RevolutionPower": {
+    "NAME": "혁명",
+    "DESCRIPTIONS": [
+      "#y평범한 카드를 사용할 때마다 적이 체력을 #b",
+      " 잃습니다."
+    ]
+  }
+}

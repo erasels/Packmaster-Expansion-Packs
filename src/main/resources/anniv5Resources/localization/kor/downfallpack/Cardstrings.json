@@ -1,0 +1,50 @@
+{
+  "${ModID}:AwakenDeath": {
+    "NAME": "각성",
+    "DESCRIPTION": "죽으면 체력을 !M! 회복하고 이 효과를 제거합니다. NL 전투 종료 시, 절반만큼 회복합니다."
+  },
+  "${ModID}:Chronoboost": {
+    "NAME": "시간-가속",
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 카드를 12번 사용할 때마다 힘을 2 얻습니다."
+  },
+  "${ModID}:DefensiveMode": {
+    "NAME": "수비 모드",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 약화를 !M! 부여합니다."
+  },
+  "${ModID}:Execute": {
+    "NAME": "처형",
+    "DESCRIPTION": "피해를 !D! 만큼 두 번 줍니다. NL 경지에 있다면, 세 번 줍니다."
+  },
+  "${ModID}:GhostflameStrike": {
+    "NAME": "유령불꽃 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:유령불꽃을 !M! 번 영창합니다."
+  },
+  "${ModID}:HyperBeam": {
+    "NAME": "자동 광선",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 다음 내 턴 시작 시 [E] [E] 를 잃습니다.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 다음 내 턴 시작 시 [E] 를 잃습니다."
+  },
+  "${ModID}:InvincibleStrength": {
+    "NAME": "천하무적",
+    "DESCRIPTION": "${ModID}:천하무적을 !M! 얻습니다. NL 천하무적을 이미 가지고 있다면 끝나고 바로 적용됩니다."
+  },
+  "${ModID}:PrepareCrush": {
+    "NAME": "으깨기 준비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴, [E] 를 얻고 *슬라임 *으깬다! 를 얻습니다."
+  },
+  "${ModID}:ShapersBlessing": {
+    "NAME": "모양기의 축복",
+    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL ${ModID}:인장합니다.",
+    "UPGRADE_DESCRIPTION": "휘발성. NL 방어도와 판금 갑옷을 !B! 얻습니다. NL ${ModID}:인장합니다."
+  },
+  "${ModID}:SlimeCrush": {
+    "NAME": "슬라임 으깬다!",
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 소멸."
+  },
+  "${ModID}:YouAreMine": {
+    "NAME": "넌 나의 것이다!",
+    "DESCRIPTION": "취약과 약화를 !M! 부여하고 대상의 방어도를 없앱니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "취약과 약화를 !M! 부여하고 대상의 방어도를 없앱니다."
+  }
+}
