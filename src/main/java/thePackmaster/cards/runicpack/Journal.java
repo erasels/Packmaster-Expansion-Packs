@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FocusPower;
+import thePackmaster.powers.runicpack.AttackFocusLoss;
 import thePackmaster.powers.runicpack.JournalPower;
 import thePackmaster.stances.runicpack.RunicStance;
 import thePackmaster.util.Wiz;
@@ -12,22 +14,25 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Journal extends AbstractRunicCard {
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 1;
+    private static final int MAGIC = 2;
     public final static String ID = makeID("Journal");
 
 
     public Journal() {
-        super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        this.baseMagicNumber = magicNumber = MAGIC;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        Wiz.atb(new ApplyPowerAction(abstractPlayer, abstractPlayer, new JournalPower(abstractPlayer, 1)));
+        Wiz.atb(new ChangeStanceAction(new RunicStance()));
+        Wiz.atb(new ApplyPowerAction(abstractPlayer, abstractPlayer, new FocusPower(abstractPlayer, magicNumber), magicNumber));
+        Wiz.atb(new ApplyPowerAction(abstractPlayer, abstractPlayer, new AttackFocusLoss(abstractPlayer, magicNumber), magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(UPGRADED_COST);
+        upgradeMagicNumber(1);
     }
 }

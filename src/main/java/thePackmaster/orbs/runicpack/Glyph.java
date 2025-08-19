@@ -60,6 +60,8 @@ public class Glyph extends CustomOrb {
     public void applyFocus() {
         AbstractPower power = adp().getPower(FocusPower.POWER_ID);
         this.passiveAmount = power != null ? Math.max(0, basePassiveAmount + power.amount) : this.basePassiveAmount;
+        this.evokeAmount = power != null ? Math.max(0, baseEvokeAmount + power.amount) : this.baseEvokeAmount;
+
     }
 
     @Override

@@ -40,5 +40,7 @@ public class AncientObelisk extends AbstractRunicCard {
     @Override
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
+        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

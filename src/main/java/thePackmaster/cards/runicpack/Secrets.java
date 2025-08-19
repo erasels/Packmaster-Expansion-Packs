@@ -20,16 +20,15 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Secrets extends AbstractRunicCard {
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
     public final static String ID = makeID("Secrets");
 
 
     public Secrets() {
-        super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = magicNumber = MAGIC;
-        this.exhaust = true;
     }
 
     @Override
@@ -53,8 +52,6 @@ public class Secrets extends AbstractRunicCard {
                 }
             }
         });
-
-        this.addToBot(new ChangeStanceAction(new RunicStance()));
     }
 
     @Override

@@ -24,30 +24,22 @@ public class AncientTexts extends AbstractRunicCard {
     public AncientTexts() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         Wiz.atb(new DrawCardAction(magicNumber));
+        if (!abstractPlayer.stance.ID.equals("Neutral")){
+            Wiz.atb(new DrawCardAction(magicNumber));
+        }
         Wiz.atb(new ChangeStanceAction(new AncientStance()));
-        freeFromOrb = false;
     }
-
-    @Override
-    public void applyPowers(){
-        if (!freeToPlayOnce && RunicPack.channeledOrbThisTurn){
-            freeToPlayOnce = true;
-            freeFromOrb = true;
-        }
-        if (!RunicPack.channeledOrbThisTurn && freeFromOrb){
-            freeToPlayOnce = false;
-            freeFromOrb = false;
-        }
-    }
-
 
     @Override
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        this.exhaust = false;
+        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
