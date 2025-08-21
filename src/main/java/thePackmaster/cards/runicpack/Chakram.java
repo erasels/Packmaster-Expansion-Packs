@@ -16,13 +16,13 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Chakram extends AbstractRunicCard {
 
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 9;
     private static final int UPG_DMG = 3;
     public final static String ID = makeID("Chakram");
 
 
     public Chakram() {
-        super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = damage = DAMAGE;
         this.isMultiDamage = true;
     }

@@ -16,16 +16,16 @@ import thePackmaster.util.cardvars.HoardField;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MeditationChamber extends AbstractRunicCard {
+public class ExploreRuins extends AbstractRunicCard {
 
     private static final int COST = 1;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
-    public final static String ID = makeID("MeditationChamber");
+    public final static String ID = makeID("ExploreRuins");
 
 
-    public MeditationChamber() {
-        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+    public ExploreRuins() {
+        super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = MAGIC;
         this.selfRetain = true;
         PersistFields.setBaseValue(this, 3);

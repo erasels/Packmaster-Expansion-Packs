@@ -12,14 +12,14 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Journal extends AbstractRunicCard {
+public class EyeOfRa extends AbstractRunicCard {
 
     private static final int COST = 1;
     private static final int MAGIC = 2;
-    public final static String ID = makeID("Journal");
+    public final static String ID = makeID("EyeOfRa");
 
 
-    public Journal() {
+    public EyeOfRa() {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = magicNumber = MAGIC;
     }

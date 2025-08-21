@@ -3,11 +3,17 @@ package thePackmaster.orbs.runicpack;
 import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -44,16 +50,45 @@ public class Glyph extends CustomOrb {
     private float vfxTimer = 0.2f;
 
     private final BobEffect bobEffect = new BobEffect(2f, 3f);
+    private DamageInfo info;
+    private AbstractOrb orb;
 
     public Glyph() {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
+        int randomRune = AbstractDungeon.miscRng.random(0, 7);
+        switch (randomRune){
+            case 0:
+                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune1.png");
+                break;
+            case 1:
+                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune2.png");
+                break;
+            case 2:
+                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune3.png");
+                break;
+            case 3:
+                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune4.png");
+                break;
+            case 4:
+                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune5.png");
+                break;
+            case 5:
+                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune6.png");
+                break;
+            case 6:
+                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune7.png");
+                break;
+            default:
+                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune1.png");
+                break;
+        }
         applyFocus();
         updateDescription();
     }
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.play("SOTE_SFX_FireIgnite_2_v1.ogg", 0.1f);
+        CardCrawlGame.sound.play("ORB_DARK_CHANNEL", 0.1f);
     }
 
     @Override
@@ -61,27 +96,38 @@ public class Glyph extends CustomOrb {
         AbstractPower power = adp().getPower(FocusPower.POWER_ID);
         this.passiveAmount = power != null ? Math.max(0, basePassiveAmount + power.amount) : this.basePassiveAmount;
         this.evokeAmount = power != null ? Math.max(0, baseEvokeAmount + power.amount) : this.baseEvokeAmount;
-
     }
 
     @Override
     public void onEndOfTurn() {
         float speedTime = Settings.FAST_MODE ? 0.0F : 0.6F / (float)AbstractDungeon.player.orbs.size();
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BlazeOrbFlareEffect(this), speedTime));
-        Wiz.applyToSelf(new VigorPower(Wiz.p(), passiveAmount));
-        Wiz.atb(new GainBlockAction(Wiz.p(), passiveAmount));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new GlyphOrbEffect(this), speedTime));
+        AbstractCreature m = Wiz.getRandomEnemy();
+        if (m != null) {
+            this.info = new DamageInfo(AbstractDungeon.player, this.passiveAmount, DamageInfo.DamageType.THORNS);
+            this.info.output = AbstractOrb.applyLockOn(m, passiveAmount);
+            Wiz.atb(new DamageAction(m, this.info, AbstractGameAction.AttackEffect.NONE, true));
+        }
+        Wiz.atb(new GainBlockAction(Wiz.p(), passiveAmount, true));
+        // Wiz.atb(new ApplyPowerAction(Wiz.p(), Wiz.p(), new VigorPower(Wiz.p(), evokeAmount), evokeAmount, true));
         this.updateDescription();
     }
 
     @Override
     public void onEvoke() {
-        Wiz.applyToSelf(new VigorPower(Wiz.p(), evokeAmount));
-        Wiz.atb(new GainBlockAction(Wiz.p(), evokeAmount));
+        AbstractCreature m = Wiz.getRandomEnemy();
+        if (m != null) {
+            this.info = new DamageInfo(AbstractDungeon.player, this.evokeAmount, DamageInfo.DamageType.THORNS);
+            info.output = AbstractOrb.applyLockOn(m, evokeAmount);
+            Wiz.atb(new DamageAction(m, this.info, AbstractGameAction.AttackEffect.NONE, true));
+        }
+        Wiz.atb(new GainBlockAction(Wiz.p(), evokeAmount, true));
+        // Wiz.atb(new ApplyPowerAction(Wiz.p(), Wiz.p(), new VigorPower(Wiz.p(), evokeAmount), evokeAmount, true));
     }
 
     @Override
     public void triggerEvokeAnimation() {
-        CardCrawlGame.sound.play("SOTE_SFX_FireIgnite_2_v1.ogg", 0.1f);
+        CardCrawlGame.sound.play("TINGSHA", 0.1f);
         AbstractDungeon.effectsQueue.add(new BlazeOrbActivateEffect(this.cX, this.cY));
     }
 
@@ -102,13 +148,6 @@ public class Glyph extends CustomOrb {
 
         c.a = Interpolation.pow2In.apply(1.0F, 0.01F, channelAnimTimer / 0.5F);
         scale = Interpolation.swingIn.apply(Settings.scale, 0.01F, channelAnimTimer / 0.5F);
-
-        if (vfxTimer <= 0) {
-            AbstractDungeon.effectsQueue.add(
-                    new TorchParticleXLEffect(cX + MathUtils.random(-30.0F, 30.0F) * Settings.scale,
-                            cY + MathUtils.random(-25.0F, 25.0F) * Settings.scale));
-            vfxTimer = MathUtils.random(0.05f, 0.5f);
-        }
     }
 
     @Override

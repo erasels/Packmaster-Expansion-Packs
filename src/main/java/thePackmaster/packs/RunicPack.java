@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.runicpack.*;
-import thePackmaster.cards.serpentinepack.*;
 
 import java.util.ArrayList;
 
@@ -27,13 +26,13 @@ public class RunicPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(ReadRunes.ID);
         cards.add(AncientBlade.ID);
-        cards.add(MeditationChamber.ID);
+        cards.add(ExploreRuins.ID);
         cards.add(AncientTexts.ID);
         cards.add(AncientObelisk.ID);
         cards.add(Chakram.ID);
         cards.add(RunicSpear.ID);
         cards.add(Secrets.ID);
-        cards.add(Journal.ID);
+        cards.add(EyeOfRa.ID);
         cards.add(DaringEscape.ID);
 
         return cards;

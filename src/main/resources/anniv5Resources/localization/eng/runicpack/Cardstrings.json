@@ -5,7 +5,7 @@
 },"${ModID}:AncientBlade": {
     "NAME": "Ancient Blade",
     "DESCRIPTION": "Deal !D! damage. NL If you channeled an Orb this turn, deal !D! damage again."
-},"${ModID}:MeditationChamber": {
+},"${ModID}:ExploreRuins": {
     "NAME": "Explore Ruins",
     "DESCRIPTION": "Channel !M! ${ModID}:Glyph. NL Draw 1 card. NL stslib:Persist 3.",
     "UPGRADE_DESCRIPTION": "Channel !M! ${ModID}:Glyphs. NL Draw 1 card. NL stslib:Persist 3."
@@ -13,7 +13,7 @@
     "NAME": "Ancient Texts",
     "DESCRIPTION": "Draw !M! cards. NL Enter ${ModID}:Ancient. NL If you exited another stance, Draw !M! more cards. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Enter ${ModID}:Ancient. NL If you exited another stance, Draw !M! more cards."
-},"${ModID}:Journal": {
+},"${ModID}:EyeOfRa": {
     "NAME": "Eye of Ra",
     "DESCRIPTION": "Enter ${ModID}:Runic. NL Gain !M! Focus. NL Lose 1 Focus the next !M! times you play an attack."
 },"${ModID}:Chakram": {
@@ -21,16 +21,16 @@
     "DESCRIPTION": "Deal !D! damage to all enemies. NL Enter ${ModID}:Aggression."
 },"${ModID}:Secrets": {
     "NAME": "Discover Secrets",
-    "DESCRIPTION": "Gain !M! Orb slots. NL Fill your orb slots with ${ModID}:glyphs. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Orb slots. NL Fill your Orb slots with ${ModID}:Glyphs."
 },"${ModID}:DaringEscape": {
     "NAME": "Daring Escape",
-    "DESCRIPTION": "Gain !B! Block. NL Channel 2 ${ModID}:glyphs. NL Exit your stance."
+    "DESCRIPTION": "Gain !B! Block. NL Channel 2 ${ModID}:Glyphs. NL Exit your stance."
 },"${ModID}:RunicSpear": {
     "NAME": "Runic Spear",
     "DESCRIPTION": "Deal !D! damage. NL Affected by Lock-On and Focus !M! times."
 },"${ModID}:AncientObelisk": {
     "NAME": "Ancient Obelisk",
-    "DESCRIPTION": "Whenever you change Stances, Channel !M! random orb. NL Enter ${ModID}:Runic.",
-    "UPGRADE_DESCRIPTION": "Whenever you change Stances, Channel !M! random orbs. NL Enter ${ModID}:Runic."
+    "DESCRIPTION": "Whenever you change Stances, Channel !M! random Orb. NL Enter ${ModID}:Runic.",
+    "UPGRADE_DESCRIPTION": "Whenever you change Stances, Channel !M! random Orbs. NL Enter ${ModID}:Runic."
 }
 }

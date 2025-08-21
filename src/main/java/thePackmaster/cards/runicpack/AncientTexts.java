@@ -30,7 +30,7 @@ public class AncientTexts extends AbstractRunicCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         Wiz.atb(new DrawCardAction(magicNumber));
-        if (!abstractPlayer.stance.ID.equals("Neutral")){
+        if (!abstractPlayer.stance.ID.equals("Neutral") && !abstractPlayer.stance.ID.equals(AncientStance.STANCE_ID)){
             Wiz.atb(new DrawCardAction(magicNumber));
         }
         Wiz.atb(new ChangeStanceAction(new AncientStance()));
