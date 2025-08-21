@@ -25,10 +25,11 @@ public class TailFlail extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(secondDamage > damage) {
-            damage = AbstractDungeon.cardRandomRng.random(damage, secondDamage);
+        int rolledDamage = baseDamage;
+        if(baseSecondDamage > baseDamage) {
+            rolledDamage = AbstractDungeon.cardRandomRng.random(baseDamage, baseSecondDamage);
         }
-        int[] dmg = DamageInfo.createDamageMatrix(damage);
+        int[] dmg = DamageInfo.createDamageMatrix(rolledDamage);
         addToBot(new DamageAllEnemiesAction(p, dmg, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new SheddingAction(magicNumber));
     }

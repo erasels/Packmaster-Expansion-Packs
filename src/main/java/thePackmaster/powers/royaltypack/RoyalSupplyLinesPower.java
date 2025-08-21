@@ -2,7 +2,6 @@ package thePackmaster.powers.royaltypack;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -38,16 +37,7 @@ public class RoyalSupplyLinesPower extends AbstractPackmasterPower {
     @Override
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         if (isPlayer) {
-            if (AbstractDungeon.player.hand.size() < this.amount * BASE_CARDS_TO_RETAIN) {
-                for (AbstractCard card : AbstractDungeon.player.hand.group) {
-                    card.retain = true;
-                    card.flash();
-                }
-            } else {
-                Wiz.atb(new RetainCardsAction(AbstractDungeon.player, this.amount * BASE_CARDS_TO_RETAIN));
-            }
-
+            Wiz.atb(new RetainCardsAction(AbstractDungeon.player, this.amount * BASE_CARDS_TO_RETAIN));
         }
     }
-
 }

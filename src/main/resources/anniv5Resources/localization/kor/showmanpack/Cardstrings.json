@@ -34,13 +34,13 @@
   },
   "${ModID}:HallOfMirrors": {
     "NAME": "거울의 전당",
-    "DESCRIPTION": "지금과 앞으로 2 턴 동안, *잔상 을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 지금과 앞으로 2 턴 동안, *잔상 을 얻습니다."
+    "DESCRIPTION": "지금과 앞으로 2 턴마다, *잔상 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 지금과 앞으로 2 턴마다, *잔상 을 얻습니다."
   },
   "${ModID}:Showstopper": {
     "NAME": "명장면",
-    "DESCRIPTION": "방어도를 !M! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸.",
-    "UPGRADE_DESCRIPTION": "방어도를 !M! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸."
+    "DESCRIPTION": "방어도를 !B! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸."
   },
   "${ModID}:SmokeAndMirrors": {
     "NAME": "연기와 거울",
