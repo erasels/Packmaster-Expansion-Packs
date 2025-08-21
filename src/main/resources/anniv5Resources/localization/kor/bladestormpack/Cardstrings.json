@@ -3,7 +3,7 @@
     "NAME": "비행검",
     "DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 두 번 줍니다.",
     "EXTENDED_DESCRIPTION": [
-      " NL stslib:Startup: ${ModID}:풍화를 !M! 얻습니다."
+      " NL stslib:개전: ${ModID}:풍화를 !M! 얻습니다."
     ],
     "FLAVOR": "말도 안 돼!"
   },
@@ -14,7 +14,7 @@
   },
   "${ModID}:Overpressure": {
     "NAME": "억압",
-    "DESCRIPTION": "${ModID}:풍화를 !M! 얻습니다. NL ${ModID}:손상을 !m2! 얻습니다.",
+    "DESCRIPTION": "${ModID}:풍화를 !M! 얻습니다. NL 손상을 !${ModID}:m2! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "${ModID}:최초:",
       " 방어도를 !B! 얻습니다.",
@@ -24,7 +24,7 @@
   },
   "${ModID}:TradeWinds": {
     "NAME": "무역풍",
-    "DESCRIPTION": "{@@}${ModID}:발견합니다 an{!Upgrades!|>0= 강화된} 공격 카드를. NL 일반 등급이면, 체력을 !M! 회복합니다. NL 희귀 등급이면, 골드를 !${ModID}:m2! 잃습니다. NL 소멸.",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0= 강화된} 공격 카드를 발견합니다. NL 일반 등급이면, 체력을 !M! 회복합니다. NL 희귀 등급이면, 골드를 !${ModID}:m2! 잃습니다. NL 소멸.",
     "FLAVOR": "주인에게 돌아와라! 검이여!"
   },
   "${ModID}:TempestOfStrikes": {
@@ -40,13 +40,13 @@
   "${ModID}:FallOver": {
     "NAME": "넘어짐",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 !${ModID}:m2! 얻습니다. NL 적 전체에게 ${ModID}:묶음 을 !M! 부여합니다. NL 소멸.",
-    "FLAVOR": "Stay still... and let me slay you!"
+    "FLAVOR": "그대로 내게 베여라!"
   },
   "${ModID}:FeedingWinds": {
     "NAME": "바람 모으기",
     "DESCRIPTION": "{@@}카드를 소멸시키고 [E] {!${ModID}:m2!|>0=와 !${ModID}:m2! ${ModID}:풍화} 를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      " NL stslib:Startup: 무작위 !M! 장의 공격 카드를 ${ModID}:수정합니다: \"힘을 1 얻습니다\""
+      " NL stslib:개전: 무작위 !M! 장의 공격 카드를 ${ModID}:수정합니다: \"힘을 1 얻습니다\""
     ],
     "FLAVOR": "내가 얼마나 강한지 한번 보자!"
   },

@@ -34,8 +34,8 @@
   },
   "${ModID}:HallOfMirrors": {
     "NAME": "거울의 전당",
-    "DESCRIPTION": "지금과 앞으로 2 턴 동안, *잔상 을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 지금과 앞으로 2 턴 동안, *잔상 을 얻습니다."
+    "DESCRIPTION": "지금과 앞으로 2 턴마다, *잔상 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 지금과 앞으로 2 턴마다, *잔상 을 얻습니다."
   },
   "${ModID}:Showstopper": {
     "NAME": "명장면",
