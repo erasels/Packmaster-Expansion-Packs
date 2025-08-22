@@ -1,0 +1,26 @@
+{
+  "${ModID}:RoyaltyPack": {
+    "TEXT": [
+      "왕위",
+      "골드를 얻고, 전투에서 쓸 수 있게 하고, 그리고 좋은 방어 및 셋업 능력이 있습니다..",
+      "Levender",
+      "#yBuriedbornes 에서 온 캐릭터. NL 팩 이미지는 NL #ypixiv.net/en/users/5887541 NL 다른 모든 이미지는 #yoninego NL 작업할 거리를 찾고 있어요 :) NL Bluesky - @oninego.bsky.social NL E-mail - oniplingz@gmail.com"
+    ]
+  },
+  "${ModID}:RoyaltyPackHat": {
+    "TEXT": [
+      "다시 태어나기를 기다리는 희망에 묻힌 채 발견됨.",
+      "왕관"
+    ]
+  },
+  "${ModID}:RetainerStrikeAction": {
+    "TEXT": [
+      "이번 턴에 보존할 카드를 선택하십시오."
+    ]
+  },
+  "${ModID}:RetainForOneTurnModifier": {
+    "TEXT": [
+      "이번 턴 보존. NL "
+    ]
+  }
+}
