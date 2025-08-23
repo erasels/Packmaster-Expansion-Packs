@@ -1,0 +1,57 @@
+{
+  "${ModID}:Foreshadow": {
+    "NAME": "징조",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 개전: *전투의 *함성 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 개전: *전투의 *함성+ 을 얻습니다."
+  },
+  "${ModID}:Lights": {
+    "NAME": "조명",
+    "DESCRIPTION": "다음 턴, {@@}{!M!|1= [E] |2= [E] [E] |3= [E] [E] [E] |>3= !M! [E] } 를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:최초:", " 뽑을 카드 더미에 ", "*", "카메라 를 섞어 넣습니다.", " NL 소멸."]
+  },
+  "${ModID}:Camera": {
+    "NAME": "카메라",
+    "DESCRIPTION": "방어도를 !B! 만큼 X 번 얻습니다. NL 다음 턴, 카드를 X 장 더 뽑습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:최초:", " 뽑을 카드 더미에 ", "*", "액션! 을 섞어 넣습니다.", " NL 소멸."]
+  },
+  "${ModID}:Action": {
+    "NAME": "액션!",
+    "DESCRIPTION": "카드를 모두 버리고 버린 카드마다 피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:최초:", " 피해를 {@@}{!M!|2= 두 배|3= 세 배|@= !M! 배} 로 줍니다.", " NL 소멸."]
+  },
+  "${ModID}:BreakALeg": {
+    "NAME": "반어법",
+    "DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL 취약을 !${ModID}:m2! 부여합니다. NL 개전: {@@}{!M!|1= [E] |2= [E] [E] |3= [E] [E] [E] |>3= !M! [E] } 를 얻습니다."
+  },
+  "${ModID}:GrandOpening": {
+    "NAME": "그랜드 오프닝",
+    "DESCRIPTION": "버린 카드 더미에 카드가 없을 때만 사용할 수 있습니다. NL 방어도를 !B! 얻습니다. NL 개전: 방어도를 !M! 얻습니다."
+  },
+  "${ModID}:PlotArmor": {
+    "NAME": "주인공 버프",
+    "DESCRIPTION": "방어도를 !B! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:최초:", " 이번 전투 동안 사용된 선천성, 개전 카드마다 방어도를 !M! 더 얻습니다.", " NL (방어도를 ", " 더 얻습니다.) NL"]
+  },
+  "${ModID}:WellWrittenScript": {
+    "NAME": "괜찮은 대본",
+    "DESCRIPTION": "턴 종료 시 카드를 !M! 장 까지 보존합니다.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:최초:", " 카드를 !${ModID}:m2! 장 뽑습니다."]
+  },
+  "${ModID}:Cross": {
+    "NAME": "크로스",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다.",
+    "EXTENDED_DESCRIPTION": ["피해를 !D! 만큼 ", " 번 줍니다.", " 번 줍니다."," NL ","${ModID}:최초:", " ", "*", "크로스 가 이번 전투 동안 피해를 1 번 더 줍니다."]
+  },
+  "${ModID}:StartOver": {
+    "NAME": "처음부터",
+    "DESCRIPTION": "모든 카드를 뽑을 카드 더미에 섞어 넣습니다. 카드를 !M! 장 뽑고 모든 개전 효과를 발동시킵니다. NL 소멸."
+  },
+  "${ModID}:Starring": {
+    "NAME": "주연",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 !M! 장의 개전 카드를 얻고 발동시킵니다. NL 소멸."
+  },
+  "${ModID}:StickySituation": {
+    "NAME": "끈적한 분위기",
+    "DESCRIPTION": "이 카드를 뽑을 때마다 *점액투성이 를 얻습니다. NL 소멸. NL 개전: 체력을 !M! 회복합니다."
+  }
+}

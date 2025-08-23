@@ -1,0 +1,29 @@
+[
+  {
+    "PROPER_NAME": "자화",
+    "NAMES": [
+      "Magnetized",
+      "magnetized",
+      "magnetize",
+      "자화",
+      "자화를",
+      "자화됨",
+      "자화된",
+      "자화시킵니다",
+      "자화되어",
+      "자화시키고",
+      "자화시키면"
+    ],
+    "DESCRIPTION": "#y자화된 카드를 사용하거나 버리면 #y극성을 1 얻고 무작위 다른 카드를 (사용불가 카드 제외) #y자화시킵니다."
+  },
+  {
+    "PROPER_NAME": "극성",
+    "NAMES": [
+      "Polarity",
+      "polarity",
+      "극성",
+      "극성을"
+    ],
+    "DESCRIPTION": "#y극성을 10 얻으면 [E] 를 얻습니다."
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "${ModID}:IchorGobletPower": {
+    "NAME": "이코르 술잔",
+    "DESCRIPTIONS": [
+      "다음 #b",
+      " 턴 동안 턴 시작 시 에너지를 #b1 얻습니다. 체력을 잃으면 즉시 모두 얻습니다."
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "${ModID}:Attraction": {
+    "NAME": "끌림",
+    "DESCRIPTION": "카드를 !M! 장 뽑고 ${ModID}:자화시킵니다. NL *퍼즈 를 얻습니다."
+  },
+  "${ModID}:CoilBurst": {
+    "NAME": "코일 폭발",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *퍼즈 를 2 얻습니다."
+  },
+  "${ModID}:ElectronFlow": {
+    "NAME": "전자 흐름",
+    "DESCRIPTION": "카드를 원하는 만큼 버립니다. 버린 카드마다 *극성을 !M! 얻습니다. NL *퍼즈 를 얻습니다.",
+    "EXTENDED_DESCRIPTION": ["버리기"]
+  },
+  "${ModID}:FaradayField": {
+    "NAME": "패러데이 필드",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 손에 있는 카드를 모두 ${ModID}:자화시킵니다."
+  },
+  "${ModID}:Ferroshield": {
+    "NAME": "자기방어",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 뽑을 카드 더미의 무작위 !M! 장의 카드를 ${ModID}:자화시킵니다."
+  },
+  "${ModID}:Fuzz": {
+    "NAME": "퍼즈",
+    "DESCRIPTION": "${ModID}:자화되어 있을 때만 사용할 수 있습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": ["이 카드는 자화되지 않았어!"]
+  },
+  "${ModID}:InduceCurrent": {
+    "NAME": "전류 유도",
+    "DESCRIPTION": "카드를 ${ModID}:자화시키면 무작위 적에게 피해를 !M! 줍니다."
+  },
+  "${ModID}:MagneticDomain": {
+    "NAME": "자기 영역",
+    "DESCRIPTION": "카드를 ${ModID}:자화시키고 버립니다. 버린 카드 더미의 ${ModID}:자화된 카드를 사용합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 ${ModID}:자화시키고 버립니다. 버린 카드 더미의 ${ModID}:자화된 카드를 사용합니다.",
+    "EXTENDED_DESCRIPTION": ["자화시키고 버리기", "사용하기"]
+  },
+  "${ModID}:PerfectedAlignment": {
+    "NAME": "완벽한 정렬",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 모든 ${ModID}:자화된 카드마다 !M! 증가합니다."
+  },
+  "${ModID}:RepulsionField": {
+    "NAME": "반발력 필드",
+    "DESCRIPTION": "${ModID}:자화된 카드가 버려지거나 소멸될 때마다 방어도를 !M! 얻습니다."
+  },
+  "${ModID}:Superconductance": {
+    "NAME": "초전도",
+    "DESCRIPTION": "이번 턴에 카드를 ${ModID}:자화시키면 사용하기 전까지 비용을 !M! 감소시킵니다."
+  }
+}

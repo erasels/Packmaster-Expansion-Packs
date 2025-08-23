@@ -1,16 +1,11 @@
 package thePackmaster.packs;
 
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Matrix4;
-import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
@@ -65,12 +60,10 @@ public class InsectGlaivePack extends AbstractCardPack {
 
     //是否处于空中
     public static boolean isHover(int n) {
-        return Wiz.isInCombat() && AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= n &&
-                DrawAnalyzer.isDrawCard(
-                        AbstractDungeon.actionManager.cardsPlayedThisCombat.get(
-                                AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - n).getClass().getName());
+        return Wiz.isInCombat()
+            && AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= n
+            && DrawAnalyzer.isDrawCard(AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - n));
     }
-
 
     //移动位置
     public static void movePowerPosition(AbstractPower p) {

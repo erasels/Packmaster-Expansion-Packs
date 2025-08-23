@@ -1,0 +1,17 @@
+{
+  "${ModID}:OuroborosPower": {
+    "NAME": "우로보로스",
+    "DESCRIPTIONS": [
+      "매 턴 처음으로 피해를 완전히 방어하면 #y힘을 #b",
+      " 얻습니다.",
+      " NL 이번 턴에 사용됨."
+    ]
+  },
+  "${ModID}:MantisStrikePower": {
+    "NAME": "사마귀 반동",
+    "DESCRIPTIONS": [
+      "이번 턴에 피해를 완전히 방어할 때마다 무작위 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  }
+}

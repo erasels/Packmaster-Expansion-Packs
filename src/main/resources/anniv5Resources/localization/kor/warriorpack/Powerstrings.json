@@ -1,0 +1,17 @@
+{
+  "${ModID}:TurtlePower": {
+    "NAME": "거북",
+    "DESCRIPTIONS": [
+      "다음 공격 카드가 치명 피해를 줍니다.",
+      "다음 #b",
+      " 장의 공격 카드가 치명 피해를 줍니다."
+    ]
+  },
+  "${ModID}:PolishingPower": {
+    "NAME": "연마",
+    "DESCRIPTIONS": [
+     "공격 카드를 사용할 때마다, 이번 전투 동안 그 피해를 #b",
+      " 증가시킵니다."
+    ]
+  }
+}

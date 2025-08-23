@@ -1,0 +1,33 @@
+{
+  "${ModID}:NextTrickPower": {
+    "NAME": "다음 트릭은...",
+    "DESCRIPTIONS": [
+      "#y파워 카드를 사용할 때마다, 방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "${ModID}:NowYouDontPower": {
+    "NAME": "얍",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시, ",
+      " 을 얻습니다."
+    ]
+  },
+  "${ModID}:HallOfMirrorsPower": {
+    "NAME": "거울의 전당",
+    "DESCRIPTIONS": [
+      "#b",
+      " 턴 동안, #y잔상 을 얻습니다.",
+      " 턴 동안, #y잔상 을 #b",
+      " 장 얻습니다."
+    ]
+  },
+  "${ModID}:MagicCylinderPower": {
+    "NAME": "매직 실린더",
+    "DESCRIPTIONS": [
+      "다음으로 막히지 않은 피해를 받으면, 막고 공격 상대에게 되돌려줍니다.",
+      "다음으로 #b",
+      " 번 동안 막히지 않은 피해를 받으면, 막고 공격 상대에게 되돌려줍니다."
+    ]
+  }
+}

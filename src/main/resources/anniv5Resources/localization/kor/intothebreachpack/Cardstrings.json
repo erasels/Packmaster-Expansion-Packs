@@ -1,0 +1,54 @@
+{
+  "${ModID}:AcidProjector": {
+    "NAME": "A.C.I.D. 프로젝터",
+    "DESCRIPTION": "적이 이번 턴에 공격으로부터 두 배의 피해를 받습니다. NL 소멸."
+  },
+  "${ModID}:ElectricWhip": {
+    "NAME": "전기 휩쓸기",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 전기를 1 번 영창합니다."
+  },
+  "${ModID}:EnrageShot": {
+    "NAME": "분노의 사격",
+    "DESCRIPTION": "적을 기절시키고 힘을 2 부여합니다. NL 소멸."
+  },
+  "${ModID}:FieldResearch": {
+    "NAME": "현장 연구",
+    "DESCRIPTION": "적에게 해로운 효과를 부여할 때마다 힘을 !M! 얻습니다."
+  },
+  "${ModID}:Flamethrower": {
+    "NAME": "화염방사기",
+    "DESCRIPTION": "${ModID}:점화를 !M! 부여합니다. NL 적 전체가 보유한 ${ModID}:점화 만큼 체력을 잃습니다."
+  },
+  "${ModID}:MercuryFist": {
+    "NAME": "수은 주먹",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 소멸."
+  },
+  "${ModID}:ReboundVolley": {
+    "NAME": "리바운드 연사",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 다른 적에게 피해를 !${ModID}:sd! 만큼 !M! 번 줍니다."
+  },
+  "${ModID}:ShieldProjector": {
+    "NAME": "방어막 프로젝터",
+    "DESCRIPTION": "민첩을 !M! 얻습니다. NL 이번 턴이 끝날 때 민첩을 !${ModID}:m2! 잃습니다."
+  },
+  "${ModID}:SmokePellets": {
+    "NAME": "연막 알약",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적 전체에게 !M! 약화를 부여합니다."
+  },
+  "${ModID}:SmolderingShell": {
+    "NAME": "그을린 껍질",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 다른 적 전체에게 약화를 !${ModID}:m2! 부여합니다."
+  },
+  "${ModID}:SpartanShield": {
+    "NAME": "스파르탄 방패",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 임시 힘을 !M! 얻습니다."
+  },
+  "${ModID}:StormGenerator": {
+    "NAME": "폭풍 생성기",
+    "DESCRIPTION": "턴 종료 시 해로운 효과를 가진 적마다 전기를 !M! 번 영창합니다."
+  },
+  "${ModID}:VoidShocker": {
+    "NAME": "공허 충격기",
+    "DESCRIPTION": "적이 방어도에 막히는 피해를 줄 경우, 피해를 !M! 돌려줍니다."
+  }
+}

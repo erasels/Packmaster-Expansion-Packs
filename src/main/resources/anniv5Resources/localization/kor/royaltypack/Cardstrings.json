@@ -1,0 +1,47 @@
+{
+  "${ModID}:RetainerStrike": {
+    "NAME": "보존성 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴 무작위 카드를 보존합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴 카드를 1 장 보존합니다."
+  },
+  "${ModID}:Soulstone": {
+    "NAME": "소울스톤",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 개전: 골드를 !M! 얻습니다. NL 소멸."
+  },
+  "${ModID}:HiringSpecialists": {
+    "NAME": "고용 전문가",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 뽑습니다. NL ${ModID}:고용지원을 1 얻습니다."
+  },
+  "${ModID}:Forcefield": {
+    "NAME": "격류장",
+    "DESCRIPTION": "방어도를 !B! 만큼 X 번 얻습니다. X 가 3 이상이라면 흐릿함을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 만큼 X+1 번 얻습니다. X 가 3 이상이라면 흐릿함을 1 얻습니다."
+  },
+  "${ModID}:MiningStrike": {
+    "NAME": "채굴 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 골드를 !M! 얻습니다. NL 소멸."
+  },
+  "${ModID}:Stratagem": {
+    "NAME": "전략점",
+    "DESCRIPTION": "적이 이번 턴에 NL 힘을 !M! 잃습니다. 다음 턴, NL ${ModID}:고용지원을 1 얻습니다."
+  },
+  "${ModID}:RoyalSupplyLines": {
+    "NAME": "왕립 보급로",
+    "DESCRIPTION": "턴 시작 시, 카드를 2 장 뽑습니다. NL 턴 종료 시, 카드를 2 장까지 보존합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시, 카드를 2 장 뽑습니다. NL 턴 종료 시, 카드를 2 장까지 보존합니다."
+  },
+  "${ModID}:AlchemyTime": {
+    "NAME": "연금의 시대",
+    "DESCRIPTION": "골드를 25 지불하고 포션을 얻습니다. NL 포션을 사용하면 카드를 !M! 장 뽑습니다. NL ${ModID}:픽업: 포션 슬롯을 얻고 골드를 75 얻습니다.",
+    "EXTENDED_DESCRIPTION": ["포션 재료에 쓸 골드가 더 있었으면!"]
+  },
+  "${ModID}:TacticalReroll": {
+    "NAME": "전략적 다시시작",
+    "DESCRIPTION": "골드를 10 지불하고 !M! 장의 카드를 버린 카드 더미에서 손으로 가져옵니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": ["쯧.. 다시 시작하기엔 골드가 부족해."]
+  },
+  "${ModID}:ForTheHistoryBooks": {
+    "NAME": "역사책을 위해",
+    "DESCRIPTION": "다음 턴, 임시 힘과 임시 민첩을 !M! 만큼 X 번 얻고, NL ${ModID}:고용지원을 1 얻습니다. NL 소멸."
+  }
+}
