@@ -27,7 +27,7 @@
   },
   "${ModID}:InduceCurrent": {
     "NAME": "전류 유도",
-    "DESCRIPTION": "카드를 ${ModID}:자화시키면 적 전체에게 피해를 !M! 줍니다."
+    "DESCRIPTION": "카드를 ${ModID}:자화시키면 무작위 적에게 피해를 !M! 줍니다."
   },
   "${ModID}:MagneticDomain": {
     "NAME": "자기 영역",
