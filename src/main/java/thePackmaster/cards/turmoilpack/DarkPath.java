@@ -9,7 +9,7 @@ import thePackmaster.SpireAnniversary5Mod;
 public class DarkPath extends AbstractTurmoilCard {
     public static final String ID = SpireAnniversary5Mod.makeID("DarkPath");
     private static final int COST = 0;
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 4;
     private static final int UPGRADE_BLOCK = 3;
     private static final int STATUSES = 1;
 
