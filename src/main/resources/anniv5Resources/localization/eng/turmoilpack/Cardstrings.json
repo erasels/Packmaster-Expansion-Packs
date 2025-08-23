@@ -21,7 +21,7 @@
   },
   "${ModID}:BurntOffering": {
     "NAME": "Burnt Offering",
-    "DESCRIPTION": "${ModID}:Abandon: Colorless or Curse and Exhaust them. Deal !D! damage and apply !M! Ignite per ${ModID}:Abandon."
+    "DESCRIPTION": "${ModID}:Abandon: Colorless or Curse and Exhaust them. Deal !D! damage and apply !M! ${ModID}:Ignite per ${ModID}:Abandon."
   },
   "${ModID}:ForsakenDreams": {
     "NAME": "Forsaken Dreams",
