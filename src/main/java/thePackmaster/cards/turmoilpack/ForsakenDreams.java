@@ -34,7 +34,6 @@ public class ForsakenDreams extends AbstractTurmoilCard {
             this.addToTop(new ApplyPowerAction(p, p, new ThornsPower(p, amount)));
             this.addToTop(new ApplyPowerAction(p, p, new MetallicizePower(p, amount)));
             this.addToTop(new ApplyPowerAction(p, p, new DexterityPower(p, amount)));
-            this.addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, amount)));
         }));
     }
 }

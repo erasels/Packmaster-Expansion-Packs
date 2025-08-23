@@ -25,7 +25,7 @@
   },
   "${ModID}:ForsakenDreams": {
     "NAME": "Forsaken Dreams",
-    "DESCRIPTION": "{@@}{!Upgrades!|0=Ethereal. NL }${ModID}:Abandon: All. Gain !M! Strength, Dexterity, ${ModID}:Metallicize, and Thorns per card type discarded."
+    "DESCRIPTION": "{@@}{!Upgrades!|0=Ethereal. NL }${ModID}:Abandon: All. Gain !M! Dexterity, ${ModID}:Metallicize, and Thorns per card type discarded."
   },
   "${ModID}:TormentedMind": {
     "NAME": "Tormented Mind",
