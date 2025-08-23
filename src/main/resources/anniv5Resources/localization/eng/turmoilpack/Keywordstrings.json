@@ -5,6 +5,6 @@
       "abandon",
       "abandoned"
     ],
-    "DESCRIPTION": "Discard all cards in your hand that match the condition. Often paired with a per Abandon effect for each card discarded."
+    "DESCRIPTION": "Discard all cards in your hand that match the condition."
   }
 ]
