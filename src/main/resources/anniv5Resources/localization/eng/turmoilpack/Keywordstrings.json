@@ -1,0 +1,10 @@
+[
+  {
+    "PROPER_NAME": "Abandon",
+    "NAMES": [
+      "abandon",
+      "abandoned"
+    ],
+    "DESCRIPTION": "Discard all cards in your hand that match the condition."
+  }
+]

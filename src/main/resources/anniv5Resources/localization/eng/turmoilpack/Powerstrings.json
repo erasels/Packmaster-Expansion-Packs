@@ -1,0 +1,8 @@
+{
+  "${ModID}:CycleOfRenewal": {
+    "NAME": "Cycle of Renewal",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yAbandon: Starter or Common or Status. Draw #b1 card per #yAbandon."
+    ]
+  }
+}
