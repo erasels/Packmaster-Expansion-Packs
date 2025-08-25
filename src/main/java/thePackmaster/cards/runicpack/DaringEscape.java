@@ -16,7 +16,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class DaringEscape extends AbstractRunicCard {
 
     private static final int COST = 2;
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 7;
     private static final int UPG_BLOCK = 3;
     public final static String ID = makeID("DaringEscape");
 
@@ -24,6 +24,8 @@ public class DaringEscape extends AbstractRunicCard {
     public DaringEscape() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = BLOCK;
+        this.showEvokeOrbCount = 2;
+        this.showEvokeValue = true;
     }
 
     @Override

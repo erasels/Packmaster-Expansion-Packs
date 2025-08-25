@@ -4,15 +4,15 @@
     "DESCRIPTION": "Gain !B! Block. NL Enter ${ModID}:Runic."
 },"${ModID}:AncientBlade": {
     "NAME": "Ancient Blade",
-    "DESCRIPTION": "Deal !D! damage. NL If you channeled an Orb this turn, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL If you Channeled an Orb this turn, deal !D! damage again."
 },"${ModID}:ExploreRuins": {
     "NAME": "Explore Ruins",
-    "DESCRIPTION": "Channel !M! ${ModID}:Glyph. NL Draw 1 card. NL stslib:Persist 3.",
-    "UPGRADE_DESCRIPTION": "Channel !M! ${ModID}:Glyphs. NL Draw 1 card. NL stslib:Persist 3."
+    "DESCRIPTION": "Channel 1 ${ModID}:Glyph. NL Draw 1 card. NL stslib:Persist !M!.",
+    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Glyph. NL Draw 1 card. NL stslib:Persist !M!."
 },"${ModID}:AncientTexts": {
     "NAME": "Ancient Texts",
-    "DESCRIPTION": "Draw !M! cards. NL Enter ${ModID}:Ancient. NL If you exited another stance, Draw !M! more cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Enter ${ModID}:Ancient. NL If you exited another stance, Draw !M! more cards."
+    "DESCRIPTION": "Draw !M! cards. NL Enter ${ModID}:Ancient. NL If you exited another stance, draw !M! more cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Enter ${ModID}:Ancient. NL If you exited another Stance, draw !M! more cards."
 },"${ModID}:EyeOfRa": {
     "NAME": "Eye of Ra",
     "DESCRIPTION": "Enter ${ModID}:Runic. NL Gain !M! Focus. NL Lose 1 Focus the next !M! times you play an attack."
@@ -24,10 +24,10 @@
     "DESCRIPTION": "Gain !M! Orb slots. NL Fill your Orb slots with ${ModID}:Glyphs."
 },"${ModID}:DaringEscape": {
     "NAME": "Daring Escape",
-    "DESCRIPTION": "Gain !B! Block. NL Channel 2 ${ModID}:Glyphs. NL Exit your stance."
+    "DESCRIPTION": "Gain !B! Block. NL Channel 2 ${ModID}:Glyphs. NL Exit your Stance."
 },"${ModID}:RunicSpear": {
     "NAME": "Runic Spear",
-    "DESCRIPTION": "Deal !D! damage. NL Affected by Lock-On and Focus !M! times."
+    "DESCRIPTION": "Deal !D! damage. NL Affected by Focus !M! times and Lock-On."
 },"${ModID}:AncientObelisk": {
     "NAME": "Ancient Obelisk",
     "DESCRIPTION": "Whenever you change Stances, Channel !M! random Orb. NL Enter ${ModID}:Runic.",

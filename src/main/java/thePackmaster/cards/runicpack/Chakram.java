@@ -16,7 +16,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Chakram extends AbstractRunicCard {
 
     private static final int COST = 1;
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 7;
     private static final int UPG_DMG = 3;
     public final static String ID = makeID("Chakram");
 
@@ -30,8 +30,6 @@ public class Chakram extends AbstractRunicCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        AbstractMonster furthest = AbstractDungeon.getCurrRoom().monsters.monsters.get(AbstractDungeon.getCurrRoom().monsters.monsters.size()-1);
-       // addToBot(new VFXAction(new ReversingSlashEffect(furthest.hb.cX, furthest.hb.cY, abstractPlayer.hb.cX, abstractPlayer.hb.cY, 90, 1.0f, Color.WHITE, Color.WHITE)));
         this.addToBot(new ChangeStanceAction(new AggressionStance()));
     }
 

@@ -5,17 +5,14 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.orbs.WitchesStrike.Arcane;
-import thePackmaster.packs.DownfallPack;
-import thePackmaster.packs.EntropyPack;
-import thePackmaster.packs.SpheresPack;
-import thePackmaster.packs.WitchesStrikePack;
+import thePackmaster.packs.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class OrgSupplierCompatibilityPatch {
+public class OrbSupplierCompatibilityPatch {
     @SpirePatch2(clz = PackmasterOrb.class, method = "makePackSuppliers")
     public static class AddExpansionSuppliers {
         @SpirePostfixPatch
@@ -38,6 +35,10 @@ public class OrgSupplierCompatibilityPatch {
             suppliers = new ArrayList<>();
             suppliers.add(thePackmaster.orbs.Oblivion::new);
             __result.put(EntropyPack.ID, suppliers);
+
+            suppliers = new ArrayList<>();
+            suppliers.add(thePackmaster.orbs.runicpack.Glyph::new);
+            __result.put(RunicPack.ID, suppliers);
 
             return __result;
         }

@@ -1,6 +1,6 @@
 {
   "${ModID}:Runic": {
     "NAME": "Runic",
-    "DESCRIPTION": ["At the start of the turn, add a card which #yChannels orbs to your hand with Ethereal and Exhaust. When exited, gain #b1 #yFocus."]
+    "DESCRIPTION": ["At the start of the turn, add a card which Channels orbs to your hand with Ethereal and Exhaust. When Exited, gain #b1 #yFocus."]
   }
 }

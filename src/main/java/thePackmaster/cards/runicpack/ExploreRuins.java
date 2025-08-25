@@ -19,7 +19,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class ExploreRuins extends AbstractRunicCard {
 
     private static final int COST = 1;
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
     public final static String ID = makeID("ExploreRuins");
 
@@ -27,21 +27,21 @@ public class ExploreRuins extends AbstractRunicCard {
     public ExploreRuins() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = MAGIC;
-        this.selfRetain = true;
-        PersistFields.setBaseValue(this, 3);
+        PersistFields.setBaseValue(this, magicNumber);
+        this.showEvokeOrbCount = 1;
+        this.showEvokeValue = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        for (int i = 0; i<magicNumber; i++) {
-            Wiz.atb(new ChannelAction(new Glyph()));
-        }
+        Wiz.atb(new ChannelAction(new Glyph()));
         Wiz.atb(new DrawCardAction(1));
     }
 
     @Override
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
+        PersistFields.upgrade(this, UPG_MAGIC);
         this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         initializeDescription();
     }
