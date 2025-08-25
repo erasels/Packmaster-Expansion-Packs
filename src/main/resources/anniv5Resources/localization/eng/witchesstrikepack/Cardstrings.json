@@ -17,8 +17,7 @@
 
   "${ModID}:ChitteringPunt": {
     "NAME": "Bullet Climax",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a random Skill from your draw pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Put a random Skill from your draw pile into your hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a random Skill from your draw pile into your hand."
   },
 
   "${ModID}:MysticFlourish": {
