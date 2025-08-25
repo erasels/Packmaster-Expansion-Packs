@@ -27,7 +27,7 @@ public class CrystalMoonlight extends AbstractWitchStrikeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
     @Override
     public String cardArtCopy() {
