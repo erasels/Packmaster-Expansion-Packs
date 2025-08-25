@@ -17,7 +17,7 @@ public class CrystalMoonlight extends AbstractWitchStrikeCard {
 
     public CrystalMoonlight() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

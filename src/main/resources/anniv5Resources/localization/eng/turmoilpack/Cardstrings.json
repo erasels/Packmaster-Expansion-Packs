@@ -1,0 +1,46 @@
+{
+  "${ModID}:Burden": {
+    "NAME": "Burden",
+    "DESCRIPTION": "Retain. NL Gain !M! Strength."
+  },
+  "${ModID}:DarkPath": {
+    "NAME": "Dark Path",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Burden into your hand."
+  },
+  "${ModID}:SpitefulBrand": {
+    "NAME": "Spiteful Brand",
+    "DESCRIPTION": "${ModID}:Abandon: 1 cost. Deal !D! damage. Apply !M! Weak and !M! Vulnerable per ${ModID}:Abandon."
+  },
+  "${ModID}:LonelyVigil": {
+    "NAME": "Lonely Vigil",
+    "DESCRIPTION": "${ModID}:Abandon: Attack. NL Gain !B! Block plus !M! per ${ModID}:Abandon."
+  },
+  "${ModID}:LashOut": {
+    "NAME": "Lash Out",
+    "DESCRIPTION": "{@@}${ModID}:Abandon: Skill. Deal !D! damage to ALL enemies X times. Draw !M! card{!M!|>1=s} next turn per ${ModID}:Abandon."
+  },
+  "${ModID}:BurntOffering": {
+    "NAME": "Burnt Offering",
+    "DESCRIPTION": "${ModID}:Abandon: Colorless or Curse and Exhaust them. Deal !D! damage and apply !M! ${ModID}:Ignite per ${ModID}:Abandon."
+  },
+  "${ModID}:ForsakenDreams": {
+    "NAME": "Forsaken Dreams",
+    "DESCRIPTION": "{@@}{!Upgrades!|0=Ethereal. NL }${ModID}:Abandon: All. Gain !M! Dexterity, ${ModID}:Metallicize, and Thorns per card type discarded."
+  },
+  "${ModID}:TormentedMind": {
+    "NAME": "Tormented Mind",
+    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. Add 1 *Burden and 1 *Dazed into your hand. Exhaust up to 2 cards in your draw or discard piles."
+  },
+  "${ModID}:Compulsion": {
+    "NAME": "Compulsion",
+    "DESCRIPTION": "{@@}${ModID}:Abandon: 2+ cost. Reduce their cost to 1 this combat. Draw !M! card{!M!|>1=s} per ${ModID}:Abandon."
+  },
+  "${ModID}:EternalToil": {
+    "NAME": "Eternal Toil",
+    "DESCRIPTION": "{@@}${ModID}:Abandon: Unupgraded and Upgrade them. Put !M! card{!M!|>1=s} and all Powers from your discard pile into your hand."
+  },
+  "${ModID}:CycleOfRenewal": {
+    "NAME": "Cycle of Renewal",
+    "DESCRIPTION": "At the start of your turn, ${ModID}:Abandon: Starter or Common or Status. Draw 1 card per ${ModID}:Abandon."
+  }
+}

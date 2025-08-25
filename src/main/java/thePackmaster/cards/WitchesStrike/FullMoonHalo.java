@@ -48,7 +48,7 @@ public class FullMoonHalo extends AbstractWitchStrikeCard {
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(2);
     }
 
     @Override
