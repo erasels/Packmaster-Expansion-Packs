@@ -181,8 +181,9 @@ public class ExpansionPacks implements
             return new AncientStance();
         } else if (Objects.equals(stance, AggressionStance.STANCE_ID)) {
             return new AggressionStance();
+        } else if (Objects.equals(stance, RunicStance.STANCE_ID)) {
+            return new RunicStance();
         } else {
-
             return new NightmareStance();
         }
 

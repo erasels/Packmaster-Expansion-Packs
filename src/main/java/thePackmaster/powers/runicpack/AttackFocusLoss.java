@@ -1,5 +1,6 @@
 package thePackmaster.powers.runicpack;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -31,10 +32,11 @@ public class AttackFocusLoss extends AbstractPackmasterPower {
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (card.type.equals(AbstractCard.CardType.ATTACK)){
             Wiz.atb(new ReducePowerAction(this.owner, this.owner, this, 1));
-            if (this.owner.hasPower(FocusPower.POWER_ID)){
-                Wiz.atb(new ReducePowerAction(this.owner, this.owner, FocusPower.POWER_ID, 1));
-            }
-            Wiz.atb(new ReducePowerAction(this.owner, this.owner, this, 1));
+            Wiz.atb(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -1), -1));
         }
+    }
+
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
     }
 }

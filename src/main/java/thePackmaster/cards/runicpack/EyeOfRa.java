@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.powers.runicpack.AttackFocusLoss;
-import thePackmaster.powers.runicpack.JournalPower;
 import thePackmaster.stances.runicpack.RunicStance;
 import thePackmaster.util.Wiz;
 
