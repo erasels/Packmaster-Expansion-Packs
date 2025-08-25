@@ -17,8 +17,7 @@
 
   "${ModID}:ChitteringPunt": {
     "NAME": "불렛 클라이맥스",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 뽑을 카드 더미에서 무작위 스킬 카드를 손으로 가져옵니다.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 두 번 줍니다. NL 뽑을 카드 더미에서 무작위 스킬 카드를 손으로 가져옵니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 뽑을 카드 더미에서 무작위 스킬 카드를 손으로 가져옵니다."
   },
 
   "${ModID}:MysticFlourish": {
