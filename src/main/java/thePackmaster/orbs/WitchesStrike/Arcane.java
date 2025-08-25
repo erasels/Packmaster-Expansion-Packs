@@ -105,25 +105,25 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
             public void update() {
                 AbstractMonster m = Wiz.getRandomEnemy();
                 if (m != null) {
-                    Wiz.atb(new AbstractGameAction() {
+                    Wiz.att(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            isDone = true;
+                        }
+                    });
+                    Wiz.att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount),
+                            DamageInfo.DamageType.THORNS), AttackEffect.BLUNT_HEAVY));
+                    Wiz.att(new AbstractGameAction() {
                         @Override
                         public void update() {
                             AbstractDungeon.effectList.add(new OrbFlareEffect(Arcane.this, OrbFlareEffect.OrbFlareColor.FROST));
                             AbstractDungeon.effectList.add(new SmallLaserEffect(hb.cX, hb.cY, m.hb.cX, m.hb.cY));
-                            isDone = true;
-                        }
-                    });
-                    Wiz.atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount),
-                            DamageInfo.DamageType.THORNS), AttackEffect.BLUNT_HEAVY));
-                    Wiz.atb(new AbstractGameAction() {
-                        @Override
-                        public void update() {
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
                             isDone = true;
                         }
                     });

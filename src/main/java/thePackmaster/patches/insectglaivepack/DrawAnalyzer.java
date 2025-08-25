@@ -1,11 +1,14 @@
 package thePackmaster.patches.insectglaivepack;
 
+import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import javassist.*;
 import javassist.expr.*;
-import thePackmaster.packs.InsectGlaivePack;
+import thePackmaster.cardmodifiers.artificerpack.DrawEnchantModifier;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,13 +16,17 @@ public class DrawAnalyzer {
 
     private static Set<String> analyzedClasses = new HashSet<>();
     private static Set<String> analyzedMethods = new HashSet<>();
+    private static Set<String> drawCardModifierClasses = new HashSet<>(Arrays.asList(thePackmaster.cardmodifiers.creativitypack.DrawCardModifier.class.getName(), thePackmaster.cardmodifiers.madsciencepack.DrawCardModifier.class.getName(), DrawEnchantModifier.class.getName()));
 
     private static final int MAX_DEPTH = 1;
 
-    public static boolean isDrawCard(String className) {
+    public static boolean isDrawCard(AbstractCard card) {
+        if (CardModifierManager.modifiers(card).stream().anyMatch(m -> drawCardModifierClasses.contains(m.getClass().getName()))) {
+            return true;
+        }
         analyzedClasses.clear();
         analyzedMethods.clear();
-        return analyzeMethodFromMethod(className, "use", 0);
+        return analyzeMethodFromMethod(card.getClass().getName(), "use", 0);
     }
 
     private static boolean analyzeMethodFromMethod(String className, String methodName, int depth) {
@@ -116,12 +123,22 @@ public class DrawAnalyzer {
                 continue;
             }
 
+            // Applying card modifiers that draw cards should not count as a draw effect, so we ignore these
+            if (drawCardModifierClasses.contains(className)) {
+                continue;
+            }
+
             analyzedClasses.add(className);
 //            InsectGlaivePack.logger.info("Analyzing " + className);
 
             try {
                 ClassPool cp = Loader.getClassPool();
                 CtClass innerClass = cp.get(className);
+
+                // Creating cards with draw effects should not count as a draw effect, so we don't analyze other cards
+                if (innerClass.subclassOf(cp.get(AbstractCard.class.getName()))) {
+                    continue;
+                }
 
                 for (CtMethod innerMethod : innerClass.getMethods()) {
                     if (analyzeMethodFromClass(innerMethod, depth + 1)) {
