@@ -1,0 +1,50 @@
+{
+  "${ModID}:CozyCamper": {
+    "NAME": "Cozy Camper",
+    "DESCRIPTION": "Once per turn, gain [E] equal to the non-zero cost of a ${ModID}:Resupplied card."
+  },
+  "${ModID}:BonkAtomicPunch": {
+    "NAME": "Bonk! Atomic Punch",
+    "DESCRIPTION": "When you ${ModID}:Resupply, gain !M! ${ModID}:Flanking."
+  },
+  "${ModID}:BigEarner": {
+    "NAME": "Big Earner",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card in hand to increase stslib:Persist by 1 this combat. NL stslib:Persist !stslib:persist!"
+  },
+  "${ModID}:Minigun": {
+    "NAME": "Minigun",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL When you ${ModID}:Resupply with this in hand, increase hits by 1."
+  },
+  "${ModID}:MiniSentry": {
+    "NAME": "Mini-Sentry Gun",
+    "DESCRIPTION": "Deal !D! damage. NL On ${ModID}:Resupply deal !${ModID}:sd! damage to a random enemy !M! times."
+  },
+  "${ModID}:InvisibilityWatch": {
+    "NAME": "Invisibility Watch",
+    "DESCRIPTION": "Whenever you play a Skill this turn, gain !M! ${ModID}:Flanking."
+  },
+  "${ModID}:DirectHit": {
+    "NAME": "Direct Hit",
+    "DESCRIPTION": "Deal !D! damage. NL *Direct *Hits deal double damage this turn."
+  },
+  "${ModID}:LooseCannon": {
+    "NAME": "Loose Cannon",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL On ${ModID}:Resupply reduce cost by 1 [E] this combat."
+  },
+  "${ModID}:AmmoBox": {
+    "NAME": "Ammo Box",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Ammo to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Ammo+ to your hand."
+  },
+  "${ModID}:Dispenser": {
+    "NAME": "Dispenser",
+    "DESCRIPTION": "At the start of your turn, add an *Ammo into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add an *Ammo into your hand."
+  },
+  "${ModID}:Ammo": {
+    "NAME": "Ammo",
+    "DESCRIPTION": "Choose an Attack in your hand. Give it 2 stslib:Persist or increase stslib:Persist by 1 this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Attack in your hand. Give it 2 stslib:Persist or increase stslib:Persist by 1 this combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Add Persist"]
+  }
+}
