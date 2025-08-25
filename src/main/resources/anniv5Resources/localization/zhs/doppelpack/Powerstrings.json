@@ -1,0 +1,15 @@
+{
+  "${ModID}:TurbulencePower": {
+    "NAME": "湍流",
+    "DESCRIPTIONS": [
+      "#y生成 充能球后，使用它的被动能力。",
+      "#y生成 充能球后，使用它的被动能力 #b%d 次。"
+    ]
+  },
+  "${ModID}:WormHolePower": {
+    "NAME": "虫洞",
+    "DESCRIPTIONS": [
+      "每点 #y力量 和 #y敏捷 分别增加 #y分身 #b%d 点攻击和 #y格挡 数值。"
+    ]
+  }
+}

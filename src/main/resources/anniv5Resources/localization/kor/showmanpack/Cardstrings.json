@@ -1,0 +1,53 @@
+{
+  "${ModID}:Dazzle": {
+    "NAME": "현혹",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화를 !M! 부여합니다."
+  },
+  "${ModID}:Amaze": {
+    "NAME": "깜짝",
+    "DESCRIPTION": "모든 적이 각각 약화의 수치마다 체력을 !M! 잃습니다."
+  },
+  "${ModID}:Grandstand": {
+    "NAME": "박수갈채",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴, [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴, [E] [E] 를 얻습니다."
+  },
+  "${ModID}:DramaticExit": {
+    "NAME": "사라지기",
+    "DESCRIPTION": "보존. NL 방어도를 !B! 얻습니다. NL 소멸."
+  },
+  "${ModID}:ForMyNextTrick": {
+    "NAME": "다음 트릭은...",
+    "DESCRIPTION": "무작위 파워 카드를 얻습니다. NL 파워 카드를 사용할 때마다 방어도를 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "다음 트릭은, 저는 ",
+      " 를 불러내겠습니다!"
+    ]
+  },
+  "${ModID}:SeeMe": {
+    "NAME": "내가 없어져볼게...",
+    "DESCRIPTION": "활력을 !M! 얻습니다. NL 다음 턴, *얍 을 얻습니다."
+  },
+  "${ModID}:NowYouDont": {
+    "NAME": "얍",
+    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL 소멸."
+  },
+  "${ModID}:HallOfMirrors": {
+    "NAME": "거울의 전당",
+    "DESCRIPTION": "지금과 앞으로 2 턴마다, *잔상 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 지금과 앞으로 2 턴마다, *잔상 을 얻습니다."
+  },
+  "${ModID}:Showstopper": {
+    "NAME": "명장면",
+    "DESCRIPTION": "방어도를 !B! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 만큼 X 번 얻습니다. NL 방어도가 100 이상이라면, 모든 적이 체력을 50 잃습니다. 소멸."
+  },
+  "${ModID}:SmokeAndMirrors": {
+    "NAME": "연기와 거울",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이 카드가 손에 있을 때 어떤 카드든 소멸된다면, 이번 전투에서 이 카드의 방어도를 !M! 증가시킵니다. NL 소멸."
+  },
+  "${ModID}:MagicCylinder": {
+    "NAME": "매직 실린더",
+    "DESCRIPTION": "다음으로 막히지 않은 피해를 받으면 막고 공격 상대에게 되돌려줍니다."
+  }
+}

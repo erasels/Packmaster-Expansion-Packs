@@ -13,20 +13,22 @@ public class LoseFocusPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public LoseFocusPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.DEBUFF,false,owner,amount);
+        super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, amount);
         canGoNegative = true;
-        if (amount < 0){
+        if (amount < 0) {
             name = DESCRIPTIONS[2];
             type = PowerType.BUFF;
         }
     }
+
     public void atStartOfTurn() {
         this.addToBot(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -this.amount), -this.amount));
         removeThis();
     }
+
     @Override
     public void updateDescription() {
-        if (amount < 0){
+        if (amount < 0) {
             name = DESCRIPTIONS[2];
             description = DESCRIPTIONS[3] + (-amount) + DESCRIPTIONS[1];
         } else {

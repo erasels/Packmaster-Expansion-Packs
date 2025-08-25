@@ -1,0 +1,59 @@
+{
+  "${ModID}:RisingSlashCombo": {
+    "NAME": "Rising Slash Combo",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
+  "${ModID}:OverheadSmash": {
+    "NAME": "Overhead Smash",
+    "DESCRIPTION": "Can only be played if last card played was an *Attack. NL Deal !D! damage !M! times."
+  },
+  "${ModID}:DodgeSlash": {
+    "NAME": "Dodge Slash",
+    "DESCRIPTION": "Gain !B! Block. NL If your current Block exceeds enemy's intended damage, gain [E]."
+  },
+  "${ModID}:KinsectHarvestExtract": {
+    "NAME": "Kinsect Control",
+    "DESCRIPTION": "Choose an Extract. NL Gain that Extract at the start of each turn."
+  },
+  "${ModID}:CardForSectionOfIG": {
+    "NAME": "ChooseOne",
+    "DESCRIPTION": "At start of turn, Gain ",
+    "EXTENDED_DESCRIPTION": [
+      "Red Extract",
+      "White Extract",
+      "Yellow Extract",
+      "."
+    ]
+  },
+  "${ModID}:Vault": {
+    "NAME": "Swiftly Vault",
+    "DESCRIPTION": "Next turn, draw !M! additional cards."
+  },
+  "${ModID}:JumpingAdvancingSlash": {
+    "NAME": "Advancing Slash",
+    "DESCRIPTION": "Apply !M! Weak. NL Draw !M! cards. NL ${ModID}:Aerial: Add 1 *Dance into your hand."
+  },
+  "${ModID}:VaultingDance": {
+    "NAME": "Vaulting Dance",
+    "DESCRIPTION": "Apply !M! Weak. NL Draw !M! cards. NL Exhaust."
+  },
+  "${ModID}:DescendingSlash": {
+    "NAME": "Descending Slash",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Aerial: Gain [E] [E] .",
+    "EXTENDED_DESCRIPTION": [
+      "Swift Assault Thrust"
+    ]
+  },
+  "${ModID}:RisingSpiralSlash": {
+    "NAME": "Rising Spiral Slash",
+    "DESCRIPTION": "Can only be played with 3 different Extracts. NL Deal !D! damage to ALL enemies 5 times. NL Draw 5 cards. NL Randomly lose !M! Extracts."
+  },
+  "${ModID}:Evade": {
+    "NAME": "Evade",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Aerial: Draw !M! cards."
+  },
+  "${ModID}:Mounting": {
+    "NAME": "Mounting",
+    "DESCRIPTION": "After attacking !M! times while ${ModID}:Aerial, ALL enemies lose 50% of their current HP."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "${ModID}:Polishing": {
+    "NAME": "연마",
+    "DESCRIPTION": "공격 카드를 사용할 때마다, 이번 전투에서 그 피해를 !M! 만큼 증가시킵니다."
+  },
+  "${ModID}:WorkHammer": {
+    "NAME": "작업 망치",
+    "DESCRIPTION": "${ModID}:전면 피해를 !D! 줍니다. NL 적에게 판금 갑옷을 !M! 부여합니다."
+  },
+  "${ModID}:Chained": {
+    "NAME": "연결됨",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 모든 적이 방어도를 !M! 얻습니다."
+  },
+  "${ModID}:StormStrike": {
+    "NAME": "폭풍 타격",
+    "DESCRIPTION": "${ModID}:치명 피해를 !D! 줍니다. NL 취약을 !M! 부여합니다."
+  },
+  "${ModID}:WarSong": {
+    "NAME": "군가",
+    "DESCRIPTION": "취약을 !M! 부여합니다. NL 활력을 !${ModID}:m2! 얻습니다."
+  },
+  "${ModID}:Rapier": {
+    "NAME": "쌍날칼",
+    "DESCRIPTION": "${ModID}:전면 피해를 !D! 줍니다. NL 방어도를 무시합니다."
+  },
+  "${ModID}:Fall": {
+    "NAME": "낙하",
+    "DESCRIPTION": "뽑을 카드 더미의 카드 + 6 만큼 ${ModID}:전면 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 뽑을 카드 더미의 카드 + 6 만큼 ${ModID}:전면 피해를 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL (피해를 !D! 줍니다.)"]
+  },
+  "${ModID}:Turtle": {
+    "NAME": "거북",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 공격 카드가 ${ModID}:치명 피해를 줍니다."
+  },
+  "${ModID}:Bolas": {
+    "NAME": "올가미",
+    "DESCRIPTION": "{@@}anniv5:둔화를 부여합니다. NL 적이 방어도를 !M! 얻습니다. NL 카드를 !anniv5:m2! 장 뽑습니다. NL 소멸."
+  },
+  "${ModID}:FFBlade": {
+    "NAME": "FF 블레이드",
+    "DESCRIPTION": "${ModID}:전면 피해와 ${ModID}:치명 피해를 !D! 줍니다."
+  }
+}

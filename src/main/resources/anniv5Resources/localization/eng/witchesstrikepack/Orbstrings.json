@@ -4,7 +4,7 @@
     "DESCRIPTION": [
       "#yPassive: After you play an #gSkill, deal #b",
       " damage to a random enemy. NL ",
-      "#yEvoke: Deal #b"," damage to ALL enemies. NL #yEvoke damage is increased for each channeled #yArcane"
+      "#yEvoke: Deal #b"," damage to ALL enemies. NL #yEvoke damage is increased for each channeled #yArcane."
     ]
   }
 }

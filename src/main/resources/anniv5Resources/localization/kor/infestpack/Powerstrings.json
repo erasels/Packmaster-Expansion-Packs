@@ -1,0 +1,19 @@
+{
+  "${ModID}:CompoundeyesPower": {
+    "NAME": "복안",
+    "DESCRIPTIONS": [
+      "다음으로 카드를 사용하고 나서 #r턴을 #r종료합니다."
+    ]
+  },
+  "${ModID}:LordOfTheFliesPower": {
+    "NAME": "곤충의 제왕",
+    "DESCRIPTIONS": [
+      "매 턴 카드를 #b",
+      "1 장 뽑습니다. ",
+      " 장 뽑습니다. ",
+      "카드가 #y감염 카운터를 얻을 때 #b",
+      "1 개를 더 얻습니다.",
+      " 개를 더 얻습니다."
+    ]
+  }
+}

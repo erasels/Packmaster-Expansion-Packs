@@ -1,0 +1,40 @@
+{
+"${ModID}:ApplyPoison": {
+    "NAME": "독액 칼날",
+    "DESCRIPTION": "${ModID}:분비합니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:분비합니다. NL 카드를 1 장 뽑습니다."
+},"${ModID}:Guile": {
+    "NAME": "간계",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 2 장 버립니다. NL 이번 전투 동안 비용이 1 증가합니다."
+},"${ModID}:Toxicology": {
+    "NAME": "중독학",
+    "DESCRIPTION": "카드를 2 장 뽑습니다. NL ${ModID}:분비합니다. ${ModID}:분비 상태라면 벗어나고 대신 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 2 장 뽑습니다. NL ${ModID}:분비합니다. ${ModID}:분비 상태라면 벗어나고 대신 [E] [E] 를 얻습니다."
+},"${ModID}:Patience": {
+    "NAME": "그림자 속에 숨기",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 경지에 있다면 벗어나고 방어도를 !B! 더 얻습니다."
+},"${ModID}:DaggerRush": {
+    "NAME": "단검 돌진",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다."
+},"${ModID}:CheapShot": {
+    "NAME": "비열한 공격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 경지에 있다면 [E] 를 얻습니다. NL 소멸."
+},"${ModID}:ColdCalculated": {
+    "NAME": "냉철하고 계산된",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:동상을 !M! 부여합니다. NL 경지에 있다면 이번 턴 카드를 2 장 보존합니다."
+},"${ModID}:PrepareStrike": {
+    "NAME": "타격 준비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적이 가진 서로 다른 해로운 효과마다 활력을 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+        "방어도를 !B! 얻습니다. NL 적이 가진 서로 다른 해로운 효과마다 활력을 !M! 얻습니다. NL (활력을",
+        " 얻습니다.)"
+    ]
+},"${ModID}:SinisterConcoction": {
+    "NAME": "불길한 조합",
+    "DESCRIPTION": "${ModID}:오염을 !M! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL ${ModID}:오염을 !M! 부여합니다. NL 소멸."
+},"${ModID}:BrutalStrikes": {
+    "NAME": "잔혹한 타격들",
+    "DESCRIPTION": "피해를 !D! 만큼 두 번 줍니다. NL 적이 가진 서로 다른 해로운 효과마다 피해를 !M! 더 줍니다."
+}
+}

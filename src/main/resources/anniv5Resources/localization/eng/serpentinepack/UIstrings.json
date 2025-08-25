@@ -2,7 +2,7 @@
   "${ModID}:SerpentinePack": {
     "TEXT": [
       "Serpentine Disciple",
-      "A disciple of the Reptomancer. Uses ${ModID}:Venomous and ${ModID}:Cunning Stances which \u200bfocus on applying debuffs.",
+      "A disciple of the Reptomancer. Uses a ${ModID}:Venomous Stance to apply Poison and other debuffs.",
       "Dayvig",
       "Pack Art - Dayvig"
     ]

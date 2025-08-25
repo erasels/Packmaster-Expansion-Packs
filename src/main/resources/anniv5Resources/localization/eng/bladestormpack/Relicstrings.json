@@ -1,0 +1,11 @@
+{
+  "${ModID}:FlyingDutchman": {
+    "NAME": "Flying Dutchman",
+    "FLAVOR": "You'd swear it glows and hovers when the weather's real bad.",
+    "DESCRIPTIONS": [
+      "The second time you play an Attack each turn, gain #b",
+        " #y${ModID}:Windrush and #b",
+        " #y${ModID}:Precision."
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+	"${ModID}:AirCurrent":	{
+		"DESCRIPTION": "피해를 !D! 줍니다. NL 대상이 ${ModID}:패트라가 있다면, 취약을 !M! 부여합니다.",
+		"NAME": "기류"
+	},
+	"${ModID}:DustTornado":	{
+		"DESCRIPTION": "손에 있는 카드 1 장을 소멸시키고 버린 카드 더미에서 무작위 !M! 장의 카드를 소멸시킵니다. NL 소멸.",
+		"NAME": "먼지 토네이도"
+	},
+	"${ModID}:Enervate":	{
+		"DESCRIPTION": "적이 가진 힘의 절반을 잃고, !M! 더 잃습니다. NL 소멸.",
+		"NAME": "기운 약화"
+	},
+	"${ModID}:Excavation":	{
+		"DESCRIPTION": "방어도를 !B! 얻습니다. NL 버린 카드 더미에서 !M! 장의 카드를 가져오고 보존합니다.",
+		"NAME": "굴착"
+	},
+	"${ModID}:Geomorphology":	{
+		"DESCRIPTION": "카드를 소멸시키거나 구체를 영창할 때마다 무작위 적에게 ${ModID}:페트라를 !M! 부여합니다.",
+		"NAME": "지형학"
+	},
+	"${ModID}:GeothermalHeating":	{
+		"DESCRIPTION": "방어도를 !B! 얻습니다. NL 대상이 가진 서로 다른 해로운 효과마다 방어도를 !M! 더 얻습니다.",
+		"NAME": "지열 난방"
+	},
+	"${ModID}:Lithosphere":	{
+		"DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:페트라를 !M! 부여합니다.",
+		"NAME": "암석권"
+	},
+	"${ModID}:MudFissure":	{
+		"DESCRIPTION": "피해를 !D! 줍니다. NL 대상이 해로운 효과를 가지고 있다면 피해를 두 배로 줍니다.",
+		"NAME": "진흙 균열"
+	},
+	"${ModID}:RagingInferno":	{
+		"DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:점화를 !M! 부여합니다. NL 소멸.",
+		"NAME": "분노의 지옥불",
+		"UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:점화를 !M! 부여합니다."
+	},
+	"${ModID}:TectonicQuake":	{
+		"DESCRIPTION": "적 전체에게 피해를 !D! 주고 약화와 ${ModID}:페트라를 !M! 부여합니다. NL 소멸.",
+		"NAME": "지질 운동",
+		"UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 주고 약화와 ${ModID}:페트라를 !M! 부여합니다."
+	}
+}

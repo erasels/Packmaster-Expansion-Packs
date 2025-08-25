@@ -1,0 +1,46 @@
+{
+  "${ModID}:Topple": {
+    "NAME": "몰락",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투에서 사용된 ${ModID}:평범한 카드마다 피해를 !M! 더 줍니다."
+  },
+  "${ModID}:Vanguard": {
+    "NAME": "선봉",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 손에 있을 때 희귀 카드를 사용하면 이 카드를 사용합니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 손에 있을 때 희귀 또는 특별 카드를 사용하면 이 카드를 사용합니다."
+  },
+  "${ModID}:Shakedown": {
+    "NAME": "위기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 희귀 또는 특별 카드마다 카드를 1 장 뽑습니다."
+  },
+  "${ModID}:Favor": {
+    "NAME": "조력",
+    "DESCRIPTION": "${ModID}:메아리 로 얻을 3 중 1 장의 무작위 희귀 카드를 선택합니다. 이번 턴에 비용이 0이 됩니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "${ModID}:메아리 로 얻을 3 중 1 장의 무작위 희귀 카드를 선택합니다. 이번 턴에 비용이 0이 됩니다."
+  },
+  "${ModID}:EtTu": {
+    "NAME": "브루투스 너마저?",
+    "DESCRIPTION": "*단도 를 !M! 장 얻습니다. 단도들은 보존을 가집니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "*단도 를 !M! 장 얻고 희귀 단도 를 1 장 얻습니다. 단도들은 보존을 가집니다. NL 소멸."
+  },
+  "${ModID}:Spotlight": {
+    "NAME": "스포트라이트",
+    "DESCRIPTION": "뽑을 카드 더미에서 ${ModID}:평범한 카드를 손으로 가져옵니다. 희귀 카드가 됩니다.",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미에서 희귀 카드가 아닌 카드를 손으로 가져옵니다. 희귀 카드가 됩니다."
+  },
+  "${ModID}:Exultation": {
+    "NAME": "의기양양",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. 희귀 카드를 집을 때마다 영구적으로 방어도를 !M! 더 얻습니다. NL 소멸."
+  },
+  "${ModID}:Revolution": {
+    "NAME": "혁명",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. ${ModID}:평범한 카드를 사용할 때마다 그들은 체력을 !M! 잃습니다. NL 소멸."
+  },
+  "${ModID}:Apex": {
+    "NAME": "정점",
+    "DESCRIPTION": "${ModID}:승천. NL 이번 턴 동안 희귀 또는 특별 카드만 사용할 수 있습니다. 소멸."
+  },
+  "${ModID}:PowerStruggle": {
+    "NAME": "권력 투쟁",
+    "DESCRIPTION": "희귀 카드를 사용할 때마다 [E] 를 얻습니다. 그리고 일반 카드가 됩니다."
+  }
+}

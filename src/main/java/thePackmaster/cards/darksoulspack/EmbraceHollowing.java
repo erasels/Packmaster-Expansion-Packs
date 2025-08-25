@@ -14,15 +14,36 @@ public class EmbraceHollowing extends AbstractDarkSoulsCard {
     public EmbraceHollowing() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 0;
+    }
+
+    @Override
+    public void applyPowers() {
+        secondMagic = getApplyStrengthCount() * 2;
+        isSecondMagicModified = baseSecondMagic != secondMagic;
+        super.applyPowers();
+
+        String baseDescription = upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION;
+        if (secondMagic == 0) {
+            this.rawDescription = baseDescription;
+        } else {
+            this.rawDescription = baseDescription + cardStrings.EXTENDED_DESCRIPTION[0];
+        }
+        this.initializeDescription();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int count = Wiz.countDebuffs(p);
+        int count = getApplyStrengthCount();
+        for (int i = 0; i < count; i++)
+            Wiz.applyToSelf(new StrengthPower(p, 2));
+    }
+
+    private int getApplyStrengthCount() {
+        int count = Wiz.countDebuffs(Wiz.p());
         if (this.upgraded){
             count++;
         }
-        for (int i = 0; i < count; i++)
-            Wiz.applyToSelf(new StrengthPower(p, 2));
+        return count;
     }
 
     public void upp() {

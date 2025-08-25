@@ -1,0 +1,18 @@
+{
+	"${ModID}:DarkOfNightPower": {
+		"NAME": "밤의 어둠",
+		"DESCRIPTIONS": [
+			"다음으로 #y소멸하는 카드가 두 번 사용됩니다.",
+			"다음으로 #y소멸하는 #b",
+			" 장의 카드가 두 번 사용합니다."
+		]
+	},
+	"${ModID}:CallOfTheGravePower": {
+		"NAME": "무덤의 부름",
+			"DESCRIPTIONS": [
+				"턴 시작 시, 무작위 #y매장된 카드를 사용하고 #y파괴 합니다.",
+				"턴 시작 시, 무작위 #b",
+				" 장의 #y매장된 카드를 사용하고 #y파괴 합니다."
+			]
+	}
+}

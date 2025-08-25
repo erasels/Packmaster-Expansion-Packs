@@ -1,0 +1,43 @@
+{
+  "${ModID}:AC": {
+    "NAME": "교류",
+    "DESCRIPTION": "{@@}방어도를 !B! 얻습니다. NL *직류{!Upgrades!|>0=+} 를 얻습니다."
+  },
+  "${ModID}:DC": {
+    "NAME": "직류",
+    "DESCRIPTION": "{@@}보존. 전기를 1 번 영창합니다. NL 발현{!Upgrades!|>0=과 지속} 효과를 발동합니다. NL 소멸."
+  },
+  "${ModID}:BlockOn": {
+    "NAME": "방준",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격받을 때마다 조준을 !M! 부여합니다."
+  },
+  "${ModID}:Bruteforce": {
+    "NAME": "브루트포스",
+    "DESCRIPTION": "{@@}가장 오른쪽에 있는 전기를 적 전체를 공격하게 !M! 번 발현합니다.{!Upgrades!|0= NL 소멸.|@=}"
+  },
+  "${ModID}:LightsOut": {
+    "NAME": "암전",
+    "DESCRIPTION": "가장 오른쪽의 전기 구체를 암흑으로 대체합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "전기 구체를 모두 발현하고 발현한 만큼 암흑 구체를 영창합니다. NL 소멸."
+  },
+  "${ModID}:GlockOn": {
+    "NAME": "고준",
+    "DESCRIPTION": "조준을 !M! 부여합니다. NL !M! 턴 동안 공격 카드가 밀집과 조준의 영향을 받습니다."
+  },
+  "${ModID}:LocknLoad": {
+    "NAME": "장전과 조준",
+    "DESCRIPTION": "조준을 !M! 부여합니다. NL 전기를 !M! 번 영창합니다."
+  },
+  "${ModID}:Reiji": {
+    "NAME": "레이지",
+    "DESCRIPTION": "{@@}선천성. NL 적 전체에게 조준을 !${ModID}:m2! 부여합니다.{!M!|>0= NL 이미 조준이 있는 대상에 대해서는 밀집을 !M! 얻습니다.} NL 소멸."
+  },
+  "${ModID}:LightningRod": {
+    "NAME": "피뢰침",
+    "DESCRIPTION": "{@@} !M! 턴 동안 전기 구체가 이 적을 공격합니다. NL 전기를 1 번 영창합니다."
+  },
+  "${ModID}:TunnelVision": {
+    "NAME": "좁은 시야",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=적 전체에게 조준을 !M! 부여합니다. NL }조준이 추가 조준마다 피해를 25% 더 증가시킵니다."
+  }
+}

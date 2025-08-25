@@ -6,23 +6,23 @@
 
   "${ModID}:CrescentSweep": {
     "NAME": "Heel Tornado",
-    "DESCRIPTION": "Add a *Dodge *Offset to your hand. NL If you played 2 other Skills this turn Channel 1 ${ModID}:Arcane.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Dodge *Offsets to your hand. NL If you played 2 other Skills this turn Channel 1 ${ModID}:Arcane."
+    "DESCRIPTION": "Add a *Dodge *Offset into your hand. NL If you played 2 other Skills this turn, Channel 1 ${ModID}:Arcane.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Dodge *Offsets into your hand. NL If you played 2 other Skills this turn, Channel 1 ${ModID}:Arcane."
   },
 
   "${ModID}:FullMoonHalo": {
     "NAME": "Full Moon Halo",
-    "DESCRIPTION": "Gain !B! Block. NL If you have 2 or more orbs, add a *Dodge *Offset to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL If you have 2 or more Orbs, add a *Dodge *Offset into your hand."
   },
 
   "${ModID}:ChitteringPunt": {
     "NAME": "Bullet Climax",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a random Skill from your drawpile into your hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a random Skill from your draw pile into your hand."
   },
 
   "${ModID}:MysticFlourish": {
     "NAME": "Wicked Weave",
-    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL If you have 3 or more orbs, apply !M! ${ModID}:Ignite"
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL If you have 3 or more Orbs, apply !M! ${ModID}:Ignite."
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
@@ -30,8 +30,8 @@
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Flow of the Sword",
-    "DESCRIPTION": "Ethereal. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw a card the first time you play a Skill each turn.",
-    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw a card the first time you play a Skill each turn."
+    "DESCRIPTION": "Ethereal. NL Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw 1 card the first time you play a Skill each turn.",
+    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Fire\u00a0Spirit. NL Draw 1 card the first time you play a Skill each turn."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
@@ -45,17 +45,17 @@
 
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "Whenever you play a skill this turn, gain !M! Block. NL Exhaust",
-    "UPGRADE_DESCRIPTION":"Whenever you play a skill this turn, gain !M! Block."
+    "DESCRIPTION": "Whenever you play a Skill this turn, gain !M! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"Whenever you play a Skill this turn, gain !M! Block."
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moon River",
-    "DESCRIPTION": "Gain !M! Orb Slot. NL At the start of your turn, add a *Dodge *Offset to your hand",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Orb Slots. NL At the start of your turn, add a *Dodge *Offset to your hand"
+    "DESCRIPTION": "Gain !M! Orb Slot. NL At the start of your turn, add a *Dodge *Offset into your hand.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Orb Slots. NL At the start of your turn, add a *Dodge *Offset into your hand."
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Space Slip",
-    "DESCRIPTION": "Channel 1 ${ModID}:Arcane. NL Add !M! *Dodge *Offsets to your hand."
+    "DESCRIPTION": "Channel 1 ${ModID}:Arcane. NL Add !M! *Dodge *Offsets into your hand."
   },
   "${ModID}:Inscribed": {
     "EXTENDED_DESCRIPTION": [

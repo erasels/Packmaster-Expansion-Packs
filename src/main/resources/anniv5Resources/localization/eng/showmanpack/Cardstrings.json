@@ -39,8 +39,8 @@
   },
   "${ModID}:Showstopper": {
     "NAME": "The Showstopper!",
-    "DESCRIPTION": "Gain !M! Block X times. NL If you have 100 or more Block, ALL enemies lose 50 HP. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Block X+1 times. NL If you have 100 or more Block, ALL enemies lose 50 HP. Exhaust."
+    "DESCRIPTION": "Gain !B! Block X times. NL If you have 100 or more Block, ALL enemies lose 50 HP. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times. NL If you have 100 or more Block, ALL enemies lose 50 HP. Exhaust."
   },
   "${ModID}:SmokeAndMirrors": {
     "NAME": "Smoke And Mirrors",

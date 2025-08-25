@@ -17,7 +17,8 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.combat.*;
+import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
+import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.util.Wiz;
@@ -36,8 +37,8 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
 
     // Animation Rendering Numbers - You can leave these at default, or play around with them and see what they change.
     private float vfxTimer = 2.5f;
-    private float vfxIntervalMin = 1.4f;
-    private float vfxIntervalMax = 2.7f;
+    private final float vfxIntervalMin = 1.4f;
+    private final float vfxIntervalMax = 2.7f;
     private static final float ORB_WAVY_DIST = 0.04f;
     private static final float PI_4 = 12.566371f;
     private static final String IMG_PATH = makePath("/images/orbs/witchesstrike/arcane.png");
@@ -55,25 +56,25 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
         applyFocus();
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
-        Wiz.vfx(new MagicRingEffect(hb.cX,hb.cY,Color.NAVY,Color.SKY));
+        Wiz.vfx(new MagicRingEffect(hb.cX, hb.cY, Color.NAVY.cpy(), Color.SKY.cpy()));
         int arcanecount = 1;
-        for (AbstractOrb o : Wiz.p().orbs){
-            if (o instanceof Arcane && !(o == this)){
+        for (AbstractOrb o : Wiz.p().orbs) {
+            if (o instanceof Arcane && !(o == this)) {
                 arcanecount++;
             }
         }
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!mo.isDeadOrEscaped()) {
-                Wiz.vfx(new SmallLaserEffect(hb.cX,hb.cY,mo.hb.cX,mo.hb.cY));
-                Wiz.atb(new DamageAction(mo, new DamageInfo(AbstractDungeon.player, evokeAmount*arcanecount,
+                Wiz.vfx(new SmallLaserEffect(hb.cX, hb.cY, mo.hb.cX, mo.hb.cY));
+                Wiz.atb(new DamageAction(mo, new DamageInfo(AbstractDungeon.player, evokeAmount * arcanecount,
                         DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 Wiz.atb(new AbstractGameAction() {
                     @Override
                     public void update() {
-                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX,mo.hb.cY,Color.CYAN,1.2f));
-                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX,mo.hb.cY,Color.CYAN,1.2f));
-                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX,mo.hb.cY,Color.CYAN,1.2f));
-                        isDone= true;
+                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX, mo.hb.cY, Color.CYAN.cpy(), 1.2f));
+                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX, mo.hb.cY, Color.CYAN.cpy(), 1.2f));
+                        AbstractDungeon.effectList.add(new StarEffect(mo.hb.cX, mo.hb.cY, Color.CYAN.cpy(), 1.2f));
+                        isDone = true;
                     }
                 });
             }
@@ -84,12 +85,12 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
     public void updateDescription() { // Set the on-hover description of the orb
         applyFocus(); // Apply Focus (Look at the next method)
         int arcanecount = 1;
-        for (AbstractOrb o : Wiz.p().orbs){
-            if (o instanceof Arcane && !(o == this)){
+        for (AbstractOrb o : Wiz.p().orbs) {
+            if (o instanceof Arcane && !(o == this)) {
                 arcanecount++;
             }
         }
-        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + DESCRIPTIONS[2] + (evokeAmount*arcanecount) + DESCRIPTIONS[3];
+        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + DESCRIPTIONS[2] + (evokeAmount * arcanecount) + DESCRIPTIONS[3];
     }
 
     @Override
@@ -97,33 +98,33 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
         return new Arcane();
     }
 
-    public void passiveEffect(){
+    public void passiveEffect() {
         applyFocus();
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
                 AbstractMonster m = Wiz.getRandomEnemy();
-                if (m != null){
-                    Wiz.atb(new AbstractGameAction() {
+                if (m != null) {
+                    Wiz.att(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), 1.2f));
+                            isDone = true;
+                        }
+                    });
+                    Wiz.att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount),
+                            DamageInfo.DamageType.THORNS), AttackEffect.BLUNT_HEAVY));
+                    Wiz.att(new AbstractGameAction() {
                         @Override
                         public void update() {
                             AbstractDungeon.effectList.add(new OrbFlareEffect(Arcane.this, OrbFlareEffect.OrbFlareColor.FROST));
-                            AbstractDungeon.effectList.add(new SmallLaserEffect(hb.cX,hb.cY,m.hb.cX,m.hb.cY));
-                            isDone= true;
-                        }
-                    });
-                    Wiz.atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount),
-                            DamageInfo.DamageType.THORNS), AttackEffect.BLUNT_HEAVY));
-                    Wiz.atb(new AbstractGameAction() {
-                        @Override
-                        public void update() {
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX,m.hb.cY,Color.CYAN,1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX,m.hb.cY,Color.CYAN,1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX,m.hb.cY,Color.CYAN,1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX,m.hb.cY,Color.CYAN,1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX,m.hb.cY,Color.CYAN,1.2f));
-                            AbstractDungeon.effectList.add(new StarEffect(m.hb.cX,m.hb.cY,Color.CYAN,1.2f));
-                            isDone= true;
+                            AbstractDungeon.effectList.add(new SmallLaserEffect(hb.cX, hb.cY, m.hb.cX, m.hb.cY));
+                            isDone = true;
                         }
                     });
                 }
@@ -132,6 +133,7 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
         });
         updateDescription();
     }
+
     @Override
     public void playChannelSFX() {
     }
@@ -141,7 +143,7 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
         AbstractPower power = AbstractDungeon.player.getPower("Focus");
         if (power != null) {
             this.passiveAmount = Math.max(0, this.basePassiveAmount + power.amount);
-            this.evokeAmount =  Math.max(0,this.baseEvokeAmount + power.amount);
+            this.evokeAmount = Math.max(0, this.baseEvokeAmount + power.amount);
         } else {
             this.passiveAmount = this.basePassiveAmount;
             this.evokeAmount = this.baseEvokeAmount;
@@ -155,7 +157,7 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
         angle += Gdx.graphics.getDeltaTime() * 25.0f;
         vfxTimer -= Gdx.graphics.getDeltaTime();
         if (vfxTimer < 0.0f) {
-            AbstractDungeon.effectList.add(new MagicRingEffect(cX,cY,Color.BLUE, Color.SKY));
+            AbstractDungeon.effectList.add(new MagicRingEffect(cX, cY, Color.BLUE.cpy(), Color.SKY.cpy()));
             vfxTimer = MathUtils.random(vfxIntervalMin, vfxIntervalMax);
         }
     }
@@ -168,6 +170,7 @@ public class Arcane extends CustomOrb implements PackmasterOrb {
         renderText(sb);
         hb.render(sb);
     }
+
     protected void renderText(SpriteBatch sb) {
         FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET + 20.0F * Settings.scale, this.c, this.fontScale);
     }

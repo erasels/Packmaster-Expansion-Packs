@@ -15,7 +15,22 @@ public class CloranthyRing extends AbstractDarkSoulsCard {
     public CloranthyRing() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
+        baseSecondMagic = secondMagic = 0;
         this.exhaust=true;
+    }
+
+    @Override
+    public void applyPowers() {
+        secondMagic = Wiz.countDebuffs(Wiz.p());
+        isSecondMagicModified = baseSecondMagic != secondMagic;
+        super.applyPowers();
+
+        if (secondMagic == 0) {
+            this.rawDescription = cardStrings.DESCRIPTION;
+        } else {
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        }
+        this.initializeDescription();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

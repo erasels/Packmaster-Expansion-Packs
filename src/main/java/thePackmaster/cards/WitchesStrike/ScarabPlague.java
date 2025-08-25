@@ -15,18 +15,20 @@ public class ScarabPlague extends AbstractWitchStrikeCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public ScarabPlague() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
         cardsToPreview = new Bullet();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ChannelAction(new Arcane()));
-        Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(),magicNumber));
+        Wiz.atb(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy(), magicNumber));
     }
+
     public void upp() {
         upgradeMagicNumber(1);
     }
+
     @Override
     public String cardArtCopy() {
         return Backflip.ID;

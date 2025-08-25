@@ -1,0 +1,48 @@
+{
+  "${ModID}:Needlework": {
+    "NAME": "바느질",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL stslib:Persist !stslib:persist!."
+  },
+  "${ModID}:Backstitch": {
+    "NAME": "박음질",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:꿰맵니다."
+  },
+  "${ModID}:CrossStitch": {
+    "NAME": "십자수",
+    "DESCRIPTION": "약화를 !M! 부여합니다. NL ${ModID}:돌풍: ${ModID}:묶음을 1 부여합니다."
+  },
+  "${ModID}:Reading": {
+    "NAME": "독서",
+    "DESCRIPTION": "턴 시작 시, *읽기 를 손에 있는 무작위 카드에 ${ModID}:꿰맵니다.",
+    "UPGRADE_DESCRIPTION": "턴 시작 시, *%s 를 손에 있는 무작위 카드에 ${ModID}:꿰맵니다."
+  },
+  "${ModID}:Read": {
+    "NAME": "읽기",
+    "DESCRIPTION": "{@@}다음 턴, 카드를 !M! 장 뽑습니다."
+  },
+  "${ModID}:Cleanup": {
+  "NAME": "정리정돈",
+  "DESCRIPTION": "{@@}피해를 !D! 만큼 두 번 줍니다. NL 카드를 !M! 장 버립니다."
+  },
+  "${ModID}:Knot": {
+    "NAME": "매듭",
+    "DESCRIPTION": "무작위 적에게 ${ModID}:묶음을 !M! 부여합니다. NL ${ModID}:꿰맵니다."
+  },
+  "${ModID}:Pincushion": {
+    "NAME": "바늘방석",
+    "DESCRIPTION": "${ModID}:돌풍: 적 전체에게 피해를 !M! 줍니다. NL ${ModID}:꿰맵니다."
+  },
+  "${ModID}:Rethread": {
+    "NAME": "재바느질",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미에서 카드를 손으로 가져옵니다. NL stslib:Persist !stslib:persist!."
+  },
+  "${ModID}:CopyAndPaste": {
+    "NAME": "복사 붙여넣기",
+    "DESCRIPTION": "한 턴에 같은 카드를 두 번 사용할 때마다 비용이 0인 복사본을 버린 카드 더미에 섞어 넣습니다.",
+    "UPGRADE_DESCRIPTION": "한 턴에 같은 카드를 두 번 사용할 때마다 비용이 0인 복사본을 뽑을 카드 더미에 섞어 넣습니다."
+  },
+  "${ModID}:Patchwork": {
+    "NAME": "패치워크",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이 카드의 복사본을 뽑을 카드 더미에 있는 무작위 카드에 ${ModID}:꿰맵니다."
+  }
+}

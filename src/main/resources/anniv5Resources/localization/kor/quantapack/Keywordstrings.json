@@ -1,0 +1,14 @@
+[
+  {
+    "PROPER_NAME": "기절",
+    "NAMES": [
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned",
+      "기절",
+      "기절시킵니다"
+    ],
+    "DESCRIPTION": "기절한 적은 그 턴을 스킵합니다."
+  }
+]

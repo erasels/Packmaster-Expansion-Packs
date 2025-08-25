@@ -41,6 +41,6 @@
   },
   "${ModID}:AchievementHunter": {
     "NAME": "成就猎手",
-    "DESCRIPTION": "打出 ${ModID}:高亮 牌时， NL 获得1点 力量 。 NL 首次打出5次后， NL 获得2点 敏捷 。"
+    "DESCRIPTION": "每当你打出 ${ModID}:高亮 牌， NL 获得1点 力量 。 NL 触发 !M! 次后， NL 获得2点 敏捷 。"
   }
 }

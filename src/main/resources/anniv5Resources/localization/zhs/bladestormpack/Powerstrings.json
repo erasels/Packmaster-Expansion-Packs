@@ -1,0 +1,34 @@
+{
+  "${ModID}:EscalatingBreezePower": {
+    "NAME": "微风渐强",
+    "DESCRIPTIONS": [
+      "本回合保留至多 #b",
+      " 张牌。 保留的攻击牌下回合减少 #b",
+      " 张牌。 保留的攻击牌下回合减少 #b",
+      " 点耗能。"
+    ]
+  },
+  "${ModID}:GaleForceDrawPower": {
+    "NAME": "烈风",
+    "DESCRIPTIONS": [
+      "每当你打出一张攻击牌，抽 #b",
+      " 张牌，如果该攻击牌的耗能在 #b",
+      " 张牌，如果该攻击牌的耗能在 #b",
+      " 点或以上。"
+    ]
+  },
+  "${ModID}:GaleForceWindrushPower": {
+    "NAME": "烈风",
+    "DESCRIPTIONS": [
+      "每当你打出一张攻击牌，获得等同于其耗能+ #b",
+      " 层 #y风行。"
+    ]
+  },
+  "${ModID}:WindrushPower": {
+    "NAME": "风行",
+    "DESCRIPTIONS": [
+      "每当你受到未被格挡的攻击伤害，减少 #b",
+      " 点。 NL 回合结束时层数减半(向上取整)。"
+    ]
+  }
+}

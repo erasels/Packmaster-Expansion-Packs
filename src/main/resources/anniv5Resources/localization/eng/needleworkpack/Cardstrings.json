@@ -43,6 +43,6 @@
   },
   "${ModID}:Patchwork": {
     "NAME": "Patchwork",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Stitch a copy of this to a random card in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Stitch a copy of this to a random card in your draw pile."
   }
 }

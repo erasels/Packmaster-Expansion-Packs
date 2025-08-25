@@ -1,0 +1,54 @@
+{
+    "${ModID}:Shelling": {
+      "NAME": "포격",
+      "DESCRIPTION": "피해를 !D! 주고 다른 무작위 적에게 피해를 !${ModID}:sd! 줍니다. NL ${ModID}:포탄을 !M! 얻습니다.",
+      "FLAVOR": "일반적인 용도는 방충입니다."
+    },
+    "${ModID}:Suppress": {
+      "NAME": "진압",
+      "DESCRIPTION": "피해를 !D! 줍니다. NL 약화를 !M! 부여합니다. NL 대상이 이번 턴 힘을 !${ModID}:m2! 얻습니다.",
+      "FLAVOR": "공격 진정제."
+    },
+    "${ModID}:BallisticStrike": {
+      "NAME": "탄도 타격",
+      "DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 !M! 번 줍니다. NL 공격 의도를 가진 적에게 두 배의 피해를 줍니다.",
+      "FLAVOR": "콰광!"
+    },
+    "${ModID}:DefensePlanning": {
+      "NAME": "방어 계획",
+      "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:흐릿함이 없다면, !M! 얻습니다.",
+      "FLAVOR": "이대로만 합시다."
+    },
+    "${ModID}:Logistics": {
+      "NAME": "병참술",
+      "DESCRIPTION": "약화, 손상, 취약을 !M! 잃습니다. NL ${ModID}:포탄을 !M! 얻습니다. NL 카드를 !${ModID}:m2! 장 뽑습니다.",
+      "FLAVOR": "그것들은 모든 걸 더 매끄럽게 굴러가게 합니다."
+    },
+    "${ModID}:ThinkTwice": {
+      "NAME": "한번 더 생각하기",
+      "DESCRIPTION": "방어도를 !B! 얻습니다. NL 공격할 의도가 있는 적마다 방어도를 !M! 얻습니다.",
+      "FLAVOR": "어쩌면, 물량의 힘."
+    },
+    "${ModID}:Shrapnel": {
+      "NAME": "파편",
+      "DESCRIPTION": "공격 카드가 막히지 않은 피해 10마다 취약을 1, ${ModID}:점화를 2 부여합니다.",
+      "UPGRADE_DESCRIPTION": "선천성. NL 공격 카드가 막히지 않은 피해 10마다 취약을 1, ${ModID}:점화를 2 부여합니다.",
+      "FLAVOR": "계속 압박해!"
+    },
+    "${ModID}:ShellForge": {
+      "NAME": "포탄 재련",
+      "DESCRIPTION": "${ModID}:포탄이 피해를 !M! 더 줍니다. NL 턴 시작 시, ${ModID}:포탄을 !${ModID}:m2! 얻습니다.",
+      "FLAVOR": "베이커리, 그런데 폭발물을 위한."
+    },
+    "${ModID}:DigIn": {
+      "NAME": "땅굴",
+      "DESCRIPTION": "방어도를 !B! 얻고 ${ModID}:흐릿함을 !M! 얻습니다. NL 다음 턴 시작 시 방어도가 있다면 [E] 를 얻습니다.",
+      "FLAVOR": "캠프를 차리기에 좋은 장소 같습니다."
+    },
+    "${ModID}:Prevail": {
+      "NAME": "우세",
+      "DESCRIPTION": "한 공격으로 9 이상의 피해를 입힐 때마다 이번 턴에 적이 힘을 2 잃습니다.",
+      "FLAVOR": "강력히 반대합니다!"
+    }
+}
+  

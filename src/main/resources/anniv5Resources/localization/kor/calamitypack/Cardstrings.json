@@ -1,0 +1,50 @@
+{
+  "${ModID}:Doomtouch": {
+    "NAME": "파멸의 손짓",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:징크스를 !M! 부여합니다."
+  },
+  "${ModID}:BindingChains": {
+    "NAME": "구속하는 사슬",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적이 이번 턴에 힘을 !M! 잃습니다. NL 소멸."
+  },
+  "${ModID}:FreezingVenom": {
+    "NAME": "얼어붙은 독액",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 적 전체에게 ${ModID}:동상 과 중독을 !M! 부여합니다."
+  },
+  "${ModID}:EssenceGrasp": {
+    "NAME": "정수 탈취",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 가진 ${ModID}:점화, ${ModID}:동상, 중독마다 카드를 1 장 뽑습니다.",
+    "EXTENDED_DESCRIPTION": [" NL (카드를 !M! 장 뽑습니다.)", " NL (카드를 !M! 장 뽑습니다.)"]
+  },
+  "${ModID}:ChillingCurse": {
+    "NAME": "오싹한 저주",
+    "DESCRIPTION": "${ModID}:동상 과 약화를 !M! 부여합니다. NL 소멸."
+  },
+  "${ModID}:Suffer": {
+    "NAME": "시달림",
+    "DESCRIPTION": "${ModID}:점화, ${ModID}:동상, 중독, ${ModID}:징크스를 !M! 부여합니다. NL 소멸."
+  },
+  "${ModID}:ArmorOfMalice": {
+    "NAME": "악의 갑옷",
+    "DESCRIPTION": "모든 적의 서로 다른 해로운 효과의 !M! 배 만큼 방어도를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [" NL (방어도를 !B! 얻습니다.)"]
+  },
+  "${ModID}:AllIsFire": {
+    "NAME": "모든 것이 화염",
+    "DESCRIPTION": "모든 ${ModID}:동상 과 중독을 ${ModID}:점화 로 변화시킵니다. NL 적의 ${ModID}:점화를 50% 증가시킵니다. NL 소멸성 !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "모든 ${ModID}:동상 과 중독을 ${ModID}:점화 로 변화시킵니다. NL 적의 ${ModID}:점화를 2배로 증가시킵니다. NL 소멸성 !stslib:ex!."
+  },
+  "${ModID}:DreadOmen": {
+    "NAME": " ",
+    "DESCRIPTION": "Apply !M! ${ModID}:Jinx."
+  },
+  "${ModID}:GrowingFlames": {
+    "NAME": "성장하는 불꽃",
+    "DESCRIPTION": "턴 시작 시, 적 전체에게 ${ModID}:점화를 !M! 부여합니다."
+  },
+  "${ModID}:CobrasGift": {
+    "NAME": "코브라의 선물",
+    "DESCRIPTION": "중독을 !M! 부여합니다. NL [E] 를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "중독을 !M! 부여합니다. NL [E] 를 얻습니다."
+  }
+}

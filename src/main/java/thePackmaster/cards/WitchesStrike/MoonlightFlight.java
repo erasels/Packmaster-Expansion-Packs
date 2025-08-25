@@ -10,9 +10,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MoonlightFlight extends AbstractWitchStrikeCard
-
-    {
+public class MoonlightFlight extends AbstractWitchStrikeCard {
     public final static String ID = makeID("MoonlightFlight");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
@@ -23,7 +21,7 @@ public class MoonlightFlight extends AbstractWitchStrikeCard
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p,new MoonlightFlightPower(p,1)));
+        addToBot(new ApplyPowerAction(p, p, new MoonlightFlightPower(p, 1)));
         Wiz.atb(new IncreaseMaxOrbAction(magicNumber));
     }
 
@@ -31,6 +29,7 @@ public class MoonlightFlight extends AbstractWitchStrikeCard
         selfRetain = true;
         upgradeMagicNumber(1);
     }
+
     @Override
     public String cardArtCopy() {
         return LiveForever.ID;

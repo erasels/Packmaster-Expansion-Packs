@@ -1,0 +1,15 @@
+{
+  "${ModID}:IndomitablePack": {
+    "TEXT": [
+      "불굴",
+      "유연하고 시너지 넘치는 방어도로 위험한 첨탑에서 살아남으세요.",
+      "modargo"
+    ]
+  },
+  "${ModID}:IndomitablePackHat": {
+    "TEXT": [
+      "고대의 신비함.",
+      "피라미드"
+    ]
+  }
+}

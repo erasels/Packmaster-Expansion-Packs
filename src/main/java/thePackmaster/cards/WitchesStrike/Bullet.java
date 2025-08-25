@@ -16,6 +16,7 @@ public class Bullet extends AbstractWitchStrikeCard {
         block = baseBlock = 4;
         exhaust = true;
     }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.doBlk(block);
     }

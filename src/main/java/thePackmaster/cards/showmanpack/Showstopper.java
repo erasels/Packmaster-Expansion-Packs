@@ -13,8 +13,7 @@ public class Showstopper extends AbstractShowmanCard {
 
     public Showstopper() {
         super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 8;
-        baseDamage = damage = DAMAGE;
+        baseBlock = 8;
         this.exhaust = true;
     }
 
@@ -23,7 +22,7 @@ public class Showstopper extends AbstractShowmanCard {
         for (int i = 0; i < timesUpgraded; i++){
             energy++;
         }
-        addToBot(new ShowstopperAction(p, magicNumber, this.freeToPlayOnce, energy, BLOCKTHRESHOLD, damage));
+        addToBot(new ShowstopperAction(p, block, this.freeToPlayOnce, energy, BLOCKTHRESHOLD, DAMAGE));
     }
 
     public void upp() {

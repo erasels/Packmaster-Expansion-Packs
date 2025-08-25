@@ -1,0 +1,55 @@
+{
+  "${ModID}:MorionBlade": {
+    "NAME": "모리온 블레이드",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 가진 서로 다른 해로운 효과마다 반복합니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( !M! 번 반복합니다.)"
+    ]
+  },
+  "${ModID}:Bloodlust": {
+    "NAME": "유혈충동",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 모두에게 취약을 1 부여합니다."
+  },
+  "${ModID}:IronFlesh": {
+    "NAME": "강철 신체",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴 카드를 1 장 적게 뽑습니다."
+  },
+  "${ModID}:PrisonersChain": {
+    "NAME": "포로의 사슬",
+    "DESCRIPTION": "자신에게 해로운 효과가 부여될 때마다 활력을 !M! 얻습니다."
+  },
+  "${ModID}:LifehuntScythe": {
+    "NAME": "생명을 수확하는 낫",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 손상을 !M! 얻습니다."
+  },
+  "${ModID}:Remedy": {
+    "NAME": "치료",
+    "DESCRIPTION": "다음 !M! 번 동안 해로운 효과를 받을 때마다 2만큼 감소시킵니다."
+  },
+  "${ModID}:BlueTearstone": {
+    "NAME": "푸른 눈물석",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 가진 서로 다른 해로운 효과마다 반복합니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( !M! 번 반복합니다.)"
+    ]
+  },
+  "${ModID}:EmbraceHollowing": {
+    "NAME": "망자화",
+    "DESCRIPTION": "가진 서로 다른 해로운 효과마다 힘을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "가진 서로 다른 해로운 효과마다 힘을 !M! 얻고 !M! 더 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (힘을 !${ModID}:m2! 얻습니다.)"
+    ]
+  },
+  "${ModID}:SmoughsHammer": {
+    "NAME": "스모우의 해머",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화와 손상을 1 얻습니다. NL 취약을 !M! 얻습니다."
+  },
+  "${ModID}:CloranthyRing": {
+    "NAME": "녹화의 반지",
+    "DESCRIPTION": "가진 서로 다른 해로운 효과만큼 [E] 를 얻습니다. NL 카드를 !M! 장 뽑습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( [E] 를 !${ModID}:m2! 얻습니다.)"
+    ]
+  }
+}
