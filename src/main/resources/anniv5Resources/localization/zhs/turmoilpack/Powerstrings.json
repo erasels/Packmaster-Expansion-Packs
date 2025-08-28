@@ -1,0 +1,8 @@
+{
+  "${ModID}:CycleOfRenewal": {
+    "NAME": "轮回新生",
+    "DESCRIPTIONS": [
+      "在你的回合开始时， #y舍弃 ：基础牌 、 普通牌 或 状态牌。每 #y舍弃 1 张牌，抽 #b1 张牌。"
+    ]
+  }
+}

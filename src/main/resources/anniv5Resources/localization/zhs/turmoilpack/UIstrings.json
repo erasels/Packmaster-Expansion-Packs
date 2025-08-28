@@ -1,0 +1,21 @@
+{
+  "${ModID}:TurmoilPack": {
+    "TEXT": [
+      "狂乱",
+      "丢弃大量卡牌， NL 换取强力增益。",
+      "modargo",
+      "卡面来源于万智牌"
+    ]
+  },
+  "${ModID}:TurmoilPackHat": {
+    "TEXT": [
+      "给自己创造的牢笼。",
+      "心灵牢笼"
+    ]
+  },
+  "${ModID}:TormentedMindScreen": {
+    "TEXT": [
+      "消耗。"
+    ]
+  }
+}
