@@ -6,10 +6,8 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -17,21 +15,15 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
-import com.megacrit.cardcrawl.vfx.scene.TorchParticleXLEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.spherespack.BlazeOrbActivateEffect;
-import thePackmaster.vfx.spherespack.BlazeOrbFlareEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.adp;
@@ -109,7 +101,6 @@ public class Glyph extends CustomOrb {
             Wiz.atb(new DamageAction(m, this.info, AbstractGameAction.AttackEffect.NONE, true));
         }
         Wiz.atb(new GainBlockAction(Wiz.p(), passiveAmount, true));
-        // Wiz.atb(new ApplyPowerAction(Wiz.p(), Wiz.p(), new VigorPower(Wiz.p(), evokeAmount), evokeAmount, true));
         this.updateDescription();
     }
 
@@ -122,7 +113,6 @@ public class Glyph extends CustomOrb {
             Wiz.atb(new DamageAction(m, this.info, AbstractGameAction.AttackEffect.NONE, true));
         }
         Wiz.atb(new GainBlockAction(Wiz.p(), evokeAmount, true));
-        // Wiz.atb(new ApplyPowerAction(Wiz.p(), Wiz.p(), new VigorPower(Wiz.p(), evokeAmount), evokeAmount, true));
     }
 
     @Override
@@ -164,8 +154,6 @@ public class Glyph extends CustomOrb {
     @Override
     protected void renderText(SpriteBatch sb) {
         super.renderText(sb);
-        //FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET - 4.0F * Settings.scale, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
-        //FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET + 20.0F * Settings.scale, this.c, this.fontScale);
     }
 
     @Override

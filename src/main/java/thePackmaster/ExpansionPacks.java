@@ -76,7 +76,7 @@ public class ExpansionPacks implements
         thismod = new ExpansionPacks();
     }
 
-
+    //Thanks to Autumn
     public static boolean usesClass(AbstractCard card, Class<?> clazz) {
         final boolean[] usesAction = {false};
         ClassPool pool = Loader.getClassPool();
@@ -111,8 +111,6 @@ public class ExpansionPacks implements
         return usesAction[0];
     }
 
-
-
     @Override
     public void receivePostInitialize() {
         HatMenu.specialHats.put(InstantDeathPack.ID, new InstantDeathHat());
@@ -120,11 +118,11 @@ public class ExpansionPacks implements
         //Please add your pack IDs to the relics from PM here
         HashMap<String, List<String>> relicParentPackMap = RelicParentPackExpansionPatches.pmRelicParentExpansions;
         relicParentPackMap.put(BlueSkull.ID, Arrays.asList(SpheresPack.ID, FrostPack.ID));
-        System.out.println("Channel Cards Caught:");
+
+        //Grabs all channeling cards for use later
         for (AbstractCard c : CardLibrary.getAllCards()){
             if (usesClass(c, ChannelAction.class)){
                 channelCards.add(c);
-                System.out.println(c.name);
             }
         }
 

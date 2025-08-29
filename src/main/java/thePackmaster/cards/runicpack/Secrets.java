@@ -3,15 +3,12 @@ package thePackmaster.cards.runicpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-import com.megacrit.cardcrawl.orbs.Frost;
-import thePackmaster.actions.witchesstrikepack.ManifestAction;
 import thePackmaster.orbs.runicpack.Glyph;
-import thePackmaster.stances.runicpack.RunicStance;
 import thePackmaster.util.Wiz;
 
 import java.util.Iterator;
@@ -37,18 +34,10 @@ public class Secrets extends AbstractRunicCard {
         Wiz.atb(new AbstractGameAction() {
             public void update() {
                 this.isDone = true;
-                Iterator var1 = abstractPlayer.orbs.iterator();
-
-                while(true) {
-                    AbstractOrb orb;
-                    do {
-                        if (!var1.hasNext()) {
-                            return;
-                        }
-
-                        orb = (AbstractOrb)var1.next();
-                    } while(!(orb instanceof EmptyOrbSlot));
-                    Wiz.att(new ChannelAction(new Glyph()));
+                for (AbstractOrb o : AbstractDungeon.player.orbs){
+                    if (o instanceof EmptyOrbSlot){
+                        Wiz.att(new ChannelAction(new Glyph()));
+                    }
                 }
             }
         });

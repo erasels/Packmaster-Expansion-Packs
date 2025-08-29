@@ -82,7 +82,7 @@ public class RunicStance extends AbstractStance {
             stopIdleSfx();
         }
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.CYAN, true));
-        CardCrawlGame.sound.playA("STANCE_ENTER_CALM", 0.5f);
+        CardCrawlGame.sound.playV("SINGING_BOWL", 1.5f);
     }
 
     @Override

@@ -17,7 +17,6 @@ public class EyeOfRa extends AbstractRunicCard {
     private static final int MAGIC = 2;
     public final static String ID = makeID("EyeOfRa");
 
-
     public EyeOfRa() {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = magicNumber = MAGIC;

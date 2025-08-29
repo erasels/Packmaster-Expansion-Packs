@@ -8,12 +8,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.powers.LockOnPower;
 import thePackmaster.effects.runicpack.RunicSpearEffect;
-import thePackmaster.packs.RunicPack;
-import thePackmaster.vfx.rippack.DividedFuryEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -49,6 +46,10 @@ public class RunicSpear extends AbstractRunicCard {
             }
             if (mo.hasPower(LockOnPower.POWER_ID)) {
                 this.baseDamage = AbstractOrb.applyLockOn(mo, baseDamage);
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+            }
+            else {
+                triggerOnGlowCheck();
             }
             super.calculateCardDamage(mo);
             this.baseDamage = this.originalBaseDamage;
@@ -69,7 +70,7 @@ public class RunicSpear extends AbstractRunicCard {
     public void triggerOnGlowCheck(){
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         if (AbstractDungeon.player.hasPower(FocusPower.POWER_ID)) {
-            this.glowColor = Color.CYAN.cpy();
+            this.glowColor = Color.BLUE.cpy();
         }
     }
 
