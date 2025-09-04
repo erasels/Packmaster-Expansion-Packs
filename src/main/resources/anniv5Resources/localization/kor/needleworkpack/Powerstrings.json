@@ -18,7 +18,7 @@
   "${ModID}:CrossStitchPower": {
     "NAME": "십자수",
     "DESCRIPTIONS": [
-      "이번 턴에 이 카드를 사용할 때마다 %2$s 에게 #y묶음을 #b%1$d 부여합니다."
+      "이번 턴에 카드를 사용할 때마다 %2$s 에게 #y묶음을 #b%1$d 부여합니다."
     ]
   },
   "${ModID}:PincushionPower": {
