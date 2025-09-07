@@ -2,7 +2,7 @@
   "${ModID}:ObeliskPower": {
     "NAME": "Power of the Obelisk",
     "DESCRIPTIONS": [
-      "When you change #yStances, Channel a random #yOrb.",
+      "When you change #yStances, Channel 1 random #yOrb.",
       "When you change #yStances, Channel #b",
       " random #yOrbs."
     ]
