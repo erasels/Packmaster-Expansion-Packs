@@ -18,7 +18,7 @@
     "DESCRIPTION": "Enter ${ModID}:Runic. NL Gain !M! Focus. NL Lose 1 Focus the next !M! times you play an Attack."
 },"${ModID}:Chakram": {
     "NAME": "Chakram",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Enter ${ModID}:Aggression."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Enter ${ModID}:Aggression."
 },"${ModID}:Secrets": {
     "NAME": "Discover Secrets",
     "DESCRIPTION": "Gain !M! Orb slots. NL Fill your Orb slots with ${ModID}:Glyphs."
