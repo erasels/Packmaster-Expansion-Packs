@@ -9,7 +9,7 @@
   },"${ModID}:AttackFocusLoss": {
   "NAME": "Runic Concentration",
   "DESCRIPTIONS": [
-    "When you play an Attack, lose #b1 #yFocus and reduce by 1."
+    "When you play an #yAttack, lose #b1 #yFocus and reduce by 1."
   ]
 }
 }
