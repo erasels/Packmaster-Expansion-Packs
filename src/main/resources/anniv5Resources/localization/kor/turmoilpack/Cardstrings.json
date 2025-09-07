@@ -1,0 +1,46 @@
+{
+  "${ModID}:Burden": {
+    "NAME": "부담",
+    "DESCRIPTION": "보존. NL 힘을 !M! 얻습니다."
+  },
+  "${ModID}:DarkPath": {
+    "NAME": "어두운 길",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *부담 을 !M! 장 얻습니다."
+  },
+  "${ModID}:SpitefulBrand": {
+    "NAME": "악의의 낙인",
+    "DESCRIPTION": "${ModID}:유기: 비용 1. 피해를 !D! 줍니다. 약화와 취약을 ${ModID}:유기마다 !M! 부여합니다."
+  },
+  "${ModID}:LonelyVigil": {
+    "NAME": "외로운 철야",
+    "DESCRIPTION": "${ModID}:유기: 공격 카드. NL 방어도를 !B! 에다 ${ModID}:유기마다 !M! 을 더한 만큼 얻습니다."
+  },
+  "${ModID}:LashOut": {
+    "NAME": "비난",
+    "DESCRIPTION": "{@@}${ModID}:유기: 스킬 카드. 적 전체에게 피해를 !D! 만큼 X 번 줍니다. 다음 턴 카드를 ${ModID}:유기마다 !M! 장 뽑습니다."
+  },
+  "${ModID}:BurntOffering": {
+    "NAME": "번제",
+    "DESCRIPTION": "${ModID}:유기: 무색 또는 저주. 그 카드들을 소멸시킵니다. ${ModID}:유기마다 피해를 !D! 주고 ${ModID}:점화를 !M! 부여합니다."
+  },
+  "${ModID}:ForsakenDreams": {
+    "NAME": "저버린 꿈",
+    "DESCRIPTION": "{@@}{!Upgrades!|0=휘발성. NL }${ModID}:유기: 모든 카드. 버린 카드 종류마다 민첩, ${ModID}:금속화, 가시를 !M! 얻습니다."
+  },
+  "${ModID}:TormentedMind": {
+    "NAME": "괴로운 정신",
+    "DESCRIPTION": "{@@}카드를 !M! 장 뽑습니다. *부담 과 *어지러움 을 얻습니다. 뽑을 카드 또는 버린 카드 더미에서 2장까지 소멸시킵니다."
+  },
+  "${ModID}:Compulsion": {
+    "NAME": "강박",
+    "DESCRIPTION": "{@@}${ModID}:유기: 비용 2 이상. 이번 전투 동안 그 카드들의 비용을 1 감소시킵니다. 카드를 ${ModID}:유기마다 !M! 장 뽑습니다."
+  },
+  "${ModID}:EternalToil": {
+    "NAME": "영원한 고생",
+    "DESCRIPTION": "{@@}${ModID}:유기: 강화되지 않은 카드. 그 카드들을 강화합니다. 버린 카드 더미에서 !M! 장과 모든 파워 카드를 가져옵니다."
+  },
+  "${ModID}:CycleOfRenewal": {
+    "NAME": "부활의 순환",
+    "DESCRIPTION": "턴 시작 시, ${ModID}:유기: 시작 또는 일반 또는 상태이상. ${ModID}:유기마다 카드를 1 장 뽑습니다."
+  }
+}
