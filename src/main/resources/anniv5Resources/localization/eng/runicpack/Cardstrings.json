@@ -15,7 +15,7 @@
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Enter ${ModID}:Ancient. NL If you exited another Stance, draw !M! more cards."
 },"${ModID}:EyeOfRa": {
     "NAME": "Eye of Ra",
-    "DESCRIPTION": "Enter ${ModID}:Runic. NL Gain !M! Focus. NL Lose 1 Focus the next !M! times you play an attack."
+    "DESCRIPTION": "Enter ${ModID}:Runic. NL Gain !M! Focus. NL Lose 1 Focus the next !M! times you play an Attack."
 },"${ModID}:Chakram": {
     "NAME": "Chakram",
     "DESCRIPTION": "Deal !D! damage to all enemies. NL Enter ${ModID}:Aggression."
