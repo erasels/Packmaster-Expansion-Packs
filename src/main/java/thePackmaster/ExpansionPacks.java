@@ -121,7 +121,8 @@ public class ExpansionPacks implements
 
         //Grabs all channeling cards for use later
         for (AbstractCard c : CardLibrary.getAllCards()){
-            if (usesClass(c, ChannelAction.class)){
+            List<AbstractCard.CardRarity> allowedRarities = Arrays.asList(AbstractCard.CardRarity.COMMON, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardRarity.RARE);
+            if (allowedRarities.contains(c.rarity) && !c.hasTag(AbstractCard.CardTags.HEALING) && !c.getClass().isAnnotationPresent(NoCompendium.class) && usesClass(c, ChannelAction.class)){
                 channelCards.add(c);
             }
         }
