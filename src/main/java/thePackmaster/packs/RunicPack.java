@@ -13,12 +13,11 @@ public class RunicPack extends AbstractCardPack {
     public static final String NAME = UI_STRINGS.TEXT[0];
     public static final String DESC = UI_STRINGS.TEXT[1];
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
-    //public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public static boolean channeledOrbThisTurn = false;
 
     public RunicPack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 1, 3, 2, 4, PackSummary.Tags.Stances, PackSummary.Tags.Orbs));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 4, 3, 2, 4, PackSummary.Tags.Stances, PackSummary.Tags.Orbs));
     }
 
     @Override

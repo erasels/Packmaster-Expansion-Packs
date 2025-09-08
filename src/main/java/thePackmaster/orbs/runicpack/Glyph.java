@@ -27,6 +27,7 @@ import thePackmaster.vfx.spherespack.BlazeOrbActivateEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.atb;
 
 public class Glyph extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(Glyph.class.getSimpleName());
@@ -37,7 +38,7 @@ public class Glyph extends CustomOrb {
     private static final float SPIRIT_WIDTH = 96.0f;
 
     private final static int BASE_PASSIVE = 1;
-    private final static int BASE_EVOKE = 4;
+    private final static int BASE_EVOKE = 3;
 
     private float vfxTimer = 0.2f;
 
@@ -94,24 +95,34 @@ public class Glyph extends CustomOrb {
     public void onEndOfTurn() {
         float speedTime = Settings.FAST_MODE ? 0.0F : 0.6F / (float)AbstractDungeon.player.orbs.size();
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new GlyphOrbEffect(this), speedTime));
-        AbstractCreature m = Wiz.getRandomEnemy();
-        if (m != null) {
-            this.info = new DamageInfo(AbstractDungeon.player, this.passiveAmount, DamageInfo.DamageType.THORNS);
-            this.info.output = AbstractOrb.applyLockOn(m, passiveAmount);
-            Wiz.atb(new DamageAction(m, this.info, AbstractGameAction.AttackEffect.NONE, true));
-        }
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractCreature m = Wiz.getRandomEnemy();
+                if (m != null) {
+                    info = new DamageInfo(AbstractDungeon.player, passiveAmount, DamageInfo.DamageType.THORNS);
+                    info.output = AbstractOrb.applyLockOn(m, passiveAmount);
+                    Wiz.atb(new DamageAction(m, info, AbstractGameAction.AttackEffect.NONE, true));
+                }
+            }
+        });
         Wiz.atb(new GainBlockAction(Wiz.p(), passiveAmount, true));
         this.updateDescription();
     }
 
     @Override
     public void onEvoke() {
-        AbstractCreature m = Wiz.getRandomEnemy();
-        if (m != null) {
-            this.info = new DamageInfo(AbstractDungeon.player, this.evokeAmount, DamageInfo.DamageType.THORNS);
-            info.output = AbstractOrb.applyLockOn(m, evokeAmount);
-            Wiz.atb(new DamageAction(m, this.info, AbstractGameAction.AttackEffect.NONE, true));
-        }
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractCreature m = Wiz.getRandomEnemy();
+                if (m != null) {
+                    info = new DamageInfo(AbstractDungeon.player, evokeAmount, DamageInfo.DamageType.THORNS);
+                    info.output = AbstractOrb.applyLockOn(m, evokeAmount);
+                    Wiz.atb(new DamageAction(m, info, AbstractGameAction.AttackEffect.NONE, true));
+                }
+            }
+        });
         Wiz.atb(new GainBlockAction(Wiz.p(), evokeAmount, true));
     }
 

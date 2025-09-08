@@ -36,7 +36,5 @@ public class ExploreRuins extends AbstractRunicCard {
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
         PersistFields.upgrade(this, UPG_MAGIC);
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

@@ -53,7 +53,7 @@ public class RunicStance extends AbstractStance {
 
     @Override
     public void atStartOfTurn(){
-        AbstractCard newChannelCard = ExpansionPacks.channelCards.get(AbstractDungeon.cardRng.random(0, ExpansionPacks.channelCards.size()-1)).makeStatEquivalentCopy();
+        AbstractCard newChannelCard = ExpansionPacks.channelCards.get(AbstractDungeon.cardRng.random(0, ExpansionPacks.channelCards.size()-1)).makeCopy();
         Wiz.atb(new SimpleAddModifierAction(new EtherealMod(), newChannelCard));
         Wiz.atb(new SimpleAddModifierAction(new ExhaustMod(), newChannelCard));
         Wiz.atb(new MakeTempCardInHandAction(newChannelCard));

@@ -23,13 +23,10 @@ public class RunicSpear extends AbstractRunicCard {
     private static final int UPG_MAGIC = 2;
     public final static String ID = makeID("RunicSpear");
 
-    public int originalBaseDamage;
-
     public RunicSpear() {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        originalBaseDamage = baseDamage;
     }
 
     @Override
@@ -40,7 +37,7 @@ public class RunicSpear extends AbstractRunicCard {
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-            this.baseDamage = this.originalBaseDamage;
+            int originalBaseDamage = this.baseDamage;
             if (AbstractDungeon.player.hasPower(FocusPower.POWER_ID)) {
                 this.baseDamage += AbstractDungeon.player.getPower(FocusPower.POWER_ID).amount * magicNumber;
             }
@@ -52,18 +49,19 @@ public class RunicSpear extends AbstractRunicCard {
                 triggerOnGlowCheck();
             }
             super.calculateCardDamage(mo);
-            this.baseDamage = this.originalBaseDamage;
-            this.isDamageModified = this.damage != this.originalBaseDamage;
+            this.baseDamage = originalBaseDamage;
+            this.isDamageModified = this.damage != originalBaseDamage;
     }
 
     @Override
     public void applyPowers() {
-        this.baseDamage = originalBaseDamage;
+        int originalBaseDamage = this.baseDamage;
         if (AbstractDungeon.player.hasPower(FocusPower.POWER_ID)) {
             baseDamage += AbstractDungeon.player.getPower(FocusPower.POWER_ID).amount * magicNumber;
         }
         super.applyPowers();
-        this.isDamageModified = this.damage != this.originalBaseDamage;
+        this.baseDamage = originalBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
     }
 
     @Override

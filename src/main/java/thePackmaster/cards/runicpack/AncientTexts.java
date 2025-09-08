@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.util.Wiz;
 
@@ -24,7 +25,7 @@ public class AncientTexts extends AbstractRunicCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         Wiz.atb(new DrawCardAction(magicNumber));
-        if (!abstractPlayer.stance.ID.equals("Neutral") && !abstractPlayer.stance.ID.equals(AncientStance.STANCE_ID)){
+        if (!abstractPlayer.stance.ID.equals(NeutralStance.STANCE_ID) && !abstractPlayer.stance.ID.equals(AncientStance.STANCE_ID)){
             Wiz.atb(new DrawCardAction(magicNumber));
         }
         Wiz.atb(new ChangeStanceAction(new AncientStance()));
@@ -33,7 +34,5 @@ public class AncientTexts extends AbstractRunicCard {
     @Override
     public void upp() {
         this.exhaust = false;
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }
