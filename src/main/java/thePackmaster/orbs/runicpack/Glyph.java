@@ -2,6 +2,7 @@ package thePackmaster.orbs.runicpack;
 
 import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.loaders.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -22,6 +23,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.spherespack.BlazeOrbActivateEffect;
 
@@ -36,6 +38,15 @@ public class Glyph extends CustomOrb {
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
     private static final String IMG_PATH = makePath("/images/orbs/spherespack/Blaze.png");
     private static final float SPIRIT_WIDTH = 96.0f;
+    private static final Texture[] Runes = {
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune1.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune2.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune3.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune4.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune5.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune6.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune7.png")
+    };
 
     private final static int BASE_PASSIVE = 1;
     private final static int BASE_EVOKE = 3;
@@ -48,33 +59,8 @@ public class Glyph extends CustomOrb {
 
     public Glyph() {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
-        int randomRune = AbstractDungeon.miscRng.random(0, 7);
-        switch (randomRune){
-            case 0:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune1.png");
-                break;
-            case 1:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune2.png");
-                break;
-            case 2:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune3.png");
-                break;
-            case 3:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune4.png");
-                break;
-            case 4:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune5.png");
-                break;
-            case 5:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune6.png");
-                break;
-            case 6:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune7.png");
-                break;
-            default:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune1.png");
-                break;
-        }
+        int randomRune = AbstractDungeon.miscRng.random(0, 6);
+        this.img = Runes[randomRune];
         applyFocus();
         updateDescription();
     }

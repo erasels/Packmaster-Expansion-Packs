@@ -9,6 +9,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import thePackmaster.util.TexLoader;
 
 public class RuneParticle
         extends AbstractGameEffect {
@@ -24,36 +25,19 @@ public class RuneParticle
     private float dur_div2 = this.duration / 2.0F;
     public static Texture RUNE;
     private float baseScale;
-
+    private static final Texture[] Runes = {
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune1.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune2.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune3.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune4.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune5.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune6.png"),
+            TexLoader.getTexture("anniv5Resources/images/vfx/runicpack/Rune7.png")
+    };
 
     public RuneParticle(Color color) {
-        int randomRune = AbstractDungeon.miscRng.random(0, 7);
-        switch (randomRune){
-            case 0:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune1.png");
-                break;
-            case 1:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune2.png");
-                break;
-            case 2:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune3.png");
-                break;
-            case 3:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune4.png");
-                break;
-            case 4:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune5.png");
-                break;
-            case 5:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune6.png");
-                break;
-            case 6:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune7.png");
-                break;
-            default:
-                this.img = new Texture("anniv5Resources/images/vfx/runicpack/Rune1.png");
-                break;
-        }
+        int randomRune = AbstractDungeon.miscRng.random(0, 6);
+        this.img = Runes[randomRune];
         this.rotation = 0f;
         this.scale = MathUtils.random(0.1f, 0.5f);
         this.baseScale = scale;
