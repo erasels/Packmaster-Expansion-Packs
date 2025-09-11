@@ -1,0 +1,15 @@
+{
+  "${ModID}:ObeliskPower": {
+    "NAME": "Power of the Obelisk",
+    "DESCRIPTIONS": [
+      "Whenever you change #yStances, Channel 1 random #yOrb.",
+      "Whenever you change #yStances, Channel #b",
+      " random #yOrbs."
+    ]
+  },"${ModID}:AttackFocusLoss": {
+  "NAME": "Runic Concentration",
+  "DESCRIPTIONS": [
+    "When you play an #yAttack, lose #b1 #yFocus and reduce by #b1."
+  ]
+}
+}

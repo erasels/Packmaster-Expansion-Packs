@@ -1,0 +1,8 @@
+{
+  "${ModID}:Glyph": {
+    "NAME": "Glyph",
+    "DESCRIPTION": [
+      "#yPassive: Gain #b{0} #bBlock and deal #b{0} damage to a random enemy. NL #yEvoke: Gain #b{1} Block and deal #b{1} damage to a random enemy."
+    ]
+  }
+}

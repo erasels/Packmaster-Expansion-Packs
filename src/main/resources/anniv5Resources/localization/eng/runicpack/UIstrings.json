@@ -1,0 +1,16 @@
+{
+  "${ModID}:RunicPack": {
+    "TEXT": [
+      "Runic Artifacts",
+      "A strange collection of mysterious artifacts. Utilize Orbs and Stances together with newfound runic knowledge.",
+      "Dayvig",
+      "Pack Art - Dayvig"
+    ]
+  },
+  "${ModID}:RunicPackHat": {
+    "TEXT": [
+      "An artifact with rich history, senselessly looted from an ancient tomb.",
+      "Runic Circlet"
+    ]
+  }
+}
