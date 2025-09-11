@@ -7,8 +7,7 @@
     "DESCRIPTION": "Deal !D! damage. NL If you Channeled an Orb this turn, deal !D! damage again."
 },"${ModID}:ExploreRuins": {
     "NAME": "Explore Ruins",
-    "DESCRIPTION": "Channel 1 ${ModID}:Glyph. NL Draw 1 card. NL stslib:Persist !stslib:persist!.",
-    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Glyph. NL Draw 1 card. NL stslib:Persist !stslib:persist!."
+    "DESCRIPTION": "Channel 1 ${ModID}:Glyph. NL Draw 1 card. NL stslib:Persist !stslib:persist!."  
 },"${ModID}:AncientTexts": {
     "NAME": "Ancient Texts",
     "DESCRIPTION": "Draw !M! cards. NL Enter ${ModID}:Ancient. NL If you exited another Stance, draw !M! more cards. NL Exhaust.",
