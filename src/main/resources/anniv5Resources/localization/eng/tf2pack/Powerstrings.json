@@ -1,0 +1,33 @@
+{
+  "${ModID}:FlankingPower": {
+    "NAME": "Flanking",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage to an enemy this turn, gain #b%d Block."
+    ]
+  },
+  "${ModID}:BonkAtomicPower": {
+    "NAME": "Bonk Atomic Punch",
+    "DESCRIPTIONS": [
+      "When you #yResupply, gain #b%d #yFlanking."
+    ]
+  },
+  "${ModID}:DispenserPower": {
+    "NAME": "Dispenser",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b1 #yAmmo into your hand."
+    ]
+  },
+  "${ModID}:ResupplyRefundPower": {
+    "NAME": "Resupply Refund",
+    "DESCRIPTIONS": [
+      "Gain [E] equal to the cost of the first card you #yResupply each turn.",
+      "Gain [E] equal to the cost of the first #b%d cards you #yResupply each turn."
+    ]
+  },
+  "${ModID}:StealthPower": {
+    "NAME": "Stealth",
+    "DESCRIPTIONS": [
+      "Gain #b%d #yFlanking whenever you play a #ySkill this turn."
+    ]
+  }
+}
