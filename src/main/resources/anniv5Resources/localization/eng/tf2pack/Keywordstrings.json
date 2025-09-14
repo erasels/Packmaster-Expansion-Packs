@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Resupply",
+    "NAMES": [
+      "resupply", "resupplied"
+    ],
+    "DESCRIPTION": "When a card enters your hand or is #yPersisted during your turn."
+  },
+  {
+    "PROPER_NAME": "Flanking",
+    "NAMES": [
+      "flanking"
+    ],
+    "DESCRIPTION": "When dealing attack damage this turn, gain #yBlock."
+  }
+]
