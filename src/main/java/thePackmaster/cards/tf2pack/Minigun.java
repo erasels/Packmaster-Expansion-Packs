@@ -38,6 +38,7 @@ public class Minigun extends AbstractTF2Card implements ResupplyCardInterface {
     @Override
     public void triggerOnOtherResupply(AbstractCard card) {
         this.baseMagicNumber++;
+        this.magicNumber = baseMagicNumber;
         this.isMagicNumberModified = true;
         this.initializeDescription();
     }
