@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import thePackmaster.cards.tf2pack.OtherResupplyCardInterface;
 import thePackmaster.cards.tf2pack.ResupplyCardInterface;
 import thePackmaster.powers.tf2pack.ResupplyPowerInterface;
 
@@ -44,8 +43,8 @@ public class TriggerOnResupplyPatch {
             }
         }
         for (AbstractCard handCard : AbstractDungeon.player.hand.group) {
-            if (handCard instanceof OtherResupplyCardInterface && c != handCard) {
-                ((OtherResupplyCardInterface)handCard).triggerOnOtherResupply(c);
+            if (handCard instanceof ResupplyCardInterface && c != handCard) {
+                ((ResupplyCardInterface)handCard).triggerOnOtherResupply(c);
             }
         }
     }

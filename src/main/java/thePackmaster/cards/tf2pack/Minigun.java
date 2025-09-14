@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Minigun extends AbstractTF2Card implements OtherResupplyCardInterface {
+public class Minigun extends AbstractTF2Card implements ResupplyCardInterface {
     public final static String ID = makeID("Minigun");
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
     private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
@@ -38,6 +38,7 @@ public class Minigun extends AbstractTF2Card implements OtherResupplyCardInterfa
     @Override
     public void triggerOnOtherResupply(AbstractCard card) {
         this.baseMagicNumber++;
+        this.isMagicNumberModified = true;
         this.initializeDescription();
     }
 

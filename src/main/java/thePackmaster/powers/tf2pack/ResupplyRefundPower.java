@@ -5,8 +5,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -42,11 +42,7 @@ public class ResupplyRefundPower extends AbstractPackmasterPower implements Resu
     @Override
     public void triggerOnAnyResupply(AbstractCard card) {
         if (triggersThisTurn < this.amount) {
-            int realCost = card.cost;
-            if (realCost == -2)
-                realCost = 0;
-            if (realCost == -1)
-                realCost = EnergyPanel.totalCount;
+            int realCost = Wiz.getLogicalCardCost(card);
 
             // Don't use up a trigger on statuses or zero cost cards. especially since this might trigger when
             // adding things like shivs to hand

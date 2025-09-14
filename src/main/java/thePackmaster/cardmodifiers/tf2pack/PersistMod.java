@@ -14,17 +14,19 @@ public class PersistMod extends AbstractCardModifier {
     public PersistMod() {
     }
 
+    @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         if (rawDescription.contains(strings.TEXT[0]))
             return rawDescription;
         return rawDescription + strings.TEXT[0];
     }
 
+    @Override
     public void onInitialApplication(AbstractCard card) {
-        super.onInitialApplication(card);
         PersistHelper.IncrementPersist(card);
     }
 
+    @Override
     public AbstractCardModifier makeCopy() {
         return new PersistMod();
     }
