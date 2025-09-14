@@ -2,7 +2,7 @@
   "${ModID}:FlankingPower": {
     "NAME": "Flanking",
     "DESCRIPTIONS": [
-      "Whenever you deal unblocked attack damage to an enemy this turn, gain #b%d Block."
+      "Whenever you deal unblocked attack damage to an enemy this turn, gain #b%d #yBlock."
     ]
   },
   "${ModID}:BonkAtomicPower": {
