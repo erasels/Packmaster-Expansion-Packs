@@ -11,7 +11,7 @@
     },
     "${ModID}:BallisticStrike": {
       "NAME": "Ballistic Strike",
-      "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Double damage on enemies who intend to attack.",
+      "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Deals double damage to enemies that intend to attack.",
       "FLAVOR": "Ka-boom!"
     },
     "${ModID}:DefensePlanning": {
@@ -21,12 +21,12 @@
     },
     "${ModID}:Logistics": {
       "NAME": "Logistics",
-      "DESCRIPTION": "Lose 1 Weak, Frail and Vulnerable. NL Gain !M! Vigor. NL Draw !${ModID}:m2! cards.",
+      "DESCRIPTION": "{@@}Reduce Weak, Frail and Vulnerable by 1. NL Gain !M! Vigor. NL Draw !${ModID}:m2! card{!${ModID}:m2!|>1=s}.",
       "FLAVOR": "They really make everything run smoother."
     },
     "${ModID}:ThinkTwice": {
       "NAME": "Think Twice",
-      "DESCRIPTION": "Gain !B! Block, affected by Vigor, then lose all Vigor. NL Gain !M! Vigor next turn.",
+      "DESCRIPTION": "Gain !B! Block, affected by Vigor, then lose all Vigor. NL Gain !M! Vigor.",
       "FLAVOR": "Deflect with full fervor and wait for an opening!"
     },
     "${ModID}:Shrapnel": {
@@ -37,7 +37,7 @@
     },
     "${ModID}:ShellForge": {
       "NAME": "Shell Forge",
-      "DESCRIPTION": "At the start of your turn, gain !M! Vigor. Whenever you gain or lose Vigor, increase the gain per turn by !${ModID}:m2!.",
+      "DESCRIPTION": "At the start of your turn, gain !M! Vigor and increase this number by !${ModID}:m2!.",
       "FLAVOR": "Step 2: energetically craft ammunition."
     },
     "${ModID}:DigIn": {

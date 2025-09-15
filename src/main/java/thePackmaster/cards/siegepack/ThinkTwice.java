@@ -6,26 +6,25 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-import thePackmaster.powers.siegepack.NextTurnGainVigorPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.siegepack.FlavorConstants.*;
 import static thePackmaster.util.Wiz.atb;
 
-//REFS (vigor version) : PlotArmor (grandopeningpack), Subdue (bitingcoldpack)
+//REFS : PlotArmor (grandopeningpack), Subdue (bitingcoldpack)
 public class ThinkTwice extends AbstractSiegeCard {
     public final static String ID = makeID("ThinkTwice");
     private static final int COST = 2;
     private static final int BLOCK = 12;
     private static final int UPG_BLOCK = 3;
-    private static final int NEXT_TURN_VIGOR_GAIN = 4;
-    private static final int UPG_NEXT_TURN_VIGOR_GAIN = 1;
+    private static final int VIGOR_GAIN = 4;
+    private static final int UPG_VIGOR_GAIN = 1;
 
     public ThinkTwice() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = BLOCK;
-        baseMagicNumber = magicNumber = NEXT_TURN_VIGOR_GAIN;
+        baseMagicNumber = magicNumber = VIGOR_GAIN;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -41,12 +40,12 @@ public class ThinkTwice extends AbstractSiegeCard {
             blck();
         }
 
-        Wiz.applyToSelf(new NextTurnGainVigorPower(p, magicNumber));
+        Wiz.applyToSelf(new VigorPower(p, magicNumber));
     }
 
     @Override
     public void upp() {
         upgradeBlock(UPG_BLOCK);
-        upgradeMagicNumber(UPG_NEXT_TURN_VIGOR_GAIN);
+        upgradeMagicNumber(UPG_VIGOR_GAIN);
     }
 }

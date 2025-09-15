@@ -22,7 +22,7 @@ public class Logistics extends AbstractSiegeCard {
     private static final int COST = 1;
     private static final int DEBUFF_REMOVAL = 1;
     private static final int VIGOR_GAIN = 5;
-    private static final int CARD_DRAW = 2;
+    private static final int CARD_DRAW = 1;
     private static final int UPGRADE_CARD_DRAW = 1;
 
     public Logistics() {
