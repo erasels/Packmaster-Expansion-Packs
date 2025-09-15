@@ -42,7 +42,6 @@ public class RampingTurnVigorGainPower extends AbstractPackmasterPower {
         updateDescription();
     }
 
-
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (Objects.equals(power.ID, RampingTurnVigorGainPower.POWER_ID)) {
