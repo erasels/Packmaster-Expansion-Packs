@@ -1,0 +1,16 @@
+{
+  "${ModID}:SentinelPack": {
+    "TEXT": [
+      "센티넬",
+      "경지에 접어들고 덜 진노하는, 와쳐의 먼 분파입니다.",
+      "MichaelMayhem",
+      "팩 이미지 - @SaltCenter. 맑음 카드 이미지 - u/Aeverelle. 오만 카드 이미지 - u/fenr1sulfr"
+    ]
+  },
+  "${ModID}:SentinelPackHat": {
+    "TEXT": [
+      "와쳐의 것처럼 보이지만 명백히 덜 붉은색입니다.",
+      "센티넬 장식"
+    ]
+  }
+}

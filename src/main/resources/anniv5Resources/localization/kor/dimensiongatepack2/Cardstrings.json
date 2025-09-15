@@ -1,0 +1,67 @@
+{
+  "${ModID}:ArsenalGear": {
+    "NAME": "보급 기어",
+    "DESCRIPTION": "다음 !M! 턴 동안 턴 시작 시 무작위 *특별 또는 *희귀 카드를 얻습니다. 이번 전투 동안 비용이 1 감소합니다."
+  },
+  "${ModID}:ConjureBarrage": {
+    "NAME": "집중 포화",
+    "DESCRIPTION": " *마법 *미사일 을 !M! 장 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": " *마법 *미사일+ 을 !M! 장 얻습니다. NL 소멸."
+  },
+  "${ModID}:MagicMissile": {
+    "NAME": "마법 미사일",
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 이번 턴 동안 *마법 *미사일 의 피해를 !M! 증가시킵니다."
+  },
+  "${ModID}:Channel": {
+    "NAME": "영창",
+    "DESCRIPTION": "보존. NL 이번 턴 동안 손에 있는 무작위 카드의 비용을 !M! 감소시킵니다. NL 소멸."
+  },
+  "${ModID}:Daggerstorm": {
+    "NAME": "단검의 폭풍",
+    "DESCRIPTION": " *단도 외의 카드를 생성할 때마다 무작위 적에게 *단도 를 생성해서 공격합니다."
+  },
+  "${ModID}:FlamingGrasp": {
+    "NAME": "불길 움켜쥐기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴, *화염 *기둥 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴, *화염 *기둥 을 !M! 장 얻습니다."
+  },
+  "${ModID}:FlamePillar": {
+    "NAME": "화염 기둥",
+    "DESCRIPTION": "${ModID}:점화를 !M! 부여합니다. NL 소멸."
+  },
+  "${ModID}:Haymaker": {
+    "NAME": "비장의 강타",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이번 턴에 사용된 카드마다 피해를 !M! 더 줍니다."
+  },
+  "${ModID}:ManaShield": {
+    "NAME": "마나 방패",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *영창 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL *영창 을 !M! 장 얻습니다."
+  },
+  "${ModID}:MuscleMemory": {
+    "NAME": "머슬 메모리",
+    "DESCRIPTION": "뽑을 카드 더미의 카드를 선택합니다. 복사본을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미의 카드를 선택합니다. 복사본을 얻습니다. NL 소멸성 !stslib:ex!.",
+    "EXTENDED_DESCRIPTION": [
+      "복사할 카드를 선택하십시오."
+    ]
+  },
+  "${ModID}:Crusher": {
+    "NAME": "분쇄",
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 카드가 생성될 때마다 *분쇄 의 비용은 사용되기 전까지 1 감소합니다."
+  },
+  "${ModID}:PreservedThorns": {
+    "NAME": "보존된 가시",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *찌르기 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL *찌르기 를 !M! 장 얻습니다."
+  },
+  "${ModID}:Sting": {
+    "NAME": "찌르기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴, 카드를 추가로 1 장 뽑습니다. NL 소멸."
+  },
+  "${ModID}:WallOfFire": {
+    "NAME": "화염 벽",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 !M! 번 줍니다. NL 손을 *화염 *기둥 으로 가득 채웁니다.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 만큼 !M! 번 줍니다. NL 손을 *화염 *기둥+ 으로 가득 채웁니다."
+  }
+}

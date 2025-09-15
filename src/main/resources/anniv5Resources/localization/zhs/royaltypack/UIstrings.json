@@ -1,0 +1,26 @@
+{
+  "${ModID}:RoyaltyPack": {
+    "TEXT": [
+      "皇家",
+      "提供战斗中可用的金币，也拥有良好的防御和铺垫能力。",
+      "Levender",
+      "角色来自 #yBuriedbornes 。 NL 卡包美术来源： NL #ypixiv.net/en/users/5887541 NL 其余美术来自 #yoninego NL 他正在寻找工作 :) NL Bluesky： NL #y@oninego.bsky.social NL 邮箱： NL #yoniplingz@gmail.com"
+    ]
+  },
+  "${ModID}:RoyaltyPackHat": {
+    "TEXT": [
+      "发掘于重见天日的希望中。",
+      "皇家王冠"
+    ]
+  },
+  "${ModID}:RetainerStrikeAction": {
+    "TEXT": [
+      "选择一张本回合要保留的牌。"
+    ]
+  },
+  "${ModID}:RetainForOneTurnModifier": {
+    "TEXT": [
+      "本回合保留。 NL "
+    ]
+  }
+}

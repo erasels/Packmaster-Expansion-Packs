@@ -1,0 +1,18 @@
+{
+  "${ModID}:PrisonersChainPower": {
+    "NAME": "포로의 사슬",
+    "DESCRIPTIONS": [
+      "해로운 효과를 받을 때마다, #y활력을 #b",
+      " 얻습니다."
+    ]
+  },
+  "${ModID}:RemedyPower": {
+    "NAME": "치료",
+    "DESCRIPTIONS": [
+      "다음으로 받는 #b",
+      " 번의",
+      " 번의",
+      " 해로운 효과를 #b2 만큼 감소시킵니다."
+    ]
+  }
+}

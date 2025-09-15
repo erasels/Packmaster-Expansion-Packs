@@ -1,0 +1,9 @@
+{
+  "${ModID}:DiehardPower": {
+    "NAME": "다이하드",
+    "DESCRIPTIONS": [
+      "다음 턴, #y약화와 #y손상을 #b",
+      " 얻습니다."
+    ]
+  }
+}

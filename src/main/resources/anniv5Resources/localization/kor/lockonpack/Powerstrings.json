@@ -1,0 +1,29 @@
+{
+  "${ModID}:BlockOnPower": {
+    "NAME": "방준",
+    "DESCRIPTIONS": [
+      "이번 턴에 공격받을 떄마다 조준을 #b%d 부여합니다."
+    ]
+  },
+  "${ModID}:LightningRodPower": {
+    "NAME": "피뢰침",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y전기가 이 적을 공격합니다.",
+      "#b%d 턴 동안 #y전기가 이 적을 공격합니다."
+    ]
+  },
+  "${ModID}:TunnelVisionPower": {
+    "NAME": "좁은 시야",
+    "DESCRIPTIONS": [
+      "조준이 #y구체 피해를 추가 조준마다 #b25% 더 증가시킵니다."
+    ]
+  },
+  "${ModID}:GlockOnPower": {
+    "NAME": "고준",
+    "DESCRIPTIONS": [
+      "이번 턴에 공격 카드가 #y밀집과 #y조준의 영향을 받습니다.",
+      "#b",
+      " 턴 동안 공격 카드가 #y밀집과 #y조준의 영향을 받습니다.."
+    ]
+  }
+}

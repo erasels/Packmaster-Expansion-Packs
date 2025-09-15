@@ -1,0 +1,34 @@
+{
+  "${ModID}:EscalatingBreezePower": {
+    "NAME": "상승 기류",
+    "DESCRIPTIONS": [
+      "이번 턴에 카드를 #b",
+      " 장 까지 보존합니다. 이 방법으로 보존된 공격 카드는 다음 턴에 비용이 #b",
+      " 장 까지 보존합니다. 이 방법으로 보존된 공격 카드는 다음 턴에 비용이 #b",
+      " 감소합니다."
+    ]
+  },
+  "${ModID}:GaleForceDrawPower": {
+    "NAME": "강풍",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때마다, 카드를 #b",
+      " 장 뽑습니다. (비용이 #b",
+      " 장 뽑습니다. (비용이 #b",
+      " 이상이라면.)"
+    ]
+  },
+  "${ModID}:GaleForceWindrushPower": {
+    "NAME": "강풍",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때마다 그 비용 + #b",
+      " 만큼 #y풍화를 얻습니다."
+    ]
+  },
+  "${ModID}:WindrushPower": {
+    "NAME": "풍화",
+    "DESCRIPTIONS": [
+      "막히지 않은 공격 피해를 받을 때마다, #b",
+      " 감소시킵니다. NL 라운드 종료 시 반으로 (반올림) 감소합니다."
+    ]
+  }
+}

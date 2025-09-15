@@ -1,0 +1,21 @@
+{
+  "${ModID}:TurmoilPack": {
+    "TEXT": [
+      "Turmoil",
+      "*Abandon everything by discarding masses of cards in return for powerful benefits.",
+      "modargo",
+      "Card art from MtG"
+    ]
+  },
+  "${ModID}:TurmoilPackHat": {
+    "TEXT": [
+      "A prison of one's own making.",
+      "Mind Cage"
+    ]
+  },
+  "${ModID}:TormentedMindScreen": {
+    "TEXT": [
+      "Exhaust."
+    ]
+  }
+}

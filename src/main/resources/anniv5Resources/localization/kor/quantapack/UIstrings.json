@@ -1,0 +1,15 @@
+{
+  "${ModID}:QuantaPack": {
+    "TEXT": [
+      "콴타 게임",
+      "카드 게임을 기반으로 한 팩입니다.",
+      "AlexMdle"
+    ]
+  },
+  "${ModID}:QuantaPackHat": {
+    "TEXT": [
+      "탐구적인 기술 관리자의 일부.",
+      "오큘레이터"
+    ]
+  }
+}

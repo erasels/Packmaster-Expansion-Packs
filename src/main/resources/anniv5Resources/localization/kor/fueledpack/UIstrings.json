@@ -1,0 +1,25 @@
+{
+  "${ModID}:FueledPack": {
+    "TEXT": [
+      "연료",
+      "강력한 공격력의 연료를 위해 카드를 재로 태워버리세요.",
+      "Bryan K"
+    ]
+  },
+  "${ModID}:ConsumeUiText": {
+    "TEXT": [
+      "소비."
+    ]
+  },
+  "${ModID}:BurnBrightUiText": {
+    "TEXT": [
+      "사용할 파워를 선택하십시오."
+    ]
+  },
+  "${ModID}:FueledPackHat": {
+    "TEXT": [
+      "단단하고 안전합니다.",
+      "소방관 모자"
+    ]
+  }
+}

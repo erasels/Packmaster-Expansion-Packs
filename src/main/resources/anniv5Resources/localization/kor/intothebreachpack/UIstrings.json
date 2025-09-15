@@ -1,0 +1,16 @@
+{
+  "${ModID}:IntoTheBreachPack": {
+    "TEXT": [
+      "인투 더 브리치",
+      "미래에서 온 강력한 기계 무기를 사용해서 첨탑의 위험을 처리합니다.",
+      "Enbeon",
+      "원작은 #bSubset #bGames 가 제작한 #bInto #bthe #bBreach 입니다."
+    ]
+  },
+  "${ModID}:IntoTheBreachPackHat": {
+    "TEXT": [
+      "거대 곤충을 상대하기 위한 완벽한 헬멧입니다.",
+      "아카이브 헬멧"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "${ModID}:DanseMacabrePower": {
+    "NAME": "죽음의 왈츠",
+    "DESCRIPTIONS": [
+      "턴 종료 시, #y약화나 #y취약에 걸린 적이 체력을 #b",
+      " 잃습니다."
+    ]
+  },
+  "${ModID}:AchievementHunterPower": {
+    "NAME": "도전과제 헌터",
+    "DESCRIPTIONS": [
+      "테두리가 빛나는 카드를 사용할 때마다 #y힘을 #b1 얻습니다. NL #b",
+      " 번 더 발동하면 #y민첩을 #b2 얻습니다.",
+      "테두리가 빛나는 카드를 사용할 때마다 #y힘을 #b1 얻습니다. NL #g100% #g완료!"
+    ]
+  }
+}

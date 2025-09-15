@@ -17,8 +17,7 @@
 
   "${ModID}:ChitteringPunt": {
     "NAME": "子弹高潮",
-    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 将抽牌堆中的 1 张随机技能牌置入手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点群体伤害两次。 NL 将抽牌堆中的 1 张随机技能牌置入手牌。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 将抽牌堆中的 1 张随机技能牌置入手牌。"
   },
 
   "${ModID}:MysticFlourish": {

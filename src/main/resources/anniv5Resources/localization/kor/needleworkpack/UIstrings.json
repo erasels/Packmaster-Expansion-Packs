@@ -1,0 +1,15 @@
+{
+  "${ModID}:NeedleworkPack": {
+    "TEXT": [
+      "바느질",
+      "카드를 서로 ${ModID}:꿰매고 적들을 ${ModID}:묶어서 무력화시키세요.",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:NeedleworkPackHat": {
+    "TEXT": [
+      "수제입니다! 하지만 너무 작게 만든 것도 같아요.",
+      "풍선 모자"
+    ]
+  }
+}

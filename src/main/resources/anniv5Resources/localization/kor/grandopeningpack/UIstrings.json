@@ -1,0 +1,15 @@
+{
+  "${ModID}:GrandOpeningPack": {
+    "TEXT": [
+      "그랜드 오프닝",
+      "시작이 반입니다. 개전 카드와 ${ModID}:최초 키워드에 중점을 둡니다.",
+      "Jack Renoson"
+    ]
+  },
+  "${ModID}:GrandOpeningPackHat": {
+    "TEXT": [
+      "이 가면으로는 온 세계가 무대입니다",
+      "무대 가면"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "${ModID}:BladeStormPack": {
+    "TEXT": [
+      "칼날 폭풍",
+      "${ModID}:풍화 , ${ModID}:정확 , ${ModID}:묶음 과 함께 해적의 열광적인 공격을 사용하여 이점을 얻으세요!",
+      "Dj0z"
+    ]
+  },
+  "${ModID}:BladeStormModifiers": {
+    "TEXT": [
+      " NL 힘을 ",
+      " 얻습니다."
+    ]
+  },
+  "${ModID}:FeedingWindsUiText": {
+    "TEXT": [
+      "에너지와 풍화를 위해 소멸."
+    ]
+  },
+  "${ModID}:EscalatingBreezeUiText": {
+    "TEXT": [
+      "보존. 공격 카드의 비용이 다음 턴 감소합니다."
+    ]
+  },
+  "${ModID}:BladeStormPackHat": {
+    "TEXT": [
+      "닳고 닳았다.",
+      "해적 삼각모"
+    ]
+  }
+}

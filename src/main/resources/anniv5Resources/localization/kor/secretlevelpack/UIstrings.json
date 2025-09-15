@@ -1,0 +1,15 @@
+{
+  "${ModID}:SecretLevelPack": {
+    "TEXT": [
+      "시크릿 레벨",
+      "약화와 취약 ... 그리고 풀어야 할 Vex러운 미스터리에 초점을 맞춘 팩입니다.",
+      "Vex"
+    ]
+  },
+  "${ModID}:SecretLevelPackHat": {
+    "TEXT": [
+      "(파이프 진입음)",
+      "배관공"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "${ModID}:MariDebuffPack": {
+    "TEXT": [
+      "마리의 디버프",
+      "가장 깊은 취약점을 극복하고 성장하십시오.",
+      "iryan0702"
+    ]
+  },
+  "${ModID}:MariDebuffPackHat": {
+    "TEXT": [
+      "더! 더 많은 깃털!",
+      "깃털 모자"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "${ModID}:OverwhelmingPack": {
+    "TEXT": [
+      "압도적인",
+      "에너지의 제한을 무시합니다.",
+      "Mixmaw, Alchyr"
+    ]
+  },
+  "${ModID}:OverwhelmingPackHat": {
+    "TEXT": [
+      "뾰족함이 당신의 힘을 보여주는 것을 도와줍니다.",
+      "슈퍼 머리"
+    ]
+  },
+  "${ModID}:ActuallyFinalFormAction": {
+    "TEXT": [
+      "사용할 비용이 ",
+      " 보다 적은 카드를 선택하십시오."
+    ]
+  }
+}
