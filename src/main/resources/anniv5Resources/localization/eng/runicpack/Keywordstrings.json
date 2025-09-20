@@ -7,6 +7,6 @@
   {
     "PROPER_NAME": "Glyph",
     "NAMES": ["glyph", "glyphs"],
-    "DESCRIPTION": "Orb: At the start of your turn, gain #b1 Block and deal #b1 damage to a random enemy. When #yEvoked, gain #b4 Block and deal #b4 damage to a random enemy."
+    "DESCRIPTION": "Orb: At the start of your turn, gain #b1 Block and deal #b1 damage to a random enemy. When #yEvoked, gain #b3 Block and deal #b3 damage to a random enemy."
   }
 ]
