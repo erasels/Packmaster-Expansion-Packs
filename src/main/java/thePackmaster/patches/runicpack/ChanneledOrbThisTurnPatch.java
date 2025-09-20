@@ -23,9 +23,9 @@ public class ChanneledOrbThisTurnPatch {
             method = "applyStartOfTurnPostDrawRelics"
     )
     public static class ResetChanneledOrb {
-    @SpirePrefixPatch
-    public static void Prefix(AbstractPlayer __instance) {
-        RunicPack.channeledOrbThisTurn = false;
+        @SpirePrefixPatch
+        public static void Prefix(AbstractPlayer __instance) {
+            RunicPack.channeledOrbThisTurn = false;
+        }
     }
-}
 }
