@@ -2,16 +2,26 @@ package thePackmaster;
 
 import basemod.BaseMod;
 import basemod.interfaces.*;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.CalmStance;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtMethod;
+import javassist.expr.ExprEditor;
+import javassist.expr.MethodCall;
+import javassist.expr.NewExpr;
 import thePackmaster.cards.pickthemallpack.GrabAndGo;
 import thePackmaster.cards.showmanpack.AbstractShowmanCard;
 import thePackmaster.hats.HatMenu;
@@ -28,6 +38,7 @@ import thePackmaster.relics.summonspack.BlueSkull;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
+import thePackmaster.stances.runicpack.RunicStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.util.maridebuffpack.DebuffLossManager;
@@ -51,6 +62,7 @@ public class ExpansionPacks implements
     public static final String SHORTENED_MOD_NAME = "PM Expansion Packs";
     private static ExpansionPacks thismod;
     public static final String modID = "expansionPacks";
+    public static ArrayList<AbstractCard> channelCards = new ArrayList<>();
 
     //You shouldn't be making much use of this. Use the SpireAnniversary5Mod class instead
     public static String makeID(String idText) {
@@ -65,6 +77,41 @@ public class ExpansionPacks implements
         thismod = new ExpansionPacks();
     }
 
+    //Thanks to Autumn
+    public static boolean usesClass(AbstractCard card, Class<?> clazz) {
+        final boolean[] usesAction = {false};
+        ClassPool pool = Loader.getClassPool();
+        try {
+            CtClass ctClass = pool.get(card.getClass().getName());
+            ctClass.defrost();
+            CtMethod ctUse = ctClass.getDeclaredMethod("use");
+            ctUse.instrument(new ExprEditor() {
+                @Override
+                public void edit(NewExpr e) {
+                    if (e.getClassName().equals(clazz.getName())) {
+                        usesAction[0] = true;
+                    }
+                }
+
+                @Override
+                public void edit(MethodCall m) {
+                    try {
+                        CtMethod check = m.getMethod();
+                        check.instrument(new ExprEditor() {
+                            @Override
+                            public void edit(NewExpr e) {
+                                if (e.getClassName().equals(clazz.getName())) {
+                                    usesAction[0] = true;
+                                }
+                            }
+                        });
+                    } catch (Exception ignored) {}
+                }
+            });
+        } catch (Exception ignored) {}
+        return usesAction[0];
+    }
+
     @Override
     public void receivePostInitialize() {
         HatMenu.specialHats.put(InstantDeathPack.ID, new InstantDeathHat());
@@ -72,6 +119,15 @@ public class ExpansionPacks implements
         //Please add your pack IDs to the relics from PM here
         HashMap<String, List<String>> relicParentPackMap = RelicParentPackExpansionPatches.pmRelicParentExpansions;
         relicParentPackMap.put(BlueSkull.ID, Arrays.asList(SpheresPack.ID, FrostPack.ID));
+
+        //Grabs all channeling cards for use later
+        for (AbstractCard c : CardLibrary.getAllCards()){
+            List<AbstractCard.CardRarity> allowedRarities = Arrays.asList(AbstractCard.CardRarity.COMMON, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardRarity.RARE);
+            if (allowedRarities.contains(c.rarity) && !c.hasTag(AbstractCard.CardTags.HEALING) && !c.getClass().isAnnotationPresent(NoCompendium.class) && usesClass(c, ChannelAction.class)){
+                channelCards.add(c);
+            }
+        }
+
     }
 
     @Override
@@ -125,8 +181,9 @@ public class ExpansionPacks implements
             return new AncientStance();
         } else if (Objects.equals(stance, AggressionStance.STANCE_ID)) {
             return new AggressionStance();
+        } else if (Objects.equals(stance, RunicStance.STANCE_ID)) {
+            return new RunicStance();
         } else {
-
             return new NightmareStance();
         }
 
@@ -140,6 +197,7 @@ public class ExpansionPacks implements
         stances.add(AncientStance.STANCE_ID);
         stances.add(AggressionStance.STANCE_ID);
         stances.add(NightmareStance.STANCE_ID);
+        stances.add(RunicStance.STANCE_ID);
 
         stances.remove(p().stance.ID);
 

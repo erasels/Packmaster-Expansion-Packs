@@ -2,7 +2,7 @@
   "${ModID}:SiegePack": {
     "TEXT": [
       "Siege",
-      "Hold the land against myriad foes. Besiege with hammer and ${ModID}:Shells!",
+      "With ${ModID}:Blur and Vigor, hold fast against myriad foes and besiege!",
       "Dj0z"
     ]
   },

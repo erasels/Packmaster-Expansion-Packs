@@ -1,0 +1,12 @@
+[
+  {
+    "PROPER_NAME": "Runic",
+    "NAMES": ["runic"],
+    "DESCRIPTION": "At the start of the turn, add a card that #yChannels orbs to your hand with #yEthereal and #yExhaust. When exited, gain #b1 #yFocus."
+  },
+  {
+    "PROPER_NAME": "Glyph",
+    "NAMES": ["glyph", "glyphs"],
+    "DESCRIPTION": "Orb: At the start of your turn, gain #b1 Block and deal #b1 damage to a random enemy. When #yEvoked, gain #b3 Block and deal #b3 damage to a random enemy."
+  }
+]

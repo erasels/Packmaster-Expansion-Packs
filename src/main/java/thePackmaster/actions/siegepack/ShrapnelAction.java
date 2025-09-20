@@ -39,6 +39,8 @@ public class ShrapnelAction extends AbstractGameAction {
         if (damageType != DamageInfo.DamageType.NORMAL || DAMAGE < DAMAGE_THRESHOLD)
         { return; }
 
+        sourcePower.flashWithoutSound();
+
         applyDebuffs(DAMAGE);
         if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             AbstractDungeon.actionManager.clearPostCombatActions();
@@ -51,7 +53,6 @@ public class ShrapnelAction extends AbstractGameAction {
         int triggerCount = damageAmount / DAMAGE_THRESHOLD;
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new IgnitePower(target, 2 * POWER_STACKS * triggerCount), 2 * POWER_STACKS * triggerCount, true));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, player, new VulnerablePower(target, POWER_STACKS * triggerCount, false), POWER_STACKS * triggerCount, true));
-        sourcePower.flash();
     }
 }
 
