@@ -70,11 +70,14 @@ public class ShellingAction extends AbstractGameAction {
             for (int i = 0; i < (AbstractDungeon.getCurrRoom()).monsters.monsters.size(); i++) {
                 AbstractMonster target = (AbstractDungeon.getCurrRoom()).monsters.monsters.get(i);
 
-                if (!target.isDying && target.currentHealth > 0 && !target.isEscaping) {
+                //Test worked even against AwakenedOne on a killing blow.
+                if (!target.isDying && target.currentHealth > 0 && !target.isEscaping && i < this.damage.length) {
                     target.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
 
                     if (target.lastDamageTaken > 0) {
                         generatedVigorAmount += target.lastDamageTaken;     //(Only unblocked damage, limited by enemy HP.)
+
+                        //Visuals that scale
                         for (int j = 0; j < target.lastDamageTaken / 4 && j < 6; j++) {
                             addToBot(new VFXAction(new FlyingOrbEffect(target.hb.cX, target.hb.cY)));
                         }
