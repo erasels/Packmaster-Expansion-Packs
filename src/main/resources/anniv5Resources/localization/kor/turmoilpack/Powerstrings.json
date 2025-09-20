@@ -1,0 +1,8 @@
+{
+  "${ModID}:CycleOfRenewal": {
+    "NAME": "부활의 순환",
+    "DESCRIPTIONS": [
+      "턴 시작 시, #y유기: 시작 또는 일반 또는 상태이상. #y유기마다 카드를 #b1 장 뽑습니다."
+    ]
+  }
+}
