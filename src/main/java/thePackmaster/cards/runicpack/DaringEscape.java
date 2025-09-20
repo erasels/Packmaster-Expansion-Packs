@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.actions.watcher.NotStanceCheckAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.combat.EmptyStanceEffect;
 import thePackmaster.orbs.runicpack.Glyph;
 import thePackmaster.util.Wiz;
@@ -34,8 +35,8 @@ public class DaringEscape extends AbstractRunicCard {
         for (int i = 0; i<2; i++) {
             Wiz.atb(new ChannelAction(new Glyph()));
         }
-        this.addToBot(new NotStanceCheckAction("Neutral", new VFXAction(new EmptyStanceEffect(p.hb.cX, p.hb.cY), 0.1F)));
-        this.addToBot(new ChangeStanceAction("Neutral"));
+        this.addToBot(new NotStanceCheckAction(NeutralStance.STANCE_ID, new VFXAction(new EmptyStanceEffect(p.hb.cX, p.hb.cY), 0.1F)));
+        this.addToBot(new ChangeStanceAction(NeutralStance.STANCE_ID));
     }
 
     @Override

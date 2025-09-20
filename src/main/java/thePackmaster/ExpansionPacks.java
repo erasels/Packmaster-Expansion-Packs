@@ -2,6 +2,7 @@ package thePackmaster;
 
 import basemod.BaseMod;
 import basemod.interfaces.*;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -122,7 +123,7 @@ public class ExpansionPacks implements
         //Grabs all channeling cards for use later
         for (AbstractCard c : CardLibrary.getAllCards()){
             List<AbstractCard.CardRarity> allowedRarities = Arrays.asList(AbstractCard.CardRarity.COMMON, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardRarity.RARE);
-            if (allowedRarities.contains(c.rarity) && !c.hasTag(AbstractCard.CardTags.HEALING) && !c.getClass().isAnnotationPresent(basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium.class) && usesClass(c, ChannelAction.class)){
+            if (allowedRarities.contains(c.rarity) && !c.hasTag(AbstractCard.CardTags.HEALING) && !c.getClass().isAnnotationPresent(NoCompendium.class) && usesClass(c, ChannelAction.class)){
                 channelCards.add(c);
             }
         }
