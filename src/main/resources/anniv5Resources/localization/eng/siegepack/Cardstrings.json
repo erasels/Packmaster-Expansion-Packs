@@ -1,8 +1,8 @@
 {
     "${ModID}:Shelling": {
       "NAME": "Shelling",
-      "DESCRIPTION": "Deal !D! damage, and !${ModID}:sd! damage to a random other enemy. NL Gain !M! ${ModID}:Shell.",
-      "FLAVOR": "General purpose insect repellent."
+      "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain Vigor next turn equal to half of unblocked damage dealt.",
+      "FLAVOR": "Yield, there's more where that came from!"
     },
     "${ModID}:Suppress": {
       "NAME": "Suppress",
@@ -11,7 +11,7 @@
     },
     "${ModID}:BallisticStrike": {
       "NAME": "Ballistic Strike",
-      "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Double damage on enemies who intend to attack.",
+      "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Deals double damage to enemies that intend to attack.",
       "FLAVOR": "Ka-boom!"
     },
     "${ModID}:DefensePlanning": {
@@ -21,24 +21,24 @@
     },
     "${ModID}:Logistics": {
       "NAME": "Logistics",
-      "DESCRIPTION": "Lose !M! Weak, Frail and Vulnerable. NL Gain !M! ${ModID}:Shell. NL Draw !${ModID}:m2! cards.",
+      "DESCRIPTION": "{@@}Reduce Weak, Frail and Vulnerable by 1. NL Gain !M! Vigor. NL Draw !${ModID}:m2! card{!${ModID}:m2!|>1=s}.",
       "FLAVOR": "They really make everything run smoother."
     },
     "${ModID}:ThinkTwice": {
       "NAME": "Think Twice",
-      "DESCRIPTION": "Gain !B! Block. NL Gain !M! Block for each enemy that intends to attack.",
-      "FLAVOR": "Strength in numbers, maybe."
+      "DESCRIPTION": "Gain !B! Block, affected by Vigor, then lose all Vigor. NL Gain !M! Vigor.",
+      "FLAVOR": "Deflect with full fervor and wait for an opening!"
     },
     "${ModID}:Shrapnel": {
       "NAME": "Shrapnel",
       "DESCRIPTION": "Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
-      "UPGRADE_DESCRIPTION": "Innate. NL Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
+      "UPGRADE_DESCRIPTION": "Gain !${ModID}:m2! Vigor. NL Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
       "FLAVOR": "Keep the pressure up!"
     },
     "${ModID}:ShellForge": {
       "NAME": "Shell Forge",
-      "DESCRIPTION": "${ModID}:Shells provide an additional !M! damage. NL At the start of your turn, gain !${ModID}:m2! ${ModID}:Shell.",
-      "FLAVOR": "Like a bakery but for explosives."
+      "DESCRIPTION": "At the start of your turn, gain !M! Vigor and increase this number by !${ModID}:m2!.",
+      "FLAVOR": "Step 2: energetically craft ammunition."
     },
     "${ModID}:DigIn": {
       "NAME": "Dig In",
