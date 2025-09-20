@@ -1,8 +1,8 @@
 {
     "${ModID}:Shelling": {
       "NAME": "포격",
-      "DESCRIPTION": "피해를 !D! 주고 다른 무작위 적에게 피해를 !${ModID}:sd! 줍니다. NL ${ModID}:포탄을 !M! 얻습니다.",
-      "FLAVOR": "일반적인 용도는 방충입니다."
+      "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 다음 턴 막히지 않은 피해의 절반만큼 활력을 얻습니다.",
+      "FLAVOR": "항복해라, 이 정도는 맛보기다!"
     },
     "${ModID}:Suppress": {
       "NAME": "진압",
@@ -21,24 +21,24 @@
     },
     "${ModID}:Logistics": {
       "NAME": "병참술",
-      "DESCRIPTION": "약화, 손상, 취약을 !M! 잃습니다. NL ${ModID}:포탄을 !M! 얻습니다. NL 카드를 !${ModID}:m2! 장 뽑습니다.",
+      "DESCRIPTION": "약화, 손상, 취약이 !M! 감소합니다. NL 활력을 !M! 얻습니다. NL 카드를 !${ModID}:m2! 장 뽑습니다.",
       "FLAVOR": "그것들은 모든 걸 더 매끄럽게 굴러가게 합니다."
     },
     "${ModID}:ThinkTwice": {
       "NAME": "한번 더 생각하기",
-      "DESCRIPTION": "방어도를 !B! 얻습니다. NL 공격할 의도가 있는 적마다 방어도를 !M! 얻습니다.",
-      "FLAVOR": "어쩌면, 물량의 힘."
+      "DESCRIPTION": "활력에 영향을 받는 방어도를 !B! 얻습니다. NL 활력을 모두 잃습니다. 활력을 !M! 얻습니다.",
+      "FLAVOR": "온 힘을 다해 막고 틈을 노려라!"
     },
     "${ModID}:Shrapnel": {
       "NAME": "파편",
       "DESCRIPTION": "공격 카드가 막히지 않은 피해 10마다 취약을 1, ${ModID}:점화를 2 부여합니다.",
-      "UPGRADE_DESCRIPTION": "선천성. NL 공격 카드가 막히지 않은 피해 10마다 취약을 1, ${ModID}:점화를 2 부여합니다.",
+      "UPGRADE_DESCRIPTION": "활력을 !${ModID}:m2! 얻습니다. NL 공격 카드가 막히지 않은 피해 10마다 취약을 1, ${ModID}:점화를 2 부여합니다.",
       "FLAVOR": "계속 압박해!"
     },
     "${ModID}:ShellForge": {
       "NAME": "포탄 재련",
-      "DESCRIPTION": "${ModID}:포탄이 피해를 !M! 더 줍니다. NL 턴 시작 시, ${ModID}:포탄을 !${ModID}:m2! 얻습니다.",
-      "FLAVOR": "베이커리, 그런데 폭발물을 위한."
+      "DESCRIPTION": "턴 시작 시 활력을 !M! 얻고 얻는 양이 !${ModID}:m2! 증가합니다.",
+      "FLAVOR": "두 번째 레슨: 힘차게 탄약 제작하기."
     },
     "${ModID}:DigIn": {
       "NAME": "땅굴",
