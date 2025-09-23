@@ -6,14 +6,5 @@
       "模糊"
     ],
     "DESCRIPTION": "在你的回合开始时 #y格挡 不会被移除。"
-  },
-  {
-    "PROPER_NAME": "炮弹",
-    "NAMES": [
-      "shell",
-      "shells",
-      "炮弹"
-    ],
-    "DESCRIPTION": "攻击造成 #b5 点额外伤害并消耗 #b1 层 #y炮弹 。"
   }
 ]
