@@ -90,6 +90,7 @@ public class Glyph extends CustomOrb {
                     info.output = AbstractOrb.applyLockOn(m, passiveAmount);
                     Wiz.atb(new DamageAction(m, info, AbstractGameAction.AttackEffect.NONE, true));
                 }
+                this.isDone = true;
             }
         });
         Wiz.atb(new GainBlockAction(Wiz.p(), passiveAmount, true));
@@ -107,6 +108,7 @@ public class Glyph extends CustomOrb {
                     info.output = AbstractOrb.applyLockOn(m, evokeAmount);
                     Wiz.atb(new DamageAction(m, info, AbstractGameAction.AttackEffect.NONE, true));
                 }
+                this.isDone = true;
             }
         });
         Wiz.atb(new GainBlockAction(Wiz.p(), evokeAmount, true));
