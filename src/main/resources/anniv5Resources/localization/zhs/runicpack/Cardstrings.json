@@ -1,0 +1,44 @@
+{
+  "${ModID}:ReadRunes": {
+    "NAME": "解读符文",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 进入 ${ModID}:符文化 。"
+  },
+  "${ModID}:AncientBlade": {
+    "NAME": "先古之刃",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若你在本回合生成过 充能球 ，再造成 !D! 点伤害。"
+  },
+  "${ModID}:ExploreRuins": {
+    "NAME": "探索遗迹",
+    "DESCRIPTION": "生成 1 个 ${ModID}:铭文 。 NL 抽 1 张牌。 NL stslib:保留 !stslib:persist! 。"
+  },
+  "${ModID}:AncientTexts": {
+    "NAME": "先古经文",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 进入 ${ModID}:先古 。 NL 若退出了其他 姿态 ，再抽 !M! 张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 进入 ${ModID}:先古 。 NL 若退出了其他 姿态 ，再抽 !M! 张牌。"
+  },
+  "${ModID}:EyeOfRa": {
+    "NAME": "拉之眼",
+    "DESCRIPTION": "进入 ${ModID}:符文化 。 NL 获得 !M! 点 集中 。 NL 在你下 !M! 次打出 攻击牌 时失去 1 点 集中 。"
+  },
+  "${ModID}:Chakram": {
+    "NAME": "轮刃",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 进入 ${ModID}:侵袭 。"
+  },
+  "${ModID}:Secrets": {
+    "NAME": "探求秘法",
+    "DESCRIPTION": "获得 !M! 个 充能球 栏位。 NL 用 ${ModID}:铭文 填满你的所有 充能球 栏位。"
+  },
+  "${ModID}:DaringEscape": {
+    "NAME": "大胆逃脱",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 2 个 ${ModID}:铭文 。 NL 退出你的 姿态 。"
+  },
+  "${ModID}:RunicSpear": {
+    "NAME": "符文之矛",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 伤害受 集中 影响 !M! 次，受 跟踪锁定 影响。"
+  },
+  "${ModID}:AncientObelisk": {
+    "NAME": "先古方尖碑",
+    "DESCRIPTION": "每当你切换 姿态 时，生成 !M! 个随机 充能球 。 NL 进入 ${ModID}:符文化 。",
+    "UPGRADE_DESCRIPTION": "每当你切换 姿态 时，生成 !M! 个随机 充能球 。 NL 进入 ${ModID}:符文化 。"
+  }
+}
