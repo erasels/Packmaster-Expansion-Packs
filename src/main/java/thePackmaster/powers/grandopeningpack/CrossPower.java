@@ -16,6 +16,6 @@ public class CrossPower extends AbstractPackmasterPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[amount==1 ? 1 : 2];
     }
 }

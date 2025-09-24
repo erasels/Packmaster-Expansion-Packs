@@ -1,0 +1,40 @@
+{
+  "${ModID}:ShrapnelPower": {
+    "NAME": "Shrapnel",
+    "DESCRIPTIONS": [
+      "Your attacks apply #b",
+      " #yVulnerable and #b",
+      " #yIgnite per 10 unblocked damage they deal."
+    ]
+  },
+  "${ModID}:NextTurnGainVigorPower": {
+    "NAME": "Vigor next turn",
+    "DESCRIPTIONS": [
+      "Next turn, gain #b",
+      " #yVigor."
+    ]
+  },
+  "${ModID}:RampingTurnVigorGainPower": {
+    "NAME": "Shell Forge Vigor",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yVigor and increase this number by #b",
+      "."
+    ]
+  },
+  "${ModID}:DigInPower": {
+    "NAME": "Dig In",
+    "DESCRIPTIONS": [
+     "After the start of your turn, if you have #yBlock, gain #b",
+      " [E] ."
+    ]
+  },
+  "${ModID}:PrevailPower": {
+    "NAME": "Prevail",
+    "DESCRIPTIONS": [
+     "Whenever you deal at least #b",
+      " damage in a single hit, the enemy loses #b",
+      " #yStrength this turn."
+    ]
+  }
+}

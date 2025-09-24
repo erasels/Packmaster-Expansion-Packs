@@ -1,0 +1,15 @@
+{
+  "${ModID}:SiegePack": {
+    "TEXT": [
+      "Siege",
+      "With ${ModID}:Blur and Vigor, hold fast against myriad foes and besiege!",
+      "Dj0z"
+    ]
+  },
+  "${ModID}:SiegePackHat": {
+    "TEXT": [
+      "Valorous fortification, humdrum gazing.",
+      "Medieval Great Helm"
+    ]
+  }
+}

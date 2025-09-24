@@ -37,10 +37,7 @@
   },
   "${ModID}:Apex": {
     "NAME": "登顶",
-    "DESCRIPTION": "${ModID}:飞升 。 NL 在这个回合，你只能打出罕见和稀有卡牌。 NL 消耗。",
-    "EXTENDED_DESCRIPTION": [
-      "只能打罕见和稀有卡牌，恶棍！"
-    ]
+    "DESCRIPTION": "${ModID}:飞升 。 NL 在这个回合，你只能打出罕见和稀有卡牌。 NL 消耗。"
   },
   "${ModID}:PowerStruggle": {
     "NAME": "权欲",

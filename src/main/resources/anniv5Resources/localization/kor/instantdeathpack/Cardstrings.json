@@ -1,0 +1,44 @@
+{
+  "${ModID}:Needle": {
+    "NAME": "바늘",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 예지 !M!. NL 버린 스킬 카드마다 ${ModID}:정확을 3 얻습니다."
+  },
+  "${ModID}:Lock": {
+    "NAME": "잠금",
+    "DESCRIPTION": "손에 있는 카드를 보존하고 사용하기 전까지 매 턴 방어도를 !M! 얻습니다."
+  },
+  "${ModID}:Curtain": {
+    "NAME": "커튼",
+    "DESCRIPTION": "예지 !M!. NL 버린 카드마다 방어도를 !B! 얻습니다."
+  },
+  "${ModID}:Mirror": {
+    "NAME": "거울",
+    "DESCRIPTION": "뽑을 카드 더미 맨 위에 있는 카드의 복사본을 얻습니다."
+  },
+  "${ModID}:Nail": {
+    "NAME": "손톱",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 소멸되면 ${ModID}:정확을 !M! 얻습니다."
+  },
+  "${ModID}:Thread": {
+    "NAME": "실",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 스킬 카드를 뽑습니다. NL 이 카드를 뽑을 카드 더미에 섞어 넣습니다."
+  },
+  "${ModID}:Cloud": {
+    "NAME": "구름",
+    "DESCRIPTION": "이번 턴에 공격 피해를 50% 덜 받습니다. NL 뽑을 카드 더미에서 카드를 소멸시킵니다.",
+    "UPGRADE_DESCRIPTION": "이번 턴에 공격 피해를 50% 덜 받습니다. NL 뽑을 카드 또는 버린 카드 더미에서 카드를 소멸시킵니다."
+  },
+  "${ModID}:SlashDraw": {
+    "NAME": "드로우 베기",
+    "DESCRIPTION": "{@@}피해를 !D! 줍니다. NL 카드를 1 장 뽑습니다. 공격 카드라면 이 카드를 {!M!|2=두 배|3=세 배|@=!M! 배} 의 피해로 다시 사용합니다."
+  },
+  "${ModID}:PathToVictory": {
+    "NAME": "승리로의 길",
+    "DESCRIPTION": "손에서 카드를 원하는 만큼 뽑을 카드 더미로 돌려보내고 보낸 카드마다 ${ModID}:정확을 !M! 얻습니다."
+  },
+  "${ModID}:AnotherMoment": {
+    "NAME": "또 다른 순간",
+    "DESCRIPTION": "휘발성. NL 매 턴 처음으로 스킬 카드를 사용할때 소멸시키고 민첩을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "매 턴 처음으로 스킬 카드를 사용할때 소멸시키고 민첩을 1 얻습니다."
+  }
+}

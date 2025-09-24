@@ -1,0 +1,54 @@
+{
+    "${ModID}:Shelling": {
+      "NAME": "Shelling",
+      "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain Vigor next turn equal to half of unblocked damage dealt.",
+      "FLAVOR": "Yield, there's more where that came from!"
+    },
+    "${ModID}:Suppress": {
+      "NAME": "Suppress",
+      "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Target loses !${ModID}:m2! Strength this turn.",
+      "FLAVOR": "Offensive tranquilizer."
+    },
+    "${ModID}:BallisticStrike": {
+      "NAME": "Ballistic Strike",
+      "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Deals double damage to enemies that intend to attack.",
+      "FLAVOR": "Ka-boom!"
+    },
+    "${ModID}:DefensePlanning": {
+      "NAME": "Defense Planning",
+      "DESCRIPTION": "Gain !B! Block. NL If you don't have ${ModID}:Blur, gain !M! ${ModID}:Blur.",
+      "FLAVOR": "Good to keep up."
+    },
+    "${ModID}:Logistics": {
+      "NAME": "Logistics",
+      "DESCRIPTION": "{@@}Reduce Weak, Frail and Vulnerable by 1. NL Gain !M! Vigor. NL Draw !${ModID}:m2! card{!${ModID}:m2!|>1=s}.",
+      "FLAVOR": "They really make everything run smoother."
+    },
+    "${ModID}:ThinkTwice": {
+      "NAME": "Think Twice",
+      "DESCRIPTION": "Gain !B! Block, affected by Vigor, then lose all Vigor. NL Gain !M! Vigor.",
+      "FLAVOR": "Deflect with full fervor and wait for an opening!"
+    },
+    "${ModID}:Shrapnel": {
+      "NAME": "Shrapnel",
+      "DESCRIPTION": "Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
+      "UPGRADE_DESCRIPTION": "Gain !${ModID}:m2! Vigor. NL Your attacks apply 1 Vulnerable and 2 ${ModID}:Ignite per 10 unblocked damage.",
+      "FLAVOR": "Keep the pressure up!"
+    },
+    "${ModID}:ShellForge": {
+      "NAME": "Shell Forge",
+      "DESCRIPTION": "At the start of your turn, gain !M! Vigor and increase this number by !${ModID}:m2!.",
+      "FLAVOR": "Step 2: energetically craft ammunition."
+    },
+    "${ModID}:DigIn": {
+      "NAME": "Dig In",
+      "DESCRIPTION": "Gain !B! Block and !M! ${ModID}:Blur. NL After the start of your turn, if you have Block, gain [E] .",
+      "FLAVOR": "Looks like a nice spot to set up camp."
+    },
+    "${ModID}:Prevail": {
+      "NAME": "Prevail",
+      "DESCRIPTION": "Whenever you deal at least 9 damage in a single hit, the enemy loses !M! Strength this turn.",
+      "FLAVOR": "Strong-arm the opposition!"
+    }
+}
+  

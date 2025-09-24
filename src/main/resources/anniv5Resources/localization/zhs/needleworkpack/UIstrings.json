@@ -1,0 +1,15 @@
+{
+  "${ModID}:NeedleworkPack": {
+    "TEXT": [
+      "针线活",
+      "将卡牌 ${ModID}:缝合 在一起，并且 ${ModID}:束缚 你的敌人，使他们无力还击。",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:NeedleworkPackHat": {
+    "TEXT": [
+      "手工制作！但是好像做得有点小了。",
+      "气球帽"
+    ]
+  }
+}

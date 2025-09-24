@@ -1,8 +1,10 @@
 package thePackmaster.cards.pickthemallpack;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Aggregate;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -12,7 +14,7 @@ import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.SpireAnniversary5Mod;
 
-public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
+public class PackGear extends AbstractPickThemAllCard implements OnObtainCard, OnCreateCardInterface {
     public static final String ID = SpireAnniversary5Mod.makeID("PackGear");
     private static final int COST = 1;
     private static final int CARDS_PER_METALLICIZE = 10;
@@ -58,9 +60,9 @@ public class PackGear extends AbstractPickThemAllCard implements OnObtainCard {
     }
 
     @Override
-    public void onCreateThisCard() {
-        super.onCreateThisCard();
-        if (AbstractDungeon.player.hand.contains(this)) {
+    public void onCreateCard(AbstractCard c) {
+        super.onCreateCard(c);
+        if (c == this && AbstractDungeon.player.hand.contains(this)) {
             this.applyPowers();
         }
     }

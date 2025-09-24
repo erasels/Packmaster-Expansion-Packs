@@ -1,0 +1,12 @@
+[
+  {
+    "PROPER_NAME": "분비",
+    "NAMES": ["venomous", "분비", "분비합니다"],
+    "DESCRIPTION": "공격 카드가 피해를 #b50% 덜 주지만 공격 횟수마다 #y약화를 #b1 , #y중독을 #b2 부여합니다."
+  },
+  {
+    "PROPER_NAME": "오염",
+    "NAMES": ["tainted", "오염을", "오염"],
+    "DESCRIPTION": "이 적에게 부여하는 해로운 효과가 두 배가 됩니다."
+  }
+]

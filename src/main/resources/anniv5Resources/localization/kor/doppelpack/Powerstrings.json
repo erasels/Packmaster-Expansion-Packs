@@ -1,0 +1,15 @@
+{
+  "${ModID}:TurbulencePower": {
+    "NAME": "난기류",
+    "DESCRIPTIONS": [
+      "구체를 영창할 때마다 지속 효과를 발동합니다.",
+      "구체를 영창할 때마다 지속 효과를 #b%d 번 발동합니다."
+    ]
+  },
+  "${ModID}:WormHolePower": {
+    "NAME": "웜홀",
+    "DESCRIPTIONS": [
+      "가진 #y힘과 #y민첩마다 각각 분신의 피해량과 방어도를 증가시킵니다."
+    ]
+  }
+}

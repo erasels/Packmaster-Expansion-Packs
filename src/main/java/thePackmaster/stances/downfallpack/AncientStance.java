@@ -17,8 +17,8 @@ import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.downfallpack.AncientStanceParticleEffect;
 
-import static thePackmaster.util.Wiz.*;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class AncientStance extends AbstractStance {
     public static final String STANCE_ID = makeID("Ancient");

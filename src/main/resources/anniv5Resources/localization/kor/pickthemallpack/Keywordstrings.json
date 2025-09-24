@@ -1,0 +1,20 @@
+[
+  {
+    "PROPER_NAME": "금속화",
+    "NAMES": [
+      "metallicize",
+      "금속화를",
+      "금속화"
+    ],
+    "DESCRIPTION": "턴 종료 시 #y방어도를 얻습니다."
+  },
+  {
+    "PROPER_NAME": "최하 희귀도",
+    "NAMES": [
+      "lowest rarity",
+      "lowest_rarity",
+      "최하희귀도"
+    ],
+    "DESCRIPTION": "덱에 가장 오래 있었던 카드의 우선순위를 지정합니다. 시작 카드는 일반으로 간주합니다. 이벤트 카드는 희귀로 간주합니다. 저주는 무시됩니다."
+  }
+]

@@ -44,7 +44,7 @@
   },
   "${ModID}:YouAreMine": {
     "NAME": "你是我的了！",
-    "DESCRIPTION": "给予 !M! 层 易伤 并移除目标的 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 与 虚弱 并移除目标的 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 易伤 与 虚弱 并移除目标的 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 与 虚弱 并移除目标的 格挡 。"
   }
 }

@@ -1,0 +1,53 @@
+{
+  "${ModID}:Shelling": {
+    "NAME": "炮击",
+    "DESCRIPTION": "造成 !D! 点伤害，并对另一个随机敌人造成 !${ModID}:sd! 点伤害。 NL 获得 !M! 层 ${ModID}:炮弹 。",
+    "FLAVOR": "通用的昆虫驱避剂。"
+  },
+  "${ModID}:Suppress": {
+    "NAME": "压制",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加 !M! 层 虚弱。 NL 目标本回合失去 !${ModID}:m2! 层力量。",
+    "FLAVOR": "攻击性镇静剂。"
+  },
+  "${ModID}:BallisticStrike": {
+    "NAME": "弹道打击",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害 !M! 次。 NL 对意图为攻击的敌人伤害翻倍。",
+    "FLAVOR": "轰隆！"
+  },
+  "${ModID}:DefensePlanning": {
+    "NAME": "防御计划",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 如果你没有 ${ModID}:模糊 ，获得 !M! 层 ${ModID}:模糊 。",
+    "FLAVOR": "最好保持警惕。"
+  },
+  "${ModID}:Logistics": {
+    "NAME": "后勤",
+    "DESCRIPTION": "失去 !M! 层 虚弱, 脆弱 和 易伤。 NL 获得 !M! 层 ${ModID}:炮弹 。 NL 抽 !${ModID}:m2! 张牌。",
+    "FLAVOR": "他们让一切顺畅运作。"
+  },
+  "${ModID}:ThinkTwice": {
+    "NAME": "三思",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 每有一个意图为攻击的敌人，获得 !M! 点格挡。",
+    "FLAVOR": "团结就是力量，是吗？"
+  },
+  "${ModID}:Shrapnel": {
+    "NAME": "弹片",
+    "DESCRIPTION": "你的攻击每造成 10 点未被格挡的伤害，施加 1 层 易伤 和 2 层 ${ModID}:燃烧 。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 你的攻击每造成 10 点未被格挡的伤害，施加 1 层 易伤 和 2 层 ${ModID}:燃烧 。",
+    "FLAVOR": "持续压制敌人！"
+  },
+  "${ModID}:ShellForge": {
+    "NAME": "炮弹锻造",
+    "DESCRIPTION": "${ModID}:炮弹 额外造成 !M! 点伤害。 NL 你的回合开始时，获得 !${ModID}:m2! 层 ${ModID}:炮弹 。",
+    "FLAVOR": "像是个面包房，但生产爆炸物。"
+  },
+  "${ModID}:DigIn": {
+    "NAME": "深入防御",
+    "DESCRIPTION": "获得 !B! 点格挡 和 !M! 层 ${ModID}:模糊 。 NL 你的回合开始后，如果你拥有格挡，获得 [E] 。",
+    "FLAVOR": "看起来是个安营扎寨的好地方。"
+  },
+  "${ModID}:Prevail": {
+    "NAME": "获胜！",
+    "DESCRIPTION": "每当你单次攻击造成至少 9 点伤害时，使敌人本回合失去 !M! 层力量。",
+    "FLAVOR": "在决斗中获胜！"
+  }
+}

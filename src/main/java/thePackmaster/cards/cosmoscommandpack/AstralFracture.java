@@ -1,6 +1,5 @@
 package thePackmaster.cards.cosmoscommandpack;
 
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +13,8 @@ import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.powers.distortionpack.DistortionPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.vfx;
 
 public class AstralFracture extends AbstractCosmosCard implements AmplifyCard {
     public final static String ID = makeID("AstralFracture");

@@ -1,0 +1,47 @@
+{
+  "${ModID}:RetainerStrike": {
+    "NAME": "Retainer Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Retain a random card this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Retain a card this turn."
+  },
+  "${ModID}:Soulstone": {
+    "NAME": "Soulstone",
+    "DESCRIPTION": "Deal !D! damage. NL Startup: Gain !M! Gold. NL Exhaust."
+  },
+  "${ModID}:HiringSpecialists": {
+    "NAME": "Hiring Specialists",
+    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL Gain 1 ${ModID}:Hired_Support."
+  },
+  "${ModID}:Forcefield": {
+    "NAME": "Forcefield",
+    "DESCRIPTION": "Gain !B! Block X times. If X is 3 or more, gain 1 Blur.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times. If X is 3 or more, gain 1 Blur."
+  },
+  "${ModID}:MiningStrike": {
+    "NAME": "Mining Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Gold. NL Exhaust."
+  },
+  "${ModID}:Stratagem": {
+    "NAME": "Stratagem",
+    "DESCRIPTION": "Enemy loses NL !M! Strength this turn. Next turn, NL gain 1 ${ModID}:Hired_Support."
+  },
+  "${ModID}:RoyalSupplyLines": {
+    "NAME": "Royal Supply Lines",
+    "DESCRIPTION": "At the start of your turn, draw 2 cards. NL At the end of your turn, Retain up to 2 cards.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 2 cards. NL At the end of your turn, Retain up to 2 cards."
+  },
+  "${ModID}:AlchemyTime": {
+    "NAME": "Alchemy Time",
+    "DESCRIPTION": "Pay 25 Gold to gain a Potion. NL When you use a Potion, draw !M! cards. NL ${ModID}:Pickup: gain a Potion Slot and 75 Gold.",
+    "EXTENDED_DESCRIPTION": ["Wish I had more Gold for potion ingredients!"]
+  },
+  "${ModID}:TacticalReroll": {
+    "NAME": "Tactical Reroll",
+    "DESCRIPTION": "Pay 10 Gold to put !M! cards from your discard pile into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Tch... not enough Gold for a reroll."]
+  },
+  "${ModID}:ForTheHistoryBooks": {
+    "NAME": "For The History Books",
+    "DESCRIPTION": "Next turn, gain !M! NL Temporary Strength NL and Temporary Dexterity X times, NL and 1 ${ModID}:Hired_Support. NL Exhaust."
+  }
+}

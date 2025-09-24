@@ -16,7 +16,7 @@
   },
   "${ModID}:BigBoots": {
     "NAME": "大靴子",
-    "DESCRIPTION": "若抽或弃牌堆有 !${ModID}:m2!+ 张牌，抽 !M! 张牌。 NL 抽一张牌。",
+    "DESCRIPTION": "若抽牌或弃牌堆有 !${ModID}:m2! + 张牌，抽 !M! 张牌。 NL 抽一张牌。",
     "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 将一张 *堆栈 加入牌组。"]
   },
   "${ModID}:PackGear": {
@@ -42,8 +42,8 @@
   },
   "${ModID}:Transmogrifier": {
     "NAME": "魔变器",
-    "DESCRIPTION": "不能被打出 。 NL stslib:启动 ： 变化牌组中最 ${ModID}:庸碌 的牌，持续整局。",
-    "UPGRADE_DESCRIPTION": "不能被打出 。 虚无 。 NL stslib:启动 ： 变化牌组中最 ${ModID}:庸碌 的牌，持续整局。",
+    "DESCRIPTION": "不能被打出 。 NL stslib:起动 ： 变化牌组中最 ${ModID}:庸碌 的牌，持续整局。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 虚无 。 NL stslib:起动 ： 变化牌组中最 ${ModID}:庸碌 的牌，持续整局。",
     "EXTENDED_DESCRIPTION": [" NL ${ModID}:拾起 ： NL 将一张 *打击 加入牌组。"]
   },
   "${ModID}:DarkBargain": {

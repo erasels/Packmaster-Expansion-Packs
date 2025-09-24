@@ -1,12 +1,9 @@
 package thePackmaster.powers.witchesstrikepack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.FocusPower;
+import thePackmaster.cards.WitchesStrike.Bullet;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
@@ -17,15 +14,23 @@ public class MoonlightFlightPower extends AbstractPackmasterPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public MoonlightFlightPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,false,owner,amount);
+    public MoonlightFlightPower(AbstractCreature owner, int amt) {
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amt);
+        canGoNegative = false;
     }
-    public void onChannel(AbstractOrb orb) {
-        addToBot(new ApplyPowerAction(owner,owner,new FocusPower(owner,amount)));
-        addToBot(new ApplyPowerAction(owner,owner,new LoseFocusPower(owner,amount)));
+
+    @Override
+    public void atStartOfTurnPostDraw() {
+        Wiz.atb(new MakeTempCardInHandAction(new Bullet(), amount));
     }
+
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount < 2) {
+            description = DESCRIPTIONS[0];
+        } else {
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        }
     }
 }
+

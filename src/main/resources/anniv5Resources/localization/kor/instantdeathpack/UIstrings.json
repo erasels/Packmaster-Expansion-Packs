@@ -1,0 +1,15 @@
+{
+  "${ModID}:InstantDeathPack": {
+    "TEXT": [
+      "즉사",
+      "넘쳐나는 힘을 위해 이상적인 환상을 열망하십시오.",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:InstantDeathPackHat": {
+    "TEXT": [
+      "힘의 표식.",
+      "승천 모자"
+    ]
+  }
+}

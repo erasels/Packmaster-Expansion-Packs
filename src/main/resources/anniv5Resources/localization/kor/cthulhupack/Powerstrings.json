@@ -1,0 +1,43 @@
+{
+  "${ModID}:NamelessMistPower": {
+    "NAME": "이름없는 안개",
+    "DESCRIPTIONS": [
+      "이번 턴에 카드를 사용하면 #y임시 #y체력을 #b",
+      " 얻습니다."
+    ]
+  },
+  "${ModID}:AllSeeingPower": {
+    "NAME": "감시당함",
+    "DESCRIPTIONS": [
+      "턴 시작 시, #y정신을 #b",
+      " 잃습니다."
+    ]
+  },
+  "${ModID}:AllSeeingPowerTriggerOnCard": {
+    "NAME": "끔찍한 조약+",
+    "DESCRIPTIONS": [
+      "#y정신을 잃을 때마다, #y방어도를 #b",
+      " 잃습니다."
+    ]
+  },
+  "${ModID}:AllSeeingPowerTriggerOnTurn": {
+    "NAME": "끔찍한 조약",
+    "DESCRIPTIONS": [
+      "턴 시작 시, #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "${ModID}:EndOfDaysPower": {
+    "NAME": "종말의 날",
+    "DESCRIPTIONS": [
+      "턴 종료 시, 사용하지 않은 [E] 마다 #y암흑을 #b",
+      " 번 영창합니다."
+    ]
+  },
+  "${ModID}:SanityPower": {
+    "NAME": "정신",
+    "DESCRIPTIONS": [
+      "음수 #y정신을 가지고 있다면, 턴 시작 시 #b1 잃습니다. NL #y정신을 #b5 잃으면, #y광증을 얻고, #y정신을 #b5 얻습니다."
+    ]
+  }
+}

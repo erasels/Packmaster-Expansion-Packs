@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.downfallpack.NextTurnGainSlimeCrushPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

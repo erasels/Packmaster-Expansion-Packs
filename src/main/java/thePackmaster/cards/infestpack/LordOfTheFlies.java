@@ -2,7 +2,6 @@ package thePackmaster.cards.infestpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.infestpack.LordOfTheFliesPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

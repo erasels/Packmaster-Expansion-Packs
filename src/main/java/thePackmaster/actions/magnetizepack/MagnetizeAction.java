@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.cardmodifiers.magnetizepack.MagnetizedModifier;
-import thePackmaster.util.Wiz;
 
 public class MagnetizeAction extends AbstractGameAction {
     private final AbstractCard card;

@@ -6,13 +6,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import org.lwjgl.Sys;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.fueledpack.HotAsh;
 import thePackmaster.relics.fueledpack.FuelTank;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.att;

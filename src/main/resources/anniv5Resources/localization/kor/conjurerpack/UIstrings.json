@@ -1,0 +1,15 @@
+{
+  "${ModID}:ConjurerPack": {
+    "TEXT": [
+      "페트라 마법사",
+      "\u200b페트라를 타격해라.",
+      "pinacolada"
+    ]
+  },
+  "${ModID}:ConjurerPackHat": {
+    "TEXT": [
+      "나는 네가 이 모자를 고르는 것을 예지했다.",
+      "졸탄"
+    ]
+  }
+}

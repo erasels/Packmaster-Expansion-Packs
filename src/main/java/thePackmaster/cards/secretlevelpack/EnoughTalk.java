@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.secretlevelpack.EnoughTalkPatch;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

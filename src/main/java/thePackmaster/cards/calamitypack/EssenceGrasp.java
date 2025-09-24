@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.shamanpack.IgnitePower;
-import thePackmaster.util.Wiz;
 import thePackmaster.vfx.calamitypack.EssenceGraspEffect;
 
 public class EssenceGrasp extends AbstractCalamityCard {

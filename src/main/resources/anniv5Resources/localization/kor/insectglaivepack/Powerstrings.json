@@ -1,0 +1,36 @@
+{
+  "${ModID}:ExtractedEssenceYellowPower": {
+    "NAME": "노란 추출물",
+    "DESCRIPTIONS": [
+      "이번 턴, 카드로부터 방어도를 #b2 더 얻습니다."
+    ]
+  },
+  "${ModID}:ExtractedEssenceRedPower": {
+    "NAME": "붉은 추출물",
+    "DESCRIPTIONS": [
+      "이번 턴, 공격 카드로 피해를 #b2 더 줍니다."
+    ]
+  },
+  "${ModID}:ExtractedEssenceWhitePower": {
+    "NAME": "흰 추출물",
+    "DESCRIPTIONS": [
+      "이번 턴, #y인섹트 #y글레이브 카드를 사용할 때마다 카드를 #b1 장 뽑습니다."
+    ]
+  },
+  "${ModID}:MountingPower": {
+    "NAME": "탑승",
+    "DESCRIPTIONS": [
+      "#y공중에서 #b",
+      " 번 공격하면 적 전체가 각자 현재 체력의 절반을 잃습니다."
+    ]
+  },
+  "${ModID}:KinsectHarvestExtractPower": {
+    "NAME": "킨섹트 조종",
+    "DESCRIPTIONS": [
+      "턴 시작 시, 다음을 얻습니다: ",
+      "#r붉은 #r추출물 , ",
+      "흰 추출물 , ",
+      "#y노란 #y추출물 . "
+    ]
+  }
+}

@@ -7,7 +7,8 @@ import thePackmaster.actions.fueledpack.ConsumeToDoAction;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.atb;
 
 public class Conflagration extends AbstractFueledCard {
     public final static String ID = makeID(Conflagration.class.getSimpleName());

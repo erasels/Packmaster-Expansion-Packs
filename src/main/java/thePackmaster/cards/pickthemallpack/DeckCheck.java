@@ -3,6 +3,7 @@ package thePackmaster.cards.pickthemallpack;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,7 +20,7 @@ import thePackmaster.cards.gemspack.DiceGem;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, SpawnModificationCard {
+public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, SpawnModificationCard, OnCreateCardInterface {
     public static final String ID = SpireAnniversary5Mod.makeID("DeckCheck");
     private static final int COST = 2;
     private static final int UPGRADE_COST = 1;
@@ -71,9 +72,9 @@ public class DeckCheck extends AbstractPickThemAllCard implements OnObtainCard, 
     }
 
     @Override
-    public void onCreateThisCard() {
-        super.onCreateThisCard();
-        if (AbstractDungeon.player.hand.contains(this)) {
+    public void onCreateCard(AbstractCard c) {
+        super.onCreateCard(c);
+        if (c == this && AbstractDungeon.player.hand.contains(this)) {
             this.applyPowers();
         }
     }

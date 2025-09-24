@@ -1,0 +1,18 @@
+{
+  "${ModID}:InduceCurrentPower": {
+    "NAME": "전류 유도",
+    "DESCRIPTIONS": ["카드를 #y자화시키면, 무작위 적에게 피해를 #b%d 줍니다."]
+  },
+  "${ModID}:PolarityPower": {
+    "NAME": "극성",
+    "DESCRIPTIONS": ["극성을 #b%d 얻으면 [E] 를 얻습니다."]
+  },
+  "${ModID}:RepulsionFieldPower": {
+    "NAME": "반발력 필드",
+    "DESCRIPTIONS": ["#y자화된 카드가 #y소멸되거나 버려지면 방어도를 #b%d 얻습니다."]
+  },
+  "${ModID}:SuperconductancePower": {
+    "NAME": "초전도",
+    "DESCRIPTIONS": ["이번 턴에 카드를 #y자화시키면 사용하기 전까지 비용을 #b%d 감소시킵니다."]
+  }
+}

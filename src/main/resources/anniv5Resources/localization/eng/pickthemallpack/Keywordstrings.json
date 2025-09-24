@@ -12,6 +12,6 @@
       "lowest rarity",
       "lowest_rarity"
     ],
-    "DESCRIPTION": "Prioritizes cards that have been in your deck longest. Starter cards count as common. Special cards count as rare. Curses are ignored."
+    "DESCRIPTION": "Prioritizes cards that have been in your deck longest. Starter cards count as Common. Special cards count as Rare. Curses are ignored."
   }
 ]

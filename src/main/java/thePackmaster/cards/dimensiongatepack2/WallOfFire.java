@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGordian;
 import thePackmaster.util.Wiz;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class WallOfFire extends AbstractDimensionalCardGordian {

@@ -1,6 +1,8 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.purple.*;
+import com.megacrit.cardcrawl.cards.purple.EmptyBody;
+import com.megacrit.cardcrawl.cards.purple.FlurryOfBlows;
+import com.megacrit.cardcrawl.cards.purple.MentalFortress;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;

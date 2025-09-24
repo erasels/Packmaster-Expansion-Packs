@@ -15,7 +15,7 @@ public class WitchesStrikePack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
     public static final String CREDITS = UI_STRINGS.TEXT[3];
     public WitchesStrikePack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(3, 2, 4, 3, 3, PackSummary.Tags.Orbs));
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(3, 2, 4, 3, 3, PackSummary.Tags.Orbs, PackSummary.Tags.Tokens));
     }
 
     @Override
@@ -31,6 +31,7 @@ public class WitchesStrikePack extends AbstractCardPack {
         cards.add(MoonlightFlight.ID);
         cards.add(WitchTwist.ID);
         cards.add(FullMoonHalo.ID);
+        cards.add(Bullet.ID);
         return cards;
     }
 }

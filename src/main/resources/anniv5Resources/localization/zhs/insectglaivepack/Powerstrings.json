@@ -1,0 +1,36 @@
+{
+  "${ModID}:ExtractedEssenceYellowPower": {
+    "NAME": "黄灯",
+    "DESCRIPTIONS": [
+      "本回合，你从卡牌中获得的格挡增加 #b2 点。"
+    ]
+  },
+  "${ModID}:ExtractedEssenceRedPower": {
+    "NAME": "红灯",
+    "DESCRIPTIONS": [
+      "本回合，你攻击造成的伤害增加 #b2 点。"
+    ]
+  },
+  "${ModID}:ExtractedEssenceWhitePower": {
+    "NAME": "白灯",
+    "DESCRIPTIONS": [
+      "本回合， 打出 #y虫棍牌 时抽 #b1 张牌。"
+    ]
+  },
+  "${ModID}:MountingPower": {
+    "NAME": "骑乘",
+    "DESCRIPTIONS": [
+      "在 #y空中 攻击敌人 #b",
+      " 次后，所有敌人失去一半的当前 #g生命 。"
+    ]
+  },
+  "${ModID}:KinsectHarvestExtractPower": {
+    "NAME": "操虫",
+    "DESCRIPTIONS": [
+      "回合开始时，获得",
+      " #r红灯 ,",
+      " 白灯 ,",
+      " #y黄灯 。"
+    ]
+  }
+}

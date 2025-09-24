@@ -3,12 +3,10 @@ package thePackmaster.cards.secretlevelpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -25,7 +23,7 @@ public class Joust extends AbstractSecretLevelCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, false), Settings.FAST_MODE ? 0.1F : 0.1F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, false), 0.1F));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
     }
@@ -35,7 +33,7 @@ public class Joust extends AbstractSecretLevelCard {
             return false;
         if (m != null) {
             this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
-            return (m.hasPower(WeakPower.POWER_ID));
+            return m.hasPower(WeakPower.POWER_ID);
         }
         for (AbstractMonster mm : Wiz.getEnemies()) {
             if (canUse(p, mm))

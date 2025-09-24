@@ -2,7 +2,6 @@ package thePackmaster.packs;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.rooms.RestRoom;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.sneckopack.*;
 

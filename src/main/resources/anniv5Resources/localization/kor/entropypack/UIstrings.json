@@ -1,0 +1,15 @@
+{
+  "${ModID}:EntropyPack": {
+    "TEXT": [
+      "엔트로피",
+      "필요없는 걸 버리고, 그게 당신이 하는 일입니다.",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:EntropyPackHat": {
+    "TEXT": [
+      "모든 힘과 모든 책임.",
+      "원더 마스크"
+    ]
+  }
+}
