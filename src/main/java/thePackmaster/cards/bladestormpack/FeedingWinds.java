@@ -23,12 +23,11 @@ Winterize & FrostOrbModifier & FindCardForAddModifierAction (madsciencepack), Ab
 public class FeedingWinds extends AbstractBladeStormCard implements StartupCard, OnCreateCardInterface {
     public final static String ID = makeID("FeedingWinds");
     private static final int COST = 0;
-    private static final int CARDS_TO_EXHAUST = 1;  //Could be 2 (not "up to 2") if nerfs are needed.
+    private static final int CARDS_TO_EXHAUST = 1;
     private static final int ENERGY_GAIN = 1;
     private static final int WINDRUSH = 1;
-    private static final int UPG_WINDRUSH = 1;
     private static final int STRENGTH_GAIN = 1;
-    private static final int STRENGTH_CARDS = 2;
+    private static final int STRENGTH_CARDS = 1;
     private static final int UPG_STRENGTH_CARDS = 1;
 
     public boolean combatVersion;
@@ -73,7 +72,6 @@ public class FeedingWinds extends AbstractBladeStormCard implements StartupCard,
     @Override
     public void upp() {
         upgradeMagicNumber(UPG_STRENGTH_CARDS);
-        upgradeSecondMagic(UPG_WINDRUSH);
     }
 
     //From here down, dynamic Startup tooltip based on AbstractPickThemAllCard (pickthemallpack).

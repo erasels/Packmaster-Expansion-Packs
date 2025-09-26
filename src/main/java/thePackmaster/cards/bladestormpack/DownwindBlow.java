@@ -22,9 +22,9 @@ import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 public class DownwindBlow extends AbstractBladeStormCard {
     public final static String ID = makeID("DownwindBlow");
     private static final int COST = 3;
-    private static final int DAMAGE = 20;
+    private static final int DAMAGE = 18;
     private static final int UPG_DAMAGE = 5;
-    private static final int PRECISION = 9;
+    private static final int PRECISION = 7;
     private static final int UPG_PRECISION = 3;
 
     public DownwindBlow() {

@@ -18,9 +18,9 @@ import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 public class GeoDaRay extends AbstractBladeStormCard {
     public final static String ID = makeID("GeoDaRay");
     private static final int COST = 2;
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 9;
     private static final int UPGRADE_DAMAGE = 3;
-    private static final int WINDRUSH_AND_PRECISION_GAIN = 4;
+    private static final int WINDRUSH_AND_PRECISION_GAIN = 3;
     private static final int UPG_WINDRUSH_AND_PRECISION_GAIN = 2;
 
     public GeoDaRay(){
