@@ -19,17 +19,17 @@ public class GaleForceDrawPower extends AbstractPackmasterPower {
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     private static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private final int DRAW_COST_THRESHOLD;
+    private final int COST_THRESHOLD;
 
     public GaleForceDrawPower(AbstractCreature owner, int amount, int threshold) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
-        DRAW_COST_THRESHOLD = threshold;
+        COST_THRESHOLD = threshold;
         updateDescription();
     }
 
     @Override
     public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (amount <= 0 || c.type != AbstractCard.CardType.ATTACK || Wiz.getLogicalCardCost(c) < DRAW_COST_THRESHOLD) {
+        if (amount <= 0 || c.type != AbstractCard.CardType.ATTACK || Wiz.getLogicalCardCost(c) < COST_THRESHOLD) {
             return;
         }
 
@@ -47,6 +47,6 @@ public class GaleForceDrawPower extends AbstractPackmasterPower {
         } else {
             this.description += this.amount + DESCRIPTIONS[2];
         }
-        this.description += DRAW_COST_THRESHOLD + DESCRIPTIONS[3];
+        this.description += COST_THRESHOLD + DESCRIPTIONS[3];
     }
 }

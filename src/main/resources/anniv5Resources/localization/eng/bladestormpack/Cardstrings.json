@@ -18,7 +18,7 @@
   },
   "${ModID}:TradeWinds": {
     "NAME": "Trade Winds",
-    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If it's Common, heal !M! HP. NL If it's Rare, lose !${ModID}:m2! gold. NL Exhaust.",
+    "DESCRIPTION": "{@@}${ModID}:Discover an{!Upgrades!|>0= Upgraded} Attack. NL If you choose a Common, heal !M! HP. NL If it's Rare, lose !${ModID}:m2! gold. NL Exhaust.",
     "FLAVOR": "Sword! Return to your master!"
   },
   "${ModID}:TempestOfStrikes": {
@@ -35,17 +35,17 @@
   "${ModID}:FeedingWinds": {
     "NAME": "Feeding Winds",
     "DESCRIPTION": "{@@}Exhaust a card to gain [E] {!${ModID}:m2!|>0=and !${ModID}:m2! ${ModID}:Windrush}.",
-    "EXTENDED_DESCRIPTION": [" NL stslib:Startup: ${ModID}:Modify !M! random Attacks: \"Gain 1 Strength\""],
+    "EXTENDED_DESCRIPTION": ["{@@} NL stslib:Startup: ${ModID}:Modify !M! random Attack{!M!|>1=s}: \"Gain 1 Strength\""],
     "FLAVOR": "Let's see just how strong I am!"
   },
   "${ModID}:EscalatingBreeze": {
     "NAME": "Escalating Breeze",
-    "DESCRIPTION": "{@@}Retain up to !M! card{!M!|>1=s} this turn. NL Attacks Retained this way cost !${ModID}:m2! less next turn.",
+    "DESCRIPTION": "{@@}Gain [E] next turn for each Attack in hand. NL Retain ALL Attacks this turn.",
     "FLAVOR": "I won't forget!"
   },
   "${ModID}:GaleForce": {
     "NAME": "Gale-Force",
-    "DESCRIPTION": "{@@}Whenever you play an Attack, gain ${ModID}:Windrush equal to its cost{!M!|>0= +!M!}. NL Whenever you play an Attack with a cost of 1 or greater, draw !${ModID}:m2! card.",
+    "DESCRIPTION": "{@@}Whenever you play an Attack with a cost of 1 or greater, gain !M! ${ModID}:Windrush and draw !${ModID}:m2! card.",
     "FLAVOR": "Hurry up and die!"
   },
   "${ModID}:DownwindBlow": {

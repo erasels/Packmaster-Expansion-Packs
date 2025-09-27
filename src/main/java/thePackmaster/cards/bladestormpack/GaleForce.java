@@ -15,13 +15,14 @@ import static thePackmaster.util.Wiz.atb;
 public class GaleForce extends AbstractBladeStormCard {
     public final static String ID = makeID("GaleForce");
     private static final int COST = 2;
-    private static final int EXTRA_WINDRUSH = 1;
+    private static final int UPG_COST = 1;
+    private static final int WINDRUSH = 2;
     private static final int CARDS_TO_DRAW = 1;
     private static final int DRAW_COST_THRESHOLD = 1;
 
     public GaleForce() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = EXTRA_WINDRUSH;
+        baseMagicNumber = magicNumber = WINDRUSH;
         baseSecondMagic = secondMagic = CARDS_TO_DRAW;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
@@ -30,12 +31,12 @@ public class GaleForce extends AbstractBladeStormCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ApplyPowerAction(p, p, new GaleForceWindrushPower(p, magicNumber)));
+        atb(new ApplyPowerAction(p, p, new GaleForceWindrushPower(p, magicNumber, DRAW_COST_THRESHOLD)));
         atb(new ApplyPowerAction(p, p, new GaleForceDrawPower(p, secondMagic, DRAW_COST_THRESHOLD)));
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(UPG_COST);
     }
 }
