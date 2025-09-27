@@ -40,7 +40,7 @@
   },
   "${ModID}:EscalatingBreeze": {
     "NAME": "Escalating Breeze",
-    "DESCRIPTION": "{@@}Gain [E] next turn for each Attack in hand. NL Retain ALL Attacks this turn.",
+    "DESCRIPTION": "{@@}Gain [E] next turn for each Attack in hand. NL Retain Attacks this turn.",
     "FLAVOR": "I won't forget!"
   },
   "${ModID}:GaleForce": {

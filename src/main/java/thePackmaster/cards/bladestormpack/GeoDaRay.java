@@ -19,9 +19,9 @@ public class GeoDaRay extends AbstractBladeStormCard {
     public final static String ID = makeID("GeoDaRay");
     private static final int COST = 2;
     private static final int DAMAGE = 9;
-    private static final int UPGRADE_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 3;
     private static final int WINDRUSH_AND_PRECISION_GAIN = 3;
-    private static final int UPG_WINDRUSH_AND_PRECISION_GAIN = 2;
+    private static final int UPG_WINDRUSH_AND_PRECISION_GAIN = 1;
 
     public GeoDaRay(){
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
@@ -46,7 +46,7 @@ public class GeoDaRay extends AbstractBladeStormCard {
 
     @Override
     public void upp() {
-        upgradeDamage(UPGRADE_DAMAGE);
+        upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_WINDRUSH_AND_PRECISION_GAIN);
     }
 }

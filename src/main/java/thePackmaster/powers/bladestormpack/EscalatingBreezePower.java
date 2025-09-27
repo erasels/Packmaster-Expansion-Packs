@@ -1,7 +1,6 @@
 package thePackmaster.powers.bladestormpack;
 
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,7 +9,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-//REFS: RetainCardsAction (base game)
+//REFS: RetainCardsAction (base game), TempRetainCardsPower (monsterhunterpack)
 public class EscalatingBreezePower  extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("EscalatingBreezePower");
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
@@ -22,27 +21,21 @@ public class EscalatingBreezePower  extends AbstractPackmasterPower {
         //If ever needed, set priority to avoid bugs, like "this.priority = -42068".
     }
 
-    //Based on RetainCardsAction (base game)
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         //Retain all Attacks.
-        if (AbstractDungeon.player.hand.group.isEmpty()) { return; }
+        if (isPlayer && !AbstractDungeon.player.hand.group.isEmpty()
+                && !AbstractDungeon.player.hasRelic("Runic Pyramid") && !AbstractDungeon.player.hasPower("Equilibrium")) {
 
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.type == AbstractCard.CardType.ATTACK) {
-                if (!c.isEthereal) {
+            for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                if (c.type == AbstractCard.CardType.ATTACK && !c.isEthereal) {
                     c.retain = true;
                 }
-                //AbstractDungeon.player.hand.addToTop(c);  //Is this still useful?
             }
+            this.flashWithoutSound();
         }
-        this.flashWithoutSound();
 
-        if (amount <= 0) {
-            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        } else {
-            addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
-        }
+        addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
     }
 
     @Override

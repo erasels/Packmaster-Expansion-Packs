@@ -11,12 +11,9 @@ import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
-/*REFS: Crusher (dimensiongatepack2), Paintball (monsterhunterpack), WellWrittenScript (grandopeningpack),
-TempRetainCardsPower & RetainCardsAction (base game), Rummage (packmaster),
-Upgrade and give Retain : Beacon (odditiespack)
-Retain your hand : Equilibrium (base game), TheSuckamidRareSkill (pinnaclepack), Vision (ringofpainpack)
-Effect ALL Attacks : OpeningStrike (overwhelmingpack)
-*/
+/*REFS: Paintball (monsterhunterpack), TempRetainCardsPower & RetainCardsAction (base game), Rummage (packmaster),
+Retain : Beacon (odditiespack), Equilibrium (base game), TheSuckamidRareSkill (pinnaclepack), Vision (ringofpainpack)
+Affect ALL Attacks : OpeningStrike (overwhelmingpack)*/
 public class EscalatingBreeze extends AbstractBladeStormCard {
     public final static String ID = makeID("EscalatingBreeze");
     private static final int COST = 2;
@@ -36,7 +33,7 @@ public class EscalatingBreeze extends AbstractBladeStormCard {
         //Gain 1 [E] next turn per Attack (in hand right now).
         addToBot(new EscalatingBreezeAction(player));
 
-        //Retain all Attacks for 1 turn.
+        //Retain Attacks for 1 turn.
         addToBot(new ApplyPowerAction(p, p, new EscalatingBreezePower(p, magicNumber)));
     }
 

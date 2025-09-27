@@ -23,7 +23,7 @@ public class FlyingSwords extends AbstractBladeStormCard implements StartupCard,
     private static final int UPG_DAMAGE = 1;
     private static final int HITS = 2;
     private static final int WINDRUSH = 2;
-    private static final int UPG_WINDRUSH = 2;
+    private static final int UPG_WINDRUSH = 1;
 
     public boolean combatVersion;
 

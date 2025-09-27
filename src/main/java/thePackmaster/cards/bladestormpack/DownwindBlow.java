@@ -25,7 +25,7 @@ public class DownwindBlow extends AbstractBladeStormCard {
     private static final int DAMAGE = 18;
     private static final int UPG_DAMAGE = 5;
     private static final int PRECISION = 7;
-    private static final int UPG_PRECISION = 3;
+    private static final int UPG_PRECISION = 2;
 
     public DownwindBlow() {
         super(ID, COST, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);

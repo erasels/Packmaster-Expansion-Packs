@@ -2,7 +2,7 @@
   "${ModID}:EscalatingBreezePower": {
     "NAME": "Escalating Breeze",
     "DESCRIPTIONS": [
-      "You #yRetain ALL Attacks in your hand for #b",
+      "You #yRetain Attacks in your hand for #b",
       " turn.",
       " turns."
     ]
