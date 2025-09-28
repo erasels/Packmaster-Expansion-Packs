@@ -38,7 +38,6 @@ public class GaleForceWindrushPower extends AbstractPackmasterPower {
         this.flashWithoutSound();
         addToBot(new VFXAction(new GaleForceEffect(Color.TEAL, false), 0.0F));
 
-        //atb(new ApplyPowerAction(player, player, new WindrushPower(player, (Wiz.getLogicalCardCost(c)) + amount)));
         atb(new ApplyPowerAction(player, player, new WindrushPower(player, amount)));
     }
 
