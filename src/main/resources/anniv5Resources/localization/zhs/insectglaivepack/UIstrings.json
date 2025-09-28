@@ -22,7 +22,7 @@
       "战斗奖励中的 #y虫棍牌 都会随机获得一种灯。打出那些牌，本回合将会根据其灯的类型强化角色。"
     ]
   },
-  "${ModID}:InsectGlaivePackHat": {
+  "${ModID}:InsectGlaiveHat": {
   "TEXT": [
     "这不是奖杯，这是你的朋友。",
     "屠戮甲虫"
