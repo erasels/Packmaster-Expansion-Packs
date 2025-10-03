@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.EquilibriumPower;
+import com.megacrit.cardcrawl.relics.RunicPyramid;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
@@ -36,7 +38,7 @@ public class RoyalSupplyLinesPower extends AbstractPackmasterPower {
 
     @Override
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-        if (isPlayer) {
+        if (isPlayer && !AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.player.hasRelic(RunicPyramid.ID) && !AbstractDungeon.player.hasPower(EquilibriumPower.POWER_ID)) {
             Wiz.atb(new RetainCardsAction(AbstractDungeon.player, this.amount * BASE_CARDS_TO_RETAIN));
         }
     }
