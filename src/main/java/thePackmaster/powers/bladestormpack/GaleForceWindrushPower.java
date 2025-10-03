@@ -21,24 +21,30 @@ public class GaleForceWindrushPower extends AbstractPackmasterPower {
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     private static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public GaleForceWindrushPower(AbstractCreature owner, int amount) {
+    private final int COST_THRESHOLD;
+
+    public GaleForceWindrushPower(AbstractCreature owner, int amount, int threshold) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+        COST_THRESHOLD = threshold;
         updateDescription();
     }
 
     @Override
     public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (amount <= 0 || c.type != AbstractCard.CardType.ATTACK) { return; }
+        if (amount <= 0 || c.type != AbstractCard.CardType.ATTACK || Wiz.getLogicalCardCost(c) < COST_THRESHOLD) {
+            return;
+        }
 
         this.flashWithoutSound();
         addToBot(new VFXAction(new GaleForceEffect(Color.TEAL, false), 0.0F));
 
-        atb(new ApplyPowerAction(player, player, new WindrushPower(player, (Wiz.getLogicalCardCost(c)) + amount)));
+        atb(new ApplyPowerAction(player, player, new WindrushPower(player, amount)));
     }
 
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0]
-                + this.amount + DESCRIPTIONS[1];
+                + this.amount + DESCRIPTIONS[1]
+                + COST_THRESHOLD + DESCRIPTIONS[2];
     }
 }

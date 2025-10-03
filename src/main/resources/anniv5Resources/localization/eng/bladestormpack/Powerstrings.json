@@ -2,10 +2,9 @@
   "${ModID}:EscalatingBreezePower": {
     "NAME": "Escalating Breeze",
     "DESCRIPTIONS": [
-      "Retain up to #b",
-      " card this turn. Attacks Retained this way cost #b",
-      " cards this turn. Attacks Retained this way cost #b",
-      " less next turn."
+      "You #yRetain Attacks in your hand for #b",
+      " turn.",
+      " turns."
     ]
   },
   "${ModID}:GaleForceDrawPower": {
@@ -20,8 +19,9 @@
   "${ModID}:GaleForceWindrushPower": {
     "NAME": "Gale-Force",
     "DESCRIPTIONS": [
-      "Whenever you play an Attack, gain #yWindrush equal to its cost + #b",
-      "."
+      "Whenever you play an Attack, gain #b",
+      " #yWindrush if it costs #b",
+      " or more."
     ]
   },
   "${ModID}:WindrushPower": {
