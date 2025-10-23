@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
-import thePackmaster.actions.tf2pack.ExhaustToAddPersistAction;
+import thePackmaster.actions.tf2pack.ExhaustToEnergyAndCreateCardAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -27,13 +27,14 @@ public class BigEarner extends AbstractTF2Card {
         super(ID, COST, TYPE, RARITY, TARGET);
         this.baseDamage = this.damage = DAMAGE;
         PersistFields.setBaseValue(this, 2);
+        this.cardsToPreview = new Ammo();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new VFXAction(new GoldenSlashEffect(m.hb.cX + 30.0F * Settings.scale, m.hb.cY, true), 0.1F));
         this.dmg(m, AbstractGameAction.AttackEffect.NONE);
-        this.addToBot(new ExhaustToAddPersistAction(this));
+        this.addToBot(new ExhaustToEnergyAndCreateCardAction(this));
     }
 
     @Override

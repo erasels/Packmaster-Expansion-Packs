@@ -17,11 +17,10 @@
       "At the start of your turn, add #b1 #yAmmo into your hand."
     ]
   },
-  "${ModID}:ResupplyRefundPower": {
-    "NAME": "Resupply Refund",
+  "${ModID}:CozyCamperPower": {
+    "NAME": "Camping",
     "DESCRIPTIONS": [
-      "Gain [E] equal to the cost of the first card you #yResupply each turn.",
-      "Gain [E] equal to the cost of the first #b%d cards you #yResupply each turn."
+      "Your next card must be an Attack."
     ]
   },
   "${ModID}:StealthPower": {

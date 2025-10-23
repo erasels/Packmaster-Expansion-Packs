@@ -2,15 +2,16 @@ package thePackmaster.actions.tf2pack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import thePackmaster.cards.tf2pack.PersistHelper;
 import thePackmaster.util.Wiz;
 
-public class ExhaustToAddPersistAction extends AbstractGameAction {
+public class ExhaustToEnergyAndCreateCardAction extends AbstractGameAction {
 
     private final AbstractCard card;
 
-    public ExhaustToAddPersistAction(AbstractCard card) {
+    public ExhaustToEnergyAndCreateCardAction(AbstractCard card) {
         this.card = card;
     }
 
@@ -23,9 +24,10 @@ public class ExhaustToAddPersistAction extends AbstractGameAction {
             return;
         }
 
-        // if there are cards in hand that aren't this card, you choose one to exhaust and increment persist
+        // if there are cards in hand that aren't this card, you choose one to exhaust and do the thing
         this.addToBot(new ExhaustAction(1, false, false, false));
-        PersistHelper.IncrementPersist(card);
+        this.addToBot(new GainEnergyAction(1));
+        this.addToBot(new MakeTempCardInHandAction(card, 1));
         this.isDone = true;
     }
 }
