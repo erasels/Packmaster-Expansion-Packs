@@ -17,7 +17,7 @@
   },
   "${ModID}:MiniSentry": {
     "NAME": "Mini-Sentry Gun",
-    "DESCRIPTION": "Deal !D! damage. NL On ${ModID}:Resupply deal !${ModID}:sd! damage to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL On ${ModID}:Resupply apply !${ModID}:m2! Vulnerable to all enemies."
   },
   "${ModID}:InvisibilityWatch": {
     "NAME": "Invisibility Watch",
@@ -29,7 +29,7 @@
   },
   "${ModID}:LooseCannon": {
     "NAME": "Loose Cannon",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL On ${ModID}:Resupply reduce cost by 1 [E] this combat."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL On ${ModID}:Resupply reduce this card's cost by 1 this combat."
   },
   "${ModID}:AmmoBox": {
     "NAME": "Ammo Box",
