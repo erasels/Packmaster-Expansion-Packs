@@ -61,19 +61,22 @@ public class DarkBargain extends AbstractPickThemAllCard implements OnObtainCard
         }
 
         ArrayList<AbstractCard> upgradeableCards = AbstractDungeon.player.masterDeck.group.stream().filter(AbstractCard::canUpgrade).collect(Collectors.toCollection(ArrayList::new));
-        AbstractCard cardToUpgrade = upgradeableCards.get(AbstractDungeon.miscRng.random(upgradeableCards.size() - 1));
-        AbstractDungeon.player.bottledCardUpgradeCheck(cardToUpgrade);
-        cardToUpgrade.upgrade();
-        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(cardToUpgrade.makeStatEquivalentCopy()));
-        AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineEffect(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+        if (!upgradeableCards.isEmpty()) {
+            AbstractCard cardToUpgrade = upgradeableCards.get(AbstractDungeon.miscRng.random(upgradeableCards.size() - 1));
+            AbstractDungeon.player.bottledCardUpgradeCheck(cardToUpgrade);
+            cardToUpgrade.upgrade();
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(cardToUpgrade.makeStatEquivalentCopy()));
+            AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineEffect(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+        }
 
         ArrayList<AbstractCard> gainableCards = new ArrayList<>();
         gainableCards.addAll(AbstractDungeon.srcCommonCardPool.group);
         gainableCards.addAll(AbstractDungeon.srcUncommonCardPool.group);
         gainableCards.addAll(AbstractDungeon.srcRareCardPool.group);
-        AbstractCard cardToGain = gainableCards.get(AbstractDungeon.miscRng.random(gainableCards.size() - 1));
-
-        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(cardToGain, Settings.WIDTH * 1.0f / 3.0f, Settings.HEIGHT / 2.0f));
-        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new Injury(), Settings.WIDTH * 2.0f / 3.0f, Settings.HEIGHT / 2.0f));
+        if (!gainableCards.isEmpty()) {
+            AbstractCard cardToGain = gainableCards.get(AbstractDungeon.miscRng.random(gainableCards.size() - 1));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(cardToGain, Settings.WIDTH * 1.0f / 3.0f, Settings.HEIGHT / 2.0f));
+            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new Injury(), Settings.WIDTH * 2.0f / 3.0f, Settings.HEIGHT / 2.0f));
+        }
     }
 }
