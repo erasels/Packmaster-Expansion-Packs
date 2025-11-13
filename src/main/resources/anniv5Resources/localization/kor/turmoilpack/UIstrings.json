@@ -1,0 +1,21 @@
+{
+  "${ModID}:TurmoilPack": {
+    "TEXT": [
+      "대소동",
+      "강력한 이익을 얻기 위해 막대한 양의 카드를 버리고 모든 걸 *유기 하세요.",
+      "modargo",
+      "카드 이미지는 매직 더 개더링에서 왔습니다."
+    ]
+  },
+  "${ModID}:TurmoilPackHat": {
+    "TEXT": [
+      "누군가 스스로 만든 감옥입니다.",
+      "정신 감옥"
+    ]
+  },
+  "${ModID}:TormentedMindScreen": {
+    "TEXT": [
+      "소멸."
+    ]
+  }
+}
