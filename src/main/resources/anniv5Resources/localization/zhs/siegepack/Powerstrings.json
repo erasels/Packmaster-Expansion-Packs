@@ -7,26 +7,19 @@
       " 层 #y燃烧 。"
     ]
   },
-  "${ModID}:ShellPower": {
-    "NAME": "炮弹",
+  "${ModID}:NextTurnGainVigorPower": {
+    "NAME": "下回合活力",
     "DESCRIPTIONS": [
-      "你的攻击额外造成 #b",
-      " 点伤害，并消耗 #b1 个 #y炮弹 。"
+      "下个回合，获得 #b",
+      " 层 #y活力 。"
     ]
   },
-  "${ModID}:ShellForgeEffectUpPower": {
-    "NAME": "炮弹锻造",
+  "${ModID}:RampingTurnVigorGainPower": {
+    "NAME": "炮弹锻造活力",
     "DESCRIPTIONS": [
-      "#y炮弹 额外造成 #b",
-      " 点伤害。"
-    ]
-  },
-  "${ModID}:ShellForgeTurnGainPower": {
-    "NAME": "炮弹锻造",
-    "DESCRIPTIONS": [
-      "在你的回合开始时，获得 #b",
-      " 层 #y炮弹 。",
-      " 层 #y炮弹 。"
+      "你的回合开始时，获得 #b",
+      " 层 #y活力 并将此数值增加 #b",
+      " 。"
     ]
   },
   "${ModID}:DigInPower": {
