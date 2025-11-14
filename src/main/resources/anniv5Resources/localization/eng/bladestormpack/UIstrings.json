@@ -17,11 +17,6 @@
       "exhaust for energy and Windrush."
     ]
   },
-  "${ModID}:EscalatingBreezeUiText": {
-    "TEXT": [
-      "retain. The cost of Attacks is reduced next turn."
-    ]
-  },
   "${ModID}:BladeStormPackHat": {
     "TEXT": [
       "It's well worn.",

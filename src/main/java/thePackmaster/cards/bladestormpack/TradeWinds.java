@@ -15,14 +15,13 @@ import java.util.stream.Collectors;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.bladestormpack.FlavorConstants.*;
 
-/*REFS: AttackVial (womaninbluepack), StrikingStrike (creativitypack), Mimicry & Paintbrush (creativitypack),
+/*REFS: AttackVial (womaninbluepack), StrikingStrike, Mimicry & Paintbrush (creativitypack),
 RazorWind (dragonwrathpack), DualHeal (summonerspellspack), Maddii (Discord) */
 public class TradeWinds extends AbstractBladeStormCard {
     public final static String ID = makeID("TradeWinds");
     private static final int COST = 0;
     private static final int HEAL_IF_COMMON = 4;
-    private static final int GOLD_LOSS_IF_RARE = 5;
-
+    private static final int GOLD_LOSS_IF_RARE = 4;
 
     public TradeWinds() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -50,5 +49,5 @@ public class TradeWinds extends AbstractBladeStormCard {
         }
     }
 
-    //Upgrade is handled in use() by if(upgraded) before FlexibleDiscoveryAction().
+    //Upgrade is handled in use() by if(upgraded).
 }
