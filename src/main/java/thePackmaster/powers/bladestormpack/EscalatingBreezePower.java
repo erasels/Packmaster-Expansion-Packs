@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.EquilibriumPower;
+import com.megacrit.cardcrawl.relics.RunicPyramid;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -25,7 +27,7 @@ public class EscalatingBreezePower  extends AbstractPackmasterPower {
     public void atEndOfTurn(boolean isPlayer) {
         //Retain all Attacks.
         if (isPlayer && !AbstractDungeon.player.hand.group.isEmpty()
-                && !AbstractDungeon.player.hasRelic("Runic Pyramid") && !AbstractDungeon.player.hasPower("Equilibrium")) {
+                && !AbstractDungeon.player.hasRelic(RunicPyramid.ID) && !AbstractDungeon.player.hasPower(EquilibriumPower.POWER_ID)) {
 
             for (AbstractCard c : AbstractDungeon.player.hand.group) {
                 if (c.type == AbstractCard.CardType.ATTACK && !c.isEthereal) {
