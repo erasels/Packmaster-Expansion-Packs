@@ -40,7 +40,8 @@
     "wavewhyse",
     "Dj0z",
     "332",
-    "Levender"
+    "Levender",
+    "Quorry"
   ],
   "description": "${project.description}",
   "version": "${project.version}",

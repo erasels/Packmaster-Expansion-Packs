@@ -1,0 +1,32 @@
+{
+  "${ModID}:FlankingPower": {
+    "NAME": "Flanking",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage to an enemy this turn, gain #b%d #yBlock."
+    ]
+  },
+  "${ModID}:BonkAtomicPower": {
+    "NAME": "Bonk Atomic Punch",
+    "DESCRIPTIONS": [
+      "When you #yResupply, gain #b%d #yFlanking."
+    ]
+  },
+  "${ModID}:DispenserPower": {
+    "NAME": "Dispenser",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b1 #yAmmo into your hand."
+    ]
+  },
+  "${ModID}:CozyCamperPower": {
+    "NAME": "Camping",
+    "DESCRIPTIONS": [
+      "Your next card must be an Attack."
+    ]
+  },
+  "${ModID}:StealthPower": {
+    "NAME": "Stealth",
+    "DESCRIPTIONS": [
+      "Gain #b%d #yFlanking whenever you play a #ySkill this turn."
+    ]
+  }
+}
