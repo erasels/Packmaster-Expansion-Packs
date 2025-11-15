@@ -1,0 +1,32 @@
+{
+  "${ModID}:FlankingPower": {
+    "NAME": "보강",
+    "DESCRIPTIONS": [
+      "이번 턴 적에게 막히지 않은 공격 피해를 입히면 #y방어도 를 #b%d 얻습니다."
+    ]
+  },
+  "${ModID}:BonkAtomicPower": {
+    "NAME": "봉크 원자맛 음료",
+    "DESCRIPTIONS": [
+      "#y재보급 하면, #y보강 을 #b%d 얻습니다."
+    ]
+  },
+  "${ModID}:DispenserPower": {
+    "NAME": "디스펜서",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 #y탄약을 #b1 장 얻습니다."
+    ]
+  },
+  "${ModID}:CozyCamperPower": {
+    "NAME": "야영",
+    "DESCRIPTIONS": [
+      "다음 사용하는 카드가 공격 카드여야 합니다."
+    ]
+  },
+  "${ModID}:StealthPower": {
+    "NAME": "은신",
+    "DESCRIPTIONS": [
+      "이번 턴에 스킬 카드를 사용할 때마다 #y보강 을 #b%d 얻습니다."
+    ]
+  }
+}
