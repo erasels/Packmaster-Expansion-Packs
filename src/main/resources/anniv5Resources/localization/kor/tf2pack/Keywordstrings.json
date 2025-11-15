@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "재보급",
+    "NAMES": [
+      "재보급하면", "resupplied", "재보급이"
+    ],
+    "DESCRIPTION": "턴 도중 카드가 손으로 돌아오거나 #yPersist 될 때."
+  },
+  {
+    "PROPER_NAME": "보강",
+    "NAMES": [
+      "보강", "보강을"
+    ],
+    "DESCRIPTION": "이번 턴에 공격 피해를 줄 때, #y방어도를 얻습니다."
+  }
+]

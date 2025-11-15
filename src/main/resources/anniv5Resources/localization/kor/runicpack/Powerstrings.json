@@ -1,0 +1,15 @@
+{
+  "${ModID}:ObeliskPower": {
+    "NAME": "오벨리스크의 힘",
+    "DESCRIPTIONS": [
+      "#y경지 를 전환할 때마다, 무작위 #y구체 를 1 번 영창합니다.",
+      "#y경지 를 전환할 때마다, 무작위 #y구체 를 #b",
+      " 번 영창합니다."
+    ]
+  },"${ModID}:AttackFocusLoss": {
+  "NAME": "룬 집중",
+  "DESCRIPTIONS": [
+    "#y공격 카드를 사용할 때마다, #y밀집을 #b1 잃고 이 수치가 #b1 감소합니다."
+  ]
+}
+}

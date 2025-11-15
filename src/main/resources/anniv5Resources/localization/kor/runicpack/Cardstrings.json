@@ -1,0 +1,35 @@
+{
+"${ModID}:ReadRunes": {
+    "NAME": "룬 읽기",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:룬화합니다."
+},"${ModID}:AncientBlade": {
+    "NAME": "고대 칼날",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 구체를 영창했다면 다시 피해를 !D! 줍니다."
+},"${ModID}:ExploreRuins": {
+    "NAME": "룬 탐험",
+    "DESCRIPTION": "${ModID}:상형문자를 1 번 영창합니다. NL 카드를 1 장 뽑습니다. NL stslib:Persist !stslib:persist!."
+},"${ModID}:AncientTexts": {
+    "NAME": "고대 문자",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL ${ModID}:인장합니다. NL 다른 경지에서 이탈했다면 카드를 !M! 장 더 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL ${ModID}:인장합니다. NL 다른 경지에서 이탈했다면 카드를 !M! 장 더 뽑습니다."
+},"${ModID}:EyeOfRa": {
+    "NAME": "호루스의 눈",
+    "DESCRIPTION": "${ModID}:룬화합니다. NL 밀집을 !M! 얻습니다. NL 다음 !M! 번 동안 공격 카드를 사용할 때마다 밀집을 1 잃습니다."
+},"${ModID}:Chakram": {
+    "NAME": "차크람",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL ${ModID}:격노합니다."
+},"${ModID}:Secrets": {
+    "NAME": "비밀 발견",
+    "DESCRIPTION": "구체 슬롯을 !M! 얻습니다. NL ${ModID}:상형문자로 슬롯을 가득 채웁니다."
+},"${ModID}:DaringEscape": {
+    "NAME": "대담한 탈출",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:상형문자를 2 번 영창합니다. NL 경지에서 이탈합니다."
+},"${ModID}:RunicSpear": {
+    "NAME": "룬 창",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 밀집의 !M! 배와 조준에 영향을 받습니다."
+},"${ModID}:AncientObelisk": {
+    "NAME": "고대 오벨리스크",
+    "DESCRIPTION": "경지를 전환할 때마다 무작위 구체를 !M! 번 영창합니다. NL ${ModID}:룬화합니다.",
+    "UPGRADE_DESCRIPTION": "경지를 전환할 때마다 무작위 구체를 !M! 번 영창합니다. NL ${ModID}:룬화합니다."
+}
+}
