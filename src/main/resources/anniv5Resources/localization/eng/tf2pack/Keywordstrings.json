@@ -11,6 +11,6 @@
     "NAMES": [
       "flanking"
     ],
-    "DESCRIPTION": "When dealing attack damage this turn, gain #yBlock."
+    "DESCRIPTION": "When dealing unblocked attack damage this turn, gain #yBlock."
   }
 ]
