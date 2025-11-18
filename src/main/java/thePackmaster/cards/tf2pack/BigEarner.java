@@ -34,7 +34,7 @@ public class BigEarner extends AbstractTF2Card {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new VFXAction(new GoldenSlashEffect(m.hb.cX + 30.0F * Settings.scale, m.hb.cY, true), 0.1F));
         this.dmg(m, AbstractGameAction.AttackEffect.NONE);
-        this.addToBot(new ExhaustToEnergyAndCreateCardAction(this));
+        this.addToBot(new ExhaustToEnergyAndCreateCardAction(cardsToPreview));
     }
 
     @Override
