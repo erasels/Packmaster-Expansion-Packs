@@ -1,0 +1,20 @@
+{
+  "${ModID}:TF2Pack": {
+    "TEXT": [
+      "军团要塞2",
+      "以攻击为核心的卡包。 NL 通过攻击来获得 格挡 ， NL 重复利用你的攻击牌。",
+      "Quorry"
+    ]
+  },
+  "${ModID}:TF2PackHat": {
+    "TEXT": [
+      "这东西从哪来的？你可没点它啊。",
+      "可怕的折叠礼帽"
+    ]
+  },
+  "${ModID}:PersistModifier": {
+    "TEXT": [
+      " NL stslib:长驻 !stslib:persist! 。"
+    ]
+  }
+}
