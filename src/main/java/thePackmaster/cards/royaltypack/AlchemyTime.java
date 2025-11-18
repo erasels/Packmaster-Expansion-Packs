@@ -25,6 +25,7 @@ public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
 
     public AlchemyTime() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        this.tags.add(CardTags.HEALING);
         exhaust = true;
         baseMagicNumber = magicNumber = BASE_AMOUNT_OF_DRAWS;
     }

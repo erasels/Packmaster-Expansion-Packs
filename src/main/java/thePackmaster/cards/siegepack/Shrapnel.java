@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import thePackmaster.powers.siegepack.ShrapnelPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -18,6 +19,7 @@ public class Shrapnel extends AbstractSiegeCard {
     public Shrapnel() {
         super(ID, COST, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 5;
 
         FlavorText.AbstractCardFlavorFields.flavorBoxType.set(this, FLAVOR_BOX_TYPE);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -27,8 +29,14 @@ public class Shrapnel extends AbstractSiegeCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction (p, p, new ShrapnelPower(p, magicNumber, DAMAGE_THRESHOLD), magicNumber));
+        if (upgraded) {
+            this.addToBot(new ApplyPowerAction (p, p, new VigorPower(p, secondMagic), secondMagic));
+        }
+
     }
 
     @Override
-    public void upp() {isInnate = true;}
+    public void upp() {
+        //in use().
+    }
 }

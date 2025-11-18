@@ -1,0 +1,13 @@
+[
+  {
+    "PROPER_NAME": "雇佣支援",
+    "NAMES": [
+      "Hired Support",
+      "hired support",
+      "Hired_Support",
+      "hired_support",
+      "雇佣支援"
+    ],
+    "DESCRIPTION": "本回合打出的下一张卡牌若耗能>0，每 [E] 改为花费10金币。（需要拥有足够金币）"
+  }
+]

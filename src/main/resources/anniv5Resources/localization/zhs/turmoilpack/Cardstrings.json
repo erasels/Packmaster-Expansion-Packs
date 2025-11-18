@@ -1,0 +1,47 @@
+{
+  "${ModID}:Burden": {
+    "NAME": "重担",
+    "DESCRIPTION": "保留 。 NL 获得 !M! 层 力量 。"
+  },
+  "${ModID}:DarkPath": {
+    "NAME": "幽暗之路",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张 *重担 加入手牌。"
+  },
+  "${ModID}:SpitefulBrand": {
+    "NAME": "怨恨烙印",
+    "DESCRIPTION": "${ModID}:舍弃 ：耗能为 1 的牌。造成 !D! 点伤害。每 ${ModID}:舍弃 1 张牌，给予 !M! 层 虚弱 和 !M! 层 易伤 。"
+  },
+  "${ModID}:LonelyVigil": {
+    "NAME": "孤守",
+    "DESCRIPTION": "${ModID}:舍弃 ：攻击牌。 NL 获得 !B! 点 格挡 。 NL 每 ${ModID}:舍弃 1 张牌， NL 再获得 !M! 点 格挡 。"
+  },
+  "${ModID}:LashOut": {
+    "NAME": "全力攻击",
+    "DESCRIPTION": "${ModID}:舍弃 ：技能牌。 NL 造成 !D! 点群体伤害 X 次。 NL 每 ${ModID}:舍弃 1 张牌， NL 下回合抽 !M! 张牌。"
+  },
+  "${ModID}:BurntOffering": {
+    "NAME": "火祭",
+    "DESCRIPTION": "${ModID}:舍弃 ：无色牌 或 诅咒牌 并将其消耗。造成 !D! 点伤害。每 ${ModID}:舍弃 1 张牌，给予 !M! 层 ${ModID}:燃烧 。"
+  },
+  "${ModID}:ForsakenDreams": {
+    "NAME": "弃绝之梦",
+    "DESCRIPTION": "虚无 。 NL ${ModID}:舍弃 ：所有卡牌。每有1种被弃掉的卡牌类型，获得 !M! 层 敏捷 、 ${ModID}:金属化 和 荆棘 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:舍弃 ：所有卡牌。每有1种被弃掉的卡牌类型，获得 !M! 层 敏捷 、 ${ModID}:金属化 和 荆棘 。"
+  },
+  "${ModID}:TormentedMind": {
+    "NAME": "受折磨的灵魂",
+    "DESCRIPTION": "抽 !M! 张牌。将 1 张 *重担 和 1 张 *眩晕 加入手牌。从你的抽牌堆或弃牌堆中消耗至多 2 张牌。"
+  },
+  "${ModID}:Compulsion": {
+    "NAME": "驱使",
+    "DESCRIPTION": "${ModID}:舍弃 ：耗能≥ 2 的牌。本场战斗中将其耗能降至 1。每 ${ModID}:舍弃 1 张牌，抽 !M! 张牌。"
+  },
+  "${ModID}:EternalToil": {
+    "NAME": "永恒劳役",
+    "DESCRIPTION": "${ModID}:舍弃 ：未 升级 的卡牌 并将其升级。将弃牌堆中的 !M! 张牌和所有能力牌加入手牌。"
+  },
+  "${ModID}:CycleOfRenewal": {
+    "NAME": "轮回新生",
+    "DESCRIPTION": "你的回合开始时， ${ModID}:舍弃 ：基础牌 、 普通牌 或 状态牌。每 ${ModID}:舍弃 1 张牌，抽 1 张牌。"
+  }
+}

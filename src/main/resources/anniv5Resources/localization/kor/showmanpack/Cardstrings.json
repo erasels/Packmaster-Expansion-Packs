@@ -26,7 +26,8 @@
   },
   "${ModID}:SeeMe": {
     "NAME": "내가 없어져볼게...",
-    "DESCRIPTION": "활력을 !M! 얻습니다. NL 다음 턴, *얍 을 얻습니다."
+    "DESCRIPTION": "활력을 !M! 얻습니다. NL 다음 턴, *얍 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "활력을 !M! 얻습니다. NL 다음 턴, *얍+ 을 얻습니다."
   },
   "${ModID}:NowYouDont": {
     "NAME": "얍",

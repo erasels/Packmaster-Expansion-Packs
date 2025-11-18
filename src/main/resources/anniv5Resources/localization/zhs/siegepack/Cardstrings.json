@@ -1,8 +1,8 @@
 {
   "${ModID}:Shelling": {
     "NAME": "炮击",
-    "DESCRIPTION": "造成 !D! 点伤害，并对另一个随机敌人造成 !${ModID}:sd! 点伤害。 NL 获得 !M! 层 ${ModID}:炮弹 。",
-    "FLAVOR": "通用的昆虫驱避剂。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 下个回合获得等同于未被格挡伤害一半的 活力 。",
+    "FLAVOR": "投降吧，还有更多炮弹等着你们呢！"
   },
   "${ModID}:Suppress": {
     "NAME": "压制",
@@ -16,29 +16,29 @@
   },
   "${ModID}:DefensePlanning": {
     "NAME": "防御计划",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 如果你没有 ${ModID}:模糊 ，获得 !M! 层 ${ModID}:模糊 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果你没有 ${ModID}:模糊 ，获得 !M! 层 ${ModID}:模糊 。",
     "FLAVOR": "最好保持警惕。"
   },
   "${ModID}:Logistics": {
     "NAME": "后勤",
-    "DESCRIPTION": "失去 !M! 层 虚弱, 脆弱 和 易伤。 NL 获得 !M! 层 ${ModID}:炮弹 。 NL 抽 !${ModID}:m2! 张牌。",
+    "DESCRIPTION": "失去 1 层 虚弱 、 脆弱 和 易伤 。 NL 获得 !M! 层 活力 。 NL 抽 !${ModID}:m2! 张牌。",
     "FLAVOR": "他们让一切顺畅运作。"
   },
   "${ModID}:ThinkTwice": {
     "NAME": "三思",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 每有一个意图为攻击的敌人，获得 !M! 点格挡。",
-    "FLAVOR": "团结就是力量，是吗？"
+    "DESCRIPTION": "获得受 活力 加成的 !B! 点 格挡 ，并失去所有 活力 。 NL 获得 !M! 层 活力。",
+    "FLAVOR": "以满腔热情偏转攻击，等待好戏开场！"
   },
   "${ModID}:Shrapnel": {
     "NAME": "弹片",
     "DESCRIPTION": "你的攻击每造成 10 点未被格挡的伤害，施加 1 层 易伤 和 2 层 ${ModID}:燃烧 。",
-    "UPGRADE_DESCRIPTION": "固有。 NL 你的攻击每造成 10 点未被格挡的伤害，施加 1 层 易伤 和 2 层 ${ModID}:燃烧 。",
+    "UPGRADE_DESCRIPTION": "获得 !${ModID}:m2! 层 活力 。 NL 你的攻击每造成 10 点未被格挡的伤害，施加 1 层 易伤 和 2 层 ${ModID}:燃烧 。",
     "FLAVOR": "持续压制敌人！"
   },
   "${ModID}:ShellForge": {
     "NAME": "炮弹锻造",
-    "DESCRIPTION": "${ModID}:炮弹 额外造成 !M! 点伤害。 NL 你的回合开始时，获得 !${ModID}:m2! 层 ${ModID}:炮弹 。",
-    "FLAVOR": "像是个面包房，但生产爆炸物。"
+    "DESCRIPTION": "你的回合开始时， 获得 !M! 层 活力 并将此数值增加 !${ModID}:m2! 。",
+    "FLAVOR": "第2步：充满活力地制造弹药。"
   },
   "${ModID}:DigIn": {
     "NAME": "深入防御",

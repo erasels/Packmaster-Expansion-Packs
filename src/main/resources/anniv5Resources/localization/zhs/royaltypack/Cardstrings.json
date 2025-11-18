@@ -1,0 +1,47 @@
+{
+  "${ModID}:RetainerStrike": {
+    "NAME": "侍从突袭",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合随机 保留 1 张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本回合 保留 1 张牌。"
+  },
+  "${ModID}:Soulstone": {
+    "NAME": "魂石",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  起动 ：获得 !M! 金币。 NL 消耗 。"
+  },
+  "${ModID}:HiringSpecialists": {
+    "NAME": "招募专家",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 1 张牌。 NL 获得 1 层 ${ModID}:雇佣支援 。"
+  },
+  "${ModID}:Forcefield": {
+    "NAME": "力场",
+    "DESCRIPTION": "获得 !B! 点 格挡 X 次。 如果 X ≥ 3，获得 1 层 残影 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 X+1 次。 如果 X ≥ 3，获得 1 层 残影 。"
+  },
+  "${ModID}:MiningStrike": {
+    "NAME": "采矿打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 金币。 NL 消耗 。"
+  },
+  "${ModID}:Stratagem": {
+    "NAME": "谋略",
+    "DESCRIPTION": "敌人本回合失去 !M! 点 力量 。 下回合，获得 1 层 ${ModID}:雇佣支援 。"
+  },
+  "${ModID}:RoyalSupplyLines": {
+    "NAME": "皇家补给线",
+    "DESCRIPTION": "你的回合开始时，抽 2 张牌。 NL 回合结束时， 保留 至多 2 张牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时，抽 2 张牌。 NL 回合结束时， 保留 至多 2 张牌。"
+  },
+  "${ModID}:AlchemyTime": {
+    "NAME": "炼金时刻",
+    "DESCRIPTION": "支付 25 金币以获得 1 瓶药水。 NL 当你使用药水时，抽 !M! 张牌。 NL ${ModID}:拾起 ：获得 1 个药水栏位和 75 金币。",
+    "EXTENDED_DESCRIPTION": ["要是有更多金币买药材就好了！"]
+  },
+  "${ModID}:TacticalReroll": {
+    "NAME": "战术重掷",
+    "DESCRIPTION": "支付 10 金币，将弃牌堆中的 !M! 张牌加入手牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["啧……金币不够，没法重掷。"]
+  },
+  "${ModID}:ForTheHistoryBooks": {
+    "NAME": "名垂青史",
+    "DESCRIPTION": "下回合获得 !M! 层 临时力量 和 临时敏捷 ，每次均触发 X 次，且获得 1 层 ${ModID}:雇佣支援 。 NL 消耗 。"
+  }
+}

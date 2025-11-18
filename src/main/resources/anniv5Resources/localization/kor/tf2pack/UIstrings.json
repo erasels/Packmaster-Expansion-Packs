@@ -1,0 +1,20 @@
+{
+  "${ModID}:TF2Pack": {
+    "TEXT": [
+      "팀 포트리스 2",
+      "공격해서 방어를 얻고 공격을 재사용하는 공격 위주 팩입니다.",
+      "Quorry"
+    ]
+  },
+  "${ModID}:TF2PackHat": {
+    "TEXT": [
+      "어디서 왔을까? 물어보지 않네.",
+      "무시무시한 오페라 모자"
+    ]
+  },
+  "${ModID}:PersistModifier": {
+    "TEXT": [
+      " NL stslib:Persist !stslib:persist!"
+    ]
+  }
+}

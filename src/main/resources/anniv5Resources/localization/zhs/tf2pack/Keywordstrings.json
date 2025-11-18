@@ -1,0 +1,19 @@
+[
+  {
+    "PROPER_NAME": "补给",
+    "NAMES": [
+      "resupply",
+      "resupplied",
+      "补给"
+    ],
+    "DESCRIPTION": "当一张牌在你的回合中进入手牌，或被 #y保留 时触发。"
+  },
+  {
+    "PROPER_NAME": "侧袭",
+    "NAMES": [
+      "flanking",
+      "侧袭"
+    ],
+    "DESCRIPTION": "本回合造成未被格挡的攻击伤害时，获得 #y格挡 。"
+  }
+]

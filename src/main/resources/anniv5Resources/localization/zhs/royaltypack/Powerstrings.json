@@ -1,0 +1,42 @@
+{
+  "${ModID}:RoyalSupplyLinesPower": {
+    "NAME": "皇家补给线",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，抽 #b",
+      " 张额外的牌。",
+      " 在你的回合结束时， #y保留 至多 #b",
+      " 张牌。"
+    ]
+  },
+  "${ModID}:HiredSupportPower": {
+    "NAME": "雇佣支援",
+    "DESCRIPTIONS": [
+      "本回合打出的下一张卡牌若耗能>0，每 [E] 改为花费 #b10 金币。（需要拥有足够金币）",
+      "本回合打出的下 #b",
+      " 张卡牌若耗能>0，每 [E] 改为花费 #b10 金币。（需要拥有足够金币）"
+    ]
+  },
+  "${ModID}:ForTheHistoryBooksPower": {
+    "NAME": "载入史册",
+    "DESCRIPTIONS": [
+      "下回合获得 #b",
+      " 层临时 #y力量 和 #b",
+      " 层临时 #y敏捷 。"
+    ]
+  },
+  "${ModID}:NextTurnHiredSupportPower": {
+    "NAME": "下回合雇佣支援",
+    "DESCRIPTIONS": [
+      "下回合，获得 #b",
+      " 层 #y雇佣支援 。"
+    ]
+  },
+  "${ModID}:AlchemyTimePower": {
+    "NAME": "炼金时间",
+    "DESCRIPTIONS": [
+      "当你使用药水时，抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  }
+}

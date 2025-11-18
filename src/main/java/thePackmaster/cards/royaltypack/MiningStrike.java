@@ -15,6 +15,7 @@ public class MiningStrike extends AbstractRoyaltyCard {
     public MiningStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.tags.add(CardTags.STRIKE);
+        this.tags.add(CardTags.HEALING);
         baseDamage = damage = 15;
         baseMagicNumber = magicNumber = 15;
         this.exhaust = true;

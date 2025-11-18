@@ -20,7 +20,10 @@ public class DistortionApplicationPostDamageModifier extends AbstractDamageModif
     @Override
     public void onLastDamageTakenUpdate(DamageInfo info, int lastDamageTaken, int overkillAmount, AbstractCreature targetHit) {
         if (lastDamageTaken > 0) {
-            Wiz.applyToEnemyTop((AbstractMonster) targetHit, new DistortionPower(targetHit, info.owner, (int) (lastDamageTaken * multiplier)));
+            int amount = (int) (lastDamageTaken * multiplier);
+            if (amount > 0) {
+                Wiz.applyToEnemyTop((AbstractMonster) targetHit, new DistortionPower(targetHit, info.owner, amount));
+            }
         }
     }
 

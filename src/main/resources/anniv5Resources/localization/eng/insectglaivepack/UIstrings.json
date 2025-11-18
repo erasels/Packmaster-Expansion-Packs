@@ -22,7 +22,7 @@
       "Insect Glaive cards in combat rewards gain a random Extract. Playing them strengthens you this turn based on type."
     ]
   },
-  "${ModID}:InsectGlaivePackHat": {
+  "${ModID}:InsectGlaiveHat": {
     "TEXT": [
       "This isn't a trophy, it's your friend.",
       "Carnage Beetle"

@@ -21,8 +21,8 @@ public class MysticFlourish extends AbstractWitchStrikeCard {
 
     public MysticFlourish() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 6;
-        magicNumber = baseMagicNumber = 4;
+        baseDamage = 4;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void triggerOnGlowCheck() {

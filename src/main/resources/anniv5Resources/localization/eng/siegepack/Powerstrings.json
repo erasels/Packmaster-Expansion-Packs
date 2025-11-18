@@ -7,26 +7,19 @@
       " #yIgnite per 10 unblocked damage they deal."
     ]
   },
-  "${ModID}:ShellPower": {
-    "NAME": "Shell",
+  "${ModID}:NextTurnGainVigorPower": {
+    "NAME": "Vigor next turn",
     "DESCRIPTIONS": [
-      "Your attacks deal #b",
-      " additional damage and consume #b1 #yShell."
+      "Next turn, gain #b",
+      " #yVigor."
     ]
   },
-  "${ModID}:ShellForgeEffectUpPower": {
-    "NAME": "Shell Forge",
+  "${ModID}:RampingTurnVigorGainPower": {
+    "NAME": "Shell Forge Vigor",
     "DESCRIPTIONS": [
-     "#yShells additionally provide #b",
-      " more damage."
-    ]
-  },
-  "${ModID}:ShellForgeTurnGainPower": {
-    "NAME": "Shell Forge",
-    "DESCRIPTIONS": [
-      "You gain #b",
-       " #yShell at the start of your turn.",
-       " #yShells at the start of your turn."
+      "At the start of your turn, gain #b",
+      " #yVigor and increase this number by #b",
+      "."
     ]
   },
   "${ModID}:DigInPower": {

@@ -1,0 +1,50 @@
+{
+  "${ModID}:CozyCamper": {
+    "NAME": "안락한 야영 장비",
+    "DESCRIPTION": " [E] 를 얻습니다. NL 다음 카드는 공격 카드여야 합니다. NL stslib:Persist !stslib:persist!"
+  },
+  "${ModID}:BonkAtomicPunch": {
+    "NAME": "봉크! 원자맛 음료",
+    "DESCRIPTION": "${ModID}:재보급하면, ${ModID}:보강을 !M! 얻습니다."
+  },
+  "${ModID}:BigEarner": {
+    "NAME": "재력가",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에서 카드를 소멸시키고 [E] 를 얻고 *탄약 을 얻습니다. NL stslib:Persist !stslib:persist!"
+  },
+  "${ModID}:Minigun": {
+    "NAME": "미니건",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 !M! 번 줍니다. NL 이 카드가 손에 있을 때 ${ModID}:재보급하면, 공격 횟수가 1 증가합니다."
+  },
+  "${ModID}:MiniSentry": {
+    "NAME": "미니 센트리 건",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL ${ModID}:재보급이 적 전체에게 취약을 !${ModID}:m2! 부여합니다."
+  },
+  "${ModID}:InvisibilityWatch": {
+    "NAME": "투명화 시계",
+    "DESCRIPTION": "이번 턴에 스킬을 사용할 때마다 ${ModID}:보강을 !M! 얻습니다."
+  },
+  "${ModID}:DirectHit": {
+    "NAME": "직격포",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *직격포 가 이번 턴 피해를 두 배로 줍니다."
+  },
+  "${ModID}:LooseCannon": {
+    "NAME": "통제불능 대포",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL ${ModID}:재보급이 이번 전투에서 이 카드의 비용을 1 감소시킵니다."
+  },
+  "${ModID}:AmmoBox": {
+    "NAME": "탄약 상자",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *탄약 을 !M! 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL *탄약+ 을 !M! 장 얻습니다."
+  },
+  "${ModID}:Dispenser": {
+    "NAME": "디스펜서",
+    "DESCRIPTION": "카드를 !M! 장 뽑고 *탄약 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑고 *탄약 을 얻습니다."
+  },
+  "${ModID}:Ammo": {
+    "NAME": "탄약",
+    "DESCRIPTION": "손에서 공격 카드를 선택합니다. 이번 전투 동안 stslib:Persist 를 2 부여하거나 1 증가시킵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL 손에서 공격 카드를 선택합니다. 이번 전투 동안 stslib:Persist 를 2 부여하거나 1 증가시킵니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": ["Persist를 부여합니다"]
+  }
+}
