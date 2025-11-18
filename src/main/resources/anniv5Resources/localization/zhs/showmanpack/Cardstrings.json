@@ -26,7 +26,8 @@
   },
   "${ModID}:SeeMe": {
     "NAME": "看得见我...",
-    "DESCRIPTION": "获得 !M! 点 活力 。 NL 下一回合，将一张 *看不见我 加入你的手牌。"
+    "DESCRIPTION": "获得 !M! 点 活力 。 NL 下一回合，将一张 *看不见我 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 活力 。 NL 下一回合，将一张 *看不见我+ 加入你的手牌。"
   },
   "${ModID}:NowYouDont": {
     "NAME": "看不见我",

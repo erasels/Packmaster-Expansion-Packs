@@ -26,7 +26,8 @@
   },
   "${ModID}:SeeMe": {
     "NAME": "Now You See Me...",
-    "DESCRIPTION": "Gain !M! Vigor. NL Next turn, add a *Now *You *Don't to your hand."
+    "DESCRIPTION": "Gain !M! Vigor. NL Next turn, add a *Now *You *Don't to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Vigor. NL Next turn, add a *Now *You *Don't+ to your hand."
   },
   "${ModID}:NowYouDont": {
     "NAME": "Now You Don't",
