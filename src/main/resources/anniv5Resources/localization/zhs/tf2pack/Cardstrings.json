@@ -1,0 +1,50 @@
+{
+  "${ModID}:CozyCamper": {
+    "NAME": "蹲点",
+    "DESCRIPTION": "获得 [E] 。 NL 你下一张牌必须是攻击牌。 NL stslib:长驻 !stslib:persist! 。"
+  },
+  "${ModID}:BonkAtomicPunch": {
+    "NAME": "原子能饮料",
+    "DESCRIPTION": "当你进行 ${ModID}:补给 时，获得 !M! 层 ${ModID}:侧袭 。"
+  },
+  "${ModID}:BigEarner": {
+    "NAME": "暴利杀手",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 1 张手牌以获得 [E] ，并将 1 张 *弹药 加入手牌。 NL stslib:长驻 !stslib:persist! 。"
+  },
+  "${ModID}:Minigun": {
+    "NAME": "转轮机枪",
+    "DESCRIPTION": "对一个随机敌人造成 !D! 点伤害 !M! 次。 NL 当你进行 ${ModID}:补给 且这张牌在手牌中时，攻击次数 +1 。"
+  },
+  "${ModID}:MiniSentry": {
+    "NAME": "迷你哨戒炮",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 当你 ${ModID}:补给 时，对所有敌人施加 !${ModID}:m2! 层 易伤 。"
+  },
+  "${ModID}:InvisibilityWatch": {
+    "NAME": "隐形手表",
+    "DESCRIPTION": "本回合每当你打出技能牌，获得 !M! 层 ${ModID}:侧袭 。"
+  },
+  "${ModID}:DirectHit": {
+    "NAME": "精确打击者",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL *精确打击者 在本回合中造成双倍伤害。"
+  },
+  "${ModID}:LooseCannon": {
+    "NAME": "脱缰巨炮",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 每当你 ${ModID}:补给 时，本场战斗中这张牌的费用降低 1 。"
+  },
+  "${ModID}:AmmoBox": {
+    "NAME": "弹药箱",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张 *弹药 加入手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张 *弹药+ 加入手牌。"
+  },
+  "${ModID}:Dispenser": {
+    "NAME": "补给器",
+    "DESCRIPTION": "抽 !M! 张牌，并将 1 张 *弹药 加入手牌。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌，并将 1 张 *弹药 加入手牌。"
+  },
+  "${ModID}:Ammo": {
+    "NAME": "弹药",
+    "DESCRIPTION": "选择手牌中的一张攻击牌。本场战斗中给予该牌 2 层 stslib:长驻 ，或使其 stslib:长驻 层数 +1 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 选择手牌中的一张攻击牌。本场战斗中给予该牌 2 层 stslib:长驻 ，或使其 stslib:长驻 层数 +1 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["添加 长驻 。"]
+  }
+}

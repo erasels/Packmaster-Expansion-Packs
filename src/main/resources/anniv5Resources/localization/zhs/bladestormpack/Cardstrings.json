@@ -40,12 +40,12 @@
   },
   "${ModID}:EscalatingBreeze": {
     "NAME": "微风渐强",
-    "DESCRIPTION": "本回合保留至多 !M! 张牌。 NL 保留的攻击牌下回合费用减少 !${ModID}:m2! 点。",
+    "DESCRIPTION": "手牌每有1张攻击牌，下个回合获得 [E] 。 NL 保留 所有攻击牌。",
     "FLAVOR": "我不会忘记的！"
   },
   "${ModID}:GaleForce": {
     "NAME": "烈风",
-    "DESCRIPTION": "{@@}每当你使用攻击牌时，获得等同于其费用{!M!|>0=+ !M!} 层的 ${ModID}:风行 。 NL 每当你打出费用为 1 或更高的攻击牌时，抽 !${ModID}:m2! 张牌。",
+    "DESCRIPTION": "{@@}每当你打出费用大于0的攻击牌，获得 !M! 层 ${ModID}:风行 ，抽 !${ModID}:m2! 张牌。",
     "FLAVOR": "快，死吧！"
   },
   "${ModID}:DownwindBlow": {

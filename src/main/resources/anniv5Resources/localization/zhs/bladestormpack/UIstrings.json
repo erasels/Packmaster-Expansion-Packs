@@ -17,11 +17,6 @@
       "消耗 以获得能量和 风行 层数。"
     ]
   },
-  "${ModID}:EscalatingBreezeUiText": {
-    "TEXT": [
-      "保留 。其中攻击牌在下个回合耗能降低。"
-    ]
-  },
   "${ModID}:BladeStormPackHat": {
     "TEXT": [
       "已经用旧了。",
