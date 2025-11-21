@@ -29,7 +29,7 @@
   },
   "${ModID}:LooseCannon": {
     "NAME": "Loose Cannon",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL On ${ModID}:Resupply reduce this card's cost by 1 this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL On ${ModID}:Resupply reduce this card's cost by 1 this combat."
   },
   "${ModID}:AmmoBox": {
     "NAME": "Ammo Box",
