@@ -17,7 +17,7 @@
   },
   "${ModID}:MiniSentry": {
     "NAME": "Mini-Sentry Gun",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL On ${ModID}:Resupply apply !${ModID}:m2! Vulnerable to all enemies."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL On ${ModID}:Resupply apply !${ModID}:m2! Vulnerable to ALL enemies."
   },
   "${ModID}:InvisibilityWatch": {
     "NAME": "Invisibility Watch",
