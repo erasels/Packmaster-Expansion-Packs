@@ -9,7 +9,7 @@
   },
   "${ModID}:BigEarner": {
     "NAME": "Big Earner",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card in hand to gain [E] and add an *Ammo to your hand. NL stslib:Persist !stslib:persist!"
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card in hand to gain [E] and add an *Ammo to your hand."
   },
   "${ModID}:Minigun": {
     "NAME": "Minigun",
