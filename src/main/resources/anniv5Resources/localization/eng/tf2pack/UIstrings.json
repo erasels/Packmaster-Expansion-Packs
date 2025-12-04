@@ -14,7 +14,7 @@
   },
   "${ModID}:PersistModifier": {
     "TEXT": [
-      " NL stslib:Persist !stslib:persist!"
+      " NL stslib:Persist !stslib:persist!."
     ]
   }
 }
