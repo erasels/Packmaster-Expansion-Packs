@@ -20,7 +20,7 @@ public class RampingTurnVigorGainPower extends AbstractPackmasterPower {
     private final int stackAmountRampingPerTurn;
 
     public RampingTurnVigorGainPower(AbstractCreature owner, int amount, int amountRampingPerTurn) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         this.amount = amount;
         this.amount2 = amountRampingPerTurn;
         this.stackAmountRampingPerTurn = amountRampingPerTurn;
