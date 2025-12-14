@@ -20,13 +20,12 @@ public class BigEarner extends AbstractTF2Card {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 9;
     private static final int UPGRADE_DAMAGE = 3;
 
     public BigEarner() {
         super(ID, COST, TYPE, RARITY, TARGET);
         this.baseDamage = this.damage = DAMAGE;
-        PersistFields.setBaseValue(this, 2);
         this.cardsToPreview = new Ammo();
     }
 

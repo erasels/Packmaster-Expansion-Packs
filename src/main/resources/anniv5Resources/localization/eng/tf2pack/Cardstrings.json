@@ -1,50 +1,50 @@
 {
   "${ModID}:CozyCamper": {
     "NAME": "Cozy Camper",
-    "DESCRIPTION": "Gain [E]. NL Your next card must be an Attack. NL stslib:Persist !stslib:persist!"
+    "DESCRIPTION": "Gain [E]. NL Your next card this turn must be an Attack. NL stslib:Persist !stslib:persist!."
   },
   "${ModID}:BonkAtomicPunch": {
     "NAME": "Bonk! Atomic Punch",
-    "DESCRIPTION": "When you ${ModID}:Resupply, gain !M! ${ModID}:Flanking."
+    "DESCRIPTION": "Ethereal. NL Whenever you ${ModID}:Resupply, NL gain !M! ${ModID}:Flanking."
   },
   "${ModID}:BigEarner": {
     "NAME": "Big Earner",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card in hand to gain [E] and add an *Ammo to your hand. NL stslib:Persist !stslib:persist!"
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card in hand to gain [E] and add an *Ammo to your hand."
   },
   "${ModID}:Minigun": {
     "NAME": "Minigun",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL When you ${ModID}:Resupply with this in hand, increase hits by 1."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Whenever you ${ModID}:Resupply with this in hand, add 1 hit."
   },
   "${ModID}:MiniSentry": {
     "NAME": "Mini-Sentry Gun",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL On ${ModID}:Resupply apply !${ModID}:m2! Vulnerable to all enemies."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL When you ${ModID}:Resupply this card, apply !${ModID}:m2! Vulnerable to ALL enemies."
   },
   "${ModID}:InvisibilityWatch": {
     "NAME": "Invisibility Watch",
-    "DESCRIPTION": "Whenever you play a Skill this turn, gain !M! ${ModID}:Flanking."
+    "DESCRIPTION": "Whenever you play NL a Skill this turn, NL gain !M! ${ModID}:Flanking."
   },
   "${ModID}:DirectHit": {
     "NAME": "Direct Hit",
-    "DESCRIPTION": "Deal !D! damage. NL *Direct *Hits deal double damage this turn."
+    "DESCRIPTION": "Deal !D! damage. NL *Direct *Hits deal double damage NL this turn."
   },
   "${ModID}:LooseCannon": {
     "NAME": "Loose Cannon",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL On ${ModID}:Resupply reduce this card's cost by 1 this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL When you ${ModID}:Resupply this card, reduce its cost by 1 this combat."
   },
   "${ModID}:AmmoBox": {
     "NAME": "Ammo Box",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Ammo to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Ammo+ to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Ammo NL to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Ammo+ NL to your hand."
   },
   "${ModID}:Dispenser": {
     "NAME": "Dispenser",
-    "DESCRIPTION": "Draw !M! card and add an *Ammo to your hand.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards and add an *Ammo to your hand."
+    "DESCRIPTION": "Draw !M! card and NL add an *Ammo NL to your hand.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards and NL add an *Ammo NL to your hand."
   },
   "${ModID}:Ammo": {
     "NAME": "Ammo",
-    "DESCRIPTION": "Choose an Attack in your hand. Give it 2 stslib:Persist or increase stslib:Persist by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Attack in your hand. Give it 2 stslib:Persist or increase stslib:Persist by 1 this combat. NL Exhaust.",
+    "DESCRIPTION": "Give a random Attack in your hand 2 stslib:Persist or increase its stslib:Persist by 1 this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose an Attack in your hand. Give it 2 stslib:Persist or increase its stslib:Persist by 1 this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Add Persist"]
   }
 }
