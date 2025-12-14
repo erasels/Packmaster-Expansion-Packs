@@ -1,11 +1,11 @@
 {
   "${ModID}:CozyCamper": {
     "NAME": "Cozy Camper",
-    "DESCRIPTION": "Gain [E]. NL Your next card must be an Attack. NL stslib:Persist !stslib:persist!."
+    "DESCRIPTION": "Gain [E]. NL Your next card this turn must be an Attack. NL stslib:Persist !stslib:persist!."
   },
   "${ModID}:BonkAtomicPunch": {
     "NAME": "Bonk! Atomic Punch",
-    "DESCRIPTION": "Whenever you ${ModID}:Resupply, NL gain !M! ${ModID}:Flanking."
+    "DESCRIPTION": "Ethereal. NL Whenever you ${ModID}:Resupply, NL gain !M! ${ModID}:Flanking."
   },
   "${ModID}:BigEarner": {
     "NAME": "Big Earner",
@@ -43,8 +43,8 @@
   },
   "${ModID}:Ammo": {
     "NAME": "Ammo",
-    "DESCRIPTION": "Choose an Attack in your hand. Give it 2 stslib:Persist or increase stslib:Persist by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Attack in your hand. Give it 2 stslib:Persist or increase stslib:Persist by 1 this combat. NL Exhaust.",
+    "DESCRIPTION": "Give a random Attack in your hand 2 stslib:Persist or increase its stslib:Persist by 1 this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose an Attack in your hand. Give it 2 stslib:Persist or increase its stslib:Persist by 1 this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Add Persist"]
   }
 }
