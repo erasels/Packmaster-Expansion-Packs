@@ -173,7 +173,7 @@ public abstract class AbstractDoppel extends AbstractOrb {
     public final AbstractOrb makeCopy() {
         AbstractDoppel doppel = this.makeDoppelCopy();
         doppel.hasEvoked = this.hasEvoked;
-        return null;
+        return doppel;
     }
 
     protected abstract AbstractDoppel makeDoppelCopy();
