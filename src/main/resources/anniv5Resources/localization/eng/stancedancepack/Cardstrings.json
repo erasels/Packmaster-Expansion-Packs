@@ -1,0 +1,66 @@
+{
+  "${ModID}:Choreography": {
+    "NAME": "Choreography",
+    "DESCRIPTION": "Enter ${ModID}:Weaver. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Weaver."
+  },
+  "${ModID}:Pitch": {
+    "NAME": "Pitch",
+    "DESCRIPTION": "Gain !M! *Shivs. NL Enter ${ModID}:Venomous."
+  },
+  "${ModID}:StagLeap": {
+    "NAME": "Stag Leap",
+    "DESCRIPTION": "{@@}ALL enemies lose !M! Strength this turn. NL Enter ${ModID}:Cunning. Exhaust{!Upgrades!|>0=ive !stslib:ex!}."
+  },
+  "${ModID}:TimeStep": {
+    "NAME": "Time Step",
+    "DESCRIPTION": "Gain !M! Strength, plus 1 for each unique Stance you've been in this combat.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( Gains ",
+      " Strength. )"
+    ]
+  },
+  "${ModID}:PullBack": {
+    "NAME": "Pull Back",
+    "DESCRIPTION": "Gain !B! Block. NL Enter Calm. NL At the start of your next turn, enter ${ModID}:Aggression."
+  },
+  "${ModID}:FanKick": {
+    "NAME": "Fan Kick",
+    "DESCRIPTION": "Deal !D! damage. NL Changes effect based on your Stance.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL ",
+      "*None: Draw a card which enters a Stance.",
+      "*Weaver: Your next *Woven card created costs 1 less.",
+      "*Venomous: Apply 5 Poison.",
+      "*Cunning: Apply 1 Weak and 1 Vulnerable.",
+      "*Calm: Draw 2 cards.",
+      "*Angry/Wrath: Gain 4 Vigor.",
+      "*Aggression: Add a *Shiv into your hand.",
+      "*Serene: Gain !B! Block.",
+      "*Ancient: Gain 1 Artifact.",
+      "*Nightmare: Lose 5 ${ModID}:Sanity.",
+      "*Divinity: Gain 5 Mantra."
+    ]
+
+  },
+  "${ModID}:PivotStrike": {
+    "NAME": "Pivot Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL Gain [E] the next time you enter a Stance."
+  },
+  "${ModID}:FinalPerformance": {
+    "NAME": "Final Performance",
+    "DESCRIPTION": "Gain !M! Dexterity. NL Enter ${ModID}:Serene."
+  },
+  "${ModID}:Pirouette": {
+    "NAME": "Pirouette",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL If X is 0, enter ${ModID}:Ancient."
+   },
+  "${ModID}:DanceOfTheDead": {
+    "NAME": "Dance of the Dead",
+    "DESCRIPTION": "Target loses 4 HP. They lose !M! more whenever you enter a Stance."
+  },
+  "${ModID}:WovenCard": {
+    "NAME": "Woven Card",
+    "DESCRIPTION": ""
+  }
+}
