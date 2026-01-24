@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceRed;
 import thePackmaster.cardmodifiers.insectglaivepack.ExtractedEssenceWhite;
@@ -35,16 +36,20 @@ public class CardForSectionOfIG extends AbstractPackmasterCard {
 
     @Override
     public void onChoseThisOption() {
-        if (AbstractDungeon.player.hasPower(KinsectHarvestExtractPower.ID))
+        AbstractPower power = AbstractDungeon.player.getPower(KinsectHarvestExtractPower.ID);
+        if (power != null) {
             addToBot(new AbstractGameAction() {
                 @Override
                 public void update() {
-                    ((KinsectHarvestExtractPower) AbstractDungeon.player.getPower(KinsectHarvestExtractPower.ID)).colors[baseMagicNumber] = 1;
+                    ((KinsectHarvestExtractPower) power).colors[baseMagicNumber] = 1;
+                    power.updateDescription();
                     this.isDone = true;
                 }
             });
-        else
+        }
+        else {
             addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new KinsectHarvestExtractPower(AbstractDungeon.player, this.baseMagicNumber)));
+        }
     }
 
     @Override
