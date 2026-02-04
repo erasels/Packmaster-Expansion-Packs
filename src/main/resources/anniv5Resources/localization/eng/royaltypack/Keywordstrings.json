@@ -7,6 +7,6 @@
       "Hired_Support",
       "hired_support"
     ],
-    "DESCRIPTION": "This turn, the next card played that costs [E] to play instead spends 10 Gold per [E] , if you have enough Gold."
+    "DESCRIPTION": "This turn, the next card played that costs [E] to play instead spends #b10 Gold per [E] , if you have enough Gold."
   }
 ]
