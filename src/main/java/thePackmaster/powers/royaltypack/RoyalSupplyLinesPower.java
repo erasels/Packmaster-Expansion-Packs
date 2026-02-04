@@ -37,7 +37,7 @@ public class RoyalSupplyLinesPower extends AbstractPackmasterPower {
     }
 
     @Override
-    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+    public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && !AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.player.hasRelic(RunicPyramid.ID) && !AbstractDungeon.player.hasPower(EquilibriumPower.POWER_ID)) {
             Wiz.atb(new RetainCardsAction(AbstractDungeon.player, this.amount * BASE_CARDS_TO_RETAIN));
         }
