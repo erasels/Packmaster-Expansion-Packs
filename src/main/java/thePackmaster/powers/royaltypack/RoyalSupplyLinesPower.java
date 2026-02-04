@@ -22,7 +22,7 @@ public class RoyalSupplyLinesPower extends AbstractPackmasterPower {
     private final int BASE_CARDS_TO_RETAIN = 2;
 
     public RoyalSupplyLinesPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, 1);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, 1);
 
     }
 
