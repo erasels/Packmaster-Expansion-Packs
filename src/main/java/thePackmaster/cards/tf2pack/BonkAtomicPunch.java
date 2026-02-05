@@ -25,6 +25,7 @@ public class BonkAtomicPunch extends AbstractTF2Card {
         super(ID, COST, TYPE, RARITY, TARGET);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = this.baseMagicNumber;
+        this.isEthereal = true;
     }
 
     @Override
