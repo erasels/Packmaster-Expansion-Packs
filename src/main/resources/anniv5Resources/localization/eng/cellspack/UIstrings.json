@@ -1,0 +1,16 @@
+{
+  "${ModID}:CellsPack": {
+    "TEXT": [
+      "Dead Cells",
+      "${ModID}:Jinx your enemies and drown them in debuffs",
+      "redrock",
+      "Dead Cells originally created by #bMotion #bTwin"
+    ]
+  },
+  "${ModID}:CellsPackHat": {
+    "TEXT": [
+      "Hat.",
+      "Gotta have hat"
+    ]
+  }
+}

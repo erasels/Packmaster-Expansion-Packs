@@ -1,0 +1,46 @@
+{
+	"${ModID}:HolyWater":	{
+		"DESCRIPTION": "Apply !${ModID}:m2! ${ModID}:Jinx and !M! ${ModID}:Ignite. NL Exhaust.",
+		"NAME": "Holy Water"
+	},
+	"${ModID}:SwiftSword":	{
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak.",
+		"NAME": "Swift Sword"
+	},
+	"${ModID}:IceArmor": {
+		"NAME": "Ice Armor",
+		"DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! ${ModID}:Frostbite back."
+	},
+	"${ModID}:Hokuto": {
+		"NAME": "Hokuto's Bow",
+		"DESCRIPTION": "At the start of your turn, apply !M! ${ModID}:Jinx to ALL enemies."
+	},
+	"${ModID}:SmokeBomb": {
+		"NAME": "Smoke Bomb",
+		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Vulnerable to ALL enemies."
+	},
+	"${ModID}:SnakeFangs": {
+		"NAME": "Snake Fangs",
+		"DESCRIPTION": "Deal !D! damage twice.  NL Apply Poison equal to unblocked damage dealt."
+	},
+	"${ModID}:FireGrenade": {
+		"NAME": "Fire Grenade",
+		"DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies.  NL Shuffle !${ModID}:m2! *Oil *Grenades into your draw pile."
+	},
+    "${ModID}:OilGrenade": {
+        "NAME": "Oil Grenade",
+        "DESCRIPTION": "Apply !M! ${ModID}:Ignite.  NL Draw !${ModID}:m2! card. NL Exhaust."
+    },
+	"${ModID}:CorrosiveCloud": {
+		"NAME": "Corrosive Cloud",
+		"DESCRIPTION": "Apply !M! Poison.  NL Apply !${ModID}:m2! Poison to ALL enemies."
+	},
+	"${ModID}:AssaultShield": {
+		"NAME": "Assault Shield",
+		"DESCRIPTION": "Gain !B! Block. NL Apply !M! ${ModID}:Jinx."
+	},
+	"${ModID}:GrapplingHook": {
+		"NAME": "Grappling Hook",
+		"DESCRIPTION": "Draw !${ModID}:m2! cards. NL Next turn, draw !M! additional card."
+	}
+}
