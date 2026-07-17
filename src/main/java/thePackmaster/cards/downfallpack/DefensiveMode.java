@@ -22,7 +22,6 @@ public class DefensiveMode extends AbstractDownfallCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         applyToSelf(new WeakPower(p, magicNumber, false));
-
     }
 
     public void upp() {

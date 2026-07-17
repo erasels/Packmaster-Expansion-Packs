@@ -3,8 +3,6 @@ package thePackmaster.powers.cellspack;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.highenergypack.AllEnemyApplyPowerAction;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.powers.summonspack.JinxPower;
