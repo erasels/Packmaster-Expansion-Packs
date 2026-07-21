@@ -13,7 +13,8 @@
 	},
 	"${ModID}:Hokuto": {
 		"NAME": "Hokuto's Bow",
-		"DESCRIPTION": "At the start of your turn, apply !M! ${ModID}:Jinx to ALL enemies."
+		"DESCRIPTION": "At the start of your turn, apply !M! ${ModID}:Jinx to ALL enemies.",
+		"UPGRADE_DESCRIPTION": "Innate.  NL At the start of your turn, apply !M! ${ModID}:Jinx to ALL enemies."
 	},
 	"${ModID}:SmokeBomb": {
 		"NAME": "Smoke Bomb",

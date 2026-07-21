@@ -30,6 +30,6 @@ public class FireGrenade extends AbstractCellsCard {
     }
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic (1);
+        upgradeSecondMagic(1);
     }
 }

@@ -9,8 +9,7 @@ import thePackmaster.powers.cellspack.HokutoPower;
 public class Hokuto extends AbstractCellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Hokuto");
     private static final int COST = 1;
-    private static final int AMOUNT = 1;
-    private static final int UPGRADE_AMOUNT = 1;
+    private static final int AMOUNT = 2;
 
     public Hokuto() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -19,12 +18,13 @@ public class Hokuto extends AbstractCellsCard {
 
     @Override
     public void upp() {
-        this.upgradeMagicNumber(UPGRADE_AMOUNT);
+        isInnate = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new HokutoPower(p, this.magicNumber)));
+
     }
 }
 
