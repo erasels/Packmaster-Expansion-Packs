@@ -10,7 +10,7 @@ import thePackmaster.powers.summonspack.JinxPower;
 public class HolyWater extends AbstractCellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("HolyWater");
     private static final int COST = 2;
-    private static final int IGNITE = 2;
+    private static final int IGNITE = 3;
     private static final int JINX = 5;
 
     public HolyWater() {
@@ -22,7 +22,7 @@ public class HolyWater extends AbstractCellsCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
         upgradeSecondMagic(1);
     }
 
