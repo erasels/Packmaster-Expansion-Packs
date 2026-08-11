@@ -13,7 +13,7 @@ public class SmokeBomb extends AbstractCellsCard {
 
     public SmokeBomb() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        block = baseBlock = 7;
+        baseBlock = 7;
         magicNumber = baseMagicNumber = 1;
     }
 
