@@ -17,7 +17,7 @@ public class SnakeFangs extends AbstractCellsCard {
 
     public SnakeFangs() {
         super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
-        baseDamage = damage = DAMAGE;
+        baseDamage = DAMAGE;
 
     }
 
