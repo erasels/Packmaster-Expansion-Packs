@@ -15,7 +15,7 @@ public class SwiftSword extends AbstractCellsCard {
 
     public SwiftSword() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = damage = 3;
+        baseDamage = 3;
         baseMagicNumber = magicNumber = 1;
     }
 
