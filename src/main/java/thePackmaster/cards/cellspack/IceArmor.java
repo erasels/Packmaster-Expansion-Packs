@@ -14,7 +14,7 @@ public class IceArmor extends AbstractCellsCard {
 
     public IceArmor() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = block = 12;
+        baseBlock = 12;
         baseMagicNumber = magicNumber = 3;
     }
 
