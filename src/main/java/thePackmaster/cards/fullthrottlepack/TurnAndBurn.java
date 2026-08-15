@@ -28,6 +28,8 @@ public class TurnAndBurn extends AbstractFullThrottleCard implements AddToHandPa
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseMagicNumber = 6;
         this.magicNumber = this.baseMagicNumber;
+        this.baseSecondMagic = 1;
+        this.secondMagic = this.baseSecondMagic;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,14 +39,13 @@ public class TurnAndBurn extends AbstractFullThrottleCard implements AddToHandPa
     @Override
     public void upp() {
         upgradeMagicNumber(2);
+        upgradeSecondMagic(1);
     }
 
     @Override
     public void onAddCard(CardGroup group, AbstractCard card) {
         if (card == this) {
-            int i = 1;
-            if (upgraded) i = 2;
-            atb(new ApplyRandomNitroAction(i, AbstractDungeon.player.hand));
+            atb(new ApplyRandomNitroAction(secondMagic, AbstractDungeon.player.hand));
         }
     }
 }
