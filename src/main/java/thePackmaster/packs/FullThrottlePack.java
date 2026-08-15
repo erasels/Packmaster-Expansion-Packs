@@ -15,7 +15,7 @@ public class FullThrottlePack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public FullThrottlePack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(5, 2, 4, 5, 1));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(5, 1, 4, 3, 3));
     }
 
     @Override
