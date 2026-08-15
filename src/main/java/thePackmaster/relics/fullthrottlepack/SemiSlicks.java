@@ -19,7 +19,6 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.atb;
 
-// code in ConsumeCardsAction
 public class SemiSlicks extends AbstractPackmasterRelic implements AddToHandPatches.AddToHandInterface {
     public static final String ID = SpireAnniversary5Mod.makeID(SemiSlicks.class.getSimpleName());
 
