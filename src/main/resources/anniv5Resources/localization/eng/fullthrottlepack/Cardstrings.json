@@ -1,7 +1,7 @@
 {
     "${ModID}:Downforce": {
     "NAME": "Downforce",
-    "DESCRIPTION": "Apply !M! Vulnerable and !M! ${ModID}:Ignite to ALL enemies."
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite to ALL enemies. NL Apply !${ModID}:m2! Vulnerable to ALL enemies."
   },
     "${ModID}:NitrousBash": {
     "NAME": "Nitrous Bash",
@@ -13,8 +13,8 @@
   },
     "${ModID}:TurnAndBurn": {
     "NAME": "Turn and Burn",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If this enters your hand during your turn, apply ${ModID}:Nitro to 1 random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If this enters your hand during your turn, apply ${ModID}:Nitro to 2 random cards in your hand."
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If this enters your hand during your turn, apply ${ModID}:Nitro to !${ModID}:m2! random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If this enters your hand during your turn, apply ${ModID}:Nitro to !${ModID}:m2! random cards in your hand."
   },
     "${ModID}:Afterburner": {
     "NAME": "Afterburner",
