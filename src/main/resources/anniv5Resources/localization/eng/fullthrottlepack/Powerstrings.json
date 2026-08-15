@@ -1,0 +1,15 @@
+{
+  "${ModID}:AfterburnerPower": {
+    "NAME": "Afterburner",
+    "DESCRIPTIONS": [
+      "When a card enters your hand during your turn, apply #yNitro to #b%d random card%s in your draw pile.",
+      "s"
+    ]
+  },
+  "${ModID}:DragsterPower": {
+    "NAME": "Dragster",
+    "DESCRIPTIONS": [
+      "The first #b%d cards you play each turn gain #yNitro and are shuffled into your draw pile."
+    ]
+  }
+}

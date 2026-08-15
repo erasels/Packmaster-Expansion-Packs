@@ -1,0 +1,9 @@
+{
+  "${ModID}:SemiSlicks": {
+    "NAME": "Semi-Slicks",
+    "FLAVOR": "High-quality, for every bit of traction you can get.",
+    "DESCRIPTIONS": [
+      "When a card enters your hand during your turn, apply #b1 #yIgnite to ALL enemies."
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+    "${ModID}:Downforce": {
+    "NAME": "Downforce",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite to ALL enemies. NL Apply !${ModID}:m2! Vulnerable to ALL enemies."
+  },
+    "${ModID}:NitrousBash": {
+    "NAME": "Nitrous Bash",
+    "DESCRIPTION": "Deal !D! damage. NL Apply ${ModID}:Nitro to !M! random cards in your hand."
+  },
+    "${ModID}:SparkPlugs": {
+    "NAME": "Spark Plugs",
+    "DESCRIPTION": "Deal !D! damage 3 times. NL If this enters your hand during your turn, it costs 0."
+  },
+    "${ModID}:TurnAndBurn": {
+    "NAME": "Turn and Burn",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If this enters your hand during your turn, apply ${ModID}:Nitro to !${ModID}:m2! random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If this enters your hand during your turn, apply ${ModID}:Nitro to !${ModID}:m2! random cards in your hand."
+  },
+    "${ModID}:Afterburner": {
+    "NAME": "Afterburner",
+    "DESCRIPTION": "When a card enters your hand during your turn, apply ${ModID}:Nitro to a random card in your draw pile.",
+      "UPGRADE_DESCRIPTION": "Innate. NL When a card enters your hand during your turn, apply ${ModID}:Nitro to a random card in your draw pile."
+  },
+    "${ModID}:Overtuned": {
+    "NAME": "Overtuned",
+    "DESCRIPTION": "Apply ${ModID}:Nitro to !M! random cards in your hand. NL Shuffle this card into your draw pile. "
+  },
+    "${ModID}:TwinTurbo": {
+    "NAME": "Twin Turbo",
+    "DESCRIPTION": "Gain !B! Block. NL If this enters your hand during your turn, NL gain [E] ."
+  },
+    "${ModID}:V16": {
+    "NAME": "V16",
+    "DESCRIPTION": "Deal !D! damage 4 times. NL For the rest of combat, draw 1 additional card at the start of your turns.",
+    "EXTENDED_DESCRIPTION": [
+      "V24"
+    ]
+  },
+    "${ModID}:Dragster": {
+    "NAME": "Dragster",
+    "DESCRIPTION": "The first card you play each turn gains ${ModID}:Nitro and is shuffled into your draw pile.",
+    "UPGRADE_DESCRIPTION" : "The first !M! cards you play each turn gain ${ModID}:Nitro and are shuffled into your draw pile."
+  },
+    "${ModID}:HighOctane": {
+    "NAME": "High Octane",
+    "DESCRIPTION": "Gain !M! Vigor for each card in your hand. NL Apply ${ModID}:Nitro to all the Attacks in your hand. NL Exhaust. "
+  }
+}
