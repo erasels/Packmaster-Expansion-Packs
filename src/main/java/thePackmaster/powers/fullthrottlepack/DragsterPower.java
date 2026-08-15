@@ -25,9 +25,6 @@ public class DragsterPower extends AbstractPackmasterPower {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
-    public void atStartOfTurn() {
-    }
-
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (!card.purgeOnUse && this.amount > 0 && AbstractDungeon.actionManager.cardsPlayedThisTurn.size() <= this.amount) {
             this.flash();
