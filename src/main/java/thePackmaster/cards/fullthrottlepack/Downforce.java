@@ -26,13 +26,13 @@ public class Downforce extends AbstractFullThrottleCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        this.baseSecondMagic = 1;
+        this.secondMagic = this.baseSecondMagic;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster n : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            atb(new ApplyPowerAction(n, p, new VulnerablePower(n, magicNumber, false)));
-            atb(new ApplyPowerAction(n, p, new IgnitePower(n, magicNumber)));
-        }
+        atb(new AllEnemyApplyPowerAction(p, magicNumber, n -> new IgnitePower(n, magicNumber)));
+        atb(new AllEnemyApplyPowerAction(p, secondMagic, n -> new VulnerablePower(n, secondMagic, false)));
     }
 
     @Override
