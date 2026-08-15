@@ -1,0 +1,14 @@
+{
+  "${ModID}:IceArmorPower": {
+    "NAME": "Ice Armor",
+    "DESCRIPTIONS": [
+      "Whenever you are attacked this turn, apply #b%d #yFrostbite back."
+    ]
+  },
+  "${ModID}:HokutoPower": {
+    "NAME": "Hokuto's Bow",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b{0} #yJinx to ALL enemies."
+    ]
+  }
+}
