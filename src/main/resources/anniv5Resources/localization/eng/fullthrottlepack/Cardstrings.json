@@ -43,6 +43,6 @@
   },
     "${ModID}:HighOctane": {
     "NAME": "High Octane",
-    "DESCRIPTION": "Gain !M! Vigor for every card in your hand. NL Apply ${ModID}:Nitro to all the Attacks in your hand. NL Exhaust. "
+    "DESCRIPTION": "Gain !M! Vigor for each card in your hand. NL Apply ${ModID}:Nitro to all the Attacks in your hand. NL Exhaust. "
   }
 }
