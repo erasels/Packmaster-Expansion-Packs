@@ -32,7 +32,7 @@ public class ApplyRandomNitroAction extends AbstractGameAction {
         }
 
         for (int i = 0; i < amount; i++) {
-            AbstractCard d = cardsWithoutNitro.get(AbstractDungeon.cardRng.random(cardsWithoutNitro.size() - 1));
+            AbstractCard d = cardsWithoutNitro.get(AbstractDungeon.cardRandomRng.random(cardsWithoutNitro.size() - 1));
             CardModifierManager.addModifier(d, new NitroMod());
             cardsWithoutNitro.remove(d);
         }
