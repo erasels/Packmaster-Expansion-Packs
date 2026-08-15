@@ -39,7 +39,7 @@ public class NitrousBash extends AbstractFullThrottleCard {
 
     @Override
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 }
