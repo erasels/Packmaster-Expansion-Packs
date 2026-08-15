@@ -38,6 +38,7 @@ public class Downforce extends AbstractFullThrottleCard {
     @Override
     public void upp() {
         upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }
 
