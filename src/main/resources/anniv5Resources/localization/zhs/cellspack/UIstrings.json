@@ -1,0 +1,16 @@
+{
+  "${ModID}:CellsPack": {
+    "TEXT": [
+      "死亡细胞",
+      "对敌人施加 ${ModID}:厄运 ，并用减益淹没他们",
+      "Red Rock",
+      "《死亡细胞》原作由 #bMotion #bTwin 创作"
+    ]
+  },
+  "${ModID}:CellsPackHat": {
+    "TEXT": [
+      "欢欣鼓舞地一次又一次赴死",
+      "鲍比帽"
+    ]
+  }
+}

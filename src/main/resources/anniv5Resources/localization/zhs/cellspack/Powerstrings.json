@@ -1,0 +1,14 @@
+{
+  "${ModID}:IceArmorPower": {
+    "NAME": "冰甲",
+    "DESCRIPTIONS": [
+      "本回合每当你受到攻击，给予攻击者 #b%d 层 #y霜噬 。"
+    ]
+  },
+  "${ModID}:HokutoPower": {
+    "NAME": "北斗之弓",
+    "DESCRIPTIONS": [
+      "回合开始时，给予所有敌人 #b{0} 层 #y厄运 。"
+    ]
+  }
+}

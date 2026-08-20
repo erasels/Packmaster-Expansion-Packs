@@ -1,0 +1,20 @@
+{
+  "${ModID}:FullThrottlePack": {
+    "TEXT": [
+      "全油门",
+      "启动引擎！对你的牌施加氮气，用前所未有的速度抽牌！",
+      "CrypticAurora 和 SoyTheProton"
+    ]
+  },
+  "${ModID}:FullThrottlePackHat": {
+    "TEXT": [
+      "油门踩到底！",
+      "氮气帽"
+    ]
+  },
+  "${ModID}:NitroMod": {
+    "TEXT": [
+      "${ModID}:氮气 。 NL "
+    ]
+  }
+}

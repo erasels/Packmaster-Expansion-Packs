@@ -1,0 +1,47 @@
+{
+	"${ModID}:HolyWater":	{
+		"DESCRIPTION": "给予 !${ModID}:m2! 层 ${ModID}:厄运 和 !M! 层 ${ModID}:燃烧 。 NL 消耗 。",
+		"NAME": "圣水"
+	},
+	"${ModID}:SwiftSword":	{
+		"DESCRIPTION": "造成 !D! 点伤害 。 NL 给予 !M! 层 虚弱 。",
+		"NAME": "迅捷之剑"
+	},
+	"${ModID}:IceArmor": {
+		"NAME": "冰甲",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合每当你受到攻击，给与攻击者 !M! 层 ${ModID}:霜噬 。"
+	},
+	"${ModID}:Hokuto": {
+		"NAME": "北斗之弓",
+		"DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 ${ModID}:厄运 。",
+		"UPGRADE_DESCRIPTION": "固有。  NL 回合开始时，给予所有敌人 !M! 层 ${ModID}:厄运 。"
+	},
+	"${ModID}:SmokeBomb": {
+		"NAME": "烟雾弹",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 易伤 。"
+	},
+	"${ModID}:SnakeFangs": {
+		"NAME": "蛇牙",
+		"DESCRIPTION": "造成 !D! 点伤害两次 。  NL 给予等同于未被 格挡 伤害的 中毒 。"
+	},
+	"${ModID}:FireGrenade": {
+		"NAME": "火焰弹",
+		"DESCRIPTION": "造成 !D! 点伤害 并给予所有敌人 !M! 层 ${ModID}:燃烧 。  NL 将 !${ModID}:m2! 张 *油弹 洗入抽牌堆。"
+	},
+    "${ModID}:OilGrenade": {
+        "NAME": "油弹",
+        "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。  NL 抽 !${ModID}:m2! 张牌。 NL 消耗 。"
+    },
+	"${ModID}:CorrosiveCloud": {
+		"NAME": "腐蚀云",
+		"DESCRIPTION": "给予 !M! 层 中毒 。  NL 给予所有敌人 !${ModID}:m2! 层 中毒 。"
+	},
+	"${ModID}:AssaultShield": {
+		"NAME": "突击盾",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 ${ModID}:厄运 。"
+	},
+	"${ModID}:GrapplingHook": {
+		"NAME": "抓钩",
+		"DESCRIPTION": "抽 !${ModID}:m2! 张牌 。 NL 下回合额外抽 !M! 张牌 。"
+	}
+}
