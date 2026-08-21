@@ -1,0 +1,15 @@
+{
+  "${ModID}:AfterburnerPower": {
+    "NAME": "加力燃烧室",
+    "DESCRIPTIONS": [
+      "在你的回合中，每当一张牌进入手牌，向抽牌堆中 #b%d 张随机牌添加 #y氮气 。",
+      ""
+    ]
+  },
+  "${ModID}:DragsterPower": {
+    "NAME": "直线加速赛车",
+    "DESCRIPTIONS": [
+      "你每回合打出的前 #b%d 张牌获得 #y氮气 ，并洗入抽牌堆。"
+    ]
+  }
+}
